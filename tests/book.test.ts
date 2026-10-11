@@ -45,3 +45,22 @@ describe("Book of You", () => {
     });
   }
 });
+
+import { comparePair, REL_TYPES } from "../src/engine/compat";
+import { buildBondStory } from "../src/story/bond";
+describe("Bond Story", () => {
+  for (const [loc, c] of Object.entries(contents)) it(`${loc}: renders for every relationship type`, () => {
+    let min = Infinity, max = 0;
+    for (let s = 0; s < 16; s++) {
+      const A = buildProfile({ date: `19${80 + s}-0${(s % 9) + 1}-1${s % 9}`, time: "10:00", place, quiz: fullQuiz(s) });
+      const B = buildProfile({ date: `19${84 + (s % 10)}-1${s % 3}-2${s % 8}`, time: s % 2 ? null : "21:15", place, quiz: fullQuiz(s + 7) });
+      for (const rel of REL_TYPES) {
+        const b = buildBondStory(A, B, "Ana", "Marko", comparePair(A, B, rel), c);
+        expect(JSON.stringify(b)).not.toMatch(/undefined|NaN/);
+        min = Math.min(min, b.words); max = Math.max(max, b.words);
+      }
+    }
+    console.log(loc, "bond words", min, max);
+    expect(min).toBeGreaterThan(1600);
+  });
+});

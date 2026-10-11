@@ -35,7 +35,7 @@ export function usePrintExpand() {
   }, []);
 }
 
-export function BookView({ book, name, forId, eyebrow, title, subtitle }: { book: Book; name: string; forId: string; eyebrow?: string; title?: string; subtitle?: string }) {
+export function BookView({ book, name, forId, eyebrow, title, subtitle, intro }: { book: Book; name: string; forId: string; eyebrow?: string; title?: string; subtitle?: string; intro?: string }) {
   const { c } = useContent(); const h = useHref(); const B = c.book; const defs = quizDefs(c);
   const [theme, setTheme] = useReadTheme();
   const [active, setActive] = useState(book.chapters[0]?.id);
@@ -86,7 +86,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle }: { book
       </nav>
 
       <div className="reading-surface">
-        <p className="reading-intro">{B.intro(name, book.lenses)}</p>
+        {(intro ?? B.intro(name, book.lenses)) && <p className="reading-intro">{intro ?? B.intro(name, book.lenses)}</p>}
         {book.chapters.map((ch, i) => (
           <section key={ch.id} id={`ch-${ch.id}`} className="chapter scroll-mt-24">
             <Reveal>

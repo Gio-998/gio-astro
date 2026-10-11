@@ -7,6 +7,8 @@ import { profileOf } from "@/lib/profile";
 import { useContent, useHref } from "@/lib/content-context";
 import { comparePair, REL_TYPES, RelType } from "@/engine/compat";
 import { PairReportView } from "../PairReport";
+import { BookView } from "../story/BookView";
+import { buildBondStory } from "@/story/bond";
 import { BirthForm } from "../BirthForm";
 import { PageHero } from "../ui";
 import { SignArt } from "../art/SignArt";
@@ -54,7 +56,11 @@ export function MatchPage() {
         </div>
       )}
       {A && B && A.id === B.id && <p className="text-dim">Pick two different people.</p>}
-      {report && A && B && <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />}
+      {report && A && B && <>
+        <a href="#bond-story" className="btn-primary mb-4 w-full">📖 {c.deep.bondUi.eyebrow}: {c.deep.bondUi.title(A.name, B.name)} ↓</a>
+        <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
+        <div id="bond-story" className="mt-12 scroll-mt-20"><BookView book={buildBondStory(report.pa, report.pb, A.name, B.name, report.r, c)} name={`${A.name} & ${B.name}`} forId={B.id} eyebrow={c.deep.bondUi.eyebrow} title={c.deep.bondUi.title(A.name, B.name)} subtitle={c.compat.relTypes[report.r.rel].name} intro="" /></div>
+      </>}
       {(!A || !B) && !adding && <div className="card text-center text-dim">Add {all.length ? "one more person" : "two people"} to see a report. <button className="text-gold underline" onClick={() => setAdding(all.length ? "b" : "a")}>Add now</button></div>}
       {report && <div className="mt-6 flex flex-wrap justify-center gap-2"><Link className="btn-ghost" href={h(`/bond/?a=${A!.id}&b=${B!.id}`)}>Take the Bond Check together →</Link><Link className="btn-ghost" href={h(`/quiz/big-five/?for=${B!.id}`)}>Let {B!.name} take quizzes on this device →</Link></div>}
     </div>
