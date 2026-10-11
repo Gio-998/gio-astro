@@ -25,13 +25,13 @@ function useStreak(today: string) {
 }
 import { useStore, repo } from "@/lib/store";
 import { profileOf } from "@/lib/profile";
-import { useContent, useHref } from "@/lib/content-context";
+import { useContent, useHref, useDate } from "@/lib/content-context";
 import { dailyGuidance } from "@/engine/daily";
 import { MAJOR_ARCANA } from "@/engine/tarot";
 import { SIGN_GLYPH } from "@/engine/zodiac";
 
 export function TodayPage() {
-  const s = useStore(); const { c } = useContent(); const h = useHref();
+  const s = useStore(); const { c } = useContent(); const h = useHref(); const fmt = useDate();
   // The store is null during prerender/hydration, so a client-only date here can't cause a mismatch.
   const [now] = useState<Date | null>(() => (typeof window === "undefined" ? null : new Date()));
   const D = c.daily;
@@ -48,7 +48,7 @@ export function TodayPage() {
   const A = c.astro;
   return (
     <div className="space-y-4">
-      <PageHero eyebrow={now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })} img="cliffs" title={<>Today for <span className="italic text-aurora">{s.me.name}</span></>}
+      <PageHero eyebrow={fmt(now, { weekday: true, year: false })} img="cliffs" title={<>Today for <span className="italic text-aurora">{s.me.name}</span></>}
         sub="Your 90-second ritual: the real Moon, your transits, a card, your number and one honest question." art={<MoonArt angle={g.moon.angle} className="h-36 w-36 animate-float" />}>
         {streak > 0 && <span className="chip !border-gold/40 !text-gold">✦ {streak} {streak === 1 ? "day" : "days"} in a row with the sky</span>}
       </PageHero>
@@ -96,7 +96,7 @@ export function TodayPage() {
         <div className="mt-2 flex items-center gap-3"><button className="btn-primary" onClick={() => { repo.saveJournal({ date: localDate, prompt, text: text ?? "" }); }}>Save</button>{entry && <span className="text-xs text-dim">Saved on this device.</span>}</div>
         {Object.keys(s.journal).length > 1 && (
           <details className="mt-4 text-sm"><summary className="cursor-pointer text-dim">Past entries ({Object.keys(s.journal).length - (entry ? 1 : 0)})</summary>
-            {Object.values(s.journal).filter((e) => e.date !== localDate).sort((a, b) => b.date.localeCompare(a.date)).map((e) => <div key={e.date} className="mt-2 rounded-lg bg-white/5 p-2"><p className="text-xs text-dim">{e.date} · {e.prompt}</p><p>{e.text}</p></div>)}
+            {Object.values(s.journal).filter((e) => e.date !== localDate).sort((a, b) => b.date.localeCompare(a.date)).map((e) => <div key={e.date} className="mt-2 rounded-lg bg-white/5 p-2"><p className="text-xs text-dim">{fmt(e.date)} · {e.prompt}</p><p>{e.text}</p></div>)}
           </details>
         )}
       </div>

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import type { Profile } from "@/engine/profile";
-import { useContent, useHref } from "@/lib/content-context";
+import { useContent, useHref, useDate } from "@/lib/content-context";
 import { Bar, Dial, EvidenceBadge, Locked, Palette, Section } from "./ui";
 import { SIGN_GLYPH, formatDegree, SIGN_ELEMENT } from "@/engine/zodiac";
 import { ANIMAL_GLYPH, ANIMAL_HANZI, WUXING } from "@/engine/chinese";
@@ -13,11 +13,17 @@ import { quizDefs, QUIZ_IDS, QuizId } from "@/lib/quiz-defs";
 import type { StoredPerson } from "@/lib/store";
 import { encodeProfileCode } from "@/lib/store";
 import { ShareButton } from "./ShareButton";
+import { ThemeToggle } from "./PersonalTheme";
 import { useState } from "react";
 import { SignArt } from "./art/SignArt";
 import { Celebration } from "./art/Celebration";
 import { cosmos } from "./art/ArtCard";
 
+const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
+function MoreLink({ k, pid }: { k: string; pid?: string }) {
+  const { c } = useContent(); const h = useHref();
+  return <Link href={h(`/lens/?k=${k}${pid ? `&id=${pid}` : ""}`)} className="mt-2 inline-block text-sm text-gold underline decoration-dotted underline-offset-4">{c.lensUi.fullMeaning}: {c.lensInfo[k].name} →</Link>;
+}
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }) {
@@ -77,7 +83,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
     return (
       <div className="card">
         <p className="h-display text-2xl text-gold">{n.type} · {x.name} <span className="text-base text-dim">(wing {n.wing})</span></p>
-        <p>At the core, you {x.core}. Your gift: {x.gift}.</p>
+        <p>At the core, this style {x.core}. Your gift: {x.gift}.</p>
         <p className="mt-2 text-sm"><b>Growth:</b> {x.growth}</p>
         <p className="mt-1 text-sm text-dim">On good days you move toward the strengths of {n.growth} ({P.nineStyles[n.growth].name}); under stress you may take on habits of {n.stress} ({P.nineStyles[n.stress].name}).</p>
         <div className="mt-3 grid grid-cols-9 gap-1">{n.scores.map((s, k) => <div key={k} className="text-center text-xs"><div className="mx-auto mb-1 w-3 rounded bg-gold/70" style={{ height: s * 6 }} />{k + 1}</div>)}</div>
@@ -151,7 +157,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
 }
 
 export function ProfileView({ person, profile, isMe }: { person: StoredPerson; profile: Profile; isMe: boolean }) {
-  const { c } = useContent(); const h = useHref();
+  const { c } = useContent(); const h = useHref(); const fmt = useDate();
   const A = c.astro; const defs = quizDefs(c);
   const ch = profile.chinese; const n = profile.numbers;
   const quizFor = (id: QuizId) => h(`/quiz/${id}/${isMe ? "" : `?for=${person.id}`}`);
@@ -160,6 +166,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
   const fl = profile.psych?.fourLetter;
   const cards = profile.tarot.cards.map((k) => c.nums.tarot[MAJOR_ARCANA[k === 22 ? 0 : k]]);
   const [codeShown, setCodeShown] = useState(false);
+  const lens = (k: string) => h(`/lens/?k=${k}${isMe ? "" : `&id=${person.id}`}`);
 
   const shareSpec = {
     eyebrow: `${person.name}'s cosmic codex`,
@@ -188,19 +195,24 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         <p className="eyebrow mb-2">{isMe ? "Your cosmic codex" : "Profile"}</p>
         <h1 className="h-display mb-1 text-5xl sm:text-6xl"><span className="text-aurora">{person.name}</span></h1>
         <p className="h-display mb-5 text-2xl italic text-mist/90">{A.signs[profile.sun].name} Sun · {A.signs[profile.moon].name} Moon{profile.rising ? ` · ${A.signs[profile.rising].name} Rising` : ""}</p>
+        <Link href={lens("sunmoon")} className="mb-4 inline-block text-sm text-gold underline decoration-dotted underline-offset-4">ⓘ {c.lensUi.explainer}</Link>
         <div className="flex flex-wrap gap-2 text-sm">
-          <span className="chip text-mist">{SIGN_GLYPH[profile.sun]} {A.signs[profile.sun].name} Sun</span>
-          <span className="chip text-mist">☽ {profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(" or ") : A.signs[profile.moon].name} Moon</span>
-          {profile.rising && <span className="chip text-mist">AC {A.signs[profile.rising].name} Rising</span>}
-          <span className="chip text-mist">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name}</span>
-          <span className="chip text-mist">#{n.lifePath} Life Path</span>
-          <span className="chip text-mist">🜁 {c.psych.archetypeAnimals[profile.archetypeAnimal].name}</span>
-          {fl && <span className="chip text-mist">{fl.code}</span>}
-          {profile.quiz.nine && <span className="chip text-mist">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing}</span>}
+          <Link href={lens("sun")} className="chip text-mist hover:border-gold/60 hover:text-gold">{SIGN_GLYPH[profile.sun]} {A.signs[profile.sun].name} Sun</Link>
+          <Link href={lens("moon")} className="chip text-mist hover:border-gold/60 hover:text-gold">☽ {profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(" or ") : A.signs[profile.moon].name} Moon</Link>
+          {profile.rising && <Link href={lens("rising")} className="chip text-mist hover:border-gold/60 hover:text-gold">AC {A.signs[profile.rising].name} Rising</Link>}
+          <Link href={lens("chinese")} className="chip text-mist hover:border-gold/60 hover:text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name}</Link>
+          <Link href={lens("lifepath")} className="chip text-mist hover:border-gold/60 hover:text-gold">#{n.lifePath} {c.lensInfo.lifepath.name}</Link>
+          <Link href={lens("animal")} className="chip text-mist hover:border-gold/60 hover:text-gold">🜁 {c.psych.archetypeAnimals[profile.archetypeAnimal].name}</Link>
+          {fl && <Link href={lens("fourletter")} className="chip text-mist hover:border-gold/60 hover:text-gold">{fl.code} · {c.lensInfo.fourletter.name}</Link>}
+          {profile.quiz.nine && <Link href={lens("nine")} className="chip text-mist hover:border-gold/60 hover:text-gold">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing} · {c.psych.nineStyles[profile.quiz.nine.type].name}</Link>}
+          {profile.quiz.attachment && <Link href={lens("attachment")} className="chip text-mist hover:border-gold/60 hover:text-gold">♡ {c.psych.attachment[profile.quiz.attachment.style].name}</Link>}
+          {profile.quiz.dosha && <Link href={lens("dosha")} className="chip text-mist hover:border-gold/60 hover:text-gold">❋ {c.psych.constitutions[profile.quiz.dosha.constitution].split(" — ")[0]}</Link>}
         </div>
-        <div className="mt-5 max-w-sm"><p className="mb-1.5 text-xs uppercase tracking-widest text-dim">Your palette</p><Palette colors={profile.palette} size="h-9" /></div>
+        <p className="mt-2 text-xs text-dim">{c.lensUi.tapHint}</p>
+        <Link href={lens("palette")} className="mt-5 block max-w-sm transition hover:opacity-90"><p className="mb-1.5 text-xs uppercase tracking-widest text-dim">Your palette ⓘ</p><Palette colors={profile.palette} size="h-9" /></Link>
         <div className="mt-4 flex flex-wrap gap-2">
           <Link className="btn-primary" href={h(`/book/${isMe ? "" : `?id=${person.id}`}`)}>📖 {c.book.title}</Link>
+          {isMe && <ThemeToggle />}
           <ShareButton spec={shareSpec} filename={`${person.name}-codex.png`} />
           <Link className="btn-ghost" href={h(`/chart/?id=${person.id}`)}>Full birth chart</Link>
           {!isMe && <Link className="btn-ghost" href={h(`/match/?b=${person.id}`)}>Compatibility with me</Link>}
@@ -239,6 +251,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
           ))}
           {profile.chart.moonAmbiguous && <p className="text-xs text-dim">Without a birth time the Moon could be in {profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(" or ")} — read both and see which feels true.</p>}
           {!profile.rising && <p className="text-xs text-dim">Add a birth time and place to unlock your rising sign and houses.</p>}
+          <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="sun" /><MoreLink pid={isMe ? undefined : person.id} k="moon" />{profile.rising && <MoreLink pid={isMe ? undefined : person.id} k="rising" />}<MoreLink pid={isMe ? undefined : person.id} k="venus" /><MoreLink pid={isMe ? undefined : person.id} k="mars" /><MoreLink pid={isMe ? undefined : person.id} k="mercury" /></div>
         </div>
       </Section>
 
@@ -246,7 +259,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         <div className="card">
           <p className="h-display text-2xl text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name} <span className="text-dim">{ANIMAL_HANZI[ch.animal]}</span> · {cap(ch.yinYang)}</p>
           <p className="text-sm">{c.chinese.animals[ch.animal].essence}</p>
-          <p className="mt-1 text-xs text-dim">Gifts: {c.chinese.animals[ch.animal].gifts}. Growth: {c.chinese.animals[ch.animal].edge}. Your zodiac year began on {ch.lunarNewYear} (Lunar New Year).</p>
+          <p className="mt-1 text-xs text-dim">Gifts: {c.chinese.animals[ch.animal].gifts}. Growth: {c.chinese.animals[ch.animal].edge}. Your zodiac year began on {fmt(ch.lunarNewYear)} (Lunar New Year).</p>
           {ch.conventionsDiffer && <p className="mt-2 rounded-lg bg-white/5 p-2 text-xs">Born between Lunar New Year and the start of spring (Li Chun, ~4 Feb), or the other way round: in the four-pillars (BaZi) convention you'd be a {c.chinese.animals[ch.animalLiChun].name}. We use Lunar New Year, like most people do.</p>}
           <div className="mt-3 grid gap-3 sm:grid-cols-2">
             <div>
@@ -256,6 +269,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             </div>
             <div>{WUXING.map((w) => <Bar key={w} value={(ch.balance[w] / 4) * 100} label={c.chinese.wuxing[w].name} right={String(ch.balance[w])} color="bg-sage" />)}</div>
           </div>
+          <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="chinese" /><MoreLink pid={isMe ? undefined : person.id} k="wuxing" /></div>
         </div>
       </Section>
 
@@ -266,6 +280,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
           {profile.vedic.lagna && <p className="text-sm">Vedic rising (lagna): {A.signs[profile.vedic.lagna].name}</p>}
           {profile.vedic.ambiguous && <p className="text-xs text-dim">Birth star may differ without birth time.</p>}
           <p className="mt-1 text-xs text-dim">{c.vedic.vedicNote}</p>
+          <MoreLink pid={isMe ? undefined : person.id} k="vedic" />
         </div>
       </Section>
 
@@ -289,6 +304,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
           <div className="card sm:col-span-2">
             <p className="h-display text-xl text-gold">Tarot birth card{cards.length > 1 ? "s" : ""}: {cards.map((x) => x.name).join(" · ")}</p>
             {cards.map((x) => <p key={x.name} className="text-sm"><b>{x.name}</b> ({x.keyword}): {x.birth}</p>)}
+            <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="tarot" /><MoreLink pid={isMe ? undefined : person.id} k="lifepath" /><MoreLink pid={isMe ? undefined : person.id} k="personalyear" /></div>
           </div>
         </div>
       </Section>
@@ -305,6 +321,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             <p className="text-sm">{c.psych.archetypeAnimals[profile.archetypeAnimal].text}</p>
             <div className="mt-2"><Palette colors={profile.palette} size="h-8" /></div>
             <p className="mt-2 text-xs text-dim">{c.psych.archetypeNote} Strongest element: {A.elements[profile.dominantElement].name}.</p>
+            <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="animal" /><MoreLink pid={isMe ? undefined : person.id} k="palette" /><MoreLink pid={isMe ? undefined : person.id} k="yinyang" /></div>
           </div>
         </div>
       </Section>
@@ -312,7 +329,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
       {QUIZ_IDS.map((id) => (
         <Section key={id} title={defs[id].title} aside={<EvidenceBadge e={defs[id].evidence} />}>
           {profile.quiz[defs[id].resultKey]
-            ? <><QuizResultView id={id} profile={profile} /><Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></>
+            ? <><QuizResultView id={id} profile={profile} /><div className="flex flex-wrap items-baseline gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k={QUIZ_LENS[id]} />{id === "big-five" && <><MoreLink pid={isMe ? undefined : person.id} k="fourletter" /><MoreLink pid={isMe ? undefined : person.id} k="temperament" /></>}<Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></div></>
             : <Locked emblem={id} title={defs[id].title} text={`${defs[id].tagline} Unlocks: ${defs[id].unlocks}.`} href={quizFor(id)} minutes={defs[id].minutes} />}
         </Section>
       ))}

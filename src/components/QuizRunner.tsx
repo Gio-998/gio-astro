@@ -38,7 +38,7 @@ export function QuizRunner({ id }: { id: QuizId }) {
     const next = { ...ans, [items[i].id]: v };
     setAns(next);
     if (i + 1 < items.length) setI(i + 1);
-    else { repo.saveQuiz(person.id, def.score(next)); setDone(true); window.scrollTo({ top: 0, behavior: "smooth" }); }
+    else { repo.saveQuiz(person.id, def.score(next), { quizId: def.id, values: next }); setDone(true); window.scrollTo({ top: 0, behavior: "smooth" }); }
   };
 
   if (done) {

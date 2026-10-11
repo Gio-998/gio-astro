@@ -1,4 +1,8 @@
 export const site = {
+  months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  themeOn: "My colours: on", themeOff: "My colours: off", themeHint: "Colour the whole site with your personal element palette — or switch back to the default look.",
+  datePicker: { day: "Day", month: "Month", year: "Year" },
   brand: "Mirrorstar",
   tagline: "An honest mirror for you and your relationships",
   description: "Free birth chart, Chinese zodiac, numerology, personality and attachment quizzes — and compatibility across every lens for partners, friends, family and colleagues. Full results free, no tricks.",

@@ -4,7 +4,7 @@ import { useSearchParams } from "next/navigation";
 import { useStore, findPerson } from "@/lib/store";
 import { profileOf } from "@/lib/profile";
 import { ChartWheel } from "../ChartWheel";
-import { useContent, useHref } from "@/lib/content-context";
+import { useContent, useHref, useDate } from "@/lib/content-context";
 import { formatDegree, SIGN_GLYPH } from "@/engine/zodiac";
 import type { Point } from "@/engine/astro";
 import { EvidenceBadge, PageHero } from "../ui";
@@ -12,7 +12,7 @@ import { EvidenceBadge, PageHero } from "../ui";
 const ORDER: Point[] = ["sun", "moon", "asc", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto", "node", "mc"];
 
 export function ChartPage() {
-  const s = useStore(); const { c } = useContent(); const h = useHref();
+  const s = useStore(); const { c } = useContent(); const h = useHref(); const fmt = useDate();
   const id = useSearchParams().get("id") ?? "me";
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   const person = findPerson(s, id);
@@ -23,7 +23,7 @@ export function ChartPage() {
     <div>
       <PageHero eyebrow="Natal chart" img="milkyway" emblem="chart" title={<><span className="text-aurora">{person.name}</span>'s birth chart</>} sub={<EvidenceBadge e="traditional" />} />
       <p className="mb-4 text-sm text-dim">
-        {person.date} {person.time ?? "(time unknown — noon used)"} {person.place ? `· ${person.place.name}` : "· no place (UT assumed)"} ·
+        {fmt(person.date)} {person.time ?? "(time unknown — noon used)"} {person.place ? `· ${person.place.name}` : "· no place (UT assumed)"} ·
         UTC{t.offsetMinutes >= 0 ? "+" : "−"}{Math.floor(Math.abs(t.offsetMinutes) / 60)}:{String(Math.abs(t.offsetMinutes) % 60).padStart(2, "0")} ({t.offsetSource === "tzdb" ? "time-zone database" : t.offsetSource === "local-mean-time" ? "local mean time from longitude" : t.offsetSource === "override" ? "your manual offset" : "assumed UT"}) · tropical zodiac · whole-sign houses
       </p>
       <div className="card relative overflow-hidden"><div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,108,240,.25),transparent_65%)]" /><div className="relative mx-auto max-w-[460px]"><ChartWheel chart={ch} /></div></div>

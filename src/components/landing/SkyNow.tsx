@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { longitude, Planet } from "@/engine/astro";
 import { moonPhase } from "@/engine/daily";
 import { signFromLongitude, SIGN_GLYPH } from "@/engine/zodiac";
-import { useContent, useHref } from "@/lib/content-context";
+import { useContent, useHref, useDate } from "@/lib/content-context";
 import { MoonArt } from "../art/MoonArt";
 import Link from "next/link";
 
@@ -11,7 +11,7 @@ const SHOW: Planet[] = ["sun", "moon", "mercury", "venus", "mars", "jupiter", "s
 
 /** Live "the sky right now" widget, computed in the browser. */
 export function SkyNow() {
-  const { c } = useContent(); const h = useHref(); const A = c.astro;
+  const { c } = useContent(); const h = useHref(); const A = c.astro; const fmt = useDate();
   const [now, setNow] = useState<Date | null>(null);
   useEffect(() => { requestAnimationFrame(() => setNow(new Date())); const id = setInterval(() => setNow(new Date()), 60000); return () => clearInterval(id); }, []);
   if (!now) return <div className="card h-[380px] animate-pulse" />;
@@ -19,7 +19,7 @@ export function SkyNow() {
   return (
     <div className="grid gap-5 md:grid-cols-[1fr_1.2fr]">
       <div className="card flex flex-col items-center text-center">
-        <p className="eyebrow mb-3">{now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</p>
+        <p className="eyebrow mb-3">{fmt(now, { weekday: true, year: false })}</p>
         <MoonArt angle={m.angle} className="mb-3 h-40 w-40 animate-float" />
         <p className="h-display text-3xl">{ph.name} in {A.signs[m.moonSign].name} <span className="text-gold">{SIGN_GLYPH[m.moonSign]}</span></p>
         <p className="mb-2 text-sm text-dim">{m.illumination}% illuminated</p>

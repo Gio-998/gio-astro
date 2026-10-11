@@ -185,3 +185,19 @@ details > summary::-webkit-details-marker { display: none; }
   [data-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; }
   .reading { font-size: 12pt; }
 }
+
+/* ——— Personal element themes (html[data-theme] set from the user's chart; toggle in profile) ——— */
+html[data-theme="fire"] { --color-gold: #ffc27a; --color-amber: #f29a4a; --color-rose: #ff9a8b; --color-violet: #e2607e; --color-lilac: #ffc2b4; --color-indigo: #5a2a62; --color-veil: #3a1c4a; }
+html[data-theme="earth"] { --color-gold: #e9cf8f; --color-amber: #c9a35c; --color-rose: #c7dca4; --color-violet: #6f9f78; --color-lilac: #cfe3c0; --color-indigo: #2f4a3c; --color-veil: #243a33; }
+html[data-theme="air"] { --color-gold: #ffe6a6; --color-amber: #f2c86b; --color-rose: #e6c6ff; --color-violet: #7aa7ff; --color-lilac: #c7e3ff; --color-indigo: #34508e; --color-veil: #26386e; }
+html[data-theme="water"] { --color-gold: #a8ecef; --color-amber: #6fc9d3; --color-rose: #c2b4ff; --color-violet: #5a7fd6; --color-lilac: #b9cfff; --color-indigo: #24407a; --color-veil: #1c2f5e; }
+html[data-theme] body {
+  background:
+    radial-gradient(1100px 700px at 8% -10%, color-mix(in srgb, var(--color-violet) 32%, transparent), transparent 60%),
+    radial-gradient(900px 600px at 105% 5%, color-mix(in srgb, var(--personal-accent, var(--color-rose)) 22%, transparent), transparent 60%),
+    radial-gradient(1200px 800px at 50% 120%, color-mix(in srgb, var(--color-gold) 10%, transparent), transparent 60%),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-veil) 70%, #120f2e) 0%, #120f2e 45%, color-mix(in srgb, var(--color-indigo) 35%, #120f2e) 100%);
+  background-attachment: fixed;
+}
+html[data-theme] .btn-primary { background: linear-gradient(110deg, var(--color-gold) 0%, color-mix(in srgb, var(--color-gold) 50%, #fff) 35%, var(--color-rose) 55%, var(--color-gold) 100%); background-size: 200% 100%; }
+html[data-theme] .text-aurora { background: linear-gradient(100deg, color-mix(in srgb, var(--color-gold) 60%, #fff) 0%, var(--color-gold) 30%, var(--color-rose) 60%, var(--color-lilac) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }

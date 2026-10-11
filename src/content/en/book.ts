@@ -44,6 +44,7 @@ export const book = {
   // Connective phrases used by the assembler
   sunIn: (s: string) => `Your Sun in ${s}`, moonIn: (s: string) => `Your Moon in ${s}`, risingIn: (s: string) => `${s} rising`,
   venusIn: (s: string) => `Venus in ${s}`, marsIn: (s: string) => `Mars in ${s}`, mercuryIn: (s: string) => `Mercury in ${s}`, nodeIn: (s: string) => `North Node in ${s}`,
+  bodyLabel: "Body", mindLabel: "Mind",
   needs: "What you need", healsLabel: "What restores you",
   moonUnknown: (a: string) => `Without a birth time your Moon could be in ${a}. Below is the reading for the more likely sign — read the other one in the deep dive and see which feels true.`,
   noRising: "Add your birth time and place to unlock your rising sign — the doorway through which people first meet you.",

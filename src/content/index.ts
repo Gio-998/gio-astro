@@ -9,8 +9,9 @@ import * as daily from "./en/daily";
 import { site } from "./en/site";
 import * as deep from "./en/deep";
 import { book } from "./en/book";
+import { lensInfo, lensUi } from "./en/lens";
 
-const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book };
+const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi };
 export type Content = typeof en;
 
 /** Add a locale by creating src/content/pl/* with the same shape and registering it here. */

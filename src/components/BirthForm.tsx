@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { CityPicker } from "./CityPicker";
+import { DatePicker } from "./DatePicker";
 import type { StoredPerson, Place } from "@/lib/store";
 import { newId } from "@/lib/store";
 import { useContent } from "@/lib/content-context";
@@ -47,10 +48,10 @@ export function BirthForm({ initial, submitLabel, askRelType, onSubmit }: BirthF
         <label className="label">Name</label>
         <input className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Ola" autoComplete="given-name" />
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid gap-3 sm:grid-cols-[1.6fr_1fr]">
         <div>
           <label className="label">Birth date</label>
-          <input className="input" type="date" value={date} onChange={(e) => setDate(e.target.value)} min="1800-01-01" max="2100-12-31" />
+          <DatePicker value={date} onChange={setDate} minYear={1900} />
         </div>
         <div>
           <label className="label">Birth time <span className="opacity-60">({c.site.common.optional})</span></label>

@@ -18,36 +18,68 @@ export interface StoredPerson {
   place: Place | null;
   utcOffsetOverride?: number | null;
   quiz: QuizResults;
+  answers?: QuizAnswers;
   relType?: RelType;
   createdAt: string;
 }
 export interface JournalEntry { date: string; prompt: string; text: string }
-interface State { version: 1; me: StoredPerson | null; people: StoredPerson[]; journal: Record<string, JournalEntry> }
+export interface Settings { theme: "personal" | "default"; readTheme?: "paper" | "night" }
+/** Raw quiz answers per quiz id (so retakes can be prefilled and accounts can sync them later). */
+export type QuizAnswers = Record<string, Record<string, number>>;
+export interface State { version: 2; me: StoredPerson | null; people: StoredPerson[]; journal: Record<string, JournalEntry>; settings: Settings; updatedAt?: string }
 
 export interface PeopleRepository {
   getState(): State;
   saveMe(p: StoredPerson): void;
   savePerson(p: StoredPerson): void;
   deletePerson(id: string): void;
-  saveQuiz(personId: string, patch: Partial<QuizResults>): void;
+  saveQuiz(personId: string, patch: Partial<QuizResults>, answers?: { quizId: string; values: Record<string, number> }): void;
   saveJournal(e: JournalEntry): void;
+  saveSettings(patch: Partial<Settings>): void;
   exportAll(): string;
+  /** Replace all local data with an export produced by exportAll(). Returns false if the JSON is invalid. */
+  importAll(json: string): boolean;
   deleteAll(): void;
 }
 
+// Storage key kept stable across schema versions so nobody loses data; the payload carries `version`.
 const KEY = "mirrorstar:v1";
-const EMPTY: State = { version: 1, me: null, people: [], journal: {} };
+const BACKUP_KEY = "mirrorstar:backup";
+const EMPTY: State = { version: 2, me: null, people: [], journal: {}, settings: { theme: "personal" } };
+
+/** Upgrade any older payload to the current schema (never throws). */
+export function migrate(raw: unknown): State {
+  const o = (raw && typeof raw === "object" ? raw : {}) as Partial<State> & { version?: number };
+  const fixP = (p: StoredPerson | null | undefined): StoredPerson | null => (p && typeof p.date === "string" ? { ...p, quiz: p.quiz ?? {} } : null);
+  return {
+    version: 2,
+    me: fixP(o.me),
+    people: Array.isArray(o.people) ? (o.people.map(fixP).filter(Boolean) as StoredPerson[]) : [],
+    journal: o.journal && typeof o.journal === "object" ? o.journal : {},
+    settings: { ...EMPTY.settings, ...(o.settings ?? {}) },
+    updatedAt: o.updatedAt,
+  };
+}
 let cache: State | null = null;
 const listeners = new Set<() => void>();
 
 function load(): State {
   if (cache) return cache;
-  try { cache = { ...EMPTY, ...(JSON.parse(localStorage.getItem(KEY) || "null") ?? {}) }; } catch { cache = EMPTY; }
-  return cache!;
+  let parsed: unknown = null;
+  try { parsed = JSON.parse(localStorage.getItem(KEY) || "null"); } catch { parsed = null; }
+  if (!parsed) { try { parsed = JSON.parse(localStorage.getItem(BACKUP_KEY) || "null"); } catch { parsed = null; } }
+  cache = migrate(parsed);
+  return cache;
 }
+export let lastStorageError: string | null = null;
 function write(next: State) {
-  cache = next;
-  try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* storage full or disabled */ }
+  cache = { ...next, version: 2, updatedAt: new Date().toISOString() };
+  try {
+    const prev = localStorage.getItem(KEY);
+    if (prev) localStorage.setItem(BACKUP_KEY, prev); // one-step undo / corruption safety net
+    localStorage.setItem(KEY, JSON.stringify(cache));
+    lastStorageError = null;
+  } catch (e) { lastStorageError = String(e); /* storage full or disabled — data stays in memory for this session */ }
   listeners.forEach((l) => l());
 }
 
@@ -56,14 +88,17 @@ export const localRepo: PeopleRepository = {
   saveMe: (p) => write({ ...load(), me: { ...p, id: "me" } }),
   savePerson: (p) => { const s = load(); write({ ...s, people: [...s.people.filter((x) => x.id !== p.id), p] }); },
   deletePerson: (id) => { const s = load(); write({ ...s, people: s.people.filter((x) => x.id !== id) }); },
-  saveQuiz: (id, patch) => {
+  saveQuiz: (id, patch, answers) => {
     const s = load();
-    if (id === "me" && s.me) write({ ...s, me: { ...s.me, quiz: { ...s.me.quiz, ...patch } } });
-    else write({ ...s, people: s.people.map((p) => (p.id === id ? { ...p, quiz: { ...p.quiz, ...patch } } : p)) });
+    const up = (p: StoredPerson): StoredPerson => ({ ...p, quiz: { ...p.quiz, ...patch }, answers: answers ? { ...(p.answers ?? {}), [answers.quizId]: answers.values } : p.answers });
+    if (id === "me" && s.me) write({ ...s, me: up(s.me) });
+    else write({ ...s, people: s.people.map((p) => (p.id === id ? up(p) : p)) });
   },
+  saveSettings: (patch) => { const s = load(); write({ ...s, settings: { ...s.settings, ...patch } }); },
+  importAll: (json) => { try { const o = JSON.parse(json); if (!o || typeof o !== "object" || !("people" in o)) return false; write(migrate(o)); return true; } catch { return false; } },
   saveJournal: (e) => { const s = load(); write({ ...s, journal: { ...s.journal, [e.date]: e } }); },
   exportAll: () => JSON.stringify(load(), null, 2),
-  deleteAll: () => { try { localStorage.removeItem(KEY); } catch {} write({ ...EMPTY }); },
+  deleteAll: () => { try { localStorage.removeItem(KEY); localStorage.removeItem(BACKUP_KEY); } catch {} cache = { ...EMPTY }; try { localStorage.removeItem(KEY); } catch {} listeners.forEach((l) => l()); },
 };
 export const repo: PeopleRepository = localRepo;
 
@@ -73,6 +108,7 @@ const subscribe = (cb: () => void) => {
   window.addEventListener("storage", onStorage);
   return () => { listeners.delete(cb); window.removeEventListener("storage", onStorage); };
 };
+/** Swap point for accounts later: set `repo` to a Supabase-backed PeopleRepository with the same interface. */
 /** Returns null during prerender / before hydration. */
 export function useStore(): State | null {
   return useSyncExternalStore(subscribe, () => load(), () => null);
