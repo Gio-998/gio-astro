@@ -14,7 +14,7 @@ import { PageHero } from "../ui";
 import { SignArt } from "../art/SignArt";
 
 export function MatchPage() {
-  const s = useStore(); const { c } = useContent(); const h = useHref();
+  const s = useStore(); const { c } = useContent(); const h = useHref(); const U = c.ui.match;
   const params = useSearchParams();
   const [aId, setA] = useState(params.get("a") ?? "me");
   const [bId, setB] = useState(params.get("b") ?? "");
@@ -30,39 +30,39 @@ export function MatchPage() {
     <div className="flex gap-2">
       <select className="input" value={val} onChange={(e) => (e.target.value === "__new" ? setAdding(who) : set(e.target.value))}>
         {!all.length && <option value="">—</option>}
-        {all.map((p) => <option key={p.id} value={p.id}>{p.id === "me" ? `${p.name} (me)` : p.name}</option>)}
-        <option value="__new">+ Add someone new…</option>
+        {all.map((p) => <option key={p.id} value={p.id}>{p.id === "me" ? `${p.name}${U.me}` : p.name}</option>)}
+        <option value="__new">{U.addNew}</option>
       </select>
     </div>
   );
   return (
     <div>
-      <PageHero eyebrow="Compatibility · any bond" img="twinjet" emblem="bond" title={<>How you <span className="italic text-aurora">shine together</span></>}
-        sub="Any two people, any kind of bond. Up to 14 lenses — each with Harmony and Spark — blended into one Resonance score."
+      <PageHero eyebrow={U.eyebrow} img="twinjet" emblem="bond" title={<>{U.titleA}<span className="italic text-aurora">{U.titleB}</span></>}
+        sub={U.sub}
         art={report ? <div className="flex items-center"><SignArt sign={report.pa.sun} className="h-28 w-28" /><span className="-mx-4 text-3xl text-rose">♡</span><SignArt sign={report.pb.sun} className="h-28 w-28" /></div> : undefined} />
       <div className="card mb-6 space-y-3">
         <div className="grid gap-3 sm:grid-cols-2">
-          <div><label className="label">Person A</label>{picker(A?.id ?? "", setA, "a")}</div>
-          <div><label className="label">Person B</label>{picker(B?.id ?? "", setB, "b")}</div>
+          <div><label className="label">{U.personA}</label>{picker(A?.id ?? "", setA, "a")}</div>
+          <div><label className="label">{U.personB}</label>{picker(B?.id ?? "", setB, "b")}</div>
         </div>
         <div className="flex flex-wrap gap-2">{REL_TYPES.map((r) => <button key={r} className={relType === r ? "btn-primary" : "btn-ghost"} onClick={() => setRel(r)}>{c.compat.relTypes[r].name}</button>)}</div>
-        {!s.me && <p className="text-sm text-dim">Tip: <Link className="text-gold underline" href={h("/start/")}>add yourself</Link> first so you can compare with others.</p>}
+        {!s.me && <p className="text-sm text-dim">{U.tip}<Link className="text-gold underline" href={h("/start/")}>{U.addYourself}</Link>{U.tipEnd}</p>}
       </div>
       {adding && (
         <div className="card mb-6">
-          <h2 className="mb-3 font-semibold">Add someone</h2>
-          <BirthForm askRelType submitLabel="Add & compare" onSubmit={(p) => { repo.savePerson(p); if (adding === "a") setA(p.id); else setB(p.id); setRel(p.relType ?? null); setAdding(null); }} />
+          <h2 className="mb-3 font-semibold">{U.addSomeone}</h2>
+          <BirthForm askRelType submitLabel={U.addCompare} onSubmit={(p) => { repo.savePerson(p); if (adding === "a") setA(p.id); else setB(p.id); setRel(p.relType ?? null); setAdding(null); }} />
           <button className="btn-ghost mt-3" onClick={() => setAdding(null)}>{c.site.common.cancel}</button>
         </div>
       )}
-      {A && B && A.id === B.id && <p className="text-dim">Pick two different people.</p>}
+      {A && B && A.id === B.id && <p className="text-dim">{U.pickTwo}</p>}
       {report && A && B && <>
         <a href="#bond-story" className="btn-primary mb-4 w-full">📖 {c.deep.bondUi.eyebrow}: {c.deep.bondUi.title(A.name, B.name)} ↓</a>
         <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
         <div id="bond-story" className="mt-12 scroll-mt-20"><BookView book={buildBondStory(report.pa, report.pb, A.name, B.name, report.r, c)} name={`${A.name} & ${B.name}`} forId={B.id} eyebrow={c.deep.bondUi.eyebrow} title={c.deep.bondUi.title(A.name, B.name)} subtitle={c.compat.relTypes[report.r.rel].name} intro="" /></div>
       </>}
-      {(!A || !B) && !adding && <div className="card text-center text-dim">Add {all.length ? "one more person" : "two people"} to see a report. <button className="text-gold underline" onClick={() => setAdding(all.length ? "b" : "a")}>Add now</button></div>}
-      {report && <div className="mt-6 flex flex-wrap justify-center gap-2"><Link className="btn-ghost" href={h(`/bond/?a=${A!.id}&b=${B!.id}`)}>Take the Bond Check together →</Link><Link className="btn-ghost" href={h(`/quiz/big-five/?for=${B!.id}`)}>Let {B!.name} take quizzes on this device →</Link></div>}
+      {(!A || !B) && !adding && <div className="card text-center text-dim">{U.addMore(!!all.length)}<button className="text-gold underline" onClick={() => setAdding(all.length ? "b" : "a")}>{U.addNow}</button></div>}
+      {report && <div className="mt-6 flex flex-wrap justify-center gap-2"><Link className="btn-ghost" href={h(`/bond/?a=${A!.id}&b=${B!.id}`)}>{U.bondCheck}</Link><Link className="btn-ghost" href={h(`/quiz/big-five/?for=${B!.id}`)}>{U.letTake(B!.name)}</Link></div>}
     </div>
   );
 }

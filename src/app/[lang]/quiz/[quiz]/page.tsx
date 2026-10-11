@@ -9,7 +9,7 @@ export function generateStaticParams() { return LOCALES.flatMap((lang) => QUIZ_I
 export async function generateMetadata({ params }: PageProps<"/[lang]/quiz/[quiz]">) {
   const { lang, quiz } = await params;
   const d = quizDefs(getContent(lang))[quiz as QuizId];
-  return d ? { title: `${d.title} quiz — free full result`, description: d.tagline } : {};
+  return d ? { title: getContent(lang).ui.quiz.metaTitle(d.title), description: d.tagline } : {};
 }
 export default async function Page({ params }: PageProps<"/[lang]/quiz/[quiz]">) {
   const { quiz } = await params;

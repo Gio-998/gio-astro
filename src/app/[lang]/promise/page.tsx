@@ -1,6 +1,7 @@
+import { pageMeta } from "@/lib/page-meta";
 import { PageHero } from "@/components/ui";
-export const metadata = { title: "Our no-tricks promise", description: "Free full results, no fake urgency, one-click cancel, published prices and refunds in money — an astrology app without subscription traps." };
-export default function Page() {
+export const generateMetadata = pageMeta("promise");
+function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="eye" img="helix" title={<>Our no-tricks promise</>} />
@@ -19,4 +20,29 @@ export default function Page() {
       <p>If we ever break this promise, tell us and we'll fix it.</p>
     </article>
   );
+}
+
+function PageMk() {
+  return (
+    <article className="prose-soft">
+      <PageHero emblem="eye" img="helix" title={<>Нашето ветување без трикови</>} />
+      <p>Оваа категорија е позната по пробни периоди од 1 евро што тивко стануваат 40 евра месечно, лавиринти за откажување и продажба преку страв. Мислиме дека тоа е погрешно. Еве што ветуваме, со едноставни зборови:</p>
+      <ul>
+        <li><b>Бесплатни резултати, секогаш.</b> Секој квиз го покажува целиот резултат штом ќе завршиш. Без барање е-пошта, без плаќање на крајот.</li>
+        <li><b>Основата останува бесплатна.</b> Родената карта, профилот, квизовите, компатибилноста и дневните насоки не чинат речиси ништо за одржување, па остануваат бесплатни.</li>
+        <li><b>Објавени цени.</b> Ако додадеме платени додатоци (како длабок извештај за печатење), цената е на копчето пред да кликнеш.</li>
+        <li><b>Без пробни периоди што стануваат претплати.</b> Без „1 евро сега, 40 евра подоцна“.</li>
+        <li><b>Откажување со еден клик.</b> Секое членство ќе може да се откаже со еден клик, со потсетник пред секое обновување.</li>
+        <li><b>Враќање во пари, не во кредити.</b></li>
+        <li><b>Без страв, без лажна итност.</b> Без тајмери со одбројување, без „опасност во твојата карта“, без „видовитата пишува…“.</li>
+        <li><b>Без пропаст.</b> Никогаш не велиме дека двајца луѓе се „некомпатибилни“. Покажуваме силни страни, рабови за раст и вежби.</li>
+        <li><b>Твоите податоци се твои.</b> Засега сè е зачувано само во твојот прелистувач. Избриши ги кога сакаш на страницата за приватност.</li>
+      </ul>
+      <p>Ако некогаш го прекршиме ова ветување, кажи ни и ќе го поправиме.</p>
+    </article>
+  );
+}
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return lang === "mk" ? <PageMk /> : <PageEn />;
 }

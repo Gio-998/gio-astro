@@ -44,7 +44,7 @@ export function quizDefs(c: Content): Record<QuizId, QuizDef> {
       id: "care", title: q.meta["care"].title, tagline: q.meta["care"].tagline, minutes: 1, evidence: "popular", resultKey: "care",
       intro: q.meta["care"].intro, unlocks: q.meta["care"].unlocks,
       items: [
-        ...CARE_PAIRS.map(([x, y], i) => ({ kind: "choice" as const, id: `p${i}`, text: "Which would mean more to you?", options: [q.careOptions[x][i % 2], q.careOptions[y][(i + 1) % 2]] })),
+        ...CARE_PAIRS.map(([x, y], i) => ({ kind: "choice" as const, id: `p${i}`, text: c.ui.quiz.whichMore, options: [q.careOptions[x][i % 2], q.careOptions[y][(i + 1) % 2]] })),
         { kind: "choice" as const, id: "give", text: q.careGive, options: CARE.map((k) => c.psych.care[k].name) },
       ],
       score: (a) => ({ care: scoreCare(a) }), note: c.psych.careNote,

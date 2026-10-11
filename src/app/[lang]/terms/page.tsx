@@ -1,6 +1,7 @@
+import { pageMeta } from "@/lib/page-meta";
 import { PageHero } from "@/components/ui";
-export const metadata = { title: "Terms of use" };
-export default function Page() {
+export const generateMetadata = pageMeta("terms");
+function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="tarot" img="milkyway" title={<>Terms of use</>} />
@@ -19,4 +20,29 @@ export default function Page() {
       <p>Interpretation texts are our own. Personality items from the International Personality Item Pool are in the public domain. City data © GeoNames (CC BY 4.0). Trademarks of third parties are not used, and we are not affiliated with any test publisher.</p>
     </article>
   );
+}
+
+function PageMk() {
+  return (
+    <article className="prose-soft">
+      <PageHero emblem="tarot" img="milkyway" title={<>Услови за користење</>} />
+      <p className="text-sm text-dim">Нацрт v0.1 — треба да го прегледа правник пред да се примаат плаќања.</p>
+      <h2>Што е ова</h2>
+      <p>Оваа апликација нуди астрологија, нумерологија, тарот, традиционални системи и прашалници за личност <b>за саморефлексија и забава</b>. Не е психолошки, медицински, правен или финансиски совет и не може да ја предвиди иднината ниту дали врската ќе успее. Не носи важни одлуки само врз основа на неа.</p>
+      <h2>Возраст</h2>
+      <p>Мораш да имаш 16 или повеќе години за да ја користиш апликацијата.</p>
+      <h2>Податоци за други луѓе</h2>
+      <p>Кога додаваш некого друг, внеси само податоци што тој/таа би сакал/а да ги сподели со тебе, идеално со нивна дозвола. Не ја користи апликацијата за вознемирување, притисок или донесување одлуки за други.</p>
+      <h2>Добросостојба</h2>
+      <p>Прашалникот за тело и енергија е инспириран од традицијата и дава само општи идеи за добросостојба. Ако имаш здравствени грижи, оди на лекар. Ако се чувствуваш небезбедно во врска, обрати се до локалните служби за итни случаи или до линија за помош.</p>
+      <h2>Бесплатна услуга и платени додатоци</h2>
+      <p>Основната услуга е бесплатна и се нуди „како што е“. Секој иден платен додаток јасно ќе ја прикаже цената пред купување, ќе може да се откаже со еден клик и е покриен со твоите законски права како потрошувач.</p>
+      <h2>Содржина</h2>
+      <p>Текстовите за толкување се наши. Ставките за личност од International Personality Item Pool се во јавна сопственост. Податоци за градовите © GeoNames (CC BY 4.0). Не се користат заштитени марки на трети страни и не сме поврзани со ниеден издавач на тестови.</p>
+    </article>
+  );
+}
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return lang === "mk" ? <PageMk /> : <PageEn />;
 }

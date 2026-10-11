@@ -13,8 +13,8 @@ export function MePage() {
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!s.me) return (
     <div className="card text-center">
-      <h1 className="h-display mb-2 text-4xl"><span className="text-aurora">Let's meet you</span></h1>
-      <p className="mb-4 text-dim">Your profile is built from your birth date in seconds.</p>
+      <h1 className="h-display mb-2 text-4xl"><span className="text-aurora">{c.ui.me.meet}</span></h1>
+      <p className="mb-4 text-dim">{c.ui.me.built}</p>
       <Link className="btn-primary" href={h("/start/")}>{c.site.common.start}</Link>
     </div>
   );
@@ -22,9 +22,9 @@ export function MePage() {
     <div>
       <ProfileView person={s.me} profile={profileOf(s.me)} isMe />
       <div className="mt-8 flex flex-wrap gap-2">
-        <Link className="btn-ghost" href={h("/start/")}>{c.site.common.edit} birth details</Link>
-        <Link className="btn-ghost" href={h("/today/")}>Today's guidance →</Link>
-        <Link className="btn-ghost" href={h("/people/")}>Add people →</Link>
+        <Link className="btn-ghost" href={h("/start/")}>{c.ui.me.editBirth}</Link>
+        <Link className="btn-ghost" href={h("/today/")}>{c.ui.me.today}</Link>
+        <Link className="btn-ghost" href={h("/people/")}>{c.ui.me.addPeople}</Link>
       </div>
     </div>
   );
@@ -36,15 +36,15 @@ export function PersonPage() {
   const [editing, setEditing] = useState(false);
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   const p = findPerson(s, id);
-  if (!p) return <p className="text-dim">Person not found. <Link className="underline" href={h("/people/")}>Back to People</Link></p>;
+  if (!p) return <p className="text-dim">{c.ui.me.notFound}<Link className="underline" href={h("/people/")}>{c.ui.me.back}</Link></p>;
   if (editing) return <div className="card"><BirthForm initial={p} askRelType submitLabel={c.site.common.save} onSubmit={(np) => { repo.savePerson(np); setEditing(false); }} /></div>;
   return (
     <div>
       <ProfileView person={p} profile={profileOf(p)} isMe={p.id === "me"} />
       <div className="mt-8 flex flex-wrap gap-2">
         <button className="btn-ghost" onClick={() => setEditing(true)}>{c.site.common.edit}</button>
-        <Link className="btn-ghost" href={h(`/bond/?b=${p.id}`)}>Bond Check together</Link>
-        <button className="btn-ghost text-rose" onClick={() => { if (confirm(`Delete ${p.name}? This removes their data from this device.`)) { repo.deletePerson(p.id); router.push(h("/people/")); } }}>{c.site.common.delete}</button>
+        <Link className="btn-ghost" href={h(`/bond/?b=${p.id}`)}>{c.ui.me.bondTogether}</Link>
+        <button className="btn-ghost text-rose" onClick={() => { if (confirm(c.ui.me.confirmDelete(p.name))) { repo.deletePerson(p.id); router.push(h("/people/")); } }}>{c.site.common.delete}</button>
       </div>
     </div>
   );

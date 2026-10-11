@@ -23,7 +23,7 @@ export function ChartWheel({ chart, size = 340 }: { chart: Chart; size?: number 
     placed.push({ p: pl.point, lon: pl.lon, disp });
   }
   return (
-    <svg viewBox={`0 0 ${size} ${size}`} className="mx-auto w-full max-w-sm" role="img" aria-label="Birth chart wheel">
+    <svg viewBox={`0 0 ${size} ${size}`} className="mx-auto w-full max-w-sm" role="img" aria-label={c.ui.misc.chartWheel}>
       {SIGNS.map((s, i) => {
         const a0 = i * 30, a1 = a0 + 30;
         const [x0, y0] = pt(a0, R - 2), [x1, y1] = pt(a1, R - 2), [x2, y2] = pt(a1, R - 34), [x3, y3] = pt(a0, R - 34);

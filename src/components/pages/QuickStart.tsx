@@ -3,21 +3,21 @@ import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { BirthForm } from "../BirthForm";
 import { repo, useStore } from "@/lib/store";
-import { useHref } from "@/lib/content-context";
+import { useHref, useContent } from "@/lib/content-context";
 import { PageHero } from "../ui";
 import { ZodiacWheel } from "../art/ZodiacWheel";
 
-const STEPS = ["Finding the sky over your birthplace…", "Placing the Sun, Moon and planets…", "Reading your Chinese year and element…", "Counting your numbers…", "Drawing your cards…", "Mixing your colour palette…"];
 
 /** Short "reading your sky" sequence — the calculations are real and instant; this just gives the moment some ceremony. */
 function Casting({ onDone }: { onDone: () => void }) {
   const [i, setI] = useState(0);
+  const STEPS = useContent().c.ui.quickStart.steps;
   useEffect(() => {
     const fast = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const id = setInterval(() => setI((x) => x + 1), fast ? 80 : 420);
     return () => clearInterval(id);
   }, []);
-  useEffect(() => { if (i >= STEPS.length) onDone(); }, [i, onDone]);
+  useEffect(() => { if (i >= STEPS.length) onDone(); }, [i, onDone, STEPS.length]);
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-night/90 backdrop-blur-xl" role="status" aria-live="polite">
       <div className="text-center">
@@ -33,23 +33,23 @@ function Casting({ onDone }: { onDone: () => void }) {
 }
 
 export function QuickStart() {
-  const s = useStore(); const router = useRouter(); const h = useHref();
+  const s = useStore(); const router = useRouter(); const h = useHref(); const U = useContent().c.ui.quickStart;
   const preDate = useSearchParams().get("date");
   const [casting, setCasting] = useState(false);
   return (
     <div>
       {casting && <Casting onDone={() => router.push(h("/me/"))} />}
-      <PageHero eyebrow={s?.me ? "Your birth details" : "Free · 90 seconds · no sign-up"} emblem="chart" img="cliffs"
-        title={s?.me ? <>Edit your <span className="italic text-aurora">birth details</span></> : <>Your cosmic codex <span className="italic text-aurora">in 90 seconds</span></>}
-        sub="Name and birth date are enough to start. Time and place make it more precise. Everything is free and stays on your device." />
+      <PageHero eyebrow={s?.me ? U.eyebrowEdit : U.eyebrowNew} emblem="chart" img="cliffs"
+        title={s?.me ? <>{U.editA}<span className="italic text-aurora">{U.editB}</span></> : <>{U.newA}<span className="italic text-aurora">{U.newB}</span></>}
+        sub={U.sub} />
       <div className="card mx-auto max-w-2xl">
         {s === null ? null : (
-          <BirthForm key={s.me?.id ?? "new"} initial={s.me ?? (preDate && /^\d{4}-\d{2}-\d{2}$/.test(preDate) ? { date: preDate, time: "" } : undefined)} submitLabel={s.me ? "Save" : "Reveal my profile ✦"}
+          <BirthForm key={s.me?.id ?? "new"} initial={s.me ?? (preDate && /^\d{4}-\d{2}-\d{2}$/.test(preDate) ? { date: preDate, time: "" } : undefined)} submitLabel={s.me ? U.save : U.reveal}
             onSubmit={(p) => { const first = !s.me; repo.saveMe({ ...p, id: "me" }); if (first) setCasting(true); else router.push(h("/me/")); }} />
         )}
       </div>
       <div className="mx-auto mt-6 grid max-w-2xl grid-cols-3 gap-3 text-center text-xs text-dim">
-        <p>✦ Sun, Moon & rising</p><p>✦ Chinese animal & element</p><p>✦ Numbers, tarot & palette</p>
+        <p>{U.f1}</p><p>{U.f2}</p><p>{U.f3}</p>
       </div>
     </div>
   );

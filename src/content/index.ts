@@ -1,6 +1,7 @@
 import * as astro from "./en/astro";
 import * as chinese from "./en/chinese";
 import * as nums from "./en/numbers";
+import * as ui from "./en/ui";
 import * as psych from "./en/psych";
 import * as vedic from "./en/vedic";
 import * as quizzes from "./en/quizzes";
@@ -12,7 +13,7 @@ import { book } from "./en/book";
 import { lensInfo, lensUi } from "./en/lens";
 import { landing } from "./en/landing";
 
-const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing };
+const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui };
 export type Content = typeof en;
 
 import { mk as mkPartial } from "./mk";

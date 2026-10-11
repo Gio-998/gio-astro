@@ -15,7 +15,7 @@ import { QuizResultView } from "./ProfileView";
 import { profileOf } from "@/lib/profile";
 
 export function QuizRunner({ id }: { id: QuizId }) {
-  const { c } = useContent(); const h = useHref();
+  const { c } = useContent(); const h = useHref(); const U = c.ui.quiz;
   const def = useMemo(() => quizDefs(c)[id], [c, id]);
   const params = useSearchParams();
   const forId = params.get("for") ?? "me";
@@ -29,7 +29,7 @@ export function QuizRunner({ id }: { id: QuizId }) {
   if (!person) return (
     <div className="card mx-auto max-w-lg text-center">
       <Emblem id={id} className="mx-auto mb-4 h-20 w-20 glow-gold" />
-      <p className="mb-4">First, tell us your birth date — it takes 30 seconds. Then come back to this quiz.</p>
+      <p className="mb-4">{U.birthFirst}</p>
       <Link className="btn-primary" href={h("/start/")}>{c.site.common.start}</Link>
     </div>
   );
@@ -52,14 +52,14 @@ export function QuizRunner({ id }: { id: QuizId }) {
             <div className="absolute inset-0 rounded-full border border-gold/50 bg-gradient-to-br from-indigo to-ink" />
             <Emblem id={id} className="relative h-20 w-20 glow-gold" />
           </div>
-          <p className="eyebrow mb-2">Layer unlocked</p>
+          <p className="eyebrow mb-2">{U.unlocked}</p>
           <h1 className="h-display text-4xl sm:text-5xl"><span className="italic text-aurora">{def.title}</span></h1>
           <p className="mx-auto mt-2 max-w-md text-dim">{def.unlocks}</p>
         </div>
         <QuizResultView id={id} profile={profileOf(fresh)} />
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Link className="btn-primary" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>See full profile</Link>
-          <Link className="btn-ghost" href={h("/quizzes/")}>Next quiz</Link>
+          <Link className="btn-primary" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>{U.seeProfile}</Link>
+          <Link className="btn-ghost" href={h("/quizzes/")}>{U.nextQuiz}</Link>
         </div>
       </div>
     );
@@ -69,16 +69,16 @@ export function QuizRunner({ id }: { id: QuizId }) {
     <div className="mx-auto grid max-w-4xl items-center gap-8 md:grid-cols-[280px_1fr]">
       <ArtCard img={QUIZ_ART[id].img} tint={QUIZ_ART[id].tint} emblem={id} className="mx-auto h-[380px] w-[260px] animate-float">
         <p className="mt-auto h-display text-2xl leading-tight">{def.title}</p>
-        <p className="text-[10px] uppercase tracking-[0.25em] text-gold/80">{items.length} questions · {def.minutes} min</p>
+        <p className="text-[10px] uppercase tracking-[0.25em] text-gold/80">{U.qMin(items.length, def.minutes)}</p>
       </ArtCard>
     <div className="card">
-      <div className="mb-3 flex flex-wrap gap-2"><EvidenceBadge e={def.evidence} /><span className="chip">⏱ {def.minutes} min</span><span className="chip">{items.length} items</span></div>
+      <div className="mb-3 flex flex-wrap gap-2"><EvidenceBadge e={def.evidence} /><span className="chip">{U.min(def.minutes)}</span><span className="chip">{U.items(items.length)}</span></div>
       <h1 className="h-display mb-2 text-4xl"><span className="text-aurora">{def.title}</span></h1>
       <p className="mb-2 text-lg">{def.tagline}</p>
       <p className="mb-4 text-dim">{def.intro}</p>
-      {forId !== "me" && <p className="mb-4 rounded-xl bg-white/5 p-3 text-sm">Answering as <b>{person.name}</b>. Hand them the phone — answers should be theirs.</p>}
-      <p className="mb-4 text-sm text-dim">Unlocks: {def.unlocks}. Your full result is free and shown right away.</p>
-      <button className="btn-primary w-full py-3.5 text-base" onClick={() => setI(0)}>Begin ✦</button>
+      {forId !== "me" && <p className="mb-4 rounded-xl bg-white/5 p-3 text-sm">{U.answeringA}<b>{person.name}</b>{U.answeringB}</p>}
+      <p className="mb-4 text-sm text-dim">{U.unlocks(def.unlocks)}</p>
+      <button className="btn-primary w-full py-3.5 text-base" onClick={() => setI(0)}>{U.begin}</button>
       {def.note && <p className="mt-4 text-xs text-dim">{def.note}</p>}
     </div>
     </div>
@@ -92,7 +92,7 @@ export function QuizRunner({ id }: { id: QuizId }) {
       <img src={cosmos(QUIZ_ART[id].img)} alt="" className="pointer-events-none absolute inset-0 -z-10 h-full w-full object-cover opacity-[0.14]" />
       <div className="pointer-events-none absolute -bottom-24 -left-24 -z-10 h-72 w-72 rounded-full bg-violet/25 blur-3xl" />
       <Emblem id={id} className="pointer-events-none absolute -right-10 -top-10 -z-10 h-56 w-56 opacity-[0.1]" />
-      <div className="mb-6 flex items-center gap-1.5" aria-label={`Question ${i + 1} of ${items.length}`}>
+      <div className="mb-6 flex items-center gap-1.5" aria-label={U.qOf(i + 1, items.length)}>
         {items.map((_, k) => <span key={k} className={`relative h-2 flex-1 rounded-full transition-all duration-500 ${k < i ? "bg-gradient-to-r from-amber to-gold shadow-[0_0_8px_rgba(246,207,122,.6)]" : k === i ? "bg-rose animate-pulse" : "bg-white/10"}`} />)}
       </div>
       <p className="eyebrow mb-2">{def.title} · {i + 1} / {items.length}</p>

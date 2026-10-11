@@ -1,7 +1,8 @@
+import { pageMeta } from "@/lib/page-meta";
 import { PageHero } from "@/components/ui";
 import { PrivacyControls } from "@/components/PrivacyControls";
-export const metadata = { title: "Privacy" };
-export default function Page() {
+export const generateMetadata = pageMeta("privacy");
+function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="moon" img="milkyway" title={<>Privacy</>} />
@@ -23,4 +24,32 @@ export default function Page() {
       <PrivacyControls />
     </article>
   );
+}
+
+function PageMk() {
+  return (
+    <article className="prose-soft">
+      <PageHero emblem="moon" img="milkyway" title={<>Приватност</>} />
+      <p className="text-sm text-dim">Нацрт v0.1 — ќе се прегледа пред да се додадат сметки или плаќања.</p>
+      <h2>Кратко</h2>
+      <p>Сè што внесуваш — податоци за раѓање, одговори на квизови, луѓе што ги додаваш, записи во дневникот — се чува <b>само во твојот прелистувач</b> (localStorage) на овој уред. Засега немаме систем за сметки ниту база на податоци, па не можеме да ги видиме, продадеме или изгубиме твоите податоци. Сите пресметки се извршуваат на твојот уред.</p>
+      <h2>Што го напушта твојот уред</h2>
+      <ul>
+        <li>Вчитувањето на страницата и листата на градови од нашиот статичен хостинг (стандардни дневници на веб-серверот, како IP-адреса, што ги чува хостингот).</li>
+        <li>Ништо друго. Без аналитички колачиња, без рекламни следачи.</li>
+      </ul>
+      <h2>Чувствителни одговори</h2>
+      <p>Одговорите за врски, чувства и твоето тело можат да бидат лични. Остануваат на твојот уред. Шифрите на профил што ќе одлучиш да ги споделиш содржат твои податоци за раѓање и резултати — споделувај ги само со луѓе на кои им веруваш.</p>
+      <h2>Други луѓе</h2>
+      <p>Ако додадеш некого друг, и неговите податоци остануваат на твојот уред. Те молиме додавај луѓе со нивно знаење. Тие (или ти) можат да ги избришат во секое време.</p>
+      <h2>Подоцна</h2>
+      <p>Ако додадеме незадолжителни сметки (за синхронизација меѓу уреди), ќе побараме изречна согласност, податоците ќе ги чуваме во ЕУ и ќе ти дадеме копчиња за извоз и бришење — и прво ќе ја ажурираме оваа страница.</p>
+      <h2>Твоите контроли</h2>
+      <PrivacyControls />
+    </article>
+  );
+}
+export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return lang === "mk" ? <PageMk /> : <PageEn />;
 }

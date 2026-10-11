@@ -50,3 +50,31 @@ describe("engine robustness sweep", () => {
     }
   });
 });
+
+describe("Macedonian coverage", () => {
+  const MODULES = ["astro", "chinese", "nums", "psych", "vedic", "quizzes", "compat", "daily", "site", "landing", "book", "lensInfo", "lensUi", "ui"] as const;
+  // Strings that legitimately stay the same in both languages (codes, brand, citations, glyphs).
+  const SAME_OK = /^(Mirrorstar|[A-Z]{2,4}|[A-Z]{4}|.{0,3})$|ipip|Mini-IPIP|MS1|^[\W\d\s]+$/;
+  const leaves = (o: unknown, path: string, out: [string, string][]) => {
+    if (typeof o === "string") out.push([path, o]);
+    else if (Array.isArray(o)) o.forEach((v, i) => leaves(v, `${path}[${i}]`, out));
+    else if (o && typeof o === "object") for (const [k, v] of Object.entries(o)) leaves(v, `${path}.${k}`, out);
+    return out;
+  };
+  for (const m of MODULES) {
+    it(`mk.${m}: every English string has a Macedonian translation`, () => {
+      const en = leaves(contents.en[m], m, []); const mk = new Map(leaves(contents.mk[m], m, []));
+      const untranslated = en.filter(([p, s]) => mk.get(p) === s && /[a-z]{3,} [a-z]{2,}/i.test(s) && !SAME_OK.test(s)).map(([p]) => p);
+      expect(untranslated).toEqual([]);
+    });
+  }
+  it("mk text uses Cyrillic, not look-alike Latin letters inside words", () => {
+    const all = MODULES.flatMap((m) => leaves(contents.mk[m], m, []));
+    const mixed = all.filter(([, s]) => /[а-шѓќљњџѕј][a-z]|[a-z][а-шѓќљњџѕј]/i.test(s)).map(([p]) => p);
+    expect(mixed).toEqual([]);
+  });
+  it("UI functions produce Macedonian text", () => {
+    expect(contents.mk.ui.profile.sunIn("Вага")).toBe("Сонце во Вага");
+    expect(contents.mk.compat.pairCopy.convergence(3, "x")).toContain("леќи");
+  });
+});

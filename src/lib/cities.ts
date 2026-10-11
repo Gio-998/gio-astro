@@ -9,11 +9,12 @@ export function loadCities(): Promise<Row[]> {
   loading ??= fetch("/data/cities.json").then((r) => r.json()).then((j) => (rows = j.rows as Row[]));
   return loading;
 }
+import { translit } from "@/engine/translit";
 const fold = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ł/g, "l").toLowerCase();
 
 export interface CityHit extends Place { label: string }
 export function searchCities(all: Row[], q: string, limit = 8): CityHit[] {
-  const n = fold(q.trim());
+  const n = fold(translit(q.trim()));
   if (n.length < 2) return [];
   const out: CityHit[] = [];
   const contains: CityHit[] = [];

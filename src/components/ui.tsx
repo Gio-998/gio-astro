@@ -94,11 +94,12 @@ export function ScoreRing({ value, label, sub }: { value: number; label: string;
 }
 
 export function Locked({ title, text, href, minutes, emblem = "eye" }: { title: string; text: string; href: string; minutes?: number; emblem?: EmblemId }) {
+  const M = useContent().c.ui.misc;
   return (
     <a href={href} className="card card-hover group flex items-center justify-between gap-4 border-dashed !border-gold/30">
       <Emblem id={emblem} className="h-14 w-14 shrink-0 opacity-60 transition group-hover:rotate-12 group-hover:opacity-100" />
       <div className="flex-1"><div className="font-semibold">✧ {title}</div><div className="text-sm text-dim">{text}</div></div>
-      <span className="btn-ghost whitespace-nowrap">{minutes ? `${minutes} min` : "Unlock"} →</span>
+      <span className="btn-ghost whitespace-nowrap">{minutes ? M.min(minutes) : M.unlock} →</span>
     </a>
   );
 }

@@ -11,31 +11,31 @@ import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { PageHero } from "../ui";
 
 export function PeoplePage() {
-  const s = useStore(); const { c } = useContent(); const h = useHref();
+  const s = useStore(); const { c } = useContent(); const h = useHref(); const U = c.ui.people;
   const [mode, setMode] = useState<"list" | "add" | "code">("list");
   const [code, setCode] = useState(""); const [err, setErr] = useState("");
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   const defs = quizDefs(c);
   return (
     <div>
-      <PageHero eyebrow="Your constellation of people" img="storm" emblem="attachment" title={<>The people <span className="italic text-aurora">in your sky</span></>}
-        sub="Partners, friends, family, colleagues — anyone you want to understand better.">
-        {mode === "list" && <div className="flex gap-2"><button className="btn-primary" onClick={() => setMode("add")}>+ Add someone</button><button className="btn-ghost" onClick={() => setMode("code")}>Paste a profile code</button></div>}
+      <PageHero eyebrow={U.eyebrow} img="storm" emblem="attachment" title={<>{U.titleA}<span className="italic text-aurora">{U.titleB}</span></>}
+        sub={U.sub}>
+        {mode === "list" && <div className="flex gap-2"><button className="btn-primary" onClick={() => setMode("add")}>{U.add}</button><button className="btn-ghost" onClick={() => setMode("code")}>{U.paste}</button></div>}
       </PageHero>
-      <p className="mb-4 text-sm text-dim">Partners, friends, family, colleagues — anyone you want to understand better. Their data stays on this device. Best practice: ask them first, or send them the app so they can add their own answers.</p>
-      {mode === "add" && <div className="card mb-4"><BirthForm askRelType submitLabel="Add person" onSubmit={(p) => { repo.savePerson(p); setMode("list"); }} /><button className="btn-ghost mt-3" onClick={() => setMode("list")}>{c.site.common.cancel}</button></div>}
+      <p className="mb-4 text-sm text-dim">{U.intro}</p>
+      {mode === "add" && <div className="card mb-4"><BirthForm askRelType submitLabel={U.addPerson} onSubmit={(p) => { repo.savePerson(p); setMode("list"); }} /><button className="btn-ghost mt-3" onClick={() => setMode("list")}>{c.site.common.cancel}</button></div>}
       {mode === "code" && (
         <div className="card mb-4 space-y-3">
-          <p className="text-sm">Ask them to open <b>My profile → My profile code</b> and send it to you. It includes their quiz results, so all lenses unlock.</p>
+          <p className="text-sm">{U.askA}<b>{U.askB}</b>{U.askC}</p>
           <textarea className="input h-28 font-mono text-xs" value={code} onChange={(e) => setCode(e.target.value)} placeholder="MS1.…" />
           {err && <p className="text-sm text-rose">{err}</p>}
           <div className="flex gap-2">
-            <button className="btn-primary" onClick={() => { const d = decodeProfileCode(code); if (!d) return setErr("That code doesn't look right — copy it again in full."); repo.savePerson({ ...d, id: newId(), createdAt: new Date().toISOString(), relType: "friend" }); setCode(""); setMode("list"); }}>Add</button>
+            <button className="btn-primary" onClick={() => { const d = decodeProfileCode(code); if (!d) return setErr(U.badCode); repo.savePerson({ ...d, id: newId(), createdAt: new Date().toISOString(), relType: "friend" }); setCode(""); setMode("list"); }}>{U.addBtn}</button>
             <button className="btn-ghost" onClick={() => setMode("list")}>{c.site.common.cancel}</button>
           </div>
         </div>
       )}
-      {s.people.length === 0 && mode === "list" && <div className="card text-center text-dim">No one here yet. Add someone to see your compatibility across every lens.</div>}
+      {s.people.length === 0 && mode === "list" && <div className="card text-center text-dim">{U.empty}</div>}
       <div className="grid gap-3">
         {s.people.map((p) => {
           const pr = profileOf(p); const n = QUIZ_IDS.filter((id) => p.quiz[defs[id].resultKey]).length;
@@ -44,9 +44,9 @@ export function PeoplePage() {
               <div className="flex items-center justify-between gap-2">
                 <Link href={h(`/person/?id=${p.id}`)} className="min-w-0">
                   <p className="truncate text-lg font-semibold">{p.name} <span className="text-sm text-dim">· {c.compat.relTypes[p.relType ?? "friend"].name}</span></p>
-                  <p className="text-sm text-dim">{SIGN_GLYPH[pr.sun]} {c.astro.signs[pr.sun].name} · {ANIMAL_GLYPH[pr.chinese.animal]} {c.chinese.animals[pr.chinese.animal].name} · LP {pr.numbers.lifePath} · {n}/7 quizzes</p>
+                  <p className="text-sm text-dim">{SIGN_GLYPH[pr.sun]} {c.astro.signs[pr.sun].name} · {ANIMAL_GLYPH[pr.chinese.animal]} {c.chinese.animals[pr.chinese.animal].name} · {U.lp(pr.numbers.lifePath)} · {U.quizzes(n)}</p>
                 </Link>
-                <Link className="btn-primary shrink-0" href={h(`/match/?b=${p.id}`)}>Compare</Link>
+                <Link className="btn-primary shrink-0" href={h(`/match/?b=${p.id}`)}>{U.compare}</Link>
               </div>
             </div>
           );

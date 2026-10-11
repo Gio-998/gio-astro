@@ -19,7 +19,7 @@ export const landing = {
     ["Can astrology predict who I'll get along with?", "No — and we'll never pretend it can. Astrology, numerology and the Chinese zodiac are beautiful mirrors for reflection. That's why we also include research-backed lenses (Big Five, attachment) and label every lens honestly."],
     ["Do I need my birth time?", "No. Your birth date alone unlocks most lenses. Time and place add your rising sign, houses and a more precise Moon."],
     ["Where is my data stored?", "On your device, in your browser. There's no account and nothing is sent to a server. You can export or delete it any time."],
-    ["What do Harmony and Spark mean?", "Harmony is how easy a bond feels; Spark is how much you grow through each other. Every pair gets both — we never say “incompatible”."],
+    ["What do Harmony and Spark mean?", "Harmony is how easy a bond feels; Spark is how much you grow through each other. Every pair gets both — we never write a pair off."],
     ["Can I compare with someone who isn't here?", "Yes — add their birth date (and quiz answers if they take them on your phone), or send them your profile code so they can compare on theirs."],
   ] as [string, string][],
   lensesIncluded: "Lenses included",

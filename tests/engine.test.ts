@@ -134,3 +134,11 @@ describe("daily guidance", () => {
     expect(d1).toEqual(d2);
   });
 });
+
+describe("Cyrillic names and cities", () => {
+  it("numerology reads Macedonian Cyrillic names like their Latin spelling", async () => {
+    const { normalizeName } = await import("@/engine/numerology");
+    expect(normalizeName("Ана Петровска")).toBe("ANA PETROVSKA");
+    expect(normalizeName("Ѓорѓи Џамбаз")).toBe("GJORGJI DZHAMBAZ");
+  });
+});
