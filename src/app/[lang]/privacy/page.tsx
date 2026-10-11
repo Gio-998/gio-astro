@@ -1,9 +1,10 @@
+import { PageHero } from "@/components/ui";
 import { PrivacyControls } from "@/components/PrivacyControls";
 export const metadata = { title: "Privacy" };
 export default function Page() {
   return (
     <article className="prose-soft">
-      <h1 className="h-display mb-4 text-4xl text-gold">Privacy</h1>
+      <PageHero emblem="moon" img="milkyway" title={<>Privacy</>} />
       <p className="text-sm text-dim">Draft v0.1 — to be reviewed before accounts or payments are added.</p>
       <h2>Short version</h2>
       <p>Everything you enter — birth details, quiz answers, people you add, journal entries — is stored <b>only in your browser</b> (localStorage) on this device. We have no account system and no database yet, so we can't see, sell or lose your data. All calculations run on your device.</p>

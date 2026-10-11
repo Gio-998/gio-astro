@@ -1,8 +1,9 @@
+import { PageHero } from "@/components/ui";
 export const metadata = { title: "Terms of use" };
 export default function Page() {
   return (
     <article className="prose-soft">
-      <h1 className="h-display mb-4 text-4xl text-gold">Terms of use</h1>
+      <PageHero emblem="tarot" img="milkyway" title={<>Terms of use</>} />
       <p className="text-sm text-dim">Draft v0.1 — to be reviewed by a lawyer before taking payments.</p>
       <h2>What this is</h2>
       <p>This app offers astrology, numerology, tarot, traditional systems and personality questionnaires <b>for self-reflection and entertainment</b>. It is not psychological, medical, legal or financial advice, and it cannot predict the future or whether a relationship will succeed. Don't make important decisions based only on it.</p>

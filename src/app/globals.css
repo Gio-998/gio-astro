@@ -52,6 +52,7 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   overflow-x: clip;
+  font-variant-emoji: text;
 }
 ::selection { background: rgba(246, 207, 122, 0.35); }
 

@@ -1,8 +1,9 @@
+import { PageHero } from "@/components/ui";
 export const metadata = { title: "Our no-tricks promise", description: "Free full results, no fake urgency, one-click cancel, published prices and refunds in money — an astrology app without subscription traps." };
 export default function Page() {
   return (
     <article className="prose-soft">
-      <h1 className="h-display mb-4 text-4xl text-gold">Our no-tricks promise</h1>
+      <PageHero emblem="eye" img="helix" title={<>Our no-tricks promise</>} />
       <p>This category is known for $1 trials that quietly become $40 a month, cancellation mazes and fear-based upsells. We think that's wrong. Here is what we promise, in plain words:</p>
       <ul>
         <li><b>Free results, always.</b> Every quiz shows its full result the moment you finish. No email wall, no paywall at the end.</li>

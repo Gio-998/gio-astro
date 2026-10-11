@@ -8,6 +8,7 @@ import { BirthForm } from "../BirthForm";
 import { SIGN_GLYPH } from "@/engine/zodiac";
 import { ANIMAL_GLYPH } from "@/engine/chinese";
 import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
+import { PageHero } from "../ui";
 
 export function PeoplePage() {
   const s = useStore(); const { c } = useContent(); const h = useHref();
@@ -17,9 +18,10 @@ export function PeoplePage() {
   const defs = quizDefs(c);
   return (
     <div>
-      <div className="mb-4 flex items-center justify-between"><h1 className="h-display text-4xl text-gold">People</h1>
-        {mode === "list" && <div className="flex gap-2"><button className="btn-primary" onClick={() => setMode("add")}>+ Add</button><button className="btn-ghost" onClick={() => setMode("code")}>Paste code</button></div>}
-      </div>
+      <PageHero eyebrow="Your constellation of people" img="storm" emblem="attachment" title={<>The people <span className="italic text-aurora">in your sky</span></>}
+        sub="Partners, friends, family, colleagues — anyone you want to understand better.">
+        {mode === "list" && <div className="flex gap-2"><button className="btn-primary" onClick={() => setMode("add")}>+ Add someone</button><button className="btn-ghost" onClick={() => setMode("code")}>Paste a profile code</button></div>}
+      </PageHero>
       <p className="mb-4 text-sm text-dim">Partners, friends, family, colleagues — anyone you want to understand better. Their data stays on this device. Best practice: ask them first, or send them the app so they can add their own answers.</p>
       {mode === "add" && <div className="card mb-4"><BirthForm askRelType submitLabel="Add person" onSubmit={(p) => { repo.savePerson(p); setMode("list"); }} /><button className="btn-ghost mt-3" onClick={() => setMode("list")}>{c.site.common.cancel}</button></div>}
       {mode === "code" && (

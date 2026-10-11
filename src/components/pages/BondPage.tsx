@@ -5,7 +5,8 @@ import { useSearchParams } from "next/navigation";
 import { useStore, findPerson, StoredPerson } from "@/lib/store";
 import { useContent, useHref } from "@/lib/content-context";
 import { BOND_DIMS, CARE_STYLES, scoreBond, BondAnswers, BondResult, CareStyle } from "@/engine/bondcheck";
-import { Bar, EvidenceBadge, ScoreRing } from "../ui";
+import { Bar, EvidenceBadge, ScoreRing, PageHero } from "../ui";
+import { Emblem } from "../art/Emblem";
 
 type Step = { who: "a" | "b"; i: number } | { handover: true } | { result: BondResult } | null;
 
@@ -23,7 +24,8 @@ export function BondPage() {
 
   if (!A || !B) return (
     <div className="card text-center">
-      <h1 className="h-display mb-2 text-3xl text-gold">Bond Check</h1>
+      <Emblem id="bond" className="mx-auto mb-3 h-20 w-20 glow-gold" />
+      <h1 className="h-display mb-2 text-4xl"><span className="text-aurora">Bond Check</span></h1>
       <p className="mb-4 text-dim">Add yourself and the other person first (birth date is enough).</p>
       <div className="flex justify-center gap-2"><Link className="btn-primary" href={h(s.me ? "/people/" : "/start/")}>{s.me ? "Add a person" : c.site.common.start}</Link></div>
     </div>
@@ -31,7 +33,7 @@ export function BondPage() {
 
   if (!step) return (
     <div>
-      <div className="mb-1 flex items-center justify-between"><h1 className="h-display text-4xl text-gold">Bond Check</h1><EvidenceBadge e="research" /></div>
+      <PageHero eyebrow="For two · 3 minutes each" img="twinjet" emblem="bond" title={<>Bond <span className="italic text-aurora">Check</span></>} sub={<EvidenceBadge e="research" />} />
       <p className="mb-4 text-dim">A 3-minute check-in you each answer about <i>this</i> relationship. Its eight areas — appreciation, trust, commitment, repair, fun, feeling understood, safety and growth — are the kind of relationship-specific feelings that research found predict relationship quality far better than any sign or type (Joel et al., 2020). The stars are fixed; this one is yours to move.</p>
       <div className="card space-y-3">
         <div className="grid gap-3 sm:grid-cols-2">

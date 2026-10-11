@@ -14,6 +14,9 @@ import type { StoredPerson } from "@/lib/store";
 import { encodeProfileCode } from "@/lib/store";
 import { ShareButton } from "./ShareButton";
 import { useState } from "react";
+import { SignArt } from "./art/SignArt";
+import { Celebration } from "./art/Celebration";
+import { cosmos } from "./art/ArtCard";
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -175,9 +178,16 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
   return (
     <div>
       {/* Cover */}
-      <div className="card overflow-hidden" style={{ background: `linear-gradient(135deg, ${profile.palette[4]}55, ${profile.palette[0]}33 60%, transparent)` }}>
-        <p className="text-xs uppercase tracking-widest text-dim">{isMe ? "Your cosmic codex" : "Profile"}</p>
-        <h1 className="h-display mb-3 text-4xl text-gold">{person.name}</h1>
+      <div className="relative overflow-hidden rounded-[36px] border border-white/15 p-6 shadow-[0_40px_90px_-40px_rgba(139,108,240,.9)] sm:p-10">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={cosmos("orion", 1280)} alt="" className="absolute inset-0 h-full w-full animate-kenburns object-cover opacity-40" />
+        <div className="absolute inset-0" style={{ background: `linear-gradient(120deg, #120f2e 15%, ${profile.palette[0]}55 60%, ${profile.palette[4]}66)` }} />
+        {isMe && <Celebration count={18} />}
+        <SignArt sign={profile.sun} className="pointer-events-none absolute -right-10 -top-6 h-72 w-72 opacity-70 sm:right-2 sm:h-80 sm:w-80" />
+        <div className="relative">
+        <p className="eyebrow mb-2">{isMe ? "Your cosmic codex" : "Profile"}</p>
+        <h1 className="h-display mb-1 text-5xl sm:text-6xl"><span className="text-aurora">{person.name}</span></h1>
+        <p className="h-display mb-5 text-2xl italic text-mist/90">{A.signs[profile.sun].name} Sun · {A.signs[profile.moon].name} Moon{profile.rising ? ` · ${A.signs[profile.rising].name} Rising` : ""}</p>
         <div className="flex flex-wrap gap-2 text-sm">
           <span className="chip text-mist">{SIGN_GLYPH[profile.sun]} {A.signs[profile.sun].name} Sun</span>
           <span className="chip text-mist">☽ {profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(" or ") : A.signs[profile.moon].name} Moon</span>
@@ -188,7 +198,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
           {fl && <span className="chip text-mist">{fl.code}</span>}
           {profile.quiz.nine && <span className="chip text-mist">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing}</span>}
         </div>
-        <div className="mt-4"><Palette colors={profile.palette} /></div>
+        <div className="mt-5 max-w-sm"><p className="mb-1.5 text-xs uppercase tracking-widest text-dim">Your palette</p><Palette colors={profile.palette} size="h-9" /></div>
         <div className="mt-4 flex flex-wrap gap-2">
           <ShareButton spec={shareSpec} filename={`${person.name}-codex.png`} />
           <Link className="btn-ghost" href={h(`/chart/?id=${person.id}`)}>Full birth chart</Link>
@@ -201,10 +211,11 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             <textarea readOnly className="input h-24 font-mono text-[11px]" value={encodeProfileCode(person)} onFocus={(e) => e.currentTarget.select()} />
           </div>
         )}
+        </div>
       </div>
 
       <div className="card mt-4">
-        <div className="mb-2 flex justify-between text-sm"><span>{lensCount} of 18 lenses unlocked</span><span className="text-dim">{unlocked.length}/7 quizzes</span></div>
+        <div className="mb-2 flex justify-between text-sm"><span className="h-display text-xl">✦ {lensCount} of 18 lenses unlocked</span><span className="text-dim">{unlocked.length}/7 quizzes</span></div>
         <Bar value={(lensCount / 18) * 100} />
         {unlocked.length < 7 && (() => { const next = QUIZ_IDS.find((id) => !unlocked.includes(id))!; return <p className="text-sm text-dim">Next layer: <Link className="text-gold underline" href={quizFor(next)}>{defs[next].title}</Link> ({defs[next].minutes} min)</p>; })()}
       </div>
@@ -216,10 +227,13 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             { k: "Moon", s: profile.moon, t: A.signs[profile.moon].moon, deg: profile.chart.placements.moon!.lon },
             ...(profile.rising ? [{ k: "Rising", s: profile.rising, t: A.signs[profile.rising].rising, deg: profile.chart.placements.asc!.lon }] : []),
           ].map((x) => (
-            <div key={x.k} className="card">
-              <div className="mb-1 flex items-baseline justify-between"><h3 className="h-display text-xl">{SIGN_GLYPH[x.s]} {x.k} in {A.signs[x.s].name}</h3><span className="text-xs text-dim">{formatDegree(x.deg)} · {c.astro.elements[SIGN_ELEMENT[x.s]].name}</span></div>
+            <div key={x.k} className="card card-hover flex gap-4">
+              <SignArt sign={x.s} className="hidden h-24 w-24 shrink-0 sm:block" animate={false} />
+              <div className="flex-1">
+              <div className="mb-1 flex items-baseline justify-between"><h3 className="h-display text-2xl">{SIGN_GLYPH[x.s]}︎ {x.k} in <span className="text-gold">{A.signs[x.s].name}</span></h3><span className="text-xs text-dim">{formatDegree(x.deg)} · {c.astro.elements[SIGN_ELEMENT[x.s]].name}</span></div>
               <p className="text-sm">{x.t}</p>
               {x.k === "Sun" && <p className="mt-1 text-xs text-dim">Gifts: {A.signs[x.s].gifts}. Growth: {A.signs[x.s].edge}.</p>}
+              </div>
             </div>
           ))}
           {profile.chart.moonAmbiguous && <p className="text-xs text-dim">Without a birth time the Moon could be in {profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(" or ")} — read both and see which feels true.</p>}
@@ -298,7 +312,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         <Section key={id} title={defs[id].title} aside={<EvidenceBadge e={defs[id].evidence} />}>
           {profile.quiz[defs[id].resultKey]
             ? <><QuizResultView id={id} profile={profile} /><Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></>
-            : <Locked title={defs[id].title} text={`${defs[id].tagline} Unlocks: ${defs[id].unlocks}.`} href={quizFor(id)} minutes={defs[id].minutes} />}
+            : <Locked emblem={id} title={defs[id].title} text={`${defs[id].tagline} Unlocks: ${defs[id].unlocks}.`} href={quizFor(id)} minutes={defs[id].minutes} />}
         </Section>
       ))}
     </div>

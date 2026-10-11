@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { getContent } from "@/content";
 import { LENS_EVIDENCE, LensId } from "@/engine/compat";
-import { quizDefs, QUIZ_IDS, QuizId } from "@/lib/quiz-defs";
+import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
+import { QUIZ_ART } from "@/components/art/quizArt";
 import { Hero } from "@/components/landing/Hero";
 import { SignCarousel } from "@/components/landing/SignCarousel";
 import { PickACard } from "@/components/landing/PickACard";
@@ -16,10 +17,6 @@ import { SignArt } from "@/components/art/SignArt";
 import { ZodiacWheel } from "@/components/art/ZodiacWheel";
 
 const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha" };
-const QUIZ_ART: Record<QuizId, { img: Cosmos; tint: "violet" | "rose" | "gold" | "aqua" }> = {
-  "big-five": { img: "orion", tint: "violet" }, attachment: { img: "twinjet", tint: "rose" }, nine: { img: "helix", tint: "violet" }, care: { img: "storm", tint: "rose" },
-  shadow: { img: "pillars", tint: "gold" }, dosha: { img: "mountain", tint: "aqua" }, explorer: { img: "cliffs", tint: "gold" },
-};
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;

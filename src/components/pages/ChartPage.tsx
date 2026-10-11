@@ -7,7 +7,7 @@ import { ChartWheel } from "../ChartWheel";
 import { useContent, useHref } from "@/lib/content-context";
 import { formatDegree, SIGN_GLYPH } from "@/engine/zodiac";
 import type { Point } from "@/engine/astro";
-import { EvidenceBadge } from "../ui";
+import { EvidenceBadge, PageHero } from "../ui";
 
 const ORDER: Point[] = ["sun", "moon", "asc", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto", "node", "mc"];
 
@@ -21,12 +21,12 @@ export function ChartPage() {
   const t = ch.time;
   return (
     <div>
-      <div className="mb-2 flex items-center justify-between"><h1 className="h-display text-4xl text-gold">{person.name}'s birth chart</h1><EvidenceBadge e="traditional" /></div>
+      <PageHero eyebrow="Natal chart" img="milkyway" emblem="chart" title={<><span className="text-aurora">{person.name}</span>'s birth chart</>} sub={<EvidenceBadge e="traditional" />} />
       <p className="mb-4 text-sm text-dim">
         {person.date} {person.time ?? "(time unknown — noon used)"} {person.place ? `· ${person.place.name}` : "· no place (UT assumed)"} ·
         UTC{t.offsetMinutes >= 0 ? "+" : "−"}{Math.floor(Math.abs(t.offsetMinutes) / 60)}:{String(Math.abs(t.offsetMinutes) % 60).padStart(2, "0")} ({t.offsetSource === "tzdb" ? "time-zone database" : t.offsetSource === "local-mean-time" ? "local mean time from longitude" : t.offsetSource === "override" ? "your manual offset" : "assumed UT"}) · tropical zodiac · whole-sign houses
       </p>
-      <div className="card"><ChartWheel chart={ch} /></div>
+      <div className="card relative overflow-hidden"><div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,108,240,.25),transparent_65%)]" /><div className="relative mx-auto max-w-[460px]"><ChartWheel chart={ch} /></div></div>
       <div className="card mt-4 overflow-x-auto">
         <table className="w-full text-sm">
           <thead><tr className="text-left text-dim"><th className="py-1">Point</th><th>Sign</th><th>Degree</th><th>House</th></tr></thead>
@@ -37,17 +37,17 @@ export function ChartPage() {
           </tbody>
         </table>
       </div>
-      <h2 className="h-display mt-8 mb-3 text-2xl text-gold">What each placement means for you</h2>
+      <h2 className="h-display mt-12 mb-4 text-3xl"><span className="text-gold">✦</span> What each placement means for you</h2>
       <div className="space-y-3">
         {ORDER.filter((p) => ch.placements[p] && p !== "mc").map((p) => { const pl = ch.placements[p]!; const sg = A.signs[pl.sign]; return (
-          <div key={p} className="card">
-            <h3 className="font-semibold">{A.points[p].glyph} {A.points[p].name} in {sg.name}{pl.house ? `, house ${pl.house}` : ""}</h3>
+          <div key={p} className="card card-hover">
+            <h3 className="h-display text-xl"><span className="mr-2 inline-grid h-8 w-8 place-items-center rounded-full bg-white/10 text-gold">{A.points[p].glyph}</span>{A.points[p].name} in <span className="text-gold">{sg.name}</span>{pl.house ? `, house ${pl.house}` : ""}</h3>
             <p className="text-sm">{p === "sun" ? sg.sun : p === "moon" ? sg.moon : p === "asc" ? sg.rising : `${A.points[p].name} shows ${A.points[p].governs}. In ${sg.name} — ${sg.essence} — it works through ${sg.gifts}; its growth edge is ${sg.edge}.`}</p>
             {pl.house && p !== "asc" && <p className="mt-1 text-xs text-dim">House {pl.house}: this energy shows up most in {A.houses[pl.house - 1]}.</p>}
           </div>
         ); })}
       </div>
-      <h2 className="h-display mt-8 mb-3 text-2xl text-gold">Inner conversations (aspects)</h2>
+      <h2 className="h-display mt-12 mb-4 text-3xl"><span className="text-gold">✦</span> Inner conversations (aspects)</h2>
       <div className="space-y-2">
         {ch.aspects.slice(0, 12).map((a, i) => (
           <div key={i} className="card !py-3 text-sm">

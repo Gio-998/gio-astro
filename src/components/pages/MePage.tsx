@@ -13,7 +13,7 @@ export function MePage() {
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!s.me) return (
     <div className="card text-center">
-      <h1 className="h-display mb-2 text-3xl text-gold">Let's meet you</h1>
+      <h1 className="h-display mb-2 text-4xl"><span className="text-aurora">Let's meet you</span></h1>
       <p className="mb-4 text-dim">Your profile is built from your birth date in seconds.</p>
       <Link className="btn-primary" href={h("/start/")}>{c.site.common.start}</Link>
     </div>

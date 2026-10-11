@@ -8,6 +8,8 @@ import { useContent, useHref } from "@/lib/content-context";
 import { comparePair, REL_TYPES, RelType } from "@/engine/compat";
 import { PairReportView } from "../PairReport";
 import { BirthForm } from "../BirthForm";
+import { PageHero } from "../ui";
+import { SignArt } from "../art/SignArt";
 
 export function MatchPage() {
   const s = useStore(); const { c } = useContent(); const h = useHref();
@@ -33,8 +35,9 @@ export function MatchPage() {
   );
   return (
     <div>
-      <h1 className="h-display mb-1 text-4xl text-gold">Compatibility</h1>
-      <p className="mb-4 text-dim">Any two people, any kind of bond. Up to 14 lenses — each with Harmony and Spark — blended into one Resonance score.</p>
+      <PageHero eyebrow="Compatibility · any bond" img="twinjet" emblem="bond" title={<>How you <span className="italic text-aurora">shine together</span></>}
+        sub="Any two people, any kind of bond. Up to 14 lenses — each with Harmony and Spark — blended into one Resonance score."
+        art={report ? <div className="flex items-center"><SignArt sign={report.pa.sun} className="h-28 w-28" /><span className="-mx-4 text-3xl text-rose">♡</span><SignArt sign={report.pb.sun} className="h-28 w-28" /></div> : undefined} />
       <div className="card mb-6 space-y-3">
         <div className="grid gap-3 sm:grid-cols-2">
           <div><label className="label">Person A</label>{picker(A?.id ?? "", setA, "a")}</div>

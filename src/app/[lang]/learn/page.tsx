@@ -1,8 +1,9 @@
+import { PageHero } from "@/components/ui";
 export const metadata = { title: "How it works — methods, sources and honesty", description: "How we calculate birth charts, Vedic matching, Chinese zodiac, numerology and personality scores — and what the science does and doesn't say." };
 export default function Page() {
   return (
     <article className="prose-soft">
-      <h1 className="h-display mb-4 text-4xl text-gold">How it works</h1>
+      <PageHero emblem="chart" img="orion" title={<>How it works</>} />
       <p><b>Our philosophy:</b> the stars set the scene, psychology explains the pattern, and how you treat each other writes the story. Everything here is a mirror for reflection — never a prophecy or a verdict.</p>
       <h2>What the evidence says</h2>
       <p>Controlled studies have found no predictive power for astrology on personality or on who marries whom (e.g. Carlson, <i>Nature</i> 1985; Voas's analysis of ~10 million UK marriages, 2007/2008). Numerology, tarot and similar systems have no empirical support either. We include them because they are rich, ancient languages for reflection — and we label them ✨ Traditional & symbolic.</p>
