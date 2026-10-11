@@ -17,7 +17,7 @@ export function SignArt({ sign, className = "", animate = true, showGlyph = true
       <circle cx="100" cy="100" r="96" fill={`url(#${id}-orb)`} />
       <circle cx="100" cy="100" r="88" fill="none" stroke={el.b} strokeOpacity=".35" strokeWidth=".6" strokeDasharray="1 4" />
       <circle cx="100" cy="100" r="74" fill="none" stroke={el.b} strokeOpacity=".18" strokeWidth=".6" />
-      {showGlyph && <text x="100" y="128" textAnchor="middle" fontSize="92" fill={el.b} fillOpacity=".13" fontFamily="serif">{SIGN_GLYPH[sign]}︎</text>}
+      {showGlyph && <text x="100" y="128" textAnchor="middle" fontSize="92" fill={el.b} fillOpacity=".13" fontFamily="serif">{SIGN_GLYPH[sign]}</text>}
       {k.l.map(([a, b], i) => {
         const [x1, y1] = pts[a], [x2, y2] = pts[b]; const len = Math.hypot(x2 - x1, y2 - y1);
         return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="url(#sa-gold)" strokeWidth="1.1" strokeLinecap="round" strokeOpacity=".85"

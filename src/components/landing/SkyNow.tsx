@@ -21,7 +21,7 @@ export function SkyNow() {
       <div className="card flex flex-col items-center text-center">
         <p className="eyebrow mb-3">{now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" })}</p>
         <MoonArt angle={m.angle} className="mb-3 h-40 w-40 animate-float" />
-        <p className="h-display text-3xl">{ph.name} in {A.signs[m.moonSign].name} <span className="text-gold">{SIGN_GLYPH[m.moonSign]}︎</span></p>
+        <p className="h-display text-3xl">{ph.name} in {A.signs[m.moonSign].name} <span className="text-gold">{SIGN_GLYPH[m.moonSign]}</span></p>
         <p className="mb-2 text-sm text-dim">{m.illumination}% illuminated</p>
         <p className="text-mist/90">{ph.text}</p>
       </div>
@@ -31,7 +31,7 @@ export function SkyNow() {
           {SHOW.map((p) => { const lon = longitude(p, now); const s = signFromLongitude(lon); return (
             <li key={p} className="flex items-center justify-between py-2.5">
               <span className="flex items-center gap-3"><span className="grid h-8 w-8 place-items-center rounded-full bg-white/10 text-gold">{A.points[p].glyph}</span>{A.points[p].name}</span>
-              <span className="text-mist/90">{SIGN_GLYPH[s]}︎ {A.signs[s].name} <span className="text-dim">{Math.floor(lon % 30)}°</span></span>
+              <span className="text-mist/90">{SIGN_GLYPH[s]} {A.signs[s].name} <span className="text-dim">{Math.floor(lon % 30)}°</span></span>
             </li>
           ); })}
         </ul>

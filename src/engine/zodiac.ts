@@ -30,8 +30,8 @@ export const SIGN_RULER: Record<Sign, string> = {
 };
 
 export const SIGN_GLYPH: Record<Sign, string> = {
-  aries: "♈", taurus: "♉", gemini: "♊", cancer: "♋", leo: "♌", virgo: "♍",
-  libra: "♎", scorpio: "♏", sagittarius: "♐", capricorn: "♑", aquarius: "♒", pisces: "♓",
+  aries: "♈\uFE0E", taurus: "♉\uFE0E", gemini: "♊\uFE0E", cancer: "♋\uFE0E", leo: "♌\uFE0E", virgo: "♍\uFE0E",
+  libra: "♎\uFE0E", scorpio: "♏\uFE0E", sagittarius: "♐\uFE0E", capricorn: "♑\uFE0E", aquarius: "♒\uFE0E", pisces: "♓\uFE0E",
 };
 
 /** Approximate tropical Sun-sign date ranges (exact boundary varies by year — the chart tool computes it). */

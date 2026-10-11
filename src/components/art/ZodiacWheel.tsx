@@ -24,7 +24,7 @@ export function ZodiacWheel({ className = "" }: { className?: string }) {
       </g>
       {SIGNS.map((s, i) => {
         const a = ((i * 30 + 15 - 90) * Math.PI) / 180;
-        return <text key={s} x={f(R + Math.cos(a) * 166)} y={f(R + Math.sin(a) * 166 + 7)} textAnchor="middle" fontSize="20" fill="url(#zw-g)" fontFamily="serif">{SIGN_GLYPH[s]}︎</text>;
+        return <text key={s} x={f(R + Math.cos(a) * 166)} y={f(R + Math.sin(a) * 166 + 7)} textAnchor="middle" fontSize="20" fill="url(#zw-g)" fontFamily="serif">{SIGN_GLYPH[s]}</text>;
       })}
       <circle cx={R} cy={R} r="6" fill="#f6cf7a" />
     </svg>

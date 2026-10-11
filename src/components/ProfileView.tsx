@@ -230,7 +230,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             <div key={x.k} className="card card-hover flex gap-4">
               <SignArt sign={x.s} className="hidden h-24 w-24 shrink-0 sm:block" animate={false} />
               <div className="flex-1">
-              <div className="mb-1 flex items-baseline justify-between"><h3 className="h-display text-2xl">{SIGN_GLYPH[x.s]}︎ {x.k} in <span className="text-gold">{A.signs[x.s].name}</span></h3><span className="text-xs text-dim">{formatDegree(x.deg)} · {c.astro.elements[SIGN_ELEMENT[x.s]].name}</span></div>
+              <div className="mb-1 flex items-baseline justify-between"><h3 className="h-display text-2xl">{SIGN_GLYPH[x.s]} {x.k} in <span className="text-gold">{A.signs[x.s].name}</span></h3><span className="text-xs text-dim">{formatDegree(x.deg)} · {c.astro.elements[SIGN_ELEMENT[x.s]].name}</span></div>
               <p className="text-sm">{x.t}</p>
               {x.k === "Sun" && <p className="mt-1 text-xs text-dim">Gifts: {A.signs[x.s].gifts}. Growth: {A.signs[x.s].edge}.</p>}
               </div>
