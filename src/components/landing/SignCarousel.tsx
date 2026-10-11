@@ -33,8 +33,8 @@ export function SignCarousel() {
           ))}
         </div>
         <div className="mt-1 flex justify-center gap-3">
-          <button className="btn-ghost !h-11 !w-11 !p-0" onClick={() => scroll(-1)} aria-label="Previous signs">←</button>
-          <button className="btn-ghost !h-11 !w-11 !p-0" onClick={() => scroll(1)} aria-label="Next signs">→</button>
+          <button className="btn-ghost !h-11 !w-11 !p-0" onClick={() => scroll(-1)} aria-label={c.site.carousel.prev}>←</button>
+          <button className="btn-ghost !h-11 !w-11 !p-0" onClick={() => scroll(1)} aria-label={c.site.carousel.next}>→</button>
         </div>
       </div>
       <AnimatePresence mode="wait">
@@ -44,9 +44,9 @@ export function SignCarousel() {
           <div>
             <p className="eyebrow mb-1">{A.elements[SIGN_ELEMENT[sel]].name} · ruled by {SIGN_RULER[sel]}</p>
             <h3 className="h-display mb-2 text-4xl">{s.name} — <span className="italic text-aurora">{s.essence}</span></h3>
-            <p className="mb-2 text-mist/90"><b className="text-gold">Gifts:</b> {s.gifts}. <b className="text-rose">Growth edge:</b> {s.edge}.</p>
-            <p className="mb-4 text-sm text-dim">Your Sun sign is just one of 18 lenses. Your Moon, rising sign, Chinese animal and numbers often tell a very different story.</p>
-            <Link href={h("/start/")} className="btn-primary">See my full sky ✦</Link>
+            <p className="mb-2 text-mist/90"><b className="text-gold">{c.site.carousel.gifts}</b> {s.gifts}. <b className="text-rose">{c.site.carousel.edge}</b> {s.edge}.</p>
+            <p className="mb-4 text-sm text-dim">{c.site.carousel.more}</p>
+            <Link href={h("/start/")} className="btn-primary">{c.site.carousel.cta}</Link>
           </div>
         </motion.div>
       </AnimatePresence>

@@ -5,11 +5,12 @@ import { motion, useScroll, useTransform, useReducedMotion } from "motion/react"
 import { Starfield } from "../art/Starfield";
 import { ZodiacWheel } from "../art/ZodiacWheel";
 import { SignArt } from "../art/SignArt";
-import { useHref } from "@/lib/content-context";
+import { useHref, useContent } from "@/lib/content-context";
+import { DatePicker } from "../DatePicker";
 import { cosmos } from "../art/ArtCard";
 
 export function Hero() {
-  const h = useHref(); const router = useRouter();
+  const h = useHref(); const router = useRouter(); const { c } = useContent(); const H = c.site.hero;
   const ref = useRef<HTMLElement>(null);
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -19,7 +20,7 @@ export function Hero() {
   const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const [date, setDate] = useState("");
   const go = (e: React.FormEvent) => { e.preventDefault(); router.push(h(`/start/${date ? `?date=${date}` : ""}`)); };
-  const words = ["yourself", "your love", "your friends", "your family"];
+  const words = H.words;
   return (
     <section ref={ref} className="bleed relative -mt-[72px] md:-mt-[76px] flex min-h-[100svh] items-center overflow-hidden pt-20">
       <motion.div style={{ y: yBg }} className="absolute inset-0">
@@ -39,31 +40,30 @@ export function Hero() {
 
       <motion.div style={{ y: yText, opacity: fade }} className="relative mx-auto w-full max-w-6xl px-5">
         <div className="max-w-2xl">
-          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="eyebrow mb-5">Stars · numbers · elements · science</motion.p>
+          <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="eyebrow mb-5">{H.eyebrow}</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 24, filter: "blur(8px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: 1, delay: 0.2 }}
             className="h-display mb-6 text-[clamp(2.8rem,7vw,5.6rem)] font-medium leading-[0.98]">
-            See <span className="italic text-aurora">{words[0]}</span> — and the people you love — <span className="italic text-aurora">in new colours.</span>
+            {H.see}<span className="italic text-aurora">{words[0]}</span>{H.mid}<span className="italic text-aurora">{H.end}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }} className="mb-8 max-w-xl text-lg leading-relaxed text-mist/90">
             Your birth chart, Chinese zodiac, numbers, tarot and the personality science that actually holds up — woven into one honest mirror for you and your relationships. Free, in 90 seconds.
           </motion.p>
           <motion.form onSubmit={go} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
             className="mb-4 flex max-w-xl flex-col gap-2 rounded-[28px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_60px_-20px_rgba(139,108,240,.8)] backdrop-blur-xl sm:flex-row sm:items-center">
-            <label className="flex flex-1 items-center gap-3 px-4 py-2">
-              <span className="whitespace-nowrap font-display text-xl italic text-gold">I was born on</span>
-              <input type="date" required value={date} onChange={(e) => setDate(e.target.value)} max="2026-12-31" min="1900-01-01" aria-label="Your birth date"
-                className="w-full bg-transparent text-base text-mist outline-none [color-scheme:dark]" />
-            </label>
-            <button className="btn-primary px-6 py-3.5 text-base">Reveal my sky ✦</button>
+            <div className="flex-1 px-3 py-1.5">
+              <span className="mb-1 block whitespace-nowrap font-display text-xl italic text-gold">{H.bornOn}</span>
+              <DatePicker value={date} onChange={setDate} compact />
+            </div>
+            <button className="btn-primary px-6 py-3.5 text-base">{H.reveal}</button>
           </motion.form>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-dim">
-            <span>✦ No sign-up</span><span>✦ Full results free</span><span>✦ Data stays on your device</span>
-            <a href={h("/match/")} className="text-gold underline-offset-4 hover:underline">or check a compatibility →</a>
+            {H.perks.map((p) => <span key={p}>{p}</span>)}
+            <a href={h("/match/")} className="text-gold underline-offset-4 hover:underline">{H.orMatch}</a>
           </motion.div>
         </div>
       </motion.div>
-      <a href="#discover" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-dim sm:flex" aria-label="Scroll down">
-        <span className="eyebrow !text-[10px] !text-dim">Scroll</span>
+      <a href="#discover" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-dim sm:flex" aria-label={H.scrollDown}>
+        <span className="eyebrow !text-[10px] !text-dim">{H.scroll}</span>
         <span className="h-10 w-px animate-pulse bg-gradient-to-b from-gold to-transparent" />
       </a>
     </section>

@@ -4,7 +4,7 @@ import { useContent } from "@/lib/content-context";
 import { daysInMonth, isoOf, formatDate } from "@/lib/dates";
 
 /** Friendly date picker: day / month-name / year selects. Value is ISO yyyy-mm-dd ("" when incomplete). */
-export function DatePicker({ value, onChange, minYear = 1900, maxYear = new Date().getFullYear() + 1, id }: { value: string; onChange: (iso: string) => void; minYear?: number; maxYear?: number; id?: string }) {
+export function DatePicker({ value, onChange, minYear = 1900, maxYear = new Date().getFullYear() + 1, id, compact }: { value: string; onChange: (iso: string) => void; minYear?: number; maxYear?: number; id?: string; compact?: boolean }) {
   const { c } = useContent(); const months = c.site.months; const L = c.site.datePicker;
   const init = value.match(/^(\d{4})-(\d{2})-(\d{2})$/);
   const [y, setY] = useState(init ? Number(init[1]) : 0);
@@ -34,7 +34,7 @@ export function DatePicker({ value, onChange, minYear = 1900, maxYear = new Date
           {years.map((k) => <option key={k} value={k}>{k}</option>)}
         </select>
       </div>
-      {y && m && d ? <p className="mt-1 text-xs text-gold/90">✦ {formatDate(isoOf(y, m, Math.min(d, maxD)), months)}</p> : null}
+      {!compact && y && m && d ? <p className="mt-1 text-xs text-gold/90">✦ {formatDate(isoOf(y, m, Math.min(d, maxD)), months)}</p> : null}
     </div>
   );
 }

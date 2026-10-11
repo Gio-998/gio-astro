@@ -50,7 +50,7 @@ export const attachment: Record<AttachStyle, { name: string; text: string; need:
   avoidant: { name: "Avoidant-leaning", text: "You value self-reliance and can feel crowded when someone wants a lot of closeness.", need: "space without guilt, and closeness at your own pace", tip: "Say 'I need a little time — I'll come back at 8' instead of disappearing." },
   fearful: { name: "Push–pull", text: "You long for closeness and also fear it, so you may move toward people and then away.", need: "patience, safety and very consistent kindness", tip: "Notice the pull-back moment and share it: 'part of me wants to run right now.'" },
 };
-export const pursueWithdraw = "When one person seeks closeness under stress and the other seeks space, a loop can form: the more one pursues, the more the other withdraws. It's the most common pattern couples report — and the most fixable. Agree on a time-out with a promised return time.";
+export const pursueWithdraw: string = "When one person seeks closeness under stress and the other seeks space, a loop can form: the more one pursues, the more the other withdraws. It's the most common pattern couples report — and the most fixable. Agree on a time-out with a promised return time.";
 
 export const nineStyles: Record<number, { name: string; core: string; gift: string; growth: string }> = {
   1: { name: "The Improver", core: "wants to be good and do things right", gift: "integrity and high standards", growth: "Make room for 'good enough' and for joy." },
@@ -63,7 +63,7 @@ export const nineStyles: Record<number, { name: string; core: string; gift: stri
   8: { name: "The Protector", core: "wants strength and control over their own life", gift: "courage, directness and protectiveness", growth: "Show softness — it's strength, not weakness." },
   9: { name: "The Peacemaker", core: "wants inner and outer peace", gift: "acceptance and the ability to unite people", growth: "Your opinion matters: say it first sometimes." },
 };
-export const nineNote = "Nine-style motivations are inspired by the widely used nine-type model of personality. This is our own short quiz — not an official test.";
+export const nineNote: string = "Nine-style motivations are inspired by the widely used nine-type model of personality. This is our own short quiz — not an official test.";
 
 export const care: Record<Care, { name: string; text: string; tip: string }> = {
   words: { name: "Kind words", text: "Appreciation, encouragement and 'I'm proud of you' fill your cup.", tip: "Send one specific compliment today." },
@@ -72,7 +72,7 @@ export const care: Record<Care, { name: string; text: string; tip: string }> = {
   help: { name: "Helpful actions", text: "Help with a task, a solved problem or a cup of tea made without asking feels caring.", tip: "Take one chore off their list." },
   touch: { name: "Physical affection", text: "Hugs, a hand on the shoulder, sitting close — touch says it best (always with consent).", tip: "A long hug — at least 20 seconds." },
 };
-export const careNote = "Research suggests most people value all five ways of caring, and 'matching' matters less than learning each other's favourites. Use this as a translation guide.";
+export const careNote: string = "Research suggests most people value all five ways of caring, and 'matching' matters less than learning each other's favourites. Use this as a translation guide.";
 
 export const shadowAxes: Record<Axis, { classical: string; virtue: string; shadow: string; gift: string; practice: string }> = {
   pride: { classical: "Pride", virtue: "Humility", shadow: "Hard to admit mistakes; needing to be right.", gift: "Self-respect and the courage to stand tall.", practice: "Say 'you were right about that' once this week." },
@@ -106,7 +106,7 @@ export const constitutions: Record<Constitution, string> = {
   "vata-pitta": "Vata–Pitta — quick and driven.", "pitta-kapha": "Pitta–Kapha — strong and steady.", "vata-kapha": "Vata–Kapha — gentle and creative.",
   tridoshic: "Balanced (tridoshic) — a little of each.",
 };
-export const doshaNote = "Inspired by traditional Ayurvedic ideas, for self-reflection and wellbeing routines only. Not medical advice.";
+export const doshaNote: string = "Inspired by traditional Ayurvedic ideas, for self-reflection and wellbeing routines only. Not medical advice.";
 
 export const explorer = {
   name: "Autopilot vs Explorer mind",
@@ -142,4 +142,4 @@ export const archetypeAnimals: Record<ArchetypeAnimal, { name: string; text: str
   whale: { name: "Whale", text: "Deep feeling and ancient calm — your song travels far." },
   owl: { name: "Owl", text: "Night wisdom — you see in the dark and speak when it matters." },
 };
-export const archetypeNote = "Your archetype animal is a symbol drawn from your strongest element and your yin–yang balance — a poetic mirror, not a spiritual claim on any tradition.";
+export const archetypeNote: string = "Your archetype animal is a symbol drawn from your strongest element and your yin–yang balance — a poetic mirror, not a spiritual claim on any tradition.";

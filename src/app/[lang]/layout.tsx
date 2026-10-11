@@ -10,9 +10,9 @@ import { Header, Footer } from "@/components/Chrome";
 import { SITE_URL } from "@/lib/site-url";
 import { PersonalTheme } from "@/components/PersonalTheme";
 
-const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
+const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
 const caps = Cinzel({ subsets: ["latin", "latin-ext"], weight: ["500", "600"], variable: "--font-cinzel" });
-const sans = Inter({ subsets: ["latin", "latin-ext"], variable: "--font-inter" });
+const sans = Inter({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-inter" });
 
 export const dynamicParams = false;
 export function generateStaticParams() { return LOCALES.map((lang) => ({ lang })); }

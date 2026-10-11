@@ -26,7 +26,7 @@ export function SkyNow() {
         <p className="text-mist/90">{ph.text}</p>
       </div>
       <div className="card">
-        <p className="eyebrow mb-3">The sky right now</p>
+        <p className="eyebrow mb-3">{c.site.skyNow.title}</p>
         <ul className="divide-y divide-white/10">
           {SHOW.map((p) => { const lon = longitude(p, now); const s = signFromLongitude(lon); return (
             <li key={p} className="flex items-center justify-between py-2.5">
@@ -35,8 +35,8 @@ export function SkyNow() {
             </li>
           ); })}
         </ul>
-        <p className="mt-3 text-xs text-dim">Calculated live in your browser from real planetary positions.</p>
-        <Link href={h("/today/")} className="btn-ghost mt-4 w-full">See what today means for your chart →</Link>
+        <p className="mt-3 text-xs text-dim">{c.site.skyNow.note}</p>
+        <Link href={h("/today/")} className="btn-ghost mt-4 w-full">{c.site.skyNow.cta}</Link>
       </div>
     </div>
   );
