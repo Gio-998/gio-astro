@@ -10,7 +10,7 @@ export const signs: Record<Sign, SignText> = {
     rising: "People meet you as direct, quick and warm-blooded — someone who walks in already halfway to a decision.",
     gifts: "courage, initiative, honesty", edge: "patience and finishing what you start" },
   taurus: { name: "Taurus", essence: "the steady garden",
-    sun: "You build a life that feels good to touch — reliable, beautiful, unhurried. Loyalty is your love language of choice.",
+    sun: "You build a life that feels good to touch — reliable, beautiful, unhurried. Loyalty is how you show love.",
     moon: "You feel safe through routine, comfort and the body: good food, a familiar hand, enough sleep.",
     rising: "You come across as calm, grounded and pleasant to be near — people relax around you.",
     gifts: "loyalty, patience, sensuality", edge: "flexibility when plans change" },

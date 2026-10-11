@@ -117,8 +117,9 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
       <div className="card">
         <p className="h-display text-2xl text-gold">{P.constitutions[r.constitution]}</p>
         {(["vata", "pitta", "kapha"] as const).map((k) => <Bar key={k} value={r.pct[k]} label={`${P.doshas[k].name} (${P.doshas[k].element})`} right={`${r.pct[k]}%`} />)}
-        <p className="mt-2 text-sm">{P.doshas[r.dominant].text}</p>
-        <p className="text-sm"><b>Balancing:</b> {P.doshas[r.dominant].balance}.</p>
+        {r.constitution === "tridoshic"
+          ? <p className="mt-2 text-sm">All three energies show up in you fairly evenly — adaptable, with no single pattern dominating. Keep a steady daily rhythm and adjust with the seasons.</p>
+          : <><p className="mt-2 text-sm">{P.doshas[r.dominant].text}</p><p className="text-sm"><b>Balancing:</b> {P.doshas[r.dominant].balance}.</p></>}
         <p className="mt-2 text-xs text-dim">{P.doshaNote}</p>
       </div>
     );

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { useStore, repo } from "@/lib/store";
 import { profileOf } from "@/lib/profile";
 import { useContent, useHref } from "@/lib/content-context";
@@ -10,10 +10,10 @@ import { SIGN_GLYPH } from "@/engine/zodiac";
 
 export function TodayPage() {
   const s = useStore(); const { c } = useContent(); const h = useHref();
-  const [now, setNow] = useState<Date | null>(null);
-  useEffect(() => setNow(new Date()), []);
+  // The store is null during prerender/hydration, so a client-only date here can't cause a mismatch.
+  const [now] = useState<Date | null>(() => (typeof window === "undefined" ? null : new Date()));
   const D = c.daily;
-  const g = useMemo(() => (s?.me && now ? dailyGuidance(profileOf(s.me), now, D.prompts.length) : null), [s?.me, now, D.prompts.length]);
+  const g = s?.me && now ? dailyGuidance(profileOf(s.me), now, D.prompts.length) : null;
   const localDate = now ? `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}` : "";
   const entry = s?.journal[localDate];
   const [text, setText] = useState<string | null>(null);

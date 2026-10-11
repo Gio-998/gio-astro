@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "build:export": "NEXT_DIST_DIR=.next-export next build",
+    "test": "vitest run",
+    "calibrate": "N_PEOPLE=3000 N_PAIRS=40000 tsx scripts/calibrate.ts",
+    "cities": "node scripts/build-cities.mjs"
   },
   "dependencies": {
     "astronomy-engine": "^2.1.19",

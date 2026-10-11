@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mirrorstar (working name)
 
-## Getting Started
+Astrology + psychology self-discovery and compatibility app. Zero running cost: static export, all calculations in the browser, data in localStorage.
 
-First, run the development server:
+## Commands
+- `npm run dev` — dev server
+- `npm test` — engine + content tests (vitest)
+- `npm run build:export` — static site into `out/` (uses `.next-export/` so it can run next to `next dev`). Deploy `out/` to Cloudflare Pages.
+- `npm run calibrate` — regenerate `src/engine/calibration.json` (Monte-Carlo percentile tables for compatibility scores)
+- `npm run cities -- /path/to/geonames` — rebuild `public/data/cities.json` from GeoNames cities15000
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Set `NEXT_PUBLIC_SITE_URL` at build time for sitemap/canonical URLs.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Layout
+- `src/engine/` — pure TS: astro (astronomy-engine), time zones (luxon), Vedic + Guna Milan, Chinese (lunar-javascript), numerology, tarot, Big Five (Mini-IPIP), own quizzes (attachment, nine motivations, care, shadow, dosha, explorer/stance), bond check, profile, compatibility (Harmony/Spark/Resonance), daily guidance
+- `src/content/<locale>/` — every user-facing interpretation text; add `pl/` with the same shape and register it in `src/content/index.ts`
+- `src/lib/` — localStorage repository (swap for Supabase later), city search, share cards (canvas), quiz definitions, payment placeholders
+- `src/app/[lang]/` — routes; `src/components/` — UI
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Licences: astronomy-engine, lunar-javascript, luxon — MIT. IPIP items — public domain. GeoNames — CC BY 4.0 (attributed in footer).

@@ -1,14 +1,13 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import { loadCities, searchCities, CityHit } from "@/lib/cities";
 import type { Place } from "@/lib/store";
 
 export function CityPicker({ value, onChange }: { value: Place | null; onChange: (p: Place | null) => void }) {
   const [q, setQ] = useState(value?.name ?? "");
-  const [hits, setHits] = useState<CityHit[]>([]);
   const [rows, setRows] = useState<Awaited<ReturnType<typeof loadCities>> | null>(null);
   const [open, setOpen] = useState(false);
-  useEffect(() => { if (rows && open) setHits(searchCities(rows, q)); }, [q, rows, open]);
+  const hits: CityHit[] = useMemo(() => (rows && open ? searchCities(rows, q) : []), [q, rows, open]);
   return (
     <div className="relative">
       <input className="input" placeholder="Start typing a city…" value={q}
