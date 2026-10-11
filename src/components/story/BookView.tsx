@@ -86,6 +86,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro }:
       </nav>
 
       <div className="reading-surface">
+        {B.langNote && <p className="mx-auto mb-4 max-w-xl rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm print:hidden">🌐 {B.langNote}</p>}
         {(intro ?? B.intro(name, book.lenses)) && <p className="reading-intro">{intro ?? B.intro(name, book.lenses)}</p>}
         {book.chapters.map((ch, i) => (
           <section key={ch.id} id={`ch-${ch.id}`} className="chapter scroll-mt-24">

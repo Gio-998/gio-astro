@@ -3,6 +3,7 @@ export const book = {
   title: "The Book of You",
   subtitle: "A long-form reading woven from every lens you've unlocked",
   eyebrow: "Your story",
+  langNote: "" as string,
   toc: "Contents",
   readingTime: (min: number) => `${min} min read`,
   words: (n: number) => `${n.toLocaleString("en")} words`,

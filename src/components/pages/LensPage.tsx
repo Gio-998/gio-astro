@@ -50,6 +50,7 @@ export function LensPageView() {
 
       {page.blocks ? (
         <div className="reading-surface">
+          {c.book.langNote && <p className="mb-3 rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm">🌐 {c.book.langNote}</p>}
           <div className="reading"><Blocks blocks={page.blocks} forId={id} /></div>
         </div>
       ) : page.quiz && (
