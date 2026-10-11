@@ -7,8 +7,10 @@ import * as quizzes from "./en/quizzes";
 import * as compat from "./en/compat";
 import * as daily from "./en/daily";
 import { site } from "./en/site";
+import * as deep from "./en/deep";
+import { book } from "./en/book";
 
-const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site };
+const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book };
 export type Content = typeof en;
 
 /** Add a locale by creating src/content/pl/* with the same shape and registering it here. */

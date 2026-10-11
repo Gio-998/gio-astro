@@ -200,6 +200,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         </div>
         <div className="mt-5 max-w-sm"><p className="mb-1.5 text-xs uppercase tracking-widest text-dim">Your palette</p><Palette colors={profile.palette} size="h-9" /></div>
         <div className="mt-4 flex flex-wrap gap-2">
+          <Link className="btn-primary" href={h(`/book/${isMe ? "" : `?id=${person.id}`}`)}>📖 {c.book.title}</Link>
           <ShareButton spec={shareSpec} filename={`${person.name}-codex.png`} />
           <Link className="btn-ghost" href={h(`/chart/?id=${person.id}`)}>Full birth chart</Link>
           {!isMe && <Link className="btn-ghost" href={h(`/match/?b=${person.id}`)}>Compatibility with me</Link>}
