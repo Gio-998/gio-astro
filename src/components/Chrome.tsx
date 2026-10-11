@@ -1,33 +1,54 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { useContent, useHref } from "@/lib/content-context";
+import { Emblem, EmblemId } from "./art/Emblem";
+import { ZodiacWheel } from "./art/ZodiacWheel";
+
+export function Logo({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} aria-hidden>
+      <circle cx="20" cy="20" r="18" fill="none" stroke="url(#lg-g)" strokeWidth="1.2" />
+      <path d="M26 9 A12 12 0 1 0 26 31 A9.5 12 0 1 1 26 9 Z" fill="url(#lg-g)" opacity=".9" />
+      <path d="M27 17 l1 3 3 1 -3 1 -1 3 -1 -3 -3 -1 3 -1z" fill="#fffaf0" />
+    </svg>
+  );
+}
 
 export function Header() {
   const { c } = useContent(); const h = useHref(); const path = usePathname();
-  const tabs = [
-    { href: "/today/", label: c.site.nav.today, icon: "☀︎" },
-    { href: "/me/", label: c.site.nav.me, icon: "✦" },
-    { href: "/match/", label: c.site.nav.match, icon: "∞" },
-    { href: "/people/", label: c.site.nav.people, icon: "☍" },
-    { href: "/quizzes/", label: c.site.nav.quizzes, icon: "◎" },
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => { const f = () => setScrolled(window.scrollY > 24); f(); window.addEventListener("scroll", f, { passive: true }); return () => window.removeEventListener("scroll", f); }, []);
+  const tabs: { href: string; label: string; icon: EmblemId }[] = [
+    { href: "/today/", label: c.site.nav.today, icon: "sun" },
+    { href: "/me/", label: c.site.nav.me, icon: "chart" },
+    { href: "/match/", label: c.site.nav.match, icon: "bond" },
+    { href: "/people/", label: c.site.nav.people, icon: "attachment" },
+    { href: "/quizzes/", label: c.site.nav.quizzes, icon: "tarot" },
   ];
+  const active = (href: string) => !!path?.includes(href);
   return (
     <>
-      <header className="sticky top-0 z-30 border-b border-white/5 bg-night/80 backdrop-blur">
-        <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3">
-          <Link href={h("/")} className="h-display text-2xl font-semibold tracking-wide text-gold">✧ {c.site.brand}</Link>
-          <nav className="hidden gap-4 text-sm text-dim sm:flex">
-            {tabs.map((t) => <Link key={t.href} href={h(t.href)} className={path?.includes(t.href) ? "text-gold" : "hover:text-mist"}>{t.label}</Link>)}
-            <Link href={h("/bond/")} className={path?.includes("/bond/") ? "text-gold" : "hover:text-mist"}>{c.site.nav.bond}</Link>
+      <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/70 shadow-[0_10px_40px_-20px_rgba(0,0,0,.6)] backdrop-blur-xl" : "bg-transparent"}`}>
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+          <Link href={h("/")} className="group flex items-center gap-2">
+            <Logo className="h-8 w-8 transition duration-700 group-hover:rotate-[20deg]" />
+            <span className="h-display text-2xl font-semibold tracking-wide text-aurora">{c.site.brand}</span>
+          </Link>
+          <nav className="hidden items-center gap-1 text-sm md:flex">
+            {[...tabs, { href: "/bond/", label: c.site.nav.bond, icon: "bond" as EmblemId }].map((t) => (
+              <Link key={t.href} href={h(t.href)} className={`relative rounded-full px-3 py-1.5 transition ${active(t.href) ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{t.label}</Link>
+            ))}
+            <Link href={h("/start/")} className="btn-primary ml-2 !py-2">{c.site.common.start.split(" in ")[0]} ✦</Link>
           </nav>
-          <Link href={h("/learn/")} className="text-xs text-dim hover:text-mist sm:hidden">{c.site.nav.learn}</Link>
+          <Link href={h("/start/")} className="btn-primary !px-4 !py-1.5 text-xs md:hidden">Start ✦</Link>
         </div>
       </header>
-      <nav className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-white/10 bg-ink/95 backdrop-blur sm:hidden">
+      <nav className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-5 rounded-3xl border border-white/15 bg-ink/80 shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl md:hidden">
         {tabs.map((t) => (
-          <Link key={t.href} href={h(t.href)} className={`flex flex-col items-center py-2 text-[11px] ${path?.includes(t.href) ? "text-gold" : "text-dim"}`}>
-            <span className="text-lg leading-none">{t.icon}</span>{t.label}
+          <Link key={t.href} href={h(t.href)} className={`flex flex-col items-center gap-0.5 py-2 text-[10.5px] transition ${active(t.href) ? "text-gold" : "text-dim"}`}>
+            <Emblem id={t.icon} className={`h-6 w-6 transition ${active(t.href) ? "scale-110 glow-gold" : "opacity-70"}`} />{t.label}
           </Link>
         ))}
       </nav>
@@ -37,17 +58,31 @@ export function Header() {
 
 export function Footer() {
   const { c } = useContent(); const h = useHref();
+  const cols = [
+    { t: "Discover", l: [["/start/", "Free birth chart"], ["/me/", "My profile"], ["/today/", "Today's guidance"], ["/quizzes/", "All quizzes"]] },
+    { t: "Relationships", l: [["/match/", "Compatibility"], ["/bond/", "Bond Check for two"], ["/people/", "Saved people"]] },
+    { t: "Trust", l: [["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/upgrade/", "Extras"]] },
+  ];
   return (
-    <footer className="mx-auto max-w-3xl px-4 pb-28 pt-10 text-xs text-dim sm:pb-10">
-      <p className="mb-2">{c.site.footer.note}</p>
-      <p className="flex flex-wrap gap-x-4 gap-y-1">
-        <Link href={h("/promise/")}>{c.site.footer.promise}</Link>
-        <Link href={h("/learn/")}>{c.site.footer.learn}</Link>
-        <Link href={h("/privacy/")}>{c.site.footer.privacy}</Link>
-        <Link href={h("/terms/")}>{c.site.footer.terms}</Link>
-        <Link href={h("/upgrade/")}>Extras</Link>
-        <span>{c.site.footer.geonames}</span>
-      </p>
+    <footer className="relative mt-20 overflow-hidden border-t border-white/10 bg-gradient-to-b from-transparent to-ink/80">
+      <ZodiacWheel className="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] animate-spin-slow opacity-[0.12]" />
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-32 pt-14 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:pb-14">
+        <div>
+          <Link href={h("/")} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
+          <p className="mb-4 max-w-xs text-sm text-dim">{c.site.tagline}. Every lens, honestly labelled. Full results free, data on your device.</p>
+          <Link href={h("/start/")} className="btn-primary">{c.site.common.start} ✦</Link>
+        </div>
+        {cols.map((col) => (
+          <div key={col.t}>
+            <p className="eyebrow mb-3">{col.t}</p>
+            <ul className="space-y-2 text-sm">{col.l.map(([href, label]) => <li key={href}><Link className="text-dim transition hover:text-gold" href={h(href)}>{label}</Link></li>)}</ul>
+          </div>
+        ))}
+      </div>
+      <div className="relative mx-auto max-w-6xl border-t border-white/10 px-4 py-5 pb-28 text-xs text-dim/80 md:pb-5">
+        <p className="mb-1">{c.site.footer.note}</p>
+        <p>{c.site.footer.geonames} Space imagery: NASA, ESA, CSA, STScI (public domain / CC BY 4.0) — see credits in the repository. Sign, card and emblem artwork is original.</p>
+      </div>
     </footer>
   );
 }
