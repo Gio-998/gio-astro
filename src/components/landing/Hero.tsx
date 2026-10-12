@@ -8,6 +8,7 @@ import { SignArt } from "../art/SignArt";
 import { useHref, useContent } from "@/lib/content-context";
 import { DatePicker } from "../DatePicker";
 import { cosmos } from "../art/ArtCard";
+import { useBetaLocked } from "../auth/Beta";
 
 export function Hero() {
   const h = useHref(); const router = useRouter(); const { c } = useContent(); const H = c.site.hero;
@@ -20,7 +21,7 @@ export function Hero() {
   const fade = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
   const [date, setDate] = useState("");
   const go = (e: React.FormEvent) => { e.preventDefault(); router.push(h(`/start/${date ? `?date=${date}` : ""}`)); };
-  const words = H.words;
+  const words = H.words; const locked = useBetaLocked(); const B = c.ui.beta;
   return (
     <section ref={ref} className="bleed relative -mt-[72px] md:-mt-[76px] flex min-h-[100svh] items-center overflow-hidden pt-20">
       <motion.div style={{ y: yBg }} className="absolute inset-0">
@@ -46,19 +47,25 @@ export function Hero() {
             {H.see}<span className="italic text-aurora">{words[0]}</span>{H.mid}<span className="italic text-aurora">{H.end}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }} className="mb-8 max-w-xl text-lg leading-relaxed text-mist/90">
-            Your birth chart, Chinese zodiac, numbers, tarot and the personality science that actually holds up, pulled together into one honest mirror for you and your relationships. Free, in 90 seconds.
+            {H.sub}
           </motion.p>
-          <motion.form onSubmit={go} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
+          {locked ? (<motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }} className="mb-4 max-w-xl" data-testid="hero-beta">
+            <div className="flex flex-col gap-2 sm:flex-row">
+              <a href="#waitlist" className="btn-primary px-6 py-3.5 text-center text-base">{B.joinBeta} ✦</a>
+              <a href={h("/account/")} className="btn-ghost px-6 py-3.5 text-center text-base">{B.login}</a>
+            </div>
+            <p className="mt-3 text-sm text-mist/80">{B.heroNote}</p>
+          </motion.div>) : <motion.form onSubmit={go} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
             className="mb-4 flex max-w-xl flex-col gap-2 rounded-[28px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_60px_-20px_rgba(139,108,240,.8)] backdrop-blur-xl sm:flex-row sm:items-center">
             <div className="flex-1 px-3 py-1.5">
               <span className="mb-1 block whitespace-nowrap font-display text-xl italic text-gold">{H.bornOn}</span>
               <DatePicker value={date} onChange={setDate} compact />
             </div>
             <button className="btn-primary px-6 py-3.5 text-base">{H.reveal}</button>
-          </motion.form>
+          </motion.form>}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-dim">
-            {H.perks.map((p) => <span key={p}>{p}</span>)}
-            <a href={h("/match/")} className="text-gold underline-offset-4 hover:underline">{H.orMatch}</a>
+            {(locked ? B.heroPerks : H.perks).map((p) => <span key={p}>{p}</span>)}
+            {!locked && <a href={h("/match/")} className="text-gold underline-offset-4 hover:underline">{H.orMatch}</a>}
           </motion.div>
         </div>
       </motion.div>

@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { useBetaLocked } from "./auth/Beta";
 import { AccountChip } from "./auth/Auth";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -44,6 +45,25 @@ export function Header() {
     { href: "/quizzes/", label: c.site.nav.quizzes, icon: "tarot" },
   ];
   const active = (href: string) => !!path?.includes(href);
+  const locked = useBetaLocked(); const B = c.ui.beta;
+  const joinHref = `${h("/")}#waitlist`;
+  if (locked) return (
+    <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/70 shadow-[0_10px_40px_-20px_rgba(0,0,0,.6)] backdrop-blur-xl" : "bg-transparent"}`} data-testid="header-guest">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
+        <Link href={h("/")} className="group flex min-w-0 items-center gap-2">
+          <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
+          <span className="h-display truncate text-2xl font-semibold tracking-wide text-aurora">{c.site.brand}</span>
+        </Link>
+        <nav className="flex items-center gap-1.5 text-sm">
+          <Link href={h("/learn/")} className={`hidden rounded-full px-3 py-1.5 transition md:inline ${active("/learn/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{c.site.nav.learn}</Link>
+          <Link href={h("/quizzes/")} className={`hidden rounded-full px-3 py-1.5 transition md:inline ${active("/quizzes/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{c.site.nav.quizzes}</Link>
+          <LangSwitch className="md:ml-2" />
+          <Link href={h("/account/")} className="whitespace-nowrap rounded-full px-2.5 py-1.5 text-xs text-mist hover:text-gold sm:text-sm" data-testid="nav-login">{B.login}</Link>
+          <a href={joinHref} className="btn-primary whitespace-nowrap !px-3.5 !py-1.5 text-xs sm:!px-4 sm:!py-2 sm:text-sm" data-testid="nav-join">{B.joinBeta} ✦</a>
+        </nav>
+      </div>
+    </header>
+  );
   return (
     <>
       <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/70 shadow-[0_10px_40px_-20px_rgba(0,0,0,.6)] backdrop-blur-xl" : "bg-transparent"}`}>
@@ -76,10 +96,11 @@ export function Header() {
 }
 
 export function Footer() {
-  const { c } = useContent(); const h = useHref(); const F = c.site.footerCols;
+  const { c } = useContent(); const h = useHref(); const F = c.site.footerCols; const locked = useBetaLocked();
   const cols = [
+    ...(locked ? [{ t: F.discover, l: [["/quizzes/", F.quizzes], ["/learn/", c.site.nav.learn]] }] : [
     { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/today/", F.today], ["/quizzes/", F.quizzes]] },
-    { t: F.rel, l: [["/match/", F.match], ["/bond/", F.bond], ["/people/", F.people]] },
+    { t: F.rel, l: [["/match/", F.match], ["/bond/", F.bond], ["/people/", F.people]] }]),
     { t: F.trust, l: [["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/upgrade/", F.extras], ["/credits/", c.site.footer.credits]] },
   ];
   return (
@@ -89,7 +110,7 @@ export function Footer() {
         <div>
           <Link href={h("/")} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
           <p className="mb-4 max-w-xs text-sm text-dim">{c.site.tagline}. {F.blurb}</p>
-          <Link href={h("/start/")} className="btn-primary">{c.site.common.start} ✦</Link>
+          {locked ? <a href={`${h("/")}#waitlist`} className="btn-primary">{c.ui.beta.joinBeta} ✦</a> : <Link href={h("/start/")} className="btn-primary">{c.site.common.start} ✦</Link>}
         </div>
         {cols.map((col) => (
           <div key={col.t}>

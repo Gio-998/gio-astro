@@ -64,6 +64,7 @@ export function AccountPage() {
 
 function SignInForm() {
   const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const router = useRouter(); const s = useStore();
+  const nextParam = useSearchParams().get("next"); const dest = nextParam && /^\/(en|mk)\/[\w\-/]*$/.test(nextParam) ? nextParam : h("/me");
   const [tab, setTab] = useState<"otp" | "password">("otp"); const [creating, setCreating] = useState(false);
   const [email, setEmail] = useState(""); const [pw, setPw] = useState(""); const [cons, setCons] = useState({ terms: false, data: false, mkt: false });
   const [busy, setBusy] = useState(false); const [err, setErr] = useState(""); const [info, setInfo] = useState("");
@@ -91,11 +92,11 @@ function SignInForm() {
       const { data, error } = await auth.signUp({ email: email.trim(), password: pw, options: { emailRedirectTo: redirect(), data: meta, captchaToken } });
       if (error) throw error;
       if (data.user && data.user.identities?.length === 0) throw { code: "user_already_exists" };
-      if (!data.session) toVerify("signup"); else router.push(h("/me"));
+      if (!data.session) toVerify("signup"); else router.push(dest);
     } else {
       const { error } = await auth.signInWithPassword({ email: email.trim(), password: pw, options: { captchaToken } });
       if (error) { if (errKey(error) === "email_not_confirmed") { await auth.resend({ type: "signup", email: email.trim(), options: { emailRedirectTo: redirect() } }); toVerify("signup"); return; } throw error; }
-      router.push(h("/me"));
+      router.push(dest);
     }
   }); };
   const forgot = () => go(async () => {

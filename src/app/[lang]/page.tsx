@@ -4,6 +4,7 @@ import { LENS_EVIDENCE, LensId } from "@/engine/compat";
 import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { QUIZ_ART } from "@/components/art/quizArt";
 import { Hero } from "@/components/landing/Hero";
+import { BetaInvite, StartOrJoin } from "@/components/auth/Beta";
 import { SignCarousel } from "@/components/landing/SignCarousel";
 import { PickACard } from "@/components/landing/PickACard";
 import { SkyNow } from "@/components/landing/SkyNow";
@@ -269,6 +270,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         </div>
       </section>
 
+      <BetaInvite />
+
       {/* CTA band */}
       <section className="bleed relative overflow-hidden py-28 text-center">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -278,7 +281,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <Ornament />
           <h2 className="h-display mb-4 mt-4 text-[clamp(2.4rem,6vw,4.4rem)] leading-[1.02]">{T(L.cta.title)}</h2>
           <p className="mb-8 text-lg text-mist/90">{L.cta.sub}</p>
-          <Link className="btn-primary px-8 py-4 text-lg" href={h("/start/")}>{c.site.common.start} ✦</Link>
+          <StartOrJoin className="btn-primary px-8 py-4 text-lg" label={`${c.site.common.start} ✦`} />
         </div>
       </section>
     </div>

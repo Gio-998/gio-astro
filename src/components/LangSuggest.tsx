@@ -26,9 +26,9 @@ export function LangSuggest() {
   if (!target) return null;
   const t = TEXT[target]; const href = path.replace(/^\/(en|mk)(?=\/|$)/, `/${target}`);
   return (
-    <div lang={target} role="region" aria-label={t.msg} className="mx-auto mb-3 flex max-w-4xl items-center justify-between gap-3 rounded-2xl border border-white/15 bg-white/[0.07] px-4 py-2 text-sm backdrop-blur" data-testid="lang-suggest">
-      <span>🌐 {t.msg}</span>
-      <span className="flex items-center gap-3">
+    <div lang={target} role="region" aria-label={t.msg} className="fixed inset-x-3 bottom-24 z-50 mx-auto flex max-w-md items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#1c1645]/95 px-4 py-2.5 text-sm shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur md:bottom-6" data-testid="lang-suggest">
+      <span className="min-w-0">🌐 {t.msg}</span>
+      <span className="flex shrink-0 items-center gap-3">
         <a className="text-gold underline-offset-4 hover:underline" href={href} onClick={() => { try { localStorage.setItem("mirrorstar:lang", target); } catch {} }}>{t.go}</a>
         <button aria-label={t.close} className="text-dim hover:text-mist" onClick={() => { try { localStorage.setItem(DISMISS, "1"); } catch {} setTarget(null); }}>✕</button>
       </span>

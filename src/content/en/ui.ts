@@ -421,6 +421,11 @@ export const ritual = {
 };
 
 export const beta = {
+  lockedEyebrow: "Private beta", lockedTitle: "This part opens with an invite", lockedText: "Your profile, readings and matches are for our small group of testers right now. Got an invite? Log in. If not, join the waitlist and we'll make room for you soon.",
+  login: "Log in", joinBeta: "Join the beta", joinWaitlist: "Join the waitlist",
+  heroNote: "Private beta: invited testers can log in, everyone else can save a spot on the waitlist.",
+  heroPerks: ["✦ Free during the beta", "✦ English and Macedonian", "✦ Your data stays yours"],
+  sectionEyebrow: "Private beta · by invitation", sectionTitleA: "Be one of the ", sectionTitleB: "first to try it", sectionText: "We're opening Horoscop to a small circle first, so we can listen properly and polish every reading. Leave your email and we'll send an invite when there's a place.",
   badge: "Private beta",
   banner: "We're in a small private beta. Join the waitlist, or sign in if you have an invite.",
   gateEyebrow: "Private beta · by invitation", gateTitleA: "A new way to see yourself ", gateTitleB: "is almost here",

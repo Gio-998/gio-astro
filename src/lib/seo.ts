@@ -14,9 +14,9 @@ export const LOCALE_META: Record<(typeof LOCALES)[number], { hreflang: string; o
 /** Private beta flag (accounts are invite-only while on). */
 export const betaOn = process.env.NEXT_PUBLIC_BETA !== "0";
 /** Pages anyone can read during the beta: indexable now. Gated app pages become indexable when the beta ends. */
-export const PUBLIC_PATHS = ["/", "/learn/", "/promise/", "/privacy/", "/terms/", "/credits/"];
+export const PUBLIC_PATHS = ["/", "/learn/", "/quizzes/", "/promise/", "/privacy/", "/terms/", "/credits/"];
 /** Gated during beta, public tools afterwards. */
-export const TOOL_PATHS = ["/start/", "/match/", "/bond/", "/quizzes/"];
+export const TOOL_PATHS = ["/start/", "/match/", "/bond/"];
 /** Indexable routes right now (used by the sitemap and robots meta). */
 export function isIndexable(path: string): boolean {
   if (PUBLIC_PATHS.includes(path)) return true;

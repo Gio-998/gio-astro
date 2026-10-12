@@ -7,29 +7,65 @@ import { useAccount } from "@/lib/sync";
 import { useContent, useHref } from "@/lib/content-context";
 import { Aura } from "../aura/Aura";
 
-// Routes anyone can open during the beta (landing, legal, sign-in steps).
-const PUBLIC = ["", "privacy", "terms", "promise", "learn", "credits", "account", "account/verify", "auth/callback"];
+// Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
+// Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
+const PUBLIC = ["", "privacy", "terms", "promise", "learn", "credits", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
 const routeOf = (path: string) => path.replace(/^\/(en|mk)(\/|$)/, "").replace(/\/$/, "");
+export const isPublicRoute = (path: string) => PUBLIC.includes(routeOf(path));
 
-/** In private beta, everything except the landing/legal/sign-in pages needs a signed-in (invited) account. */
-export function BetaGate({ children }: { children: React.ReactNode }) {
-  const path = usePathname() || "/"; const a = useAccount(); const { c } = useContent();
-  if (!betaMode || !accountsEnabled) return <>{children}</>;
-  const r = routeOf(path);
-  if (PUBLIC.includes(r)) return <>{r === "" && !a.user && a.ready && <BetaBanner />}{children}</>;
-  if (!a.ready) return <p className="py-20 text-center text-dim">{c.site.common.loading}</p>;
-  if (a.user) return <>{children}</>;
-  return <BetaTeaser />;
+/** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
+export function useBetaLocked(): boolean {
+  const a = useAccount();
+  return betaMode && accountsEnabled && !a.user;
 }
 
-function BetaBanner() {
-  const { c } = useContent(); const h = useHref();
+/** In private beta, app pages show a compact invite gate to logged-out visitors, inside the normal layout. */
+export function BetaGate({ children }: { children: React.ReactNode }) {
+  const path = usePathname() || "/"; const a = useAccount(); const { c } = useContent();
+  if (!betaMode || !accountsEnabled || isPublicRoute(path)) return <>{children}</>;
+  if (!a.ready) return <p className="py-20 text-center text-dim">{c.site.common.loading}</p>;
+  if (a.user) return <>{children}</>;
+  return <BetaLockedCard />;
+}
+
+/** Compact gate: log in (invited testers) or join the waitlist. */
+export function BetaLockedCard() {
+  const { c } = useContent(); const B = c.ui.beta; const h = useHref(); const path = usePathname() || "/";
+  const [wl, setWl] = useState(false);
   return (
-    <div className="mb-4 space-y-3 rounded-2xl border border-gold/30 bg-gold/10 px-4 py-3 text-sm" data-testid="beta-banner">
-      <div className="flex flex-wrap items-center justify-between gap-2"><span><b className="text-gold">✦ {c.ui.beta.badge}</b> · {c.ui.beta.banner}</span>
-        <Link className="text-gold underline-offset-4 hover:underline" href={h("/account")}>{c.ui.beta.haveInvite}</Link></div>
-      <Waitlist source="landing" />
+    <div className="mx-auto my-6 max-w-md overflow-hidden rounded-[28px] border border-white/15 bg-white/[0.05] p-6 text-center shadow-[0_30px_70px_-35px_rgba(139,108,240,.9)] backdrop-blur" data-testid="beta-gate">
+      <div className="mx-auto mb-3 h-24 w-20"><Aura className="h-full w-full" colors={["#c9b8ff", "#ffd38a", "#8fd3ff", "#ff9ed2", "#7fe0b0"]} energy={0.5} heart="#ffd27a" label="" /></div>
+      <p className="eyebrow mb-1">✦ {B.lockedEyebrow}</p>
+      <h1 className="h-display mb-2 text-3xl">{B.lockedTitle}</h1>
+      <p className="mb-5 text-sm leading-relaxed text-mist/85">{B.lockedText}</p>
+      <div className="grid gap-2 sm:grid-cols-2">
+        <Link className="btn-primary py-3" href={`${h("/account")}?next=${encodeURIComponent(path)}`} data-testid="beta-signin">{B.login}</Link>
+        <button type="button" className="btn-ghost py-3" onClick={() => setWl(!wl)} aria-expanded={wl} data-testid="beta-join">{B.joinWaitlist}</button>
+      </div>
+      {wl && <div className="mt-4 text-left"><Waitlist source="gate" /></div>}
     </div>
+  );
+}
+
+/** Landing-page section (id="waitlist") shown to logged-out visitors while the beta is on. */
+export function BetaInvite() {
+  const locked = useBetaLocked(); const { c } = useContent(); const B = c.ui.beta; const h = useHref();
+  if (!locked) return null;
+  return (
+    <section id="waitlist" className="scroll-mt-24 py-16" data-testid="beta-invite">
+      <div className="relative overflow-hidden rounded-[32px] border border-gold/25 bg-gradient-to-br from-violet/25 via-white/[0.04] to-rose/15 p-6 sm:p-10">
+        <div className="relative grid items-center gap-6 md:grid-cols-[1fr_200px]">
+          <div>
+            <p className="eyebrow mb-2">✦ {B.sectionEyebrow}</p>
+            <h2 className="h-display mb-3 text-[clamp(2rem,6vw,3rem)] leading-tight">{B.sectionTitleA}<span className="italic text-aurora">{B.sectionTitleB}</span></h2>
+            <p className="mb-5 text-mist/90">{B.sectionText}</p>
+            <Waitlist source="landing" />
+            <Link className="mt-4 inline-block text-sm text-gold underline-offset-4 hover:underline" href={h("/account")}>{B.haveInvite}</Link>
+          </div>
+          <div className="relative mx-auto hidden h-60 w-48 md:block"><Aura className="h-full w-full" colors={["#c9b8ff", "#ffd38a", "#8fd3ff", "#ff9ed2", "#7fe0b0"]} energy={0.6} heart="#ffd27a" label="" /></div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -58,25 +94,6 @@ export function Waitlist({ source = "gate" }: { source?: string }) {
   );
 }
 
-function BetaTeaser() {
-  const { c } = useContent(); const B = c.ui.beta; const h = useHref();
-  return (
-    <div className="relative overflow-hidden rounded-[36px] border border-white/15 p-6 shadow-[0_40px_90px_-40px_rgba(139,108,240,.9)] sm:p-10" data-testid="beta-gate">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(246,207,122,.18),transparent_50%),radial-gradient(circle_at_80%_80%,rgba(255,143,177,.18),transparent_55%)]" />
-      <div className="relative grid items-center gap-6 md:grid-cols-[1fr_260px]">
-        <div>
-          <p className="eyebrow mb-2">✦ {B.gateEyebrow}</p>
-          <h1 className="h-display mb-3 text-4xl sm:text-5xl">{B.gateTitleA}<span className="italic text-aurora">{B.gateTitleB}</span></h1>
-          <p className="mb-5 text-mist/90">{B.gateText}</p>
-          <ul className="mb-6 grid gap-1.5 text-sm text-dim sm:grid-cols-2">{B.teasers.map((t) => <li key={t}>✦ {t}</li>)}</ul>
-          <Waitlist />
-          <Link className="mt-4 inline-block text-sm text-gold underline-offset-4 hover:underline" href={h("/account")} data-testid="beta-signin">{B.haveInvite}</Link>
-        </div>
-        <div className="relative mx-auto h-72 w-56"><Aura className="h-full w-full" colors={["#c9b8ff", "#ffd38a", "#8fd3ff", "#ff9ed2", "#7fe0b0"]} energy={0.6} heart="#ffd27a" label="" /></div>
-      </div>
-    </div>
-  );
-}
 
 /** Tiny admin page: add/remove invites, see the waitlist. Access = app_metadata.role 'admin' (enforced by RLS, not just the UI). */
 export function BetaAdmin() {
@@ -122,4 +139,10 @@ export function BetaAdmin() {
       </div>
     </div>
   );
+}
+
+/** "Start" for signed-in users; "Join the beta" (scrolls to the waitlist) for logged-out visitors during the beta. */
+export function StartOrJoin({ className, label }: { className: string; label: string }) {
+  const locked = useBetaLocked(); const h = useHref(); const B = useContent().c.ui.beta;
+  return locked ? <a className={className} href="#waitlist">{B.joinBeta} ✦</a> : <Link className={className} href={h("/start/")}>{label}</Link>;
 }
