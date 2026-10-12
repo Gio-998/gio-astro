@@ -28,7 +28,7 @@ export function LangSuggest() {
   if (!target) return null;
   const t = TEXT[target]; const href = path.replace(/^\/(en|mk)(?=\/|$)/, `/${target}`);
   return (
-    <div lang={target} role="region" aria-label={t.msg} className="fixed inset-x-3 bottom-24 z-50 mx-auto flex max-w-md items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#1c1645]/95 px-4 py-2.5 text-sm shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur md:bottom-6" data-testid="lang-suggest">
+    <div lang={target} role="region" aria-label={t.msg} className="mb-3 flex items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#1c1645]/80 px-4 py-2 text-[13px] backdrop-blur print:hidden" data-testid="lang-suggest">
       <span className="min-w-0">🌐 {t.msg}</span>
       <span className="flex shrink-0 items-center gap-3">
         <a className="text-gold underline-offset-4 hover:underline" href={href} onClick={() => { try { localStorage.setItem("mirrorstar:lang", target); } catch {} }}>{t.go}</a>

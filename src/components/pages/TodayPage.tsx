@@ -9,6 +9,7 @@ import { Reveal } from "../art/Reveal";
 import { PremiumForecast } from "../premium/Forecast";
 import { TodayStories } from "../today/TodayStories";
 import { TodayGlance } from "../sky/TodayGlance";
+import { TodayFeed } from "../sky/TodayFeed";
 
 /** Gentle on-device visit streak (never punishes a missed day — it just restarts quietly). */
 function useStreak(today: string) {
@@ -59,6 +60,7 @@ export function TodayPage() {
       </PageHero>
       <TodayStories />
       <TodayGlance g={g} />
+      <TodayFeed profile={profileOf(s.me)} people={s.people} now={now} />
       <YourDay profile={profileOf(s.me)} now={now} />
       <YourDayVoice person={s.me} now={now} personalDay={g.personalDay} />
       <div className="grid gap-4 sm:grid-cols-2">

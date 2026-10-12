@@ -57,6 +57,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
       <Reveal>
         <div className="chapter-head">
           <div className="chapter-art" aria-hidden>{ch.art.kind === "sign" ? <SignArt sign={ch.art.sign} className="h-28 w-28" /> : <Emblem id={ch.art.id} className="h-24 w-24" />}</div>
+          <span className="chapter-big no-print" aria-hidden>{String(i + 1).padStart(2, "0")}</span>
           <p className="chapter-num">{B.chapter(i + 1)}</p>
           <h2 className="chapter-title">{ch.title}</h2>
           <p className="chapter-kicker">{ch.kicker}</p>
@@ -121,13 +122,44 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
         <p className="reading-honest">{B.honest}</p>
       </div>
 
-      {/* Floating contents button (mobile) */}
-      <button className="no-print fixed bottom-24 right-4 z-40 rounded-full border border-white/20 bg-ink/90 px-4 py-2 text-sm text-mist shadow-xl backdrop-blur md:bottom-6" onClick={() => setTocOpen(!tocOpen)} aria-expanded={tocOpen}>☰ {B.toc}</button>
+      {/* Chapter dots on the right edge */}
+      <nav className="no-print fixed right-1.5 top-1/2 z-30 flex -translate-y-1/2 flex-col gap-1.5" aria-hidden>
+        {book.chapters.map((ch) => <a key={ch.id} href={`#ch-${ch.id}`} tabIndex={-1} className={`block h-1.5 w-1.5 rounded-full transition-all ${active === ch.id ? "h-4 bg-gold" : "bg-white/30"}`} />)}
+      </nav>
+      <ShareLine />
+      {/* Contents as a bottom sheet */}
+      <button className="no-print fixed bottom-24 right-4 z-40 min-h-[44px] rounded-full border border-white/20 bg-ink/90 px-4 text-sm text-mist shadow-xl backdrop-blur md:bottom-6" onClick={() => setTocOpen(true)} aria-expanded={tocOpen} data-testid="toc-open">☰ {B.toc}</button>
       {tocOpen && (
-        <div className="no-print fixed bottom-36 right-4 z-40 max-h-[60vh] w-72 overflow-auto rounded-3xl border border-white/15 bg-ink/95 p-4 text-mist shadow-2xl backdrop-blur md:bottom-20">
-          {book.chapters.map((ch, i) => <a key={ch.id} href={`#ch-${ch.id}`} onClick={() => setTocOpen(false)} className={`block rounded-xl px-3 py-2 text-sm ${active === ch.id ? "bg-white/10 text-gold" : "hover:bg-white/5"}`}>{i + 1}. {ch.title}</a>)}
+        <div className="no-print fixed inset-0 z-[70]" role="dialog" aria-modal="true" aria-label={B.toc}>
+          <button className="absolute inset-0 bg-black/50 backdrop-blur-sm" aria-label={c.sky.reader.close} onClick={() => setTocOpen(false)} />
+          <div className="absolute inset-x-0 bottom-0 max-h-[75svh] overflow-auto rounded-t-[28px] border-t border-white/15 bg-[#151135] px-4 pb-[max(20px,env(safe-area-inset-bottom))] pt-3 text-mist shadow-2xl">
+            <div className="mx-auto mb-3 h-1.5 w-10 rounded-full bg-white/25" />
+            <p className="eyebrow mb-2 px-2">{B.toc}</p>
+            {book.chapters.map((ch, i) => <a key={ch.id} href={`#ch-${ch.id}`} onClick={() => setTocOpen(false)} className={`flex min-h-[48px] items-center gap-3 rounded-xl px-3 text-[15px] ${active === ch.id ? "bg-white/10 text-gold" : "active:bg-white/5"}`}><span className="w-6 font-display text-gold/80">{String(i + 1).padStart(2, "0")}</span><span className="text-balance">{ch.title}</span></a>)}
+          </div>
         </div>
       )}
     </div>
   );
+}
+
+/** Select a sentence in the reader, then share or copy it. */
+function ShareLine() {
+  const { c } = useContent(); const R = c.sky.reader;
+  const [sel, setSel] = useState<{ text: string; x: number; y: number } | null>(null); const [done, setDone] = useState(false);
+  useEffect(() => {
+    const f = () => {
+      const s = window.getSelection(); const t = s?.toString().trim() ?? "";
+      if (!s || t.length < 12 || t.length > 400 || !s.anchorNode?.parentElement?.closest(".reading")) { setSel(null); return; }
+      const r = s.getRangeAt(0).getBoundingClientRect(); setSel({ text: t, x: Math.min(window.innerWidth - 90, Math.max(90, r.left + r.width / 2)), y: Math.max(70, r.top - 12) });
+    };
+    document.addEventListener("selectionchange", f); return () => document.removeEventListener("selectionchange", f);
+  }, []);
+  if (!sel) return null;
+  const go = async () => {
+    const text = `“${sel.text}”\n${location.origin}`;
+    if (navigator.share) { try { await navigator.share({ text }); return; } catch { /* cancelled */ } }
+    try { await navigator.clipboard.writeText(text); setDone(true); setTimeout(() => setDone(false), 1800); } catch { /* ignore */ }
+  };
+  return <button className="no-print fixed z-[60] -translate-x-1/2 -translate-y-full rounded-full bg-gold px-4 py-2 text-sm font-semibold text-ink shadow-xl" style={{ left: sel.x, top: sel.y }} onMouseDown={(e) => e.preventDefault()} onClick={go}>{done ? R.copiedLine : `❝ ${R.shareLine}`}</button>;
 }

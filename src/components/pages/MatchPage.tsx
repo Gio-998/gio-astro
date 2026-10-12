@@ -10,7 +10,8 @@ import { comparePair, REL_TYPES, RelType } from "@/engine/compat";
 import { PairReportView } from "../PairReport";
 import { FullReportView } from "../report/FullReport";
 import { BookView } from "../story/BookView";
-import { AuraPair } from "../aura/AuraPair";
+import { BondMerge } from "../bonds/BondMerge";
+import { BondSwipe } from "../bonds/BondSwipe";
 import { PairExtras, BondVoice } from "../systems/PairExtras";
 import { buildBondStory } from "@/story/bond";
 import { BirthForm } from "../BirthForm";
@@ -61,7 +62,8 @@ export function MatchPage() {
       {A && B && A.id === B.id && <p className="text-dim">{U.pickTwo}</p>}
       {report && A && B && <>
         <a href="#bond-story" className="btn-primary mb-4 w-full">📖 {c.deep.bondUi.eyebrow}: {c.deep.bondUi.title(A.name, B.name)} ↓</a>
-        <AuraPair a={A} b={B} harmony={report.r.resonance} />
+        <BondMerge a={A.name} b={B.name} ca={report.pa.palette} cb={report.pb.palette} resonance={report.r.resonance} spark={report.r.spark} />
+        <BondSwipe report={report.r} pairKey={rk} />
         <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
         <FullReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
         <PairExtras A={A} B={B} />
