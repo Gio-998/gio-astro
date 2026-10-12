@@ -44,16 +44,22 @@ export async function hubMeta(lang: string): Promise<Metadata> {
 export function HubPage({ lang }: { lang: string }) {
   const U = bankFor(lang).ui; const c = getContent(lang); const iso = todayIso();
   return (
-    <div className="mx-auto max-w-xl">
-      <h1 className="h-display text-[2.2rem] leading-tight">{U.hubTitle}</h1>
-      <p className="mb-4 text-[14px] text-mist/70">{U.hubSub}</p>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+    <div className="mx-auto max-w-5xl">
+      <h1 className="h-display text-[2.2rem] leading-tight sm:text-[2.8rem]">{U.hubTitle}</h1>
+      <p className="mb-6 max-w-2xl text-[14px] text-mist/70 sm:text-[15px]">{U.hubSub}</p>
+      <ul className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
         {SIGNS.map((s) => { const r = reading(lang, s, iso); return (
-          <Link key={s} href={horoPath(lang, s)} className="flex items-center gap-2.5 rounded-2xl border border-white/10 bg-white/[0.045] p-2.5 hover:border-gold/40">
-            <span aria-hidden className="h-11 w-11 shrink-0" dangerouslySetInnerHTML={{ __html: signHeroSvg(s, skyDay(iso, s).moon.angle, { moon: false }) }} />
-            <span className="min-w-0"><span className="block text-[14px] font-medium">{SIGN_GLYPH[s]} {c.astro.signs[s].name}</span><span className="line-clamp-1 text-[12px] text-mist/65">{r.headline}</span></span>
-          </Link>); })}
-      </div>
+          <li key={s} className="border-t border-white/10">
+            <Link href={horoPath(lang, s)} className="group relative isolate flex items-center gap-3 overflow-hidden py-3.5 pr-2">
+              <span aria-hidden className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-white/[0.04] opacity-80 [&>svg]:block [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(s, skyDay(iso, s).moon.angle, { moon: false }) }} />
+              <span className="min-w-0 flex-1">
+                <span className="block text-[15px] font-medium transition group-hover:text-gold"><span className="text-gold">{SIGN_GLYPH[s]}</span> {c.astro.signs[s].name}</span>
+                <span className="block truncate text-[12.5px] text-mist/65">{r.headline}</span>
+              </span>
+              <span aria-hidden className="text-mist/40 transition group-hover:translate-x-0.5 group-hover:text-gold">→</span>
+            </Link>
+          </li>); })}
+      </ul>
     </div>
   );
 }
