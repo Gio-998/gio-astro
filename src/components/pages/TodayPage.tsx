@@ -6,6 +6,7 @@ import { Emblem } from "../art/Emblem";
 import { cosmos } from "../art/ArtCard";
 import { PageHero } from "../ui";
 import { Reveal } from "../art/Reveal";
+import { PremiumForecast } from "../premium/Forecast";
 
 /** Gentle on-device visit streak (never punishes a missed day — it just restarts quietly). */
 function useStreak(today: string) {
@@ -100,6 +101,7 @@ export function TodayPage() {
           </details>
         )}
       </div>
+      <PremiumForecast profile={profileOf(s.me)} />
     </div>
   );
 }

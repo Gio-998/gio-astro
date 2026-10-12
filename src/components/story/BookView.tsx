@@ -9,6 +9,7 @@ import { SignArt } from "../art/SignArt";
 import { Emblem } from "../art/Emblem";
 import { Reveal } from "../art/Reveal";
 import { cosmos } from "../art/ArtCard";
+import { PremiumGate, useChapterLimit } from "../premium/Gate";
 
 export type ReadTheme = "paper" | "night";
 const themeSubs = new Set<() => void>();
@@ -35,9 +36,11 @@ export function usePrintExpand() {
   }, []);
 }
 
-export function BookView({ book, name, forId, eyebrow, title, subtitle, intro }: { book: Book; name: string; forId: string; eyebrow?: string; title?: string; subtitle?: string; intro?: string }) {
+export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, gate }: { book: Book; name: string; forId: string; eyebrow?: string; title?: string; subtitle?: string; intro?: string; gate?: "book" | "bond" }) {
   const { c } = useContent(); const h = useHref(); const B = c.book; const defs = quizDefs(c);
   const [theme, setTheme] = useReadTheme();
+  // Premium paywall (only active for admins previewing as free, or once payments go live). A custom title = Bond Story.
+  const limit = useChapterLimit(gate ?? (title ? "bond" : "book"));
   const [active, setActive] = useState(book.chapters[0]?.id);
   const [tocOpen, setTocOpen] = useState(false);
   usePrintExpand();
@@ -47,6 +50,26 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro }:
     els.forEach((e) => io.observe(e)); return () => io.disconnect();
   }, [book]);
   const missingAll = useMemo(() => [...new Set(book.chapters.flatMap((x) => x.missing))], [book]);
+
+  const chapterEl = (ch: Book["chapters"][number], i: number) => (
+    <section key={ch.id} id={`ch-${ch.id}`} className="chapter scroll-mt-24">
+      <Reveal>
+        <div className="chapter-head">
+          <div className="chapter-art" aria-hidden>{ch.art.kind === "sign" ? <SignArt sign={ch.art.sign} className="h-28 w-28" /> : <Emblem id={ch.art.id} className="h-24 w-24" />}</div>
+          <p className="chapter-num">{B.chapter(i + 1)}</p>
+          <h2 className="chapter-title">{ch.title}</h2>
+          <p className="chapter-kicker">{ch.kicker}</p>
+          <div className="chapter-rule" aria-hidden>✦</div>
+        </div>
+      </Reveal>
+      <div className="reading">
+        <Blocks blocks={ch.blocks} forId={forId} />
+        {!ch.locked && ch.missing.length > 0 && (
+          <p className="partly no-print">✧ {B.partly(ch.missing.map((q) => defs[q].title).join(" + "))} {ch.missing.map((q) => <Link key={q} className="ml-1 underline" href={h(`/quiz/${q}/${forId !== "me" ? `?for=${forId}` : ""}`)}>{defs[q].title} →</Link>)}</p>
+        )}
+      </div>
+    </section>
+  );
 
   return (
     <div className={`book book-${theme}`}>
@@ -77,7 +100,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro }:
         <p className="eyebrow mb-3">{B.toc}</p>
         <ol className="grid gap-1 sm:grid-cols-2">
           {book.chapters.map((ch, i) => (
-            <li key={ch.id}><a href={`#ch-${ch.id}`} className={`toc-link ${active === ch.id ? "toc-active" : ""}`}><span className="toc-num">{String(i + 1).padStart(2, "0")}</span><span>{ch.title}</span>{ch.locked && <span className="ml-auto text-xs opacity-70">🔒</span>}</a></li>
+            <li key={ch.id}><a href={`#ch-${ch.id}`} className={`toc-link ${active === ch.id ? "toc-active" : ""}`}><span className="toc-num">{String(i + 1).padStart(2, "0")}</span><span>{ch.title}</span>{(ch.locked || i >= limit) && <span className="ml-auto text-xs opacity-70">🔒</span>}</a></li>
           ))}
         </ol>
         {missingAll.length > 0 && (
@@ -88,25 +111,11 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro }:
       <div className="reading-surface">
         {B.langNote && <p className="mx-auto mb-4 max-w-xl rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm print:hidden">🌐 {B.langNote}</p>}
         {(intro ?? B.intro(name, book.lenses)) && <p className="reading-intro">{intro ?? B.intro(name, book.lenses)}</p>}
-        {book.chapters.map((ch, i) => (
-          <section key={ch.id} id={`ch-${ch.id}`} className="chapter scroll-mt-24">
-            <Reveal>
-              <div className="chapter-head">
-                <div className="chapter-art" aria-hidden>{ch.art.kind === "sign" ? <SignArt sign={ch.art.sign} className="h-28 w-28" /> : <Emblem id={ch.art.id} className="h-24 w-24" />}</div>
-                <p className="chapter-num">{B.chapter(i + 1)}</p>
-                <h2 className="chapter-title">{ch.title}</h2>
-                <p className="chapter-kicker">{ch.kicker}</p>
-                <div className="chapter-rule" aria-hidden>✦</div>
-              </div>
-            </Reveal>
-            <div className="reading">
-              <Blocks blocks={ch.blocks} forId={forId} />
-              {!ch.locked && ch.missing.length > 0 && (
-                <p className="partly no-print">✧ {B.partly(ch.missing.map((q) => defs[q].title).join(" + "))} {ch.missing.map((q) => <Link key={q} className="ml-1 underline" href={h(`/quiz/${q}/${forId !== "me" ? `?for=${forId}` : ""}`)}>{defs[q].title} →</Link>)}</p>
-              )}
-            </div>
-          </section>
-        ))}
+        {book.chapters.map((ch, i) => i < limit ? chapterEl(ch, i) : i === limit ? (
+          <div key={ch.id} style={{ "--gate-fade": theme === "paper" ? "#f4ece2" : "#1b1546" } as React.CSSProperties}>
+            <PremiumGate kind={gate ?? (title ? "bond" : "book")} rest={book.chapters.slice(limit + 1).map((x) => x.title)}>{chapterEl(ch, i)}</PremiumGate>
+          </div>
+        ) : null)}
         <p className="reading-honest">{B.honest}</p>
       </div>
 
