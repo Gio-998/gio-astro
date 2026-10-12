@@ -24,7 +24,7 @@ export function FeedbackButton() {
     const k = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
     window.addEventListener("keydown", k); return () => window.removeEventListener("keydown", k);
   }, [open]);
-  if (!a.user) return null;
+  if (!a.user || /\/admin(\/|$)/.test(path)) return null;
   const send = async (e: React.FormEvent) => {
     e.preventDefault(); if (!msg.trim()) return;
     setState("busy");

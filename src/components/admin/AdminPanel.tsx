@@ -110,7 +110,7 @@ function CopyBtn({ email }: { email: string }) {
     const m = inviteMessage(email, site()); const txt = `${m.subject}\n\n${m.body}`;
     try { await navigator.clipboard.writeText(txt); } catch { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove(); }
     setOk(true); setTimeout(() => setOk(false), 1800);
-  }}>{ok ? T.copied : `⧉ ${T.copy}`}</button>;
+  }}>{ok ? T.copied : T.copy}</button>;
 }
 
 function Invites({ fmt, testers }: { fmt: Fmt; testers: Tester[] | null }) {
@@ -144,7 +144,7 @@ function Invites({ fmt, testers }: { fmt: Fmt; testers: Tester[] | null }) {
       </div>
 
       <div className="card">
-        <h2 className="h-display mb-2 text-2xl">{T.waitlist} · {pendingWait.length}</h2>
+        <h2 className="h-display mb-2 text-2xl">{T.waitlist} <span className="font-sans text-base text-dim">· {pendingWait.length}</span></h2>
         {!wait ? <p className="text-dim">{T.loading}</p> : pendingWait.length === 0 ? <p className="text-sm text-dim">{T.empty}</p> : <ul className="divide-y divide-white/10">{pendingWait.map((w) => (
           <li key={w.id} className="py-3" data-testid="waitlist-row">
             <p className="break-all text-sm font-medium">{w.email}</p>
@@ -158,7 +158,7 @@ function Invites({ fmt, testers }: { fmt: Fmt; testers: Tester[] | null }) {
       </div>
 
       <div className="card">
-        <h2 className="h-display mb-2 text-2xl">{T.invited} · {invites?.length ?? 0}</h2>
+        <h2 className="h-display mb-2 text-2xl">{T.invited} <span className="font-sans text-base text-dim">· {invites?.length ?? 0}</span></h2>
         {!invites ? <p className="text-dim">{T.loading}</p> : invites.length === 0 ? <p className="text-sm text-dim">{T.empty}</p> : <ul className="divide-y divide-white/10">{invites.map((i) => {
           const joined = i.used_at || hasAccount.has(i.email);
           return (
@@ -236,7 +236,7 @@ function Stats() {
   );
 }
 function StatCard({ label, value, small }: { label: string; value: number | undefined; small?: boolean }) {
-  return <div className={`card !p-4 ${small ? "" : "bg-gradient-to-br from-violet/15 to-transparent"}`}><p className={`h-display ${small ? "text-2xl" : "text-4xl"} text-gold`}>{value ?? 0}</p><p className="text-xs leading-tight text-dim">{label}</p></div>;
+  return <div className={`card !p-4 ${small ? "" : "bg-gradient-to-br from-violet/15 to-transparent"}`}><p className={`font-sans font-semibold tabular-nums ${small ? "text-2xl" : "text-[2.1rem]"} leading-none text-gold`}>{value ?? 0}</p><span className="mb-1 block" /><p className="text-xs leading-tight text-dim">{label}</p></div>;
 }
 
 function FeedbackInbox({ fmt, testers, onChange }: { fmt: Fmt; testers: Tester[] | null; onChange: () => void }) {
