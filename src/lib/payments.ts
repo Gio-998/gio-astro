@@ -15,20 +15,22 @@ export type Sku =
   | "session-partner" | "session-founder"
   | "gift-25" | "gift-49" | "gift-99";
 
+import { PLAN_PRICES, REPORT_PRICES, EXTRA_PRICES } from "./pricing";
+
 export interface SkuInfo { sku: Sku; product: ProductId; cents: number; interval?: "month" | "year" }
 export const SKUS: Record<Sku, SkuInfo> = {
-  "premium-monthly": { sku: "premium-monthly", product: "premium", cents: 499, interval: "month" },
-  "premium-yearly": { sku: "premium-yearly", product: "premium", cents: 3900, interval: "year" },
-  "soul-blueprint": { sku: "soul-blueprint", product: "soul-blueprint", cents: 4900 },
-  "couple-deep-dive": { sku: "couple-deep-dive", product: "couple-deep-dive", cents: 5900 },
-  "year-ahead": { sku: "year-ahead", product: "year-ahead", cents: 2900 },
-  constellation: { sku: "constellation", product: "constellation", cents: 7900 },
-  hardcover: { sku: "hardcover", product: "hardcover", cents: 6900 },
-  "session-partner": { sku: "session-partner", product: "session", cents: 9900 },
-  "session-founder": { sku: "session-founder", product: "session", cents: 14900 },
-  "gift-25": { sku: "gift-25", product: "gift-card", cents: 2500 },
-  "gift-49": { sku: "gift-49", product: "gift-card", cents: 4900 },
-  "gift-99": { sku: "gift-99", product: "gift-card", cents: 9900 },
+  "premium-monthly": { sku: "premium-monthly", product: "premium", cents: PLAN_PRICES.plus.month, interval: "month" },
+  "premium-yearly": { sku: "premium-yearly", product: "premium", cents: PLAN_PRICES.plus.year, interval: "year" },
+  "soul-blueprint": { sku: "soul-blueprint", product: "soul-blueprint", cents: EXTRA_PRICES["soul-blueprint"] },
+  "couple-deep-dive": { sku: "couple-deep-dive", product: "couple-deep-dive", cents: EXTRA_PRICES["couple-deep-dive"] },
+  "year-ahead": { sku: "year-ahead", product: "year-ahead", cents: REPORT_PRICES.year },
+  constellation: { sku: "constellation", product: "constellation", cents: EXTRA_PRICES["constellation"] },
+  hardcover: { sku: "hardcover", product: "hardcover", cents: EXTRA_PRICES["hardcover"] },
+  "session-partner": { sku: "session-partner", product: "session", cents: EXTRA_PRICES["session-partner"] },
+  "session-founder": { sku: "session-founder", product: "session", cents: EXTRA_PRICES["session-founder"] },
+  "gift-25": { sku: "gift-25", product: "gift-card", cents: EXTRA_PRICES["gift-25"] },
+  "gift-49": { sku: "gift-49", product: "gift-card", cents: EXTRA_PRICES["gift-49"] },
+  "gift-99": { sku: "gift-99", product: "gift-card", cents: EXTRA_PRICES["gift-99"] },
 };
 /** High-ticket product pages, in display order. */
 export const OFFERS: Exclude<ProductId, "premium">[] = ["soul-blueprint", "couple-deep-dive", "year-ahead", "constellation", "hardcover", "session", "gift-card"];
@@ -36,7 +38,7 @@ export const skusOf = (p: ProductId): Sku[] => (Object.values(SKUS).filter((s) =
 export const isSku = (s: string | null | undefined): s is Sku => !!s && s in SKUS;
 export const isProduct = (s: string): s is ProductId => s === "premium" || (OFFERS as string[]).includes(s);
 
-/** Yearly saving vs 12 × monthly, rounded down (39 vs 59.88 → 34%). */
+/** Yearly saving vs 12 × monthly, rounded down. All prices come from src/lib/pricing.ts. */
 export const yearlySavePct = Math.floor((1 - SKUS["premium-yearly"].cents / (SKUS["premium-monthly"].cents * 12)) * 100);
 
 /** Deterministic (no Intl): server and browser ICU data differ for "mk", which caused hydration mismatches. */

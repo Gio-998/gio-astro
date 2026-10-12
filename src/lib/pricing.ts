@@ -23,3 +23,9 @@ export const REPORT_PRICES: Record<ReportId, number> = { match: 499, year: 699, 
 export const yearlySaving = (p: PlanId) => { const { month, year } = PLAN_PRICES[p]; return month ? Math.floor((1 - year / (month * 12)) * 100) : 0; };
 /** Yearly price expressed per month, in cents (rounded). */
 export const perMonthOfYear = (p: PlanId) => Math.round(PLAN_PRICES[p].year / 12);
+
+/** Other catalog items (premium product pages, sessions, gift cards), euro cents. Used by src/lib/payments.ts. */
+export const EXTRA_PRICES = {
+  "soul-blueprint": 4900, "couple-deep-dive": 5900, constellation: 7900, hardcover: 6900,
+  "session-partner": 9900, "session-founder": 14900, "gift-25": 2500, "gift-49": 4900, "gift-99": 9900,
+} as const;

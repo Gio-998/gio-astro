@@ -41,7 +41,6 @@ export const nav = {
         { href: "/daily/", icon: "moon", title: "Daily by sign", desc: "Today's note for all twelve signs" },
         { href: "/blog/", icon: "palette", title: "Blog", desc: "Stories on signs, love and the inner life" },
         { href: "/learn/", icon: "number", title: "How it works", desc: "Methods, sources and honesty" },
-        { href: "/premium/", icon: "vedic", title: "Premium", desc: "Deeper reports, coming soon" },
         { href: "/promise/", icon: "temperament", title: "Our promise", desc: "Clear prices, honest results" },
       ],
     },

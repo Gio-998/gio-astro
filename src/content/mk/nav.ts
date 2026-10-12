@@ -42,7 +42,6 @@ export const nav: Nav = {
         { href: "/daily/", icon: "moon", title: "Дневно по знак", desc: "Порака за секој знак" },
         { href: "/blog/", icon: "palette", title: "Блог", desc: "Знаци, љубов и душа" },
         { href: "/learn/", icon: "number", title: "Како функционира", desc: "Методи и извори" },
-        { href: "/premium/", icon: "vedic", title: "Премиум", desc: "Подлабоки извештаи, наскоро" },
         { href: "/promise/", icon: "temperament", title: "Нашето ветување", desc: "Јасни цени, чесни резултати" },
       ],
     },

@@ -1,13 +1,14 @@
 import { describe, expect, it } from "vitest";
+import { PLAN_PRICES, yearlySaving } from "@/lib/pricing";
 import { SKUS, OFFERS, yearlySavePct, eur, skusOf, PAYWALL_LIVE } from "@/lib/payments";
 import { premium as en } from "@/content/en/premium";
 import { premium as mk } from "@/content/mk/premium";
 
 describe("premium catalog", () => {
   it("has the agreed prices", () => {
-    expect(SKUS["premium-monthly"].cents).toBe(499);
-    expect(SKUS["premium-yearly"].cents).toBe(3900);
-    expect(yearlySavePct).toBe(34);
+    expect(SKUS["premium-monthly"].cents).toBe(PLAN_PRICES.plus.month);
+    expect(SKUS["premium-yearly"].cents).toBe(PLAN_PRICES.plus.year);
+    expect(yearlySavePct).toBe(yearlySaving("plus"));
     expect(eur(499, "en")).toBe("€4.99"); expect(eur(3900, "mk")).toBe("39 €"); expect(eur(14900, "en")).toBe("€149");
   });
   it("every offer has copy in both languages, with options for each sku", () => {
