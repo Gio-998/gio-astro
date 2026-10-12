@@ -13,6 +13,8 @@ import { buildBondStory } from "@/story/bond";
 import { BirthForm } from "../BirthForm";
 import { PageHero } from "../ui";
 import { SignArt } from "../art/SignArt";
+import { SheetSelect } from "../controls";
+import { SIGN_GLYPH } from "@/engine/zodiac";
 
 export function MatchPage() {
   const s = useStore(); const { c } = useContent(); const h = useHref(); const U = c.ui.match;
@@ -28,13 +30,8 @@ export function MatchPage() {
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
 
   const picker = (val: string, set: (v: string) => void, who: "a" | "b") => (
-    <div className="flex gap-2">
-      <select className="input" value={val} onChange={(e) => (e.target.value === "__new" ? setAdding(who) : set(e.target.value))}>
-        {!all.length && <option value="">…</option>}
-        {all.map((p) => <option key={p.id} value={p.id}>{p.id === "me" ? `${p.name}${U.me}` : p.name}</option>)}
-        <option value="__new">{U.addNew}</option>
-      </select>
-    </div>
+    <SheetSelect testId={`pick-${who}`} title={who === "a" ? U.personA : U.personB} value={val} placeholder="…" onChange={(v) => (v === "__new" ? setAdding(who) : set(v))}
+      options={[...all.map((p) => ({ value: p.id, label: p.id === "me" ? `${p.name}${U.me}` : p.name, icon: SIGN_GLYPH[profileOf(p).sun] })), { value: "__new", label: U.addNew, icon: "＋" }]} />
   );
   return (
     <div>

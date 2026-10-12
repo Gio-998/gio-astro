@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { CityPicker } from "./CityPicker";
+import { TimePicker, Toggle } from "./controls";
 import { DatePicker } from "./DatePicker";
 import type { StoredPerson, Place } from "@/lib/store";
 import { newId } from "@/lib/store";
@@ -55,13 +56,10 @@ export function BirthForm({ initial, submitLabel, askRelType, onSubmit }: BirthF
         </div>
         <div>
           <label className="label">{U.time} <span className="opacity-60">({c.site.common.optional})</span></label>
-          <input className="input" type="time" value={time ?? ""} disabled={unknown} onChange={(e) => setTime(e.target.value)} />
+          <TimePicker value={time ?? ""} disabled={unknown} onChange={setTime} testId="time-field" />
         </div>
       </div>
-      <label className="flex items-center gap-2 text-sm text-dim">
-        <input type="checkbox" checked={unknown} onChange={(e) => setUnknown(e.target.checked)} /> {c.site.common.unknownTime}
-        <span className="text-xs opacity-70">{U.unknownNote}</span>
-      </label>
+      <Toggle checked={unknown} onChange={setUnknown}>{c.site.common.unknownTime} <span className="text-xs opacity-70">{U.unknownNote}</span></Toggle>
       <div>
         <label className="label">{U.place} <span className="opacity-60">{U.placeNote}</span></label>
         <CityPicker value={place} onChange={setPlace} />
@@ -69,9 +67,9 @@ export function BirthForm({ initial, submitLabel, askRelType, onSubmit }: BirthF
       {askRelType && (
         <div>
           <label className="label">{U.theyAre}</label>
-          <div className="flex flex-wrap gap-2">
+          <div role="radiogroup" className="grid grid-cols-2 gap-2 sm:grid-cols-4">
             {REL_TYPES.map((r) => (
-              <button type="button" key={r} onClick={() => setRel(r)} className={rel === r ? "btn-primary" : "btn-ghost"}>{c.compat.relTypes[r].name}</button>
+              <button type="button" role="radio" aria-checked={rel === r} key={r} onClick={() => setRel(r)} className={`min-h-[48px] rounded-2xl border px-3 text-sm transition active:scale-[.98] ${rel === r ? "border-gold bg-gold/15 text-gold shadow-[0_0_24px_-8px_rgba(246,207,122,.6)]" : "border-white/12 bg-white/[0.04] hover:border-gold/40"}`}>{c.compat.relTypes[r].name}</button>
             ))}
           </div>
         </div>

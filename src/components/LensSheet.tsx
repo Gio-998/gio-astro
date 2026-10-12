@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { createContext, useContext, useEffect, useState } from "react";
+import { createPortal } from "react-dom";
+import { useMounted } from "./controls";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Profile } from "@/engine/profile";
 import { useContent, useHref } from "@/lib/content-context";
@@ -22,7 +24,7 @@ const PREVIEW = 2; // blocks shown before "Read more"
  * The standalone /lens page stays reachable as a secondary link.
  */
 export function LensSheet({ k, profile, personId, personName, onClose }: { k: string | null; profile: Profile; personId?: string; personName?: string; onClose: () => void }) {
-  const { c } = useContent(); const h = useHref(); const reduce = useReducedMotion();
+  const { c } = useContent(); const h = useHref(); const reduce = useReducedMotion(); const mounted = useMounted();
   const [more, setMore] = useState(false);
   const valid = k && (LENS_KEYS as readonly string[]).includes(k);
   const page = valid ? buildLens(k as LensKey, profile, c) : null;
@@ -37,7 +39,9 @@ export function LensSheet({ k, profile, personId, personName, onClose }: { k: st
     return () => { window.removeEventListener("keydown", onKey); document.body.style.overflow = prev; };
   }, [k, onClose]);
 
-  return (
+  if (!mounted) return null;
+  // Portal to <body>: cards use backdrop-filter, which would trap position:fixed inside them.
+  return createPortal(
     <AnimatePresence onExitComplete={() => setMore(false)}>
       {page && (
         <motion.div key="lens-sheet" className="fixed inset-0 z-[60] flex items-end justify-center sm:items-center sm:p-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
@@ -82,5 +86,5 @@ export function LensSheet({ k, profile, personId, personName, onClose }: { k: st
         </motion.div>
       )}
     </AnimatePresence>
-  );
+  , document.body);
 }

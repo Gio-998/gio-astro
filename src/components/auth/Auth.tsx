@@ -8,6 +8,7 @@ import { useStore } from "@/lib/store";
 import { useContent, useHref, useDate } from "@/lib/content-context";
 import { PageHero } from "../ui";
 import { CodeInput } from "./CodeInput";
+import { Check } from "../controls";
 import { errKey } from "./errors";
 
 const PENDING_EMAIL = "mirrorstar:otp-email";
@@ -32,7 +33,7 @@ type Cons = { terms: boolean; data: boolean; mkt: boolean };
 function Row({ v, set, k, text, req }: { v: Cons; set: (v: Cons) => void; k: keyof Cons; text: React.ReactNode; req?: boolean }) {
   return (
     <label className="flex cursor-pointer items-start gap-3 text-sm leading-snug">
-      <input type="checkbox" data-testid={`consent-${k}`} className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-gold)]" checked={v[k]} onChange={(e) => set({ ...v, [k]: e.target.checked })} />
+      <Check testId={`consent-${k}`} checked={v[k]} onChange={(x) => set({ ...v, [k]: x })} />
       <span>{text}{req && <span className="text-rose"> *</span>}</span>
     </label>
   );

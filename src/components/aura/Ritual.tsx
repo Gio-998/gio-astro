@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Aura, Ambient } from "./Aura";
 import { DatePicker } from "../DatePicker";
+import { TimePicker, Toggle, Segmented } from "../controls";
 import { CityPicker } from "../CityPicker";
 import { ZodiacWheel } from "../art/ZodiacWheel";
 import { CONSTELLATIONS } from "../art/constellations";
@@ -94,12 +95,12 @@ export function Ritual({ initial, onDone, onQuick, onClose }: { initial?: Partia
         {sign && el && <motion.p key={sign} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="mt-3 text-gold">{SIGN_GLYPH[sign]} {R.signLine(c.astro.signs[sign].name, c.astro.elements[el].name)} · {fmt(date)}</motion.p>}
       </Q>);
       case "time": return (<Q title={R.timeQ} hint={R.timeHint}>
-        <input className="input text-lg" type="time" value={time} disabled={unknown} onChange={(e) => setTime(e.target.value)} />
-        <label className="mt-3 flex items-center gap-2 text-sm text-dim"><input type="checkbox" checked={unknown} onChange={(e) => setUnknown(e.target.checked)} /> {R.unknown}</label>
+        <TimePicker value={time} disabled={unknown} onChange={setTime} testId="ritual-time" />
+        <div className="mt-3"><Toggle checked={unknown} onChange={setUnknown} testId="ritual-unknown">{R.unknown}</Toggle></div>
       </Q>);
       case "place": return (<Q title={R.placeQ} hint={R.placeHint}><CityPicker value={place} onChange={setPlace} /></Q>);
       case "energy": return (<Q title={R.energyQ} hint={R.energyHint}>
-        <input type="range" min={1} max={5} step={1} value={ans.energy ?? 3} onChange={(e) => pick("energy", Number(e.target.value))} className="w-full accent-[var(--color-gold)]" aria-label={R.energyQ} data-testid="ritual-energy" />
+        <Segmented label={R.energyQ} testId="ritual-energy" value={ans.energy ?? 3} onChange={(v) => pick("energy", v)} options={[1, 2, 3, 4, 5].map((v) => ({ value: v, label: ["○", "◔", "◑", "◕", "●"][v - 1] }))} />
         <div className="mt-1 flex justify-between text-xs text-dim"><span>{R.low}</span><span>{R.high}</span></div>
       </Q>);
       case "weather": return (<Q title={R.weatherQ} hint={R.weatherHint}><Choice opts={WEATHERS} icons={WEATHER_ICON} value={ans.weather} labels={R.weather} onPick={(v) => pick("weather", v)} /></Q>);

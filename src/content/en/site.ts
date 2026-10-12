@@ -2,7 +2,7 @@ export const site = {
   months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
   weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
   themeOn: "My colours: on", themeOff: "My colours: off", themeHint: "Colour the whole site with your personal element palette, or switch back to the default look.",
-  datePicker: { day: "Day", month: "Month", year: "Year" },
+  datePicker: { day: "Day", month: "Month", year: "Year", done: "Done", placeholder: "Choose a date", title: "Your date", timePh: "Choose a time", hour: "Hour", minute: "Minute" },
   brand: "Horoscop",
   language: "Language", languages: { en: "English", mk: "Македонски" } as Record<string, string>,
   startShort: "Start",

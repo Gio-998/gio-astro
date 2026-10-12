@@ -7,6 +7,7 @@ import { useContent, useHref } from "@/lib/content-context";
 import { BOND_DIMS, CARE_STYLES, scoreBond, BondAnswers, BondResult, CareStyle } from "@/engine/bondcheck";
 import { Bar, EvidenceBadge, ScoreRing, PageHero } from "../ui";
 import { Emblem } from "../art/Emblem";
+import { SheetSelect } from "../controls";
 
 type Step = { who: "a" | "b"; i: number } | { handover: true } | { result: BondResult } | null;
 
@@ -37,8 +38,8 @@ export function BondPage() {
       <p className="mb-4 text-dim">{U.intro}</p>
       <div className="card space-y-3">
         <div className="grid gap-3 sm:grid-cols-2">
-          <div><label className="label">{U.first}</label><select className="input" value={A.id} onChange={(e) => setA(e.target.value)}>{all.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}</select></div>
-          <div><label className="label">{U.second}</label><select className="input" value={B.id} onChange={(e) => setB(e.target.value)}>{all.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}</select></div>
+          <div><label className="label">{U.first}</label><SheetSelect testId="bond-a" title={U.first} value={A.id} onChange={setA} options={all.map((p) => ({ value: p.id, label: p.name }))} /></div>
+          <div><label className="label">{U.second}</label><SheetSelect testId="bond-b" title={U.second} value={B.id} onChange={setB} options={all.map((p) => ({ value: p.id, label: p.name }))} /></div>
         </div>
         <p className="text-sm text-dim">{U.pass(A.name, B.name)}</p>
         <button className="btn-primary w-full py-3" disabled={A.id === B.id} onClick={() => setStep({ who: "a", i: 0 })}>{U.begin(A.name)}</button>
