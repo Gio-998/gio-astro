@@ -144,3 +144,12 @@ describe("Pair extras, voice layer and cards", () => {
     });
   }
 });
+
+describe("Macedonian systems text", () => {
+  const en = contents.en.systems, mk = contents.mk.systems;
+  const tables = ["chiron", "nodes", "lilith", "solarYear", "daySigns", "tones", "trees", "egypt", "runes", "slavicMonths", "feasts", "trigrams", "hexagrams", "nineStars", "sephirot", "biorhythm", "meta", "chironTheme", "attachLens", "attachNervous"] as const;
+  for (const t of tables) it(`mk.${t} is fully translated`, () => {
+    for (const k of Object.keys(en[t])) expect(JSON.stringify((mk[t] as Record<string, unknown>)[k]), `${t}.${k}`).not.toBe(JSON.stringify((en[t] as Record<string, unknown>)[k]));
+  });
+  it("mk ui strings are Cyrillic", () => { for (const [k, v] of Object.entries(mk.ui)) if (typeof v === "string") expect(v, k).toMatch(/[\u0400-\u04FF]/); });
+});
