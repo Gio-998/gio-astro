@@ -7,6 +7,7 @@ import { useStore } from "@/lib/store";
 import { EvidenceBadge, PageHero } from "../ui";
 import { ArtCard } from "../art/ArtCard";
 import { Reveal } from "../art/Reveal";
+import { PrecisionLinks } from "../PrecisionResult";
 
 
 export function QuizHub() {
@@ -45,6 +46,11 @@ export function QuizHub() {
             </ArtCard>
           </Link>
         </Reveal>
+      </div>
+      <div className="mt-10" data-testid="precision-hub">
+        <h2 className="h-display mb-1 text-3xl"><span className="mr-2 text-gold">✦</span>{c.types.hub.title}</h2>
+        <p className="mb-4 text-sm text-dim">{c.types.hub.sub}</p>
+        <PrecisionLinks h={h} done={(id) => !!s?.me?.quiz[defs[id].resultKey]} />
       </div>
     </div>
   );

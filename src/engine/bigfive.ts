@@ -17,13 +17,15 @@ export const BIG_FIVE_ITEMS: Item[] = [
 ];
 
 /**
- * Approximate reference norms (1–5 scale) in the range reported for Mini-IPIP samples
- * (Donnellan et al., 2006; Baldasaro et al., 2013). Percentiles are therefore approximate —
- * we will replace them with our own opt-in user norms later.
+ * Reference norms (1-5 scale) for these exact 20 items, computed from the Open-Source Psychometrics Project
+ * IPIP Big-Five dataset (openpsychometrics.org/_rawdata, ~2012, n = 18,175 complete answers, ages 16-80),
+ * which contains all 50 IPIP Big-Five markers including the Mini-IPIP subset. Online volunteers, so still
+ * approximate; we will switch to our own opt-in user norms later. Previous hand-picked norms overstated
+ * Openness (3.70 vs 4.03) and Neuroticism (2.70 vs 2.94) percentiles.
  */
 const NORMS: Record<Trait, { mean: number; sd: number }> = {
-  E: { mean: 3.05, sd: 0.87 }, A: { mean: 3.85, sd: 0.70 }, C: { mean: 3.40, sd: 0.80 },
-  N: { mean: 2.70, sd: 0.80 }, O: { mean: 3.70, sd: 0.72 },
+  E: { mean: 2.91, sd: 1.03 }, A: { mean: 3.93, sd: 0.86 }, C: { mean: 3.22, sd: 0.90 },
+  N: { mean: 2.94, sd: 0.90 }, O: { mean: 4.03, sd: 0.77 },
 };
 
 export type Answers = Record<string, number>; // item id → 1..5

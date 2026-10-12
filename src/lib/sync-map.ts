@@ -8,7 +8,7 @@ type T = Database["public"]["Tables"];
 export type ProfileRow = T["profiles"]["Row"]; export type PeopleRow = T["people"]["Row"];
 export type QuizRow = T["quiz_results"]["Row"]; export type JournalRow = T["journal_entries"]["Row"]; export type BondRow = T["bond_checks"]["Row"];
 
-export const QUIZ_KEYS = ["bigFive", "attachment", "nine", "care", "shadow", "dosha", "explorer"] as const;
+export const QUIZ_KEYS = ["bigFive", "attachment", "nine", "care", "shadow", "dosha", "explorer", "bigFiveLong", "fourLetter", "selfId"] as const;
 const REL: RelType[] = ["romantic", "friend", "family", "colleague"];
 const hhmm = (t: string | null) => (t ? t.slice(0, 5) : null);
 const later = (a?: string | null, b?: string | null) => (Date.parse(a ?? "") || 0) > (Date.parse(b ?? "") || 0);

@@ -25,6 +25,8 @@ import { BigFiveShape } from "./glance/BigFiveShape";
 import { MethodLink } from "./nav/Trust";
 import { Expand, GlanceHead } from "./glance/Expand";
 import { useGlance } from "./glance/text";
+import { FitCheck, BigFiveSourceNote } from "./FitCheck";
+import { PrecisionSection } from "./PrecisionResult";
 
 const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
 function MoreLink({ k }: { k: string; pid?: string }) {
@@ -75,7 +77,7 @@ function DoshaRing({ pct }: { pct: Record<"vata" | "pitta" | "kapha", number> })
   );
 }
 
-export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }) {
+export function QuizResultView({ id, profile, pid = "me" }: { id: QuizId; profile: Profile; pid?: string }) {
   const { c } = useContent(); const G = useGlance();
   const q = profile.quiz; const P = c.psych; const U = c.ui.profile;
   if (id === "big-five" && q.bigFive && profile.psych) {
@@ -90,6 +92,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
             {TRAITS.map((k) => { const v = q.bigFive![k]; const tr = P.traits[k]; return <Bar key={k} value={v} label={`${tr.name}: ${tr.plain}`} right={U.pct(v)} color={k === "N" ? "bg-rose" : "bg-gold"} />; })}
             <p className="text-xs text-dim">{U.pctNote}</p>
           </Expand>
+          <BigFiveSourceNote profile={profile} pid={pid} />
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="card" data-testid="glance-temperament">
@@ -97,6 +100,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
             <p className="h-display text-[1.75rem] leading-tight text-gold">{P.temperaments[t.primary].name}</p>
             <p className="text-sm">{P.temperaments[t.primary].text}</p>
             <Expand><p className="text-sm text-mist/85">{U.secondaryTip(P.temperaments[t.secondary].name, P.temperaments[t.primary].tip)}</p></Expand>
+            <FitCheck kind="temperament" profile={profile} pid={pid} />
           </div>
           <div className="card" data-testid="glance-fourletter">
             <div className="mb-2 flex items-center justify-between"><h3 className="text-sm font-semibold text-dim">{U.fourLetter}</h3><EvidenceBadge e="popular" /></div>
@@ -107,6 +111,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
               {(["EI", "SN", "TF", "JP"] as const).map((d, k) => <p key={d} className="text-xs text-dim">{fl.code[k]} = {P.letters[fl.code[k]]} <span className="opacity-70">{U.clarity(fl.clarity[d])}</span></p>)}
               <p className="mt-2 text-xs text-dim">{U.flNote}</p>
             </Expand>
+            <FitCheck kind="fourLetter" profile={profile} pid={pid} />
           </div>
         </div>
       </div>
@@ -124,6 +129,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
           <p className="mt-2 text-sm"><b>{U.tryLabel}</b> {x.tip}</p>
           <p className="mt-2 text-xs text-dim">{G.attachMap} {U.attachNote}</p>
         </Expand>
+        <FitCheck kind="attachment" profile={profile} pid={pid} />
       </div>
     );
   }
@@ -138,6 +144,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
           <p className="mt-1 text-sm text-dim">{U.nineMoves(n.growth, P.nineStyles[n.growth].name, n.stress, P.nineStyles[n.stress].name)}</p>
           <div className="mt-3 grid grid-cols-9 gap-1">{n.scores.map((s, k) => <div key={k} className="flex flex-col items-center justify-end text-center text-xs" style={{ height: 70 }}><div className="mb-1 w-3 rounded bg-gold/70" style={{ height: Math.max(3, s * 6) }} />{k + 1}</div>)}</div>
         </Expand>
+        <FitCheck kind="nine" profile={profile} pid={pid} />
       </div>
     );
   }
@@ -411,10 +418,11 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
       {QUIZ_IDS.map((id) => (
         <Section key={id} title={defs[id].title} aside={<EvidenceBadge e={defs[id].evidence} />}>
           {profile.quiz[defs[id].resultKey]
-            ? <><QuizResultView id={id} profile={profile} /><div className="flex flex-wrap items-baseline gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k={QUIZ_LENS[id]} />{id === "big-five" && <><MoreLink pid={isMe ? undefined : person.id} k="fourletter" /><MoreLink pid={isMe ? undefined : person.id} k="temperament" /></>}<MethodLink /><Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></div></>
+            ? <><QuizResultView id={id} profile={profile} pid={person.id} /><div className="flex flex-wrap items-baseline gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k={QUIZ_LENS[id]} />{id === "big-five" && <><MoreLink pid={isMe ? undefined : person.id} k="fourletter" /><MoreLink pid={isMe ? undefined : person.id} k="temperament" /></>}<MethodLink /><Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></div></>
             : <Locked emblem={id} title={defs[id].title} text={U.unlocksText(defs[id].tagline, defs[id].unlocks)} href={quizFor(id)} minutes={defs[id].minutes} />}
         </Section>
       ))}
+      <PrecisionSection person={person} profile={profile} />
       <LensSheet k={sheet} profile={profile} personId={isMe ? undefined : person.id} personName={person.name} onClose={closeSheet} />
     </div>
     </LensSheetCtx.Provider>

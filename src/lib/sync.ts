@@ -13,7 +13,7 @@ import { meToProfile, personToRow, journalToRow, merge, type ServerSnapshot, typ
 const OUTBOX = "mirrorstar:outbox";
 const CONSENTS = "mirrorstar:pending-consents";
 export const CONSENT_VERSION = "2026-10";
-const QUIZ_DEF_ID: Record<string, string> = { bigFive: "big-five", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
+const QUIZ_DEF_ID: Record<string, string> = { bigFive: "big-five", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer", bigFiveLong: "big-five-long", fourLetter: "four-letter" };
 
 export type SyncStatus = "off" | "idle" | "syncing" | "offline" | "error";
 export interface AccountState { ready: boolean; user: User | null; status: SyncStatus; lastSync: string | null; error: string | null; conflict: MeConflict | null; pending: number }

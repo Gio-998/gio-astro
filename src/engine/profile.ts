@@ -3,10 +3,12 @@ import { BirthInput } from "./time";
 import { chineseProfile, ChineseProfile } from "./chinese";
 import { lifePath, nameNumbers, NameNumbers, personalYear, birthdayNumber } from "./numerology";
 import { birthCards } from "./tarot";
-import { BigFive, fourLetter, temperament, FourLetter, Temperament } from "./bigfive";
+import { BigFive } from "./bigfive";
 import { vedicMoon, VedicMoon } from "./vedic";
 import type { AttachResult, NineResult, CareResult, DoshaResult, ExplorerResult } from "./quizzes";
 import type { scoreShadow } from "./shadow";
+import type { FourLetterQuizResult } from "./fourletter-quiz";
+import { SelfId, effectiveFourLetter, effectiveTemperament, effectiveNine, effectiveAttachment, EffectiveFourLetter, EffectiveTemperament } from "./selfid";
 
 export type ShadowResult = ReturnType<typeof scoreShadow>;
 /** Results of the optional questionnaire lenses ("unlocked layers"). */
@@ -18,6 +20,12 @@ export interface QuizResults {
   shadow?: ShadowResult;
   dosha?: DoshaResult;
   explorer?: ExplorerResult;
+  /** Dedicated 28-item four-letter preference quiz. */
+  fourLetter?: FourLetterQuizResult;
+  /** 50-item IPIP Big Five (percentiles). Used instead of the 20-item version when present. */
+  bigFiveLong?: BigFive;
+  /** "Does this sound like you?" picks and confirmations. */
+  selfId?: SelfId;
 }
 import { Element, SIGN_ELEMENT, Sign, isYangSign } from "./zodiac";
 
@@ -41,7 +49,11 @@ export interface Profile {
   dominantElement: Element;
   archetypeAnimal: ArchetypeAnimal;
   palette: string[]; // 5 hex colours
-  psych: { bigFive: BigFive; fourLetter: FourLetter; temperament: { primary: Temperament; secondary: Temperament; strength: number } } | null;
+  psych: { bigFive: BigFive; fourLetter: EffectiveFourLetter; temperament: EffectiveTemperament } | null;
+  /** Effective four-letter style (self pick > dedicated quiz > Big Five estimate), also without a Big Five. */
+  fourLetter: EffectiveFourLetter | null;
+  /** Which Big Five version feeds the results. */
+  bigFiveSource: "long" | "short" | null;
 }
 
 export type ArchetypeAnimal =
@@ -65,7 +77,13 @@ const ELEMENT_PALETTES: Record<Element, string[]> = {
 };
 const WUXING_ACCENT: Record<string, string> = { wood: "#52B788", fire: "#E85D75", earth: "#C9A227", metal: "#C0C7D1", water: "#355C7D" };
 
-export function buildProfile(input: PersonInput): Profile {
+export function buildProfile(rawInput: PersonInput): Profile {
+  // Effective quiz results: the long Big Five replaces the short one; self-identified picks replace measured types.
+  const rq = rawInput.quiz ?? {};
+  const bigFiveSource: Profile["bigFiveSource"] = rq.bigFiveLong ? "long" : rq.bigFive ? "short" : null;
+  const quiz: QuizResults = { ...rq, bigFive: rq.bigFiveLong ?? rq.bigFive, nine: effectiveNine(rq.nine, rq.selfId), attachment: effectiveAttachment(rq.attachment, rq.selfId) };
+  for (const k of ["bigFive", "nine", "attachment"] as const) if (quiz[k] === undefined) delete quiz[k];
+  const input: PersonInput = { ...rawInput, quiz };
   const chart = computeChart(input);
   const sun = chart.placements.sun!.sign;
   const moon = chart.placements.moon!.sign;
@@ -96,12 +114,13 @@ export function buildProfile(input: PersonInput): Profile {
   const base = ELEMENT_PALETTES[dominantElement];
   const palette = [base[0], base[1], WUXING_ACCENT[chinese.element], base[3], base[4]];
 
-  const psych = b5 ? { bigFive: b5, fourLetter: fourLetter(b5), temperament: temperament(b5) } : null;
+  const fl = effectiveFourLetter(b5, rq.fourLetter, rq.selfId);
+  const psych = b5 && fl ? { bigFive: b5, fourLetter: fl, temperament: effectiveTemperament(b5, rq.selfId) } : null;
 
   return {
-    input, chart, sun, moon, rising, chinese, vedic: vedicMoon(chart), quiz: input.quiz ?? {},
+    input, chart, sun, moon, rising, chinese, vedic: vedicMoon(chart), quiz,
     numbers: { lifePath: lp.value, lifePathSteps: lp.steps, birthday: birthdayNumber(input.date), personalYear: personalYear(input.date, thisYear), name },
     tarot: birthCards(input.date),
-    yang, dominantElement, archetypeAnimal, palette, psych,
+    yang, dominantElement, archetypeAnimal, palette, psych, fourLetter: fl, bigFiveSource,
   };
 }

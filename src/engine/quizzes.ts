@@ -23,8 +23,8 @@ export function scoreAttachment(ans: Record<string, number>): AttachResult {
 // ——— Nine-style motivation quiz (Enneagram-style, own statements) ———
 export const NINE = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
 export interface NineResult { type: number; wing: number; scores: number[]; growth: number; stress: number }
-const GROWTH: Record<number, number> = { 1: 7, 2: 4, 3: 6, 4: 1, 5: 8, 6: 9, 7: 5, 8: 2, 9: 3 };
-const STRESS: Record<number, number> = { 1: 4, 2: 8, 3: 9, 4: 2, 5: 7, 6: 3, 7: 1, 8: 5, 9: 6 };
+export const GROWTH: Record<number, number> = { 1: 7, 2: 4, 3: 6, 4: 1, 5: 8, 6: 9, 7: 5, 8: 2, 9: 3 };
+export const STRESS: Record<number, number> = { 1: 4, 2: 8, 3: 9, 4: 2, 5: 7, 6: 3, 7: 1, 8: 5, 9: 6 };
 /** answers: id "t1".."t9" (core statement, 1–5) and "t1b".."t9b" (second statement, 1–5). */
 export function scoreNine(ans: Record<string, number>): NineResult {
   const scores = NINE.map((t) => (ans[`t${t}`] ?? 3) + (ans[`t${t}b`] ?? 3));

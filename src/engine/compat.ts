@@ -274,7 +274,7 @@ function temperamentLens(A: Profile, B: Profile) {
 }
 
 function fourletter(A: Profile, B: Profile) {
-  const a = A.psych?.fourLetter.code, b = B.psych?.fourLetter.code;
+  const a = A.fourLetter?.code, b = B.fourLetter?.code;
   if (!a || !b) return null;
   let H = 70, S = 50;
   if (a[1] === b[1]) H += 10; else S += 18;

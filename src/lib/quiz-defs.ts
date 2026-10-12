@@ -4,22 +4,46 @@ import { BIG_FIVE_ITEMS, scoreBigFive } from "@/engine/bigfive";
 import { ATTACH_ITEMS, scoreAttachment, scoreNine, CARE_PAIRS, CARE, scoreCare, DOSHA_ITEMS, scoreDosha, EXPLORER_ITEMS, STANCE_ITEMS, scoreExplorer } from "@/engine/quizzes";
 import { SHADOW_ORDER, scoreShadow } from "@/engine/shadow";
 import type { Evidence } from "@/engine/compat";
+import { FOUR_LETTER_ITEMS, scoreFourLetter } from "@/engine/fourletter-quiz";
+import { BIG_FIVE_LONG_ITEMS, scoreBigFiveLong } from "@/engine/bigfive-long";
 
 export type Q =
   | { kind: "likert"; id: string; text: string; scale: string[] }
   | { kind: "choice"; id: string; text: string; options: string[] }
-  | { kind: "poles"; id: string; text: string; left: string; right: string };
+  | { kind: "poles"; id: string; text: string; left: string; right: string }
+  /** Forced choice between two statements on a 4-point scale (1 = clearly a ... 4 = clearly b). */
+  | { kind: "pair"; id: string; text: string; a: string; b: string; scale: string[]; hint: string };
 
 export const QUIZ_IDS = ["big-five", "attachment", "nine", "care", "shadow", "dosha", "explorer"] as const;
 export type QuizId = (typeof QUIZ_IDS)[number];
+/** Longer "sharper results" quizzes. Kept out of QUIZ_IDS so the seven core layers stay as they are. */
+export const PRECISION_QUIZ_IDS = ["four-letter", "big-five-long"] as const;
+export type PrecisionQuizId = (typeof PRECISION_QUIZ_IDS)[number];
+export type AnyQuizId = QuizId | PrecisionQuizId;
+export const ALL_QUIZ_IDS: readonly AnyQuizId[] = [...QUIZ_IDS, ...PRECISION_QUIZ_IDS];
+export const isPrecisionQuiz = (id: string): id is PrecisionQuizId => (PRECISION_QUIZ_IDS as readonly string[]).includes(id);
 export interface QuizDef {
-  id: QuizId; title: string; tagline: string; minutes: number; evidence: Evidence; resultKey: keyof QuizResults;
+  id: AnyQuizId; title: string; tagline: string; minutes: number; evidence: Evidence; resultKey: keyof QuizResults;
   intro: string; unlocks: string; items: Q[]; score: (a: Record<string, number>) => Partial<QuizResults>; note?: string;
 }
 
-export function quizDefs(c: Content): Record<QuizId, QuizDef> {
-  const q = c.quizzes;
+export function quizDefs(c: Content): Record<AnyQuizId, QuizDef> {
+  const q = c.quizzes; const T = c.types;
   return {
+    "four-letter": {
+      id: "four-letter", title: T.meta["four-letter"].title, tagline: T.meta["four-letter"].tagline, minutes: 4, evidence: "popular", resultKey: "fourLetter",
+      intro: T.meta["four-letter"].intro, unlocks: T.meta["four-letter"].unlocks,
+      items: FOUR_LETTER_ITEMS.map((i) => ({ kind: "pair", id: i.id, text: T.fourLetterItems[i.id].q, a: T.fourLetterItems[i.id].a, b: T.fourLetterItems[i.id].b, scale: T.pairScale, hint: T.pairHint })),
+      score: (a) => ({ fourLetter: scoreFourLetter(a) }),
+      note: T.meta["four-letter"].note,
+    },
+    "big-five-long": {
+      id: "big-five-long", title: T.meta["big-five-long"].title, tagline: T.meta["big-five-long"].tagline, minutes: 6, evidence: "research", resultKey: "bigFiveLong",
+      intro: T.meta["big-five-long"].intro, unlocks: T.meta["big-five-long"].unlocks,
+      items: BIG_FIVE_LONG_ITEMS.map((i) => ({ kind: "likert", id: i.id, text: T.bigFiveLongItems[i.id], scale: q.scale5 })),
+      score: (a) => ({ bigFiveLong: scoreBigFiveLong(a).pct }),
+      note: T.meta["big-five-long"].note,
+    },
     "big-five": {
       id: "big-five", title: q.meta["big-five"].title, tagline: q.meta["big-five"].tagline, minutes: 3, evidence: "research", resultKey: "bigFive",
       intro: q.meta["big-five"].intro, unlocks: q.meta["big-five"].unlocks,

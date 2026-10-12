@@ -46,7 +46,7 @@ export function LensPageView() {
         <p className="text-[1.05rem] leading-relaxed text-mist/90">{page.what}</p>
       </div>
 
-      {page.quiz && page.blocks && <div className="mb-6"><QuizResultView id={page.quiz} profile={profile} /></div>}
+      {page.quiz && page.blocks && <div className="mb-6"><QuizResultView id={page.quiz} profile={profile} pid={person.id} /></div>}
 
       {page.blocks ? (
         <div className="reading-surface">
