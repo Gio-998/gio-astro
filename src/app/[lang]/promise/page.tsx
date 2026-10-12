@@ -4,7 +4,7 @@ export const generateMetadata = pageMeta("promise");
 function PageEn() {
   return (
     <article className="prose-soft">
-      <PageHero emblem="eye" img="helix" title={<>Our no-tricks promise</>} />
+      <PageHero emblem="eye" img="helix" title={<>Our promise</>} />
       <p>This category is known for $1 trials that quietly become $40 a month, cancellation mazes and fear-based upsells. We think that's wrong. Here is what we promise, in plain words:</p>
       <ul>
         <li><b>Free results, always.</b> Every quiz shows its full result the moment you finish. No email wall, no paywall at the end.</li>

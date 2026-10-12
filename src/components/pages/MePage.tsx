@@ -27,6 +27,7 @@ export function MePage() {
         ? <MeJourney person={s.me} profile={profileOf(s.me)} onClassic={() => { setView("classic"); window.scrollTo({ top: 0 }); }} />
         : <ProfileView person={s.me} profile={profileOf(s.me)} isMe />}
       <div className="mt-8 flex flex-wrap gap-2">
+        <Link className="btn-primary" href={h("/you/")}>✦ {c.you.title}</Link>
         <Link className="btn-ghost" href={h("/start/")}>{c.ui.me.editBirth}</Link>
         <Link className="btn-ghost" href={h("/today/")}>{c.ui.me.today}</Link>
         <Link className="btn-ghost" href={h("/people/")}>{c.ui.me.addPeople}</Link>

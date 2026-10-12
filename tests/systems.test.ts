@@ -153,3 +153,18 @@ describe("Macedonian systems text", () => {
   });
   it("mk ui strings are Cyrillic", () => { for (const [k, v] of Object.entries(mk.ui)) if (typeof v === "string") expect(v, k).toMatch(/[\u0400-\u04FF]/); });
 });
+
+describe("lots, number extras and rarity", async () => {
+  const { lots, isDayChart } = await import("../src/engine/systems/arabic");
+  const { numExtra } = await import("../src/engine/systems/numextra");
+  const { lifePathShares } = await import("../src/engine/rarity");
+  it("day/night Fortune formula", () => {
+    expect(isDayChart(250, 0)).toBe(true); expect(isDayChart(90, 0)).toBe(false);
+    expect(lots(250, 100, 0).fortune).toBeCloseTo(210); expect(lots(90, 100, 0).fortune).toBeCloseTo(350);
+  });
+  it("personal month/day and karmic debt", () => {
+    const x = numExtra("1990-03-16", 2, 7, 5, new Date(2026, 9, 12));
+    expect(x.personalMonth).toBe(6); expect(x.personalDay).toBe(9); expect(x.karmicDebt).toBe(16); expect(x.maturity).toBe(9);
+  });
+  it("life path shares sum to 1", () => { expect(Object.values(lifePathShares()).reduce((a, b) => a + b, 0)).toBeCloseTo(1); });
+});

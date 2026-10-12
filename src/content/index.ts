@@ -15,8 +15,10 @@ import { landing } from "./en/landing";
 import { enExtra } from "./en/extra";
 import { sky } from "./en/sky";
 import { systems } from "./en/systems";
+import { you, partners } from "./en/you";
+import { you as mkYou, partners as mkPartners } from "./mk/you";
 
-const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui, sky, ...enExtra, systems };
+const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui, sky, ...enExtra, systems, you, partners };
 export type Content = typeof en;
 
 import { mk as mkPartial } from "./mk";
@@ -32,7 +34,7 @@ function deepMerge<T>(base: T, over: DeepPartial<T> | undefined): T {
   for (const [k, v] of Object.entries(over as Record<string, unknown>)) out[k] = deepMerge((base as Record<string, unknown>)[k], v as never);
   return out as T;
 }
-const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: mkSystems } as DeepPartial<Content>);
+const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: mkSystems, you: mkYou, partners: mkPartners } as DeepPartial<Content>);
 
 /** Add a locale by creating src/content/<code>/* (any subset) and registering it here. */
 export const LOCALES = ["en", "mk"] as const;

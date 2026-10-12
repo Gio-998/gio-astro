@@ -40,7 +40,7 @@ export const landing = {
   s8: { eyebrow: "Your daily ritual", title: ["Ninety seconds ", "with the sky", ""], sub: "Today's real Moon and planets. Add your birth date and you'll see what they mean for your chart." },
   s9: { eyebrow: "Examples, not reviews", title: ["The kind of things people discover", "", ""], sub: "We're new, so there are no real reviews yet. These are illustrative examples of what the app can surface, not quotes from customers." },
   example: "Example",
-  promise: { eyebrow: "Our no-tricks promise", title: ["Hope without fake certainty. ", "Value without traps.", ""], items: ["Full quiz results free, never a paywall at the end", "No fake urgency, no “psychic is typing”, no fake reviews", "Future extras: published prices, one-click cancel, real refunds", "Your data stays on your device unless you choose an account"], read: "Read the promise →" },
+  promise: { eyebrow: "Our promise", title: ["Hope without fake certainty. ", "Value without traps.", ""], items: ["Full quiz results free, never a paywall at the end", "No fake urgency, no “psychic is typing”, no fake reviews", "Future extras: published prices, one-click cancel, real refunds", "Your data stays on your device unless you choose an account"], read: "Read the promise →" },
   faqHead: { eyebrow: "Questions", title: "Asked under the stars" },
   cta: { title: ["Your sky is ", "waiting", "."], sub: "It takes ninety seconds and no sign-up. You may start seeing yourself, and the people you love, a little differently." },
 };

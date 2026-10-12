@@ -12,6 +12,8 @@ import { biorhythm } from "./biorhythm";
 import { solarReturn, SolarReturn } from "./solarreturn";
 import { degreeSymbol, DegreeSymbol } from "./degree";
 import { nameDay, birthFeast, NameDay, FeastId } from "./feasts";
+import { lots } from "./arabic";
+import { numExtra, NumExtra } from "./numextra";
 
 export interface Placed { lon: number; sign: Sign; deg: number; house: number | null; retrograde?: boolean }
 export interface Systems {
@@ -23,6 +25,9 @@ export interface Systems {
   iching: BirthHexagram; kabbalah: TreeOfLife; ninestar: NineStar;
   sunDegree: DegreeSymbol;
   nameDay: NameDay | null;
+  /** Part of Fortune / Spirit; null without a known birth time and place. */
+  lots: { day: boolean; fortune: Placed; spirit: Placed } | null;
+  numExtra: NumExtra;
 }
 
 function placed(p: Profile, lon: number, retrograde?: boolean): Placed {
@@ -45,6 +50,8 @@ export function computeSystems(p: Profile, opts: { firstName?: string; today?: D
     iching: birthHexagram(date, time), kabbalah: treeOfLife(p.numbers.lifePath, p.tarot.cards), ninestar: nineStarKi(date, time),
     sunDegree: degreeSymbol(p.chart.placements.sun!.lon),
     nameDay: nameDay(opts.firstName ?? p.input.name, opts.today),
+    lots: (() => { const asc = p.chart.placements.asc; if (!asc || !p.chart.hasAngles) return null; const l = lots(p.chart.placements.sun!.lon, p.chart.placements.moon!.lon, asc.lon); return { day: l.day, fortune: placed(p, l.fortune), spirit: placed(p, l.spirit) }; })(),
+    numExtra: numExtra(date, p.numbers.lifePath, p.numbers.name?.expression ?? null, p.numbers.personalYear, opts.today ?? new Date()),
   };
 }
 export const todayBiorhythm = (p: Profile, today = new Date()) => biorhythm(p.input.date, `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`);

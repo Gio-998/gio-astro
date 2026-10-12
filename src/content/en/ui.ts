@@ -336,7 +336,7 @@ export const pageMeta = {
   people: { title: "People" },
   person: { title: "Profile" },
   privacy: { title: "Privacy" },
-  promise: { title: "Our no-tricks promise", description: "Free full results, no fake urgency, one-click cancel, published prices and refunds in money: an astrology app without subscription traps." },
+  promise: { title: "Our promise", description: "Free full results, no fake urgency, one-click cancel, published prices and refunds in money: an astrology app without subscription traps." },
   quizzes: { title: "Free personality & self-discovery quizzes", description: "Big Five, attachment style, nine motivations, care styles, Shadow & Light, body & energy type and autopilot vs explorer: full results free." },
   start: { title: "Free birth chart & profile in 90 seconds", description: "Enter your birth date to get your Western, Vedic and Chinese signs, numerology, tarot birth card, archetype animal and colour palette: free." },
   terms: { title: "Terms of use" },

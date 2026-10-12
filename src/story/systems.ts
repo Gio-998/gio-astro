@@ -103,5 +103,19 @@ export function buildSystemCards(p: Profile, sys: Systems, c: Content, ctx: SysC
   const kabbalah: SysCard = { key: "kabbalah", glyph: "⟡", name: M.kabbalah.name, value: sp.name, line: `${sp.meaning}. ${sp.text}`, evidence: M.kabbalah.evidence, provenance: prov(U.fromNumbers),
     blocks: [{ t: "facets", items: [{ label: `${U.sphere}: ${sp.name} (${sp.meaning})`, text: sp.text }, { label: card.name, text: U.path(kb.path, kb.letter, card.name, T.sephirot[kb.from].name, T.sephirot[kb.to].name) }] }, ...(kb.fromMaster ? [{ t: "callout" as const, tone: "note" as const, text: U.fromMaster(kb.fromMaster) }] : [])] };
 
-  return { chiron, nodes, lilith, sundegree, solarreturn, biorhythm, nameday, slavic, ninestar, iching, mayan, celtic, norse, egyptian, kabbalah };
+  const lt = sys.lots;
+  const arabic: SysCard = lt
+    ? { key: "arabic", glyph: "⊗", name: M.arabic.name, value: S(lt.fortune.sign), line: T.fortune[lt.fortune.sign], evidence: M.arabic.evidence, provenance: prov(fromTime),
+        blocks: [{ t: "lead", text: lt.day ? U.dayBirth : U.nightBirth }, { t: "facets", items: [{ label: `${U.fortune}: ${pos(lt.fortune)}`, text: T.fortune[lt.fortune.sign] }, { label: `${U.spirit}: ${pos(lt.spirit)}`, text: T.spirit[lt.spirit.sign] }] }] }
+    : { key: "arabic", glyph: "⊗", name: M.arabic.name, value: U.lotsNeedTimeValue, line: U.lotsNeedTime, evidence: M.arabic.evidence, provenance: prov(U.fromBirthDate), blocks: [{ t: "callout", tone: "note", text: U.lotsNeedTime }] };
+
+  const nx = sys.numExtra; const N = c.nums.numbers;
+  const numextra: SysCard = { key: "numextra", glyph: "#", name: M.numextra.name, value: `${nx.personalMonth} · ${nx.personalDay}`, line: `${U.personalMonth} ${nx.personalMonth}: ${N[nx.personalMonth].essence}`, evidence: M.numextra.evidence, provenance: prov(U.fromBirthNameDate),
+    blocks: [{ t: "facets", items: [
+      { label: `${U.personalMonth}: ${nx.personalMonth}, ${N[nx.personalMonth].name}`, text: N[nx.personalMonth].essence },
+      { label: `${U.personalDay}: ${nx.personalDay}, ${N[nx.personalDay].name}`, text: N[nx.personalDay].essence },
+      nx.maturity != null ? { label: `${U.maturity}: ${nx.maturity}, ${N[nx.maturity].name}`, text: N[nx.maturity].essence } : { label: U.maturity, text: U.maturityNoName },
+    ] }, ...(nx.karmicDebt ? [{ t: "callout" as const, tone: "note" as const, title: U.karmicDebt(nx.karmicDebt), text: U.karmicDebtText[nx.karmicDebt] }] : [])] };
+
+  return { arabic, numextra, chiron, nodes, lilith, sundegree, solarreturn, biorhythm, nameday, slavic, ninestar, iching, mayan, celtic, norse, egyptian, kabbalah };
 }

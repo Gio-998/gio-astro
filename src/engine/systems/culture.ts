@@ -39,11 +39,11 @@ export const regionOfCountry = (cc: string | null): Region => (cc ? COUNTRY_REGI
 export const regionOfLang = (l?: string | null): Region => (l ? LANG_REGION[l.toLowerCase().split("-")[0]] ?? "global" : "global");
 
 /** Lens ids this module orders. Existing lenses (chinese, vedic) take part so they can be featured too. */
-export type SystemKey = "chiron" | "nodes" | "lilith" | "sundegree" | "solarreturn" | "biorhythm" | "nameday" | "slavic" | "chinese" | "ninestar" | "iching" | "vedic" | "mayan" | "celtic" | "norse" | "egyptian" | "kabbalah";
-export const DEFAULT_ORDER: SystemKey[] = ["chiron", "nodes", "lilith", "sundegree", "solarreturn", "biorhythm", "chinese", "vedic", "iching", "ninestar", "mayan", "celtic", "norse", "slavic", "nameday", "egyptian", "kabbalah"];
+export type SystemKey = "chiron" | "nodes" | "lilith" | "sundegree" | "solarreturn" | "biorhythm" | "nameday" | "slavic" | "chinese" | "ninestar" | "iching" | "vedic" | "mayan" | "celtic" | "norse" | "egyptian" | "kabbalah" | "arabic" | "numextra";
+export const DEFAULT_ORDER: SystemKey[] = ["chiron", "nodes", "lilith", "sundegree", "solarreturn", "biorhythm", "chinese", "vedic", "iching", "ninestar", "mayan", "celtic", "norse", "slavic", "nameday", "egyptian", "kabbalah", "arabic", "numextra"];
 const HOME: Partial<Record<SystemKey, Region[]>> = {
   slavic: ["mk", "balkan", "slavic"], nameday: ["mk", "balkan", "orthodox"], chinese: ["east-asia", "japan"], iching: ["east-asia", "japan"],
-  ninestar: ["japan", "east-asia"], vedic: ["south-asia"], norse: ["nordic"], celtic: ["celtic"], mayan: ["mesoamerica"], egyptian: ["egypt"],
+  ninestar: ["japan", "east-asia"], vedic: ["south-asia"], norse: ["nordic"], celtic: ["celtic"], mayan: ["mesoamerica"], egyptian: ["egypt"], arabic: ["egypt"],
 };
 export interface CultureCtx { birthTz?: string | null; locale?: string | null; browserLangs?: readonly string[] }
 export interface CultureResult { country: string | null; region: Region; order: SystemKey[]; featured: SystemKey[]; why: Partial<Record<SystemKey, ("birthplace" | "language" | "browser")[]>> }

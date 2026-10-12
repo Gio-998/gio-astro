@@ -11,7 +11,7 @@ import { useCaptcha } from "./Captcha";
 
 // Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
-const PUBLIC = ["", "reset", "privacy", "terms", "promise", "learn", "credits", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
+const PUBLIC = ["", "reset", "privacy", "terms", "promise", "learn", "credits", "partners", "how-it-works", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
 const routeOf = (path: string) => path.replace(/^\/(en|mk)(\/|$)/, "").replace(/\/$/, "");
 // Public sections (with all their sub-pages): mini-games, daily sign pages, blog, trust page. Personal pages stay behind login.
 const PUBLIC_SECTIONS = ["play", "daily", "blog", "how-it-works"];
