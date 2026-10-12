@@ -16,6 +16,7 @@ import { ArtCard, cosmos, Cosmos } from "@/components/art/ArtCard";
 import { Emblem, EmblemId } from "@/components/art/Emblem";
 import { SignArt } from "@/components/art/SignArt";
 import { ZodiacWheel } from "@/components/art/ZodiacWheel";
+import { ScrollFx } from "@/components/landing/ScrollFx";
 
 const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha", play: "explorer" };
 
@@ -35,6 +36,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Hero />
+      <ScrollFx />
 
       {/* Lens marquee */}
       <div className="bleed relative -mt-6 overflow-hidden border-y border-white/10 bg-white/[0.04] py-4 backdrop-blur" aria-label={L.lensesIncluded}>
@@ -55,7 +57,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <Reveal key={d.t} delay={i * 0.08}>
               <Link href={h(d.href)} className="group relative block h-80 overflow-hidden rounded-[32px] border border-white/15 shadow-[0_30px_70px_-35px_rgba(139,108,240,.9)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={cosmos(d.img, 1280)} alt="" loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover transition duration-[1.8s] group-hover:scale-110" />
+                <img src={cosmos(d.img, 1280)} srcSet={`${cosmos(d.img, 640)} 640w, ${cosmos(d.img, 1280)} 1280w`} sizes="(min-width: 640px) 50vw, 100vw" alt="" loading="lazy" decoding="async" data-fx="parallax" className="absolute inset-0 h-full w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-night via-night/55 to-transparent" />
                 <Emblem id={d.e} className="absolute right-6 top-6 h-14 w-14 opacity-90 glow-gold transition duration-700 group-hover:rotate-12" />
                 <div className="absolute inset-x-0 bottom-0 p-7">
@@ -76,14 +78,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       </section>
 
       {/* Free tools */}
-      <section className="bleed relative overflow-hidden py-24">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={cosmos("milkyway", 1280)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-indigo/40 to-night" />
+      <section className="bleed relative overflow-hidden py-24" data-sky="1.35">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-indigo/25 to-transparent" />
         <div className="relative mx-auto max-w-5xl px-4">
           <SectionHead eyebrow={L.s3.eyebrow} title={T(L.s3.title)} sub={L.s3.sub} />
           <Reveal><PickACard /></Reveal>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-fx="pop">
             {(["/start/", "/match/", "/quizzes/", "/today/"].map((href, i) => [href, L.tools[i][0], L.tools[i][1], (["chart", "bond", "big-five", "moon"] as EmblemId[])[i]]) as [string, string, string, EmblemId][]).map(([href, t, d, e], i) => (
               <Reveal key={href} delay={i * 0.07}>
                 <Link href={h(href)} className="card card-hover block h-full text-center">
@@ -192,7 +192,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       {/* Quiz grid */}
       <section className="pb-24">
         <SectionHead eyebrow={L.s7.eyebrow} title={T(L.s7.title)} sub={L.s7.sub} />
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4" data-fx="pop">
           {QUIZ_IDS.map((id, i) => (
             <Reveal key={id} delay={(i % 4) * 0.07}>
               <Link href={h(`/quiz/${id}/`)} className="block h-full">
@@ -245,7 +245,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <Reveal>
           <div className="relative overflow-hidden rounded-[40px] border border-gold/30 p-8 sm:p-12">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={cosmos("helix", 1280)} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
+            <img src={cosmos("helix", 1280)} srcSet={`${cosmos("helix", 640)} 640w, ${cosmos("helix", 1280)} 1280w`} sizes="100vw" alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-30" />
             <div className="absolute inset-0 bg-gradient-to-r from-night via-night/85 to-night/40" />
             <div className="relative grid items-center gap-8 md:grid-cols-[1.3fr_1fr]">
               <div>
@@ -273,10 +273,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <BetaInvite />
 
       {/* CTA band */}
-      <section className="bleed relative overflow-hidden py-28 text-center">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={cosmos("orion", 1920)} alt="" loading="lazy" className="absolute inset-0 h-full w-full animate-kenburns object-cover opacity-45" />
-        <div className="absolute inset-0 bg-gradient-to-b from-night via-[#3b2f86]/40 to-night" />
+      <section className="bleed relative overflow-hidden py-28 text-center" data-sky="1.45">
+        <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_50%,rgba(255,200,97,.12),transparent_70%)]" />
         <div className="relative mx-auto max-w-2xl px-4">
           <Ornament />
           <h2 className="h-display mb-4 mt-4 text-[clamp(2.4rem,6vw,4.4rem)] leading-[1.02]">{T(L.cta.title)}</h2>

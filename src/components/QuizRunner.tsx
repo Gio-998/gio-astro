@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { ResultReveal } from "./reveal/ResultReveal";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useContent, useHref } from "@/lib/content-context";
@@ -54,6 +55,7 @@ export function QuizRunner({ id }: { id: AnyQuizId }) {
     return (
       <div className="relative">
         <Celebration />
+        <ResultReveal eyebrow={U.unlocked} title={def.title} subtitle={def.unlocks} emblem={String(id)} />
         <div className="relative mb-8 text-center">
           <div className="pop relative mx-auto mb-4 grid h-32 w-32 place-items-center">
             <div className="absolute inset-0 animate-pulse-glow rounded-full bg-gold/30 blur-2xl" />

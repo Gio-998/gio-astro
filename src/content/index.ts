@@ -13,9 +13,10 @@ import { book } from "./en/book";
 import { lensInfo, lensUi } from "./en/lens";
 import { landing } from "./en/landing";
 import { enExtra } from "./en/extra";
+import { sky } from "./en/sky";
 import { systems } from "./en/systems";
 
-const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui, ...enExtra, systems };
+const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui, sky, ...enExtra, systems };
 export type Content = typeof en;
 
 import { mk as mkPartial } from "./mk";

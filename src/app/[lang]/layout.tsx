@@ -1,8 +1,8 @@
 import { PrintKit } from "@/components/PrintKit";
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { Cormorant_Garamond, Inter, Cinzel } from "next/font/google";
-import { Starfield } from "@/components/art/Starfield";
+import { Cormorant_Garamond, Inter, Unbounded } from "next/font/google";
+import { LivingSky } from "@/components/sky/LivingSky";
 import { SvgDefs } from "@/components/art/SvgDefs";
 import "../globals.css";
 import { LOCALES, isLocale, getContent } from "@/content";
@@ -17,7 +17,8 @@ import { LangSuggest } from "@/components/LangSuggest";
 import { FeedbackButton, UsageBoot } from "@/components/admin/Feedback";
 
 const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
-const caps = Cinzel({ subsets: ["latin", "latin-ext"], weight: ["500", "600"], variable: "--font-cinzel" });
+// Unbounded: variable, Cyrillic-capable display face for caps, numerals and kinetic headlines (Cinzel had no Cyrillic).
+const caps = Unbounded({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-unbounded", display: "swap" });
 const sans = Inter({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-inter" });
 
 export const dynamicParams = false;
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     ...localizedMeta(lang, "/", { title: `${c.site.brand} · ${c.site.tagline}`, description: c.site.description, siteName: c.site.brand }),
   };
 }
-export const viewport: Viewport = { themeColor: "#1c1645", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#0e0b26", width: "device-width", initialScale: 1 };
 
 export default async function LangLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
@@ -46,11 +47,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
         <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}"}</style></noscript>
         <SvgDefs />
         <ContentProvider locale={lang}>
-          <div className="pointer-events-none fixed inset-0 -z-10" aria-hidden>
-            <Starfield density={0.00009} shooting={false} />
-            <div className="absolute -left-40 top-1/3 h-[520px] w-[520px] rounded-full bg-violet/20 blur-[120px] animate-pulse-glow" />
-            <div className="absolute -right-40 bottom-0 h-[480px] w-[480px] rounded-full bg-rose/10 blur-[120px] animate-pulse-glow [animation-delay:2s]" />
-          </div>
+          <LivingSky />
           <PersonalTheme />
           <AccountBoot />
           <UsageBoot />
