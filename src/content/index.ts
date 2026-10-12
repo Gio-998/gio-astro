@@ -13,12 +13,14 @@ import { book } from "./en/book";
 import { lensInfo, lensUi } from "./en/lens";
 import { landing } from "./en/landing";
 import { enExtra } from "./en/extra";
+import { systems } from "./en/systems";
 
-const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui, ...enExtra };
+const en = { astro, chinese, nums, psych, vedic, quizzes, compat, daily, site, deep, book, lensInfo, lensUi, landing, ui, ...enExtra, systems };
 export type Content = typeof en;
 
 import { mk as mkPartial } from "./mk";
 import { mkExtra } from "./mk/extra";
+import { systems as mkSystems } from "./mk/systems";
 
 type DeepPartial<T> = T extends (...a: never[]) => unknown ? T : T extends readonly unknown[] ? T : T extends object ? { [K in keyof T]?: DeepPartial<T[K]> } : T;
 /** Override objects key-by-key; functions, arrays and primitives replace. Untranslated keys keep the English text. */
@@ -29,7 +31,7 @@ function deepMerge<T>(base: T, over: DeepPartial<T> | undefined): T {
   for (const [k, v] of Object.entries(over as Record<string, unknown>)) out[k] = deepMerge((base as Record<string, unknown>)[k], v as never);
   return out as T;
 }
-const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra } as DeepPartial<Content>);
+const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: mkSystems } as DeepPartial<Content>);
 
 /** Add a locale by creating src/content/<code>/* (any subset) and registering it here. */
 export const LOCALES = ["en", "mk"] as const;

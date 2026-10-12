@@ -97,7 +97,7 @@ export function Footer() {
     ...(locked ? [{ t: F.discover, l: [["/quizzes/", F.quizzes], ["/learn/", c.site.nav.learn]] }] : [
     { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/today/", F.today], ["/quizzes/", F.quizzes], ["/play/", playFor(locale).brand]] },
     { t: F.rel, l: [["/match/", F.match], ["/bond/", F.bond], ["/people/", F.people]] }]),
-    { t: F.trust, l: [["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/premium/", F.extras], ["/credits/", c.site.footer.credits]] },
+    { t: F.trust, l: [["/how-it-works/", c.systems.how.link], ["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/premium/", F.extras], ["/credits/", c.site.footer.credits]] },
   ];
   return (
     <footer className="relative mt-20 overflow-hidden border-t border-white/10 bg-gradient-to-b from-transparent to-ink/80">

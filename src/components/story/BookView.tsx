@@ -5,6 +5,7 @@ import type { Book } from "@/story/types";
 import { useContent, useHref } from "@/lib/content-context";
 import { quizDefs } from "@/lib/quiz-defs";
 import { Blocks } from "./Blocks";
+import { ChapterOpener } from "../systems/VoiceLines";
 import { SignArt } from "../art/SignArt";
 import { Emblem } from "../art/Emblem";
 import { Reveal } from "../art/Reveal";
@@ -63,6 +64,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
         </div>
       </Reveal>
       <div className="reading">
+        <ChapterOpener id={ch.id} />
         <Blocks blocks={ch.blocks} forId={forId} />
         {!ch.locked && ch.missing.length > 0 && (
           <p className="partly no-print">✧ {B.partly(ch.missing.map((q) => defs[q].title).join(" + "))} {ch.missing.map((q) => <Link key={q} className="ml-1 underline" href={h(`/quiz/${q}/${forId !== "me" ? `?for=${forId}` : ""}`)}>{defs[q].title} →</Link>)}</p>

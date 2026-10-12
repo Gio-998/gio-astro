@@ -118,3 +118,29 @@ describe("computeSystems on a full profile", () => {
     expect(s.chiron?.house).not.toBeNull();
   });
 });
+
+import { pairExtras } from "../src/engine/systems/pair";
+import { profileSummary, bookOpeners, bondOpeners, dayLines } from "../src/story/voice";
+import { buildSystemCards } from "../src/story/systems";
+import { contents } from "../src/content";
+describe("Pair extras, voice layer and cards", () => {
+  const P = (date: string, time: string | null, name: string) => buildProfile({ date, time, place: { name: "Skopje", lat: 41.9981, lon: 21.4254, tz: "Europe/Skopje" }, name });
+  const a = P("1998-05-06", "10:30", "Gjorgji Delev"), b = P("1997-11-20", null, "Ana Petrova");
+  const sa = computeSystems(a, { firstName: "Goce" }), sb = computeSystems(b, { firstName: "Ana" });
+  it("pair extras are bounded and deterministic", () => { const x = pairExtras(a, sa, b, sb); expect(x.harmony).toBeGreaterThanOrEqual(20); expect(x.spark).toBeLessThanOrEqual(95); expect(pairExtras(a, sa, b, sb)).toEqual(x); });
+  for (const loc of ["en", "mk"] as const) {
+    const c = contents[loc];
+    it(`[${loc}] every voice line carries at least one why`, () => {
+      const lines = [...profileSummary({ c, p: a, sys: sa, name: "Goce", placeName: "Skopje" }), ...Object.values(bookOpeners({ c, p: a, sys: sa, name: "Goce" }, "x")), ...Object.values(bondOpeners({ c, p: a, sys: sa, name: "Goce" }, { c, p: b, sys: sb, name: "Ana" })),
+        ...dayLines({ c, p: a, sys: sa, name: "Goce", aura: { weather: "stormy" } }, { bio: { physical: 90, emotional: -90, intellectual: 0, critical: [] }, feast: "gjurgjovden", isNameDay: true, personalDay: 3 })];
+      expect(lines.length).toBeGreaterThan(5);
+      for (const l of lines) { expect(l.why.filter(Boolean).length).toBeGreaterThan(0); expect(l.text).not.toMatch(/undefined|NaN|\[object/); }
+      const summary = profileSummary({ c, p: a, sys: sa, name: "Goce", placeName: "Skopje" });
+      expect(summary.filter((l) => l.text.includes("Goce")).length).toBe(1);
+    });
+    it(`[${loc}] every system card builds with text`, () => {
+      const cards = buildSystemCards(b, sb, c, { placeName: "Skopje", firstName: "Ana", locale: loc, today: new Date(2026, 9, 12) });
+      for (const [k, card] of Object.entries(cards)) { expect(card, k).not.toBeNull(); expect(card!.value.length).toBeGreaterThan(0); expect(card!.line).not.toMatch(/undefined|NaN/); expect(JSON.stringify(card!.blocks)).not.toMatch(/undefined|NaN/); }
+    });
+  }
+});

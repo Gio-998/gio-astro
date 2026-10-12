@@ -27,6 +27,8 @@ import { Expand, GlanceHead } from "./glance/Expand";
 import { useGlance } from "./glance/text";
 import { FitCheck, BigFiveSourceNote } from "./FitCheck";
 import { PrecisionSection } from "./PrecisionResult";
+import { VoiceSummary } from "./systems/VoiceSummary";
+import { SystemsSection } from "./systems/SystemsSection";
 
 const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
 function MoreLink({ k }: { k: string; pid?: string }) {
@@ -301,6 +303,8 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         </div>
       </div>
 
+      <VoiceSummary person={person} profile={profile} />
+
       {/* Aura: symbolic visual from palette + attunement answers */}
       <div className="card mt-4 grid items-center gap-4 overflow-hidden sm:grid-cols-[minmax(0,280px)_1fr]">
         <div className="relative mx-auto h-72 w-full max-w-[280px]"><Aura data-aura className="h-full w-full" {...auraOf(person)} label={c.ui.ritual.auraLabel(person.name)} /></div>
@@ -423,6 +427,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         </Section>
       ))}
       <PrecisionSection person={person} profile={profile} />
+      <SystemsSection person={person} profile={profile} isMe={isMe} />
       <LensSheet k={sheet} profile={profile} personId={isMe ? undefined : person.id} personName={person.name} onClose={closeSheet} />
     </div>
     </LensSheetCtx.Provider>

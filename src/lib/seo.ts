@@ -14,7 +14,7 @@ export const LOCALE_META: Record<(typeof LOCALES)[number], { hreflang: string; o
 /** Private beta flag (accounts are invite-only while on). */
 export const betaOn = process.env.NEXT_PUBLIC_BETA !== "0";
 /** Pages anyone can read during the beta: indexable now. Gated app pages become indexable when the beta ends. */
-export const PUBLIC_PATHS = ["/", "/learn/", "/quizzes/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", "/blog/"];
+export const PUBLIC_PATHS = ["/", "/learn/", "/how-it-works/", "/quizzes/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", "/blog/"];
 /** Public content sections (daily sign pages, blog articles): always indexable. */
 export const PUBLIC_PREFIXES = ["/daily/", "/blog/"];
 /** Gated during beta, public tools afterwards. */
