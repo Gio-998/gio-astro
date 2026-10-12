@@ -14,7 +14,7 @@ import { TrustStrip } from "../nav/Trust";
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
 const PUBLIC = ["", "privacy", "terms", "promise", "learn", "credits", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
 const routeOf = (path: string) => path.replace(/^\/(en|mk)(\/|$)/, "").replace(/\/$/, "");
-export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout"); };
+export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout") || /^(daily|blog)(\/|$)/.test(r); };
 
 /** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
 export function useBetaLocked(): boolean {
