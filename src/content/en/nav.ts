@@ -2,7 +2,6 @@
 export const nav = {
   more: "More", menu: "Menu", close: "Close", account: "Account", language: "Language",
   trust: [
-    { icon: "🤝", text: "No tricks", href: "/promise/" },
     { icon: "🔒", text: "Private by default", href: "/privacy/" },
     { icon: "✦", text: "Free full results", href: "/promise/" },
     { icon: "↺", text: "Cancel anytime", href: "/promise/" },

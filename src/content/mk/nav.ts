@@ -3,7 +3,6 @@ import type { Nav } from "../en/nav";
 export const nav: Nav = {
   more: "Повеќе", menu: "Мени", close: "Затвори", account: "Сметка", language: "Јазик",
   trust: [
-    { icon: "🤝", text: "Без трикови", href: "/promise/" },
     { icon: "🔒", text: "Приватно по основа", href: "/privacy/" },
     { icon: "✦", text: "Целосни резултати бесплатно", href: "/promise/" },
     { icon: "↺", text: "Откажи кога сакаш", href: "/promise/" },
