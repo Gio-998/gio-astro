@@ -76,7 +76,10 @@ function SignInForm() {
   const go = async (fn: () => Promise<void>) => {
     setErr(""); setInfo("");
     if (cap.needed) { setErr(A.captchaNeeded); return; }
-    setBusy(true); try { await fn(); } catch (e) { setErr(A.errors[errKey(e)] ?? A.errors.generic); } finally { setBusy(false); cap.reset(); }
+    setBusy(true); try { await fn(); } catch (e) {
+      const k = errKey(e); const o = e as { code?: string; message?: string };
+      setErr((A.errors[k] ?? A.errors.generic) + (process.env.NODE_ENV === "development" ? ` [${o?.code ?? k}: ${o?.message ?? ""}]` : ""));
+    } finally { setBusy(false); cap.reset(); }
   };
   const checkConsent = () => { if (needConsent && !(cons.terms && cons.data)) { setErr(A.consentNeeded); return false; } return true; };
   const toVerify = (m: Mode) => { sessionStorage.setItem(PENDING_EMAIL, email.trim()); router.push(`${h("/account/verify")}?m=${m}&email=${encodeURIComponent(email.trim())}`); };
