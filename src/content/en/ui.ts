@@ -384,7 +384,7 @@ export const auth = {
     invalid_credentials: "That email and password don't match.", email_not_confirmed: "Please confirm your email first: enter the code we sent.",
     otp_expired: "That code is not right or has expired. Check the digits, or send a new one.", invalid_otp: "That code isn't right. Check the digits and try again.",
     over_email_send_rate_limit: "Too many emails were sent just now. Please wait a minute and try again.", over_request_rate_limit: "Too many attempts. Please wait a minute.",
-    user_already_exists: "An account with this email already exists: sign in instead.", weak_password: "Please choose a stronger password (at least 8 characters).",
+    user_already_exists: "An account with this email already exists. Sign in instead.", weak_password: "Please choose a stronger password (at least 8 characters).",
     email_address_invalid: "That email address doesn't look right.", same_password: "Choose a password different from the old one.",
     invite_only: "We're in private beta, so only invited emails can create an account for now. Join the waitlist and we'll let you in soon.",
     network: "Can't reach the server. Check your connection.", generic: "Something went wrong. Please try again.",
