@@ -127,7 +127,7 @@ export function BetaAdmin() {
   if (!isAdmin) return <div className="card text-dim" data-testid="not-admin">{B.notAdmin}</div>;
   return (
     <div className="space-y-4" data-testid="beta-admin">
-      <h1 className="h-display text-4xl text-aurora">{B.adminTitle}</h1>
+      <div className="flex flex-wrap items-center justify-between gap-3"><h1 className="h-display text-4xl text-aurora">{B.adminTitle}</h1><Link className="btn-ghost !py-2 text-sm" href={h("/admin/emails/")} data-testid="emails-link">✉ {B.emailsLink}</Link></div>
       <div className="card space-y-2">
         <label className="label">{B.addInvites}</label>
         <textarea className="input h-28 font-mono text-sm" value={text} onChange={(e) => setText(e.target.value)} placeholder={"ana@example.com\nmarko@example.com"} />
