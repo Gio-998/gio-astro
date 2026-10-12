@@ -9,7 +9,7 @@ import { SKUS, eur, getProvider, isSku, skusOf, yearlySavePct, type Sku } from "
 import { Celebration } from "../art/Celebration";
 import { Check, SheetSelect } from "../controls";
 import { useAccess, addDemoGrant } from "./access";
-import { usePremiumText, EarlyAccess, DemoBadge, Eur, TrustStrip } from "./bits";
+import { usePremiumText, EarlyAccess, DemoBadge, Eur } from "./bits";
 
 const COUNTRIES = ["MK", "SI", "EU", "XX"] as const;
 const COUNTRY_LABEL: Record<string, Record<(typeof COUNTRIES)[number], string>> = {
@@ -118,7 +118,6 @@ export function CheckoutPage() {
         <Link className="btn-primary px-8 py-3" href={done()} data-testid="open-unlocked">{C.open} →</Link>
       </div>}
 
-      {step < 3 && <TrustStrip />}
-    </div>
+          </div>
   );
 }

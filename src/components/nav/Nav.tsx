@@ -7,7 +7,6 @@ import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { nav as en, type NavGroupKey } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
 import { Emblem, type EmblemId } from "../art/Emblem";
-import { TrustStrip } from "./Trust";
 
 export const useNav = () => (useContent().locale === "mk" ? mk : en);
 type Item = { href: string; icon: EmblemId; title: string; desc: string };
@@ -142,7 +141,6 @@ export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose
             <div className="grid grid-cols-1 gap-1 min-[420px]:grid-cols-2">{g.items.map((it) => <ItemLink key={it.href} it={it} compact />)}</div>
           </section>
         ))}
-        <TrustStrip className="mt-2" />
       </div>
     </div>
   );

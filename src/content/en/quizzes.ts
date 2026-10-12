@@ -34,12 +34,18 @@ export const nine: Record<string, string> = {
 };
 export const nineOrder = ["t1", "t5", "t9", "t2", "t6", "t3", "t7", "t4", "t8", "t1b", "t5b", "t9b", "t2b", "t6b", "t3b", "t7b", "t4b", "t8b"];
 
-export const careOptions: Record<string, [string, string]> = {
-  words: ["Hearing 'I appreciate you' for something specific", "A heartfelt message out of the blue"],
-  time: ["An evening together with phones away", "A long walk where we really talk"],
-  gifts: ["A small surprise that shows they thought of me", "A souvenir they picked just for me"],
-  help: ["Them taking a task off my plate", "Coming home to find something already fixed"],
-  touch: ["A long, warm hug", "Sitting close, holding hands"],
+/** One scene per style pair. Keys are "a-b" in CARE order; [option for a, option for b]. */
+export const careScenes: Record<string, { q: string; a: string; b: string }> = {
+  "words-time": { q: "It's your birthday. Which part stays with you?", a: "A card where they wrote what they love about you", b: "A whole day together, just the two of you" },
+  "words-gifts": { q: "You just finished a hard week. What lands best?", a: "A voice note saying they're proud of you", b: "Your favorite snack waiting on your desk" },
+  "words-help": { q: "Exam or deadline tomorrow. What helps more?", a: "A text: 'You've got this, I believe in you'", b: "They cook dinner so you can keep working" },
+  "words-touch": { q: "You had a rough talk with your boss. Back home you want…", a: "To hear 'you handled that so well'", b: "A long hug before anyone says a word" },
+  "time-gifts": { q: "A lazy Sunday. Which would make it?", a: "Breakfast together, no rush, no screens", b: "A book they picked because it made them think of you" },
+  "time-help": { q: "Moving day. Which one feels like love?", a: "They stay late just to sit with you among the boxes", b: "They show up with tape and assemble the bed" },
+  "time-touch": { q: "Movie night. The best part is…", a: "That they cleared the whole evening for you", b: "Being curled up together under one blanket" },
+  "gifts-help": { q: "You're sick in bed. What feels more caring?", a: "They bring you tea and a little comfort package", b: "They walk your dog and do the dishes" },
+  "gifts-touch": { q: "They come back from a trip. Which greeting wins?", a: "A tiny souvenir picked just for you", b: "Running into their arms at the door" },
+  "help-touch": { q: "A stressful morning before work. What saves it?", a: "They iron your shirt and make your coffee", b: "A quiet hand on your back as you rush around" },
 };
 export const careGive: string = "And how do YOU most naturally show care?";
 

@@ -16,7 +16,7 @@ import { QuizResultView } from "./ProfileView";
 import { profileOf } from "@/lib/profile";
 import { track } from "@/lib/track";
 import { CertaintyCard, useAnswerTiming } from "./play/timing";
-import { MethodLink, TrustStrip } from "./nav/Trust";
+import { MethodLink } from "./nav/Trust";
 
 export function QuizRunner({ id }: { id: AnyQuizId }) {
   const { c } = useContent(); const h = useHref(); const U = c.ui.quiz;
@@ -66,7 +66,7 @@ export function QuizRunner({ id }: { id: AnyQuizId }) {
         </div>
         {isPrecisionQuiz(id) ? <PrecisionResultView id={id} person={fresh} profile={profileOf(fresh)} /> : <QuizResultView id={id} profile={profileOf(fresh)} pid={person.id} />}
         <CertaintyCard t={fresh.quiz.timing?.[def.id]} texts={Object.fromEntries(items.map((x) => [x.id, x.text.replace("{name}", person.name)]))} />
-        <div className="mt-3 flex flex-col items-center gap-3"><MethodLink /><TrustStrip center /></div>
+        <div className="mt-3 flex flex-col items-center gap-3"><MethodLink /></div>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link className="btn-primary" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>{U.seeProfile}</Link>
           <Link className="btn-ghost" href={h("/quizzes/")}>{U.nextQuiz}</Link>

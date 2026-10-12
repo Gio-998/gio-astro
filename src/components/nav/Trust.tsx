@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useHref } from "@/lib/content-context";
 import { useNav } from "./Nav";
 
-/** Small, calm trust strip for key CTAs: no tricks, private by default, free results, cancel anytime. */
+/** Legacy trust strip, no longer rendered anywhere. */
 export function TrustStrip({ className = "", center = false }: { className?: string; center?: boolean }) {
   const N = useNav(); const h = useHref();
   return (

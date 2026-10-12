@@ -1,7 +1,7 @@
 import type { Content } from "@/content";
 import type { QuizResults } from "@/engine/profile";
 import { BIG_FIVE_ITEMS, scoreBigFive } from "@/engine/bigfive";
-import { ATTACH_ITEMS, scoreAttachment, scoreNine, CARE_PAIRS, CARE, scoreCare, DOSHA_ITEMS, scoreDosha, EXPLORER_ITEMS, STANCE_ITEMS, scoreExplorer } from "@/engine/quizzes";
+import { ATTACH_ITEMS, scoreAttachment, scoreNine, CARE_PAIRS, CARE_ORDER, CARE, scoreCare, DOSHA_ITEMS, scoreDosha, EXPLORER_ITEMS, STANCE_ITEMS, scoreExplorer } from "@/engine/quizzes";
 import { SHADOW_ORDER, scoreShadow } from "@/engine/shadow";
 import type { Evidence } from "@/engine/compat";
 import { FOUR_LETTER_ITEMS, scoreFourLetter } from "@/engine/fourletter-quiz";
@@ -68,7 +68,11 @@ export function quizDefs(c: Content): Record<AnyQuizId, QuizDef> {
       id: "care", title: q.meta["care"].title, tagline: q.meta["care"].tagline, minutes: 1, evidence: "popular", resultKey: "care",
       intro: q.meta["care"].intro, unlocks: q.meta["care"].unlocks,
       items: [
-        ...CARE_PAIRS.map(([x, y], i) => ({ kind: "choice" as const, id: `p${i}`, text: c.ui.quiz.whichMore, options: [q.careOptions[x][i % 2], q.careOptions[y][(i + 1) % 2]] })),
+        ...CARE_ORDER.map((i) => {
+          const [x, y] = CARE_PAIRS[i]; const s = q.careScenes[`${x}-${y}`];
+          // ids stay p{pairIndex} so scoring and saved answers are unchanged; options as [x, y] map to 0/1.
+          return { kind: "choice" as const, id: `p${i}`, text: s.q, options: [s.a, s.b] };
+        }),
         { kind: "choice" as const, id: "give", text: q.careGive, options: CARE.map((k) => c.psych.care[k].name) },
       ],
       score: (a) => ({ care: scoreCare(a) }), note: c.psych.careNote,

@@ -42,7 +42,7 @@ export const nav: Nav = {
         { href: "/blog/", icon: "palette", title: "Блог", desc: "Приказни за знаци, љубов и внатрешниот живот" },
         { href: "/learn/", icon: "number", title: "Како функционира", desc: "Методи, извори и искреност" },
         { href: "/premium/", icon: "vedic", title: "Премиум", desc: "Подлабоки извештаи, наскоро" },
-        { href: "/promise/", icon: "temperament", title: "Нашето ветување", desc: "Без трикови, без лажна итност" },
+        { href: "/promise/", icon: "temperament", title: "Нашето ветување", desc: "Јасни цени, искрени резултати" },
       ],
     },
   },

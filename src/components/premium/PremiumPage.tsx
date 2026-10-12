@@ -8,7 +8,7 @@ import { Reveal } from "../art/Reveal";
 import { ArtCard } from "../art/ArtCard";
 import { useAccess } from "./access";
 import { MkdLine } from "./Mkd";
-import { usePremiumText, BuyButton, DemoBadge, DemoControls, Eur, TrustStrip } from "./bits";
+import { usePremiumText, BuyButton, DemoBadge, DemoControls, Eur } from "./bits";
 import { LOOK } from "./text";
 
 export const fromPrice = (p: ProductId) => Math.min(...skusOf(p).map((s) => SKUS[s].cents));
@@ -55,7 +55,6 @@ export function PremiumPage() {
         </section>
       </div>
 
-      <TrustStrip />
 
       {/* Plans */}
       <section id="plans" className="scroll-mt-24">

@@ -40,6 +40,8 @@ export const CARE = ["words", "time", "gifts", "help", "touch"] as const;
 export type Care = (typeof CARE)[number];
 export const CARE_PAIRS: [Care, Care][] = [];
 for (let i = 0; i < CARE.length; i++) for (let j = i + 1; j < CARE.length; j++) CARE_PAIRS.push([CARE[i], CARE[j]]);
+/** Display order of CARE_PAIRS indices: no style appears in two questions in a row. */
+export const CARE_ORDER = [0, 7, 3, 4, 9, 1, 5, 8, 2, 6];
 export interface CareResult { receive: Record<Care, number>; topReceive: Care[]; give: Care }
 /** answers: "p0".."p9" → 0 (first option) | 1 (second); "give" → index into CARE. */
 export function scoreCare(ans: Record<string, number>): CareResult {

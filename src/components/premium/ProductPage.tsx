@@ -5,7 +5,7 @@ import { useContent, useHref } from "@/lib/content-context";
 import { SKUS, skusOf, type ProductId, type Sku } from "@/lib/payments";
 import { ArtCard } from "../art/ArtCard";
 import { Reveal } from "../art/Reveal";
-import { usePremiumText, BuyButton, Eur, TrustStrip, DemoBadge } from "./bits";
+import { usePremiumText, BuyButton, Eur, DemoBadge } from "./bits";
 import { AdminDemoBar, OfferCard } from "./PremiumPage";
 import { useAccess } from "./access";
 import { LOOK } from "./text";
@@ -37,7 +37,6 @@ export function ProductPage({ id }: { id: Exclude<ProductId, "premium"> }) {
         </section>
       </div>
 
-      <TrustStrip />
 
       <section className="mx-auto max-w-2xl space-y-4 text-[1.05rem] leading-relaxed text-mist/90">
         {o.pitch.map((p) => <p key={p.slice(0, 24)}>{p}</p>)}

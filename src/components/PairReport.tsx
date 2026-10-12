@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { usePrinting } from "@/lib/print";
 import type { PairReport as Report, LensResult, SynAspect } from "@/engine/compat";
 import { WEIGHTS } from "@/engine/compat";
 import { PairPlay } from "./play/PairPlay";
@@ -13,7 +14,7 @@ import type { GunaMilan } from "@/engine/vedic";
 import { Celebration } from "./art/Celebration";
 import { SignArt } from "./art/SignArt";
 import { Expand } from "./glance/Expand";
-import { MethodLink, TrustStrip } from "./nav/Trust";
+import { MethodLink } from "./nav/Trust";
 import { useGlance } from "./glance/text";
 
 function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile; na: string; nb: string }) {
@@ -102,7 +103,7 @@ function topTraits(b: Record<string, number>, P: ReturnType<typeof useContent>["
 export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Profile; B: Profile; na: string; nb: string }) {
   const { c } = useContent(); const C = c.compat; const U = c.ui.pair; const G = useGlance();
   const [evOnly, setEvOnly] = useState(false);
-  const [open, setOpen] = useState<string | null>(null);
+  const [open, setOpen] = useState<string | null>(null); const printing = usePrinting();
   const band = C.bands[report.band], arch = C.archetypes[report.archetype];
   const shown = evOnly ? report.lenses.filter((l) => l.evidence === "research") : report.lenses;
   const blended = [A.palette[0], A.palette[1], B.palette[1], B.palette[0], A.palette[4]];
@@ -173,7 +174,7 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
                 <div className="mb-2 flex flex-wrap items-center justify-between gap-2"><span className="font-semibold">{C.lenses[l.id].name}</span><span className="flex gap-2"><EvidenceBadge e={l.evidence} />{l.confidence < 1 && <span className="chip">{U.confidence(Math.round(l.confidence * 100))}</span>}</span></div>
                 <div className="grid grid-cols-2 gap-4"><Bar value={((l.harmony - 45) / 55) * 100} label={U.harmony} right="" color="bg-sage" /><Bar value={((l.spark - 45) / 55) * 100} label={U.spark} right="" color="bg-rose" /></div>
               </button>
-              {open === l.id && <div className="border-t border-white/10 p-4"><p className="mb-2 text-xs text-dim">{C.lenses[l.id].short} · {U.harmony} {l.harmony} · {U.spark} {l.spark}</p><LensDetail l={l} A={A} B={B} na={na} nb={nb} /></div>}
+              {(open === l.id || printing) && <div className="border-t border-white/10 p-4"><p className="mb-2 text-xs text-dim">{C.lenses[l.id].short} · {U.harmony} {l.harmony} · {U.spark} {l.spark}</p><LensDetail l={l} A={A} B={B} na={na} nb={nb} /></div>}
             </div>
           ))}
         </div>
@@ -184,7 +185,7 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
           </div>
         )}
       </div>
-      <div className="flex flex-col items-center gap-2"><MethodLink /><TrustStrip center /></div>
+      <div className="flex flex-col items-center gap-2"><MethodLink /></div>
       <p className="text-center text-xs text-dim">{C.pairCopy.disclaimer}</p>
     </div>
   );

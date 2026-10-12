@@ -171,19 +171,71 @@ details > summary::-webkit-details-marker { display: none; }
 .toc-active { background: rgba(246,207,122,.12); color: #f6cf7a; }
 .toc-num { font-family: var(--font-caps), Georgia, serif; font-size: .75rem; color: #f6cf7a; opacity: .8; }
 
+.print-only { display: none; }
+@page { size: A4; margin: 12mm 11mm 14mm; background: #120f2e;
+  @bottom-center { content: "Horoscop  \2726  horoscop.si"; color: #c9a65e; font-size: 7.5pt; letter-spacing: .18em; font-family: Georgia, serif; }
+  @bottom-right { content: counter(page); color: #8f86b8; font-size: 7.5pt; font-family: Georgia, serif; }
+}
 @media print {
-  @page { margin: 16mm 14mm; }
-  html, body { background: #fff !important; color: #1d1838 !important; }
-  header.sticky, nav.fixed, footer, .no-print, [aria-hidden="true"].fixed, .pointer-events-none.fixed { display: none !important; }
-  main { max-width: none !important; padding: 0 !important; }
-  .reading-surface { background: #fff !important; box-shadow: none !important; color: #1d1838 !important; padding: 0 !important; }
-  .print-cover { border: none !important; box-shadow: none !important; color: #1d1838 !important; page-break-after: always; }
-  .print-cover .text-aurora { color: #6a3f8f !important; background: none !important; -webkit-text-fill-color: #6a3f8f; }
-  .print-cover .chip { color: #1d1838 !important; border-color: #ccc !important; }
-  .chapter { page-break-before: always; }
-  .reading .rlist, .reading .facet, .reading .callout, .reading .deepdive { break-inside: avoid; background: #faf6f0 !important; }
-  [data-reveal] { opacity: 1 !important; transform: none !important; filter: none !important; }
-  .reading { font-size: 12pt; }
+  /* Same twilight-violet and gold look as the site, painted edge to edge. */
+  html, body, * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  html, body { background: #120f2e !important; color: #f5f1ff !important; }
+  body { background-image: linear-gradient(180deg, #1d1650 0%, #120f2e 40%, #171338 100%) !important; background-attachment: scroll !important; }
+  .print-only { display: flex !important; }
+  .print-brand { align-items: center; justify-content: space-between; margin: 0 0 6mm; padding: 0 0 3mm; border-bottom: 1px solid rgba(201,166,94,.45); color: #f6cf7a; }
+  .print-brand-name { font-family: var(--font-display), Georgia, serif; font-size: 15pt; letter-spacing: .04em; }
+  .print-brand-meta { font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: #c9b8f0; }
+
+  /* Hide app chrome and anything you can click or type into. */
+  header, header.sticky, nav, footer, .no-print, [aria-hidden="true"].fixed, .pointer-events-none.fixed, .fixed, .sticky,
+  button, input, select, textarea, [role="switch"], [role="tablist"], [role="dialog"], form, .btn-primary, .btn-ghost,
+  a.btn-primary, a.btn-ghost, [data-testid*="picker"], [data-testid*="toggle"], [data-testid="feedback-button"] { display: none !important; }
+  /* Buttons that wrap content (lens rows, play sliders) keep their content. */
+  button[aria-expanded], button.w-full { display: block !important; pointer-events: none; }
+  button[aria-expanded].no-print { display: none !important; }
+
+  main { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+  main > * + * { margin-top: 0; }
+  [data-reveal], .animate-pulse-glow, [class*="animate-"] { opacity: 1 !important; transform: none !important; filter: none !important; animation: none !important; }
+  .min-h-screen, .min-h-\[100svh\], .min-h-\[100dvh\], [class*="min-h-[8"], [class*="min-h-[9"], [class*="min-h-[7"], [class*="min-h-[6"] { min-height: 0 !important; }
+  .grid-rows-\[0fr\] { grid-template-rows: 1fr !important; opacity: 1 !important; }
+  .overflow-hidden { overflow: visible !important; }
+  .line-clamp-2, .line-clamp-3, .line-clamp-4 { -webkit-line-clamp: unset !important; display: block !important; }
+  .blur-\[120px\], [class*="blur-"] { filter: none !important; }
+  [class*="backdrop-blur"] { backdrop-filter: none !important; }
+
+  /* Tighter rhythm so fewer pages print. */
+  .py-20, .py-16, .py-24 { padding-top: 6mm !important; padding-bottom: 6mm !important; }
+  .mt-16, .mt-20, .mt-24, .my-16, .my-20 { margin-top: 6mm !important; }
+  .mb-16, .mb-20, .mb-24 { margin-bottom: 6mm !important; }
+  .space-y-10 > * + *, .space-y-12 > * + *, .space-y-16 > * + * { margin-top: 5mm !important; }
+  .space-y-6 > * + *, .space-y-8 > * + * { margin-top: 3.5mm !important; }
+  .gap-10, .gap-12 { gap: 5mm !important; }
+
+  /* Cards: dark glass, never cut in half. */
+  .card, .toc-card, .rounded-2xl, .rounded-3xl, [class*="rounded-[2"], .reading .rlist, .reading .facet, .reading .callout, .reading .deepdive, figure, svg, img, canvas {
+    break-inside: avoid; page-break-inside: avoid; }
+  .card { background: linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.03)) !important; border: 1px solid rgba(201,166,94,.28) !important; box-shadow: none !important; padding: 4.5mm 5mm !important; }
+  .card .card { break-inside: auto; }
+  h1, h2, h3, h4, .h-display { color: #f6cf7a !important; break-after: avoid; page-break-after: avoid; -webkit-text-fill-color: currentColor; }
+  h1, h2, h3 { font-family: var(--font-display), Georgia, serif; }
+  h1 { font-size: 24pt !important; line-height: 1.15 !important; }
+  h2 { font-size: 17pt !important; } h3 { font-size: 14pt !important; }
+  .text-aurora { background: none !important; color: #f6cf7a !important; -webkit-text-fill-color: #f6cf7a !important; }
+  p, li { color: #ece6ff; orphans: 3; widows: 3; }
+  .text-dim, .text-mist\/70, .text-mist\/80 { color: #c9c0e8 !important; }
+  .eyebrow { color: #e9c78a !important; }
+  a { color: #f6cf7a !important; text-decoration: none !important; }
+  .chip { color: #f5f1ff !important; border-color: rgba(201,166,94,.45) !important; background: rgba(255,255,255,.05) !important; }
+
+  /* Book of You / Bond Story: keep the night look instead of paper. */
+  .reading-surface, .book-paper, .paper-surface { background: transparent !important; box-shadow: none !important; color: #ece6ff !important; padding: 0 !important; }
+  .reading { font-size: 11pt; line-height: 1.6; color: #ece6ff !important; }
+  .reading .rlist, .reading .facet, .reading .callout, .reading .deepdive { background: rgba(255,255,255,.05) !important; border-color: rgba(201,166,94,.3) !important; color: #ece6ff !important; }
+  .print-cover { min-height: 250mm; display: flex !important; flex-direction: column; justify-content: center; border: none !important; box-shadow: none !important; break-after: page; page-break-after: always; }
+  .print-cover .chip { color: #f5f1ff !important; }
+  .chapter { break-before: page; page-break-before: always; }
+  .chapter:first-of-type { break-before: auto; }
 }
 
 /* ——— Personal element themes (html[data-theme] set from the user's chart; toggle in profile) ——— */

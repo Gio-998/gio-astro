@@ -1,14 +1,15 @@
 "use client";
 import { useId, useState } from "react";
 import { useGlance } from "./text";
+import { usePrinting } from "@/lib/print";
 
 /** Collapsed details under a one-glance summary. Smooth height via the grid-rows trick. */
 export function Expand({ children, more, less, defaultOpen = false, className = "", testId }: { children: React.ReactNode; more?: string; less?: string; defaultOpen?: boolean; className?: string; testId?: string }) {
-  const G = useGlance(); const [open, setOpen] = useState(defaultOpen); const id = useId();
+  const G = useGlance(); const [openState, setOpen] = useState(defaultOpen); const id = useId(); const printing = usePrinting(); const open = openState || printing;
   return (
     <div className={className}>
       <button type="button" aria-expanded={open} aria-controls={id} onClick={() => setOpen(!open)} data-testid={testId}
-        className="group mt-3 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 text-sm text-mist transition hover:border-gold/50 hover:text-gold">
+        className="no-print group mt-3 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 text-sm text-mist transition hover:border-gold/50 hover:text-gold">
         <span>{open ? (less ?? G.showLess) : (more ?? G.showMore)}</span>
         <span className={`transition-transform duration-300 ${open ? "rotate-180" : ""}`} aria-hidden>⌄</span>
       </button>
