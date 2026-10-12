@@ -180,14 +180,15 @@ details > summary::-webkit-details-marker { display: none; }
   /* Same twilight-violet and gold look as the site, painted edge to edge. */
   html, body, * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   html, body { background: #120f2e !important; color: #f5f1ff !important; }
+  html { font-size: 13px !important; }
   body { background-image: linear-gradient(180deg, #1d1650 0%, #120f2e 40%, #171338 100%) !important; background-attachment: scroll !important; }
   .print-only { display: flex !important; }
-  .print-brand { align-items: center; justify-content: space-between; margin: 0 0 6mm; padding: 0 0 3mm; border-bottom: 1px solid rgba(201,166,94,.45); color: #f6cf7a; }
+  .print-brand { width: 100%; max-width: 100%; box-sizing: border-box; gap: 4mm; align-items: center; justify-content: space-between; margin: 0 0 6mm; padding: 0 0 3mm; border-bottom: 1px solid rgba(201,166,94,.45); color: #f6cf7a; }
   .print-brand-name { font-family: var(--font-display), Georgia, serif; font-size: 15pt; letter-spacing: .04em; }
   .print-brand-meta { font-size: 8pt; letter-spacing: .14em; text-transform: uppercase; color: #c9b8f0; }
 
   /* Hide app chrome and anything you can click or type into. */
-  header, header.sticky, nav, footer, .no-print, [aria-hidden="true"].fixed, .pointer-events-none.fixed, .fixed, .sticky,
+  header:not(.print-cover), nav, footer, .no-print, [aria-hidden="true"].fixed, .pointer-events-none.fixed, .fixed, .sticky,
   button, input, select, textarea, [role="switch"], [role="tablist"], [role="dialog"], form, .btn-primary, .btn-ghost,
   a.btn-primary, a.btn-ghost, [data-testid*="picker"], [data-testid*="toggle"], [data-testid="feedback-button"] { display: none !important; }
   /* Buttons that wrap content (lens rows, play sliders) keep their content. */
@@ -217,6 +218,8 @@ details > summary::-webkit-details-marker { display: none; }
     break-inside: avoid; page-break-inside: avoid; }
   .card { background: linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.03)) !important; border: 1px solid rgba(201,166,94,.28) !important; box-shadow: none !important; padding: 4.5mm 5mm !important; }
   .card .card { break-inside: auto; }
+  .print-split, .card.print-split { break-inside: auto !important; page-break-inside: auto !important; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .card:has(> .label), .card:has(> div > div > .label), .card:has(select), .card:has(input[type="text"]), .card:has(input[type="search"]) { display: none !important; }
   h1, h2, h3, h4, .h-display { color: #f6cf7a !important; break-after: avoid; page-break-after: avoid; -webkit-text-fill-color: currentColor; }
   h1, h2, h3 { font-family: var(--font-display), Georgia, serif; }
   h1 { font-size: 24pt !important; line-height: 1.15 !important; }
@@ -232,10 +235,14 @@ details > summary::-webkit-details-marker { display: none; }
   .reading-surface, .book-paper, .paper-surface { background: transparent !important; box-shadow: none !important; color: #ece6ff !important; padding: 0 !important; }
   .reading { font-size: 11pt; line-height: 1.6; color: #ece6ff !important; }
   .reading .rlist, .reading .facet, .reading .callout, .reading .deepdive { background: rgba(255,255,255,.05) !important; border-color: rgba(201,166,94,.3) !important; color: #ece6ff !important; }
-  .print-cover { min-height: 250mm; display: flex !important; flex-direction: column; justify-content: center; border: none !important; box-shadow: none !important; break-after: page; page-break-after: always; }
+  .print-cover { position: relative; overflow: hidden !important; min-height: 120mm; display: flex !important; flex-direction: column; justify-content: center; padding: 14mm 8mm !important; border: 1px solid rgba(201,166,94,.4) !important; box-shadow: none !important; break-inside: avoid; }
+  .print-cover > .no-print { display: block !important; }
+  .print-cover img { animation: none !important; opacity: .55 !important; }
+  .chapter-head + * { break-before: avoid; }
   .print-cover .chip { color: #f5f1ff !important; }
-  .chapter { break-before: page; page-break-before: always; }
-  .chapter:first-of-type { break-before: auto; }
+  .chapter { break-before: auto; margin-top: 8mm !important; padding-top: 5mm; border-top: 1px solid rgba(201,166,94,.3); }
+  .chapter-head, .chapter header { break-after: avoid-page; page-break-after: avoid; break-inside: avoid; }
+  .chapter > :first-child + * { break-before: avoid-page; }
 }
 
 /* ——— Personal element themes (html[data-theme] set from the user's chart; toggle in profile) ——— */

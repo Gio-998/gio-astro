@@ -42,7 +42,7 @@ export function MatchPage() {
       <PageHero eyebrow={U.eyebrow} img="twinjet" emblem="bond" title={<>{U.titleA}<span className="italic text-aurora">{U.titleB}</span></>}
         sub={U.sub}
         art={report ? <div className="flex items-center"><SignArt sign={report.pa.sun} className="h-28 w-28" /><span className="-mx-4 text-3xl text-rose">♡</span><SignArt sign={report.pb.sun} className="h-28 w-28" /></div> : undefined} />
-      <div className="card mb-6 space-y-3">
+      <div className="no-print card mb-6 space-y-3">
         <div className="grid gap-3 sm:grid-cols-2">
           <div><label className="label">{U.personA}</label>{picker(A?.id ?? "", setA, "a")}</div>
           <div><label className="label">{U.personB}</label>{picker(B?.id ?? "", setB, "b")}</div>

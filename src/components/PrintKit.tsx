@@ -13,7 +13,10 @@ export function PrintKit() {
     setDate(new Intl.DateTimeFormat(locale === "mk" ? "mk-MK" : "en-GB", { day: "numeric", month: "long", year: "numeric" }).format(new Date()));
     const closed = [...document.querySelectorAll("details:not([open])")];
     closed.forEach((d) => d.setAttribute("open", ""));
-    return () => closed.forEach((d) => d.removeAttribute("open"));
+    // Tall blocks may flow across pages; short ones stay whole (see @media print in globals.css).
+    const tall = [...document.querySelectorAll<HTMLElement>(".card, .rounded-2xl, .rounded-3xl, .toc-card")].filter((el) => el.offsetHeight > 650);
+    tall.forEach((el) => el.classList.add("print-split"));
+    return () => { closed.forEach((d) => d.removeAttribute("open")); tall.forEach((el) => el.classList.remove("print-split")); };
   }, [printing, locale]);
   return (
     <div className="print-only print-brand" aria-hidden>
