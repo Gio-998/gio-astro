@@ -12,14 +12,14 @@ import { TrustStrip } from "../nav/Trust";
 
 // Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
-const PUBLIC = ["", "privacy", "terms", "promise", "learn", "credits", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
+const PUBLIC = ["", "reset", "privacy", "terms", "promise", "learn", "credits", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
 const routeOf = (path: string) => path.replace(/^\/(en|mk)(\/|$)/, "").replace(/\/$/, "");
 export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout") || /^(daily|blog)(\/|$)/.test(r); };
 
 /** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
 export function useBetaLocked(): boolean {
   const a = useAccount(); const f = useFlags();
-  return f.private_beta && accountsEnabled && !a.user;
+  return f.private_beta && !f.signups_open && accountsEnabled && !a.user;
 }
 
 /** In private beta, app pages show a compact invite gate to logged-out visitors, inside the normal layout. */
@@ -33,17 +33,17 @@ export function BetaGate({ children }: { children: React.ReactNode }) {
 
 /** Compact gate: log in (invited testers) or join the waitlist. */
 export function BetaLockedCard() {
-  const { c } = useContent(); const B = c.ui.beta; const h = useHref(); const path = usePathname() || "/";
+  const { c } = useContent(); const B = c.ui.beta; const h = useHref(); const path = usePathname() || "/"; const open = useFlags().signups_open;
   const [wl, setWl] = useState(false);
   return (
     <div className="mx-auto my-6 max-w-md overflow-hidden rounded-[28px] border border-white/15 bg-white/[0.05] p-6 text-center shadow-[0_30px_70px_-35px_rgba(139,108,240,.9)] backdrop-blur" data-testid="beta-gate">
       <div className="mx-auto mb-3 h-24 w-20"><Aura className="h-full w-full" colors={["#c9b8ff", "#ffd38a", "#8fd3ff", "#ff9ed2", "#7fe0b0"]} energy={0.5} heart="#ffd27a" label="" /></div>
-      <p className="eyebrow mb-1">✦ {B.lockedEyebrow}</p>
-      <h1 className="h-display mb-2 text-3xl">{B.lockedTitle}</h1>
-      <p className="mb-5 text-sm leading-relaxed text-mist/85">{B.lockedText}</p>
-      <div className="grid gap-2 sm:grid-cols-2">
-        <Link className="btn-primary py-3" href={`${h("/account")}?next=${encodeURIComponent(path)}`} data-testid="beta-signin">{B.login}</Link>
-        <button type="button" className="btn-ghost py-3" onClick={() => setWl(!wl)} aria-expanded={wl} data-testid="beta-join">{B.joinWaitlist}</button>
+      <p className="eyebrow mb-1">✦ {open ? B.openEyebrow : B.lockedEyebrow}</p>
+      <h1 className="h-display mb-2 text-3xl">{open ? B.openTitle : B.lockedTitle}</h1>
+      <p className="mb-5 text-sm leading-relaxed text-mist/85">{open ? B.openText : B.lockedText}</p>
+      <div className={`grid gap-2 ${open ? "" : "sm:grid-cols-2"}`}>
+        <Link className="btn-primary py-3" href={`${h("/account")}?next=${encodeURIComponent(path)}`} data-testid="beta-signin">{open ? B.openCta : B.login}</Link>
+        {!open && <button type="button" className="btn-ghost py-3" onClick={() => setWl(!wl)} aria-expanded={wl} data-testid="beta-join">{B.joinWaitlist}</button>}
       </div>
       {wl && <div className="mt-4 text-left"><Waitlist source="gate" /></div>}
       <TrustStrip className="mt-4" center />

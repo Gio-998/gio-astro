@@ -362,6 +362,13 @@ export const auth = {
   chipOut: "Save across devices", chipIn: "Account",
   eyebrow: "Your account · optional", titleA: "Keep your sky ", titleB: "on every device",
   sub: "Everything works without an account. Sign in to back up your profile, quizzes, people, Bond Checks and journal, and to see them on your phone and laptop.",
+  tabSignup: "Sign up", tabLogin: "Log in", sendLink: "Email me a sign-in link", linkHint: "We'll email you a link. Tap it on this phone or computer and you're in.",
+  passwordRule: "At least 8 characters.", passwordRepeat: "Repeat the password", passwordMismatch: "The two passwords don't match.",
+  usePassword: "Use email and password", useLink: "No password? Get a sign-in link",
+  checkTitle: "Check your email", checkSignup: (email: string) => `We sent a confirmation link to ${email}. Open it and your account is ready.`, checkLink: (email: string) => `We sent a sign-in link to ${email}. Open it on this device to come straight in.`,
+  haveCode: "I got a code", linkProblem: "That link has expired or was opened in another browser. Log in with your email and password, or ask for a new link.",
+  confirmedLogin: "Your email is confirmed. If you opened this on another device, just log in here with your email and password.",
+  setPasswordTitle: "Password", setPasswordHint: "Set one or change it, so you can log in with email and password.",
   tabCode: "Email code", tabPassword: "Password",
   email: "Email", emailPh: "you@example.com", password: "Password", passwordPh: "At least 8 characters", name: "Your name (optional)",
   sendCode: "Email me a 6-digit code", codeHint: "No password needed. We send a one-time code; it also creates your account if you're new.",
@@ -427,6 +434,7 @@ export const ritual = {
 };
 
 export const beta = {
+  openEyebrow: "Free account", openTitle: "Make your free account to open this", openText: "Your profile, readings and matches live in your own account, so they follow you to any phone. It takes a minute: email, password, one confirmation tap.", openCta: "Sign up or log in",
   lockedEyebrow: "Private beta", lockedTitle: "This part opens with an invite", lockedText: "Your profile, readings and matches are for our small group of testers right now. Got an invite? Log in. If not, join the waitlist and we'll make room for you soon.",
   login: "Log in", joinBeta: "Join the beta", joinWaitlist: "Join the waitlist",
   heroNote: "Private beta: invited testers can log in, everyone else can save a spot on the waitlist.",

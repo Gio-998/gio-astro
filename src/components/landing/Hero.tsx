@@ -1,5 +1,4 @@
 "use client";
-import { TrustStrip } from "../nav/Trust";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
@@ -55,7 +54,6 @@ export function Hero() {
               <a href="#waitlist" className="btn-primary px-6 py-3.5 text-center text-base">{B.joinBeta} ✦</a>
               <a href={h("/account/")} className="btn-ghost px-6 py-3.5 text-center text-base">{B.login}</a>
             </div>
-            <p className="mt-3 text-sm text-mist/80">{B.heroNote}</p>
           </motion.div>) : <motion.form onSubmit={go} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
             className="mb-4 flex max-w-xl flex-col gap-2 rounded-[28px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_60px_-20px_rgba(139,108,240,.8)] backdrop-blur-xl sm:flex-row sm:items-center">
             <div className="flex-1 px-3 py-1.5">
@@ -65,10 +63,8 @@ export function Hero() {
             <button className="btn-primary px-6 py-3.5 text-base">{H.reveal}</button>
           </motion.form>}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9 }} className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-dim">
-            {(locked ? B.heroPerks : H.perks).map((p) => <span key={p}>{p}</span>)}
             {!locked && <a href={h("/match/")} className="text-gold underline-offset-4 hover:underline">{H.orMatch}</a>}
           </motion.div>
-          <TrustStrip className="mt-4" />
         </div>
       </motion.div>
       <a href="#discover" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-dim sm:flex" aria-label={H.scrollDown}>
