@@ -10,7 +10,7 @@ import * as daily from "./daily";
 import * as ui from "./ui";
 import { bondUi } from "./deep";
 import { aries, taurus, gemini, cancer } from "./deep/signs-a";
-import { leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces } from "./deep/signs-b";
+import { leo, virgo, libra, scorpio } from "./deep/signs-b";
 import { sagittarius, capricorn, aquarius, pisces } from "./deep/signs-c";
 import { site } from "./site";
 import { landing } from "./landing";
