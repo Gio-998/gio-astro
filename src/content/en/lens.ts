@@ -40,5 +40,9 @@ export const lensUi = {
   explainer: "What do these mean?",
   tapHint: "Tap any badge to learn what it means",
   fullMeaning: "Read the full meaning",
+  readMore: "Read more",
+  showLess: "Show less",
+  openFull: "Open as a full page",
+  close: "Close",
   howCalculated: "How it's calculated",
 };

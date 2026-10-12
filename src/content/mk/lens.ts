@@ -40,5 +40,9 @@ export const lensUi: typeof EnUi = {
   explainer: "Што значат овие?",
   tapHint: "Допри која било ознака за да дознаеш што значи",
   fullMeaning: "Прочитај го целото значење",
+  readMore: "Прочитај повеќе",
+  showLess: "Прикажи помалку",
+  openFull: "Отвори како цела страница",
+  close: "Затвори",
   howCalculated: "Како се пресметува",
 };

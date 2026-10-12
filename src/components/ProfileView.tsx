@@ -16,15 +16,16 @@ import { Aura } from "./aura/Aura";
 import { auraOf } from "@/lib/aura";
 import { ShareButton } from "./ShareButton";
 import { ThemeToggle } from "./PersonalTheme";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { SignArt } from "./art/SignArt";
 import { Celebration } from "./art/Celebration";
 import { cosmos } from "./art/ArtCard";
+import { LensSheet, LensSheetCtx, useLensSheet } from "./LensSheet";
 
 const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
-function MoreLink({ k, pid }: { k: string; pid?: string }) {
-  const { c } = useContent(); const h = useHref();
-  return <Link href={h(`/lens/?k=${k}${pid ? `&id=${pid}` : ""}`)} className="mt-2 inline-block text-sm text-gold underline decoration-dotted underline-offset-4">{c.lensUi.fullMeaning}: {c.lensInfo[k].name} →</Link>;
+function MoreLink({ k }: { k: string; pid?: string }) {
+  const { c } = useContent(); const open = useLensSheet();
+  return <button type="button" onClick={() => open(k)} className="mt-2 inline-block text-left text-sm text-gold underline decoration-dotted underline-offset-4">{c.lensUi.fullMeaning}: {c.lensInfo[k].name} ↓</button>;
 }
 
 export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }) {
@@ -167,7 +168,8 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
   const fl = profile.psych?.fourLetter;
   const cards = profile.tarot.cards.map((k) => c.nums.tarot[MAJOR_ARCANA[k === 22 ? 0 : k]]);
   const [codeShown, setCodeShown] = useState(false);
-  const lens = (k: string) => h(`/lens/?k=${k}${isMe ? "" : `&id=${person.id}`}`);
+  const [sheet, setSheet] = useState<string | null>(null);
+  const closeSheet = useCallback(() => setSheet(null), [setSheet]);
 
   const shareSpec = {
     eyebrow: U.codexOf(person.name),
@@ -185,6 +187,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
   };
 
   return (
+    <LensSheetCtx.Provider value={setSheet}>
     <div>
       {/* Cover */}
       <div className="relative overflow-hidden rounded-[36px] border border-white/15 p-6 shadow-[0_40px_90px_-40px_rgba(139,108,240,.9)] sm:p-10">
@@ -197,21 +200,21 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         <p className="eyebrow mb-2">{isMe ? U.yourCodex : U.profileEyebrow}</p>
         <h1 className="h-display mb-1 text-5xl sm:text-6xl"><span className="text-aurora">{person.name}</span></h1>
         <p className="h-display mb-5 text-2xl italic text-mist/90">{U.sunIn(A.signs[profile.sun].name)} · {U.moonIn(A.signs[profile.moon].name)}{profile.rising ? ` · ${U.risingIn(A.signs[profile.rising].name)}` : ""}</p>
-        <Link href={lens("sunmoon")} className="mb-4 inline-block text-sm text-gold underline decoration-dotted underline-offset-4">ⓘ {c.lensUi.explainer}</Link>
+        <button type="button" aria-haspopup="dialog" onClick={() => setSheet("sunmoon")} className="mb-4 inline-block text-sm text-gold underline decoration-dotted underline-offset-4 text-left">ⓘ {c.lensUi.explainer}</button>
         <div className="flex flex-wrap gap-2 text-sm">
-          <Link href={lens("sun")} className="chip text-mist hover:border-gold/60 hover:text-gold">{SIGN_GLYPH[profile.sun]} {U.sunIn(A.signs[profile.sun].name)}</Link>
-          <Link href={lens("moon")} className="chip text-mist hover:border-gold/60 hover:text-gold">☽ {U.moonIn(profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(U.or) : A.signs[profile.moon].name)}</Link>
-          {profile.rising && <Link href={lens("rising")} className="chip text-mist hover:border-gold/60 hover:text-gold">AC {U.risingIn(A.signs[profile.rising].name)}</Link>}
-          <Link href={lens("chinese")} className="chip text-mist hover:border-gold/60 hover:text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name}</Link>
-          <Link href={lens("lifepath")} className="chip text-mist hover:border-gold/60 hover:text-gold">#{n.lifePath} {c.lensInfo.lifepath.name}</Link>
-          <Link href={lens("animal")} className="chip text-mist hover:border-gold/60 hover:text-gold">🜁 {c.psych.archetypeAnimals[profile.archetypeAnimal].name}</Link>
-          {fl && <Link href={lens("fourletter")} className="chip text-mist hover:border-gold/60 hover:text-gold">{fl.code} · {c.lensInfo.fourletter.name}</Link>}
-          {profile.quiz.nine && <Link href={lens("nine")} className="chip text-mist hover:border-gold/60 hover:text-gold">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing} · {c.psych.nineStyles[profile.quiz.nine.type].name}</Link>}
-          {profile.quiz.attachment && <Link href={lens("attachment")} className="chip text-mist hover:border-gold/60 hover:text-gold">♡ {c.psych.attachment[profile.quiz.attachment.style].name}</Link>}
-          {profile.quiz.dosha && <Link href={lens("dosha")} className="chip text-mist hover:border-gold/60 hover:text-gold">❋ {c.psych.constitutions[profile.quiz.dosha.constitution].split(/: | — /)[0]}</Link>}
+          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("sun")} className="chip text-mist hover:border-gold/60 hover:text-gold">{SIGN_GLYPH[profile.sun]} {U.sunIn(A.signs[profile.sun].name)}</button>
+          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("moon")} className="chip text-mist hover:border-gold/60 hover:text-gold">☽ {U.moonIn(profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(U.or) : A.signs[profile.moon].name)}</button>
+          {profile.rising && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("rising")} className="chip text-mist hover:border-gold/60 hover:text-gold">AC {U.risingIn(A.signs[profile.rising].name)}</button>}
+          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("chinese")} className="chip text-mist hover:border-gold/60 hover:text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name}</button>
+          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("lifepath")} className="chip text-mist hover:border-gold/60 hover:text-gold">#{n.lifePath} {c.lensInfo.lifepath.name}</button>
+          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("animal")} className="chip text-mist hover:border-gold/60 hover:text-gold">🜁 {c.psych.archetypeAnimals[profile.archetypeAnimal].name}</button>
+          {fl && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("fourletter")} className="chip text-mist hover:border-gold/60 hover:text-gold">{fl.code} · {c.lensInfo.fourletter.name}</button>}
+          {profile.quiz.nine && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("nine")} className="chip text-mist hover:border-gold/60 hover:text-gold">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing} · {c.psych.nineStyles[profile.quiz.nine.type].name}</button>}
+          {profile.quiz.attachment && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("attachment")} className="chip text-mist hover:border-gold/60 hover:text-gold">♡ {c.psych.attachment[profile.quiz.attachment.style].name}</button>}
+          {profile.quiz.dosha && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("dosha")} className="chip text-mist hover:border-gold/60 hover:text-gold">❋ {c.psych.constitutions[profile.quiz.dosha.constitution].split(/: | — /)[0]}</button>}
         </div>
         <p className="mt-2 text-xs text-dim">{c.lensUi.tapHint}</p>
-        <Link href={lens("palette")} className="mt-5 block max-w-sm transition hover:opacity-90"><p className="mb-1.5 text-xs uppercase tracking-widest text-dim">{U.yourPalette}</p><Palette colors={profile.palette} size="h-9" /></Link>
+        <button type="button" aria-haspopup="dialog" onClick={() => setSheet("palette")} className="mt-5 block max-w-sm transition hover:opacity-90 text-left"><span className="mb-1.5 block text-xs uppercase tracking-widest text-dim">{U.yourPalette}</span><Palette colors={profile.palette} size="h-9" /></button>
         <div className="mt-4 flex flex-wrap gap-2">
           <Link className="btn-primary" href={h(`/book/${isMe ? "" : `?id=${person.id}`}`)}>📖 {c.book.title}</Link>
           {isMe && <ThemeToggle />}
@@ -350,6 +353,8 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             : <Locked emblem={id} title={defs[id].title} text={U.unlocksText(defs[id].tagline, defs[id].unlocks)} href={quizFor(id)} minutes={defs[id].minutes} />}
         </Section>
       ))}
+      <LensSheet k={sheet} profile={profile} personId={isMe ? undefined : person.id} personName={person.name} onClose={closeSheet} />
     </div>
+    </LensSheetCtx.Provider>
   );
 }
