@@ -8,6 +8,7 @@ import { PageHero } from "../ui";
 import { Reveal } from "../art/Reveal";
 import { PremiumForecast } from "../premium/Forecast";
 import { TodayStories } from "../today/TodayStories";
+import { TodayGlance } from "../sky/TodayGlance";
 
 /** Gentle on-device visit streak (never punishes a missed day — it just restarts quietly). */
 function useStreak(today: string) {
@@ -57,6 +58,7 @@ export function TodayPage() {
         {streak > 0 && <span className="chip !border-gold/40 !text-gold">{U.streak(streak)}</span>}
       </PageHero>
       <TodayStories />
+      <TodayGlance g={g} />
       <YourDay profile={profileOf(s.me)} now={now} />
       <YourDayVoice person={s.me} now={now} personalDay={g.personalDay} />
       <div className="grid gap-4 sm:grid-cols-2">

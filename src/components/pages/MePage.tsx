@@ -7,9 +7,11 @@ import { ProfileView } from "../ProfileView";
 import { useContent, useHref } from "@/lib/content-context";
 import { useState } from "react";
 import { BirthForm } from "../BirthForm";
+import { MeJourney, ViewToggle, useMeView } from "../sky/Journey";
 
 export function MePage() {
   const s = useStore(); const { c } = useContent(); const h = useHref();
+  const [view, setView] = useMeView();
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!s.me) return (
     <div className="card text-center">
@@ -20,7 +22,10 @@ export function MePage() {
   );
   return (
     <div>
-      <ProfileView person={s.me} profile={profileOf(s.me)} isMe />
+      <div className="mb-3 flex justify-end"><ViewToggle value={view} onChange={setView} /></div>
+      {view === "path"
+        ? <MeJourney person={s.me} profile={profileOf(s.me)} onClassic={() => { setView("classic"); window.scrollTo({ top: 0 }); }} />
+        : <ProfileView person={s.me} profile={profileOf(s.me)} isMe />}
       <div className="mt-8 flex flex-wrap gap-2">
         <Link className="btn-ghost" href={h("/start/")}>{c.ui.me.editBirth}</Link>
         <Link className="btn-ghost" href={h("/today/")}>{c.ui.me.today}</Link>

@@ -9,6 +9,8 @@ import { SIGN_GLYPH } from "@/engine/zodiac";
 import { ANIMAL_GLYPH } from "@/engine/chinese";
 import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { PageHero } from "../ui";
+import { BondsConstellation } from "../sky/Journey";
+import { comparePair } from "@/engine/compat";
 
 export function PeoplePage() {
   const s = useStore(); const { c } = useContent(); const h = useHref(); const U = c.ui.people;
@@ -35,6 +37,7 @@ export function PeoplePage() {
           </div>
         </div>
       )}
+      {s.me && mode === "list" && <BondsConstellation items={s.people.slice(0, 12).map((p) => { const pr = profileOf(p); let score = 50; try { score = comparePair(profileOf(s.me!), pr, p.relType ?? "friend").resonance; } catch { /* keep middle orbit */ } return { id: p.id, name: p.name, score, color: pr.palette[0] }; })} />}
       {s.people.length === 0 && mode === "list" && <div className="card text-center text-dim">{U.empty}</div>}
       <div className="grid gap-3">
         {s.people.map((p) => {
