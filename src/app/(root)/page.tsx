@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { DEFAULT_LOCALE } from "@/content";
 import { languageAlternates } from "@/lib/seo";
-export const metadata: Metadata = { title: "Horoscop", robots: { index: false, follow: true }, alternates: { canonical: `/${DEFAULT_LOCALE}/`, languages: languageAlternates("/") }, other: { refresh: `0;url=/${DEFAULT_LOCALE}/` } };
+export const metadata: Metadata = { title: "Horoscop", verification: { google: "lawAZscQq-N7Z2WZ5gPeHdtfwMK02cXhEACtaYUoHvY" }, robots: { index: false, follow: true }, alternates: { canonical: `/${DEFAULT_LOCALE}/`, languages: languageAlternates("/") }, other: { refresh: `0;url=/${DEFAULT_LOCALE}/` } };
 export default function RootPage() {
   return (
     <main style={{ fontFamily: "system-ui", padding: 40, color: "#ece6ff" }}>
