@@ -53,3 +53,4 @@ export const vedicCancellations: Record<string, string> = {
   "manglik-both": "Traditional cancellation: both charts are Manglik, which tradition says balances out.",
 };
 export const vedicNote: string = "Vedic (sidereal) astrology uses the Lahiri zodiac, about 24° behind the Western one, so your Vedic Moon sign may differ. Guna Milan is a traditional 36-point system; tradition reads 18+ as acceptable, 25+ good and 32+ excellent. Symbolic only.";
+export const gunaLabel: string = "Guna Milan";

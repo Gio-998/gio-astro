@@ -83,12 +83,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <div className="relative mx-auto max-w-5xl px-4">
           <SectionHead eyebrow={L.s3.eyebrow} title={T(L.s3.title)} sub={L.s3.sub} />
           <Reveal><PickACard /></Reveal>
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-fx="pop">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4" data-fx="pop">
             {(["/start/", "/match/", "/quizzes/", "/today/"].map((href, i) => [href, L.tools[i][0], L.tools[i][1], (["chart", "bond", "big-five", "moon"] as EmblemId[])[i]]) as [string, string, string, EmblemId][]).map(([href, t, d, e], i) => (
               <Reveal key={href} delay={i * 0.07}>
                 <Link href={h(href)} className="card card-hover block h-full text-center">
-                  <Emblem id={e} className="mx-auto mb-3 h-14 w-14 glow-gold" />
-                  <p className="h-display text-2xl">{t}</p>
+                  <Emblem id={e} className="mx-auto mb-2 h-10 w-10 glow-gold sm:mb-3 sm:h-14 sm:w-14" />
+                  <p className="h-display text-lg sm:text-2xl">{t}</p>
                   <p className="text-sm text-dim">{d}</p>
                 </Link>
               </Reveal>
@@ -105,14 +105,14 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
             <Reveal key={t.e} delay={ti * 0.05}>
               <div className={`rounded-[32px] border bg-gradient-to-br p-6 ${tierStyle[t.e]}`}>
                 <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
-                  <p className="h-display text-3xl">{c.compat.evidence[t.e].icon} {c.compat.evidence[t.e].label}</p>
+                  <p className="h-display text-2xl sm:text-3xl">{c.compat.evidence[t.e].icon} {c.compat.evidence[t.e].label}</p>
                   <p className="max-w-md text-sm text-dim">{c.compat.evidence[t.e].text}</p>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
                   {t.lenses.map((l) => (
-                    <div key={l} className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-night/40 p-4 transition hover:-translate-y-0.5 hover:border-gold/40 hover:bg-night/60">
-                      <Emblem id={LENS_ICON[l]} className="h-11 w-11 shrink-0 transition duration-500 group-hover:rotate-12" />
-                      <div><p className="font-semibold">{c.compat.lenses[l].name}</p><p className="text-sm text-dim">{c.compat.lenses[l].short}</p></div>
+                    <div key={l} className="group flex flex-col items-start gap-2 rounded-2xl border border-white/10 bg-night/40 p-3 transition sm:flex-row sm:gap-3 sm:p-4 hover:-translate-y-0.5 hover:border-gold/40 hover:bg-night/60">
+                      <Emblem id={LENS_ICON[l]} className="h-8 w-8 shrink-0 sm:h-11 sm:w-11 transition duration-500 group-hover:rotate-12" />
+                      <div><p className="text-sm font-semibold leading-tight sm:text-base">{c.compat.lenses[l].name}</p><p className="text-xs leading-snug text-dim sm:text-sm">{c.compat.lenses[l].short}</p></div>
                     </div>
                   ))}
                 </div>

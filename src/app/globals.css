@@ -356,3 +356,17 @@ html.lenis { scroll-behavior: auto !important; }
 .fx-word { display: inline-block; will-change: transform; }
 /* Stories: only the sky and the story stay visible (works with or without WebGL; the CSS sky is the fallback). */
 html.stories-open body > *:not(.sky-root):not(.story-root) { visibility: hidden; }
+/* Readable wrapping everywhere: no lone words, long MK words never overflow. */
+h1, h2, h3, h4, .h-display { text-wrap: balance; overflow-wrap: break-word; hyphens: auto; }
+p, li, figcaption, blockquote { text-wrap: pretty; overflow-wrap: break-word; }
+@media (max-width: 480px) {
+  h1, .h-display { font-size: clamp(1.9rem, 8.5vw, 2.6rem) !important; line-height: 1.12 !important; }
+  h2 { font-size: clamp(1.5rem, 6.8vw, 2rem) !important; line-height: 1.15 !important; }
+}
+
+/* Slim, single-line buttons everywhere; stack full-width on phones when they wrap. */
+.btn-primary, .btn-ghost { white-space: nowrap; min-height: 40px; padding-block: .5rem !important; line-height: 1.2; max-width: 100%; text-overflow: ellipsis; }
+@media (max-width: 480px) {
+  .btn-primary, .btn-ghost { padding-inline: 1.1rem !important; font-size: .875rem; }
+  .flex-wrap:has(> :is(.btn-primary, .btn-ghost) ~ :is(.btn-primary, .btn-ghost)) > :is(.btn-primary, .btn-ghost) { flex: 1 1 100%; }
+}

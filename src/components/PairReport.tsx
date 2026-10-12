@@ -35,7 +35,7 @@ function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile
       const g = d.guna as GunaMilan;
       return (
         <div className="text-sm">
-          <p className="mb-2">Guna Milan: <b className="text-gold">{g.total} / 36</b> ({A.vedic.nakshatra === B.vedic.nakshatra ? U.sameStar : `${c.vedic.nakshatras[A.vedic.nakshatra].name} × ${c.vedic.nakshatras[B.vedic.nakshatra].name}`})</p>
+          <p className="mb-2">{c.vedic.gunaLabel}: <b className="text-gold">{g.total} / 36</b> ({A.vedic.nakshatra === B.vedic.nakshatra ? U.sameStar : `${c.vedic.nakshatras[A.vedic.nakshatra].name} × ${c.vedic.nakshatras[B.vedic.nakshatra].name}`})</p>
           {g.kootas.map((k) => <Bar key={k.id} value={(k.points / k.max) * 100} label={`${c.vedic.kootas[k.id].name}: ${c.vedic.kootas[k.id].plain}`} right={`${k.points}/${k.max}`} color="bg-sage" />)}
           {g.cautions.map((x) => <p key={x} className="mt-1 text-xs">◦ {c.vedic.vedicCautions[x]}</p>)}
           {g.cancellations.map((x) => <p key={x} className="mt-1 text-xs text-sage">✓ {c.vedic.vedicCancellations[x]}</p>)}

@@ -30,5 +30,5 @@ export const glance: Glance = {
   doshaMix: "Твојата мешавина",
   explorerHead: { low: "Повеќе си на автопилот", mid: "Се менуваш меѓу двата режима", high: "Повеќе си истражувач" },
   pairHead: (sp: string, gr: string) => `Најсилни сте заедно во: ${sp.toLowerCase()}. Растете во: ${gr.toLowerCase()}.`,
-  pairDetails: "Силни страни и простор за раст", pairLenses: "Леќа по леќа",
+  pairDetails: "Силни страни и простор за раст", pairLenses: "Гледиште по гледиште",
 };

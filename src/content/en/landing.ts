@@ -1,10 +1,10 @@
 /** Landing page copy. Titles are [before, highlighted, after]. */
 export const landing = {
   discover: [
-    { t: "Your sky", d: "Sun, Moon and rising, Vedic birth star, Chinese animal and element: drawn from the real sky of your birth." },
-    { t: "Your nature", d: "Seven short quizzes: personality, attachment, motivations, care styles, shadows and gifts, body type, mind modes." },
-    { t: "Your bonds", d: "Compare with a partner, friend, parent or colleague: where you flow, where you grow, and what to try." },
-    { t: "Your days", d: "A 90-second daily ritual: moon, your transits, card of the day, personal number and a journal prompt." },
+    { t: "Your sky", d: "Sun, Moon, Rising and your Chinese sign" },
+    { t: "Your nature", d: "Seven short quizzes about who you are" },
+    { t: "Your bonds", d: "How you match with the people you love" },
+    { t: "Your days", d: "A minute and a half with the sky, daily" },
   ],
   examples: [
     ["Leo Sun · Pisces Moon · Life Path 7", "“I finally have words for why I need people and then need to vanish for a weekend.”"],
@@ -27,7 +27,7 @@ export const landing = {
   s1: { eyebrow: "What you'll discover", title: ["One mirror, ", "every lens", ""], sub: "Ancient traditions for meaning, modern psychology for clarity. Each one adds a new colour to your picture." },
   s2: { eyebrow: "Choose your sign", title: ["Twelve skies, ", "twelve gifts", ""], sub: "Tap a sign to meet it. Then meet the eleven other lenses that make you more than your Sun sign." },
   s3: { eyebrow: "Free tools · no sign-up", title: ["Start with a ", "single card", ""], sub: "Ask a question, pick a card, then explore the tools that go deeper." },
-  tools: [["Free birth chart", "Your full chart wheel, every planet in plain words."], ["Compatibility", "Any two people, up to 14 lenses, one Resonance."], ["Personality quizzes", "Seven quizzes, every result free."], ["Today's sky", "Moon, transits and a daily prompt."]] as [string, string][],
+  tools: [["Free birth chart", "Your whole sky at birth"], ["Compatibility", "Any two people, one score"], ["Personality quizzes", "Seven quizzes, all free"], ["Today's sky", "Moon and transits today"]] as [string, string][],
   s4: { eyebrow: "Eighteen lenses, honestly labelled", title: ["Wisdom from ", "5,000 years", " and from current research"], sub: "We tell you which lenses have research behind them and which are symbolic traditions. One explains, the other inspires." },
   s5: { eyebrow: "How it works", title: ["Three gentle steps", "", ""], sub: "No account, no email. Start small and go deeper whenever you like." },
   steps: [["Tell us when you were born", "Name and date are enough. In 90 seconds you see your Sun, Moon, Chinese animal, Life Path, tarot card, archetype animal and colour palette."], ["Unlock deeper layers", "Two-minute quizzes add personality, attachment, motivations, shadows and gifts. Every result is shown in full, free."], ["See your bonds", "Add the people who matter. See where your lenses agree, your shared superpowers and practices for your growth edges."]] as [string, string][],

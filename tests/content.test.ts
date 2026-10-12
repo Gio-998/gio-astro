@@ -75,6 +75,6 @@ describe("Macedonian coverage", () => {
   });
   it("UI functions produce Macedonian text", () => {
     expect(contents.mk.ui.profile.sunIn("Вага")).toBe("Сонце во Вага");
-    expect(contents.mk.compat.pairCopy.convergence(3, "x")).toContain("леќи");
+    expect(contents.mk.compat.pairCopy.convergence(3, "x")).toContain("гледишта");
   });
 });

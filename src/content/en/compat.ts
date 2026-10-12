@@ -1,27 +1,27 @@
 import type { LensId, Band, Archetype, Theme, RelType, Evidence } from "@/engine/compat";
 
 export const lenses: Record<LensId, { name: string; short: string }> = {
-  western: { name: "Western astrology", short: "Planet-to-planet links between your birth charts (synastry)." },
-  vedic: { name: "Vedic 36-point match", short: "Traditional Indian Moon-star matching (Guna Milan)." },
-  chinese: { name: "Chinese zodiac & five elements", short: "Your year animals and elements." },
-  numerology: { name: "Numerology", short: "Life Path, Soul Urge and Expression numbers." },
-  tarot: { name: "Tarot birth cards", short: "Your birth cards and shared relationship card." },
-  yinyang: { name: "Yin-yang balance", short: "How your active and receptive energies balance." },
-  bigfive: { name: "Big Five personality", short: "The best-researched model of personality." },
-  attachment: { name: "Attachment style", short: "How you each handle closeness and distance." },
-  care: { name: "Care styles", short: "How you each like to give and receive care." },
-  temperament: { name: "Four temperaments", short: "The classical sanguine / choleric / phlegmatic / melancholic types." },
-  nine: { name: "Nine motivations", short: "Your core motivations (nine-type model)." },
-  fourletter: { name: "Four-letter style", short: "Outgoing/inward, imaginative/practical, heart/head, planned/flexible." },
-  shadow: { name: "Shadow & Light", short: "Your shadows and virtues, and how they dance together." },
-  dosha: { name: "Body & energy type", short: "Ayurveda-inspired constitution." },
-  play: { name: "Play Mirror", short: "How you both actually played the mini-games. A behavioural signal, not a diagnosis." },
+  western: { name: "Western astrology", short: "How your planets connect" },
+  vedic: { name: "Vedic match", short: "Indian Moon-star matching" },
+  chinese: { name: "Chinese zodiac", short: "Your animals and elements" },
+  numerology: { name: "Numerology", short: "What your numbers say" },
+  tarot: { name: "Birth tarot", short: "Your cards and your bond card" },
+  yinyang: { name: "Yin and yang", short: "How your energies balance" },
+  bigfive: { name: "Big Five", short: "The best-tested personality model" },
+  attachment: { name: "Attachment", short: "Closeness and space together" },
+  care: { name: "Care styles", short: "How you give and receive care" },
+  temperament: { name: "Temperament", short: "The four classic temperaments" },
+  nine: { name: "Nine motivations", short: "What drives you deep down" },
+  fourletter: { name: "Four letters", short: "Your style in four letters" },
+  shadow: { name: "Shadow and light", short: "Your weak spots and virtues" },
+  dosha: { name: "Body type", short: "Ayurveda for your energy" },
+  play: { name: "Play Mirror", short: "How you really play together" },
 };
 
 export const evidence: Record<Evidence, { label: string; icon: string; text: string }> = {
-  research: { label: "Research-backed", icon: "🔬", text: "Measured with tested questionnaires and supported by relationship research." },
-  popular: { label: "Popular psychology", icon: "🧭", text: "Useful language for reflection; limited scientific evidence." },
-  traditional: { label: "Traditional & symbolic", icon: "✨", text: "Ancient systems of meaning. They don't predict anything scientifically, but they make beautiful mirrors for reflection." },
+  research: { label: "Research-backed", icon: "🔬", text: "Tested questionnaires and research" },
+  popular: { label: "Popular psychology", icon: "🧭", text: "Useful for reflection, little evidence" },
+  traditional: { label: "Traditional and symbolic", icon: "✨", text: "Old systems, for inspiration" },
 };
 
 export const relTypes: Record<RelType, { name: string; them: string }> = {
