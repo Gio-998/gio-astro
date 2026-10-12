@@ -85,11 +85,14 @@ const CENTRES_Y = [101, 92, 80, 64, 47, 30, 16];
 export function Aura({ className = "", body = true, breath = null, pulse = 0, partner = null, merge = 0, label, "data-aura": dataAura, ...state }: AuraProps) {
   const ref = useRef<HTMLCanvasElement>(null);
   const target = useRef<{ a: Live; b: Live | null; breath: number | null; merge: number; focus: number | null }>({ a: toLive(state), b: partner ? toLive(partner) : null, breath, merge, focus: state.focus ?? null });
-  target.current = { a: toLive(state), b: partner ? toLive(partner) : null, breath, merge, focus: state.focus ?? null };
   const pulseAt = useRef(-1e9);
   const lastPulse = useRef(pulse);
-  if (pulse !== lastPulse.current) { lastPulse.current = pulse; pulseAt.current = typeof performance !== "undefined" ? performance.now() : 0; }
   const redraw = useRef<() => void>(() => {});
+  useEffect(() => {
+    target.current = { a: toLive(state), b: partner ? toLive(partner) : null, breath, merge, focus: state.focus ?? null };
+    if (pulse !== lastPulse.current) { lastPulse.current = pulse; pulseAt.current = performance.now(); }
+    redraw.current();
+  });
 
   useEffect(() => {
     const cv = ref.current; if (!cv) return;
@@ -204,7 +207,6 @@ export function Aura({ className = "", body = true, breath = null, pulse = 0, pa
     if (!reduce) raf = requestAnimationFrame(frame); else frame(performance.now());
     return () => { cancelAnimationFrame(raf); ro.disconnect(); io.disconnect(); document.removeEventListener("visibilitychange", vis); };
   }, [body]);
-  useEffect(() => { redraw.current(); });
   return <canvas ref={ref} className={className} role="img" aria-label={label} data-aura={dataAura ? "" : undefined} />;
 }
 

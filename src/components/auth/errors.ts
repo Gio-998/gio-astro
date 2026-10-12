@@ -2,6 +2,7 @@
 export function errKey(e: unknown): string {
   const o = (e ?? {}) as { code?: string; message?: string; status?: number; name?: string };
   const code = o.code ?? ""; const msg = (o.message ?? "").toLowerCase();
+  if (msg.includes("database error saving new user") || msg.includes("invite_only")) return "invite_only";
   if (code === "otp_expired" || msg.includes("expired")) return msg.includes("invalid") && !msg.includes("expired") ? "invalid_otp" : "otp_expired";
   if (msg.includes("token") && msg.includes("invalid")) return "invalid_otp";
   if (code) return code;

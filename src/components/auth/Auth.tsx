@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { sb, accountsEnabled, googleEnabled } from "@/lib/supabase";
+import { sb, accountsEnabled, googleEnabled, betaMode } from "@/lib/supabase";
 import { useAccount, rememberConsents, signOut, deleteAccount, flush, pullAndMerge, resolveConflict, startAccountSync } from "@/lib/sync";
 import { useStore } from "@/lib/store";
 import { useContent, useHref, useDate } from "@/lib/content-context";
@@ -28,20 +28,23 @@ export function AccountChip() {
   );
 }
 
-function Consents({ v, set }: { v: { terms: boolean; data: boolean; mkt: boolean }; set: (v: { terms: boolean; data: boolean; mkt: boolean }) => void }) {
-  const { c } = useContent(); const A = c.ui.auth; const h = useHref();
-  const Row = ({ k, text, req }: { k: "terms" | "data" | "mkt"; text: React.ReactNode; req?: boolean }) => (
+type Cons = { terms: boolean; data: boolean; mkt: boolean };
+function Row({ v, set, k, text, req }: { v: Cons; set: (v: Cons) => void; k: keyof Cons; text: React.ReactNode; req?: boolean }) {
+  return (
     <label className="flex cursor-pointer items-start gap-3 text-sm leading-snug">
       <input type="checkbox" data-testid={`consent-${k}`} className="mt-0.5 h-4 w-4 shrink-0 accent-[var(--color-gold)]" checked={v[k]} onChange={(e) => set({ ...v, [k]: e.target.checked })} />
       <span>{text}{req && <span className="text-rose"> *</span>}</span>
     </label>
   );
+}
+function Consents({ v, set }: { v: { terms: boolean; data: boolean; mkt: boolean }; set: (v: { terms: boolean; data: boolean; mkt: boolean }) => void }) {
+  const { c } = useContent(); const A = c.ui.auth; const h = useHref();
   return (
     <fieldset className="space-y-2.5 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
       <legend className="px-1 text-xs uppercase tracking-widest text-gold">{A.consentTitle}</legend>
-      <Row k="terms" req text={<>{A.consentTerms} <Link className="underline" href={h("/terms")}>{A.termsLink}</Link> · <Link className="underline" href={h("/privacy")}>{A.privacyLink}</Link></>} />
-      <Row k="data" req text={A.consentData} />
-      <Row k="mkt" text={A.consentMarketing} />
+      <Row v={v} set={set} k="terms" req text={<>{A.consentTerms} <Link className="underline" href={h("/terms")}>{A.termsLink}</Link> · <Link className="underline" href={h("/privacy")}>{A.privacyLink}</Link></>} />
+      <Row v={v} set={set} k="data" req text={A.consentData} />
+      <Row v={v} set={set} k="mkt" text={A.consentMarketing} />
     </fieldset>
   );
 }
@@ -111,6 +114,7 @@ function SignInForm() {
         {tab === "password" && <label className="block text-sm"><span className="mb-1 block text-dim">{A.password}</span>
           <input className="input" type="password" required minLength={8} data-testid="password" autoComplete={creating ? "new-password" : "current-password"} placeholder={A.passwordPh} value={pw} onChange={(e) => setPw(e.target.value)} /></label>}
         {tab === "otp" && <p className="text-xs text-dim">{A.codeHint}</p>}
+        {betaMode && <p className="text-xs text-gold">✦ {c.ui.beta.badge}: {c.ui.beta.banner}</p>}
         {needConsent && <Consents v={cons} set={setCons} />}
         {err && <p role="alert" data-testid="auth-error" className="rounded-xl border border-rose/40 bg-rose/10 px-3 py-2 text-sm text-rose">{err}</p>}
         {info && <p role="status" className="rounded-xl border border-gold/40 bg-gold/10 px-3 py-2 text-sm">{info}</p>}
@@ -130,6 +134,7 @@ export function VerifyPage() {
   const mode: Mode = sp.get("m") === "signup" ? "signup" : "otp";
   const [email, setEmail] = useState(""); const [code, setCode] = useState(""); const [busy, setBusy] = useState(false);
   const [err, setErr] = useState(""); const [info, setInfo] = useState(""); const [left, setLeft] = useState(60);
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- read email from URL/sessionStorage after mount
   useEffect(() => { setEmail(sp.get("email") || sessionStorage.getItem(PENDING_EMAIL) || ""); }, [sp]);
   useEffect(() => { if (left <= 0) return; const t = setTimeout(() => setLeft(left - 1), 1000); return () => clearTimeout(t); }, [left]);
   const verify = async (token: string) => {

@@ -386,6 +386,7 @@ export const auth = {
     over_email_send_rate_limit: "Too many emails were sent just now. Please wait a minute and try again.", over_request_rate_limit: "Too many attempts. Please wait a minute.",
     user_already_exists: "An account with this email already exists — sign in instead.", weak_password: "Please choose a stronger password (at least 8 characters).",
     email_address_invalid: "That email address doesn't look right.", same_password: "Choose a password different from the old one.",
+    invite_only: "We're in private beta, so only invited emails can create an account for now. Join the waitlist and we'll let you in soon.",
     network: "Can't reach the server. Check your connection.", generic: "Something went wrong. Please try again.",
   } as Record<string, string>,
   newPassword: "Choose a new password", savePassword: "Save password", passwordSaved: "Password updated.", finishing: "Signing you in…",
@@ -415,4 +416,16 @@ export const ritual = {
   step: (i: number, n: number) => `Step ${i} of ${n}`,
   auraTitle: "Your aura", auraNote: "A symbolic picture of your reading and how you felt when you attuned. Not a measurement.", reattune: "Re-attune ✦",
   bondAura: "Your two fields, merging", auraLabel: (n: string) => `Symbolic aura of ${n}`,
+};
+
+export const beta = {
+  badge: "Private beta",
+  banner: "We're in a small private beta. Join the waitlist, or sign in if you have an invite.",
+  gateEyebrow: "Private beta · by invitation", gateTitleA: "A new way to see yourself ", gateTitleB: "is almost here",
+  gateText: "Mirrorstar is open to a small circle of testers while we polish it. Leave your email and we'll send you an invite as soon as there's a place.",
+  emailPh: "you@example.com", join: "Join the waitlist ✦", joined: "You're on the list. We'll email you when your invite is ready. 💫",
+  invalid: "Please enter a valid email address.", haveInvite: "Have an invite? Sign in →", privacy: "We only use your email to send the invite. No spam, unsubscribe any time.",
+  teasers: ["Your birth chart, Chinese sign, numbers and tarot in one place", "A living aura shaped by your answers", "Rich, story-like readings in English and Macedonian", "Compatibility for love, friends, family and work"],
+  adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove",
+  used: "joined", pending: "not joined yet", waitlist: "Waitlist", invite: "Invite", added: (n: number) => `${n} added.`, empty: "Nothing here yet.",
 };

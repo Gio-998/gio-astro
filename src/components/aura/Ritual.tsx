@@ -47,6 +47,7 @@ export function Ritual({ initial, onDone, onQuick, onClose }: { initial?: Partia
 
   // guided breath: 3 × (4 s in, 6 s out), aura ring follows
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- leaving the breath step clears the external breath
     if (step !== "breath") { setBreath(null); return; }
     const t0 = performance.now(); let raf = 0; const IN = reduce ? 1.5 : 4, OUT = reduce ? 1.5 : 6, CYCLE = IN + OUT;
     const tick = () => {
@@ -61,6 +62,7 @@ export function Ritual({ initial, onDone, onQuick, onClose }: { initial?: Partia
   // cinematic cast, then hand the finished profile back
   useEffect(() => {
     if (step !== "cast") return;
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- reset when the cast step starts
     bump(); setCastI(0);
     const per = reduce ? 250 : 950; let k = 0;
     const id = setInterval(() => { k++; setCastI(k); if (k >= R.casting.length) { clearInterval(id); setTimeout(() => draft && onDone({ ...(initial ?? {}), ...draft, quiz: initial?.quiz ?? {}, createdAt: initial?.createdAt ?? draft.createdAt, id: "me", name: name.trim(), aura: { ...ans, at: new Date().toISOString() } }), reduce ? 200 : 900); } }, per);
@@ -73,17 +75,6 @@ export function Ritual({ initial, onDone, onQuick, onClose }: { initial?: Partia
   const back = () => setI((x) => Math.max(0, x - 1));
   const pick = <K extends keyof AuraAnswers>(k: K, v: AuraAnswers[K]) => { setAns((a) => ({ ...a, [k]: v })); bump(); };
   const qSteps = STEPS.length - 2;
-
-  const Choice = <T extends string>({ opts, icons, value, onPick, labels }: { opts: readonly T[]; icons: Record<T, string>; value?: T; onPick: (v: T) => void; labels: Record<string, string> }) => (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-      {opts.map((o) => (
-        <button key={o} type="button" onClick={() => onPick(o)} data-testid={`opt-${o}`} aria-pressed={value === o}
-          className={`rounded-2xl border px-3 py-3 text-left text-sm transition ${value === o ? "border-gold/80 bg-gold/15 text-mist shadow-[0_0_24px_-6px_rgba(246,207,122,.6)]" : "border-white/15 bg-white/[0.06] text-dim hover:border-white/30 hover:text-mist"}`}>
-          <span className="mr-2 text-lg">{icons[o]}</span>{labels[o]}
-        </button>
-      ))}
-    </div>
-  );
 
   const panel = (() => {
     switch (step) {
@@ -165,6 +156,19 @@ export function Ritual({ initial, onDone, onQuick, onClose }: { initial?: Partia
           </AnimatePresence>
         </div>
       </div>
+    </div>
+  );
+}
+
+function Choice<T extends string>({ opts, icons, value, onPick, labels }: { opts: readonly T[]; icons: Record<T, string>; value?: T; onPick: (v: T) => void; labels: Record<string, string> }) {
+  return (
+    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+      {opts.map((o) => (
+        <button key={o} type="button" onClick={() => onPick(o)} data-testid={`opt-${o}`} aria-pressed={value === o}
+          className={`rounded-2xl border px-3 py-3 text-left text-sm transition ${value === o ? "border-gold/80 bg-gold/15 text-mist shadow-[0_0_24px_-6px_rgba(246,207,122,.6)]" : "border-white/15 bg-white/[0.06] text-dim hover:border-white/30 hover:text-mist"}`}>
+          <span className="mr-2 text-lg">{icons[o]}</span>{labels[o]}
+        </button>
+      ))}
     </div>
   );
 }

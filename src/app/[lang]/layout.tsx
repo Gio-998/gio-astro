@@ -10,6 +10,7 @@ import { Header, Footer } from "@/components/Chrome";
 import { SITE_URL } from "@/lib/site-url";
 import { PersonalTheme } from "@/components/PersonalTheme";
 import { AccountBoot } from "@/components/auth/Auth";
+import { BetaGate } from "@/components/auth/Beta";
 
 const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
 const caps = Cinzel({ subsets: ["latin", "latin-ext"], weight: ["500", "600"], variable: "--font-cinzel" });
@@ -27,6 +28,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     description: c.site.description,
     openGraph: { siteName: c.site.brand, type: "website", locale: lang },
     alternates: { languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/`])) },
+    ...(process.env.NEXT_PUBLIC_BETA !== "0" ? { robots: { index: false, follow: false } } : {}),
   };
 }
 export const viewport: Viewport = { themeColor: "#1c1645", width: "device-width", initialScale: 1 };
@@ -48,7 +50,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <PersonalTheme />
           <AccountBoot />
           <Header />
-          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4">{children}</main>
+          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate></main>
           <Footer />
         </ContentProvider>
       </body>
