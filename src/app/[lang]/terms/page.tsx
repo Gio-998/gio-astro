@@ -5,7 +5,7 @@ function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="tarot" img="milkyway" title={<>Terms of use</>} />
-      <p className="text-sm text-dim">Draft v0.1 — to be reviewed by a lawyer before taking payments.</p>
+      <p className="text-sm text-dim">Draft v0.1: to be reviewed by a lawyer before taking payments.</p>
       <h2>What this is</h2>
       <p>This app offers astrology, numerology, tarot, traditional systems and personality questionnaires <b>for self-reflection and entertainment</b>. It is not psychological, medical, legal or financial advice, and it cannot predict the future or whether a relationship will succeed. Don't make important decisions based only on it.</p>
       <h2>Age</h2>

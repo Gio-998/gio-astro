@@ -80,7 +80,7 @@ export function TodayPage() {
         <h2 className="h-display mb-3 text-3xl"><span className="text-gold">✦</span>{U.skyToday}</h2>
         {g.transits.length === 0 && <p className="text-sm">{U.quiet}</p>}
         {g.transits.map((t, i) => (
-          <p key={i} className="mb-2 text-sm"><b>{U.transit(A.points[t.transiting].name, D.transitTone[t.type], A.points[t.natal].name)}</b> <span className="text-dim">({A.aspects[t.type].symbol} {t.orb.toFixed(1)}°)</span> — {U.meets(D.transitMood[t.transiting], A.points[t.natal].governs)} {D.transitAdvice[t.type]}</p>
+          <p key={i} className="mb-2 text-sm"><b>{U.transit(A.points[t.transiting].name, D.transitTone[t.type], A.points[t.natal].name)}</b> <span className="text-dim">({A.aspects[t.type].symbol} {t.orb.toFixed(1)}°)</span>: {U.meets(D.transitMood[t.transiting], A.points[t.natal].governs)} {D.transitAdvice[t.type]}</p>
         ))}
         <p className="mt-2 text-xs text-dim">{U.computed}</p>
       </div>

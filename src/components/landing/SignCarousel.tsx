@@ -27,7 +27,7 @@ export function SignCarousel() {
               className={`group relative w-[190px] shrink-0 snap-start overflow-hidden rounded-[28px] border p-4 text-center transition duration-500 ${sel === sg ? "-translate-y-2 border-gold/70 bg-white/[0.12] shadow-[0_25px_60px_-20px_rgba(246,207,122,.55)]" : "border-white/12 bg-white/[0.05] hover:-translate-y-1 hover:border-gold/40"}`}>
               <SignArt sign={sg} className="mx-auto h-36 w-36 transition duration-700 group-hover:scale-110" />
               <p className="h-display mt-1 text-2xl">{A.signs[sg].name}</p>
-              <p className="text-xs text-dim">{SIGN_DATES[sg][0]} – {SIGN_DATES[sg][1]}</p>
+              <p className="text-xs text-dim">{SIGN_DATES[sg][0]} → {SIGN_DATES[sg][1]}</p>
               <p className="mt-1 text-[11px] uppercase tracking-widest text-gold/80">{A.elements[SIGN_ELEMENT[sg]].name}</p>
             </button>
           ))}
@@ -43,7 +43,7 @@ export function SignCarousel() {
           <SignArt sign={sel} className="mx-auto h-44 w-44" />
           <div>
             <p className="eyebrow mb-1">{A.elements[SIGN_ELEMENT[sel]].name} · ruled by {SIGN_RULER[sel]}</p>
-            <h3 className="h-display mb-2 text-4xl">{s.name} — <span className="italic text-aurora">{s.essence}</span></h3>
+            <h3 className="h-display mb-2 text-4xl">{s.name}: <span className="italic text-aurora">{s.essence}</span></h3>
             <p className="mb-2 text-mist/90"><b className="text-gold">{c.site.carousel.gifts}</b> {s.gifts}. <b className="text-rose">{c.site.carousel.edge}</b> {s.edge}.</p>
             <p className="mb-4 text-sm text-dim">{c.site.carousel.more}</p>
             <Link href={h("/start/")} className="btn-primary">{c.site.carousel.cta}</Link>

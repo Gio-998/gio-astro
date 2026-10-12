@@ -58,7 +58,7 @@ export function LensPageView() {
       )}
 
       <div className="mt-8 flex flex-wrap gap-2">
-        <Link className="btn-primary" href={h(`/book/${isMe ? "" : `?id=${id}`}#ch-${page.chapter}`)}>📖 {L.related} — {c.book.chapters[page.chapter].title}</Link>
+        <Link className="btn-primary" href={h(`/book/${isMe ? "" : `?id=${id}`}#ch-${page.chapter}`)}>📖 {L.related}: {c.book.chapters[page.chapter].title}</Link>
         <Link className="btn-ghost" href={h(isMe ? "/me/" : `/person/?id=${id}`)}>← {L.back}</Link>
       </div>
       <div className="mt-8 flex flex-wrap gap-1.5">

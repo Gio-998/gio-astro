@@ -23,7 +23,7 @@ export function buildBondStory(A: Profile, B: Profile, na: string, nb: string, r
   const missingOf = (ids: QuizId[]) => ids.filter((id) => { const k = id === "big-five" ? "bigFive" : (id as "attachment"); return !qa[k] || !qb[k]; });
   const wl = r.lenses.find((l) => l.id === "western");
   const aspects = (wl?.detail as { supportive: SynAspect[]; growth: SynAspect[] } | undefined);
-  const aspLine = (x: SynAspect) => `${na}'s ${c.astro.points[x.a].name} ${c.astro.aspects[x.type].tone} ${nb}'s ${c.astro.points[x.b].name} — ${c.astro.aspects[x.type].pair}.`;
+  const aspLine = (x: SynAspect) => `${na}'s ${c.astro.points[x.a].name} ${c.astro.aspects[x.type].tone} ${nb}'s ${c.astro.points[x.b].name}: ${c.astro.aspects[x.type].pair}.`;
 
   const fk = r.rel === "romantic" ? "love" : r.rel === "friend" ? "friends" : r.rel === "family" ? "family" : "work";
   const facet = (p: Profile) => D.signDeep[p.sun].sun[fk];

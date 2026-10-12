@@ -6,9 +6,9 @@ function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="moon" img="milkyway" title={<>Privacy</>} />
-      <p className="text-sm text-dim">Draft v0.2 (October 2026) — to be reviewed by a lawyer before payments are added.</p>
+      <p className="text-sm text-dim">Draft v0.2 (October 2026): to be reviewed by a lawyer before payments are added.</p>
       <h2>Short version</h2>
-      <p>Everything you enter — birth details, quiz answers, people you add, journal entries — is stored <b>in your browser</b> (localStorage) on this device, and all calculations run on your device. <b>Accounts are optional.</b> Without one, nothing is uploaded. If you create an account, we store a copy in our database so it syncs between your devices, but only after you tick the consent boxes.</p>
+      <p>Everything you enter (birth details, quiz answers, people you add, journal entries) is stored <b>in your browser</b> (localStorage) on this device, and all calculations run on your device. <b>Accounts are optional.</b> Without one, nothing is uploaded. If you create an account, we store a copy in our database so it syncs between your devices, but only after you tick the consent boxes.</p>
       <h2>What leaves your device</h2>
       <ul>
         <li>Loading the site and the city list from our static host (standard web server logs such as IP address, kept by the host).</li>
@@ -16,7 +16,7 @@ function PageEn() {
         <li>Nothing else. No analytics cookies, no advertising trackers. We never sell data.</li>
       </ul>
       <h2>Sensitive answers</h2>
-      <p>Quiz answers about relationships, feelings and your body can be personal. Without an account they stay on your device. With an account they are stored only after you give explicit consent, and you can withdraw it by deleting your account. Profile codes you choose to share contain your birth data and results — only share them with people you trust.</p>
+      <p>Quiz answers about relationships, feelings and your body can be personal. Without an account they stay on your device. With an account they are stored only after you give explicit consent, and you can withdraw it by deleting your account. Profile codes you choose to share contain your birth data and results, only share them with people you trust.</p>
       <h2>Other people</h2>
       <p>If you add someone else, their data stays on your device, and in your account if you have one. Please add people with their knowledge. They (or you) can delete them any time.</p>
       <h2>Deleting your account</h2>

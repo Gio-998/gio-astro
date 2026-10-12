@@ -20,9 +20,9 @@ function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile
       const line = (x: SynAspect) => U.aspectLine(na, c.astro.points[x.a].name, c.astro.aspects[x.type].tone, nb, c.astro.points[x.b].name, c.astro.aspects[x.type].symbol, x.orb.toFixed(1));
       return (
         <div className="space-y-2 text-sm">
-          {d.supportive.length > 0 && <div><p className="font-semibold text-sage">{U.supportive}</p>{(d.supportive as SynAspect[]).map((x, i) => <p key={i}>• {line(x)} — {c.astro.aspects[x.type].pair}. {U.touches(c.astro.points[x.a].governs, c.astro.points[x.b].governs)}</p>)}</div>}
-          {d.growth.length > 0 && <div><p className="font-semibold text-rose">{U.growthLinks}</p>{(d.growth as SynAspect[]).map((x, i) => <p key={i}>• {line(x)} — {c.astro.aspects[x.type].pair}.</p>)}</div>}
-          <p className="text-xs text-dim">{U.elements}{(d.elements as { point: string; a: string; b: string; kind: string }[]).map((e) => `${c.astro.points[e.point as "sun"].name} ${c.astro.elements[e.a as "fire"].name}–${c.astro.elements[e.b as "fire"].name} (${U.kinds[e.kind] ?? e.kind})`).join(" · ")}. {d.usedAsc ? U.risingIncl : U.risingAdd}</p>
+          {d.supportive.length > 0 && <div><p className="font-semibold text-sage">{U.supportive}</p>{(d.supportive as SynAspect[]).map((x, i) => <p key={i}>• {line(x)}: {c.astro.aspects[x.type].pair}. {U.touches(c.astro.points[x.a].governs, c.astro.points[x.b].governs)}</p>)}</div>}
+          {d.growth.length > 0 && <div><p className="font-semibold text-rose">{U.growthLinks}</p>{(d.growth as SynAspect[]).map((x, i) => <p key={i}>• {line(x)}: {c.astro.aspects[x.type].pair}.</p>)}</div>}
+          <p className="text-xs text-dim">{U.elements}{(d.elements as { point: string; a: string; b: string; kind: string }[]).map((e) => `${c.astro.points[e.point as "sun"].name} ${c.astro.elements[e.a as "fire"].name}/${c.astro.elements[e.b as "fire"].name} (${U.kinds[e.kind] ?? e.kind})`).join(" · ")}. {d.usedAsc ? U.risingIncl : U.risingAdd}</p>
         </div>
       );
     }
@@ -31,7 +31,7 @@ function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile
       return (
         <div className="text-sm">
           <p className="mb-2">Guna Milan: <b className="text-gold">{g.total} / 36</b> ({A.vedic.nakshatra === B.vedic.nakshatra ? U.sameStar : `${c.vedic.nakshatras[A.vedic.nakshatra].name} × ${c.vedic.nakshatras[B.vedic.nakshatra].name}`})</p>
-          {g.kootas.map((k) => <Bar key={k.id} value={(k.points / k.max) * 100} label={`${c.vedic.kootas[k.id].name} — ${c.vedic.kootas[k.id].plain}`} right={`${k.points}/${k.max}`} color="bg-sage" />)}
+          {g.kootas.map((k) => <Bar key={k.id} value={(k.points / k.max) * 100} label={`${c.vedic.kootas[k.id].name}: ${c.vedic.kootas[k.id].plain}`} right={`${k.points}/${k.max}`} color="bg-sage" />)}
           {g.cautions.map((x) => <p key={x} className="mt-1 text-xs">◦ {c.vedic.vedicCautions[x]}</p>)}
           {g.cancellations.map((x) => <p key={x} className="mt-1 text-xs text-sage">✓ {c.vedic.vedicCancellations[x]}</p>)}
           <p className="mt-2 text-xs text-dim">{c.vedic.vedicNote}</p>
@@ -44,7 +44,7 @@ function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile
         <div className="text-sm">
           <p className="font-semibold">{ANIMAL_GLYPH[A.chinese.animal]} {c.chinese.animals[A.chinese.animal].name} × {ANIMAL_GLYPH[B.chinese.animal]} {c.chinese.animals[B.chinese.animal].name}: {rel.name}</p>
           <p>{rel.text}</p>
-          <p className="mt-1">{d.usedDayMaster ? U.dayMasters : U.yearEls}: {c.chinese.wuxing[d.elementA as "wood"].name} & {c.chinese.wuxing[d.elementB as "wood"].name} — {c.chinese.elementRelations[d.elementRelation.rel as "same"]}</p>
+          <p className="mt-1">{d.usedDayMaster ? U.dayMasters : U.yearEls}: {c.chinese.wuxing[d.elementA as "wood"].name} & {c.chinese.wuxing[d.elementB as "wood"].name}. {c.chinese.elementRelations[d.elementRelation.rel as "same"]}</p>
           {(d.fills as { giver: string; element: string }[]).map((f, i) => <p key={i} className="text-xs text-sage">✓ {U.brings(f.giver === "a" ? na : nb, c.chinese.wuxing[f.element as "wood"].name)}</p>)}
         </div>
       );
@@ -55,7 +55,7 @@ function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile
         {d.soul && <p className="mt-1">{U.soulUrges(A.numbers.name?.soulUrge, B.numbers.name?.soulUrge)}{c.nums.numberPairKinds[d.soul.kind]}</p>}
       </div>
     );
-    case "tarot": { const card = c.nums.tarot[MAJOR_ARCANA[d.relationshipCard as number]]; return <p className="text-sm">{U.relCard}<b className="text-gold">{card.name}</b> — {card.keyword}. {U.tarotTogether(card.birth)}</p>; }
+    case "tarot": { const card = c.nums.tarot[MAJOR_ARCANA[d.relationshipCard as number]]; return <p className="text-sm">{U.relCard}<b className="text-gold">{card.name}</b>: {card.keyword}. {U.tarotTogether(card.birth)}</p>; }
     case "yinyang": return <p className="text-sm">{U.yinyang(d.a, d.b, d.center, Math.abs(d.a - d.b) > 25)}</p>;
     case "bigfive": return (
       <div className="text-sm">
