@@ -75,7 +75,7 @@ export const wuxingDeep: Record<WuXing, { title: string; story: string; season: 
 /** Chinese animal of the current/coming years, and how each relation feels in a year. */
 export const yearRelation: Record<"six-harmony" | "trine" | "same" | "neutral" | "harm" | "clash", string> = {
   "six-harmony": "Tradition counts this year's animal as a secret friend of yours. Expect quiet help, good alliances and doors opened by others: say yes to collaboration.",
-  trine: "This year's animal belongs to your own team of four. The year tends to support your natural style: a good time to push forward the things you most care about.",
+  trine: "This year's animal belongs to your own team of three. The year tends to support your natural style: a good time to push forward the things you most care about.",
   same: "This is your own animal year (a 'ben ming nian'). Tradition sees it as a year of turning points: wonderful for reinventing yourself, wise for avoiding reckless risks. Many people wear red for protection.",
   neutral: "This year's animal neither helps nor hinders you in tradition. The year is shaped by what you plant: a good moment for steady, deliberate effort.",
   harm: "Tradition sees small misunderstandings between your animal and this year's. Clear communication, double-checking agreements and kindness in small matters smooth the way.",

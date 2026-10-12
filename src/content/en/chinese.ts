@@ -25,7 +25,7 @@ export const wuxing: Record<WuXing, { name: string; text: string; color: string 
 
 export const animalRelations: Record<AnimalRelation, { name: string; text: string }> = {
   "six-harmony": { name: "Secret friends (Six Harmonies)", text: "Tradition calls this one of the six harmonious pairs: a quiet, natural alliance where each covers the other's blind spot." },
-  trine: { name: "Same-team trine", text: "You belong to the same group of four that shares values and rhythm: understanding comes easily." },
+  trine: { name: "Same-team trine", text: "You belong to the same group of three that shares values and rhythm: understanding comes easily." },
   same: { name: "Mirror animals", text: "You share an animal, so you recognise each other fast: strengths and stubborn habits included." },
   neutral: { name: "Open field", text: "Tradition gives no strong pull either way. This bond is shaped mostly by what you build." },
   harm: { name: "Sensitive pair", text: "Tradition flags small misunderstandings here. Clear words and kindness about small things make the difference." },

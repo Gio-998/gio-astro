@@ -72,7 +72,7 @@ export const lifePathPair: Record<"mirror" | "family" | "friendly" | "contrast",
 };
 export const chinesePair: Record<string, string> = {
   "six-harmony": "In Chinese tradition your animals form a 'secret friend' pair. One of the most supportive bonds on the wheel. You tend to protect and complete each other.",
-  trine: "Your animals belong to the same team of four: natural allies who share a style and pace.",
+  trine: "Your animals belong to the same team of three: natural allies who share a style and pace.",
   same: "You share the same animal: deep familiarity, the same strengths and the same stubborn spots.",
   neutral: "Your animals are neutral in tradition: the bond is shaped by what you build, not by fate.",
   harm: "Tradition says your animals can misunderstand each other in small ways. Clear communication solves most of it.",
