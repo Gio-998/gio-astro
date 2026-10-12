@@ -352,6 +352,7 @@ export const misc = {
 };
 
 export const auth = {
+  captchaNeeded: "Please complete the quick check above the button first.",
   chipOut: "Save across devices", chipIn: "Account",
   eyebrow: "Your account · optional", titleA: "Keep your sky ", titleB: "on every device",
   sub: "Everything works without an account. Sign in to back up your profile, quizzes, people, Bond Checks and journal, and to see them on your phone and laptop.",
