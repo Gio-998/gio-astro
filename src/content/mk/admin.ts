@@ -10,7 +10,7 @@ export const admin: Admin = {
   testersCount: (n: number) => `${n} ${n === 1 ? "профил" : "профили"}`,
   addTitle: "Покани луѓе", addHint: "Една е-пошта во ред, или залепи листа.", add: "Додај во листата на покани",
   added: (n: number) => `Додадени во листата: ${n}.`,
-  invited: "Поканети", waitlist: "Листа на чекање", joinedOn: (d: string) => `се приклучи на ${d}`, notJoined: "сè уште не се регистрирал/а",
+  invited: "Поканети", waitlist: "Листа на чекање", joinedOn: (d: string) => `се приклучи на ${d}`, notJoined: "сè уште нема регистрација",
   invite: "Покани", inviteSend: "Покани + е-пошта", email: "Е-пошта", gmail: "Gmail", copy: "Копирај порака", copied: "Копирано ✓",
   uninvite: "Откажи покана", remove: "Отстрани", confirmUninvite: (e: string) => `Да се отстрани ${e} од листата на покани? Ако веќе има профил, тој останува; само не може повторно да се регистрира со оваа покана.`,
   confirmRemove: (e: string) => `Да се отстрани ${e} од листата на чекање?`,

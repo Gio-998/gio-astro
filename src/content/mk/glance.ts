@@ -24,7 +24,7 @@ export const glance: Glance = {
   attachMap: "Каде си: грижа за блискоста (горе) и потреба од простор (десно).",
   nineWing: (t: number, w: number) => `Тип ${t}, со допир од ${w}`,
   nineArrows: (g: number, s: number) => `Растеш кон ${g} · стресот те влече кон ${s}`,
-  careHead: (a: string, b: string) => `Се чувствуваш сакан/а преку: ${a.toLowerCase()} и ${b.toLowerCase()}.`,
+  careHead: (a: string, b: string) => `Љубовта ја чувствуваш преку: ${a.toLowerCase()} и ${b.toLowerCase()}.`,
   careGives: (g: string) => `Љубовта ја покажуваш со: ${g.toLowerCase()}.`,
   shadowHead: (light: string, shadow: string) => `Твојата светлина: ${light.toLowerCase()}. Сенката со која треба да се спријателиш: ${shadow.toLowerCase()}.`,
   doshaMix: "Твојата мешавина",
