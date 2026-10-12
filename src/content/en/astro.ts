@@ -36,7 +36,7 @@ export const signs: Record<Sign, SignText> = {
     gifts: "skill, devotion, discernment", edge: "being as gentle with yourself as you are with others" },
   libra: { name: "Libra", essence: "the scales seeking harmony",
     sun: "You're drawn to beauty, fairness and partnership. You see both sides and want everyone to feel included.",
-    moon: "Conflict unsettles you deeply; peace, kindness and a beautiful space restore you.",
+    moon: "Conflict rattles you; peace, kindness and a beautiful space restore you.",
     rising: "People meet you as gracious, charming and easy to talk to.",
     gifts: "diplomacy, taste, fairness", edge: "choosing even when someone may be disappointed" },
   scorpio: { name: "Scorpio", essence: "the deep water that transforms",

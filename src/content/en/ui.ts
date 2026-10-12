@@ -295,7 +295,7 @@ export const quiz = {
   min: (m: number) => `⏱ ${m} min`,
   items: (n: number) => `${n} items`,
   answeringA: "Answering as ",
-  answeringB: " Hand them the phone: answers should be theirs.",
+  answeringB: ". Hand them the phone, because the answers should be theirs.",
   unlocks: (u: string) => `Unlocks: ${u}. Your full result is free and shown right away.`,
   begin: "Begin ✦",
   qOf: (i: number, n: number) => `Question ${i} of ${n}`,

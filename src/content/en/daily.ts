@@ -36,7 +36,7 @@ export const personalDay: Record<number, string> = {
 export const prompts: string[] = [
   "Which relationship gave me energy this week, and why?",
   "What do I need right now that I haven't asked for?",
-  "When did I last feel truly understood? What made it possible?",
+  "When did I last feel really understood? What made it possible?",
   "What story am I telling myself about someone close to me? Is it the whole story?",
   "What would my kindest friend say to me today?",
   "What am I holding on to that I could gently put down?",

@@ -1,7 +1,7 @@
 /** Frame text for "The Book of You" and per-lens deep pages. */
 export const book = {
   title: "The Book of You",
-  subtitle: "A long-form reading woven from every lens you've unlocked",
+  subtitle: "A long reading built from every lens you've opened",
   eyebrow: "Your story",
   langNote: "" as string,
   toc: "Contents",
@@ -28,7 +28,7 @@ export const book = {
   takeQuiz: "Take the quiz",
   honest: "This reading is a mirror for reflection, written from traditional symbolic systems and personality questionnaires. It isn't a prediction or a diagnosis. Keep what rings true, question what doesn't.",
   intro: (name: string, n: number) => `${name}, this book is assembled from ${n} lenses: the sky on the day you were born, the old calendars of China and India, the numbers in your birth date, and, as you unlock them, the answers you gave about yourself. Read it slowly. Some pages will feel like a portrait; others like a question. Both are useful.`,
-  lensCount: (n: number) => `${n} lenses woven in`,
+  lensCount: (n: number) => `Built from ${n} lenses`,
   chapters: {
     essence: { title: "Your Essence", kicker: "Sun, Moon and Rising: the three lights you were born under" },
     love: { title: "How You Love", kicker: "Venus, the Moon, your attachment pattern and your care style" },
@@ -47,11 +47,11 @@ export const book = {
   venusIn: (s: string) => `Venus in ${s}`, marsIn: (s: string) => `Mars in ${s}`, mercuryIn: (s: string) => `Mercury in ${s}`, nodeIn: (s: string) => `North Node in ${s}`,
   bodyLabel: "Body", mindLabel: "Mind",
   needs: "What you need", healsLabel: "What restores you",
-  moonUnknown: (a: string) => `Without a birth time your Moon could be in ${a} Below is the reading for the more likely sign: read the other one in the deep dive and see which feels true.`,
+  moonUnknown: (a: string) => `Without a birth time your Moon could be in ${a}. Below is the reading for the more likely sign. Read the other one in the deep dive and see which feels true.`,
   noRising: "Add your birth time and place to unlock your rising sign: the doorway through which people first meet you.",
   sunMoonBridge: "How your Sun and Moon speak to each other",
   agree: (n: number, what: string, lenses: string) => `${n} of your lenses point to the same quality: ${what}. It shows up in ${lenses}.`,
-  differ: (a: string, b: string) => `Not everything agrees: ${a}, while ${b} That tension is not a mistake. It is often where your most interesting growth happens.`,
+  differ: (a: string, b: string) => `Not everything agrees: ${a}, while ${b}. That tension is no mistake. Your most interesting growth often happens right there.`,
   elementName: { fire: "Fire", earth: "Earth", air: "Air", water: "Water" } as Record<string, string>,
   lensNames: { sun: "your Sun sign", moon: "your Moon sign", dominant: "the overall element balance of your chart", temperament: "your classical temperament", dosha: "your body-energy type", chinese: "your Chinese year element", day: "your Chinese Day Master", rising: "your rising sign" } as Record<string, string>,
   elementPoint: (lens: string, el: string) => `${lens} leans ${el}`,
@@ -110,5 +110,5 @@ export const book = {
   ritualsMoon: (phase: string) => `This moon phase: ${phase}`,
   ritualsCollected: "Your personal practice list",
   ritualsJournal: "Twelve questions for the year",
-  closing: "The point of a reading is not to tell you who you are. It is to give you better words for who you already are, and a few new doors to try. Come back as you unlock more lenses; the book grows with you.",
+  closing: "A reading can't tell you who you are. What it can do is give you better words for who you already are, and a few new doors to try. Come back as you unlock more lenses; the book grows with you.",
 };

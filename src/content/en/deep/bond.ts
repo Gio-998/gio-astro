@@ -12,7 +12,7 @@ export const meetPair: Record<PairKey, string> = {
   "earth-water": "Earth and water meet like a riverbank and its river: naturally. There's a feeling of comfort and care from early on. Water feels held by earth's steadiness; earth feels softened by water's warmth. This is one of the most nurturing combinations of all.",
   "air-air": "Two airs meet in conversation and keep talking. You understand each other's minds quickly, share ideas, laugh at the same things and give each other freedom. The early question is depth: who will slow down enough to feel, not only to think?",
   "air-water": "Air thinks, water feels. At first each is intrigued by the other's world: air by water's intuition, water by air's clarity. You can teach each other a great deal, and you may also feel like you speak different languages. Patience turns this into a beautiful translation.",
-  "water-water": "Two waters sense each other before a word is spoken. There's empathy, intuition and a feeling of being deeply understood. The bond can become very close very quickly. The lesson is boundaries: knowing whose feelings are whose.",
+  "water-water": "Two waters sense each other before a word is spoken. There's empathy, intuition and the feeling of being understood without having to explain. The bond can become very close very quickly. The lesson is boundaries: knowing whose feelings are whose.",
 };
 export const heartPair: Record<PairKey, string> = {
   "fire-fire": "Emotionally you both react fast and recover fast. Feelings are expressed directly, which keeps things honest, and can lead to sudden flare-ups. You feel loved through enthusiasm, attention and shared action.",
@@ -53,9 +53,9 @@ export const desirePair: Record<PairKey, string> = {
 
 export const attachPair: Record<string, { text: string; flag?: string }> = {
   "secure-secure": { text: "You both feel fairly safe with closeness and with space. Conflicts are uncomfortable but not catastrophic; you can repair. This is the strongest foundation research knows for long-term happiness." },
-  "anxious-secure": { text: "The secure partner's steadiness can calm the anxious partner's fears over time: a truly healing combination when the secure one offers reassurance and the anxious one learns to trust it." },
+  "anxious-secure": { text: "The secure partner's steadiness can calm the anxious partner's fears over time. That can be a healing combination when the secure one offers reassurance and the anxious one learns to trust it." },
   "avoidant-secure": { text: "The secure partner gives the avoidant one room without punishment, and gently invites closeness. Over time this can soften the avoidant pattern." },
-  "fearful-secure": { text: "The secure partner's consistency can be deeply healing for the fearful one, if both are patient with the push-pull." },
+  "fearful-secure": { text: "The secure partner's consistency can be very healing for the fearful one, if both are patient with the push-pull." },
   "anxious-anxious": { text: "You both crave closeness and reassurance. You understand each other's fears, and can trigger them. Together you need extra calm: slow responses, clear reassurance, shared self-soothing.", flag: "Two anxious hearts can spiral together. If a fight starts with 'you don't care', pause, breathe and reassure before discussing." },
   "anxious-avoidant": { text: "This is the classic pursue-withdraw dance: the more one reaches, the more the other retreats, and the more the other retreats, the more the first reaches. It's very common and very workable once you see it.", flag: "Watch the pursue-withdraw loop. The anxious one practises self-soothing; the avoidant one practises saying 'I need an hour, then I'll come back', and coming back." },
   "anxious-fearful": { text: "Both of you long for closeness and feel worried about it. You may understand each other's pain intimately. Consistency and gentleness are essential." , flag: "Mixed signals can amplify worry on both sides. Agree simple, clear check-in habits." },
@@ -66,8 +66,8 @@ export const attachPair: Record<string, { text: string; flag?: string }> = {
 
 export const lifePathPair: Record<"mirror" | "family" | "friendly" | "contrast", string> = {
   mirror: "You walk the same Life Path number. You understand each other's life lessons from the inside, and may also repeat each other's blind spots.",
-  family: "Your Life Paths belong to the same family of numbers: your life rhythms and values tend to resonate naturally.",
-  friendly: "Your Life Paths are traditional 'friends': different journeys that support each other.",
+  family: "Your Life Paths belong to the same family of numbers: your life rhythms and values tend to fall into step naturally.",
+  friendly: "Your Life Paths are traditional 'friends': different roads that support each other.",
   contrast: "Your Life Paths are quite different: you'll show each other ways of living the other wouldn't choose alone, exciting and educational.",
 };
 export const chinesePair: Record<string, string> = {

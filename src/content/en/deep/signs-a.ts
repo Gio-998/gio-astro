@@ -7,7 +7,7 @@ export const aries: SignDeep = {
   sun: {
     story: [
       "There is a part of you that wakes up before the rest of the world. While others are still weighing the options, you have already felt the pull: toward the open door, the unclaimed idea, the person who needs defending. Your Sun in Aries is the energy of first things: the first step, the first word, the first time anyone dared. You are at your most alive at the beginning of a story, when everything is still possible and nothing has yet gone stale.",
-      "This is not recklessness, though people sometimes mistake it for that. It is a kind of honesty of the body. You know what you want by moving toward it. You test ideas by trying them. You find out who people are by being direct and watching what they do with your directness. Underneath the speed lives something tender: a wish to be brave enough for everyone, and a surprise, sometimes a hurt, when the world is slower, more careful or less sincere than you are.",
+      "People sometimes mistake this for recklessness. It's closer to an honesty of the body. You know what you want by moving toward it. You test ideas by trying them. You find out who people are by being direct and watching what they do with your directness. Underneath the speed lives something tender: a wish to be brave enough for everyone, and a surprise, sometimes a hurt, when the world is slower, more careful or less sincere than you are.",
       "Your life tends to be built from bold chapters rather than slow seasons. The art for you is not to become someone calmer, but to learn the second half of courage: staying. Finishing. Letting a fire become a hearth.",
     ],
     love: "In love you are a pursuer and a protector. You fall quickly and show it plainly, and you want a partner who can meet you with equal honesty. Someone who can spar, laugh and make up in the same evening. Games bore you; mixed signals make you restless. You feel most loved when someone is genuinely glad to see you and brave enough to say what they feel.",
@@ -49,7 +49,7 @@ export const taurus: SignDeep = {
       "You are steady in a way that others lean on without always noticing. You don't rush, and you don't like to be rushed. When you decide something, you decide with your whole body, and it takes a great deal to move you afterwards. This is both your power and your puzzle: you can endure what would break more restless people, and you can also stay too long in a place that has stopped feeding you.",
       "Your path is about worth: what you value, what you are worth, and learning that comfort is not the same as safety. The deepest security you can build is inside you, and once you find it, you become a quiet, fertile ground on which others can grow.",
     ],
-    love: "In love you are loyal, sensual and devoted. You show care through presence and practical comfort: the meal, the hand on the back, the remembered preference. You need a partner who is consistent and real, and who understands that your slowness to open is not coldness. It is your way of making sure love will last.",
+    love: "In love you are loyal, sensual and devoted. You show care through presence and practical comfort: the meal, the hand on the back, the remembered preference. You need a partner who is consistent and real, and who understands that your slowness to open has nothing to do with coldness. You're making sure love will last.",
     friends: "As a friend you are the one with the open kitchen and the long memory. You are not the loudest in the group, but you are the one people call when life falls apart, because you stay calm and you stay.",
     work: "You excel at work that builds value over time: craft, finance, design, food, gardening, management, anything where quality and reliability matter. You resist change for its own sake: make sure you also notice when change is actually the reliable choice.",
     family: "In family you are often the anchor: keeper of traditions, recipes, photos and holiday rituals. You may carry the family's practical worries without complaint. Remember to ask for help before your patience runs dry.",
@@ -63,7 +63,7 @@ export const taurus: SignDeep = {
     shadows: ["Stubbornness disguised as principle", "Holding on to what is familiar after it has stopped serving you", "Possessiveness when you feel insecure", "Comfort-seeking that turns into avoidance"],
     growth: "Your growth edge is flexibility: learning that letting go of one thing is often how the garden makes room for the next harvest.",
     practices: ["Once a week, change one small habit on purpose (a new route, a new dish): teach your body that change can be safe.", "Before a big purchase or decision, ask: 'Am I choosing this because it nourishes me, or because it feels familiar?'", "Spend time with your hands in something real: soil, dough, clay, wood."],
-    journal: ["What do I truly value, separate from what I was taught to value?", "Where am I staying out of loyalty when the truer loyalty is to myself?", "What are the five small pleasures that make an ordinary day feel rich?"],
+    journal: ["What do I really value, apart from what I was taught to value?", "Where am I staying out of loyalty when the truer loyalty is to myself?", "What are the five small pleasures that make an ordinary day feel rich?"],
   },
   moon: {
     story: "With your Moon in Taurus, your emotions are slow, deep and grounded in the body. You need time to process, and you feel safest when life has a rhythm you can count on. Once you feel secure, you are one of the most peaceful and generous people anyone knows. When your stability is shaken (a move, a betrayal, sudden change) you can go very quiet and very stubborn until the ground feels solid again.",
@@ -80,17 +80,17 @@ export const taurus: SignDeep = {
 
 export const gemini: SignDeep = {
   title: "The Twin Messenger",
-  quote: "Your curiosity is not restlessness. It is how you love the world.",
+  quote: "Your curiosity is how you love the world.",
   myth: "Gemini is the sign of the twins: in Greek myth, Castor and Pollux, one mortal and one divine, so devoted to each other that they chose to share immortality, alternating between earth and sky. Its ruler Mercury is the messenger who moves between worlds, carrying words, trading stories and guiding travellers at crossroads.",
   sun: {
     story: [
       "Your mind is a bright, open window, and the whole world keeps blowing in. A conversation overheard on a train, a word in another language, a fact about octopuses, a friend's new problem. Everything sparks a connection, and every connection sparks another. Your Sun in Gemini is the energy of the messenger: you are here to learn, to link and to translate one world for another.",
-      "People sometimes call you changeable, but what they are really seeing is range. You can be playful and serious in the same hour, at home in many rooms, fluent in many kinds of people. You understand things by talking them out, and you often only know what you think after you have said it. The danger is not that you are shallow. It is that you are so good at the surface that you sometimes forget to let yourself be known underneath it.",
+      "People sometimes call you changeable, but what they are really seeing is range. You can be playful and serious in the same hour, at home in many rooms, fluent in many kinds of people. You understand things by talking them out, and you often only know what you think after you have said it. You're not shallow. The risk is that you're so good at the surface that you sometimes forget to let yourself be known underneath it.",
       "Your path is about integration: letting your two (or ten) sides speak to each other, and finding the few people and passions worth going deep with. When your curiosity grows roots, it becomes wisdom.",
     ],
     love: "In love you need a friend first: someone who can talk with you until 2 a.m., laugh at the same strange things and keep surprising you. Boredom is the real threat to your relationships, more than conflict. You show love by sharing: articles, jokes, ideas, your whole messy mind. You feel loved when someone is genuinely curious about you.",
     friends: "You probably have friends from many different worlds who would never meet if not for you. You are the connector, the one who introduces people, knows the gossip and the good restaurant, and keeps the group chat alive.",
-    work: "You thrive in roles with variety, communication and learning: writing, teaching, media, sales, languages, tech, anything with lots of input. Routine work without a learning curve dims you quickly. Batch your many interests into projects with deadlines, so they become achievements, not just tabs left open.",
+    work: "You thrive in roles with variety, communication and learning: writing, teaching, media, sales, languages, tech, anything with lots of input. Routine work without a learning curve dims you quickly. Batch your many interests into projects with deadlines, so they become achievements instead of tabs left open.",
     family: "In family you are often the communicator: the one who keeps siblings in touch or explains one generation to another. You may have a special bond with a sibling, cousin or close friend who feels like a twin.",
     daily: [
       "Having three books, five podcasts and a dozen browser tabs going at once.",
@@ -119,7 +119,7 @@ export const gemini: SignDeep = {
 
 export const cancer: SignDeep = {
   title: "The Keeper of the Tide",
-  quote: "Your softness is not a weakness. It is the shelter others find their way home to.",
+  quote: "Your softness is the shelter other people find their way home to.",
   myth: "Cancer is ruled by the Moon, the oldest symbol of rhythm, memory and the mother. Its creature is the crab, which carries its home on its back and moves sideways around danger. In myth, the crab was set among the stars by the queen of the gods for its loyalty: a small creature remembered for its courage in protecting what it loved.",
   sun: {
     story: [
@@ -127,7 +127,7 @@ export const cancer: SignDeep = {
       "Your outer shell can look cautious or even tough, but the inside is tidal. Your moods move with something deeper than logic, and they often hold wisdom your mind has not caught up with yet. You protect fiercely. You remember fiercely. When you feel safe, you are funny, playful and surprisingly bold, and when you don't, you can disappear into the shell and wait for the weather to change.",
       "Your path is about becoming your own safe harbour: learning to mother yourself as well as you mother others, and to say plainly what you need instead of hoping it will be sensed. When you do, your care becomes a strength that nothing can wash away.",
     ],
-    love: "In love you are devoted, nurturing and deeply romantic. You show care by feeding, remembering and protecting. You need a partner who is emotionally present, who values family and home, and who reassures you without being asked. Your sensitivity makes you an exquisite lover and a quick reader of moods; your lesson is to voice hurt before it becomes withdrawal.",
+    love: "In love you are devoted, nurturing and romantic to the bone. You show care by feeding, remembering and protecting. You need a partner who is emotionally present, who values family and home, and who reassures you without being asked. Your sensitivity makes you an exquisite lover and a quick reader of moods; your lesson is to voice hurt before it becomes withdrawal.",
     friends: "You are the friend who remembers what someone said three years ago and brings soup when they're ill. Your friendships often become family. You may keep a small, trusted inner circle rather than a wide crowd.",
     work: "You thrive where you can care and protect: health, teaching, hospitality, family businesses, HR, real estate, food, history and anything involving memory or home. You work best in a team that feels like a family, and you may take workplace coldness more personally than others.",
     family: "Family is central to your story: whether the one you were born into, or the one you build. You may be the emotional heart of the household, the keeper of photos and traditions, or the one who heals an old family pattern.",

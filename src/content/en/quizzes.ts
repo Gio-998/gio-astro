@@ -74,7 +74,7 @@ export const explorer: Record<string, { q: string; left: string; right: string }
   simplify: { q: "With complex problems, I…", left: "look for the simple answer", right: "enjoy exploring the nuances" },
   certainty: { q: "My opinions are…", left: "usually firm and clear", right: "always open to other angles" },
   evidence: { q: "I decide mostly from…", left: "what has worked before", right: "reasoning it through fresh" },
-  image: { q: "I care most about…", left: "what others will think", right: "what I truly think, even if unpopular" },
+  image: { q: "I care most about…", left: "what others will think", right: "what I really think, even if it's unpopular" },
 };
 export const stance: Record<string, string> = {
   conf1: "In a group, I naturally take the lead.",

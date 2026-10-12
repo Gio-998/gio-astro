@@ -47,9 +47,9 @@ export const virgo: SignDeep = {
     story: [
       "You see what others miss: the crooked line, the forgotten step, the quiet person who needs help but won't ask. Your Sun in Virgo is the energy of the healer and the craftsperson. Someone who loves through attention and improvement. Where others see chaos, you see a system waiting to be found; where others see a problem, you see the first small thing that could be done today.",
       "Your devotion runs deeper than people realise. You may not make grand declarations, but you notice, remember and quietly fix. The shadow of this gift is a critic who lives in your own head and rarely sleeps. You can hold yourself to a standard no human could meet, and feel anxious when life refuses to be orderly. Much of your growth is learning that 'good enough' is not failure, and that you are lovable before you are useful.",
-      "Your path is about sacred service: work done with care, a body treated with respect, a mind used in the service of something good. When you let yourself be imperfect, your skill becomes pure gift.",
+      "Your path is about devoted service: work done with care, a body treated with respect, a mind used in the service of something good. When you let yourself be imperfect, your skill becomes pure gift.",
     ],
-    love: "In love you show devotion through acts: the fixed bike, the packed lunch, the reminder about the dentist. You are discerning and may take time to choose, but once you do, you are deeply loyal. You need a partner who values your care, respects your need for order and gently helps you relax the inner critic.",
+    love: "In love you show devotion through acts: the fixed bike, the packed lunch, the reminder about the dentist. You are discerning and may take time to choose, but once you do, you are loyal for good. You need a partner who values your care, respects your need for order and gently helps you relax the inner critic.",
     friends: "You are the friend who gives the best practical advice, knows the right doctor and notices when someone is not eating. You may prefer a few deep, reliable friendships to a big social whirl.",
     work: "You excel in work that demands precision and care: health, research, editing, analysis, craft, operations, nutrition, programming, accounting. You are the colleague who catches the mistake before it costs money. Guard against burning out by trying to fix everything personally.",
     family: "In family you are often the helper and the organiser: the one who handles appointments, paperwork and the elderly relative's medication. Make sure your helpfulness is noticed, and that someone helps you too.",
@@ -105,16 +105,16 @@ export const libra: SignDeep = {
     journal: ["What do I want when no one else's opinion is in the room?", "Where am I keeping the peace at the cost of my truth?", "What does fairness toward myself look like?"],
   },
   moon: {
-    story: "With your Moon in Libra, conflict unsettles you deeply. You feel safe when the people around you are at peace and when your environment is beautiful and calm. You process feelings through relationship: talking with a partner or close friend helps you know what you feel. You may suppress anger to maintain harmony, which can leave you quietly drained.",
+    story: "With your Moon in Libra, conflict shakes you more than you let on. You feel safe when the people around you are at peace and when your environment is beautiful and calm. You process feelings through relationship: talking with a partner or close friend helps you know what you feel. You may suppress anger to maintain harmony, which can leave you quietly drained.",
     needs: "You need harmony, companionship, beauty, fairness and gentle communication.",
     heals: "Art, music, a beautiful space, kind conversation, dressing well, and someone who listens without taking sides.",
     daily: "When something upsets you, you may first ask yourself whether you're being fair before you allow yourself to feel hurt.",
   },
   rising: "With Libra rising, people meet you as gracious, charming and easy to talk to. You have an eye for style and a natural social ease. You read the room carefully and adjust to keep things pleasant. Your first impression is usually lovely; your deeper opinions come later.",
-  venus: "Venus is at home in Libra: you love with grace and fairness. You are attracted to beauty, kindness and intelligent conversation. You show love through courtesy, romance and thoughtful attention. You need an equal partnership in which both people truly matter.",
+  venus: "Venus is at home in Libra: you love with grace and fairness. You are attracted to beauty, kindness and intelligent conversation. You show love through courtesy, romance and thoughtful attention. You need an equal partnership in which both people really matter.",
   mars: "Mars in Libra acts through partnership and persuasion. You prefer to win people over rather than fight them, and you fight hardest for fairness. Anger may be hidden behind politeness. Your strength grows when you act on your own wishes, not only others'.",
   mercury: "Mercury in Libra thinks in comparisons and balances. You see both sides of every argument and speak diplomatically. You may struggle to commit to one view. Your gift is mediation and elegant communication.",
-  node: "Your North Node in Libra points toward partnership and cooperation. Growth lies in learning to share, compromise and truly consider others: softening a fierce self-reliance into collaboration.",
+  node: "Your North Node in Libra points toward partnership and cooperation. Growth lies in learning to share, compromise and actually consider others: softening a fierce self-reliance into collaboration.",
 };
 
 export const scorpio: SignDeep = {
@@ -124,7 +124,7 @@ export const scorpio: SignDeep = {
   sun: {
     story: [
       "You were born with x-ray eyes for the truth. Small talk feels like a coat you put on for other people; what you really want is to know what's underneath: the real motive, the hidden wound, the secret dream. Your Sun in Scorpio is the energy of depth, intensity and transformation. You love all the way or not at all, and you would rather face a hard truth than live a pleasant lie.",
-      "You feel more than you show. Your privacy is a protective wall built from experience, and trust is earned slowly with you. Once someone is inside your circle, your loyalty is total and your protectiveness fierce. But betrayal cuts you more deeply than most, and you may carry old hurts for years, or test people to make sure they will not leave before you let yourself rely on them.",
+      "You feel more than you show. Your privacy is a protective wall built from experience, and trust is earned slowly with you. Once someone is inside your circle, your loyalty is total and your protectiveness fierce. But betrayal cuts you deeper than most, and you may carry old hurts for years, or test people to make sure they will not leave before you let yourself rely on them.",
       "Your path is about transformation: letting go of what has died so that something truer can grow, and learning that real power comes not from control but from surrender to change. You are the phoenix, and every ending you survive makes you wiser.",
     ],
     love: "In love you want soul-level intimacy: emotional, physical and psychological. You are passionate, loyal and perceptive, and you need a partner who can handle depth and honesty. Shallow romance bores you. You show love through total devotion. Your lesson is trust: letting your partner prove themselves through time rather than tests.",
@@ -144,14 +144,14 @@ export const scorpio: SignDeep = {
     journal: ["What am I still holding on to that is ready to die?", "Where do I control because I'm afraid to trust?", "What has every ending in my life taught me?"],
   },
   moon: {
-    story: "With your Moon in Scorpio, you feel everything intensely and show little until you trust. Your emotional world is like a deep lake: calm on the surface, vast underneath. You need emotional honesty and loyalty above everything, and you may find it hard to forgive betrayal. True closeness heals you deeply; superficial comfort doesn't touch you.",
+    story: "With your Moon in Scorpio, you feel everything intensely and show little until you trust. Your emotional world is like a deep lake: calm on the surface, vast underneath. You need emotional honesty and loyalty above everything, and you may find it hard to forgive betrayal. Real closeness heals you. Small talk and polite comfort don't even reach you.",
     needs: "You need privacy, loyalty, emotional honesty, and a bond that can hold your whole intensity.",
     heals: "Deep conversation, solitude, water, transforming pain into art or insight, and someone who stays even when you show your darkness.",
     daily: "When hurt, you may go very still and quiet while deciding whether to forgive.",
   },
   rising: "With Scorpio rising, you come across as magnetic, private and intense. People sense your depth and may feel both drawn to and slightly unsettled by your gaze. You reveal yourself slowly and notice everything. Your presence often changes the emotional temperature of a room.",
   venus: "Venus in Scorpio loves with total intensity. You are drawn to depth, mystery and emotional honesty. You give your whole self and expect the same. Jealousy can be your shadow; trust is your healing.",
-  mars: "Mars in Scorpio drives with depth, strategy and endurance. You pursue goals with quiet, relentless focus, and you rarely give up. Your anger can go underground and return later. Your power is transformative when used for healing rather than control.",
+  mars: "Mars in Scorpio drives with depth, strategy and endurance. You pursue goals with quiet, relentless focus, and you rarely give up. Your anger can go underground and return later. Your power can change things for the better when you use it to heal rather than to control.",
   mercury: "Mercury in Scorpio thinks like a detective. You see through lies, ask piercing questions and love research. You may keep your thoughts private. Your words, when you speak, cut straight to the core.",
   node: "Your North Node in Scorpio points toward depth and transformation. Growth lies in letting go of comfort and possessions as security, embracing intimacy, shared vulnerability and change.",
 };

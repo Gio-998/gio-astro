@@ -6,7 +6,7 @@ export const sagittarius: SignDeep = {
   myth: "Sagittarius is the centaur-archer (half human, half horse), often linked to Chiron, the wise centaur who taught heroes medicine, music and the stars. Ruled by Jupiter, king of the gods and planet of expansion, it is the sign of the pilgrim, the philosopher and the teller of tall tales by the fire.",
   sun: {
     story: [
-      "There is always a horizon calling you. A country you haven't seen, a book that might change everything, a truth just over the next hill. Your Sun in Sagittarius is the energy of the seeker: optimistic, honest, adventurous and hungry for meaning. You are at your best when life feels like a great journey, and at your most miserable when it feels like a cage.",
+      "There is always a horizon calling you. A country you haven't seen, a book that might change everything, a truth just over the next hill. Your Sun in Sagittarius is the energy of the seeker: optimistic, honest, adventurous and hungry for meaning. You are at your best when life feels like a great road trip, and at your most miserable when it feels like a cage.",
       "Your honesty can be breathtaking, sometimes healing, sometimes blunt enough to sting. Your laughter is generous and your faith in life is contagious; people feel lighter and braver around you. Underneath the sparkle you are a philosopher, asking big questions about why we are here and how to live well. Your challenge is that the grass is always greener on the next horizon, and the small daily commitments that make life deep can feel like fences.",
       "Your path is about wisdom: turning experience into understanding and sharing it. When you discover that freedom can include commitment, that a home can be a launch pad rather than a prison, your arrow flies further than ever.",
     ],
@@ -46,7 +46,7 @@ export const capricorn: SignDeep = {
   sun: {
     story: [
       "You were born with an old soul and a long view. While others chase what's shiny, you are quietly climbing: building skill, reputation, security and something worth leaving behind. Your Sun in Capricorn is the energy of the mountain goat: patient, sure-footed, responsible and surprisingly funny once you relax. You understand that great things take time, and you are willing to do the work.",
-      "People often trust you early, sometimes too early; you may have been 'the responsible one' since childhood. Under the composed surface is a person who feels deeply but believes feelings should be earned, managed or kept private. You can be hard on yourself, measuring your worth by achievement, and you may postpone joy until the next milestone is reached.",
+      "People often trust you early, sometimes too early; you may have been 'the responsible one' since childhood. Under the composed surface is a person who feels a lot but believes feelings should be earned, managed or kept private. You can be hard on yourself, measuring your worth by achievement, and you may postpone joy until the next milestone is reached.",
       "Your path is about mastery and authority, and, crucially, about softening. Capricorns famously grow younger with age: the more you trust your own foundations, the more you allow play, rest and tenderness. The summit is sweeter when you let yourself enjoy the climb.",
     ],
     love: "In love you are loyal, serious and protective. You show care through reliability, provision and keeping your word. You may take time to open up and dislike public displays, but your commitment is real and lasting. You need a partner who respects your ambition and helps you rest. Someone who loves you even when you're not achieving.",
@@ -85,7 +85,7 @@ export const aquarius: SignDeep = {
   sun: {
     story: [
       "You have always been a little ahead of your time, or perhaps just outside of it, looking in. Your Sun in Aquarius is the energy of the original thinker: independent, humane, curious about systems and passionate about freedom, fairness and the future. You care about people in the plural, and you are often the first to see how things could be done differently.",
-      "Friendship is sacred to you, and you may have a gift for loving people across every border. Yet you can also feel strangely alone in a crowd, as if your inner world runs on a different frequency. You may intellectualise feelings, needing to understand them before you let them in, and you can resist anything, or anyone, that tries to define you. Your rebel streak is protective: it guards your right to be fully yourself.",
+      "Friendship means everything to you, and you may have a gift for loving people across every border. Yet you can also feel strangely alone in a crowd, as if your inner world runs on a different frequency. You may intellectualise feelings, needing to understand them before you let them in, and you can resist anything, or anyone, that tries to define you. Your rebel streak is protective: it guards your right to be fully yourself.",
       "Your path is about individuality in service of community. You grow when you let your originality be warm, not only clever, and when you allow intimate closeness without fearing it will erase your freedom.",
     ],
     love: "In love you need friendship, freedom and mental connection. You are loyal and accepting, often drawn to unconventional relationships or partners. You show love by accepting someone completely and supporting their growth. You need space and authenticity; your lesson is to let emotional intimacy in, not only intellectual intimacy.",
@@ -144,7 +144,7 @@ export const pisces: SignDeep = {
     journal: ["What am I feeling that may not be mine?", "Where am I escaping, and what am I escaping from?", "How can I care for others without abandoning myself?"],
   },
   moon: {
-    story: "With your Moon in Pisces, you absorb other people's moods like a sponge. Your emotional world is vast, imaginative and deeply compassionate. You feel safest in gentle, creative, peaceful surroundings, and you may need regular solitude to wring out what you've absorbed. Your intuition is strong; trust it, and ground it.",
+    story: "With your Moon in Pisces, you absorb other people's moods like a sponge. Your emotional world is vast, imaginative and full of compassion. You feel safest in gentle, creative, peaceful surroundings, and you may need regular solitude to wring out what you've absorbed. Your intuition is strong; trust it, and ground it.",
     needs: "You need gentleness, quiet, creative expression, spiritual meaning and a safe person who doesn't take advantage of your kindness.",
     heals: "Music, water, art, sleep, prayer or meditation, nature, and time alone to let feelings drift away.",
     daily: "When upset, you might retreat into music, sleep or a film, and later find the words for what you felt.",
@@ -152,6 +152,6 @@ export const pisces: SignDeep = {
   rising: "With Pisces rising, you come across as gentle, dreamy and kind. People tell you their secrets. You may have soft, expressive eyes and an adaptable manner. You absorb the mood of a place quickly. Your first impression is open and compassionate; you may need to protect your energy more than you think.",
   venus: "Venus in Pisces loves with boundless compassion and romance. You are drawn to sensitive, creative or spiritual people. You show love through devotion and empathy. You may idealise partners; your strength grows when you love the real person with clear eyes.",
   mars: "Mars in Pisces acts from intuition and compassion. You may move toward goals indirectly, flowing around obstacles. Anger may turn into sadness. Your energy is strongest when serving something meaningful or creative.",
-  mercury: "Mercury in Pisces thinks in images, feelings and intuitions. You understand people deeply and express yourself poetically. Facts and details may blur. Your gift is imagination and empathy in communication.",
+  mercury: "Mercury in Pisces thinks in images, feelings and intuitions. You read people well and express yourself like a poet. Facts and details may blur. Your gift is imagination and empathy in communication.",
   node: "Your North Node in Pisces points toward surrender and compassion. Growth lies in letting go of the need to control and perfect, trusting intuition, spirituality and the flow of life.",
 };

@@ -43,7 +43,7 @@ export const tarot: Record<MajorCard, { name: string; keyword: string; birth: st
   devil: { name: "The Devil", keyword: "desire and shadow", birth: "You understand attachment and temptation, and so you can help others break free." },
   tower: { name: "The Tower", keyword: "breakthrough", birth: "You clear away what's false so something truer can be built." },
   star: { name: "The Star", keyword: "hope", birth: "You carry hope and renewal. People feel lighter around you." },
-  moon: { name: "The Moon", keyword: "dreams and intuition", birth: "You navigate the unclear with imagination and sensitivity." },
+  moon: { name: "The Moon", keyword: "dreams and intuition", birth: "You find your way through the unclear with imagination and sensitivity." },
   sun: { name: "The Sun", keyword: "joy", birth: "You radiate warmth, vitality and a childlike joy." },
   judgement: { name: "Judgement", keyword: "awakening", birth: "You're called to rise to a purpose and to forgive the past." },
   world: { name: "The World", keyword: "wholeness", birth: "You seek completion: bringing the whole picture together." },

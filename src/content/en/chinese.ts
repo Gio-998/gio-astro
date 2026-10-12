@@ -6,7 +6,7 @@ export const animals: Record<Animal, { name: string; essence: string; gifts: str
   tiger: { name: "Tiger", essence: "Brave, passionate and magnetic. You protect the underdog and act on conviction.", gifts: "courage, charisma, generosity", edge: "impulsiveness and restlessness" },
   rabbit: { name: "Rabbit", essence: "Gentle, elegant and perceptive. You create peace and beauty wherever you settle.", gifts: "kindness, tact, good taste", edge: "avoiding conflict that needs to happen" },
   dragon: { name: "Dragon", essence: "Bold, visionary and full of life force. You dream big and inspire others to follow.", gifts: "confidence, energy, vision", edge: "impatience and pride" },
-  snake: { name: "Snake", essence: "Wise, intuitive and composed. You read situations deeply and move with quiet grace.", gifts: "insight, calm, elegance", edge: "secrecy and suspicion" },
+  snake: { name: "Snake", essence: "Wise, intuitive and composed. You read a room quickly and move through it with quiet grace.", gifts: "insight, calm, elegance", edge: "secrecy and suspicion" },
   horse: { name: "Horse", essence: "Free-spirited, warm and energetic. You need open space, movement and honest company.", gifts: "enthusiasm, independence, cheer", edge: "restlessness and short patience" },
   goat: { name: "Goat", essence: "Gentle, artistic and kind-hearted. You bring softness, creativity and care.", gifts: "compassion, creativity, harmony", edge: "worry and indecision" },
   monkey: { name: "Monkey", essence: "Clever, playful and inventive. You solve problems with humour and fresh ideas.", gifts: "ingenuity, wit, curiosity", edge: "restlessness and mischief" },
