@@ -9,18 +9,20 @@ import type { Profile } from "./profile";
 import type { Temperament } from "./bigfive";
 import { normCdf, normInv, clamp } from "./stats";
 import calibration from "./calibration.json";
+import { playProfile } from "./play";
+import { playLens, PLAY_CAL } from "./play/compat";
 
 export type RelType = "romantic" | "friend" | "family" | "colleague";
 export const REL_TYPES: RelType[] = ["romantic", "friend", "family", "colleague"];
 export type Evidence = "research" | "popular" | "traditional";
 export type LensId =
   | "western" | "vedic" | "chinese" | "numerology" | "tarot" | "bigfive" | "attachment" | "care"
-  | "temperament" | "nine" | "fourletter" | "shadow" | "dosha" | "yinyang";
+  | "temperament" | "nine" | "fourletter" | "shadow" | "dosha" | "yinyang" | "play";
 
 export const LENS_EVIDENCE: Record<LensId, Evidence> = {
   western: "traditional", vedic: "traditional", chinese: "traditional", numerology: "traditional", tarot: "traditional",
   dosha: "traditional", yinyang: "traditional", bigfive: "research", attachment: "research",
-  care: "popular", temperament: "popular", nine: "popular", fourletter: "popular", shadow: "popular",
+  care: "popular", play: "popular", temperament: "popular", nine: "popular", fourletter: "popular", shadow: "popular",
 };
 
 /** Default weights per relationship type (design doc §5.2; each column sums to 100). */
@@ -39,6 +41,8 @@ export const WEIGHTS: Record<LensId, Record<RelType, number>> = {
   shadow: { romantic: 5, friend: 5, family: 6, colleague: 6 },
   dosha: { romantic: 3, friend: 2, family: 2, colleague: 2 },
   yinyang: { romantic: 2, friend: 2, family: 2, colleague: 2 },
+  // Play Mirror (behavioural signal from mini-games); added on top, weights are relative.
+  play: { romantic: 6, friend: 6, family: 5, colleague: 7 },
 };
 
 export const THEMES = [
@@ -377,7 +381,7 @@ export function rawLenses(A: Profile, B: Profile, rel: RelType): Partial<Record<
     western: western(A, B, rel), vedic: vedic(A, B), chinese: chinese(A, B), numerology: numerology(A, B),
     tarot: tarot(A, B), yinyang: yinyang(A, B), bigfive: bigfive(A, B), attachment: attachment(A, B),
     care: care(A, B), temperament: temperamentLens(A, B), fourletter: fourletter(A, B), nine: nine(A, B),
-    shadow: shadow(A, B), dosha: dosha(A, B),
+    shadow: shadow(A, B), dosha: dosha(A, B), play: playLens(playProfile(A.quiz), playProfile(B.quiz)),
   };
 }
 
@@ -395,7 +399,7 @@ export function comparePair(A: Profile, B: Profile, rel: RelType): PairReport {
   for (const id of Object.keys(WEIGHTS) as LensId[]) {
     const r = raw[id];
     if (!r) { missing.push(id); continue; }
-    const cal = CAL[id === "western" ? `western-${rel}` : id];
+    const cal = id === "play" ? PLAY_CAL : CAL[id === "western" ? `western-${rel}` : id];
     const ph = percentileOf(r.rawH, cal?.h), ps = percentileOf(r.rawS, cal?.s);
     lenses.push({ id, rawH: r.rawH, rawS: r.rawS, harmony: toDisplay(ph), spark: toDisplay(ps), confidence: r.confidence, evidence: LENS_EVIDENCE[id], themes: r.themes, detail: { ...r.detail, ph, ps } });
   }

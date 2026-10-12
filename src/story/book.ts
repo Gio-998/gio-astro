@@ -2,6 +2,7 @@
  * "The Book of You" — deterministic long-form reading assembled from pre-written content.
  * No network, no AI: every sentence comes from src/content/<locale>/deep + book.ts.
  */
+import { playChapter } from "@/components/play/bookChapter";
 import type { Content } from "@/content";
 import type { Profile } from "@/engine/profile";
 import { SIGNS, SIGN_ELEMENT, SIGN_MODALITY, signFromLongitude, Element, Sign } from "@/engine/zodiac";
@@ -312,6 +313,9 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     b.push({ t: "p", text: B.closing });
     ch("rituals", { kind: "emblem", id: "tarot" }, b);
   }
+
+  // ——— Play Mirror (behavioural; only when games were played) ———
+  { const pc = playChapter(p, c); if (pc) chapters.splice(Math.max(0, chapters.length - 1), 0, pc); }
 
   // Locked chapters: keep a teaser (first block) only.
   for (const cpt of chapters) if (cpt.locked) cpt.blocks = [...cpt.blocks.slice(0, 2), { t: "lock", quizzes: cpt.missing, text: "" }];

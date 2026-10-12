@@ -8,6 +8,7 @@ import { DesktopNav, MoreSheet, TabBar, useNav } from "./nav/Nav";
 import { useContent, useHref } from "@/lib/content-context";
 import { ZodiacWheel } from "./art/ZodiacWheel";
 import { LOCALES } from "@/content";
+import { playFor } from "./play/content";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
@@ -91,10 +92,10 @@ export function Header() {
 }
 
 export function Footer() {
-  const { c } = useContent(); const h = useHref(); const F = c.site.footerCols; const locked = useBetaLocked();
+  const { c, locale } = useContent(); const h = useHref(); const F = c.site.footerCols; const locked = useBetaLocked();
   const cols = [
     ...(locked ? [{ t: F.discover, l: [["/quizzes/", F.quizzes], ["/learn/", c.site.nav.learn]] }] : [
-    { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/today/", F.today], ["/quizzes/", F.quizzes]] },
+    { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/today/", F.today], ["/quizzes/", F.quizzes], ["/play/", playFor(locale).brand]] },
     { t: F.rel, l: [["/match/", F.match], ["/bond/", F.bond], ["/people/", F.people]] }]),
     { t: F.trust, l: [["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/premium/", F.extras], ["/credits/", c.site.footer.credits]] },
   ];

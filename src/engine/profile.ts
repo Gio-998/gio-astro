@@ -9,10 +9,11 @@ import type { AttachResult, NineResult, CareResult, DoshaResult, ExplorerResult 
 import type { scoreShadow } from "./shadow";
 import type { FourLetterQuizResult } from "./fourletter-quiz";
 import { SelfId, effectiveFourLetter, effectiveTemperament, effectiveNine, effectiveAttachment, EffectiveFourLetter, EffectiveTemperament } from "./selfid";
+import type { PlayResults } from "./play";
 
 export type ShadowResult = ReturnType<typeof scoreShadow>;
 /** Results of the optional questionnaire lenses ("unlocked layers"). */
-export interface QuizResults {
+export interface QuizResults extends PlayResults {
   bigFive?: BigFive;
   attachment?: AttachResult;
   nine?: NineResult;

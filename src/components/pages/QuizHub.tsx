@@ -8,6 +8,7 @@ import { EvidenceBadge, PageHero } from "../ui";
 import { ArtCard } from "../art/ArtCard";
 import { Reveal } from "../art/Reveal";
 import { PrecisionLinks } from "../PrecisionResult";
+import { PlayBanner } from "../play/PlayBanner";
 
 
 export function QuizHub() {
@@ -20,6 +21,7 @@ export function QuizHub() {
         sub={U.sub}>
         {s?.me && <div className="flex items-center gap-3"><div className="h-2 w-40 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-gradient-to-r from-rose to-gold" style={{ width: `${(doneCount / 7) * 100}%` }} /></div><span className="text-sm text-dim">{U.layers(doneCount)}</span></div>}
       </PageHero>
+      <PlayBanner />
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {QUIZ_IDS.map((id, i) => {
           const d = defs[id]; const done = !!s?.me?.quiz[d.resultKey];
