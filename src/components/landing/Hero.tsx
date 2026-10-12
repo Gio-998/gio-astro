@@ -29,7 +29,7 @@ function Tonight() {
   );
 }
 
-/** One rotating word in holographic type ("yourself" → "your love" → …). Own line, fixed height: no layout shift. */
+/** One rotating word in holographic type ("yourself" → "your love" → …). Inline, kept on the same line as the lead-in. */
 function Rotator({ words }: { words: string[] }) {
   const [i, setI] = useState(0);
   useEffect(() => {
@@ -37,7 +37,7 @@ function Rotator({ words }: { words: string[] }) {
     const id = setInterval(() => setI((n) => (n + 1) % words.length), 2600);
     return () => clearInterval(id);
   }, [words.length]);
-  return <span className="block h-[1.02em] whitespace-nowrap"><span key={i} className="kinetic-word holo-text italic pr-[0.08em]" style={{ "--i": i === 0 ? 1 : 0 } as React.CSSProperties}>{words[i]}</span></span>;
+  return <span className="inline-block whitespace-nowrap"><span key={i} className="kinetic-word holo-text italic pr-[0.08em]" style={{ "--i": i === 0 ? 1 : 0 } as React.CSSProperties}>{words[i]}</span></span>;
 }
 
 export function Hero() {
@@ -57,11 +57,10 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-2"><Tonight /><TiltPrompt label={S.tilt} /></div>
         <div className="mt-auto max-w-2xl pt-8 md:my-auto">
           <p className="eyebrow mb-4 kinetic-word" style={{ "--i": 0 } as React.CSSProperties}>{H.eyebrow}</p>
-          <h1 className="h-display mb-5 text-[clamp(2.85rem,12.4vw,4rem)] md:text-[clamp(3.6rem,5.2vw,5.2rem)] font-medium leading-[0.98] tracking-[-0.015em]">
-            <Words text={H.see.trim()} start={0} />
-            <Rotator words={H.words} />
-            <Words text={H.mid.replace(/^,\s*/, "").trim()} start={2} />{" "}
-            <Words text={H.end} start={6} className="italic text-aurora" />
+          <h1 className="h-display mb-5 text-[clamp(2.85rem,12.4vw,4rem)] md:text-[clamp(3.6rem,5.2vw,5.2rem)] font-medium leading-[0.98] tracking-[-0.015em] [text-wrap:balance]">
+            <span className="block whitespace-nowrap"><Words text={H.see.trim()} start={0} />{" "}<Rotator words={H.words} /></span>
+            <span className="block"><Words text={H.mid.replace(/^,\s*/, "").trim()} start={2} /></span>
+            <span className="block"><Words text={H.end} start={6} className="italic text-aurora" /></span>
           </h1>
           <p className="rise-in mb-6 max-w-xl text-[15.5px] leading-relaxed text-mist/90 sm:text-lg" style={{ animationDelay: ".55s" }}>{H.sub}</p>
 
