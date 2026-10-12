@@ -11,6 +11,8 @@ import { ANIMAL_GLYPH } from "@/engine/chinese";
 import type { GunaMilan } from "@/engine/vedic";
 import { Celebration } from "./art/Celebration";
 import { SignArt } from "./art/SignArt";
+import { Expand } from "./glance/Expand";
+import { useGlance } from "./glance/text";
 
 function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile; na: string; nb: string }) {
   const { c } = useContent(); const d = l.detail as Record<string, any>; // eslint-disable-line @typescript-eslint/no-explicit-any
@@ -95,7 +97,7 @@ function topTraits(b: Record<string, number>, P: ReturnType<typeof useContent>["
 }
 
 export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Profile; B: Profile; na: string; nb: string }) {
-  const { c } = useContent(); const C = c.compat; const U = c.ui.pair;
+  const { c } = useContent(); const C = c.compat; const U = c.ui.pair; const G = useGlance();
   const [evOnly, setEvOnly] = useState(false);
   const [open, setOpen] = useState<string | null>(null);
   const band = C.bands[report.band], arch = C.archetypes[report.archetype];
@@ -120,6 +122,11 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
         <p className="h-display pop text-4xl"><span className="text-aurora">{arch.icon} {arch.name}</span></p>
         <p className="mx-auto max-w-md text-sm">{arch.text}</p>
         <p className="mx-auto mt-2 max-w-md text-sm text-dim"><b>{band.name}:</b> {band.text}</p>
+        {report.superpowers[0] && report.growthEdges[0] && <p className="relative mx-auto mt-3 max-w-md text-[15px] font-medium" data-testid="pair-headline">{G.pairHead(C.themes[report.superpowers[0].theme].name, C.themes[report.growthEdges[0].theme].name)}</p>}
+        <div className="relative mt-3 flex flex-wrap justify-center gap-1.5 text-xs">
+          {report.superpowers.slice(0, 3).map((s) => <span key={s.theme} className="chip !border-sage/50 text-sage">✦ {C.themes[s.theme].name}</span>)}
+          {report.growthEdges.slice(0, 2).map((s) => <span key={s.theme} className="chip !border-rose/50 text-rose">↗ {C.themes[s.theme].name}</span>)}
+        </div>
         <div className="mx-auto mt-3 max-w-xs"><Palette colors={blended} /></div>
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           <ShareButton spec={spec} filename={`${na}-${nb}-bond.png`} />
@@ -128,6 +135,7 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
         {evOnly && <p className="mt-2 text-xs text-dim">{report.evidenceOnly != null ? C.pairCopy.evidenceOnlyText : C.pairCopy.evidenceOnlyMissing}</p>}
       </div>
 
+      <Expand more={G.pairDetails} testId="pair-details">
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="card">
           <h3 className="h-display mb-3 text-3xl text-sage">✦ {C.pairCopy.superpowers}</h3>
@@ -150,6 +158,7 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
           ))}
         </div>
       </div>
+      </Expand>
 
       <div>
         <h3 className="h-display mb-2 text-3xl"><span className="text-gold">✦</span>{U.lensByLens}</h3>
@@ -159,9 +168,9 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
             <div key={l.id} className={`card !p-0 transition ${open === l.id ? "!border-gold/40" : "hover:!border-white/25"}`}>
               <button className="w-full p-4 text-left" onClick={() => setOpen(open === l.id ? null : l.id)} aria-expanded={open === l.id}>
                 <div className="mb-2 flex flex-wrap items-center justify-between gap-2"><span className="font-semibold">{C.lenses[l.id].name}</span><span className="flex gap-2"><EvidenceBadge e={l.evidence} />{l.confidence < 1 && <span className="chip">{U.confidence(Math.round(l.confidence * 100))}</span>}</span></div>
-                <div className="grid grid-cols-2 gap-4"><Bar value={((l.harmony - 45) / 55) * 100} label={U.harmony} right={String(l.harmony)} color="bg-sage" /><Bar value={((l.spark - 45) / 55) * 100} label={U.spark} right={String(l.spark)} color="bg-rose" /></div>
+                <div className="grid grid-cols-2 gap-4"><Bar value={((l.harmony - 45) / 55) * 100} label={U.harmony} right="" color="bg-sage" /><Bar value={((l.spark - 45) / 55) * 100} label={U.spark} right="" color="bg-rose" /></div>
               </button>
-              {open === l.id && <div className="border-t border-white/10 p-4"><p className="mb-2 text-xs text-dim">{C.lenses[l.id].short}</p><LensDetail l={l} A={A} B={B} na={na} nb={nb} /></div>}
+              {open === l.id && <div className="border-t border-white/10 p-4"><p className="mb-2 text-xs text-dim">{C.lenses[l.id].short} · {U.harmony} {l.harmony} · {U.spark} {l.spark}</p><LensDetail l={l} A={A} B={B} na={na} nb={nb} /></div>}
             </div>
           ))}
         </div>

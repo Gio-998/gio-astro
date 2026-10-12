@@ -21,6 +21,9 @@ import { SignArt } from "./art/SignArt";
 import { Celebration } from "./art/Celebration";
 import { cosmos } from "./art/ArtCard";
 import { LensSheet, LensSheetCtx, useLensSheet } from "./LensSheet";
+import { BigFiveShape } from "./glance/BigFiveShape";
+import { Expand, GlanceHead } from "./glance/Expand";
+import { useGlance } from "./glance/text";
 
 const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
 function MoreLink({ k }: { k: string; pid?: string }) {
@@ -28,39 +31,81 @@ function MoreLink({ k }: { k: string; pid?: string }) {
   return <button type="button" onClick={() => open(k)} className="mt-2 inline-block text-left text-sm text-gold underline decoration-dotted underline-offset-4">{c.lensUi.fullMeaning}: {c.lensInfo[k].name} ↓</button>;
 }
 
+const CARE_ICON: Record<string, string> = { words: "💬", time: "⏳", gifts: "🎁", help: "🤝", touch: "🫂" };
+const DOSHA_COL = { vata: "#a9c8ff", pitta: "#f6b5cf", kapha: "#9fd8b8" } as const;
+
+function AttachMap({ anxiety, avoidance }: { anxiety: number; avoidance: number }) {
+  const G = useGlance();
+  return (
+    <div className="relative mx-auto h-40 w-40 rounded-2xl border border-white/15 bg-[radial-gradient(circle_at_0%_100%,rgba(159,216,184,.25),transparent_60%),radial-gradient(circle_at_100%_0%,rgba(246,181,207,.22),transparent_60%)]" aria-hidden>
+      <div className="absolute inset-x-0 top-1/2 border-t border-white/10" /><div className="absolute inset-y-0 left-1/2 border-l border-white/10" />
+      <span className="absolute left-1.5 top-1 text-[10px] text-dim">{G.worry} ↑</span><span className="absolute bottom-1 right-1.5 text-[10px] text-dim">{G.distance} →</span>
+      <span className="absolute bottom-1 left-1.5 text-[10px] text-dim">{G.calm}</span>
+      <span className="absolute h-5 w-5 -translate-x-1/2 translate-y-1/2 animate-pulse-glow rounded-full bg-[radial-gradient(circle_at_35%_35%,#fff,#f6cf7a)] shadow-[0_0_18px_rgba(246,207,122,.9)]" style={{ left: `${Math.max(6, Math.min(94, avoidance))}%`, bottom: `${Math.max(6, Math.min(94, anxiety))}%` }} />
+    </div>
+  );
+}
+
+function NineRing({ type, wing, growth, stress }: { type: number; wing: number; growth: number; stress: number }) {
+  const p = (n: number, r = 62) => { const a = ((-90 + (n % 9) * 40) * Math.PI) / 180; return [80 + r * Math.cos(a), 80 + r * Math.sin(a)] as const; };
+  const [tx, ty] = p(type), [gx, gy] = p(growth), [sx, sy] = p(stress);
+  return (
+    <svg viewBox="0 0 160 160" className="mx-auto h-40 w-40" aria-hidden>
+      <circle cx="80" cy="80" r="62" fill="none" stroke="rgba(255,255,255,.12)" />
+      <line x1={tx} y1={ty} x2={gx} y2={gy} stroke="#9fd8b8" strokeWidth="1.5" strokeDasharray="3 3" />
+      <line x1={tx} y1={ty} x2={sx} y2={sy} stroke="#f6b5cf" strokeWidth="1.5" strokeDasharray="1 3" />
+      {Array.from({ length: 9 }, (_, i) => i + 1).map((n) => { const [x, y] = p(n); const on = n === type, w = n === wing; return (
+        <g key={n}>
+          {on && <circle cx={x} cy={y} r="15" fill="#f6cf7a" opacity=".35" className="animate-pulse-glow" />}
+          <circle cx={x} cy={y} r={on ? 11 : w ? 8 : 6} fill={on ? "#f6cf7a" : w ? "rgba(246,207,122,.5)" : "rgba(255,255,255,.15)"} />
+          <text x={x} y={y + 3.5} textAnchor="middle" fontSize={on ? 11 : 9} fill={on ? "#1c1645" : "#e9e4ff"} fontWeight="700">{n}</text>
+        </g>); })}
+    </svg>
+  );
+}
+
+function DoshaRing({ pct }: { pct: Record<"vata" | "pitta" | "kapha", number> }) {
+  const C = 2 * Math.PI * 52; let off = 0;
+  return (
+    <svg viewBox="0 0 140 140" className="mx-auto h-36 w-36 -rotate-90" aria-hidden>
+      <circle cx="70" cy="70" r="52" fill="none" stroke="rgba(255,255,255,.08)" strokeWidth="16" />
+      {(["vata", "pitta", "kapha"] as const).map((k) => { const len = (C * pct[k]) / 100; const el = <circle key={k} cx="70" cy="70" r="52" fill="none" stroke={DOSHA_COL[k]} strokeWidth="16" strokeDasharray={`${Math.max(0, len - 3)} ${C}`} strokeDashoffset={-off} strokeLinecap="round" />; off += len; return el; })}
+    </svg>
+  );
+}
+
 export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }) {
-  const { c } = useContent();
+  const { c } = useContent(); const G = useGlance();
   const q = profile.quiz; const P = c.psych; const U = c.ui.profile;
   if (id === "big-five" && q.bigFive && profile.psych) {
     const fl = profile.psych.fourLetter, t = profile.psych.temperament;
     const style = P.fourLetterStyles[fl.code];
+    const letterWord = (l: string) => P.letters[l].split(/[:,]/)[0];
     return (
       <div className="space-y-4">
         <div className="card">
-          {TRAITS.map((k) => {
-            const v = q.bigFive![k]; const tr = P.traits[k];
-            return (
-              <div key={k} className="mb-3">
-                <Bar value={v} label={`${tr.name}: ${tr.plain}`} right={U.pct(v)} color={k === "N" ? "bg-rose" : "bg-gold"} />
-                <p className="text-sm text-mist/85">{v < 35 ? tr.low : v > 65 ? tr.high : tr.mid}</p>
-              </div>
-            );
-          })}
-          <p className="text-xs text-dim">{U.pctNote}</p>
+          <BigFiveShape b={q.bigFive} palette={profile.palette} />
+          <Expand more={G.showNumbers} less={G.hideNumbers} testId="bigfive-numbers">
+            {TRAITS.map((k) => { const v = q.bigFive![k]; const tr = P.traits[k]; return <Bar key={k} value={v} label={`${tr.name}: ${tr.plain}`} right={U.pct(v)} color={k === "N" ? "bg-rose" : "bg-gold"} />; })}
+            <p className="text-xs text-dim">{U.pctNote}</p>
+          </Expand>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className="card">
-            <div className="mb-1 flex items-center justify-between"><h3 className="font-semibold">{U.temperaments}</h3><EvidenceBadge e="popular" /></div>
-            <p className="h-display text-2xl text-gold">{P.temperaments[t.primary].name}</p>
+          <div className="card" data-testid="glance-temperament">
+            <div className="mb-2 flex items-center justify-between"><h3 className="text-sm font-semibold text-dim">{U.temperaments}</h3><EvidenceBadge e="popular" /></div>
+            <p className="h-display text-[1.75rem] leading-tight text-gold">{P.temperaments[t.primary].name}</p>
             <p className="text-sm">{P.temperaments[t.primary].text}</p>
-            <p className="mt-1 text-xs text-dim">{U.secondaryTip(P.temperaments[t.secondary].name, P.temperaments[t.primary].tip)}</p>
+            <Expand><p className="text-sm text-mist/85">{U.secondaryTip(P.temperaments[t.secondary].name, P.temperaments[t.primary].tip)}</p></Expand>
           </div>
-          <div className="card">
-            <div className="mb-1 flex items-center justify-between"><h3 className="font-semibold">{U.fourLetter}</h3><EvidenceBadge e="popular" /></div>
-            <p className="h-display text-2xl text-gold">{fl.code} · {style.name}</p>
-            <p className="mb-2 text-sm">{style.text}</p>
-            {(["EI", "SN", "TF", "JP"] as const).map((d, k) => <p key={d} className="text-xs text-dim">{fl.code[k]} = {P.letters[fl.code[k]]} <span className="opacity-70">{U.clarity(fl.clarity[d])}</span></p>)}
-            <p className="mt-2 text-xs text-dim">{U.flNote}</p>
+          <div className="card" data-testid="glance-fourletter">
+            <div className="mb-2 flex items-center justify-between"><h3 className="text-sm font-semibold text-dim">{U.fourLetter}</h3><EvidenceBadge e="popular" /></div>
+            <p className="h-display text-[1.75rem] leading-tight text-gold">{fl.code} · {style.name}</p>
+            <div className="my-2 grid grid-cols-4 gap-1.5">{fl.code.split("").map((l, k) => <div key={k} className="rounded-xl border border-white/10 bg-white/[0.05] px-1 py-2 text-center"><div className="h-display text-xl text-gold">{l}</div><div className="text-[10.5px] leading-tight text-dim">{letterWord(l)}</div></div>)}</div>
+            <p className="text-sm">{style.text}</p>
+            <Expand>
+              {(["EI", "SN", "TF", "JP"] as const).map((d, k) => <p key={d} className="text-xs text-dim">{fl.code[k]} = {P.letters[fl.code[k]]} <span className="opacity-70">{U.clarity(fl.clarity[d])}</span></p>)}
+              <p className="mt-2 text-xs text-dim">{U.flNote}</p>
+            </Expand>
           </div>
         </div>
       </div>
@@ -69,89 +114,105 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
   if (id === "attachment" && q.attachment) {
     const a = q.attachment, x = P.attachment[a.style];
     return (
-      <div className="card">
-        <p className="h-display text-2xl text-gold">{x.name}</p>
-        <p className="mb-3">{x.text}</p>
-        <Bar value={a.anxiety} label={U.anxiety} color="bg-rose" />
-        <Bar value={a.avoidance} label={U.avoidance} color="bg-sage" />
-        <p className="mt-2 text-sm"><b>{U.youNeed}</b> {x.need}</p>
-        <p className="text-sm"><b>{U.tryLabel}</b> {x.tip}</p>
-        <p className="mt-2 text-xs text-dim">{U.attachNote}</p>
+      <div className="card" data-testid="glance-attachment">
+        <GlanceHead visual={<AttachMap anxiety={a.anxiety} avoidance={a.avoidance} />} title={x.name} line={<><b>{U.youNeed}</b> {x.need}</>} />
+        <Expand>
+          <p className="mb-3 text-sm">{x.text}</p>
+          <Bar value={a.anxiety} label={U.anxiety} color="bg-rose" />
+          <Bar value={a.avoidance} label={U.avoidance} color="bg-sage" />
+          <p className="mt-2 text-sm"><b>{U.tryLabel}</b> {x.tip}</p>
+          <p className="mt-2 text-xs text-dim">{G.attachMap} {U.attachNote}</p>
+        </Expand>
       </div>
     );
   }
   if (id === "nine" && q.nine) {
     const n = q.nine, x = P.nineStyles[n.type];
     return (
-      <div className="card">
-        <p className="h-display text-2xl text-gold">{n.type} · {x.name} <span className="text-base text-dim">{U.wing(n.wing)}</span></p>
-        <p>{U.nineCore(x.core, x.gift)}</p>
-        <p className="mt-2 text-sm"><b>{U.growthLabel}</b> {x.growth}</p>
-        <p className="mt-1 text-sm text-dim">{U.nineMoves(n.growth, P.nineStyles[n.growth].name, n.stress, P.nineStyles[n.stress].name)}</p>
-        <div className="mt-3 grid grid-cols-9 gap-1">{n.scores.map((s, k) => <div key={k} className="text-center text-xs"><div className="mx-auto mb-1 w-3 rounded bg-gold/70" style={{ height: s * 6 }} />{k + 1}</div>)}</div>
+      <div className="card" data-testid="glance-nine">
+        <GlanceHead visual={<NineRing type={n.type} wing={n.wing} growth={n.growth} stress={n.stress} />} eyebrow={G.nineWing(n.type, n.wing)} title={x.name} line={x.gift.charAt(0).toUpperCase() + x.gift.slice(1) + "."} />
+        <Expand>
+          <p className="text-sm">{U.nineCore(x.core, x.gift)}</p>
+          <p className="mt-2 text-sm"><b>{U.growthLabel}</b> {x.growth}</p>
+          <p className="mt-1 text-sm text-dim">{U.nineMoves(n.growth, P.nineStyles[n.growth].name, n.stress, P.nineStyles[n.stress].name)}</p>
+          <div className="mt-3 grid grid-cols-9 gap-1">{n.scores.map((s, k) => <div key={k} className="flex flex-col items-center justify-end text-center text-xs" style={{ height: 70 }}><div className="mb-1 w-3 rounded bg-gold/70" style={{ height: Math.max(3, s * 6) }} />{k + 1}</div>)}</div>
+        </Expand>
       </div>
     );
   }
   if (id === "care" && q.care) {
-    const r = q.care;
+    const r = q.care; const [a, b] = r.topReceive;
     return (
-      <div className="card">
-        <p className="mb-2">{U.careA}<b className="text-gold">{P.care[r.topReceive[0]].name}</b>{U.careAnd}<b className="text-gold">{P.care[r.topReceive[1]].name}</b>{U.careGive}<b>{P.care[r.give].name}</b>{U.careEnd}</p>
-        {CARE.map((k) => <Bar key={k} value={(r.receive[k] / 4) * 100} label={P.care[k].name} right={`${r.receive[k]}/4`} />)}
-        <p className="mt-2 text-sm">{P.care[r.topReceive[0]].text}</p>
-        <p className="mt-2 text-xs text-dim">{P.careNote}</p>
+      <div className="card" data-testid="glance-care">
+        <GlanceHead visual={<div className="flex gap-3">{[a, b].map((k, i) => <div key={k} className={`grid place-items-center rounded-3xl border border-gold/30 bg-gold/10 ${i === 0 ? "h-24 w-24 text-5xl" : "h-20 w-20 self-end text-4xl opacity-90"}`}><span aria-hidden>{CARE_ICON[k]}</span></div>)}</div>}
+          title={`${P.care[a].name} · ${P.care[b].name}`} line={<>{G.careHead(P.care[a].name, P.care[b].name)} {G.careGives(P.care[r.give].name)}</>} />
+        <Expand>
+          {CARE.map((k) => <Bar key={k} value={(r.receive[k] / 4) * 100} label={`${CARE_ICON[k]} ${P.care[k].name}`} right={`${r.receive[k]}/4`} />)}
+          <p className="mt-2 text-sm">{P.care[a].text}</p>
+          <p className="text-sm"><b>{U.tryLabel}</b> {P.care[a].tip}</p>
+          <p className="mt-2 text-xs text-dim">{P.careNote}</p>
+        </Expand>
       </div>
     );
   }
   if (id === "shadow" && q.shadow) {
-    const r = q.shadow;
+    const r = q.shadow; const L = P.shadowAxes[r.strongestLight], S = P.shadowAxes[r.mainShadow];
     return (
-      <div className="card space-y-3">
-        <p>{U.brightest}<b className="text-gold">{P.shadowAxes[r.strongestLight].virtue}</b>{U.befriend}<b className="text-rose">{P.shadowAxes[r.mainShadow].classical}</b>{U.whoseGift}{P.shadowAxes[r.mainShadow].gift.toLowerCase()}</p>
-        <p className="text-sm"><b>{U.thisWeek}</b> {P.shadowAxes[r.mainShadow].practice}</p>
-        {AXES.map((ax) => {
-          const a = r.axes.find((x) => x.axis === ax)!; const t = P.shadowAxes[ax];
-          return (
-            <div key={ax} className="rounded-xl bg-white/5 p-3">
-              <div className="mb-1 text-sm font-semibold">{t.classical} ↔ {t.virtue}</div>
-              <div className="grid grid-cols-2 gap-3"><Bar value={a.shadow} label={U.shadow} color="bg-rose" /><Bar value={a.light} label={U.light} color="bg-gold" /></div>
-              <p className="text-xs text-dim">{U.shadowGift(t.shadow, t.gift)}</p>
-            </div>
-          );
-        })}
+      <div className="card" data-testid="glance-shadow">
+        <GlanceHead visual={<div className="flex items-center gap-2"><span className="chip !border-gold/50 !bg-gold/15 !px-4 !py-2 text-base text-gold">☀ {L.virtue}</span><span className="text-dim">·</span><span className="chip !border-rose/50 !bg-rose/10 !px-4 !py-2 text-base text-rose">☾ {S.classical}</span></div>}
+          line={G.shadowHead(L.virtue, S.classical)} />
+        <p className="mt-3 rounded-2xl bg-white/[0.05] p-3 text-center text-sm"><b>{U.thisWeek}</b> {S.practice}</p>
+        <Expand>
+          <p className="mb-3 text-sm">{U.brightest}<b className="text-gold">{L.virtue}</b>{U.befriend}<b className="text-rose">{S.classical}</b>{U.whoseGift}{S.gift.toLowerCase()}</p>
+          <div className="space-y-3">{AXES.map((ax) => {
+            const x = r.axes.find((y) => y.axis === ax)!; const t = P.shadowAxes[ax];
+            return (
+              <div key={ax} className="rounded-xl bg-white/5 p-3">
+                <div className="mb-1 text-sm font-semibold">{t.classical} ↔ {t.virtue}</div>
+                <div className="grid grid-cols-2 gap-3"><Bar value={x.shadow} label={U.shadow} color="bg-rose" /><Bar value={x.light} label={U.light} color="bg-gold" /></div>
+                <p className="text-xs text-dim">{U.shadowGift(t.shadow, t.gift)}</p>
+              </div>
+            );
+          })}</div>
+        </Expand>
       </div>
     );
   }
   if (id === "dosha" && q.dosha) {
     const r = q.dosha;
+    const [head, ...rest] = P.constitutions[r.constitution].split(/: /);
     return (
-      <div className="card">
-        <p className="h-display text-2xl text-gold">{P.constitutions[r.constitution]}</p>
-        {(["vata", "pitta", "kapha"] as const).map((k) => <Bar key={k} value={r.pct[k]} label={`${P.doshas[k].name} (${P.doshas[k].element})`} right={`${r.pct[k]}%`} />)}
-        {r.constitution === "tridoshic"
-          ? <p className="mt-2 text-sm">{U.tridoshic}</p>
-          : <><p className="mt-2 text-sm">{P.doshas[r.dominant].text}</p><p className="text-sm"><b>{U.balancing}</b> {P.doshas[r.dominant].balance}.</p></>}
-        <p className="mt-2 text-xs text-dim">{P.doshaNote}</p>
+      <div className="card" data-testid="glance-dosha">
+        <GlanceHead visual={<DoshaRing pct={r.pct} />} title={head} line={rest.join(": ") || undefined} />
+        <div className="mt-2 flex justify-center gap-3 text-xs text-dim">{(["vata", "pitta", "kapha"] as const).map((k) => <span key={k} className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded-full" style={{ background: DOSHA_COL[k] }} />{P.doshas[k].name}</span>)}</div>
+        {r.constitution !== "tridoshic" && <p className="mt-3 text-center text-sm"><b>{U.balancing}</b> {P.doshas[r.dominant].balance}.</p>}
+        <Expand>
+          {(["vata", "pitta", "kapha"] as const).map((k) => <Bar key={k} value={r.pct[k]} label={`${P.doshas[k].name} (${P.doshas[k].element})`} right={`${r.pct[k]}%`} />)}
+          <p className="mt-2 text-sm">{r.constitution === "tridoshic" ? U.tridoshic : P.doshas[r.dominant].text}</p>
+          <p className="mt-2 text-xs text-dim">{P.doshaNote}</p>
+        </Expand>
       </div>
     );
   }
   if (id === "explorer" && q.explorer) {
-    const r = q.explorer, E = P.explorer;
+    const r = q.explorer, E = P.explorer; const lvl = r.explorer < 40 ? "low" : r.explorer > 60 ? "high" : "mid";
     return (
-      <div className="card space-y-3">
-        <p className="font-semibold">{E.name}</p>
-        <Dial value={r.explorer} left={U.autopilot} right={U.explorer} />
-        <p className="text-sm">{r.explorer < 40 ? E.low : r.explorer > 60 ? E.high : E.mid}</p>
-        <div className="grid gap-1">{Object.entries(r.dims).map(([k, v]) => <Bar key={k} value={v} label={E.dims[k]} color="bg-sage" />)}</div>
-        <div className="rounded-xl bg-white/5 p-3">
-          <p className="font-semibold">{U.socialStance}<span className="text-gold">{P.stances[r.stance].name}</span></p>
-          <p className="text-sm">{P.stances[r.stance].text}</p>
-          <div className="relative mt-3 h-40 rounded-xl border border-white/10">
-            <span className="absolute left-2 top-1 text-[10px] text-dim">{U.belonging}</span><span className="absolute bottom-1 right-2 text-[10px] text-dim">{U.confidence}</span>
-            <span className="absolute h-4 w-4 -translate-x-1/2 translate-y-1/2 rounded-full bg-gold" style={{ left: `${r.confidence}%`, bottom: `${r.belonging}%` }} />
+      <div className="card" data-testid="glance-explorer">
+        <GlanceHead eyebrow={E.name} title={G.explorerHead[lvl]} />
+        <div className="mx-auto mt-3 max-w-sm"><Dial value={r.explorer} left={U.autopilot} right={U.explorer} /></div>
+        <p className="mt-3 text-center text-sm">{E[lvl]}</p>
+        <p className="mt-2 text-center text-sm"><span className="text-dim">{U.socialStance}</span><span className="text-gold">{P.stances[r.stance].name}</span></p>
+        <Expand>
+          <div className="grid gap-1">{Object.entries(r.dims).map(([k, v]) => <Bar key={k} value={v} label={E.dims[k]} color="bg-sage" />)}</div>
+          <div className="mt-3 rounded-xl bg-white/5 p-3">
+            <p className="text-sm">{P.stances[r.stance].text}</p>
+            <div className="relative mt-3 h-40 rounded-xl border border-white/10">
+              <span className="absolute left-2 top-1 text-[10px] text-dim">{U.belonging}</span><span className="absolute bottom-1 right-2 text-[10px] text-dim">{U.confidence}</span>
+              <span className="absolute h-4 w-4 -translate-x-1/2 translate-y-1/2 rounded-full bg-gold" style={{ left: `${r.confidence}%`, bottom: `${r.belonging}%` }} />
+            </div>
           </div>
-        </div>
-        <p className="text-xs text-dim">{E.text} {E.note}</p>
+          <p className="mt-2 text-xs text-dim">{E.text} {E.note}</p>
+        </Expand>
       </div>
     );
   }
