@@ -51,6 +51,7 @@ function layout(lang: EmailLang, pre: string, body: string, opts: { marketing?: 
     <tr><td style="background:${C.card};border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:34px 28px">${body}</td></tr>
     <tr><td align="center" style="padding:22px 10px;font:12px/1.6 Helvetica,Arial,sans-serif;color:${C.dim}">
       ${esc(L.footer)}<br>
+      <a href="mailto:contact@horoscop.si" style="color:${C.dim}">contact@horoscop.si</a><br>
       ${opts.marketing ? `<a href="${SITE}/${lang}/account/" style="color:${C.dim}">${esc(L.unsubscribe)}</a> · <a href="${SITE}/${lang}/account/" style="color:${C.dim}">${esc(L.prefs)}</a> · ` : ""}<a href="${SITE}/${lang}/privacy/" style="color:${C.dim}">${esc(L.privacy)}</a><br>✦ ✧ ✦
     </td></tr>
   </table>

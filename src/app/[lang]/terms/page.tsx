@@ -18,6 +18,8 @@ function PageEn() {
       <p>The core service is free and provided “as is”. Any future paid extras will show their price clearly before purchase, can be cancelled in one click, and are covered by your statutory consumer rights in the EU.</p>
       <h2>Content</h2>
       <p>Interpretation texts are our own. Personality items from the International Personality Item Pool are in the public domain. City data © GeoNames (CC BY 4.0). Trademarks of third parties are not used, and we are not affiliated with any test publisher.</p>
+      <h2>Contact</h2>
+      <p>Questions or requests about your data? Write to <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
     </article>
   );
 }
@@ -39,6 +41,8 @@ function PageMk() {
       <p>Основната услуга е бесплатна и се нуди „како што е“. Секој иден платен додаток јасно ќе ја прикаже цената пред купување, ќе може да се откаже со еден клик и е покриен со твоите законски права како потрошувач.</p>
       <h2>Содржина</h2>
       <p>Текстовите за толкување се наши. Ставките за личност од International Personality Item Pool се во јавна сопственост. Податоци за градовите © GeoNames (CC BY 4.0). Не се користат заштитени марки на трети страни и не сме поврзани со ниеден издавач на тестови.</p>
+      <h2>Контакт</h2>
+      <p>Прашања или барања за твоите податоци? Пиши ни на <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
     </article>
   );
 }

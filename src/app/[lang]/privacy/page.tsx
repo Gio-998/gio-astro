@@ -23,6 +23,8 @@ function PageEn() {
       <p>On the Account page, “Delete my account” permanently removes your account and every row stored in it straight away. You can also sign out and keep or remove the copy on this device.</p>
       <h2>Your controls</h2>
       <PrivacyControls />
+      <h2>Contact</h2>
+      <p>Questions or requests about your data? Write to <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
     </article>
   );
 }
@@ -48,6 +50,8 @@ function PageMk() {
       <p>На страницата Сметка, „Избриши ја мојата сметка“ веднаш и трајно ја отстранува сметката и сè што е зачувано во неа. Можеш и да се одјавиш и да ја задржиш или отстраниш копијата на овој уред.</p>
       <h2>Твоите контроли</h2>
       <PrivacyControls />
+      <h2>Контакт</h2>
+      <p>Прашања или барања за твоите податоци? Пиши ни на <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
     </article>
   );
 }

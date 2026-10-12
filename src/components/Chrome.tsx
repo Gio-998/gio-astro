@@ -107,6 +107,7 @@ export function Footer() {
           <Link href={h("/")} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
           <p className="mb-4 max-w-xs text-sm text-dim">{c.site.tagline}. {F.blurb}</p>
           {locked ? <a href={`${h("/")}#waitlist`} className="btn-primary">{c.ui.beta.joinBeta} ✦</a> : <Link href={h("/start/")} className="btn-primary">{c.site.common.start} ✦</Link>}
+          <p className="mt-5 text-sm text-dim"><a className="transition hover:text-gold" href="mailto:contact@horoscop.si" data-testid="footer-email">✉ contact@horoscop.si</a></p>
         </div>
         {cols.map((col) => (
           <div key={col.t}>
