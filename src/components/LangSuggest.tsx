@@ -18,7 +18,9 @@ export function LangSuggest() {
   useEffect(() => {
     try {
       if (localStorage.getItem("mirrorstar:lang") || localStorage.getItem(DISMISS)) return;
-      const pref = (navigator.languages ?? [navigator.language]).map((l) => l.toLowerCase().slice(0, 2)).find((l) => (LOCALES as readonly string[]).includes(l));
+      const langs = (navigator.languages ?? [navigator.language]).map((l) => l.toLowerCase().slice(0, 2));
+      if (langs.includes(locale)) return; // reader already understands this page
+      const pref = langs.find((l) => (LOCALES as readonly string[]).includes(l));
       // eslint-disable-next-line react-hooks/set-state-in-effect -- browser-only check after mount
       if (pref && pref !== locale) setTarget(pref);
     } catch { /* storage blocked */ }

@@ -48,21 +48,28 @@ export function Header() {
   const locked = useBetaLocked(); const B = c.ui.beta;
   const joinHref = `${h("/")}#waitlist`;
   if (locked) return (
-    <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/70 shadow-[0_10px_40px_-20px_rgba(0,0,0,.6)] backdrop-blur-xl" : "bg-transparent"}`} data-testid="header-guest">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
-        <Link href={h("/")} className="group flex min-w-0 items-center gap-2">
-          <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
-          <span className="h-display truncate text-2xl font-semibold tracking-wide text-aurora">{c.site.brand}</span>
-        </Link>
-        <nav className="flex items-center gap-1.5 text-sm">
-          <Link href={h("/learn/")} className={`hidden rounded-full px-3 py-1.5 transition md:inline ${active("/learn/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{c.site.nav.learn}</Link>
-          <Link href={h("/quizzes/")} className={`hidden rounded-full px-3 py-1.5 transition md:inline ${active("/quizzes/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{c.site.nav.quizzes}</Link>
-          <LangSwitch className="md:ml-2" />
-          <Link href={h("/account/")} className="whitespace-nowrap rounded-full px-2.5 py-1.5 text-xs text-mist hover:text-gold sm:text-sm" data-testid="nav-login">{B.login}</Link>
-          <a href={joinHref} className="btn-primary whitespace-nowrap !px-3.5 !py-1.5 text-xs sm:!px-4 sm:!py-2 sm:text-sm" data-testid="nav-join">{B.joinBeta} ✦</a>
-        </nav>
-      </div>
-    </header>
+    <>
+      <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/70 shadow-[0_10px_40px_-20px_rgba(0,0,0,.6)] backdrop-blur-xl" : "bg-transparent"}`} data-testid="header-guest">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
+          <Link href={h("/")} className="group flex items-center gap-2">
+            <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
+            <span className="h-display text-2xl font-semibold tracking-wide text-aurora">{c.site.brand}</span>
+          </Link>
+          <nav className="flex items-center gap-1.5 text-sm">
+            <Link href={h("/learn/")} className={`hidden rounded-full px-3 py-1.5 transition md:inline ${active("/learn/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{c.site.nav.learn}</Link>
+            <Link href={h("/quizzes/")} className={`hidden rounded-full px-3 py-1.5 transition md:inline ${active("/quizzes/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{c.site.nav.quizzes}</Link>
+            <LangSwitch className="md:ml-2" />
+            <Link href={h("/account/")} className="ml-1 hidden whitespace-nowrap rounded-full px-3 py-1.5 text-mist hover:text-gold md:inline" data-testid="nav-login">{B.login}</Link>
+            <a href={joinHref} className="btn-primary ml-1 hidden whitespace-nowrap !py-2 md:inline-flex" data-testid="nav-join">{B.joinBeta} ✦</a>
+          </nav>
+        </div>
+      </header>
+      {/* Phones: the two guest actions live in a bottom bar where the app tabs would be. */}
+      <nav className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-2 gap-2 rounded-3xl border border-white/15 bg-ink/85 p-2 shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl md:hidden" data-testid="guest-bar">
+        <Link href={h("/account/")} className="btn-ghost !py-2.5 text-center text-sm" data-testid="bar-login">{B.login}</Link>
+        <a href={joinHref} className="btn-primary !py-2.5 text-center text-sm" data-testid="bar-join">{B.joinBeta} ✦</a>
+      </nav>
+    </>
   );
   return (
     <>
