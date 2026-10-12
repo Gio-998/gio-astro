@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const c = getContent(lang);
   return {
     metadataBase: new URL(SITE_URL),
-    verification: { google: "lawAZscQq-N7Z2WZ5gPeHdtfwMK02cXhEACtaYUoHvY" },
+    verification: { google: ["lawAZscQq-N7Z2WZ5gPeHdtfwMK02cXhEACtaYUoHvY", "2nXRy-mgheo53M60i3hgsRr0v7lfJqK5L5nuwNmt-lE"] },
     title: { default: `${c.site.brand}: ${c.site.tagline}`, template: `%s · ${c.site.brand}` },
     description: c.site.description,
     // Landing page defaults; every inner page overrides canonical/alternates/OG with its own path (lib/page-meta).
