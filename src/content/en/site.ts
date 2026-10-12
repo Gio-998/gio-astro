@@ -3,7 +3,7 @@ export const site = {
   weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
   themeOn: "My colours: on", themeOff: "My colours: off", themeHint: "Colour the whole site with your personal element palette, or switch back to the default look.",
   datePicker: { day: "Day", month: "Month", year: "Year" },
-  brand: "Mirrorstar",
+  brand: "Horoscop",
   language: "Language", languages: { en: "English", mk: "Македонски" } as Record<string, string>,
   startShort: "Start",
   hero: { eyebrow: "Stars · numbers · elements · science", see: "See ", words: ["yourself", "your love", "your friends", "your family"], mid: " and the people around you ", end: "in new colours.", bornOn: "I was born on", reveal: "Reveal my sky ✦", perks: ["✦ No sign-up", "✦ Full results free", "✦ Data stays on your device"], orMatch: "or check a compatibility →", scroll: "Scroll", scrollDown: "Scroll down" },

@@ -8,9 +8,11 @@ import { LOCALES, isLocale, getContent } from "@/content";
 import { ContentProvider } from "@/lib/content-context";
 import { Header, Footer } from "@/components/Chrome";
 import { SITE_URL } from "@/lib/site-url";
+import { localizedMeta } from "@/lib/seo";
 import { PersonalTheme } from "@/components/PersonalTheme";
 import { AccountBoot } from "@/components/auth/Auth";
 import { BetaGate } from "@/components/auth/Beta";
+import { LangSuggest } from "@/components/LangSuggest";
 
 const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
 const caps = Cinzel({ subsets: ["latin", "latin-ext"], weight: ["500", "600"], variable: "--font-cinzel" });
@@ -26,9 +28,8 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     metadataBase: new URL(SITE_URL),
     title: { default: `${c.site.brand}: ${c.site.tagline}`, template: `%s · ${c.site.brand}` },
     description: c.site.description,
-    openGraph: { siteName: c.site.brand, type: "website", locale: lang },
-    alternates: { languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/`])) },
-    ...(process.env.NEXT_PUBLIC_BETA !== "0" ? { robots: { index: false, follow: false } } : {}),
+    // Landing page defaults; every inner page overrides canonical/alternates/OG with its own path (lib/page-meta).
+    ...localizedMeta(lang, "/", { title: `${c.site.brand} · ${c.site.tagline}`, description: c.site.description, siteName: c.site.brand }),
   };
 }
 export const viewport: Viewport = { themeColor: "#1c1645", width: "device-width", initialScale: 1 };
@@ -50,7 +51,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <PersonalTheme />
           <AccountBoot />
           <Header />
-          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate></main>
+          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><LangSuggest /><BetaGate>{children}</BetaGate></main>
           <Footer />
         </ContentProvider>
       </body>

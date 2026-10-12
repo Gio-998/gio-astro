@@ -1,4 +1,4 @@
-# Mirrorstar (working name)
+# Horoscop
 
 Astrology + psychology self-discovery and compatibility app. Zero running cost: static export, all calculations in the browser, data in localStorage.
 

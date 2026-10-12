@@ -54,7 +54,7 @@ describe("engine robustness sweep", () => {
 describe("Macedonian coverage", () => {
   const MODULES = ["astro", "chinese", "nums", "psych", "vedic", "quizzes", "compat", "daily", "site", "landing", "book", "lensInfo", "lensUi", "ui"] as const;
   // Strings that legitimately stay the same in both languages (codes, brand, citations, glyphs).
-  const SAME_OK = /^(Mirrorstar|[A-Z]{2,4}|[A-Z]{4}|.{0,3})$|ipip|Mini-IPIP|MS1|^[\W\d\s]+$/;
+  const SAME_OK = /^(Horoscop|Mirrorstar|[A-Z]{2,4}|[A-Z]{4}|.{0,3})$|ipip|Mini-IPIP|MS1|^[\W\d\s]+$/;
   const leaves = (o: unknown, path: string, out: [string, string][]) => {
     if (typeof o === "string") out.push([path, o]);
     else if (Array.isArray(o)) o.forEach((v, i) => leaves(v, `${path}[${i}]`, out));
