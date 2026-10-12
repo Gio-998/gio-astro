@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Logo } from "./Chrome";
 import { useContent } from "@/lib/content-context";
 import { usePrinting } from "@/lib/print";
+import { ExportPdf } from "./ExportPdf";
 
 /** Branded band that only appears in print / Save as PDF, and opens every <details> so the full text prints. */
 export function PrintKit() {
@@ -19,9 +20,12 @@ export function PrintKit() {
     return () => { closed.forEach((d) => d.removeAttribute("open")); tall.forEach((el) => el.classList.remove("print-split")); };
   }, [printing, locale]);
   return (
+    <>
+    <ExportPdf />
     <div className="print-only print-brand" aria-hidden>
       <span className="flex items-center gap-2"><Logo className="h-7 w-7" /><span className="print-brand-name">Horoscop</span></span>
       <span className="print-brand-meta">horoscop.si{date && <> · {date}</>}</span>
     </div>
+    </>
   );
 }

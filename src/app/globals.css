@@ -231,6 +231,20 @@ details > summary::-webkit-details-marker { display: none; }
   a { color: #f6cf7a !important; text-decoration: none !important; }
   .chip { color: #f5f1ff !important; border-color: rgba(201,166,94,.45) !important; background: rgba(255,255,255,.05) !important; }
 
+  /* Score bars: true width, brand gradient, no animation. */
+  [class*="transition"] { transition: none !important; }
+  .print-track, .h-1\.5.rounded-full.bg-white\/10, .h-2.rounded-full.bg-white\/10 { background: rgba(255,255,255,.16) !important; height: 7px !important; overflow: hidden !important; border: 1px solid rgba(201,166,94,.25); }
+  .print-fill { width: var(--w) !important; box-shadow: none !important; }
+  .print-track > *, .h-1\.5.rounded-full.bg-white\/10 > *, .h-2.rounded-full.bg-white\/10 > * { background: linear-gradient(90deg, #8b6cf0 0%, #c9a0f0 45%, #f6cf7a 100%) !important; }
+  .print-bar-label, .print-bar-label span { color: #f5f1ff !important; font-size: 9.5pt !important; }
+  .print-bar-label span:last-child { color: #f6cf7a !important; font-weight: 600; }
+  /* Less blue, more contrast. */
+  .text-sage, .text-\[\#a9c8ff\], [class*="text-sky"], [class*="text-blue"] { color: #f6cf7a !important; }
+  .text-xs { font-size: 9pt !important; line-height: 1.45 !important; }
+  .text-sm { font-size: 10pt !important; line-height: 1.5 !important; }
+  .text-\[11px\], .text-\[10px\] { font-size: 8.5pt !important; }
+  .card p + p { margin-top: 2mm; }
+
   /* Book of You / Bond Story: keep the night look instead of paper. */
   .reading-surface, .book-paper, .paper-surface { background: transparent !important; box-shadow: none !important; color: #ece6ff !important; padding: 0 !important; }
   .reading { font-size: 11pt; line-height: 1.6; color: #ece6ff !important; }

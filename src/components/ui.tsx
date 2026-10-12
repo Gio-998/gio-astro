@@ -1,4 +1,5 @@
 "use client";
+import { usePrinting } from "@/lib/print";
 import { useContent } from "@/lib/content-context";
 import type { Evidence } from "@/engine/compat";
 import { useEffect, useRef, useState } from "react";
@@ -35,12 +36,13 @@ export function EvidenceBadge({ e }: { e: Evidence }) {
 
 const BAR_GRAD: Record<string, string> = { "bg-gold": "bg-gradient-to-r from-amber to-gold", "bg-rose": "bg-gradient-to-r from-violet to-rose", "bg-sage": "bg-gradient-to-r from-sage to-[#a9c8ff]" };
 export function Bar({ value, label, color = "bg-gold", right }: { value: number; label?: string; color?: string; right?: string }) {
-  const ref = useRef<HTMLDivElement>(null); const [on, setOn] = useState(false);
+  const ref = useRef<HTMLDivElement>(null); const [seen, setOn] = useState(false); const printing = usePrinting(); const on = seen || printing;
+  const w = `${Math.max(2, Math.min(100, value))}%`;
   useEffect(() => { const el = ref.current; if (!el) return; const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setOn(true); io.disconnect(); } }); io.observe(el); return () => io.disconnect(); }, []);
   return (
-    <div className="mb-2">
-      {label && <div className="mb-1 flex justify-between text-xs text-dim"><span>{label}</span><span>{right ?? Math.round(value)}</span></div>}
-      <div ref={ref} className="h-2 overflow-hidden rounded-full bg-white/10"><div className={`h-full rounded-full ${BAR_GRAD[color] ?? color} shadow-[0_0_12px_rgba(246,207,122,.35)] transition-[width] duration-[1200ms] ease-out`} style={{ width: on ? `${Math.max(2, Math.min(100, value))}%` : "2%" }} /></div>
+    <div className="print-bar mb-2">
+      {label && <div className="print-bar-label mb-1 flex justify-between text-xs text-dim"><span>{label}</span><span>{right ?? Math.round(value)}</span></div>}
+      <div ref={ref} className="print-track h-2 overflow-hidden rounded-full bg-white/10"><div data-w={w} style={{ ["--w" as string]: w, width: on ? w : "2%" }} className={`print-fill h-full rounded-full ${BAR_GRAD[color] ?? color} shadow-[0_0_12px_rgba(246,207,122,.35)] transition-[width] duration-[1200ms] ease-out`} /></div>
     </div>
   );
 }
