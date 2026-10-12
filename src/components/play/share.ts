@@ -15,7 +15,7 @@ export async function renderPlayStory(profile: PlayProfile, P: PlayContent, name
   x.font = "40px system-ui, sans-serif"; x.fillStyle = "#d9cdf5"; x.fillText(P.share.sub, W / 2, 345);
   // constellation
   const C = { x: W / 2, y: 820 }, R = 330;
-  const at = (i: number, r: number) => { const a = ((-90 + i * 36) * Math.PI) / 180; return [C.x + r * Math.cos(a), C.y + r * Math.sin(a)]; };
+  const at = (i: number, r: number) => { const a = ((-90 + i * (360 / PLAY_DIMS.length)) * Math.PI) / 180; return [C.x + r * Math.cos(a), C.y + r * Math.sin(a)]; };
   x.strokeStyle = "rgba(255,255,255,.12)"; x.lineWidth = 2; for (const k of [0.33, 0.66, 1]) { x.beginPath(); x.arc(C.x, C.y, R * k, 0, 7); x.stroke(); }
   const pts = PLAY_DIMS.map((d, i) => ({ d, i, v: profile.dims[d] })).filter((p) => p.v != null).map((p) => ({ ...p, xy: at(p.i, R * (0.16 + 0.84 * p.v! / 10)) }));
   if (pts.length >= 3) {

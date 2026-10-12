@@ -354,6 +354,12 @@ export type Database = {
         }
         Relationships: []
       }
+      profile_signals: {
+        Row: { axes: Json; level: number; sources: string[]; sure: number; updated_at: string; user_id: string }
+        Insert: { axes?: Json; level?: number; sources?: string[]; sure?: number; updated_at?: string; user_id?: string }
+        Update: { axes?: Json; level?: number; sources?: string[]; sure?: number; updated_at?: string; user_id?: string }
+        Relationships: []
+      }
       quiz_results: {
         Row: {
           answers: Json

@@ -13,6 +13,7 @@ import { SayPlay } from "./SayPlay";
 import { GameIcon } from "./GameIcon";
 import { sharePlayStory } from "./share";
 import { track } from "@/lib/track";
+import { UnifiedGlance } from "../adaptive/UnifiedGlance";
 
 export function PlayHub() {
   const P = usePlay(); const { c } = useContent(); const h = useHref(); const s = useStore();
@@ -25,7 +26,7 @@ export function PlayHub() {
     <div data-testid="play-hub">
       <PageHero eyebrow={P.hub.eyebrow} emblem="explorer" img="storm" title={<>{P.hub.titleA}<span className="italic text-aurora">{P.hub.titleB}</span></>} sub={P.hub.sub}>
         <div className="flex flex-wrap items-center gap-3">
-          <div className="h-2 w-40 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-gradient-to-r from-rose to-gold transition-all" style={{ width: `${(done.length / 5) * 100}%` }} /></div>
+          <div className="h-2 w-40 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-gradient-to-r from-rose to-gold transition-all" style={{ width: `${(done.length / PLAY_GAMES.length) * 100}%` }} /></div>
           <span className="text-sm text-dim">{P.hub.progress(done.length)}</span>
           {person && next && <Link href={h(`/play/${next}/${qs}`)} className="btn-primary !py-2 text-sm" data-testid="play-next">{done.length ? P.hub.playNext : P.hub.play} ✦</Link>}
         </div>
@@ -66,6 +67,7 @@ export function PlayHub() {
           {prof && prof.flags.length > 0 && <div className="mt-4 space-y-1">{prof.flags.map((f) => <p key={f} className="text-xs text-dim">◦ {P.hub.flags[f]}</p>)}</div>}
         </div>
       </section>
+      {person && <div className="mt-8"><UnifiedGlance person={person} isMe={forId === "me"} compact /></div>}
       {prof && person && (
         <section className="mt-8">
           <h2 className="h-display mb-3 text-3xl"><span className="mr-2 text-gold">✦</span>{P.hub.sayPlay}</h2>

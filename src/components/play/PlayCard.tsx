@@ -6,7 +6,7 @@ import type { PlayContent } from "./content";
 import { usePlay } from "./text";
 import { useReduce } from "./fx";
 
-export const DIM_COL: Record<PlayDim, string> = { risk: "#f6b5cf", resilience: "#ffd6b8", read: "#c9b8ff", empathy: "#f6b5cf", trust: "#8fe3d6", fairness: "#8fe3d6", detail: "#a9c8ff", speed: "#f6cf7a", lead: "#f6cf7a", conform: "#c9b8ff" };
+export const DIM_COL: Record<PlayDim, string> = { risk: "#f6b5cf", resilience: "#ffd6b8", read: "#c9b8ff", empathy: "#f6b5cf", trust: "#8fe3d6", fairness: "#8fe3d6", detail: "#a9c8ff", speed: "#f6cf7a", lead: "#f6cf7a", conform: "#c9b8ff", patience: "#ffd6b8", control: "#a9c8ff" };
 
 /** Up to three words for the dimensions that stand out most from the middle. */
 export function playWords(dims: PlayProfile["dims"], P: PlayContent): string[] {
@@ -15,7 +15,7 @@ export function playWords(dims: PlayProfile["dims"], P: PlayContent): string[] {
 }
 
 const W = 320, C = 160, R = 112;
-const at = (i: number, r: number) => { const a = ((-90 + i * 36) * Math.PI) / 180; return [C + r * Math.cos(a), C + r * Math.sin(a)] as const; };
+const at = (i: number, r: number) => { const a = ((-90 + i * (360 / PLAY_DIMS.length)) * Math.PI) / 180; return [C + r * Math.cos(a), C + r * Math.sin(a)] as const; };
 
 /** Ten-point "constellation": each dimension is a star at its score; unplayed ones stay as faint ghosts. */
 export function PlayConstellation({ dims, size = "max-w-[320px]", onPick, sel }: { dims: PlayProfile["dims"]; size?: string; onPick?: (d: PlayDim) => void; sel?: PlayDim | null }) {

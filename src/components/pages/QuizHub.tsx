@@ -9,11 +9,12 @@ import { ArtCard } from "../art/ArtCard";
 import { Reveal } from "../art/Reveal";
 import { PrecisionLinks } from "../PrecisionResult";
 import { PlayBanner } from "../play/PlayBanner";
+import { useAdaptive } from "../adaptive/text";
 
 
 export function QuizHub() {
   const { c } = useContent(); const h = useHref(); const s = useStore();
-  const defs = quizDefs(c); const U = c.ui.quizHub;
+  const defs = quizDefs(c); const U = c.ui.quizHub; const AD = useAdaptive();
   const doneCount = QUIZ_IDS.filter((id) => s?.me?.quiz[defs[id].resultKey]).length;
   return (
     <div>
@@ -21,6 +22,18 @@ export function QuizHub() {
         sub={U.sub}>
         {s?.me && <div className="flex items-center gap-3"><div className="h-2 w-40 overflow-hidden rounded-full bg-white/10"><div className="h-full rounded-full bg-gradient-to-r from-rose to-gold" style={{ width: `${(doneCount / 7) * 100}%` }} /></div><span className="text-sm text-dim">{U.layers(doneCount)}</span></div>}
       </PageHero>
+      <Link href={h("/deep/")} data-testid="deep-banner" className="group relative mb-5 block overflow-hidden rounded-[28px] border border-gold/30 bg-gradient-to-br from-indigo/60 via-ink/80 to-violet/30 p-5 transition active:scale-[.99] hover:border-gold/60">
+        <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gold/20 blur-3xl transition group-hover:bg-gold/30" />
+        <div className="relative flex items-center gap-4">
+          <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink/70 text-2xl text-gold ring-1 ring-gold/40">⚡</div>
+          <div className="min-w-0 flex-1">
+            <p className="eyebrow mb-0.5">✦ {AD.hub.badge}{s?.me?.quiz.adaptive ? " · ✓" : ""}</p>
+            <p className="h-display text-2xl leading-tight">{AD.hub.title}</p>
+            <p className="text-sm text-mist/80">{AD.hub.tagline}</p>
+          </div>
+          <span className="text-xl text-gold transition group-hover:translate-x-1">→</span>
+        </div>
+      </Link>
       <PlayBanner />
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
         {QUIZ_IDS.map((id, i) => {

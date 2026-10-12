@@ -26,6 +26,7 @@ export function useGroups(keys: NavGroupKey[]): Group[] {
     const g = N.groups[key];
     const items: Item[] = key === "tests"
       ? [{ href: N.groups.tests.allHref, icon: "eye", title: N.groups.tests.allTitle, desc: N.groups.tests.allDesc },
+         { href: N.groups.tests.deep.href, icon: "big-five", title: N.groups.tests.deep.title, desc: N.groups.tests.deep.desc },
          ...QUIZ_IDS.map((id) => ({ href: `/quiz/${id}/`, icon: id as EmblemId, title: defs[id].title, desc: defs[id].tagline })),
          { href: N.groups.tests.play.href, icon: "tarot", title: N.groups.tests.play.title, desc: N.groups.tests.play.desc }]
       : (g as { items: { href: string; icon: string; title: string; desc: string }[] }).items.map((i) => ({ ...i, icon: i.icon as EmblemId }));

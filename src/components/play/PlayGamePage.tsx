@@ -16,8 +16,10 @@ import { FacesGame } from "./games/Faces";
 import { TrustGame } from "./games/Trust";
 import { MemoryGame } from "./games/Memory";
 import { LeadGame } from "./games/Lead";
+import { WaitGame } from "./games/Wait";
+import { FocusGame } from "./games/Focus";
 
-const GAMES: Record<PlayGameId, (p: { onDone: (r: PlayGameResult) => void }) => React.ReactNode> = { bridge: BridgeGame, faces: FacesGame, trust: TrustGame, memory: MemoryGame, lead: LeadGame };
+const GAMES: Record<PlayGameId, (p: { onDone: (r: PlayGameResult) => void }) => React.ReactNode> = { bridge: BridgeGame, faces: FacesGame, trust: TrustGame, memory: MemoryGame, lead: LeadGame, wait: WaitGame, focus: FocusGame };
 
 export function PlayGamePage({ game }: { game: PlayGameId }) {
   const P = usePlay(); const { c } = useContent(); const h = useHref(); const s = useStore(); const reduce = useReduce();
