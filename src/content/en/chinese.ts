@@ -16,24 +16,24 @@ export const animals: Record<Animal, { name: string; essence: string; gifts: str
 };
 
 export const wuxing: Record<WuXing, { name: string; text: string; color: string }> = {
-  wood: { name: "Wood", text: "growth, kindness and planning — the energy of spring", color: "green" },
-  fire: { name: "Fire", text: "passion, joy and visibility — the energy of summer", color: "red" },
-  earth: { name: "Earth", text: "stability, care and trust — the energy of late summer", color: "yellow" },
-  metal: { name: "Metal", text: "clarity, structure and integrity — the energy of autumn", color: "white" },
-  water: { name: "Water", text: "wisdom, depth and flow — the energy of winter", color: "black/blue" },
+  wood: { name: "Wood", text: "growth, kindness and planning: the energy of spring", color: "green" },
+  fire: { name: "Fire", text: "passion, joy and visibility: the energy of summer", color: "red" },
+  earth: { name: "Earth", text: "stability, care and trust: the energy of late summer", color: "yellow" },
+  metal: { name: "Metal", text: "clarity, structure and integrity: the energy of autumn", color: "white" },
+  water: { name: "Water", text: "wisdom, depth and flow: the energy of winter", color: "black/blue" },
 };
 
 export const animalRelations: Record<AnimalRelation, { name: string; text: string }> = {
   "six-harmony": { name: "Secret friends (Six Harmonies)", text: "Tradition calls this one of the six harmonious pairs: a quiet, natural alliance where each covers the other's blind spot." },
-  trine: { name: "Same-team trine", text: "You belong to the same group of four that shares values and rhythm — understanding comes easily." },
-  same: { name: "Mirror animals", text: "You share an animal, so you recognise each other fast — strengths and stubborn habits included." },
-  neutral: { name: "Open field", text: "Tradition gives no strong pull either way — this bond is shaped mostly by what you build." },
+  trine: { name: "Same-team trine", text: "You belong to the same group of four that shares values and rhythm: understanding comes easily." },
+  same: { name: "Mirror animals", text: "You share an animal, so you recognise each other fast: strengths and stubborn habits included." },
+  neutral: { name: "Open field", text: "Tradition gives no strong pull either way. This bond is shaped mostly by what you build." },
   harm: { name: "Sensitive pair", text: "Tradition flags small misunderstandings here. Clear words and kindness about small things make the difference." },
-  clash: { name: "Magnetic opposites", text: "You sit opposite each other on the zodiac wheel. That brings attraction and challenge — strong spark, and much to learn from each other's way." },
+  clash: { name: "Magnetic opposites", text: "You sit opposite each other on the zodiac wheel. That brings attraction and challenge: strong spark, and much to learn from each other's way." },
 };
 
 export const elementRelations: Record<ElementRelation, string> = {
-  generating: "One element feeds the other (like wood feeding fire) — a naturally supportive flow.",
+  generating: "One element feeds the other (like wood feeding fire): a naturally supportive flow.",
   same: "You share an element: easy understanding, and the shared habits can amplify each other.",
-  controlling: "One element shapes the other (like water calming fire) — this gives structure and growth when respected, friction when ignored.",
+  controlling: "One element shapes the other (like water calming fire). This gives structure and growth when respected, friction when ignored.",
 };

@@ -35,16 +35,16 @@ export const kootas: Record<string, { name: string; plain: string }> = {
   vashya: { name: "Vashya", plain: "natural attraction and influence" },
   tara: { name: "Tara", plain: "birth-star luck and wellbeing together" },
   yoni: { name: "Yoni", plain: "instinctive and physical affinity" },
-  maitri: { name: "Graha Maitri", plain: "friendship of the Moon signs' rulers — mental wavelength" },
+  maitri: { name: "Graha Maitri", plain: "friendship of the Moon signs' rulers: mental wavelength" },
   gana: { name: "Gana", plain: "nature: gentle, human or fierce" },
   bhakoot: { name: "Bhakoot", plain: "emotional and family harmony from Moon-sign distance" },
-  nadi: { name: "Nadi", plain: "energy constitution — traditionally weighted most" },
+  nadi: { name: "Nadi", plain: "energy constitution: traditionally weighted most" },
 };
 
 export const vedicCautions: Record<string, string> = {
-  nadi: "Tradition notes a 'same Nadi' pattern — read symbolically as two similar energies that need conscious variety and care for each other's health and rest.",
+  nadi: "Tradition notes a 'same Nadi' pattern: read symbolically as two similar energies that need conscious variety and care for each other's health and rest.",
   bhakoot: "Tradition notes a Moon-sign distance that asks for extra patience in family and money matters.",
-  manglik: "Tradition notes Mars emphasis in only one chart (Manglik). It's read as a difference in intensity — channel it into shared physical activity and clear agreements.",
+  manglik: "Tradition notes Mars emphasis in only one chart (Manglik). It's read as a difference in intensity: channel it into shared physical activity and clear agreements.",
 };
 export const vedicCancellations: Record<string, string> = {
   "nadi-different-pada": "Traditional cancellation: same birth star but different quarter (pada).",

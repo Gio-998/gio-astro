@@ -48,7 +48,7 @@ export const shadow: Record<string, string> = {
   "greed-s": "I often feel I need more (money, things, status) before I can relax.", "greed-l": "I like sharing what I have, even when it costs me something.",
   "desire-s": "When I want something intensely, I struggle to wait for it.", "desire-l": "I can feel strong desire without letting it run my choices.",
   "envy-s": "Other people's success can sting, even when I'm happy for them.", "envy-l": "Seeing someone do well inspires me to grow.",
-  "excess-s": "I tend to overdo pleasant things — food, scrolling, shopping, drinks.", "excess-l": "I know when I've had enough, and I stop.",
+  "excess-s": "I tend to overdo pleasant things: food, scrolling, shopping, drinks.", "excess-l": "I know when I've had enough, and I stop.",
   "anger-s": "When I feel wronged, anger rises fast and strong.", "anger-l": "I can stay calm and listen even when I'm frustrated.",
   "inertia-s": "I put off things that matter until the last moment.", "inertia-l": "Once I commit to something, I follow through.",
 };
@@ -56,7 +56,7 @@ export const shadow: Record<string, string> = {
 export const dosha: Record<string, { q: string; options: [string, string, string] }> = {
   frame: { q: "My body frame is naturally…", options: ["light and slender", "medium and athletic", "solid and broad"] },
   skin: { q: "My skin tends to be…", options: ["dry and cool", "warm, sensitive, flushes easily", "smooth, soft, a bit oily"] },
-  appetite: { q: "My appetite is…", options: ["irregular — I forget to eat", "strong — I get irritable when hungry", "steady — I can skip a meal easily"] },
+  appetite: { q: "My appetite is…", options: ["irregular, I forget to eat", "strong, I get irritable when hungry", "steady, I can skip a meal easily"] },
   digestion: { q: "After eating, I usually feel…", options: ["variable, sometimes bloated", "fine fast, sometimes heartburn", "heavy and slow after big meals"] },
   sleep: { q: "My sleep is…", options: ["light, easily interrupted", "moderate and sound", "deep and long, hard to wake"] },
   climate: { q: "The weather I like least is…", options: ["cold and windy", "hot and humid", "damp and grey"] },
@@ -94,7 +94,7 @@ export const bond: Record<string, string> = {
   growth: "We help each other grow and try new things.",
 };
 export const bondDims: Record<string, { name: string; strength: string; growth: string; practice: string }> = {
-  appreciation: { name: "Appreciation", strength: "You both feel valued — a powerful predictor of lasting bonds.", growth: "Appreciation may be getting lost in daily life.", practice: "Each evening this week, share one specific thing you appreciated." },
+  appreciation: { name: "Appreciation", strength: "You both feel valued: a powerful predictor of lasting bonds.", growth: "Appreciation may be getting lost in daily life.", practice: "Each evening this week, share one specific thing you appreciated." },
   trust: { name: "Trust", strength: "You feel safe relying on each other.", growth: "Trust may need tending.", practice: "Make one small promise and keep it visibly." },
   commitment: { name: "Commitment", strength: "You both feel the other is in it for real.", growth: "One or both of you may feel unsure where this is heading.", practice: "Talk about what you'd like this bond to look like in a year." },
   repair: { name: "Repair after conflict", strength: "You know how to come back together after friction.", growth: "Arguments may linger without repair.", practice: "Agree on a repair phrase, like 'can we start over?'" },
@@ -105,11 +105,11 @@ export const bondDims: Record<string, { name: string; strength: string; growth: 
 };
 
 export const meta: Record<"big-five" | "attachment" | "nine" | "care" | "shadow" | "dosha" | "explorer", { title: string; tagline: string; intro: string; unlocks: string; note?: string }> = {
-  "big-five": { title: "Big Five personality", tagline: "The most researched personality model — 20 quick statements.", intro: "Rate how well each statement describes you as you generally are now — not as you wish to be.", unlocks: "Big Five · four temperaments · four-letter style · yin–yang refinement", note: "Items: Mini-IPIP (Donnellan et al., 2006) from the public-domain International Personality Item Pool (ipip.ori.org)." },
-  "attachment": { title: "Attachment style", tagline: "How you handle closeness and distance — 9 statements.", intro: "Think about your close relationships in general (partners, close friends or family).", unlocks: "Attachment lens · pursue–withdraw insight", note: "Our own items measuring the two well-studied dimensions (anxiety and avoidance). A short reflection tool, not a clinical test." },
-  "nine": { title: "Nine motivations", tagline: "What drives you underneath it all — 18 statements.", intro: "How much is each statement like you?", unlocks: "Nine-motivation style · wing · growth & stress directions" },
-  "care": { title: "Care styles", tagline: "How you like to receive — and give — care. 11 quick picks.", intro: "Pick the one that would mean more to you. No wrong answers.", unlocks: "Care styles · translation map in compatibility" },
-  "shadow": { title: "Shadow & Light", tagline: "Seven classic shadows and their hidden gifts — 14 statements.", intro: "Be honest — this is private and for growth. Every shadow carries a gift.", unlocks: "Shadow & Light profile · shadow dance in compatibility", note: "Our own items, inspired by research on envy, greed, anger and self-control. Reflection only — never a moral verdict." },
-  "dosha": { title: "Body & energy type", tagline: "Ayurveda-inspired constitution — 12 quick picks.", intro: "Choose what has been most true for you over most of your life. You can skip this one — it's optional.", unlocks: "Body & energy type · balancing rituals" },
-  "explorer": { title: "Autopilot vs Explorer", tagline: "Your mind's two modes + your social stance — 10 items.", intro: "Slide toward the side that's more like you.", unlocks: "Autopilot/Explorer mind · social stance map" },
+  "big-five": { title: "Big Five personality", tagline: "The most researched personality model: 20 quick statements.", intro: "Rate how well each statement describes you as you generally are now, not as you wish to be.", unlocks: "Big Five · four temperaments · four-letter style · yin-yang refinement", note: "Items: Mini-IPIP (Donnellan et al., 2006) from the public-domain International Personality Item Pool (ipip.ori.org)." },
+  "attachment": { title: "Attachment style", tagline: "How you handle closeness and distance: 9 statements.", intro: "Think about your close relationships in general (partners, close friends or family).", unlocks: "Attachment lens · pursue-withdraw insight", note: "Our own items measuring the two well-studied dimensions (anxiety and avoidance). A short reflection tool, not a clinical test." },
+  "nine": { title: "Nine motivations", tagline: "What drives you underneath it all: 18 statements.", intro: "How much is each statement like you?", unlocks: "Nine-motivation style · wing · growth & stress directions" },
+  "care": { title: "Care styles", tagline: "How you like to receive and give care: 11 quick picks.", intro: "Pick the one that would mean more to you. No wrong answers.", unlocks: "Care styles · translation map in compatibility" },
+  "shadow": { title: "Shadow & Light", tagline: "Seven classic shadows and their hidden gifts: 14 statements.", intro: "Be honest. This is private and for growth. Every shadow carries a gift.", unlocks: "Shadow & Light profile · shadow dance in compatibility", note: "Our own items, inspired by research on envy, greed, anger and self-control. Reflection only, never a moral verdict." },
+  "dosha": { title: "Body & energy type", tagline: "Ayurveda-inspired constitution: 12 quick picks.", intro: "Choose what has been most true for you over most of your life. You can skip this one: it's optional.", unlocks: "Body & energy type · balancing rituals" },
+  "explorer": { title: "Autopilot vs Explorer", tagline: "Your mind's two modes + your social stance: 10 items.", intro: "Slide toward the side that's more like you.", unlocks: "Autopilot/Explorer mind · social stance map" },
 };

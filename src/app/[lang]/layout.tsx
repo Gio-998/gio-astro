@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   const c = getContent(lang);
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: `${c.site.brand} — ${c.site.tagline}`, template: `%s · ${c.site.brand}` },
+    title: { default: `${c.site.brand}: ${c.site.tagline}`, template: `%s · ${c.site.brand}` },
     description: c.site.description,
     openGraph: { siteName: c.site.brand, type: "website", locale: lang },
     alternates: { languages: Object.fromEntries(LOCALES.map((l) => [l, `/${l}/`])) },
