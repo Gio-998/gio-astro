@@ -13,6 +13,7 @@
     "cities": "node scripts/build-cities.mjs"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.3",
     "astronomy-engine": "^2.1.19",
     "lunar-javascript": "^1.7.7",
     "luxon": "^3.7.2",

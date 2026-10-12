@@ -18,7 +18,7 @@ export const landing = {
     ["Is it really free?", "Yes. Every chart, quiz result and compatibility report you see here is free and complete — no paywall at the end. Later we'll offer optional extras (like a printable deep report) with published prices and one-click cancel."],
     ["Can astrology predict who I'll get along with?", "No — and we'll never pretend it can. Astrology, numerology and the Chinese zodiac are beautiful mirrors for reflection. That's why we also include research-backed lenses (Big Five, attachment) and label every lens honestly."],
     ["Do I need my birth time?", "No. Your birth date alone unlocks most lenses. Time and place add your rising sign, houses and a more precise Moon."],
-    ["Where is my data stored?", "On your device, in your browser. There's no account and nothing is sent to a server. You can export or delete it any time."],
+    ["Where is my data stored?", "On your device, in your browser. No sign-up is needed and nothing is uploaded. If you want, an optional free account backs it up in the EU and syncs it between devices. You can export or delete everything any time."],
     ["What do Harmony and Spark mean?", "Harmony is how easy a bond feels; Spark is how much you grow through each other. Every pair gets both — we never write a pair off."],
     ["Can I compare with someone who isn't here?", "Yes — add their birth date (and quiz answers if they take them on your phone), or send them your profile code so they can compare on theirs."],
   ] as [string, string][],
@@ -40,7 +40,7 @@ export const landing = {
   s8: { eyebrow: "Your daily ritual", title: ["Ninety seconds ", "with the sky", ""], sub: "The real Moon and planets, today — and once you add your birth date, what they mean for your chart." },
   s9: { eyebrow: "Examples, not reviews", title: ["The kind of things people discover", "", ""], sub: "We're new, so there are no real reviews yet. These are illustrative examples of what the app can surface — not quotes from customers." },
   example: "Example",
-  promise: { eyebrow: "Our no-tricks promise", title: ["Hope without fake certainty. ", "Value without traps.", ""], items: ["Full quiz results free — never a paywall at the end", "No fake urgency, no “psychic is typing”, no fake reviews", "Future extras: published prices, one-click cancel, real refunds", "Your data stays on your device"], read: "Read the promise →" },
+  promise: { eyebrow: "Our no-tricks promise", title: ["Hope without fake certainty. ", "Value without traps.", ""], items: ["Full quiz results free — never a paywall at the end", "No fake urgency, no “psychic is typing”, no fake reviews", "Future extras: published prices, one-click cancel, real refunds", "Your data stays on your device unless you choose an account"], read: "Read the promise →" },
   faqHead: { eyebrow: "Questions", title: "Asked under the stars" },
   cta: { title: ["Your sky is ", "waiting", "."], sub: "Ninety seconds. No sign-up. A new way to see yourself — and the people you love." },
 };

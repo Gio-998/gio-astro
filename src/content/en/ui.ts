@@ -66,7 +66,7 @@ export const bondCheck = {
   intro: "A 3-minute check-in you each answer about this relationship. Its eight areas — appreciation, trust, commitment, repair, fun, feeling understood, safety and growth — are the kind of relationship-specific feelings that research found predict relationship quality far better than any sign or type (Joel et al., 2020). The stars are fixed; this one is yours to move.",
   first: "First person",
   second: "Second person",
-  pass: (a: string, b: string) => `Pass the phone: ${a} answers first, then ${b} — privately, without peeking. Answers are not saved.`,
+  pass: (a: string, b: string) => `Pass the phone: ${a} answers first, then ${b} — privately, without peeking. The result is kept on this device (and in your account if you are signed in).`,
   begin: (a: string) => `Begin with ${a}`,
   thanks: (a: string) => `Thank you, ${a}`,
   handTo: (b: string) => `Now hand the phone to ${b}.`,
@@ -154,7 +154,7 @@ export const birthForm = {
   fullNamePh: "As on the birth certificate",
   offset: "UTC offset at birth, hours (only if you know the time zone database is wrong)",
   offsetPh: "e.g. 1 or -5.5",
-  saved: "Saved only on this device. Nothing is uploaded.",
+  saved: "Saved on this device (and in your account, if you are signed in).",
 };
 
 export const match = {
@@ -317,6 +317,8 @@ export const privacyControls = {
 };
 
 export const pageMeta = {
+  account: { title: "Your account" },
+  verify: { title: "Enter your code" },
   bond: { title: "Bond Check — a 3-minute check-in for two", description: "Both of you answer eight questions about your relationship and see strengths, perception gaps and practices." },
   book: { title: "The Book of You" },
   chart: { title: "Birth chart" },
@@ -346,4 +348,46 @@ export const extras = {
 
 export const misc = {
   min: (m: number) => `${m} min`, unlock: "Unlock", chartWheel: "Birth chart wheel",
+};
+
+export const auth = {
+  chipOut: "Save across devices", chipIn: "Account",
+  eyebrow: "Your account · optional", titleA: "Keep your sky ", titleB: "on every device",
+  sub: "Everything works without an account. Sign in to back up your profile, quizzes, people, Bond Checks and journal, and to see them on your phone and laptop.",
+  tabCode: "Email code", tabPassword: "Password",
+  email: "Email", emailPh: "you@example.com", password: "Password", passwordPh: "At least 8 characters", name: "Your name (optional)",
+  sendCode: "Email me a 6-digit code", codeHint: "No password needed. We send a one-time code; it also creates your account if you're new.",
+  signIn: "Sign in", createAccount: "Create account", haveAccount: "Already have an account? Sign in", needAccount: "New here? Create an account",
+  forgot: "Forgot password?", resetSent: "If that email has an account, a reset link is on its way.",
+  google: "Continue with Google", or: "or",
+  consentTitle: "Before we store anything",
+  consentTerms: "I agree to the Terms of use and the Privacy notice.", consentData: "Store my birth data and quiz answers (including sensitive ones about relationships and body) in my account so they sync. I can delete them any time.",
+  consentMarketing: "Occasional emails about new features (optional).", consentNeeded: "Please tick the two required boxes.",
+  termsLink: "Terms", privacyLink: "Privacy",
+  verifyEyebrow: "Step 2 of 2", verifyTitle: "Enter your code", verifySub: (email: string) => `We sent a 6-digit code to ${email}. It is valid for about an hour.`,
+  verifyLinkToo: "You can also just tap the link in the email.",
+  codeLabel: (i: number) => `Digit ${i} of 6`, pasteHint: "Tip: paste the whole code into the first box.",
+  verify: "Verify", verifying: "Checking…", resend: "Send a new code", resendIn: (s: number) => `New code in ${s}s`, resent: "A new code is on its way.",
+  changeEmail: "Use a different email", noEmail: "No email address here — start again.",
+  checkInbox: "Check your inbox and spam folder.",
+  confirmSent: (email: string) => `Almost there — we sent a confirmation to ${email}. Enter the 6-digit code from it (or tap its link).`,
+  signedInAs: (email: string) => `Signed in as ${email}`,
+  status: { off: "Not signed in", idle: "All changes saved to your account", syncing: "Syncing…", offline: "Offline — changes will sync when you're back online", error: "Sync paused" } as Record<string, string>,
+  lastSync: (t: string) => `Last synced ${t}`, pending: (n: number) => `${n} change${n === 1 ? "" : "s"} waiting to sync`, syncNow: "Sync now",
+  conflictTitle: "Two different profiles", conflictText: "This device and your account have different birth dates. Which one is you? The other one will be kept as a saved person, so nothing is lost.",
+  keepLocal: (n: string, d: string) => `This device: ${n}, ${d}`, keepServer: (n: string, d: string) => `My account: ${n}, ${d}`,
+  consentMissing: "To sync, please confirm you're happy for us to store your birth data and quiz answers.", agreeSync: "Agree & sync",
+  signOut: "Sign out", signOutKeep: "Sign out (keep a copy on this device)", signOutClear: "Sign out and remove data from this device",
+  deleteAccount: "Delete my account", deleteConfirm: "Delete your account and everything stored in it? This cannot be undone. Data on this device will be removed too.", deleted: "Your account was deleted.",
+  backToProfile: "Go to my profile →",
+  errors: {
+    invalid_credentials: "That email and password don't match.", email_not_confirmed: "Please confirm your email first — enter the code we sent.",
+    otp_expired: "That code is not right or has expired. Check the digits, or send a new one.", invalid_otp: "That code isn't right. Check the digits and try again.",
+    over_email_send_rate_limit: "Too many emails were sent just now. Please wait a minute and try again.", over_request_rate_limit: "Too many attempts. Please wait a minute.",
+    user_already_exists: "An account with this email already exists — sign in instead.", weak_password: "Please choose a stronger password (at least 8 characters).",
+    email_address_invalid: "That email address doesn't look right.", same_password: "Choose a password different from the old one.",
+    network: "Can't reach the server. Check your connection.", generic: "Something went wrong. Please try again.",
+  } as Record<string, string>,
+  newPassword: "Choose a new password", savePassword: "Save password", passwordSaved: "Password updated.", finishing: "Signing you in…",
+  disabled: "Accounts aren't configured in this build.",
 };

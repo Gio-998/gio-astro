@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { useStore, findPerson, StoredPerson } from "@/lib/store";
+import { useStore, findPerson, StoredPerson, repo, newId } from "@/lib/store";
 import { useContent, useHref } from "@/lib/content-context";
 import { BOND_DIMS, CARE_STYLES, scoreBond, BondAnswers, BondResult, CareStyle } from "@/engine/bondcheck";
 import { Bar, EvidenceBadge, ScoreRing, PageHero } from "../ui";
@@ -88,7 +88,13 @@ export function BondPage() {
     setAns(all2);
     if (step.i + 1 < total) setStep({ who, i: step.i + 1 });
     else if (who === "a") setStep({ handover: true });
-    else setStep({ result: scoreBond(all2.a, all2.b) });
+    else {
+      const result = scoreBond(all2.a, all2.b);
+      // Keep the history (and sync it to the account if signed in). The non-"me" person is the one the check is about.
+      const other = A.id === "me" ? B : B.id === "me" ? A : B;
+      repo.saveBondCheck({ id: newId(), personId: A.id, otherId: other.id, relType: other.relType, answers: { a: all2.a, b: all2.b, aId: A.id, bId: B.id }, results: result, createdAt: new Date().toISOString() });
+      setStep({ result });
+    }
   };
   const i = step.i;
   return (

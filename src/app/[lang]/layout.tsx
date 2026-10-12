@@ -9,6 +9,7 @@ import { ContentProvider } from "@/lib/content-context";
 import { Header, Footer } from "@/components/Chrome";
 import { SITE_URL } from "@/lib/site-url";
 import { PersonalTheme } from "@/components/PersonalTheme";
+import { AccountBoot } from "@/components/auth/Auth";
 
 const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
 const caps = Cinzel({ subsets: ["latin", "latin-ext"], weight: ["500", "600"], variable: "--font-cinzel" });
@@ -45,6 +46,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
             <div className="absolute -right-40 bottom-0 h-[480px] w-[480px] rounded-full bg-rose/10 blur-[120px] animate-pulse-glow [animation-delay:2s]" />
           </div>
           <PersonalTheme />
+          <AccountBoot />
           <Header />
           <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4">{children}</main>
           <Footer />

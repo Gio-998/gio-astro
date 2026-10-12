@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { AccountChip } from "./auth/Auth";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useContent, useHref } from "@/lib/content-context";
@@ -56,9 +57,10 @@ export function Header() {
               <Link key={t.href} href={h(t.href)} className={`relative rounded-full px-3 py-1.5 transition ${active(t.href) ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{t.label}</Link>
             ))}
             <LangSwitch className="ml-2" />
+            <span className="ml-2"><AccountChip /></span>
             <Link href={h("/start/")} className="btn-primary ml-2 !py-2">{c.site.startShort} ✦</Link>
           </nav>
-          <div className="flex items-center gap-2 md:hidden"><LangSwitch />
+          <div className="flex items-center gap-2 md:hidden"><LangSwitch /><AccountChip />
           <Link href={h("/start/")} className="btn-primary !px-4 !py-1.5 text-xs">{c.site.startShort} ✦</Link></div>
         </div>
       </header>

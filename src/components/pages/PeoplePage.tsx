@@ -30,7 +30,7 @@ export function PeoplePage() {
           <textarea className="input h-28 font-mono text-xs" value={code} onChange={(e) => setCode(e.target.value)} placeholder="MS1.…" />
           {err && <p className="text-sm text-rose">{err}</p>}
           <div className="flex gap-2">
-            <button className="btn-primary" onClick={() => { const d = decodeProfileCode(code); if (!d) return setErr(U.badCode); repo.savePerson({ ...d, id: newId(), createdAt: new Date().toISOString(), relType: "friend" }); setCode(""); setMode("list"); }}>{U.addBtn}</button>
+            <button className="btn-primary" onClick={() => { const d = decodeProfileCode(code); if (!d) return setErr(U.badCode); repo.savePerson({ ...d, id: newId(), createdAt: new Date().toISOString(), relType: "friend", importedCode: code.trim() }); setCode(""); setMode("list"); }}>{U.addBtn}</button>
             <button className="btn-ghost" onClick={() => setMode("list")}>{c.site.common.cancel}</button>
           </div>
         </div>

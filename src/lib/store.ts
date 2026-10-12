@@ -21,12 +21,22 @@ export interface StoredPerson {
   answers?: QuizAnswers;
   relType?: RelType;
   createdAt: string;
+  /** Last local edit (ISO). Used for last-write-wins when syncing with an account. */
+  updatedAt?: string;
+  /** When each quiz result was last saved locally (ISO), keyed by QuizResults key. */
+  quizAt?: Record<string, string>;
+  /** Set once this record has been confirmed on the server (lets a pull detect deletions made on another device). */
+  syncedAt?: string;
+  /** Profile code this person was imported from (kept so it can be re-parsed later). */
+  importedCode?: string;
 }
-export interface JournalEntry { date: string; prompt: string; text: string }
+export interface JournalEntry { date: string; prompt: string; text: string; updatedAt?: string; syncedAt?: string }
+/** One finished Bond Check (history kept over time). */
+export interface BondCheckRecord { id: string; personId: string | null; otherId: string; relType?: RelType; answers: unknown; results: unknown; createdAt: string; serverId?: string }
 export interface Settings { theme: "personal" | "default"; readTheme?: "paper" | "night" }
 /** Raw quiz answers per quiz id (so retakes can be prefilled and accounts can sync them later). */
 export type QuizAnswers = Record<string, Record<string, number>>;
-export interface State { version: 2; me: StoredPerson | null; people: StoredPerson[]; journal: Record<string, JournalEntry>; settings: Settings; updatedAt?: string }
+export interface State { version: 2; me: StoredPerson | null; people: StoredPerson[]; journal: Record<string, JournalEntry>; bondChecks: BondCheckRecord[]; settings: Settings; updatedAt?: string }
 
 export interface PeopleRepository {
   getState(): State;
@@ -35,6 +45,7 @@ export interface PeopleRepository {
   deletePerson(id: string): void;
   saveQuiz(personId: string, patch: Partial<QuizResults>, answers?: { quizId: string; values: Record<string, number> }): void;
   saveJournal(e: JournalEntry): void;
+  saveBondCheck(b: BondCheckRecord): void;
   saveSettings(patch: Partial<Settings>): void;
   exportAll(): string;
   /** Replace all local data with an export produced by exportAll(). Returns false if the JSON is invalid. */
@@ -45,7 +56,7 @@ export interface PeopleRepository {
 // Storage key kept stable across schema versions so nobody loses data; the payload carries `version`.
 const KEY = "mirrorstar:v1";
 const BACKUP_KEY = "mirrorstar:backup";
-const EMPTY: State = { version: 2, me: null, people: [], journal: {}, settings: { theme: "personal" } };
+const EMPTY: State = { version: 2, me: null, people: [], journal: {}, bondChecks: [], settings: { theme: "personal" } };
 
 /** Upgrade any older payload to the current schema (never throws). */
 export function migrate(raw: unknown): State {
@@ -56,6 +67,7 @@ export function migrate(raw: unknown): State {
     me: fixP(o.me),
     people: Array.isArray(o.people) ? (o.people.map(fixP).filter(Boolean) as StoredPerson[]) : [],
     journal: o.journal && typeof o.journal === "object" ? o.journal : {},
+    bondChecks: Array.isArray(o.bondChecks) ? o.bondChecks : [],
     settings: { ...EMPTY.settings, ...(o.settings ?? {}) },
     updatedAt: o.updatedAt,
   };
@@ -72,6 +84,19 @@ function load(): State {
   return cache;
 }
 export let lastStorageError: string | null = null;
+
+/** A local change, described so a sync layer can mirror it to the server. */
+export type Change =
+  | { kind: "me" } | { kind: "person"; id: string } | { kind: "deletePerson"; id: string }
+  | { kind: "quiz"; personId: string; keys: string[]; answers?: { quizId: string; values: Record<string, number> } }
+  | { kind: "journal"; date: string } | { kind: "bond"; id: string } | { kind: "settings" } | { kind: "deleteAll" };
+type ChangeHook = (c: Change) => void;
+const hooks = new Set<ChangeHook>();
+/** Register a listener for local writes (the account sync layer uses this). Returns an unsubscribe fn. */
+export function onLocalChange(h: ChangeHook) { hooks.add(h); return () => { hooks.delete(h); }; }
+const emit = (c: Change) => hooks.forEach((h) => { try { h(c); } catch { /* never break local writes */ } });
+const now = () => new Date().toISOString();
+
 function write(next: State) {
   cache = { ...next, version: 2, updatedAt: new Date().toISOString() };
   try {
@@ -83,24 +108,43 @@ function write(next: State) {
   listeners.forEach((l) => l());
 }
 
+/** Raw local storage operations — no change events. The sync layer uses these to apply server data. */
 export const localRepo: PeopleRepository = {
   getState: load,
   saveMe: (p) => write({ ...load(), me: { ...p, id: "me" } }),
   savePerson: (p) => { const s = load(); write({ ...s, people: [...s.people.filter((x) => x.id !== p.id), p] }); },
-  deletePerson: (id) => { const s = load(); write({ ...s, people: s.people.filter((x) => x.id !== id) }); },
+  deletePerson: (id) => { const s = load(); write({ ...s, people: s.people.filter((x) => x.id !== id), bondChecks: s.bondChecks.filter((b) => b.personId !== id && b.otherId !== id) }); },
   saveQuiz: (id, patch, answers) => {
-    const s = load();
-    const up = (p: StoredPerson): StoredPerson => ({ ...p, quiz: { ...p.quiz, ...patch }, answers: answers ? { ...(p.answers ?? {}), [answers.quizId]: answers.values } : p.answers });
+    const s = load(); const t = now();
+    const up = (p: StoredPerson): StoredPerson => ({
+      ...p, quiz: { ...p.quiz, ...patch }, updatedAt: t,
+      quizAt: { ...(p.quizAt ?? {}), ...Object.fromEntries(Object.keys(patch).map((k) => [k, t])) },
+      answers: answers ? { ...(p.answers ?? {}), [answers.quizId]: answers.values } : p.answers,
+    });
     if (id === "me" && s.me) write({ ...s, me: up(s.me) });
     else write({ ...s, people: s.people.map((p) => (p.id === id ? up(p) : p)) });
   },
   saveSettings: (patch) => { const s = load(); write({ ...s, settings: { ...s.settings, ...patch } }); },
   importAll: (json) => { try { const o = JSON.parse(json); if (!o || typeof o !== "object" || !("people" in o)) return false; write(migrate(o)); return true; } catch { return false; } },
   saveJournal: (e) => { const s = load(); write({ ...s, journal: { ...s.journal, [e.date]: e } }); },
+  saveBondCheck: (b) => { const s = load(); write({ ...s, bondChecks: [...s.bondChecks.filter((x) => x.id !== b.id), b] }); },
   exportAll: () => JSON.stringify(load(), null, 2),
   deleteAll: () => { try { localStorage.removeItem(KEY); localStorage.removeItem(BACKUP_KEY); } catch {} cache = { ...EMPTY }; try { localStorage.removeItem(KEY); } catch {} listeners.forEach((l) => l()); },
 };
-export const repo: PeopleRepository = localRepo;
+
+/** What the UI uses: local writes (instant) + a change event the account sync layer mirrors to the server. */
+export const repo: PeopleRepository = {
+  ...localRepo,
+  saveMe: (p) => { localRepo.saveMe({ ...p, updatedAt: now() }); emit({ kind: "me" }); },
+  savePerson: (p) => { localRepo.savePerson({ ...p, updatedAt: now() }); emit({ kind: "person", id: p.id }); },
+  deletePerson: (id) => { localRepo.deletePerson(id); emit({ kind: "deletePerson", id }); },
+  saveQuiz: (id, patch, answers) => { localRepo.saveQuiz(id, patch, answers); emit(id === "me" ? { kind: "quiz", personId: id, keys: Object.keys(patch), answers } : { kind: "person", id }); },
+  saveJournal: (e) => { localRepo.saveJournal({ ...e, updatedAt: now() }); emit({ kind: "journal", date: e.date }); },
+  saveBondCheck: (b) => { localRepo.saveBondCheck(b); emit({ kind: "bond", id: b.id }); },
+  saveSettings: (patch) => { localRepo.saveSettings(patch); emit({ kind: "settings" }); },
+  importAll: (json) => { const ok = localRepo.importAll(json); if (ok) { emit({ kind: "me" }); load().people.forEach((p) => emit({ kind: "person", id: p.id })); Object.keys(load().journal).forEach((d) => emit({ kind: "journal", date: d })); } return ok; },
+  deleteAll: () => { localRepo.deleteAll(); emit({ kind: "deleteAll" }); },
+};
 
 const subscribe = (cb: () => void) => {
   listeners.add(cb);
