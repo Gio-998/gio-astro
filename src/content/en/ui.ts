@@ -433,6 +433,6 @@ export const beta = {
   emailPh: "you@example.com", join: "Join the waitlist ✦", joined: "You're on the list. We'll email you when your invite is ready. 💫",
   invalid: "Please enter a valid email address.", haveInvite: "Have an invite? Sign in →", privacy: "We only use your email to send the invite. No spam, unsubscribe any time.",
   teasers: ["Your birth chart, Chinese sign, numbers and tarot in one place", "A living aura shaped by your answers", "Rich, story-like readings in English and Macedonian", "Compatibility for love, friends, family and work"],
-  adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove",
+  adminHint: "Waitlist sign-ups, invites and email previews", adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove",
   used: "joined", pending: "not joined yet", waitlist: "Waitlist", invite: "Invite", added: (n: number) => `${n} added.`, empty: "Nothing here yet.",
 };

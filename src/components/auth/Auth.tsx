@@ -25,7 +25,7 @@ export function AccountChip() {
   const initials = (a.user?.email ?? "").slice(0, 2).toUpperCase();
   return (
     <Link href={h("/account")} data-testid="account-chip" className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.07] px-3 py-1.5 text-xs text-mist transition hover:border-gold/60">
-      {a.user ? <><span className="grid h-5 w-5 place-items-center rounded-full bg-gradient-to-br from-gold to-rose text-[10px] font-bold text-ink">{initials}</span><span className={`h-1.5 w-1.5 rounded-full ${a.status === "error" ? "bg-rose" : a.status === "syncing" ? "bg-gold animate-pulse" : "bg-emerald-400"}`} /></> : <>☁︎ <span className="hidden whitespace-nowrap xl:inline">{c.ui.auth.chipOut}</span></>}
+      {a.user ? <>{(a.user.app_metadata as { role?: string } | undefined)?.role === "admin" && <span className="text-gold" title={c.ui.beta.adminTitle}>★</span>}<span className="grid h-5 w-5 place-items-center rounded-full bg-gradient-to-br from-gold to-rose text-[10px] font-bold text-ink">{initials}</span><span className={`h-1.5 w-1.5 rounded-full ${a.status === "error" ? "bg-rose" : a.status === "syncing" ? "bg-gold animate-pulse" : "bg-emerald-400"}`} /></> : <>☁︎ <span className="hidden whitespace-nowrap xl:inline">{c.ui.auth.chipOut}</span></>}
     </Link>
   );
 }
@@ -194,6 +194,11 @@ function SignedIn() {
     <div className="space-y-4">
       <div className="card space-y-3">
         <p className="font-serif text-xl" data-testid="signed-in">{A.signedInAs(a.user!.email ?? "")}</p>
+        {(a.user?.app_metadata as { role?: string } | undefined)?.role === "admin" && (
+          <Link href={h("/admin/")} className="flex items-center justify-between gap-3 rounded-2xl border border-gold/40 bg-gold/10 px-4 py-3 text-sm transition hover:border-gold" data-testid="admin-link">
+            <span><b className="text-gold">✦ {c.ui.beta.adminTitle}</b><span className="block text-xs text-dim">{c.ui.beta.adminHint}</span></span><span aria-hidden className="text-gold">→</span>
+          </Link>
+        )}
         <p className="flex items-center gap-2 text-sm"><span className={`h-2 w-2 rounded-full ${a.status === "error" ? "bg-rose" : a.status === "syncing" ? "bg-gold animate-pulse" : a.status === "offline" ? "bg-dim" : "bg-emerald-400"}`} />
           <span data-testid="sync-status">{A.status[a.status]}</span></p>
         {a.lastSync && <p className="text-xs text-dim">{A.lastSync(time(a.lastSync))}</p>}
