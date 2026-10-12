@@ -6,7 +6,7 @@
 export type EmailLang = "en" | "mk";
 export type EmailId = "code" | "welcome" | "daily" | "weekly" | "report" | "bond";
 export const EMAIL_IDS: EmailId[] = ["code", "welcome", "daily", "weekly", "report", "bond"];
-const SITE = "https://gio-astro-preview.vercel.app";
+const SITE = "https://horoscop.si";
 
 const T = {
   en: {
