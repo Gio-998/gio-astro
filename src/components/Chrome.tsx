@@ -80,7 +80,7 @@ export function Footer() {
   const cols = [
     { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/today/", F.today], ["/quizzes/", F.quizzes]] },
     { t: F.rel, l: [["/match/", F.match], ["/bond/", F.bond], ["/people/", F.people]] },
-    { t: F.trust, l: [["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/upgrade/", F.extras]] },
+    { t: F.trust, l: [["/promise/", c.site.footer.promise], ["/learn/", c.site.footer.learn], ["/privacy/", c.site.footer.privacy], ["/terms/", c.site.footer.terms], ["/upgrade/", F.extras], ["/credits/", c.site.footer.credits]] },
   ];
   return (
     <footer className="relative mt-20 overflow-hidden border-t border-white/10 bg-gradient-to-b from-transparent to-ink/80">
@@ -97,10 +97,6 @@ export function Footer() {
             <ul className="space-y-2 text-sm">{col.l.map(([href, label]) => <li key={href}><Link className="text-dim transition hover:text-gold" href={h(href)}>{label}</Link></li>)}</ul>
           </div>
         ))}
-      </div>
-      <div className="relative mx-auto max-w-6xl border-t border-white/10 px-4 py-5 pb-28 text-xs text-dim/80 md:pb-5">
-        <p className="mb-1">{c.site.footer.note}</p>
-        <p>{c.site.footer.geonames} {F.credits}</p>
       </div>
     </footer>
   );

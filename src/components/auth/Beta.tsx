@@ -8,7 +8,7 @@ import { useContent, useHref } from "@/lib/content-context";
 import { Aura } from "../aura/Aura";
 
 // Routes anyone can open during the beta (landing, legal, sign-in steps).
-const PUBLIC = ["", "privacy", "terms", "promise", "account", "account/verify", "auth/callback"];
+const PUBLIC = ["", "privacy", "terms", "promise", "learn", "credits", "account", "account/verify", "auth/callback"];
 const routeOf = (path: string) => path.replace(/^\/(en|mk)(\/|$)/, "").replace(/\/$/, "");
 
 /** In private beta, everything except the landing/legal/sign-in pages needs a signed-in (invited) account. */

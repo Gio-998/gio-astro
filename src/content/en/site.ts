@@ -10,14 +10,12 @@ export const site = {
   carousel: { prev: "Previous signs", next: "Next signs", gifts: "Gifts:", edge: "Growth edge:", more: "Your Sun sign is just one of 18 lenses. Your Moon, rising sign, Chinese animal and numbers often tell a very different story.", cta: "See my full sky ✦" },
   pickCard: { prompt: "Take a breath, think of a question, and pick one card.", today: "Today:", again: "Shuffle again" },
   skyNow: { title: "The sky right now", note: "Calculated live in your browser from real planetary positions.", cta: "See what today means for your chart →" },
-  footerCols: { discover: "Discover", rel: "Relationships", trust: "Trust", chart: "Free birth chart", me: "My profile", today: "Today's guidance", quizzes: "All quizzes", match: "Compatibility", bond: "Bond Check for two", people: "Saved people", extras: "Extras", blurb: "Every lens, honestly labelled. Full results free, data on your device.", credits: "Space imagery: NASA, ESA, CSA, STScI (public domain / CC BY 4.0). See the credits in the repository. Sign, card and emblem artwork is original." },
+  footerCols: { discover: "Discover", rel: "Relationships", trust: "Trust", chart: "Free birth chart", me: "My profile", today: "Today's guidance", quizzes: "All quizzes", match: "Compatibility", bond: "Bond Check for two", people: "Saved people", extras: "Extras", blurb: "Every lens, honestly labelled. Full results free, data on your device." },
   tagline: "An honest mirror for you and your relationships",
   description: "Free birth chart, Chinese zodiac, numerology, personality and attachment quizzes, and compatibility across every lens for partners, friends, family and colleagues. Full results free, no tricks.",
   nav: { today: "Today", me: "My profile", match: "Compatibility", people: "People", bond: "Bond Check", quizzes: "Quizzes", learn: "How it works" },
   footer: {
-    note: "For self-reflection and entertainment, not psychological, medical or financial advice.",
-    geonames: "City data © GeoNames (CC BY 4.0).",
-    privacy: "Privacy", terms: "Terms", promise: "No-tricks promise", learn: "Methodology",
+    privacy: "Privacy", terms: "Terms", promise: "No-tricks promise", learn: "Methodology", credits: "Credits",
   },
   common: {
     start: "Start in 90 seconds", continue: "Continue", back: "Back", next: "Next", save: "Save", cancel: "Cancel", delete: "Delete",

@@ -317,6 +317,7 @@ export const privacyControls: typeof En.privacyControls = {
 };
 
 export const pageMeta: typeof En.pageMeta = {
+  credits: { title: "Заслуги" },
   account: { title: "Твојата сметка" },
   verify: { title: "Внеси го кодот" },
   bond: { title: "Проверка на врската, проверка од 3 минути за двајца", description: "Двајцата одговарате на осум прашања за вашата врска и ги гледате силните страни, разликите во перцепцијата и вежбите." },

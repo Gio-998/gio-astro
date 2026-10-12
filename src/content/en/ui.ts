@@ -317,6 +317,7 @@ export const privacyControls = {
 };
 
 export const pageMeta = {
+  credits: { title: "Credits" },
   account: { title: "Your account" },
   verify: { title: "Enter your code" },
   bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer eight questions about your relationship and see strengths, perception gaps and practices." },

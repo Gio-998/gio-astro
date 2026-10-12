@@ -5,6 +5,7 @@ function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="chart" img="orion" title={<>How it works</>} />
+      <p className="text-sm text-dim">Mirrorstar is for self-reflection and fun. It is not psychological, medical or financial advice.</p>
       <p><b>Our philosophy:</b> the stars set the scene, psychology explains the pattern, and how you treat each other writes the story. Everything here is a mirror for reflection, never a prophecy or a verdict.</p>
       <h2>What the evidence says</h2>
       <p>Controlled studies have found no predictive power for astrology on personality or on who marries whom (e.g. Carlson, <i>Nature</i> 1985; Voas's analysis of ~10 million UK marriages, 2007/2008). Numerology, tarot and similar systems have no empirical support either. We include them because they are rich, ancient languages for reflection, and we label them ✨ Traditional & symbolic.</p>
@@ -35,6 +36,7 @@ function PageMk() {
   return (
     <article className="prose-soft">
       <PageHero emblem="chart" img="orion" title={<>Како функционира</>} />
+      <p className="text-sm text-dim">Mirrorstar е за самоспознавање и забава. Не е психолошки, медицински ни финансиски совет.</p>
       <p><b>Нашата филозофија:</b> ѕвездите ја поставуваат сцената, психологијата го објаснува образецот, а начинот на кој се однесувате еден кон друг ја пишува приказната. Сè овде е огледало за размислување, никогаш пророштво или пресуда.</p>
       <h2>Што велат доказите</h2>
       <p>Контролираните студии не најдоа предвидувачка моќ на астрологијата врз личноста или врз тоа кој со кого стапува во брак (на пр. Carlson, <i>Nature</i> 1985; анализата на Voas на ~10 милиони бракови во Велика Британија, 2007/2008). Ниту нумерологијата, тарот и слични системи немаат емпириска поддршка. Ги вклучуваме затоа што се богати, древни јазици за размислување, и ги означуваме со ✨ Традиционално и симболично.</p>
