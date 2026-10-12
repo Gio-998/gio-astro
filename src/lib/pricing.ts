@@ -13,7 +13,7 @@ export type PlanId = "free" | "plus" | "duo";
 export const PLAN_PRICES: Record<PlanId, { month: number; year: number }> = {
   free: { month: 0, year: 0 },
   plus: { month: 749, year: 5900 },
-  duo: { month: 1149, year: 8900 },
+  duo: { month: 1499, year: 11800 },
 };
 export const RECOMMENDED: PlanId = "plus";
 export type ReportId = "match" | "year" | "deep";
