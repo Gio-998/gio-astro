@@ -58,7 +58,7 @@ describe("natal chart vs. reference charts", () => {
   it("uses local mean time for 19th-century births", () => {
     const c = computeChart(refs[0].input);
     expect(c.time.offsetSource).toBe("local-mean-time");
-    expect(c.time.offsetMinutes).toBe(40);
+    expect(c.time.offsetMinutes).toBeCloseTo(39.93, 1);
   });
 
   it("applies historical DST (UK 1926 = BST, UTC+1)", () => {

@@ -54,7 +54,8 @@ export interface Daily {
 }
 
 export function dailyGuidance(profile: Profile, now: Date, promptCount: number): Daily {
-  const iso = now.toISOString().slice(0, 10);
+  // The user's own calendar day (not the UTC day, which is "yesterday" before 02:00 in Warsaw).
+  const iso = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
   const key = `${profile.input.date}|${iso}`;
   const py = personalYear(profile.input.date, now.getFullYear());
   return {

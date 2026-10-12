@@ -70,7 +70,8 @@ export function buildProfile(input: PersonInput): Profile {
   const sun = chart.placements.sun!.sign;
   const moon = chart.placements.moon!.sign;
   const rising = chart.placements.asc?.sign ?? null;
-  const chinese = chineseProfile(input.date, input.time);
+  const chinese = chineseProfile(input.date, input.time, chart.time.timeKnown && chart.time.offsetSource !== "assumed-utc"
+    ? { utc: chart.time.utc, lon: input.place?.lon ?? undefined, lat: input.place?.lat ?? undefined } : {});
   const lp = lifePath(input.date);
   const name = input.name ? nameNumbers(input.name) : null;
   const thisYear = new Date().getFullYear();

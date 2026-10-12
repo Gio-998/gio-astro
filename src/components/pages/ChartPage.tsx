@@ -24,8 +24,9 @@ export function ChartPage() {
       <PageHero eyebrow={U.eyebrow} img="milkyway" emblem="chart" title={<><span className="text-aurora">{person.name}</span>{U.titleSuffix}</>} sub={<EvidenceBadge e="traditional" />} />
       <p className="mb-4 text-sm text-dim">
         {fmt(person.date)} {person.time ?? U.timeUnknown} {person.place ? `· ${person.place.name}` : U.noPlace} ·
-        UTC{t.offsetMinutes >= 0 ? "+" : "−"}{Math.floor(Math.abs(t.offsetMinutes) / 60)}:{String(Math.abs(t.offsetMinutes) % 60).padStart(2, "0")} ({U.src[t.offsetSource] ?? U.src.assumed}){U.system}
+        UTC{t.offsetMinutes >= 0 ? "+" : "−"}{Math.floor(Math.round(Math.abs(t.offsetMinutes)) / 60)}:{String(Math.round(Math.abs(t.offsetMinutes)) % 60).padStart(2, "0")} ({U.src[t.offsetSource] ?? U.src.assumed}){U.system}
       </p>
+      {t.tzNote && <p className="mb-4 rounded-xl border border-gold/30 bg-gold/10 p-3 text-sm" data-testid="tz-note">{t.tzNote === "gap" ? c.accuracy.tzGap : c.accuracy.tzAmbiguous}</p>}
       <div className="card relative overflow-hidden"><div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,108,240,.25),transparent_65%)]" /><div className="relative mx-auto max-w-[460px]"><ChartWheel chart={ch} /></div></div>
       <div className="card mt-4 overflow-x-auto">
         <table className="w-full text-sm">

@@ -18,13 +18,31 @@ export interface ResolvedTime {
   /** how the offset was obtained */
   offsetSource: "override" | "tzdb" | "local-mean-time" | "assumed-utc";
   timeKnown: boolean;
+  /**
+   * Set when the clock time is unusual for that zone and date:
+   * "gap" = the time never existed (clocks jumped forward, e.g. 02:30 on a spring DST night),
+   * "ambiguous" = the time happened twice (clocks went back); we use the first (summer-time) occurrence.
+   */
+  tzNote?: "gap" | "ambiguous" | null;
+}
+
+/** Offset (minutes) of a zone long before standard time existed, i.e. the reference city's local mean time. */
+const lmtCache = new Map<string, number>();
+function zoneLmt(tz: string): number | null {
+  if (!lmtCache.has(tz)) {
+    const dt = DateTime.fromObject({ year: 1801, month: 1, day: 1 }, { zone: tz });
+    lmtCache.set(tz, dt.isValid ? dt.offset : NaN);
+  }
+  const v = lmtCache.get(tz)!;
+  return Number.isNaN(v) ? null : v;
 }
 
 /**
  * Convert a local civil birth date/time to UT.
  * - Uses the IANA zone history (via Luxon/Intl) so DST and historical offsets apply.
- * - Before 1900 most places used local mean time; the tz database only knows the LMT of the
- *   zone's reference city (e.g. Berlin for all of Germany), so we compute LMT from the birthplace longitude.
+ * - While a zone was on local mean time the tz database only knows the LMT of the zone's reference city
+ *   (e.g. Berlin for all of Germany), so we compute mean time from the birthplace longitude instead.
+ * - DST gaps (a clock time that never happened) and overlaps (a time that happened twice) are flagged in tzNote.
  * - Unknown time → 12:00 local (by convention), flagged as timeKnown=false.
  */
 export function resolveBirthTime(input: BirthInput, fallbackTime = "12:00"): ResolvedTime {
@@ -46,9 +64,17 @@ export function resolveBirthTime(input: BirthInput, fallbackTime = "12:00"): Res
   const dt = DateTime.fromObject({ year: y, month: m, day: d, hour: hh, minute: mm || 0 }, { zone: input.place.tz });
   let off = dt.isValid ? dt.offset : 0;
   let source: ResolvedTime["offsetSource"] = "tzdb";
-  if (!dt.isValid || (y < 1900 && off % 15 !== 0)) {
-    off = Math.round((input.place.lon / 15) * 60);
+  let tzNote: ResolvedTime["tzNote"] = null;
+  if (dt.isValid && timeKnown) {
+    if (dt.hour !== hh || dt.minute !== (mm || 0)) tzNote = "gap";
+    else if (dt.getPossibleOffsets().length > 1) tzNote = "ambiguous";
+  }
+  // While a zone is still on local mean time (LMT), the tz database only knows the LMT of its reference city
+  // (Berlin for all of Germany, Moscow for most of western Russia). Use the birthplace's own mean time instead.
+  const lmt = zoneLmt(input.place.tz);
+  if (!dt.isValid || (lmt != null && Math.abs(off - lmt) < 0.01 && off % 15 !== 0)) {
+    off = (input.place.lon / 15) * 60;
     source = "local-mean-time";
   }
-  return { utc: new Date(naive.getTime() - off * 60000), offsetMinutes: off, offsetSource: source, timeKnown };
+  return { utc: new Date(naive.getTime() - off * 60000), offsetMinutes: off, offsetSource: source, timeKnown, tzNote };
 }

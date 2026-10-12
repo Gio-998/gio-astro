@@ -346,7 +346,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             <div>
               <p className="text-sm font-semibold">{U.dayMaster(c.chinese.wuxing[ch.dayMaster.element].name, ch.dayMaster.yinYang === "yin" ? U.yin : U.yang)}</p>
               <p className="text-xs text-dim">{c.chinese.wuxing[ch.dayMaster.element].text}</p>
-              <p className="mt-1 text-xs text-dim">{U.pillars(ch.pillars)}{!profile.chart.time.timeKnown && U.hourPillar}</p>
+              <p className="mt-1 text-xs text-dim">{U.pillars(ch.pillars)}{!profile.chart.time.timeKnown && U.hourPillar}{ch.solarTime && ` ${c.accuracy.solarTime(ch.solarTime)}`}{ch.monthAmbiguous && ` ${c.accuracy.monthAmbiguous}`}</p>
             </div>
             <div>{WUXING.map((w) => <Bar key={w} value={(ch.balance[w] / 4) * 100} label={c.chinese.wuxing[w].name} right={String(ch.balance[w])} color="bg-sage" />)}</div>
           </div>
