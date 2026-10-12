@@ -311,9 +311,15 @@ export const privacyControls = {
   confirm: "Delete everything stored on this device? This can't be undone.",
   deleted: "Deleted.",
   deleteAll: "Delete all my data",
-  cityPh: "Start typing a city…",
   cityLoading: "Loading cities…",
-  cityNone: "No match: try the nearest larger city.",
+  cityPh: "City, town or village…",
+  cityNone: "No match yet.",
+  cityOnline: "Searching a bigger online atlas…",
+  cityOnlineTag: "online",
+  cityManual: "Can't find it? Enter the coordinates",
+  manualName: "Place name", lat: "Latitude", lon: "Longitude", tz: "Time zone", useCoords: "Use this place",
+  coordsHint: "Tip: in Google Maps, press and hold on the spot to copy its coordinates.",
+  badCoords: "Latitude goes from -90 to 90 and longitude from -180 to 180.",
 };
 
 export const pageMeta = {
