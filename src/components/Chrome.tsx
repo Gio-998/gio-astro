@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/horo-slugs";
 import Link from "next/link";
 import { useBetaLocked } from "./auth/Beta";
 import { AccountChip } from "./auth/Auth";
@@ -25,7 +26,7 @@ export function LangSwitch({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center rounded-full border border-white/15 bg-white/5 p-0.5 text-xs ${className}`} role="group" aria-label={c.site.language}>
       {LOCALES.map((l) => {
-        const href = path.replace(/^\/(en|mk)(?=\/|$)/, `/${l}`) || `/${l}/`;
+        const href = localePath(path, l) || `/${l}/`;
         return <a key={l} href={href} hrefLang={l} lang={l} title={c.site.languages[l]}
           onClick={(e) => { e.preventDefault(); try { localStorage.setItem("mirrorstar:lang", l); } catch {} window.location.href = href + window.location.search + window.location.hash; }}
           className={`rounded-full px-2.5 py-1 font-semibold uppercase tracking-wider transition ${l === locale ? "bg-gold text-plum" : "text-dim hover:text-mist"}`}>{l === "mk" ? "мк" : l}</a>;

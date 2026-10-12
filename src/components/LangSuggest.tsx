@@ -1,4 +1,5 @@
 "use client";
+import { localePath } from "@/lib/horo-slugs";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useContent } from "@/lib/content-context";
@@ -26,7 +27,7 @@ export function LangSuggest() {
     } catch { /* storage blocked */ }
   }, [locale]);
   if (!target) return null;
-  const t = TEXT[target]; const href = path.replace(/^\/(en|mk)(?=\/|$)/, `/${target}`);
+  const t = TEXT[target]; const href = localePath(path, target);
   return (
     <div lang={target} role="region" aria-label={t.msg} className="mb-3 flex items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#1c1645]/80 px-4 py-2 text-[13px] backdrop-blur print:hidden" data-testid="lang-suggest">
       <span className="min-w-0">🌐 {t.msg}</span>
