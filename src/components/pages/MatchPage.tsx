@@ -10,6 +10,7 @@ import { comparePair, REL_TYPES, RelType } from "@/engine/compat";
 import { PairReportView } from "../PairReport";
 import { BookView } from "../story/BookView";
 import { AuraPair } from "../aura/AuraPair";
+import { PairExtras, BondVoice } from "../systems/PairExtras";
 import { buildBondStory } from "@/story/bond";
 import { BirthForm } from "../BirthForm";
 import { PageHero } from "../ui";
@@ -61,7 +62,8 @@ export function MatchPage() {
         <a href="#bond-story" className="btn-primary mb-4 w-full">📖 {c.deep.bondUi.eyebrow}: {c.deep.bondUi.title(A.name, B.name)} ↓</a>
         <AuraPair a={A} b={B} harmony={report.r.resonance} />
         <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
-        <div id="bond-story" className="mt-12 scroll-mt-20"><BookView book={buildBondStory(report.pa, report.pb, A.name, B.name, report.r, c)} name={`${A.name} & ${B.name}`} forId={B.id} eyebrow={c.deep.bondUi.eyebrow} title={c.deep.bondUi.title(A.name, B.name)} subtitle={c.compat.relTypes[report.r.rel].name} intro="" /></div>
+        <PairExtras A={A} B={B} />
+        <BondVoice A={A} B={B}><div id="bond-story" className="mt-12 scroll-mt-20"><BookView book={buildBondStory(report.pa, report.pb, A.name, B.name, report.r, c)} name={`${A.name} & ${B.name}`} forId={B.id} eyebrow={c.deep.bondUi.eyebrow} title={c.deep.bondUi.title(A.name, B.name)} subtitle={c.compat.relTypes[report.r.rel].name} intro="" /></div></BondVoice>
       </>}
       {(!A || !B) && !adding && <div className="card text-center text-dim">{U.addMore(!!all.length)}<button className="text-gold underline" onClick={() => setAdding(all.length ? "b" : "a")}>{U.addNow}</button></div>}
       {report && <div className="mt-6 flex flex-wrap justify-center gap-2"><Link className="btn-ghost" href={h(`/bond/?a=${A!.id}&b=${B!.id}`)}>{U.bondCheck}</Link><Link className="btn-ghost" href={h(`/quiz/big-five/?for=${B!.id}`)}>{U.letTake(B!.name)}</Link></div>}

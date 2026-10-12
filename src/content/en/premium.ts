@@ -226,7 +226,7 @@ export const premium = {
         "A compatibility score is a start. This is the long version: how the two of you meet, how you argue, how each of you wants to be loved, and what usually gets in the way.",
         "Then comes the part that changes things: 30 days of short rituals for two. One small thing a day, five minutes at most. A question to ask at dinner, a way to say sorry that lands, a walk with a topic. Built from your two charts and both of your test results.",
       ],
-      youGet: ["A 25+ page report about the two of you", "Both charts compared, sign by sign and planet by planet", "Attachment and love language pairing in plain words", "Your usual argument, and a way out of it", "30 daily rituals, one each morning in the app or by email", "A printable version for the fridge"],
+      youGet: ["A 25+ page report about the two of you", "Both charts compared, sign by sign and planet by planet", "Attachment styles and how you each show care, in plain words", "Your usual argument, and a way out of it", "30 daily rituals, one each morning in the app or by email", "A printable version for the fridge"],
       format: [["Format", "PDF + in-app program"], ["Length", "25+ pages and 30 rituals"], ["Delivery", "Report in minutes, rituals daily for 30 days"], ["Needs", "Birth details for both of you"]],
       forWho: "For couples who want to understand each other better, at the start or many years in.",
       sampleTitle: "Look inside", sampleNote: "Sample pages for an example couple (Mila and Jan).",

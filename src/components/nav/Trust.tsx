@@ -20,7 +20,7 @@ export function TrustStrip({ className = "", center = false }: { className?: str
 }
 
 /** "How this is measured" link under results, to the methods page. */
-export function MethodLink({ className = "" }: { className?: string }) {
+export function MethodLink({ className = "", anchor }: { className?: string; anchor?: string }) {
   const N = useNav(); const h = useHref();
-  return <Link href={h("/learn/")} className={`mt-2 inline-flex items-center gap-1 text-xs text-sage underline decoration-dotted underline-offset-4 hover:text-mist ${className}`} data-testid="method-link">🔬 {N.method} →</Link>;
+  return <Link href={h(`/how-it-works/${anchor ? `#${anchor}` : ""}`)} className={`mt-2 inline-flex items-center gap-1 text-xs text-sage underline decoration-dotted underline-offset-4 hover:text-mist ${className}`} data-testid="method-link">🔬 {N.method} →</Link>;
 }

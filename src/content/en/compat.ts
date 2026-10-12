@@ -15,6 +15,7 @@ export const lenses: Record<LensId, { name: string; short: string }> = {
   fourletter: { name: "Four-letter style", short: "Outgoing/inward, imaginative/practical, heart/head, planned/flexible." },
   shadow: { name: "Shadow & Light", short: "Your shadows and virtues, and how they dance together." },
   dosha: { name: "Body & energy type", short: "Ayurveda-inspired constitution." },
+  play: { name: "Play Mirror", short: "How you both actually played the mini-games. A behavioural signal, not a diagnosis." },
 };
 
 export const evidence: Record<Evidence, { label: string; icon: string; text: string }> = {

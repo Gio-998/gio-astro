@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ResultReveal } from "./reveal/ResultReveal";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -16,6 +16,7 @@ import { PrecisionResultView } from "./PrecisionResult";
 import { QuizResultView } from "./ProfileView";
 import { profileOf } from "@/lib/profile";
 import { track } from "@/lib/track";
+import { CertaintyCard, useAnswerTiming } from "./play/timing";
 import { MethodLink, TrustStrip } from "./nav/Trust";
 
 export function QuizRunner({ id }: { id: AnyQuizId }) {
@@ -28,6 +29,9 @@ export function QuizRunner({ id }: { id: AnyQuizId }) {
   const [i, setI] = useState(-1);
   const [ans, setAns] = useState<Record<string, number>>({});
   const [done, setDone] = useState(false);
+  // Answer timing + changes of mind (certainty signal, see engine/play/timing.ts).
+  const tm = useAnswerTiming();
+  useEffect(() => { const it = def.items[i]; if (it) tm.shown(it.id); }, [i, def, tm]);
 
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!person) return (
@@ -39,10 +43,11 @@ export function QuizRunner({ id }: { id: AnyQuizId }) {
   );
   const items = def.items;
   const answer = (v: number) => {
+    tm.answered(items[i].id, items[i].text, v, ans[items[i].id]);
     const next = { ...ans, [items[i].id]: v };
     setAns(next);
     if (i + 1 < items.length) setI(i + 1);
-    else { repo.saveQuiz(person.id, def.score(next), { quizId: def.id, values: next }); track("quiz_done", { quiz: def.id, self: person.id === "me" }); setDone(true); window.scrollTo({ top: 0, behavior: "smooth" }); }
+    else { repo.saveQuiz(person.id, { ...def.score(next), timing: { ...(person.quiz.timing ?? {}), [def.id]: tm.summary() } }, { quizId: def.id, values: next }); track("quiz_done", { quiz: def.id, self: person.id === "me" }); setDone(true); window.scrollTo({ top: 0, behavior: "smooth" }); }
   };
 
   if (done) {
@@ -62,6 +67,7 @@ export function QuizRunner({ id }: { id: AnyQuizId }) {
           <p className="mx-auto mt-2 max-w-md text-dim">{def.unlocks}</p>
         </div>
         {isPrecisionQuiz(id) ? <PrecisionResultView id={id} person={fresh} profile={profileOf(fresh)} /> : <QuizResultView id={id} profile={profileOf(fresh)} pid={person.id} />}
+        <CertaintyCard t={fresh.quiz.timing?.[def.id]} texts={Object.fromEntries(items.map((x) => [x.id, x.text.replace("{name}", person.name)]))} />
         <div className="mt-3 flex flex-col items-center gap-3"><MethodLink /><TrustStrip center /></div>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link className="btn-primary" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>{U.seeProfile}</Link>

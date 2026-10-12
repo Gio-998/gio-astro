@@ -18,7 +18,7 @@ import { SignArt } from "@/components/art/SignArt";
 import { ZodiacWheel } from "@/components/art/ZodiacWheel";
 import { ScrollFx } from "@/components/landing/ScrollFx";
 
-const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha" };
+const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha", play: "explorer" };
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;

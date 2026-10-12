@@ -2,6 +2,7 @@
 import { useState } from "react";
 import type { PairReport as Report, LensResult, SynAspect } from "@/engine/compat";
 import { WEIGHTS } from "@/engine/compat";
+import { PairPlay } from "./play/PairPlay";
 import type { Profile } from "@/engine/profile";
 import { useContent } from "@/lib/content-context";
 import { Bar, EvidenceBadge, ScoreRing, Palette } from "./ui";
@@ -87,6 +88,7 @@ function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile
         <p className="mt-1">{U.lightOf(na, P.shadowAxes[d.lightA as "pride"].virtue)} {U.lightOf(nb, P.shadowAxes[d.lightB as "pride"].virtue)}</p>
       </div>
     );
+    case "play": return <PairPlay detail={d} na={na} nb={nb} />;
     case "dosha": return <p className="text-sm">{P.constitutions[d.a as "vata"]}{U.with}{P.constitutions[d.b as "vata"]} {d.kind === "same" ? U.doshaSame : U.doshaDiff}</p>;
   }
   return null;

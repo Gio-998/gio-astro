@@ -31,6 +31,8 @@ import { useContent, useHref, useDate } from "@/lib/content-context";
 import { dailyGuidance } from "@/engine/daily";
 import { MAJOR_ARCANA } from "@/engine/tarot";
 import { SIGN_GLYPH } from "@/engine/zodiac";
+import { YourDay } from "../day/YourDay";
+import { YourDayVoice } from "../systems/YourDayVoice";
 
 export function TodayPage() {
   const s = useStore(); const { c } = useContent(); const h = useHref(); const fmt = useDate();
@@ -55,6 +57,8 @@ export function TodayPage() {
         {streak > 0 && <span className="chip !border-gold/40 !text-gold">{U.streak(streak)}</span>}
       </PageHero>
       <TodayStories />
+      <YourDay profile={profileOf(s.me)} now={now} />
+      <YourDayVoice person={s.me} now={now} personalDay={g.personalDay} />
       <div className="grid gap-4 sm:grid-cols-2">
         <Reveal><div className="card h-full text-center">
           <MoonArt angle={g.moon.angle} className="mx-auto mb-2 h-28 w-28" />
