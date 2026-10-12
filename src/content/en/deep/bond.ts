@@ -61,7 +61,7 @@ export const attachPair: Record<string, { text: string; flag?: string }> = {
   "anxious-fearful": { text: "Both of you long for closeness and feel worried about it. You may understand each other's pain intimately. Consistency and gentleness are essential." , flag: "Mixed signals can amplify worry on both sides. Agree simple, clear check-in habits." },
   "avoidant-avoidant": { text: "You both value independence and give each other lots of space. Calm and low-drama, and at risk of drifting apart without noticing.", flag: "Distance can grow quietly. Schedule real closeness, and talk about feelings even when it feels unnecessary." },
   "avoidant-fearful": { text: "One protects through distance, the other swings between longing and caution. Patience, clarity and small steps toward closeness help both." , flag: "When both pull back at once, nobody reaches out. Decide in advance who sends the first message after a fight." },
-  "fearful-fearful": { text: "You both know how it feels to want and fear closeness. That shared understanding can be profound; it also needs a lot of gentleness and, often, outside support.", flag: "Mutual triggering is possible. Go slowly and consider support from a therapist or trusted friends." },
+  "fearful-fearful": { text: "You both know how it feels to want and fear closeness. That shared understanding can run very deep, and it also needs a lot of gentleness and, often, outside support.", flag: "Mutual triggering is possible. Go slowly and consider support from a therapist or trusted friends." },
 };
 
 export const lifePathPair: Record<"mirror" | "family" | "friendly" | "contrast", string> = {

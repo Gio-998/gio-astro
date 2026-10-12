@@ -25,9 +25,9 @@ export const nakshatras: Record<Nakshatra, { name: string; symbol: string; text:
   shravana: { name: "Shravana", symbol: "ear", text: "listener and learner, connects people" },
   dhanishta: { name: "Dhanishta", symbol: "drum", text: "rhythmic, musical, generous" },
   shatabhisha: { name: "Shatabhisha", symbol: "empty circle", text: "healer, independent, mysterious" },
-  "purva-bhadrapada": { name: "Purva Bhadrapada", symbol: "front of a funeral cot", text: "intense idealist, transformative" },
+  "purva-bhadrapada": { name: "Purva Bhadrapada", symbol: "front of a funeral cot", text: "intense idealist, a force for change" },
   "uttara-bhadrapada": { name: "Uttara Bhadrapada", symbol: "back of a funeral cot", text: "deep calm, wisdom, self-control" },
-  revati: { name: "Revati", symbol: "fish / drum", text: "gentle guide, compassionate, safe journeys" },
+  revati: { name: "Revati", symbol: "fish / drum", text: "gentle guide, compassionate, safe travels" },
 };
 
 export const kootas: Record<string, { name: string; plain: string }> = {

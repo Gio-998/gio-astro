@@ -153,5 +153,5 @@ export const scorpio: SignDeep = {
   venus: "Venus in Scorpio loves with total intensity. You are drawn to depth, mystery and emotional honesty. You give your whole self and expect the same. Jealousy can be your shadow; trust is your healing.",
   mars: "Mars in Scorpio drives with depth, strategy and endurance. You pursue goals with quiet, relentless focus, and you rarely give up. Your anger can go underground and return later. Your power can change things for the better when you use it to heal rather than to control.",
   mercury: "Mercury in Scorpio thinks like a detective. You see through lies, ask piercing questions and love research. You may keep your thoughts private. Your words, when you speak, cut straight to the core.",
-  node: "Your North Node in Scorpio points toward depth and transformation. Growth lies in letting go of comfort and possessions as security, embracing intimacy, shared vulnerability and change.",
+  node: "Your North Node in Scorpio points toward depth and transformation. Growth lies in letting go of comfort and possessions as security, and letting in intimacy, shared vulnerability and change.",
 };

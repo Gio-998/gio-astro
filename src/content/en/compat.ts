@@ -35,14 +35,14 @@ export const bands: Record<Band, { name: string; text: string }> = {
   "natural-allies": { name: "Natural Allies", text: "A strong base with clear, workable growth edges. You make each other's lives easier." },
   "complementary-path": { name: "Complementary Path", text: "Your differences complete each other. You'll often see what the other misses." },
   "catalyst-bond": { name: "Catalyst Bond", text: "A high-growth bond. It asks for conscious skills, and rewards you with fast growth." },
-  "deep-teacher": { name: "Deep Teacher Bond", text: "You can learn the most from each other here. Tools and kindness matter most: see your practices below." },
+  "deep-teacher": { name: "Deep Teacher Bond", text: "You can learn the most from each other here. Tools and kindness matter most, so start with the practices below." },
 };
 
 export const archetypes: Record<Archetype, { name: string; icon: string; text: string }> = {
   harbor: { name: "The Harbor", icon: "⚓", text: "Easy and calm: a safe place to come home to. Add a little adventure to keep it alive." },
   wildfire: { name: "The Wildfire", icon: "🔥", text: "Easy and electric: natural flow plus strong spark. Protect it with good habits." },
   forge: { name: "The Forge", icon: "⚒️", text: "Challenging and electric. You shape each other through friction into something stronger." },
-  garden: { name: "The Garden", icon: "🌱", text: "Slow-growing and deepening with care: what you tend together keeps blooming." },
+  garden: { name: "The Garden", icon: "🌱", text: "Slow to start and deeper every year. What you tend together keeps blooming." },
 };
 
 export const themes: Record<Theme, { name: string; plus: string; minus: string; practices: [string, string] }> = {
@@ -52,10 +52,10 @@ export const themes: Record<Theme, { name: string; plus: string; minus: string; 
   stability: { name: "Stability", plus: "You build safety and reliability together.", minus: "Different needs for structure and security.", practices: ["Create one shared ritual (Sunday breakfast, Friday walk).", "Make a small promise and keep it: trust is built in small deposits."] },
   freedom: { name: "Freedom & space", plus: "You give each other room to breathe.", minus: "Different needs for space and togetherness.", practices: ["Agree on 'me time' openly, so space isn't read as rejection.", "Use a return time: 'I need an hour, I'll be back at 8.'"] },
   growth: { name: "Growth & adventure", plus: "You expand each other's world.", minus: "One may want change while the other wants rest.", practices: ["Pick one thing to learn or explore together this month.", "Ask each other: 'What's one way I could support your dream?'"] },
-  nurturing: { name: "Nurturing", plus: "You naturally take care of each other.", minus: "Your ways of caring may not land: translate them.", practices: ["Ask: 'What would make you feel cared for this week?'", "Do one act of care in their style, not yours."] },
+  nurturing: { name: "Nurturing", plus: "You naturally take care of each other.", minus: "Your ways of caring may not land, so translate them.", practices: ["Ask: 'What would make you feel cared for this week?'", "Do one act of care in their style, not yours."] },
   power: { name: "Power & leadership", plus: "You lead well together and respect each other's strength.", minus: "Two strong wills can compete for the wheel.", practices: ["Divide domains: who leads what.", "Take turns making the decision on small things."] },
-  play: { name: "Play & joy", plus: "You bring out each other's fun side.", minus: "You recharge and have fun in different ways.", practices: ["Make a 'fun list' with three ideas each: try one weekly.", "Laugh on purpose: share one funny thing a day."] },
-  values: { name: "Shared values", plus: "Your deeper values point in the same direction.", minus: "Some priorities differ: respect makes it work.", practices: ["Each write your top 3 values and compare kindly.", "Talk about one dream for the next five years."] },
+  play: { name: "Play & joy", plus: "You bring out each other's fun side.", minus: "You recharge and have fun in different ways.", practices: ["Make a 'fun list' with three ideas each and try one a week.", "Laugh on purpose: share one funny thing a day."] },
+  values: { name: "Shared values", plus: "Your deeper values point in the same direction.", minus: "Some priorities differ. Respect is what makes it work.", practices: ["Each write your top 3 values and compare kindly.", "Talk about one dream for the next five years."] },
   conflict: { name: "Handling conflict", plus: "You can disagree and still feel safe.", minus: "Under stress you react in different ways.", practices: ["Use a time-out with a promised return time when things heat up.", "Start hard talks softly: 'I feel… about… and I need…'"] },
   pace: { name: "Rhythm & pace", plus: "You move through life at a compatible tempo.", minus: "One of you is faster, the other slower.", practices: ["Agree on 'decide by' times so neither feels rushed or stalled.", "Notice and thank each other for what each pace brings."] },
 };

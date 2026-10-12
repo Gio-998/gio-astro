@@ -9,6 +9,7 @@
     "lint": "eslint",
     "build:export": "NEXT_DIST_DIR=.next-export next build",
     "test": "vitest run",
+    "check:copy": "node scripts/check-copy.mjs",
     "calibrate": "N_PEOPLE=3000 N_PAIRS=40000 tsx scripts/calibrate.ts",
     "cities": "node scripts/build-cities.mjs"
   },
