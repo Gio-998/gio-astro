@@ -14,7 +14,10 @@ import { TrustStrip } from "../nav/Trust";
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
 const PUBLIC = ["", "privacy", "terms", "promise", "learn", "credits", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
 const routeOf = (path: string) => path.replace(/^\/(en|mk)(\/|$)/, "").replace(/\/$/, "");
-export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout"); };
+// Public sections (with all their sub-pages): mini-games, daily sign pages, blog, trust page. Personal pages stay behind login.
+const PUBLIC_SECTIONS = ["play", "daily", "blog", "how-it-works"];
+const inSection = (r: string) => PUBLIC_SECTIONS.some((s) => r === s || r.startsWith(`${s}/`));
+export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || inSection(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout"); };
 
 /** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
 export function useBetaLocked(): boolean {

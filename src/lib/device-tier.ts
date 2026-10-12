@@ -5,8 +5,18 @@ const USER_KEY = "horoscop:fx-user";
 
 export const prefersReducedMotion = () => typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+/** WebGL available on real hardware? Software rasterisers (SwiftShader, llvmpipe, Basic Render) count as "no":
+ *  a full-screen shader on the CPU costs more than it gives, so those devices get the CSS sky. */
 function webglOk(): boolean {
-  try { const c = document.createElement("canvas"); return !!(c.getContext("webgl2") || c.getContext("webgl")); } catch { return false; }
+  try {
+    const c = document.createElement("canvas");
+    const gl = (c.getContext("webgl2") || c.getContext("webgl")) as WebGLRenderingContext | null;
+    if (!gl) return false;
+    const dbg = gl.getExtension("WEBGL_debug_renderer_info");
+    const name = String(dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER)).toLowerCase();
+    gl.getExtension("WEBGL_lose_context")?.loseContext();
+    return !/swiftshader|llvmpipe|softpipe|software|basic render/.test(name);
+  } catch { return false; }
 }
 
 /** Heuristic tier (no GPU probing libs): saveData / tiny memory / no WebGL → off; few cores or small memory → lite. */

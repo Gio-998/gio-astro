@@ -281,3 +281,5 @@ html.lenis, html.lenis body { height: auto; }
 html.lenis { scroll-behavior: auto !important; }
 .lenis.lenis-stopped { overflow: clip; }
 .fx-word { display: inline-block; will-change: transform; }
+/* Stories: only the sky and the story stay visible (works with or without WebGL; the CSS sky is the fallback). */
+html.stories-open body > *:not(.sky-root):not(.story-root) { visibility: hidden; }

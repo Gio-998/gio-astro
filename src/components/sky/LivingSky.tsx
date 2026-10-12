@@ -12,12 +12,12 @@ export function LivingSky() {
   const [live, setLive] = useState(false);
   useEffect(() => {
     const pick = () => setTier(detectTier());
-    pick();
+    requestAnimationFrame(pick);
     window.addEventListener("horoscop:fx", pick);
     return () => window.removeEventListener("horoscop:fx", pick);
   }, []);
   useEffect(() => {
-    if (!tier || tier === "off") { setLive(false); return; }
+    if (!tier || tier === "off") return;
     let handle: { stop(): void } | null = null; let cancelled = false;
     const go = async () => {
       const { startSky } = await import("./engine");
@@ -32,7 +32,7 @@ export function LivingSky() {
     return () => { cancelled = true; handle?.stop(); window.removeEventListener("load", start); };
   }, [tier]);
   return (
-    <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden data-sky-tier={tier ?? "pending"} data-sky-live={live ? "1" : "0"}>
+    <div className="sky-root pointer-events-none fixed inset-0 -z-10 overflow-hidden" aria-hidden data-sky-tier={tier ?? "pending"} data-sky-live={live ? "1" : "0"}>
       <div className="sky-css absolute inset-0" />
       {tier && tier !== "off" && (
         <canvas key={tier} ref={ref} className={`absolute inset-0 h-full w-full transition-opacity duration-[1400ms] ${live ? "opacity-100" : "opacity-0"}`} />
@@ -49,9 +49,8 @@ export function TiltPrompt({ label, className = "" }: { label: string; className
   useEffect(() => {
     const D = (typeof window !== "undefined" ? window.DeviceOrientationEvent : undefined) as OrientationCtor | undefined;
     let asked = false; try { asked = localStorage.getItem("horoscop:tilt") != null; } catch { /* */ }
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- feature detection after mount
     const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    if (ios && D && typeof D.requestPermission === "function" && !asked && !prefersReducedMotion()) setShow(true);
+    if (ios && D && typeof D.requestPermission === "function" && !asked && !prefersReducedMotion()) requestAnimationFrame(() => setShow(true));
   }, []);
   if (!show) return null;
   const ask = async () => {

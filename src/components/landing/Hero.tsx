@@ -58,7 +58,7 @@ export function Hero() {
         <div className="flex flex-wrap items-center gap-2"><Tonight /><TiltPrompt label={S.tilt} /></div>
         <div className="mt-auto max-w-2xl pt-8 md:my-auto">
           <p className="eyebrow mb-4 kinetic-word" style={{ "--i": 0 } as React.CSSProperties}>{H.eyebrow}</p>
-          <h1 className="h-display mb-5 text-[clamp(2.85rem,12.4vw,6.4rem)] font-medium leading-[0.98] tracking-[-0.015em]">
+          <h1 className="h-display mb-5 text-[clamp(2.85rem,12.4vw,4rem)] md:text-[clamp(3.6rem,5.2vw,5.2rem)] font-medium leading-[0.98] tracking-[-0.015em]">
             <Words text={H.see.trim()} start={0} />
             <Rotator words={H.words} />
             <Words text={H.mid.replace(/^,\s*/, "").trim()} start={2} />{" "}

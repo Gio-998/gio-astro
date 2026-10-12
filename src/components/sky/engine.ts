@@ -114,7 +114,7 @@ export function startSky(canvas: HTMLCanvasElement, tier: Tier, opts: { reduced:
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", resize);
 
-  let raf = 0, running = true, last = 0, t0 = performance.now(), lastDraw = 0;
+  let raf = 0, running = true, last = 0, lastDraw = 0; const t0 = performance.now();
   let uI = intensity, uS = swirl;
   const deltas: number[] = []; let watching = !opts.reduced && !userTier(); let curTier = tier;
 

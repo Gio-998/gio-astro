@@ -11,6 +11,7 @@ import { quizDefs } from "@/lib/quiz-defs";
 import { Blocks } from "./story/Blocks";
 import { SignArt } from "./art/SignArt";
 import { Emblem } from "./art/Emblem";
+import { HoloCard } from "./reveal/HoloCard";
 
 /** Opens the inline explainer for a lens badge. Provided by ProfileView; falls back to a no-op. */
 export const LensSheetCtx = createContext<(k: string) => void>(() => {});
@@ -54,7 +55,7 @@ export function LensSheet({ k, profile, personId, personName, onClose }: { k: st
           >
             <div className="flex justify-center pt-2.5 sm:hidden" aria-hidden><span className="h-1.5 w-12 rounded-full bg-white/25" /></div>
             <div className="flex items-center gap-4 border-b border-white/10 px-5 pb-4 pt-3 sm:px-7 sm:pt-6">
-              <div className="shrink-0">{page.art.kind === "sign" ? <SignArt sign={page.art.sign} className="h-16 w-16" /> : <Emblem id={page.art.id} className="h-14 w-14 glow-gold" />}</div>
+              <HoloCard className="slam grid h-[88px] w-[66px] shrink-0 place-items-center rounded-[14px] border border-gold/50 bg-[radial-gradient(circle_at_50%_35%,#4b3aa0,#1c1645_80%)] shadow-[0_10px_30px_-10px_rgba(255,200,97,.6)]">{page.art.kind === "sign" ? <SignArt sign={page.art.sign} className="h-14 w-14" /> : <Emblem id={page.art.id} className="h-12 w-12 glow-gold" />}</HoloCard>
               <div className="min-w-0 flex-1">
                 <p className="eyebrow mb-0.5">{page.name}</p>
                 <h2 id="lens-sheet-title" className="h-display text-2xl leading-tight sm:text-3xl">{page.title}</h2>

@@ -7,6 +7,7 @@ import { cosmos } from "../art/ArtCard";
 import { PageHero } from "../ui";
 import { Reveal } from "../art/Reveal";
 import { PremiumForecast } from "../premium/Forecast";
+import { TodayStories } from "../today/TodayStories";
 
 /** Gentle on-device visit streak (never punishes a missed day — it just restarts quietly). */
 function useStreak(today: string) {
@@ -53,6 +54,7 @@ export function TodayPage() {
         sub={U.sub} art={<MoonArt angle={g.moon.angle} className="h-36 w-36 animate-float" />}>
         {streak > 0 && <span className="chip !border-gold/40 !text-gold">{U.streak(streak)}</span>}
       </PageHero>
+      <TodayStories />
       <div className="grid gap-4 sm:grid-cols-2">
         <Reveal><div className="card h-full text-center">
           <MoonArt angle={g.moon.angle} className="mx-auto mb-2 h-28 w-28" />
