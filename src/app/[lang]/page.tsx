@@ -17,6 +17,7 @@ import { Emblem, EmblemId } from "@/components/art/Emblem";
 import { SignArt } from "@/components/art/SignArt";
 import { ZodiacWheel } from "@/components/art/ZodiacWheel";
 import { ScrollFx } from "@/components/landing/ScrollFx";
+import { SignsToday } from "@/components/horoscope/SignsToday";
 
 const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha", play: "explorer" };
 
@@ -48,6 +49,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           ))}
         </div>
       </div>
+
+      <SignsToday lang={lang} />
 
       {/* What you'll discover */}
       <section id="discover" className="scroll-mt-20 py-24">

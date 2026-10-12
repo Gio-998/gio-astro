@@ -9,6 +9,7 @@ export const nav = {
   trustLabel: "Our promise to you",
   method: "How this is measured",
   today: { label: "Today", desc: "Your sky, card and prompt for the day" },
+  horoscope: { label: "Daily horoscope", desc: "All twelve signs, fresh from today's sky" },
   pricing: { label: "Pricing", desc: "Plans, reports and what stays free" },
   groups: {
     me: {

@@ -126,3 +126,19 @@ export function publishedDates(now = new Date(), back = Number(process.env.DAILY
   for (let i = -back; i <= ahead; i++) out.push(addDays(t, i));
   return out;
 }
+
+const PERSONAL = new Set(["sun", "mercury", "venus", "mars"]);
+/** The most notable sky events (lunar quarters, stations, sign changes) in the 7 days after `iso`, in date order, with houses for `sign`. */
+export function nextEvents(iso: string, sign: Sign, max = 2): { iso: string; event: Exclude<SkyEvent, { kind: "aspect" }> }[] {
+  const all: { iso: string; d: number; score: number; event: Exclude<SkyEvent, { kind: "aspect" }> }[] = [];
+  for (let d = 1; d <= 7; d++) {
+    const day = addDays(iso, d);
+    let s = cache.get(day); if (!s) { s = skyOfDate(day); cache.set(day, s); }
+    for (const e of s.raw) {
+      const personal = e.kind === "quarter" || PERSONAL.has(e.body as string);
+      const score = (e.kind === "quarter" ? 40 : e.kind === "station" ? 30 : 20) + (personal ? 10 : 0) - d * 0.1;
+      all.push({ iso: day, d, score, event: { ...e, house: houseFrom(sign, (e.kind === "ingress" ? e.to : e.sign)!) } as unknown as Exclude<SkyEvent, { kind: "aspect" }> });
+    }
+  }
+  return all.sort((a, b) => b.score - a.score).slice(0, max).sort((a, b) => a.d - b.d).map(({ iso, event }) => ({ iso, event }));
+}

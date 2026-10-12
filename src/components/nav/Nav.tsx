@@ -8,6 +8,8 @@ import { nav as en, type NavGroupKey } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
 import { Emblem, type EmblemId } from "../art/Emblem";
 import { pricingPath } from "@/lib/pricing";
+import { HORO_SLUGS } from "@/lib/horo-slugs";
+const horoHubPath = (lang: string) => `/${(HORO_SLUGS[lang as keyof typeof HORO_SLUGS] ?? HORO_SLUGS.en).section}/`;
 
 export const useNav = () => (useContent().locale === "mk" ? mk : en);
 type Item = { href: string; icon: EmblemId; title: string; desc: string };
@@ -86,6 +88,7 @@ export function DesktopNav({ keys, showToday = true }: { keys: NavGroupKey[]; sh
   return (
     <div className="flex items-center gap-0.5 text-sm" onMouseLeave={() => later(null, 160)} data-testid="desktop-nav">
       {showToday && <Link href={h("/today/")} className={`rounded-full px-3 py-2 transition ${path.includes("/today/") ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{N.today.label}</Link>}
+      <HoroscopeLink />
       {groups.map((g) => {
         const on = open === g.key; const act = g.items.some((i) => isActive(path, i.href));
         return (
@@ -113,6 +116,12 @@ export function DesktopNav({ keys, showToday = true }: { keys: NavGroupKey[]; sh
       <PricingLink />
     </div>
   );
+}
+
+/** Top-level "Daily horoscope" link, right after Today (each locale has its own slug). */
+function HoroscopeLink() {
+  const N = useNav(); const h = useHref(); const { locale } = useContent(); const path = usePathname() || ""; const href = horoHubPath(locale); const on = path.includes(href);
+  return <Link href={h(href)} data-testid="nav-horoscope" className={`whitespace-nowrap rounded-full px-3 py-2 transition ${on ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{N.horoscope.label}</Link>;
 }
 
 /** Top-level "Pricing" link (each locale has its own slug). */
@@ -144,6 +153,11 @@ export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose
         </div>
         <div className="mb-3 flex items-center justify-between gap-3"><p className="h-display text-3xl text-aurora">{N.menu}</p><button type="button" onClick={close} className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-dim" aria-label={N.close} data-testid="more-close">✕</button></div>
         {top}
+        <Link href={h(horoHubPath(locale))} onClick={close} data-testid="sheet-horoscope"
+          className="mb-2 flex min-h-[52px] items-center justify-between gap-3 rounded-2xl border border-white/15 bg-gradient-to-r from-violet/20 via-white/[0.04] to-transparent px-4 py-3">
+          <span className="min-w-0"><span className="block font-semibold text-mist">☾ {N.horoscope.label}</span><span className="block truncate text-xs text-dim">{N.horoscope.desc}</span></span>
+          <span className="text-gold" aria-hidden>→</span>
+        </Link>
         <Link href={h(pricingPath(locale))} onClick={close} data-testid="sheet-pricing"
           className="mb-5 flex min-h-[52px] items-center justify-between gap-3 rounded-2xl border border-gold/40 bg-gradient-to-r from-gold/15 via-violet/15 to-transparent px-4 py-3">
           <span className="min-w-0"><span className="block font-semibold text-gold">{N.pricing.label}</span><span className="block truncate text-xs text-dim">{N.pricing.desc}</span></span>

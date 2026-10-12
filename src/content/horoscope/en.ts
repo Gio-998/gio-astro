@@ -1,7 +1,9 @@
 import type { HoroBank } from "./types";
 import { HORO_SLUGS } from "@/lib/horo-slugs";
+import { enMore } from "./en-more";
 
 export const en: HoroBank = {
+  more: enMore,
   slug: HORO_SLUGS.en.section, signSlug: HORO_SLUGS.en.signs,
   bodies: { sun: "The Sun", mercury: "Mercury", venus: "Venus", mars: "Mars", jupiter: "Jupiter", saturn: "Saturn", uranus: "Uranus", neptune: "Neptune", pluto: "Pluto" },
   phases: { new: "new Moon", "waxing-crescent": "waxing crescent", "first-quarter": "first quarter", "waxing-gibbous": "waxing gibbous", full: "full Moon", "waning-gibbous": "waning gibbous", "last-quarter": "last quarter", "waning-crescent": "waning crescent" },
@@ -92,14 +94,14 @@ export const en: HoroBank = {
     },
     exactToday: "Exact today.",
     retroOngoing: (b, s, x) => `${b} is retrograde in ${s}, so take it slow with ${x}.`,
-    inSign: (list, many, s) => `${list} ${many ? "are" : "is"} in ${s}, your own sign. Extra charge for you.`, and: "and",
+    inSign: (list, many, s) => `${list} ${many ? "are" : "is"} in ${s}, your own sign. Extra charge for you.`, and: "and", retroSame: (b, s) => `${b} is also retrograde in ${s}, so give it time.`,
     calm: "No big planet shifts today, so the Moon sets the tone.",
   },
   ui: {
     title: (s, d) => `${s} daily horoscope, ${d}`,
     shortTitle: (s) => `${s} horoscope today`,
     description: (s, d, h) => `${s} horoscope for ${d}. ${h} Love, work, wellbeing and lucky number from the real sky.`,
-    hubTitle: "Daily horoscope", hubSub: "Pick your sign. Fresh every day, worked out from the real sky.",
+    hubTitle: "Daily horoscope", homeEyebrow: "Daily horoscope", homeTitle: "Your sign today", homeAll: "All signs", hubSub: "Pick your sign. Fresh every day, worked out from the real sky.",
     love: "Love", work: "Work", well: "Wellbeing", lucky: "Lucky today", color: "Color", number: "Number", window: "Best hours",
     skyTitle: "The sky today", moodTitle: "How do you feel today?", moodSub: "One tap, and your Today page tracks it.",
     moods: ["Great", "Calm", "Okay", "Tense", "Low"],

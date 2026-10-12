@@ -1,7 +1,9 @@
 import type { HoroBank } from "./types";
 import { HORO_SLUGS } from "@/lib/horo-slugs";
+import { mkMore } from "./mk-more";
 
 export const mk: HoroBank = {
+  more: mkMore,
   slug: HORO_SLUGS.mk.section, signSlug: HORO_SLUGS.mk.signs,
   bodies: { sun: "Сонцето", mercury: "Меркур", venus: "Венера", mars: "Марс", jupiter: "Јупитер", saturn: "Сатурн", uranus: "Уран", neptune: "Нептун", pluto: "Плутон" },
   phases: { new: "млада Месечина", "waxing-crescent": "растечки срп", "first-quarter": "прва четвртина", "waxing-gibbous": "растечка Месечина", full: "полна Месечина", "waning-gibbous": "опаѓачка Месечина", "last-quarter": "последна четвртина", "waning-crescent": "опаѓачки срп" },
@@ -92,14 +94,14 @@ export const mk: HoroBank = {
     },
     exactToday: "Точно денес.",
     retroOngoing: (b, s, x) => `${b} оди ретроградно во ${s} и ги успорува работите околу ${x}.`,
-    inSign: (list, many, s) => `${list} ${many ? "се" : "е"} во ${s}, твојот знак. Дополнителен полнеж за тебе.`, and: "и",
+    inSign: (list, many, s) => `${list} ${many ? "се" : "е"} во ${s}, твојот знак. Дополнителен полнеж за тебе.`, and: "и", retroSame: (b, s) => `И ${b} оди ретроградно во ${s}, па не брзај.`,
     calm: "Денес нема големи поместувања на планетите, па тонот го дава Месечината.",
   },
   ui: {
     title: (s, d) => `Дневен хороскоп за ${s}, ${d}`,
     shortTitle: (s) => `Хороскоп за ${s} денес`,
     description: (s, d, h) => `Хороскоп за ${s} за ${d}. ${h} Љубов, работа, здравје и среќен број според вистинското небо.`,
-    hubTitle: "Дневен хороскоп", hubSub: "Избери го својот знак. Секој ден ново, пресметано од вистинското небо.",
+    hubTitle: "Дневен хороскоп", homeEyebrow: "Дневен хороскоп", homeTitle: "Твојот знак денес", homeAll: "Сите знаци", hubSub: "Избери го својот знак. Секој ден ново, пресметано од вистинското небо.",
     love: "Љубов", work: "Работа", well: "Тело и ум", lucky: "Среќно денес", color: "Боја", number: "Број", window: "Најдобри часови",
     skyTitle: "Небото денес", moodTitle: "Како се чувствуваш денес?", moodSub: "Еден допир, а страницата Денес го следи.",
     moods: ["Супер", "Мирно", "Средно", "Напнато", "Слабо"],

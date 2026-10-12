@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { reading, HORO_LOCALES, horoPath, signFromSlug } from "@/lib/horoscope";
 import { skyDay, isValidIso } from "@/engine/skyday";
 import { SIGNS } from "@/engine/zodiac";
+import { wordCount } from "@/components/horoscope/DailyHoroscope";
 
 const DASH = /[\u2013\u2014]/;
 function rng(seed: number) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 2 ** 32; }; }
@@ -18,7 +19,11 @@ describe("public daily horoscope", () => {
       const sign = SIGNS[Math.floor(r() * 12)];
       for (const lang of HORO_LOCALES) {
         const x = reading(lang, sign, iso);
-        const texts = [x.title, x.description, x.headline, ...x.love, ...x.work, ...x.well, ...x.sky_, x.lucky.color, x.lucky.window, x.moonLine];
+        const texts = [x.title, x.description, x.headline, ...x.love, ...x.work, ...x.well, ...x.sky_, x.lucky.color, x.lucky.window, x.moonLine,
+          x.overview, x.single, x.couple, ...x.money, x.body, x.friends, ...x.why, x.best, x.avoid, x.prompt, ...x.week.flatMap((w) => [w.date, w.text]), ...x.planets.map((p) => p.name + p.signName)];
+        expect(x.overview.split(/[.!?] /).length).toBeGreaterThanOrEqual(4); expect(x.why.length).toBeGreaterThanOrEqual(1); expect(x.money.length).toBe(3);
+        expect(new Set(x.sky_).size).toBe(x.sky_.length);
+        expect(wordCount(x)).toBeGreaterThan(360);
         expect(x.love.length).toBe(2); expect(x.work.length).toBe(2); expect(x.well.length).toBe(2); expect(x.sky_.length).toBeGreaterThanOrEqual(2);
         for (const t of texts) {
           expect(t, `${lang} ${sign} ${iso}`).toBeTruthy();
