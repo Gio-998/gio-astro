@@ -88,7 +88,7 @@ export function Header() {
             <Link href={h("/start/")} className="btn-primary ml-2 !py-2">{c.site.startShort} ✦</Link>
           </nav>
           <div className="flex items-center gap-2 md:hidden"><LangSwitch /><AccountChip />
-          <Link href={h("/start/")} className="btn-primary !px-4 !py-1.5 text-xs">{c.site.startShort} ✦</Link></div>
+          <Link href={h("/start/")} className="btn-primary hidden whitespace-nowrap !px-4 !py-1.5 text-xs min-[420px]:inline-flex">{c.site.startShort} ✦</Link></div>
         </div>
       </header>
       <nav className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-5 rounded-3xl border border-white/15 bg-ink/80 shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl md:hidden">
