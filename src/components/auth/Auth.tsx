@@ -188,7 +188,7 @@ export function VerifyPage() {
     if (cap.needed) { setErr(A.captchaNeeded); return; }
     const captchaToken = cap.token || undefined;
     const auth = sb()!.auth; const redirectTo = `${location.origin}/${locale}/auth/callback`;
-    const { error } = mode === "signup" ? await auth.resend({ type: "signup", email, options: { emailRedirectTo: redirectTo, captchaToken } }) : await auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: redirectTo, captchaToken } });
+    const { error } = mode === "signup" ? await auth.resend({ type: "signup", email, options: { emailRedirectTo: redirectTo, captchaToken } }) : await auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: redirectTo, data: { locale }, captchaToken } });
     cap.reset();
     if (error) setErr(A.errors[errKey(error)] ?? A.errors.generic); else { setInfo(A.resent); setLeft(60); }
   };
