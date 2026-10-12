@@ -1,9 +1,9 @@
 // Regenerates src/engine/systems/chiron-elements.ts from NASA/JPL Horizons (public domain US government data).
-// Heliocentric osculating elements of 2060 Chiron, ecliptic + mean equinox J2000, every 100 days, 1899-12 to 2081-01.
+// Heliocentric osculating elements of 2060 Chiron, ecliptic + mean equinox J2000, every 100 days, 1899-12 to 2101-06.
 // Usage: node scripts/build-chiron.mjs
 import { writeFileSync } from "node:fs";
 const p = new URLSearchParams({ format: "text", OBJ_DATA: "NO", MAKE_EPHEM: "YES", COMMAND: "'2060;'", EPHEM_TYPE: "'ELEMENTS'", CENTER: "'500@10'",
-  START_TIME: "'1899-12-01'", STOP_TIME: "'2081-01-01'", STEP_SIZE: "'100 d'", REF_PLANE: "'ECLIPTIC'", REF_SYSTEM: "'J2000'", OUT_UNITS: "'AU-D'", CSV_FORMAT: "'YES'" });
+  START_TIME: "'1899-12-01'", STOP_TIME: "'2101-06-01'", STEP_SIZE: "'100 d'", REF_PLANE: "'ECLIPTIC'", REF_SYSTEM: "'J2000'", OUT_UNITS: "'AU-D'", CSV_FORMAT: "'YES'" });
 const t = await (await fetch(`https://ssd.jpl.nasa.gov/api/horizons.api?${p}`)).text();
 const rows = t.split("$$SOE")[1].split("$$EOE")[0].trim().split("\n").map((l) => l.split(",").map((s) => s.trim()));
 // JD, EC, QR, IN, OM, W, Tp, N, MA, TA, A

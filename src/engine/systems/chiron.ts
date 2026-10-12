@@ -4,11 +4,11 @@ import { norm360 } from "./util";
 
 /**
  * Geocentric ecliptic longitude of 2060 Chiron (true equinox of date), degrees.
- * Method: nearest JPL Horizons osculating element set (100-day grid, 1899-2081), two-body Kepler propagation
+ * Method: nearest JPL Horizons osculating element set (100-day grid, 1899-2101), two-body Kepler propagation
  * over at most 50 days, heliocentric J2000 ecliptic → equatorial, minus the Earth's heliocentric vector
  * from astronomy-engine, one light-time iteration, then astronomy-engine's Ecliptic() for the equinox of date.
  * Accuracy against Horizons apparent positions: better than 0.02° (see tests/systems.test.ts).
- * Outside 1899-2081 it returns null (we say so instead of guessing).
+ * Outside 1899-2101 it returns null (we say so instead of guessing).
  */
 const K = Math.PI / 180;
 const EPS_J2000 = 23.4392911 * K;

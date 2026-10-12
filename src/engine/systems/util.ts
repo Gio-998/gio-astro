@@ -25,7 +25,9 @@ export function orthodoxEaster(year: number): { m: number; d: number } {
   const a = year % 4, b = year % 7, c = year % 19;
   const dd = (19 * c + 15) % 30, e = (2 * a + 4 * b - dd + 34) % 7;
   const month = Math.floor((dd + e + 114) / 31), day = ((dd + e + 114) % 31) + 1; // Julian
-  const g = new Date(Date.UTC(year, month - 1, day + 13));
+  // Julian to Gregorian gap: 13 days in 1900-2099, 14 from March 2100 (Easter is always after March 1).
+  const gap = Math.floor(year / 100) - Math.floor(year / 400) - 2;
+  const g = new Date(Date.UTC(year, month - 1, day + gap));
   return { m: g.getUTCMonth() + 1, d: g.getUTCDate() };
 }
 export function addDays(y: number, m: number, d: number, n: number): { y: number; m: number; d: number } {
