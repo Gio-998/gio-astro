@@ -20,7 +20,7 @@ Write like a thoughtful friend who knows astrology and psychology well. Warm, di
   - Explanation or list after a clause: use a colon.
   - Two complete thoughts: use a period. Start a new sentence.
   - Number ranges: `9-19`, or write "9 to 19". Pairs of names: `Vata-Pitta`, `Fire/Water`.
-  - Empty value placeholders in tables: `·` or `…`, not `—`.
+  - Empty value placeholders in tables: prefer `·` or `…`. (A string that is only a lone `—` placeholder is tolerated by the checker, since it isn't punctuation.)
 - Hyphens inside words are fine: self-aware, push-pull, yin-yang.
 - Sentence case in running text. Title case only for proper headings and names.
 - No emoji in prose. Small icons as badges or labels (🔬 ✦ ⚓) are fine.

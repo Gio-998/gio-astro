@@ -56,6 +56,7 @@ export function checkCopy(root = ROOT) {
     for (const r of ranges) {
       const text = src.slice(r.start, r.end);
       if (/\p{Script=Cyrillic}/u.test(text)) continue;
+      if (/^\s*[—–]\s*$/u.test(text)) continue; // a lone dash used as an empty-value placeholder, not punctuation
       for (const [rx, msg] of RULES) {
         const m = text.match(rx);
         if (!m) continue;
