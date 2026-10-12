@@ -14,7 +14,7 @@ export const snapOf = (p: StoredPerson): BirthSnap => ({ name: p.name.slice(0, 8
 const validSnap = (x: unknown): x is BirthSnap => !!x && typeof x === "object" && typeof (x as BirthSnap).date === "string" && /^\d{4}-\d{2}-\d{2}$/.test((x as BirthSnap).date);
 export const personFromSnap = (id: string, s: BirthSnap, name?: string): StoredPerson => ({ id, name: (name || s.name || "?").slice(0, 80), birthName: s.birthName, date: s.date, time: s.time ?? null, place: s.place ?? null, utcOffsetOverride: s.utcOffsetOverride ?? null, quiz: {}, relType: "friend", createdAt: new Date().toISOString() });
 
-export const inviteUrl = (code: string, lang: string) => `${SITE}/${lang}/invite/${code}`;
+export const inviteUrl = (code: string, lang: string) => `${SITE}/${lang}/invite/${code.toLowerCase()}`;
 /** /en/invite/abcd1234 (rewritten to the static page) or /en/invite/?c=abcd1234 */
 export function codeFromLocation(): string | null {
   if (typeof window === "undefined") return null;
@@ -31,12 +31,14 @@ export async function ensureInvite(me: StoredPerson): Promise<string | null> {
 export const markShared = () => rpc("invite_mark_shared").then(() => undefined);
 
 export async function lookupInvite(code: string): Promise<{ name: string; birth: BirthSnap } | null> {
-  const { data, error } = await rpc("invite_lookup", { p_code: code });
+  const c = code.toLowerCase();
+  const { data, error } = await rpc("invite_lookup", { p_code: c });
   const d = data as { name: string; birth: unknown } | null;
   return !error && d && validSnap(d.birth) ? { name: d.name, birth: d.birth } : null;
 }
 export async function acceptInvite(code: string, me: StoredPerson): Promise<{ name: string; birth: BirthSnap; self?: boolean } | null> {
-  const { data, error } = await rpc("invite_accept", { p_code: code, p_name: me.name.slice(0, 80) || "Friend", p_birth: snapOf(me) });
+  const c = code.toLowerCase();
+  const { data, error } = await rpc("invite_accept", { p_code: c, p_name: me.name.slice(0, 80) || "Friend", p_birth: snapOf(me) });
   const d = data as { name: string; birth: unknown; self?: boolean } | null;
   return !error && d && validSnap(d.birth) ? { name: d.name, birth: d.birth, self: d.self } : null;
 }

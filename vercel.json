@@ -1,7 +1,13 @@
 {
+  "redirects": [
+    { "source": "/en/premium/", "destination": "/en/pricing/", "statusCode": 308 },
+    { "source": "/mk/premium/", "destination": "/mk/ceni/", "statusCode": 308 },
+    { "source": "/en/upgrade/", "destination": "/en/pricing/", "statusCode": 308 },
+    { "source": "/mk/upgrade/", "destination": "/mk/ceni/", "statusCode": 308 }
+  ],
   "rewrites": [
-    { "source": "/invite/:code([a-z0-9]{8})", "destination": "/en/invite/" },
-    { "source": "/:lang(en|mk)/invite/:code([a-z0-9]{8})", "destination": "/:lang/invite/" },
-    { "source": "/:lang(en|mk)/invite/:code([a-z0-9]{8})/", "destination": "/:lang/invite/" }
+    { "source": "/invite/:code([a-zA-Z0-9]{8})", "destination": "/en/invite/" },
+    { "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})", "destination": "/:lang/invite/" },
+    { "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})/", "destination": "/:lang/invite/" }
   ]
 }

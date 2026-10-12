@@ -11,4 +11,7 @@ describe("friend invites", () => {
     expect(inviteUrl("abcd1234", "mk")).toMatch(/\/mk\/invite\/abcd1234$/);
     expect(friendPersonId("1b2c3d4e-0000-4000-8000-000000000000")).toBe("invf-1b2c3d4e0000");
   });
+  it("normalizes invite codes to lowercase in the URL", () => {
+    expect(inviteUrl("AbCd1234", "en")).toMatch(/\/en\/invite\/abcd1234$/);
+  });
 });

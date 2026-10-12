@@ -2,3 +2,7 @@
 /invite/* /en/invite/ 200
 /en/invite/* /en/invite/ 200
 /mk/invite/* /mk/invite/ 200
+/en/premium/ /en/pricing/ 308
+/mk/premium/ /mk/ceni/ 308
+/en/upgrade/ /en/pricing/ 308
+/mk/upgrade/ /mk/ceni/ 308
