@@ -22,4 +22,5 @@ import { site } from "./site";
 import { landing } from "./landing";
 import { book } from "./book";
 import { lensInfo, lensUi } from "./lens";
-export const mk = { astro, quizzes, psych, chinese, vedic, nums, compat, daily, ui, deep: { ...synth, ...bondMk, bigFiveDeep, attachDeep, ...psychB, ...chineseDeep, ...numbersDeep, bondUi, signDeep: { aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces } }, site, landing, book, lensInfo, lensUi };
+import { sky } from "./sky";
+export const mk = { astro, quizzes, psych, chinese, vedic, nums, compat, daily, ui, deep: { ...synth, ...bondMk, bigFiveDeep, attachDeep, ...psychB, ...chineseDeep, ...numbersDeep, bondUi, signDeep: { aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces } }, site, landing, book, lensInfo, lensUi, sky };
