@@ -6,6 +6,7 @@ import { sb, betaMode, accountsEnabled } from "@/lib/supabase";
 import { useAccount } from "@/lib/sync";
 import { useContent, useHref } from "@/lib/content-context";
 import { Aura } from "../aura/Aura";
+import { useCaptcha, captchaEnabled } from "./Captcha";
 
 // Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
@@ -72,12 +73,16 @@ export function BetaInvite() {
 export function Waitlist({ source = "gate" }: { source?: string }) {
   const { c, locale } = useContent(); const B = c.ui.beta;
   const [email, setEmail] = useState(""); const [state, setState] = useState<"idle" | "busy" | "done">("idle"); const [err, setErr] = useState("");
+  // Turnstile loads only once someone starts typing, so plain visitors don't pay for the script.
+  const [touched, setTouched] = useState(false); const cap = useCaptcha(locale, touched);
   const submit = async (e: React.FormEvent) => {
     e.preventDefault(); setErr("");
+    if (captchaEnabled && !cap.token) { setTouched(true); return setErr(c.ui.auth.captchaNeeded); }
     const em = email.trim().toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return setErr(B.invalid);
     setState("busy");
     const { error } = await sb()!.from("waitlist").insert({ email: em, locale, source });
+    cap.reset();
     if (error && error.code !== "23505") { setErr(c.ui.auth.errors.generic); setState("idle"); return; } // duplicate = already on the list
     setState("done");
   };
@@ -85,9 +90,10 @@ export function Waitlist({ source = "gate" }: { source?: string }) {
   return (
     <form id="waitlist" onSubmit={submit} className="space-y-2">
       <div className="flex flex-col gap-2 sm:flex-row">
-        <input className="input flex-1" type="email" required placeholder={B.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="email" data-testid="waitlist-email" />
+        <input className="input flex-1" type="email" required placeholder={B.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} onFocus={() => setTouched(true)} autoComplete="email" data-testid="waitlist-email" />
         <button className="btn-primary shrink-0" disabled={state === "busy"} data-testid="waitlist-submit">{state === "busy" ? "…" : B.join}</button>
       </div>
+      {cap.widget}
       {err && <p role="alert" className="text-sm text-rose">{err}</p>}
       <p className="text-xs text-dim">{B.privacy}</p>
     </form>
