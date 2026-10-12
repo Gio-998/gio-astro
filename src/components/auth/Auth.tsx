@@ -2,7 +2,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { sb, accountsEnabled, googleEnabled, betaMode } from "@/lib/supabase";
+import { sb, accountsEnabled, googleEnabled } from "@/lib/supabase";
+import { getFlags } from "@/lib/flags";
 import { useAccount, rememberConsents, signOut, deleteAccount, flush, pullAndMerge, resolveConflict, startAccountSync } from "@/lib/sync";
 import { useStore } from "@/lib/store";
 import { useContent, useHref, useDate } from "@/lib/content-context";
@@ -122,7 +123,7 @@ function SignInForm() {
         {tab === "password" && <label className="block text-sm"><span className="mb-1 block text-dim">{A.password}</span>
           <input className="input" type="password" required minLength={8} data-testid="password" autoComplete={creating ? "new-password" : "current-password"} placeholder={A.passwordPh} value={pw} onChange={(e) => setPw(e.target.value)} /></label>}
         {tab === "otp" && <p className="text-xs text-dim">{A.codeHint}</p>}
-        {betaMode && <p className="text-xs text-gold">✦ {c.ui.beta.badge}: {c.ui.beta.banner}</p>}
+        {!getFlags().signups_open && <p className="text-xs text-gold">✦ {c.ui.beta.badge}: {c.ui.beta.banner}</p>}
         {needConsent && <Consents v={cons} set={setCons} />}
         {cap.widget}
         {err && <p role="alert" data-testid="auth-error" className="rounded-xl border border-rose/40 bg-rose/10 px-3 py-2 text-sm text-rose">{err}</p>}

@@ -4,7 +4,7 @@ import { migrate, type State, type StoredPerson } from "@/lib/store";
 
 const me: StoredPerson = { id: "me", name: "Ana", date: "1995-10-12", time: "14:30", place: { name: "Skopje", lat: 42, lon: 21.4, tz: "Europe/Skopje" }, quiz: { explorer: { score: 60 } as never }, quizAt: { explorer: "2026-10-10T10:00:00Z" }, createdAt: "2026-10-01T00:00:00Z", updatedAt: "2026-10-10T10:00:00Z" };
 const empty = (): ServerSnapshot => ({ profile: null, quizzes: [], people: [], journal: [], bonds: [] });
-const prof = (o: Partial<ProfileRow> = {}): ProfileRow => ({ id: "u1", display_name: "Ana", birth_name: null, birth_date: null, birth_time: null, birth_time_unknown: true, birth_place: null, birth_lat: null, birth_lon: null, birth_tz: null, utc_offset_override: null, locale: "en", theme_prefs: {}, created_at: "2026-10-01T00:00:00Z", updated_at: "2026-10-01T00:00:00Z", ...o });
+const prof = (o: Partial<ProfileRow> = {}): ProfileRow => ({ id: "u1", display_name: "Ana", birth_name: null, birth_date: null, birth_time: null, birth_time_unknown: true, birth_place: null, birth_lat: null, birth_lon: null, birth_tz: null, utc_offset_override: null, locale: "en", role: "user", theme_prefs: {}, created_at: "2026-10-01T00:00:00Z", updated_at: "2026-10-01T00:00:00Z", ...o });
 const st = (o: Partial<State>): State => ({ ...migrate({}), ...o });
 
 describe("sync mapping", () => {

@@ -2,11 +2,12 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { sb, betaMode, accountsEnabled } from "@/lib/supabase";
+import { sb, accountsEnabled } from "@/lib/supabase";
+import { useFlags } from "@/lib/flags";
 import { useAccount } from "@/lib/sync";
 import { useContent, useHref } from "@/lib/content-context";
 import { Aura } from "../aura/Aura";
-import { useCaptcha, captchaEnabled } from "./Captcha";
+import { useCaptcha } from "./Captcha";
 
 // Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
@@ -16,14 +17,14 @@ export const isPublicRoute = (path: string) => PUBLIC.includes(routeOf(path));
 
 /** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
 export function useBetaLocked(): boolean {
-  const a = useAccount();
-  return betaMode && accountsEnabled && !a.user;
+  const a = useAccount(); const f = useFlags();
+  return f.private_beta && accountsEnabled && !a.user;
 }
 
 /** In private beta, app pages show a compact invite gate to logged-out visitors, inside the normal layout. */
 export function BetaGate({ children }: { children: React.ReactNode }) {
-  const path = usePathname() || "/"; const a = useAccount(); const { c } = useContent();
-  if (!betaMode || !accountsEnabled || isPublicRoute(path)) return <>{children}</>;
+  const path = usePathname() || "/"; const a = useAccount(); const { c } = useContent(); const f = useFlags();
+  if (!f.private_beta || !accountsEnabled || isPublicRoute(path)) return <>{children}</>;
   if (!a.ready) return <p className="py-20 text-center text-dim">{c.site.common.loading}</p>;
   if (a.user) return <>{children}</>;
   return <BetaLockedCard />;
@@ -77,7 +78,7 @@ export function Waitlist({ source = "gate" }: { source?: string }) {
   const [touched, setTouched] = useState(false); const cap = useCaptcha(locale, touched);
   const submit = async (e: React.FormEvent) => {
     e.preventDefault(); setErr("");
-    if (captchaEnabled && !cap.token) { setTouched(true); return setErr(c.ui.auth.captchaNeeded); }
+    if (cap.needed) { setTouched(true); return setErr(c.ui.auth.captchaNeeded); }
     const em = email.trim().toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return setErr(B.invalid);
     setState("busy");

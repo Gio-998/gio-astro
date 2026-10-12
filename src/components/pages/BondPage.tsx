@@ -1,4 +1,5 @@
 "use client";
+import { track } from "@/lib/track";
 import Link from "next/link";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -93,6 +94,7 @@ export function BondPage() {
       const result = scoreBond(all2.a, all2.b);
       // Keep the history (and sync it to the account if signed in). The non-"me" person is the one the check is about.
       const other = A.id === "me" ? B : B.id === "me" ? A : B;
+      track("bond_check");
       repo.saveBondCheck({ id: newId(), personId: A.id, otherId: other.id, relType: other.relType, answers: { a: all2.a, b: all2.b, aId: A.id, bId: B.id }, results: result, createdAt: new Date().toISOString() });
       setStep({ result });
     }

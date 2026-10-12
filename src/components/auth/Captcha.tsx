@@ -5,6 +5,7 @@
  * (NEXT_PUBLIC_CAPTCHA_PROVIDER=hcaptcha). The matching secret goes in Supabase: Auth > Attack Protection.
  */
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useFlags } from "@/lib/flags";
 
 export const CAPTCHA_KEY = process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY || "";
 export const CAPTCHA_PROVIDER: "turnstile" | "hcaptcha" = process.env.NEXT_PUBLIC_CAPTCHA_PROVIDER === "hcaptcha" ? "hcaptcha" : "turnstile";
@@ -25,7 +26,8 @@ function load(): Promise<Api> {
 }
 
 /** Returns the current token (or "" until solved), the widget to render, and reset() to call after each auth request (tokens are single-use). */
-export function useCaptcha(locale: string, active = true) {
+export function useCaptcha(locale: string, wanted = true) {
+  const flags = useFlags(); const active = wanted && flags.captcha; // admin switch (feature_flags.captcha)
   const [token, setToken] = useState("");
   const el = useRef<HTMLDivElement>(null); const id = useRef<string | null>(null);
   useEffect(() => {

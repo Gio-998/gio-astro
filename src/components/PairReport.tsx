@@ -110,7 +110,7 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
   };
   return (
     <div className="space-y-6">
-      <div className="card relative overflow-hidden text-center" style={{ background: `radial-gradient(120% 90% at 0% 0%, ${A.palette[0]}55, transparent 60%), radial-gradient(120% 90% at 100% 100%, ${B.palette[0]}55, transparent 60%), linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.02))` }}>
+      <div className="card relative overflow-hidden text-center" data-testid="pair-glance" style={{ background: `radial-gradient(120% 90% at 0% 0%, ${A.palette[0]}55, transparent 60%), radial-gradient(120% 90% at 100% 100%, ${B.palette[0]}55, transparent 60%), linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.02))` }}>
         <Celebration key={`${na}-${nb}-${report.rel}`} count={22} />
         <SignArt sign={A.sun} className="pointer-events-none absolute -left-12 -top-10 h-48 w-48 opacity-40" animate={false} />
         <SignArt sign={B.sun} className="pointer-events-none absolute -bottom-12 -right-12 h-48 w-48 opacity-40" animate={false} />

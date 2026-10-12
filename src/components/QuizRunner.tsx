@@ -13,6 +13,7 @@ import { Celebration } from "./art/Celebration";
 import { QUIZ_ART } from "./art/quizArt";
 import { QuizResultView } from "./ProfileView";
 import { profileOf } from "@/lib/profile";
+import { track } from "@/lib/track";
 
 export function QuizRunner({ id }: { id: QuizId }) {
   const { c } = useContent(); const h = useHref(); const U = c.ui.quiz;
@@ -38,7 +39,7 @@ export function QuizRunner({ id }: { id: QuizId }) {
     const next = { ...ans, [items[i].id]: v };
     setAns(next);
     if (i + 1 < items.length) setI(i + 1);
-    else { repo.saveQuiz(person.id, def.score(next), { quizId: def.id, values: next }); setDone(true); window.scrollTo({ top: 0, behavior: "smooth" }); }
+    else { repo.saveQuiz(person.id, def.score(next), { quizId: def.id, values: next }); track("quiz_done", { quiz: def.id, self: person.id === "me" }); setDone(true); window.scrollTo({ top: 0, behavior: "smooth" }); }
   };
 
   if (done) {

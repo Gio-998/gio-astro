@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { track } from "@/lib/track";
 import { useSearchParams } from "next/navigation";
 import { useStore, findPerson, repo, StoredPerson } from "@/lib/store";
 import { profileOf } from "@/lib/profile";
@@ -27,6 +28,8 @@ export function MatchPage() {
   const A = findPerson(s, aId), B = findPerson(s, bId || s?.people[0]?.id);
   const relType: RelType = rel ?? B?.relType ?? "romantic";
   const report = useMemo(() => (A && B && A.id !== B.id ? { r: comparePair(profileOf(A), profileOf(B), relType), pa: profileOf(A), pb: profileOf(B) } : null), [A, B, relType]);
+  const rk = report ? `${A!.id}|${B!.id}|${relType}` : "";
+  useEffect(() => { if (rk) track("compat_report", { rel: rk.split("|")[2] }); }, [rk]);
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
 
   const picker = (val: string, set: (v: string) => void, who: "a" | "b") => (

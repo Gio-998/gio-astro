@@ -83,7 +83,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
     const letterWord = (l: string) => P.letters[l].split(/[:,]/)[0];
     return (
       <div className="space-y-4">
-        <div className="card">
+        <div className="card" data-testid="glance-bigfive">
           <BigFiveShape b={q.bigFive} palette={profile.palette} />
           <Expand more={G.showNumbers} less={G.hideNumbers} testId="bigfive-numbers">
             {TRAITS.map((k) => { const v = q.bigFive![k]; const tr = P.traits[k]; return <Bar key={k} value={v} label={`${tr.name}: ${tr.plain}`} right={U.pct(v)} color={k === "N" ? "bg-rose" : "bg-gold"} />; })}
@@ -183,7 +183,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
     const [head, ...rest] = P.constitutions[r.constitution].split(/: /);
     return (
       <div className="card" data-testid="glance-dosha">
-        <GlanceHead visual={<DoshaRing pct={r.pct} />} title={head} line={rest.join(": ") || undefined} />
+        <GlanceHead visual={<DoshaRing pct={r.pct} />} title={head} line={rest.length ? rest.join(": ").replace(/^./, (x) => x.toUpperCase()) : undefined} />
         <div className="mt-2 flex justify-center gap-3 text-xs text-dim">{(["vata", "pitta", "kapha"] as const).map((k) => <span key={k} className="flex items-center gap-1"><span className="h-2.5 w-2.5 rounded-full" style={{ background: DOSHA_COL[k] }} />{P.doshas[k].name}</span>)}</div>
         {r.constitution !== "tridoshic" && <p className="mt-3 text-center text-sm"><b>{U.balancing}</b> {P.doshas[r.dominant].balance}.</p>}
         <Expand>

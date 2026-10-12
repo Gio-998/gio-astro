@@ -27,7 +27,7 @@ export function BigFiveShape({ b, palette }: { b: Record<Trait, number>; palette
   return (
     <div data-testid="bigfive-glance">
       <p className="eyebrow mb-1 text-center">✦ {G.shapeLabel}</p>
-      <p className="h-display mx-auto mb-1 max-w-md text-center text-[1.75rem] leading-tight text-aurora" data-testid="bigfive-headline">{G.headline(words)}</p>
+      <p className="h-display mx-auto mb-1 max-w-md text-balance text-center text-[1.6rem] leading-tight text-aurora" data-testid="bigfive-headline">{G.headline(words)}</p>
       <div className="relative mx-auto w-full max-w-[360px]" style={{ aspectRatio: `${W} / ${H}` }}>
         <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 h-full w-full overflow-visible" role="img" aria-label={`${G.shapeLabel}: ${TRAITS.map((k) => `${P.traits[k].name} ${G.levels[levelOf(b[k])]}`).join(", ")}`}>
           <defs>
@@ -64,7 +64,7 @@ export function BigFiveShape({ b, palette }: { b: Record<Trait, number>; palette
               <div className="mb-1 flex items-baseline justify-between gap-2"><p className="font-semibold">{d.name}</p><span className="chip text-gold">{G.levels[levelOf(v)]}</span></div>
               <p className="mb-2 text-xs text-dim">{d.plain}</p>
               <p className="text-sm">{v < 35 ? d.low : v > 65 ? d.high : d.mid}</p>
-              <p className="mt-2 text-sm text-mist/85"><b>{G.inLove}</b> {d.inLove}</p>
+              {v > 60 && <p className="mt-2 text-sm text-mist/85"><b>{G.inLove}</b> {d.inLove}</p>}
             </div>
           )}
         </div>

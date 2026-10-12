@@ -1,4 +1,4 @@
 import type { Metadata } from "next";
-import { BetaAdmin } from "@/components/auth/Beta";
+import { AdminPanel } from "@/components/admin/AdminPanel";
 export const metadata: Metadata = { title: "Admin", robots: { index: false, follow: false } };
-export default function Page() { return <BetaAdmin />; }
+export default function Page() { return <AdminPanel />; }
