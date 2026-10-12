@@ -8,6 +8,7 @@ import { profileOf } from "@/lib/profile";
 import { useContent, useHref } from "@/lib/content-context";
 import { comparePair, REL_TYPES, RelType } from "@/engine/compat";
 import { PairReportView } from "../PairReport";
+import { FullReportView } from "../report/FullReport";
 import { BookView } from "../story/BookView";
 import { AuraPair } from "../aura/AuraPair";
 import { PairExtras, BondVoice } from "../systems/PairExtras";
@@ -38,7 +39,7 @@ export function MatchPage() {
       options={[...all.map((p) => ({ value: p.id, label: p.id === "me" ? `${p.name}${U.me}` : p.name, icon: SIGN_GLYPH[profileOf(p).sun] })), { value: "__new", label: U.addNew, icon: "＋" }]} />
   );
   return (
-    <div>
+    <div className={report && A && B ? "has-full-report" : ""}>
       <PageHero eyebrow={U.eyebrow} img="twinjet" emblem="bond" title={<>{U.titleA}<span className="italic text-aurora">{U.titleB}</span></>}
         sub={U.sub}
         art={report ? <div className="flex items-center"><SignArt sign={report.pa.sun} className="h-28 w-28" /><span className="-mx-4 text-3xl text-rose">♡</span><SignArt sign={report.pb.sun} className="h-28 w-28" /></div> : undefined} />
@@ -62,6 +63,7 @@ export function MatchPage() {
         <a href="#bond-story" className="btn-primary mb-4 w-full">📖 {c.deep.bondUi.eyebrow}: {c.deep.bondUi.title(A.name, B.name)} ↓</a>
         <AuraPair a={A} b={B} harmony={report.r.resonance} />
         <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
+        <FullReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
         <PairExtras A={A} B={B} />
         <BondVoice A={A} B={B}><div id="bond-story" className="mt-12 scroll-mt-20"><BookView book={buildBondStory(report.pa, report.pb, A.name, B.name, report.r, c)} name={`${A.name} & ${B.name}`} forId={B.id} eyebrow={c.deep.bondUi.eyebrow} title={c.deep.bondUi.title(A.name, B.name)} subtitle={c.compat.relTypes[report.r.rel].name} intro="" /></div></BondVoice>
       </>}

@@ -1,0 +1,50 @@
+/* Full relationship report (screen + print). */
+.fr-doc { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+.fr-cover { text-align: center; padding: 2.5rem 1.5rem; border-radius: 28px; border: 1px solid rgba(201,166,94,.35); background: radial-gradient(600px 300px at 50% 0%, rgba(139,108,240,.35), transparent 70%), linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02)); }
+.fr-title { font-family: var(--font-display), Georgia, serif; font-size: 2.6rem; line-height: 1.1; color: #f6cf7a; margin: .4rem 0; }
+.fr-sub { color: #c9c0e8; font-size: .9rem; letter-spacing: .08em; }
+.fr-arch { margin-top: 1rem; font-family: var(--font-display), Georgia, serif; font-size: 1.5rem; color: #f5f1ff; }
+.fr-rings { display: flex; justify-content: center; gap: 2.5rem; margin: 1.2rem 0; }
+.fr-ring { display: flex; flex-direction: column; align-items: center; gap: .2rem; font-size: .8rem; color: #e9c78a; letter-spacing: .12em; text-transform: uppercase; }
+.fr-toc { max-width: 26rem; margin: 1rem auto 0; text-align: left; }
+.fr-toc-title { font-size: .75rem; letter-spacing: .18em; text-transform: uppercase; color: #e9c78a; margin-bottom: .4rem; }
+.fr-toc ol { display: grid; gap: .25rem; font-size: .95rem; color: #ece6ff; }
+.fr-toc li span { display: inline-block; width: 1.4rem; color: #f6cf7a; font-family: Georgia, serif; }
+.fr-chapter { border-radius: 24px; padding: 1.6rem 1.5rem; background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.12); }
+.fr-ch-title { font-family: var(--font-display), Georgia, serif; font-size: 1.7rem; color: #f6cf7a; margin-bottom: .9rem; display: flex; align-items: baseline; gap: .5rem; }
+.fr-ch-num { font-size: .85rem; border: 1px solid rgba(246,207,122,.5); border-radius: 999px; min-width: 1.7rem; height: 1.7rem; display: inline-flex; align-items: center; justify-content: center; }
+.fr-lead { font-size: 1.05rem; line-height: 1.65; color: #f5f1ff; margin-bottom: .8rem; }
+.fr-p { line-height: 1.65; color: #e4ddfa; margin: .5rem 0; }
+.fr-h { margin: 1.1rem 0 .35rem; font-weight: 600; color: #f6cf7a; font-size: 1.02rem; }
+.fr-list { display: grid; gap: .45rem; margin: .4rem 0 .6rem; }
+.fr-list li { padding-left: 1.6rem; position: relative; line-height: 1.55; color: #ece6ff; }
+.fr-list li::before { position: absolute; left: 0; top: 0; }
+.fr-plus li::before { content: "✦"; color: #f6cf7a; }
+.fr-minus li::before { content: "◆"; color: #f2a07b; }
+.fr-do li::before { content: "✓"; color: #9fe0b5; font-weight: 700; }
+.fr-dont li::before { content: "✕"; color: #f2a07b; font-weight: 700; }
+.fr-box { margin: .8rem 0; padding: 1rem 1.1rem; border-radius: 18px; border: 1px solid rgba(201,166,94,.28); background: rgba(255,255,255,.04); }
+.fr-box-title { font-weight: 600; color: #f6cf7a; margin-bottom: .35rem; }
+.fr-row { line-height: 1.6; margin: .3rem 0; color: #ece6ff; }
+.fr-row b { color: #e9c78a; font-weight: 600; margin-right: .25rem; }
+.fr-lens-head { display: flex; justify-content: space-between; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.fr-bars { display: grid; grid-template-columns: 1fr 1fr; gap: .2rem 1.2rem; margin: .5rem 0; }
+@media (max-width: 640px) { .fr-bars { grid-template-columns: 1fr; } .fr-title { font-size: 2rem; } }
+
+@media print {
+  /* With the full report on the page, the PDF is the report only. */
+  .has-full-report > :not(.full-report) { display: none !important; }
+  .full-report { margin-top: 0 !important; }
+  .fr-doc { margin-top: 0; gap: 0; display: block; }
+  .fr-cover { min-height: 232mm; display: flex !important; flex-direction: column; justify-content: center; break-after: page; page-break-after: always; padding: 12mm 10mm !important; }
+  .fr-title { font-size: 30pt !important; }
+  .fr-arch { font-size: 17pt !important; }
+  .fr-chapter { background: none !important; border: none !important; padding: 0 !important; margin: 0 0 6mm; }
+  .fr-ch-a, .fr-ch-needs, .fr-ch-lenses { break-before: page; page-break-before: always; }
+  .fr-ch-b, .fr-ch-combine, .fr-ch-friction, .fr-ch-plan, .fr-ch-method { margin-top: 9mm; }
+  .fr-ch-title { font-size: 19pt !important; border-bottom: 1px solid rgba(201,166,94,.45); padding-bottom: 2.5mm; margin-bottom: 4mm; break-after: avoid; }
+  .fr-lead { font-size: 11.5pt !important; }
+  .fr-p, .fr-row, .fr-list li { font-size: 10.5pt !important; }
+  .fr-h { font-size: 11.5pt !important; break-after: avoid; }
+  .fr-box, .fr-list li { break-inside: avoid; page-break-inside: avoid; }
+}
