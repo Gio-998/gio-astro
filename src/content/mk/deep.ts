@@ -1,4 +1,4 @@
-/** Macedonian frame for the long-form Bond Story. The long narrative snippets themselves still fall back to English (translation in progress). */
+/** Macedonian frame for the long-form Bond Story (narrative snippets live in ./deep/bond.ts). */
 import type { bondUi as EnBondUi } from "../en/deep/bond";
 export const bondUi: typeof EnBondUi = {
   eyebrow: "Приказната за вашата врска",
