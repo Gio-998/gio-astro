@@ -12,6 +12,7 @@ import type { GunaMilan } from "@/engine/vedic";
 import { Celebration } from "./art/Celebration";
 import { SignArt } from "./art/SignArt";
 import { Expand } from "./glance/Expand";
+import { MethodLink, TrustStrip } from "./nav/Trust";
 import { useGlance } from "./glance/text";
 
 function LensDetail({ l, A, B, na, nb }: { l: LensResult; A: Profile; B: Profile; na: string; nb: string }) {
@@ -181,6 +182,7 @@ export function PairReportView({ report, A, B, na, nb }: { report: Report; A: Pr
           </div>
         )}
       </div>
+      <div className="flex flex-col items-center gap-2"><MethodLink /><TrustStrip center /></div>
       <p className="text-center text-xs text-dim">{C.pairCopy.disclaimer}</p>
     </div>
   );

@@ -22,6 +22,7 @@ import { Celebration } from "./art/Celebration";
 import { cosmos } from "./art/ArtCard";
 import { LensSheet, LensSheetCtx, useLensSheet } from "./LensSheet";
 import { BigFiveShape } from "./glance/BigFiveShape";
+import { MethodLink } from "./nav/Trust";
 import { Expand, GlanceHead } from "./glance/Expand";
 import { useGlance } from "./glance/text";
 
@@ -410,7 +411,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
       {QUIZ_IDS.map((id) => (
         <Section key={id} title={defs[id].title} aside={<EvidenceBadge e={defs[id].evidence} />}>
           {profile.quiz[defs[id].resultKey]
-            ? <><QuizResultView id={id} profile={profile} /><div className="flex flex-wrap items-baseline gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k={QUIZ_LENS[id]} />{id === "big-five" && <><MoreLink pid={isMe ? undefined : person.id} k="fourletter" /><MoreLink pid={isMe ? undefined : person.id} k="temperament" /></>}<Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></div></>
+            ? <><QuizResultView id={id} profile={profile} /><div className="flex flex-wrap items-baseline gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k={QUIZ_LENS[id]} />{id === "big-five" && <><MoreLink pid={isMe ? undefined : person.id} k="fourletter" /><MoreLink pid={isMe ? undefined : person.id} k="temperament" /></>}<MethodLink /><Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></div></>
             : <Locked emblem={id} title={defs[id].title} text={U.unlocksText(defs[id].tagline, defs[id].unlocks)} href={quizFor(id)} minutes={defs[id].minutes} />}
         </Section>
       ))}

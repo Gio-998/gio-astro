@@ -37,7 +37,7 @@ export function FeedbackButton() {
   return (
     <>
       <button type="button" onClick={() => { setOpen(true); setState("idle"); }} data-testid="feedback-open"
-        className="fixed bottom-[92px] right-3 z-30 flex min-h-[40px] items-center gap-1.5 rounded-full border border-white/20 bg-ink/85 px-3.5 text-[13px] text-mist shadow-[0_12px_30px_-10px_rgba(0,0,0,.8)] backdrop-blur-xl transition hover:border-gold/60 hover:text-gold md:bottom-6 md:right-6">
+        className="fixed bottom-[92px] right-3 z-30 flex min-h-[40px] items-center gap-1.5 rounded-full border border-white/20 bg-ink/85 px-3.5 text-[13px] text-mist shadow-[0_12px_30px_-10px_rgba(0,0,0,.8)] backdrop-blur-xl transition hover:border-gold/60 hover:text-gold lg:bottom-6 lg:right-6">
         <span aria-hidden>💬</span>{T.fbButton}
       </button>
       {open && (

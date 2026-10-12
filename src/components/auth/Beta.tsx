@@ -8,6 +8,7 @@ import { useAccount } from "@/lib/sync";
 import { useContent, useHref } from "@/lib/content-context";
 import { Aura } from "../aura/Aura";
 import { useCaptcha } from "./Captcha";
+import { TrustStrip } from "../nav/Trust";
 
 // Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
 // Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
@@ -45,6 +46,7 @@ export function BetaLockedCard() {
         <button type="button" className="btn-ghost py-3" onClick={() => setWl(!wl)} aria-expanded={wl} data-testid="beta-join">{B.joinWaitlist}</button>
       </div>
       {wl && <div className="mt-4 text-left"><Waitlist source="gate" /></div>}
+      <TrustStrip className="mt-4" center />
     </div>
   );
 }

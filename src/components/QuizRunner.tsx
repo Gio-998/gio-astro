@@ -14,6 +14,7 @@ import { QUIZ_ART } from "./art/quizArt";
 import { QuizResultView } from "./ProfileView";
 import { profileOf } from "@/lib/profile";
 import { track } from "@/lib/track";
+import { MethodLink, TrustStrip } from "./nav/Trust";
 
 export function QuizRunner({ id }: { id: QuizId }) {
   const { c } = useContent(); const h = useHref(); const U = c.ui.quiz;
@@ -58,6 +59,7 @@ export function QuizRunner({ id }: { id: QuizId }) {
           <p className="mx-auto mt-2 max-w-md text-dim">{def.unlocks}</p>
         </div>
         <QuizResultView id={id} profile={profileOf(fresh)} />
+        <div className="mt-3 flex flex-col items-center gap-3"><MethodLink /><TrustStrip center /></div>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link className="btn-primary" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>{U.seeProfile}</Link>
           <Link className="btn-ghost" href={h("/quizzes/")}>{U.nextQuiz}</Link>

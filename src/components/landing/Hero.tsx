@@ -1,4 +1,5 @@
 "use client";
+import { TrustStrip } from "../nav/Trust";
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
@@ -67,6 +68,7 @@ export function Hero() {
             {(locked ? B.heroPerks : H.perks).map((p) => <span key={p}>{p}</span>)}
             {!locked && <a href={h("/match/")} className="text-gold underline-offset-4 hover:underline">{H.orMatch}</a>}
           </motion.div>
+          <TrustStrip className="mt-4" />
         </div>
       </motion.div>
       <a href="#discover" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs text-dim sm:flex" aria-label={H.scrollDown}>
