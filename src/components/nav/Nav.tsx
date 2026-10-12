@@ -7,6 +7,7 @@ import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { nav as en, type NavGroupKey } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
 import { Emblem, type EmblemId } from "../art/Emblem";
+import { pricingPath } from "@/lib/pricing";
 
 export const useNav = () => (useContent().locale === "mk" ? mk : en);
 type Item = { href: string; icon: EmblemId; title: string; desc: string };
@@ -109,13 +110,20 @@ export function DesktopNav({ keys, showToday = true }: { keys: NavGroupKey[]; sh
           </div>
         );
       })}
+      <PricingLink />
     </div>
   );
 }
 
+/** Top-level "Pricing" link (each locale has its own slug). */
+function PricingLink() {
+  const N = useNav(); const h = useHref(); const { locale } = useContent(); const path = usePathname() || ""; const href = pricingPath(locale); const on = path.includes(href);
+  return <Link href={h(href)} data-testid="nav-pricing" className={`whitespace-nowrap rounded-full px-3 py-2 transition ${on ? "bg-white/10 text-gold" : "text-dim hover:bg-white/5 hover:text-mist"}`}>{N.pricing.label}</Link>;
+}
+
 /** Phone: slide-up sheet with every destination, grouped. */
 export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose: () => void; keys: NavGroupKey[]; top?: React.ReactNode }) {
-  const groups = useGroups(keys); const N = useNav(); const path = usePathname() || "";
+  const groups = useGroups(keys); const N = useNav(); const path = usePathname() || ""; const h = useHref(); const { locale } = useContent();
   const ref = useRef<HTMLDivElement>(null);
   const close = useCallback(() => onClose(), [onClose]);
   useEffect(() => { close(); }, [path, close]);
@@ -136,6 +144,11 @@ export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose
         </div>
         <div className="mb-3 flex items-center justify-between gap-3"><p className="h-display text-3xl text-aurora">{N.menu}</p><button type="button" onClick={close} className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-dim" aria-label={N.close} data-testid="more-close">✕</button></div>
         {top}
+        <Link href={h(pricingPath(locale))} onClick={close} data-testid="sheet-pricing"
+          className="mb-5 flex min-h-[52px] items-center justify-between gap-3 rounded-2xl border border-gold/40 bg-gradient-to-r from-gold/15 via-violet/15 to-transparent px-4 py-3">
+          <span className="min-w-0"><span className="block font-semibold text-gold">{N.pricing.label}</span><span className="block truncate text-xs text-dim">{N.pricing.desc}</span></span>
+          <span className="text-gold" aria-hidden>→</span>
+        </Link>
         {groups.map((g) => (
           <section key={g.key} className="mb-5">
             <p className="eyebrow mb-2">✦ {g.label}</p>

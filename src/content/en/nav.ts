@@ -9,6 +9,7 @@ export const nav = {
   trustLabel: "Our promise to you",
   method: "How this is measured",
   today: { label: "Today", desc: "Your sky, card and prompt for the day" },
+  pricing: { label: "Pricing", desc: "Plans, reports and what stays free" },
   groups: {
     me: {
       label: "Me", feature: { title: "Your whole self, one page", text: "Signs, numbers, aura and every test result, read in a glance.", cta: "Open my profile" },
