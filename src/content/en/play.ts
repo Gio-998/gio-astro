@@ -201,6 +201,16 @@ export const play = {
       memoryMix: "One of you sees the big picture, the other keeps the details. A natural team.",
     } as Record<string, string>,
   },
+  timing: {
+    title: "How sure you were", certainty: "Certainty",
+    instant: (n: number, total: number) => `${n} of ${total} answered instantly`,
+    changed: (n: number) => (n === 1 ? "1 change of mind" : `${n} changes of mind`),
+    instantLead: "You answered these straight away. Quick answers usually point to the clearest parts of you:",
+    slowLead: "You paused longest here. Grey zones are normal, and often the most interesting part:",
+    careless: "You went through this very fast. If you were tapping to reach the end, retake it later for a truer read.",
+    note: "Measured on this device while you answered; stored only with your results.",
+    levels: { low: "lots of grey zones", mid: "fairly sure", high: "very sure" },
+  },
   share: { eyebrow: "Play Mirror", sub: "How I actually play", footer: "horoscop.si · play the games" },
   book: { title: "How you play", kicker: "What your choices showed in Play Mirror", lead: "Questionnaires show how you see yourself. The mini-games watched what you did. Here is what they noticed.", none: "Play a few Play Mirror games and this chapter fills in with what your behaviour shows.", gapTitle: "Say vs play" },
 };

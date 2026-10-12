@@ -172,3 +172,17 @@ describe("Play Mirror: profile, say vs play, compatibility, book", () => {
     for (const g of PLAY_GAMES) expect(mk.games[g].intro).toMatch(/\p{Script=Cyrillic}/u);
   });
 });
+
+import { summarizeTiming } from "../src/engine/play/timing";
+describe("Answer timing (certainty signal)", () => {
+  it("finds instant answers, long pauses and changes of mind", () => {
+    const items = Object.fromEntries(Array.from({ length: 10 }, (_, k) => [`q${k}`, { ms: k === 0 ? 700 : k === 9 ? 14000 : 3000, words: 5, changes: k === 5 ? 2 : 0 }]));
+    const t = summarizeTiming(items, "2026-10-12T00:00:00Z");
+    expect(t.instant).toEqual(["q0"]); expect(t.slow).toEqual(["q9"]); expect(t.changed).toEqual(["q5"]);
+    expect(t.careless).toBe(false); expect(t.certainty).toBeGreaterThan(4); expect(t.certainty).toBeLessThan(7);
+  });
+  it("flags a very fast careless run", () => {
+    const items = Object.fromEntries(Array.from({ length: 10 }, (_, k) => [`q${k}`, { ms: 400, words: 8, changes: 0 }]));
+    expect(summarizeTiming(items).careless).toBe(true);
+  });
+});

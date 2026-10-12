@@ -34,7 +34,12 @@ export interface PlayGameResult {
   raw: Record<string, number>;
   flags: PlayFlag[];
 }
-export type PlayResults = Partial<Record<PlayKey, PlayGameResult>>;
+import type { AnswerTiming } from "./timing";
+/** Everything Play Mirror adds to QuizResults (all optional). */
+export interface PlayResults extends Partial<Record<PlayKey, PlayGameResult>> {
+  /** Per-quiz answer timing (certainty signal), keyed by quiz id. */
+  timing?: Record<string, AnswerTiming>;
+}
 
 const r1 = (x: number) => Math.round(x * 10) / 10;
 export const clamp10 = (x: number) => r1(Math.min(10, Math.max(0, x)));
