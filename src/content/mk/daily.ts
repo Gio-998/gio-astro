@@ -20,7 +20,7 @@ export const transitMood: typeof En.transitMood = {
 export const transitAdvice: typeof En.transitAdvice = {
   conjunction: "Насочи ја оваа енергија кон цел, денес е силна.",
   sextile: "Мал труд носи лесна победа.",
-  square: "Триењето е сигнал за раст, застани пред да реагираш.",
+  square: "Триењето е знак дека растете, застани пред да реагираш.",
   trine: "Работите течат; искористи го тоа за нешто што го одложуваш.",
   opposition: "Барај рамнотежа, друга личност може да те огледува.",
 };
