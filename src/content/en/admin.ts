@@ -27,7 +27,7 @@ export const admin = {
   saved: "Saved", changedBy: (d: string) => `changed ${d}`,
   // Stats
   range: (d: number) => `Last ${d} days`,
-  stat: { visits: "Visits", visits_7d: "Visits, last 7 days", visits_today: "Visits today", signed_in_visitors: "Signed-in visitors", quizzes_done: "Quizzes completed", quizzes_saved: "Quiz results saved to accounts", compat_reports: "Compatibility reports", bond_checks: "Bond Checks", shared_cards: "Cards shared", testers: "Accounts", invites: "Invites", invites_used: "Invites used", waitlist: "On the waitlist", feedback_open: "Open feedback" } as Record<string, string>,
+  stat: { visits: "Visits", visits_7d: "Visits, last 7 days", visits_today: "Visits today", signed_in_visitors: "Signed-in visitors", quizzes_done: "Quizzes completed", quizzes_saved: "Quiz results saved to accounts", compat_reports: "Compatibility reports", bond_checks: "Bond Checks", shared_cards: "Cards shared", testers: "Accounts", invites: "Invites", invites_used: "Invites used", waitlist: "On the waitlist", feedback_open: "Open feedback", friend_invites_sent: "Friend invites sent", friend_invites_accepted: "Friend invites accepted" } as Record<string, string>,
   byQuiz: "Completed per quiz",
   statsNote: "Visits are counted once per browser tab session, with no cookies and no tracking across sites.",
   // Feedback inbox

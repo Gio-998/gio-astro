@@ -220,7 +220,7 @@ function Stats() {
   const [s, setS] = useState<Record<string, number | Record<string, number>> | null>(null); const [err, setErr] = useState(false);
   useEffect(() => { let alive = true; void sb()!.rpc("admin_stats", { days }).then(({ data, error }) => { if (!alive) return; setErr(!!error); setS((data as never) ?? {}); }); return () => { alive = false; }; }, [days]);
   const main = ["visits", "visits_7d", "visits_today", "signed_in_visitors", "quizzes_done", "compat_reports", "bond_checks", "shared_cards"];
-  const beta = ["testers", "invites", "invites_used", "waitlist", "quizzes_saved", "feedback_open"];
+  const beta = ["testers", "invites", "invites_used", "waitlist", "quizzes_saved", "feedback_open", "friend_invites_sent", "friend_invites_accepted"];
   const byQuiz = (s?.by_quiz ?? {}) as Record<string, number>;
   return (
     <div className="space-y-4" data-testid="admin-stats">

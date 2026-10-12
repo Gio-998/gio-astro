@@ -24,7 +24,7 @@ export const admin: Admin = {
   captchaWarn: "Држи го ова усогласено со Supabase › Auth › Attack Protection. Ако Supabase бара captcha, а ова е исклучено, најавите нема да работат.",
   saved: "Зачувано", changedBy: (d: string) => `променето ${d}`,
   range: (d: number) => `Последни ${d} дена`,
-  stat: { visits: "Посети", visits_7d: "Посети, последни 7 дена", visits_today: "Посети денес", signed_in_visitors: "Најавени посетители", quizzes_done: "Завршени квизови", quizzes_saved: "Резултати зачувани во профили", compat_reports: "Извештаи за компатибилност", bond_checks: "Bond Check", shared_cards: "Споделени картички", testers: "Профили", invites: "Покани", invites_used: "Искористени покани", waitlist: "На листата на чекање", feedback_open: "Отворени повратни" },
+  stat: { visits: "Посети", visits_7d: "Посети, последни 7 дена", visits_today: "Посети денес", signed_in_visitors: "Најавени посетители", quizzes_done: "Завршени квизови", quizzes_saved: "Резултати зачувани во профили", compat_reports: "Извештаи за компатибилност", bond_checks: "Bond Check", shared_cards: "Споделени картички", testers: "Профили", invites: "Покани", invites_used: "Искористени покани", waitlist: "На листата на чекање", feedback_open: "Отворени повратни", friend_invites_sent: "Испратени покани до пријатели", friend_invites_accepted: "Прифатени покани од пријатели" },
   byQuiz: "Завршени по квиз",
   statsNote: "Посетите се бројат еднаш по сесија во јазиче на прелистувачот, без колачиња и без следење низ други сајтови.",
   open: "Отворени", resolved: "Решени", all: "Сите", markResolved: "Означи како решено", reopen: "Отвори повторно", del: "Избриши", confirmDelete: "Да се избрише оваа повратна информација?",

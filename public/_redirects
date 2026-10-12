@@ -1,1 +1,4 @@
 / /en/ 302
+/invite/* /en/invite/ 200
+/en/invite/* /en/invite/ 200
+/mk/invite/* /mk/invite/ 200

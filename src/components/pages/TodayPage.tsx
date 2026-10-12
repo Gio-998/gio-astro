@@ -10,6 +10,7 @@ import { PremiumForecast } from "../premium/Forecast";
 import { TodayStories } from "../today/TodayStories";
 import { TodayGlance } from "../sky/TodayGlance";
 import { TodayFeed } from "../sky/TodayFeed";
+import { TodayShare } from "../share/TodayShare";
 
 /** Gentle on-device visit streak (never punishes a missed day — it just restarts quietly). */
 function useStreak(today: string) {
@@ -59,6 +60,7 @@ export function TodayPage() {
         {streak > 0 && <span className="chip !border-gold/40 !text-gold">{U.streak(streak)}</span>}
       </PageHero>
       <TodayStories />
+      <TodayShare me={s.me} people={s.people} now={now} />
       <TodayGlance g={g} />
       <TodayFeed profile={profileOf(s.me)} people={s.people} now={now} />
       <YourDay profile={profileOf(s.me)} now={now} />

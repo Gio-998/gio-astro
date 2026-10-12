@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/invite/:code([a-z0-9]{8})", "destination": "/en/invite/" },
+    { "source": "/:lang(en|mk)/invite/:code([a-z0-9]{8})", "destination": "/:lang/invite/" },
+    { "source": "/:lang(en|mk)/invite/:code([a-z0-9]{8})/", "destination": "/:lang/invite/" }
+  ]
+}
