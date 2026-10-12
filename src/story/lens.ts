@@ -65,7 +65,7 @@ export function buildLens(key: LensKey, p: Profile, c: Content): LensPage {
       const dm = D.wuxingDeep[p.chinese.dayMaster.element];
       b.push({ t: "lead", text: `${B.dayMaster(c.chinese.wuxing[p.chinese.dayMaster.element].name, p.chinese.dayMaster.yinYang)} ${dm.story}` });
       b.push({ t: "facets", items: [{ label: c.book.healsLabel, text: dm.feed }, { label: B.shadows, text: dm.drain }, { label: B.practices, text: dm.ritual }] });
-      for (const w of WUXING) b.push({ t: "deep", title: `${D.wuxingDeep[w].title} — ${p.chinese.balance[w]}`, blocks: [{ t: "p", text: D.wuxingDeep[w].story }, { t: "p", text: `${D.wuxingDeep[w].season} · ${D.wuxingDeep[w].organ}. ${D.wuxingDeep[w].ritual}` }] });
+      for (const w of WUXING) b.push({ t: "deep", title: `${D.wuxingDeep[w].title} · ${p.chinese.balance[w]}`, blocks: [{ t: "p", text: D.wuxingDeep[w].story }, { t: "p", text: `${D.wuxingDeep[w].season} · ${D.wuxingDeep[w].organ}. ${D.wuxingDeep[w].ritual}` }] });
       return { ...base, title: c.chinese.wuxing[p.chinese.dayMaster.element].name, art: { kind: "emblem", id: "yinyang" }, blocks: b };
     }
     case "lifepath": {
@@ -78,7 +78,7 @@ export function buildLens(key: LensKey, p: Profile, c: Content): LensPage {
     }
     case "tarot": {
       const b: Block[] = [];
-      for (const k of p.tarot.cards) { const card = MAJOR_ARCANA[k === 22 ? 0 : k]; const t = D.tarotDeep[card]; b.push({ t: "h", text: `${c.nums.tarot[card].name} — ${c.nums.tarot[card].keyword}` }, { t: "lead", text: t.story }, { t: "p", text: c.nums.tarot[card].birth }, { t: "facets", items: [{ label: B.strengths, text: t.gift }, { label: B.shadows, text: t.shadow }, { label: B.practices, text: t.practice }] }); }
+      for (const k of p.tarot.cards) { const card = MAJOR_ARCANA[k === 22 ? 0 : k]; const t = D.tarotDeep[card]; b.push({ t: "h", text: `${c.nums.tarot[card].name}: ${c.nums.tarot[card].keyword}` }, { t: "lead", text: t.story }, { t: "p", text: c.nums.tarot[card].birth }, { t: "facets", items: [{ label: B.strengths, text: t.gift }, { label: B.shadows, text: t.shadow }, { label: B.practices, text: t.practice }] }); }
       return { ...base, title: p.tarot.cards.map((k) => c.nums.tarot[MAJOR_ARCANA[k === 22 ? 0 : k]].name).join(" · "), art: { kind: "emblem", id: "tarot" }, blocks: b };
     }
     case "vedic": {

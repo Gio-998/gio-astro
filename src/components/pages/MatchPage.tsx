@@ -29,7 +29,7 @@ export function MatchPage() {
   const picker = (val: string, set: (v: string) => void, who: "a" | "b") => (
     <div className="flex gap-2">
       <select className="input" value={val} onChange={(e) => (e.target.value === "__new" ? setAdding(who) : set(e.target.value))}>
-        {!all.length && <option value="">—</option>}
+        {!all.length && <option value="">…</option>}
         {all.map((p) => <option key={p.id} value={p.id}>{p.id === "me" ? `${p.name}${U.me}` : p.name}</option>)}
         <option value="__new">{U.addNew}</option>
       </select>

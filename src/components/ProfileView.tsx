@@ -38,7 +38,7 @@ export function QuizResultView({ id, profile }: { id: QuizId; profile: Profile }
             const v = q.bigFive![k]; const tr = P.traits[k];
             return (
               <div key={k} className="mb-3">
-                <Bar value={v} label={`${tr.name} — ${tr.plain}`} right={U.pct(v)} color={k === "N" ? "bg-rose" : "bg-gold"} />
+                <Bar value={v} label={`${tr.name}: ${tr.plain}`} right={U.pct(v)} color={k === "N" ? "bg-rose" : "bg-gold"} />
                 <p className="text-sm text-mist/85">{v < 35 ? tr.low : v > 65 ? tr.high : tr.mid}</p>
               </div>
             );
@@ -205,7 +205,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
           {fl && <Link href={lens("fourletter")} className="chip text-mist hover:border-gold/60 hover:text-gold">{fl.code} · {c.lensInfo.fourletter.name}</Link>}
           {profile.quiz.nine && <Link href={lens("nine")} className="chip text-mist hover:border-gold/60 hover:text-gold">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing} · {c.psych.nineStyles[profile.quiz.nine.type].name}</Link>}
           {profile.quiz.attachment && <Link href={lens("attachment")} className="chip text-mist hover:border-gold/60 hover:text-gold">♡ {c.psych.attachment[profile.quiz.attachment.style].name}</Link>}
-          {profile.quiz.dosha && <Link href={lens("dosha")} className="chip text-mist hover:border-gold/60 hover:text-gold">❋ {c.psych.constitutions[profile.quiz.dosha.constitution].split(" — ")[0]}</Link>}
+          {profile.quiz.dosha && <Link href={lens("dosha")} className="chip text-mist hover:border-gold/60 hover:text-gold">❋ {c.psych.constitutions[profile.quiz.dosha.constitution].split(/: | — /)[0]}</Link>}
         </div>
         <p className="mt-2 text-xs text-dim">{c.lensUi.tapHint}</p>
         <Link href={lens("palette")} className="mt-5 block max-w-sm transition hover:opacity-90"><p className="mb-1.5 text-xs uppercase tracking-widest text-dim">{U.yourPalette}</p><Palette colors={profile.palette} size="h-9" /></Link>
@@ -293,9 +293,9 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
           <div className="card">
             {n.name ? (
               <>
-                <p className="text-sm"><b>{U.expression(n.name.expression)}</b> — {c.nums.numbers[n.name.expression]?.expression}</p>
-                <p className="text-sm"><b>{U.soulUrge(n.name.soulUrge)}</b> — {c.nums.numbers[n.name.soulUrge]?.soul}</p>
-                <p className="text-sm"><b>{U.personality(n.name.personality)}</b> — {c.nums.numbers[n.name.personality]?.essence}</p>
+                <p className="text-sm"><b>{U.expression(n.name.expression)}</b>: {c.nums.numbers[n.name.expression]?.expression}</p>
+                <p className="text-sm"><b>{U.soulUrge(n.name.soulUrge)}</b>: {c.nums.numbers[n.name.soulUrge]?.soul}</p>
+                <p className="text-sm"><b>{U.personality(n.name.personality)}</b>: {c.nums.numbers[n.name.personality]?.essence}</p>
                 <p className="mt-1 text-xs text-dim">{U.fromName(person.birthName || person.name)}</p>
               </>
             ) : <p className="text-sm text-dim">{U.addName}</p>}

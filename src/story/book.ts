@@ -74,10 +74,10 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     const count: Record<string, string[]> = {};
     for (const [k, e] of pts) (count[e] ??= []).push(B.lensNames[k]);
     const top = Object.entries(count).sort((a, b2) => b2[1].length - a[1].length)[0];
-    if (top && top[1].length >= 2) b.push({ t: "callout", tone: "agree", title: B.agreeTitle, text: `${B.agree(top[1].length, `${B.elementName[top[0]]} — ${D.elementVoice[top[0] as Element]}`, top[1].join(", "))}` });
+    if (top && top[1].length >= 2) b.push({ t: "callout", tone: "agree", title: B.agreeTitle, text: `${B.agree(top[1].length, `${B.elementName[top[0]]}, meaning ${D.elementVoice[top[0] as Element]}`, top[1].join(", "))}` });
     const odd = pts.find(([, e]) => e !== top?.[0]);
     if (odd && top) b.push({ t: "callout", tone: "differ", title: B.differTitle, text: B.differ(B.elementPoint(B.lensNames[odd[0]], B.elementName[odd[1]]), B.elementPoint(top[1][0], B.elementName[top[0]])) });
-    b.push({ t: "deep", title: `${B.sunIn(S(p.sun))} — ${B.openDeep.toLowerCase()}`, blocks: [
+    b.push({ t: "deep", title: `${B.sunIn(S(p.sun))}: ${B.openDeep.toLowerCase()}`, blocks: [
       { t: "facets", items: [{ label: B.love, text: sunD.sun.love }, { label: B.friends, text: sunD.sun.friends }, { label: B.work, text: sunD.sun.work }, { label: B.family, text: sunD.sun.family }] },
       { t: "list", kind: "strengths", title: B.strengths, items: sunD.sun.strengths },
       { t: "callout", tone: "note", title: B.myth, text: sunD.myth },
@@ -217,7 +217,7 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     if (node) { b.push({ t: "h", text: B.nodeIn(S(node)) }); b.push({ t: "p", text: D.signDeep[node].node }); }
     const lp = D.lifePathDeep[p.numbers.lifePath];
     b.push({ t: "p", text: `${B.lifePathTitle(p.numbers.lifePath, lp.title)}: ${lp.story[0]}` });
-    if (p.numbers.name) b.push({ t: "p", text: `${B.soul(p.numbers.name.soulUrge)} — ${c.nums.numbers[p.numbers.name.soulUrge]?.soul ?? ""}` });
+    if (p.numbers.name) b.push({ t: "p", text: `${B.soul(p.numbers.name.soulUrge)}: ${c.nums.numbers[p.numbers.name.soulUrge]?.soul ?? ""}` });
     ch("drives", { kind: "emblem", id: "nine" }, b, (["nine"] as QuizId[]).filter(() => !q.nine), false);
   }
 
@@ -263,7 +263,7 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     allPractices.push(lp.practices![0]); allJournal.push(lp.journal![0]);
     if (p.numbers.name) {
       const nn = p.numbers.name, N = c.nums.numbers;
-      b.push({ t: "list", kind: "focus", title: B.nameNumbers, items: [`${B.expression(nn.expression)} — ${N[nn.expression]?.expression ?? ""}`, `${B.soul(nn.soulUrge)} — ${N[nn.soulUrge]?.soul ?? ""}`, `${B.personality(nn.personality)} — ${N[nn.personality]?.essence ?? ""}`] });
+      b.push({ t: "list", kind: "focus", title: B.nameNumbers, items: [`${B.expression(nn.expression)}: ${N[nn.expression]?.expression ?? ""}`, `${B.soul(nn.soulUrge)}: ${N[nn.soulUrge]?.soul ?? ""}`, `${B.personality(nn.personality)}: ${N[nn.personality]?.essence ?? ""}`] });
     }
     const ad = D.animalDeep[p.chinese.animal];
     b.push({ t: "h", text: `${B.chineseTitle(c.chinese.wuxing[p.chinese.element].name, c.chinese.animals[p.chinese.animal].name)} · ${ad.title}` });
@@ -296,7 +296,7 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     b.push({ t: "h", text: B.jupiterTitle }); b.push({ t: "p", text: D.jupiterHouse[house("jupiter")] });
     b.push({ t: "h", text: B.saturnTitle }); b.push({ t: "p", text: D.saturnHouse[house("saturn")] });
     const tr = transitsFor(p, now).filter((t) => t.transiting !== "moon").slice(0, 3);
-    if (tr.length) b.push({ t: "list", kind: "focus", title: B.transitsTitle, items: tr.map((t) => `${A.points[t.transiting].name} ${c.daily.transitTone[t.type]} ${A.points[t.natal].name.toLowerCase()} — ${c.daily.transitMood[t.transiting]}. ${c.daily.transitAdvice[t.type]}`) });
+    if (tr.length) b.push({ t: "list", kind: "focus", title: B.transitsTitle, items: tr.map((t) => `${A.points[t.transiting].name} ${c.daily.transitTone[t.type]} ${A.points[t.natal].name.toLowerCase()}: ${c.daily.transitMood[t.transiting]}. ${c.daily.transitAdvice[t.type]}`) });
     ch("year", { kind: "emblem", id: "sun" }, b);
   }
 

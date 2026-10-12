@@ -42,7 +42,7 @@ export function PickACard() {
       <div className="mt-6 min-h-[84px] text-center">
         {picked == null ? <p className="text-dim">{c.site.pickCard.prompt}</p> : (
           <div className="rise mx-auto max-w-lg">
-            <p className="text-mist/90"><b className="text-gold">{t.name}</b> — {c.site.pickCard.today} {t.birth}</p>
+            <p className="text-mist/90"><b className="text-gold">{t.name}</b>: {c.site.pickCard.today} {t.birth}</p>
             <button className="mt-3 text-sm text-dim underline underline-offset-4 hover:text-gold" onClick={() => setPicked(null)}>{c.site.pickCard.again}</button>
           </div>
         )}

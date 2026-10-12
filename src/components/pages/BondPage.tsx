@@ -71,7 +71,7 @@ export function BondPage() {
         {r.perceptionGaps.length > 0 && <div className="card"><h3 className="mb-1 font-semibold">{U.gaps}</h3><p className="text-sm">{U.gapsText(r.perceptionGaps.map((d) => Q.bondDims[d].name.toLowerCase()).join(", "))}</p></div>}
         <div className="card text-sm">
           <h3 className="mb-1 font-semibold">{U.careTitle}</h3>
-          <p>{A.name}{U.wants}<b>{ans.a.receive ? P.care[ans.a.receive].name : "—"}</b>{U.gives}<b>{ans.a.give ? P.care[ans.a.give].name : "—"}</b>. {B.name}{U.wants}<b>{ans.b.receive ? P.care[ans.b.receive].name : "—"}</b>{U.gives}<b>{ans.b.give ? P.care[ans.b.give].name : "—"}</b>.</p>
+          <p>{A.name}{U.wants}<b>{ans.a.receive ? P.care[ans.a.receive].name : "?"}</b>{U.gives}<b>{ans.a.give ? P.care[ans.a.give].name : "?"}</b>. {B.name}{U.wants}<b>{ans.b.receive ? P.care[ans.b.receive].name : "?"}</b>{U.gives}<b>{ans.b.give ? P.care[ans.b.give].name : "?"}</b>.</p>
           <p className="mt-1">{r.care.aGivesWhatBNeeds && r.care.bGivesWhatANeeds ? U.sameLang : `${U.tryWeek}${!r.care.aGivesWhatBNeeds && ans.b.receive ? `${A.name} → ${P.care[ans.b.receive].tip} ` : ""}${!r.care.bGivesWhatANeeds && ans.a.receive ? `${B.name} → ${P.care[ans.a.receive].tip}` : ""}`}</p>
         </div>
         <p className="text-center text-xs text-dim">{U.repeat}</p>
@@ -109,7 +109,7 @@ export function BondPage() {
       ) : (
         <>
           <h2 className="h-display mb-6 text-2xl">{i === BOND_DIMS.length ? U.qReceive(other.name) : U.qGive(other.name)}</h2>
-          <div className="grid gap-2">{CARE_STYLES.map((k) => <button key={k} className="rounded-xl border border-white/10 px-4 py-3 text-left hover:bg-white/10" onClick={() => setAnswer(i === BOND_DIMS.length ? { receive: k as CareStyle } : { give: k as CareStyle })}><b>{P.care[k].name}</b> <span className="text-sm text-dim">— {P.care[k].text}</span></button>)}</div>
+          <div className="grid gap-2">{CARE_STYLES.map((k) => <button key={k} className="rounded-xl border border-white/10 px-4 py-3 text-left hover:bg-white/10" onClick={() => setAnswer(i === BOND_DIMS.length ? { receive: k as CareStyle } : { give: k as CareStyle })}><b>{P.care[k].name}</b> <span className="text-sm text-dim">{P.care[k].text}</span></button>)}</div>
         </>
       )}
     </div>

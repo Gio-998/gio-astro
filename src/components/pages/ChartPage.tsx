@@ -32,7 +32,7 @@ export function ChartPage() {
           <thead><tr className="text-left text-dim"><th className="py-1">{U.point}</th><th>{U.sign}</th><th>{U.degree}</th><th>{U.house}</th></tr></thead>
           <tbody>
             {ORDER.filter((p) => ch.placements[p]).map((p) => { const pl = ch.placements[p]!; return (
-              <tr key={p} className="border-t border-white/5"><td className="py-1.5">{A.points[p].glyph} {A.points[p].name}{pl.retrograde ? " ℞" : ""}</td><td>{SIGN_GLYPH[pl.sign]} {A.signs[pl.sign].name}</td><td>{formatDegree(pl.lon)}</td><td>{pl.house ?? "—"}</td></tr>
+              <tr key={p} className="border-t border-white/5"><td className="py-1.5">{A.points[p].glyph} {A.points[p].name}{pl.retrograde ? " ℞" : ""}</td><td>{SIGN_GLYPH[pl.sign]} {A.signs[pl.sign].name}</td><td>{formatDegree(pl.lon)}</td><td>{pl.house ?? "·"}</td></tr>
             ); })}
           </tbody>
         </table>
@@ -51,7 +51,7 @@ export function ChartPage() {
       <div className="space-y-2">
         {ch.aspects.slice(0, 12).map((a, i) => (
           <div key={i} className="card !py-3 text-sm">
-            <b>{A.points[a.a].name} {A.aspects[a.type].symbol} {A.points[a.b].name}</b> <span className="text-dim">{U.orb(A.aspects[a.type].name, a.orb.toFixed(1))}</span> — {A.aspects[a.type].natal}.
+            <b>{A.points[a.a].name} {A.aspects[a.type].symbol} {A.points[a.b].name}</b> <span className="text-dim">{U.orb(A.aspects[a.type].name, a.orb.toFixed(1))}</span>: {A.aspects[a.type].natal}.
           </div>
         ))}
       </div>

@@ -46,7 +46,7 @@ export function Hero() {
             {H.see}<span className="italic text-aurora">{words[0]}</span>{H.mid}<span className="italic text-aurora">{H.end}</span>
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5, duration: 1 }} className="mb-8 max-w-xl text-lg leading-relaxed text-mist/90">
-            Your birth chart, Chinese zodiac, numbers, tarot and the personality science that actually holds up — woven into one honest mirror for you and your relationships. Free, in 90 seconds.
+            Your birth chart, Chinese zodiac, numbers, tarot and the personality science that actually holds up, woven into one honest mirror for you and your relationships. Free, in 90 seconds.
           </motion.p>
           <motion.form onSubmit={go} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.7 }}
             className="mb-4 flex max-w-xl flex-col gap-2 rounded-[28px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_60px_-20px_rgba(139,108,240,.8)] backdrop-blur-xl sm:flex-row sm:items-center">
