@@ -7,6 +7,7 @@ import { SIGN_GLYPH, formatDegree, SIGN_ELEMENT } from "@/engine/zodiac";
 import { ANIMAL_GLYPH, ANIMAL_HANZI, WUXING } from "@/engine/chinese";
 import { MAJOR_ARCANA } from "@/engine/tarot";
 import { TRAITS } from "@/engine/bigfive";
+import { UnifiedGlance } from "./adaptive/UnifiedGlance";
 import { CARE } from "@/engine/quizzes";
 import { AXES } from "@/engine/shadow";
 import { quizDefs, QUIZ_IDS, QuizId } from "@/lib/quiz-defs";
@@ -304,6 +305,8 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
       </div>
 
       <VoiceSummary person={person} profile={profile} />
+
+      <div className="mt-4"><UnifiedGlance person={person} isMe={isMe} /></div>
 
       {/* Aura: symbolic visual from palette + attunement answers */}
       <div className="card mt-4 grid items-center gap-4 overflow-hidden sm:grid-cols-[minmax(0,280px)_1fr]">

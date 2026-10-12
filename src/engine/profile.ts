@@ -10,6 +10,7 @@ import type { scoreShadow } from "./shadow";
 import type { FourLetterQuizResult } from "./fourletter-quiz";
 import { SelfId, effectiveFourLetter, effectiveTemperament, effectiveNine, effectiveAttachment, EffectiveFourLetter, EffectiveTemperament } from "./selfid";
 import type { PlayResults } from "./play";
+import type { AdaptiveResult } from "./adaptive";
 
 export type ShadowResult = ReturnType<typeof scoreShadow>;
 /** Results of the optional questionnaire lenses ("unlocked layers"). */
@@ -27,6 +28,8 @@ export interface QuizResults extends PlayResults {
   bigFiveLong?: BigFive;
   /** "Does this sound like you?" picks and confirmations. */
   selfId?: SelfId;
+  /** Deep Read: adaptive dilemma test (Big Five traits with per-trait confidence). */
+  adaptive?: AdaptiveResult;
 }
 import { Element, SIGN_ELEMENT, Sign, isYangSign } from "./zodiac";
 

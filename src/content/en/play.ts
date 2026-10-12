@@ -108,6 +108,28 @@ const dims: Record<PlayDim, DimText> = {
     down: "Your answers sound more rule-bound than you played: you stuck to your own eyes against the whole group.",
     said: "From your Big Five: openness and how planned you are.",
   },
+  patience: {
+    name: "Patience", poles: ["Now", "Worth the wait"], word: { low: "in the moment", high: "patient" },
+    text: {
+      low: "You took the small prize now, most rounds. A bird in the hand: you like results you can hold. That makes you quick to act and easy to please. When something big is on the table, try counting to ten before you grab the sure thing.",
+      mid: "You waited when the prize felt worth it and took the quick one when it didn't. You do the maths in your head, round by round. That's a sensible way to spend your time.",
+      high: "You held out for the bigger lantern, even on the long waits. Delay doesn't scare you when the payoff is clear, which is the quiet engine behind savings, training and long projects. Just make sure the wait is your choice, not a habit.",
+    },
+    up: "Your answers sound more impulsive than you played: you waited for the bigger prize.",
+    down: "Your answers sound more patient than you played: when the timer ran, you grabbed the sure thing.",
+    said: "From your Big Five: how planned you are.",
+  },
+  control: {
+    name: "Focus", poles: ["Quick trigger", "Steady hand"], word: { low: "quick on the trigger", high: "steady-handed" },
+    text: {
+      low: "Your thumb was faster than your brakes: you caught the stars, and some moons too. Speed is a gift, and your first move often comes before your second thought. For big decisions, build in a pause on purpose.",
+      mid: "You caught most stars and let most moons pass. Now and then the rhythm pulled you into a tap you didn't mean. Completely normal, and a sign your brakes work when you need them.",
+      high: "You tapped the stars and froze on the moons, again and again. Your brakes are good: you can stop a habit halfway. That's what keeps you calm in a heated chat. You're still allowed to be spontaneous.",
+    },
+    up: "Your answers sound more impulsive than you played: your brakes held almost every time.",
+    down: "Your answers sound more self-controlled than you played: the rhythm pulled you into taps you didn't mean.",
+    said: "From your Big Five: how planned you are.",
+  },
 };
 
 const games: Record<PlayGameId, { name: string; tagline: string; intro: string; how: string[]; measures: string; secs: number }> = {
@@ -141,6 +163,18 @@ const games: Record<PlayGameId, { name: string; tagline: string; intro: string; 
     how: ["Their votes appear one by one", "Tap your answer at any moment", "Some questions have a right answer"],
     measures: "When you speak up, and how much the group's choice pulls on yours.",
   },
+  wait: {
+    name: "The Lantern", tagline: "A small light now, or a bigger one if you wait.", secs: 70,
+    intro: "Six lanterns. Each time you choose: take a few stars right now, or wait for the lantern to fill and get more. While you wait, you can change your mind and take the small prize.",
+    how: ["Tap Now or Wait", "While it fills, you can still take the small one", "There's no right answer, only yours"],
+    measures: "How easily you wait for a bigger reward when a smaller one is right there.",
+  },
+  focus: {
+    name: "Star Catch", tagline: "Tap the stars. Never tap the moon.", secs: 40,
+    intro: "Stars and moons flash in a quick rhythm. Tap every gold star as fast as you can. When a red moon shows up, keep your thumb still.",
+    how: ["Gold star: tap", "Red moon: don't tap", "It's fast on purpose"],
+    measures: "How well you can stop a quick habit halfway: focus and impulse control.",
+  },
 };
 
 const emotions: Record<Emotion, string> = { joy: "Joy", sadness: "Sadness", anger: "Anger", fear: "Fear", surprise: "Surprise", disgust: "Disgust", contempt: "Contempt", calm: "Calm" };
@@ -152,16 +186,16 @@ const scenes: { who: string; says: string; moves: Record<CareMove, string> }[] =
 ];
 
 export const play = {
-  meta: { title: "Play Mirror", description: "Five quick mini-games that show how you actually play: risk, trust, faces, memory and leading. Behaviour, not self-report." },
+  meta: { title: "Play Mirror", description: "Seven quick mini-games that show how you actually play: risk, trust, faces, memory, leading, patience and focus. Behaviour, not self-report." },
   brand: "Play Mirror",
   hub: {
     eyebrow: "Play Mirror", titleA: "How you ", titleB: "actually play",
-    sub: "Questionnaires show how you see yourself. These five mini-games watch what you do: your choices, your timing, what happens after a fall. About seven minutes in total.",
+    sub: "Questionnaires show how you see yourself. These seven mini-games watch what you do: your choices, your timing, what happens after a fall. About nine minutes in total.",
     honest: "A behavioural signal from a few minutes of play, not a diagnosis. Tired, distracted or just having fun? It all shows up, so play a game again whenever you like.",
-    progress: (n: number) => `${n} of 5 played`,
+    progress: (n: number) => `${n} of 7 played`,
     play: "Play", replay: "Play again", secs: (s: number) => `about ${Math.round(s / 10) * 10} s`,
     resultTitle: "How you actually play", resultEmpty: "Play your first game and your card starts to fill in.",
-    playNext: "Play the next game", allDone: "All five played. This is your full card.",
+    playNext: "Play the next game", allDone: "All seven played. This is your full card.",
     compare: "Compare with someone", compareText: "When someone else plays on your phone (or their own, on a shared profile), the Play lens shows up in your compatibility.",
     forOther: (n: string) => `Playing for ${n}`, needProfile: "Create your profile first, so your results have somewhere to live.", start: "Start",
     behaviours: "What we noticed", sayPlay: "What you say vs how you play", sayPlayIntro: "Your questionnaire answers next to what you did in the games.",
@@ -179,6 +213,8 @@ export const play = {
     faces: { watch: "Watch the face", what: "What did you see?", scene: "Your friend writes:", how: "How do you answer?" },
     trust: { moss: "Moss", have: (n: number) => `You have ${n} coins`, send: "Send", sendQ: "How many do you send to Moss? It triples on the way.", got: (sent: number, back: number) => `You sent ${sent}. Moss got ${sent * 3} and sent back ${back}.`, kept: (sent: number) => `You sent ${sent}. Moss kept all ${sent * 3}.`, backQ: (pot: number) => `Moss sent you 4 coins. They tripled to ${pot}. How many do you send back?`, splitQ: (pot: number) => `You found ${pot} coins on the path. Moss is right there. How many do you share?`, thanks: "Moss smiles.", total: "Your coins", none: "Nothing to send? That's a choice too." },
     memory: { shape: "Remember the shape", details: "Remember the details", whichShape: "Which pattern did you see?", colourOf: (s: string) => `What colour was the ${s}?`, shapes: { circle: "circle", triangle: "triangle", square: "square", star: "star" }, colours: { gold: "Gold", rose: "Pink", aqua: "Aqua", violet: "Violet" } },
+    wait: { now: (n: number) => `Take ${n} now`, wait: (n: number) => `Wait for ${n}`, filling: "The lantern is filling…", grab: (n: number) => `Take ${n} instead`, got: (n: number) => `+${n} stars`, round: "Lantern", pick: "Small now, or bigger later?", secs: (s: number) => `${s} s` },
+    focus: { ready: "Gold star: tap. Red moon: hold still.", go: "Tap!", hold: "Hold", start: "Start", tapZone: "Tap here", caught: "Caught", oops: "Moon!" },
     lead: { friends: ["Ava", "Teo", "Lina"], taste: [{ q: "Movie night. What are we watching?", o: ["Comedy", "Thriller", "Documentary"] }, { q: "Weekend trip. Where to?", o: ["Mountains", "Seaside", "City"] }, { q: "Dinner tonight?", o: ["Pizza", "Sushi", "Tacos"] }], line: "Which line is the same length as the first one?", stuck: "Nobody can choose a café. Everyone looks at each other.", stuckOpts: ["Let someone else pick", "I'll decide"], volunteer: "Teo: fine, I'll pick.", you: "You", waiting: "…" },
   },
   result: { eyebrow: "Your result", nextGame: "Next game", hub: "See your full card", again: "Play again" },
@@ -198,6 +234,7 @@ export const play = {
       twoLeaders: "You both grab the lead. Lively, and sometimes a tug of war. Take turns deciding.",
       leadFollow: "One of you steps up, the other is happy to follow. Decisions come easily.",
       tempoGap: "Different tempos: one answers fast, the other thinks first. Leave room for the slower one.",
+      patienceGap: "One of you waits for the bigger prize, the other likes it now. Plan the big things together and leave room for small treats.",
       memoryMix: "One of you sees the big picture, the other keeps the details. A natural team.",
     } as Record<string, string>,
   },

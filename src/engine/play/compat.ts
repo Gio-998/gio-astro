@@ -4,7 +4,7 @@
  * appetite, tempo and two strong leaders. Research-inspired (trust games, emotion recognition, conformity studies),
  * but these are a few minutes of play: a behavioural signal, never a verdict on a relationship.
  */
-import type { PlayDim, PlayProfile } from "./index";
+import { PLAY_GAMES, type PlayDim, type PlayProfile } from "./index";
 import type { Theme, ThemeHit } from "../compat";
 import calibration from "./calibration.json";
 
@@ -60,10 +60,12 @@ export function playLens(A: PlayProfile | null, B: PlayProfile | null) {
     H.push([10 * (10 - gap("speed")), 1]); S.push([10 * gap("speed"), 1.5]);
     if (gap("speed") >= 4) hit("communication", -1, 4, "tempoGap");
   }
+  if (has("patience")) { H.push([10 * (10 - gap("patience")), 1]); if (gap("patience") >= 4) hit("pace", -1, 4, "patienceGap"); }
+  if (has("control")) { H.push([10 * avg("control"), 0.5]); }
   if (has("detail")) { H.push([70 + 2 * gap("detail"), 0.5]); S.push([10 * gap("detail"), 1]); if (gap("detail") >= 4) hit("growth", 1, 4, "memoryMix"); }
 
   const wm = (xs: [number, number][]) => { const w = xs.reduce((s, [, k]) => s + k, 0); return w ? xs.reduce((s, [v, k]) => s + v * k, 0) / w : 50; };
   const games = A.games.filter((g) => B.games.includes(g)).length;
   const detail: PlayLensDetail = { shared, a: A.dims, b: B.dims, notes };
-  return { rawH: wm(H), rawS: S.length ? wm(S) : 30, themes, confidence: Math.max(0.4, games / 5), detail: detail as unknown as Record<string, unknown> };
+  return { rawH: wm(H), rawS: S.length ? wm(S) : 30, themes, confidence: Math.max(0.4, games / PLAY_GAMES.length), detail: detail as unknown as Record<string, unknown> };
 }

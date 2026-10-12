@@ -7,9 +7,9 @@
  * These are behavioural signals from a few minutes of play, not a diagnosis.
  */
 
-export const PLAY_GAMES = ["bridge", "faces", "trust", "memory", "lead"] as const;
+export const PLAY_GAMES = ["bridge", "faces", "trust", "memory", "lead", "wait", "focus"] as const;
 export type PlayGameId = (typeof PLAY_GAMES)[number];
-export const PLAY_DIMS = ["risk", "resilience", "read", "empathy", "trust", "fairness", "detail", "speed", "lead", "conform"] as const;
+export const PLAY_DIMS = ["risk", "resilience", "read", "empathy", "trust", "fairness", "detail", "speed", "lead", "conform", "patience", "control"] as const;
 export type PlayDim = (typeof PLAY_DIMS)[number];
 export type PlayFlag = "erratic" | "quit" | "rushed";
 export type PlayKey = `play_${PlayGameId}`;
@@ -22,6 +22,8 @@ export const GAME_DIMS: Record<PlayGameId, PlayDim[]> = {
   trust: ["trust", "fairness"],
   memory: ["detail", "speed"],
   lead: ["lead", "conform"],
+  wait: ["patience"],
+  focus: ["control"],
 };
 
 /** Stored per game (QuizResults key `play_<game>`, Supabase quiz_results.quiz_id `play_<game>`). */
@@ -254,6 +256,50 @@ export function scoreLead(raw: LeadRaw): PlayGameResult {
   return {
     v: 1, game: "lead", ms: raw.ms, scores: { lead, conform }, flags,
     raw: { votedFirst: first, tasteRounds: tasteN, lineMeasured: lineN, lineWentWithGroup: lineConform, lineCorrect, steppedUp: stuckTook, steppedUpFast: stuckFast },
+  };
+}
+
+// ——————————————————— 6. The Lantern (patience / delay of reward) ———————————————————
+/** Each round: take the small prize now, or wait for the big one. You can give up mid-wait and take the small one. */
+export const WAIT_ROUNDS: { now: number; later: number; secs: number }[] = [
+  { now: 2, later: 5, secs: 4 }, { now: 2, later: 6, secs: 6 }, { now: 3, later: 6, secs: 8 },
+  { now: 2, later: 7, secs: 10 }, { now: 3, later: 5, secs: 5 }, { now: 2, later: 8, secs: 12 },
+];
+export interface WaitRaw { rounds: { choice: "now" | "wait"; waitedMs: number; gaveUp: boolean; ms: number }[]; taps: number[]; ms: number }
+export function scoreWait(raw: WaitRaw): PlayGameResult {
+  const per = raw.rounds.map((r, i) => {
+    if (r.choice === "now") return 0;
+    if (!r.gaveUp) return 1;
+    return 0.6 * Math.min(1, r.waitedMs / (WAIT_ROUNDS[i].secs * 1000));
+  });
+  // Longer waits count a little more: holding out for 12 seconds says more than holding out for 4.
+  const w = WAIT_ROUNDS.slice(0, per.length).map((r) => r.secs);
+  const tot = w.reduce((a, b) => a + b, 0) || 1;
+  const patience = clamp10((10 * per.reduce((s, x, i) => s + x * w[i], 0)) / tot);
+  const bursts = erraticBursts(raw.taps); const flags: PlayFlag[] = [];
+  if (bursts > 0) flags.push("erratic");
+  const waits = raw.rounds.filter((r) => r.choice === "wait").length;
+  return {
+    v: 1, game: "wait", ms: raw.ms, scores: { patience }, flags,
+    raw: { waits, tookNow: raw.rounds.length - waits, gaveUp: raw.rounds.filter((r) => r.gaveUp).length, decideMs: Math.round(median(raw.rounds.map((r) => r.ms))), stars: raw.rounds.reduce((s, r, i) => s + (r.choice === "wait" && !r.gaveUp ? WAIT_ROUNDS[i].later : WAIT_ROUNDS[i].now), 0), bursts },
+  };
+}
+
+// ——————————————————— 7. Star Catch (focus / impulse control, go/no-go) ———————————————————
+/** Fixed sequence: 1 = gold star (tap it), 0 = red moon (hold back). 24 flashes, 7 moons, never two moons in a row at the start. */
+export const FOCUS_SEQ = [1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0];
+export const FOCUS_SHOW_MS = 800;
+export interface FocusRaw { trials: { go: boolean; tapped: boolean; rt: number | null }[]; taps: number[]; ms: number }
+export function scoreFocus(raw: FocusRaw): PlayGameResult {
+  const go = raw.trials.filter((t) => t.go), nogo = raw.trials.filter((t) => !t.go);
+  const commissions = nogo.filter((t) => t.tapped).length, omissions = go.filter((t) => !t.tapped).length;
+  const cr = nogo.length ? commissions / nogo.length : 0, or = go.length ? omissions / go.length : 0;
+  const control = clamp10(10 * (1 - 0.85 * cr - 0.45 * or));
+  const rts = go.filter((t) => t.tapped && t.rt != null).map((t) => t.rt!);
+  const flags: PlayFlag[] = []; if (erraticBursts(raw.taps) > 0) flags.push("erratic");
+  return {
+    v: 1, game: "focus", ms: raw.ms, scores: { control }, flags,
+    raw: { caught: go.length - omissions, missed: omissions, moonsTapped: commissions, moons: nogo.length, medianRt: Math.round(median(rts)) },
   };
 }
 

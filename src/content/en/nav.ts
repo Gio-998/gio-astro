@@ -26,13 +26,14 @@ export const nav = {
         { href: "/match/", icon: "bond", title: "Compatibility", desc: "Any two people, every lens, with practices" },
         { href: "/bond/", icon: "attachment", title: "Bond Check", desc: "Eight questions you answer together" },
         { href: "/people/", icon: "care", title: "People", desc: "Everyone you saved, ready to compare" },
-        { href: "/play/", icon: "tarot", title: "Play Mirror", desc: "Five quick games that show how you act" },
+        { href: "/play/", icon: "tarot", title: "Play Mirror", desc: "Seven quick games that show how you act" },
       ],
     },
     tests: {
       label: "Tests", feature: { title: "Seven short tests", text: "Each one adds a layer to your profile. Full results are free.", cta: "See all tests" },
       allHref: "/quizzes/", allTitle: "All tests", allDesc: "Pick one, three minutes each",
-      play: { href: "/play/", title: "Play Mirror games", desc: "Behaviour, not self-report: risk, trust, faces" },
+      play: { href: "/play/", title: "Play Mirror games", desc: "Behaviour, not self-report: risk, trust, patience, focus" },
+      deep: { href: "/deep/", title: "Deep Read", desc: "Hard choices and gut reactions, adapts to you" },
     },
     discover: {
       label: "Discover", feature: { title: "Honest by design", text: "How every number is made, what science says, and what it doesn't.", cta: "How it works" },

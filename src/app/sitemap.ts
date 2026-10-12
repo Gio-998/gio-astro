@@ -7,7 +7,7 @@ import { languageAlternates, isIndexable } from "@/lib/seo";
 import { SIGNS } from "@/engine/zodiac";
 import { BLOG_SLUGS } from "@/content/blog";
 // Indexable routes (locale-less). Personal pages (profile, people, today, account) are left out on purpose.
-const PUBLIC = ["/", "/start/", "/match/", "/bond/", "/quizzes/", ...QUIZ_IDS.map((q) => `/quiz/${q}/`), "/learn/", "/how-it-works/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", ...SIGNS.map((s) => `/daily/${s}/`), "/blog/", ...BLOG_SLUGS.map((s) => `/blog/${s}/`)];
+const PUBLIC = ["/", "/start/", "/match/", "/bond/", "/quizzes/", "/deep/", "/play/", ...QUIZ_IDS.map((q) => `/quiz/${q}/`), "/learn/", "/how-it-works/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", ...SIGNS.map((s) => `/daily/${s}/`), "/blog/", ...BLOG_SLUGS.map((s) => `/blog/${s}/`)];
 export default function sitemap(): MetadataRoute.Sitemap {
   // One <url> per locale, each listing every language version (xhtml:link hreflang) + x-default.
   return LOCALES.flatMap((l) => PUBLIC.filter(isIndexable).map((p) => ({
