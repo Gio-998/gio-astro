@@ -74,7 +74,7 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     const count: Record<string, string[]> = {};
     for (const [k, e] of pts) (count[e] ??= []).push(B.lensNames[k]);
     const top = Object.entries(count).sort((a, b2) => b2[1].length - a[1].length)[0];
-    if (top && top[1].length >= 2) b.push({ t: "callout", tone: "agree", title: B.agreeTitle, text: `${B.agree(top[1].length, `${B.elementName[top[0]]}, meaning ${D.elementVoice[top[0] as Element]}`, top[1].join(", "))}` });
+    if (top && top[1].length >= 2) b.push({ t: "callout", tone: "agree", title: B.agreeTitle, text: `${B.agree(top[1].length, `${B.elementName[top[0]]}, ${B.meaning} ${D.elementVoice[top[0] as Element]}`, top[1].join(", "))}` });
     const odd = pts.find(([, e]) => e !== top?.[0]);
     if (odd && top) b.push({ t: "callout", tone: "differ", title: B.differTitle, text: B.differ(B.elementPoint(B.lensNames[odd[0]], B.elementName[odd[1]]), B.elementPoint(top[1][0], B.elementName[top[0]])) });
     b.push({ t: "deep", title: `${B.sunIn(S(p.sun))}: ${B.openDeep.toLowerCase()}`, blocks: [

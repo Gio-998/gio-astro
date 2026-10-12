@@ -21,6 +21,7 @@ export const book = {
   journal: "Questions for your journal",
   love: "In love", friends: "In friendship", work: "At work", family: "In family", myth: "The myth behind it",
   agreeTitle: "Where your lenses agree",
+  meaning: "meaning",
   differTitle: "Where your lenses differ",
   lockedTitle: "This chapter is still sealed",
   lockedText: (names: string) => `Take ${names} to open this chapter. Each quiz takes a few minutes and the full result is free.`,
