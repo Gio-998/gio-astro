@@ -8,6 +8,8 @@ export interface CardSpec {
   lines: string[];
   palette: string[];
   footer: string;
+  /** Optional live canvas (e.g. their aura) drawn at the top of the card. */
+  image?: () => HTMLCanvasElement | null;
 }
 
 function wrap(ctx: CanvasRenderingContext2D, text: string, maxW: number): string[] {
@@ -30,6 +32,8 @@ export async function renderCard(spec: CardSpec): Promise<Blob> {
     g.addColorStop(0, col + "cc"); g.addColorStop(1, col + "00");
     ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
   });
+  const img = spec.image?.();
+  if (img && img.width > 0) { const s = Math.min(760 / img.width, 470 / img.height); const w = img.width * s, h = img.height * s; ctx.globalCompositeOperation = "lighter"; ctx.drawImage(img, (W - w) / 2, 40, w, h); ctx.globalCompositeOperation = "source-over"; }
   // stars
   let seed = spec.title.length * 97;
   const rnd = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280);

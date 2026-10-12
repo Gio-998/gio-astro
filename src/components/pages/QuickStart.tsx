@@ -6,6 +6,7 @@ import { repo, useStore } from "@/lib/store";
 import { useHref, useContent } from "@/lib/content-context";
 import { PageHero } from "../ui";
 import { ZodiacWheel } from "../art/ZodiacWheel";
+import { Ritual } from "../aura/Ritual";
 
 
 /** Short "reading your sky" sequence — the calculations are real and instant; this just gives the moment some ceremony. */
@@ -34,8 +35,15 @@ function Casting({ onDone }: { onDone: () => void }) {
 
 export function QuickStart() {
   const s = useStore(); const router = useRouter(); const h = useHref(); const U = useContent().c.ui.quickStart;
-  const preDate = useSearchParams().get("date");
+  const sp = useSearchParams(); const preDate = sp.get("date");
   const [casting, setCasting] = useState(false);
+  const [quick, setQuick] = useState(sp.get("quick") === "1");
+  const [leaving, setLeaving] = useState(false);
+  const attune = leaving || (s !== null && !quick && (!s.me || sp.get("attune") === "1"));
+  if (attune) return (
+    <Ritual initial={s!.me ?? (preDate && /^\d{4}-\d{2}-\d{2}$/.test(preDate) ? { date: preDate } : undefined)}
+      onDone={(p) => { setLeaving(true); repo.saveMe(p); router.push(h("/me/")); }} onQuick={() => setQuick(true)} onClose={() => router.push(h(s!.me ? "/me/" : "/"))} />
+  );
   return (
     <div>
       {casting && <Casting onDone={() => router.push(h("/me/"))} />}

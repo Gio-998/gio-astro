@@ -12,6 +12,8 @@ import { AXES } from "@/engine/shadow";
 import { quizDefs, QUIZ_IDS, QuizId } from "@/lib/quiz-defs";
 import type { StoredPerson } from "@/lib/store";
 import { encodeProfileCode } from "@/lib/store";
+import { Aura } from "./aura/Aura";
+import { auraOf } from "@/lib/aura";
 import { ShareButton } from "./ShareButton";
 import { ThemeToggle } from "./PersonalTheme";
 import { useState } from "react";
@@ -179,6 +181,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
       profile.quiz.nine ? U.motivationLine(profile.quiz.nine.type, c.psych.nineStyles[profile.quiz.nine.type].name) : "",
     ].filter(Boolean),
     palette: profile.palette, footer: c.site.brand,
+    image: () => document.querySelector<HTMLCanvasElement>("canvas[data-aura]"),
   };
 
   return (
@@ -223,6 +226,21 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
             <textarea readOnly className="input h-24 font-mono text-[11px]" value={encodeProfileCode(person)} onFocus={(e) => e.currentTarget.select()} />
           </div>
         )}
+        </div>
+      </div>
+
+      {/* Aura: symbolic visual from palette + attunement answers */}
+      <div className="card mt-4 grid items-center gap-4 overflow-hidden sm:grid-cols-[minmax(0,280px)_1fr]">
+        <div className="relative mx-auto h-72 w-full max-w-[280px]"><Aura data-aura className="h-full w-full" {...auraOf(person)} label={c.ui.ritual.auraLabel(person.name)} /></div>
+        <div>
+          <p className="eyebrow mb-1">✦ {c.ui.ritual.auraTitle}</p>
+          <p className="mb-3 text-sm text-dim">{c.ui.ritual.auraNote}</p>
+          {person.aura && <div className="mb-3 flex flex-wrap gap-2 text-xs">
+            {person.aura.weather && <span className="chip">{c.ui.ritual.weather[person.aura.weather]}</span>}
+            {person.aura.body && <span className="chip">{c.ui.ritual.body[person.aura.body]}</span>}
+            {person.aura.intention && <span className="chip">{c.ui.ritual.intent[person.aura.intention]}</span>}
+          </div>}
+          {isMe && <Link className="btn-ghost" href={h("/start/?attune=1")}>{c.ui.ritual.reattune}</Link>}
         </div>
       </div>
 

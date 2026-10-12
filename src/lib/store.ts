@@ -29,6 +29,8 @@ export interface StoredPerson {
   syncedAt?: string;
   /** Profile code this person was imported from (kept so it can be re-parsed later). */
   importedCode?: string;
+  /** Answers from the attunement ritual (symbolic aura visual). */
+  aura?: import("./aura").AuraAnswers;
 }
 export interface JournalEntry { date: string; prompt: string; text: string; updatedAt?: string; syncedAt?: string }
 /** One finished Bond Check (history kept over time). */

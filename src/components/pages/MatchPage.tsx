@@ -8,6 +8,7 @@ import { useContent, useHref } from "@/lib/content-context";
 import { comparePair, REL_TYPES, RelType } from "@/engine/compat";
 import { PairReportView } from "../PairReport";
 import { BookView } from "../story/BookView";
+import { AuraPair } from "../aura/AuraPair";
 import { buildBondStory } from "@/story/bond";
 import { BirthForm } from "../BirthForm";
 import { PageHero } from "../ui";
@@ -58,6 +59,7 @@ export function MatchPage() {
       {A && B && A.id === B.id && <p className="text-dim">{U.pickTwo}</p>}
       {report && A && B && <>
         <a href="#bond-story" className="btn-primary mb-4 w-full">📖 {c.deep.bondUi.eyebrow}: {c.deep.bondUi.title(A.name, B.name)} ↓</a>
+        <AuraPair a={A} b={B} harmony={report.r.resonance} />
         <PairReportView report={report.r} A={report.pa} B={report.pb} na={A.name} nb={B.name} />
         <div id="bond-story" className="mt-12 scroll-mt-20"><BookView book={buildBondStory(report.pa, report.pb, A.name, B.name, report.r, c)} name={`${A.name} & ${B.name}`} forId={B.id} eyebrow={c.deep.bondUi.eyebrow} title={c.deep.bondUi.title(A.name, B.name)} subtitle={c.compat.relTypes[report.r.rel].name} intro="" /></div>
       </>}

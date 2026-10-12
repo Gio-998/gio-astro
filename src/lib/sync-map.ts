@@ -18,7 +18,7 @@ export function meToProfile(me: StoredPerson, locale: string, settings: unknown)
     display_name: me.name.slice(0, 80), birth_name: me.birthName ?? null, birth_date: me.date,
     birth_time: me.time ?? null, birth_time_unknown: me.time == null,
     birth_place: me.place?.name ?? null, birth_lat: me.place?.lat ?? null, birth_lon: me.place?.lon ?? null, birth_tz: me.place?.tz ?? null,
-    utc_offset_override: me.utcOffsetOverride ?? null, locale, theme_prefs: (settings ?? {}) as Json,
+    utc_offset_override: me.utcOffsetOverride ?? null, locale, theme_prefs: { ...((settings ?? {}) as object), ...(me.aura ? { aura: me.aura } : {}) } as Json,
   };
 }
 export function profileToMe(r: ProfileRow, quizzes: QuizRow[], prev?: StoredPerson | null): StoredPerson | null {
@@ -31,6 +31,7 @@ export function profileToMe(r: ProfileRow, quizzes: QuizRow[], prev?: StoredPers
     utcOffsetOverride: r.utc_offset_override, quiz: Object.fromEntries(Object.entries(latest).map(([k, q]) => [k, q.scores])) as QuizResults,
     quizAt: Object.fromEntries(Object.entries(latest).map(([k, q]) => [k, q.completed_at])),
     answers: Object.fromEntries(Object.entries(latest).filter(([, q]) => q.answers && typeof q.answers === "object" && Object.keys(q.answers as object).length).map(([k, q]) => [k, q.answers as Record<string, number>])),
+    aura: ((r.theme_prefs ?? {}) as { aura?: StoredPerson["aura"] }).aura ?? prev?.aura,
     createdAt: prev?.createdAt ?? r.created_at, updatedAt: r.updated_at, syncedAt: r.updated_at,
   };
 }

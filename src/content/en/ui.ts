@@ -391,3 +391,28 @@ export const auth = {
   newPassword: "Choose a new password", savePassword: "Save password", passwordSaved: "Password updated.", finishing: "Signing you in…",
   disabled: "Accounts aren't configured in this build.",
 };
+
+export const ritual = {
+  eyebrow: "Attunement · about 2 minutes", title: "Let's tune in to you",
+  text: "A few gentle questions. With each answer your aura takes shape: the colours come from your sky, the movement from how you feel right now.",
+  honest: "A symbolic picture of your reading, not a medical or biometric measurement.",
+  begin: "Begin the attunement", quick: "Prefer the quick form?",
+  nameQ: "What should we call you?", nameHint: "Your name warms the field. A first name is enough.", namePh: "Your first name",
+  dateQ: (n: string) => `${n}, when were you born?`, dateHint: "Your birth date sets your colours: your Sun's element and your personal palette.",
+  signLine: (sign: string, el: string) => `${sign} Sun · ${el}`,
+  timeQ: "Do you know your time of birth?", timeHint: "It reveals your rising sign and houses. If you don't know it, skip. Everything still works.", unknown: "I don't know it",
+  placeQ: "Where were you born?", placeHint: "The sky over your birthplace makes the chart precise.",
+  energyQ: "How much energy do you have right now?", energyHint: "Watch your field grow or soften.", low: "Drained", high: "Buzzing",
+  weatherQ: "What's your emotional weather today?", weatherHint: "It colours the glow around your head and heart.",
+  weather: { sunny: "Sunny", cloudy: "Cloudy", stormy: "Stormy", foggy: "Foggy", rainbow: "After the rain" } as Record<string, string>,
+  bodyQ: "How does your body feel?", bodyHint: "The light pulses along your nerves follow you.",
+  body: { light: "Light", heavy: "Heavy", tense: "Tense", buzzing: "Restless", grounded: "Grounded" } as Record<string, string>,
+  intentQ: "What would you like more of?", intentHint: "One energy centre along your spine lights up for it.",
+  intent: { love: "Love", clarity: "Clarity", healing: "Healing", courage: "Courage", peace: "Peace" } as Record<string, string>,
+  breathQ: "Three slow breaths together", inhale: "Breathe in…", exhale: "Breathe out…", breathCount: (i: number) => `Breath ${i} of 3`, breathDone: "Beautiful. You're attuned.",
+  next: "Continue", back: "Back", skip: "Skip", soundOn: "Sound on", soundOff: "Sound off", close: "Close",
+  casting: ["Gathering your aura…", "Merging it with the sky of your birth…", "Tracing your constellations…", "Placing the Sun, Moon and planets…", "Counting your numbers…", "Your codex is ready"],
+  step: (i: number, n: number) => `Step ${i} of ${n}`,
+  auraTitle: "Your aura", auraNote: "A symbolic picture of your reading and how you felt when you attuned. Not a measurement.", reattune: "Re-attune ✦",
+  bondAura: "Your two fields, merging", auraLabel: (n: string) => `Symbolic aura of ${n}`,
+};
