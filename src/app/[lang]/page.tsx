@@ -39,11 +39,11 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <ScrollFx />
 
       {/* Lens marquee */}
-      <div className="bleed relative -mt-6 overflow-hidden border-y border-white/10 bg-white/[0.04] py-4 backdrop-blur" aria-label={L.lensesIncluded}>
-        <div className="flex w-max animate-marquee gap-10 whitespace-nowrap">
+      <div className="bleed relative -mt-6 overflow-hidden border-y border-white/[0.07] bg-white/[0.025] py-3 sm:py-4 [mask-image:linear-gradient(90deg,transparent,#000_14%,#000_86%,transparent)]" aria-label={L.lensesIncluded}>
+        <div className="flex w-max animate-marquee whitespace-nowrap motion-reduce:animate-none">
           {[0, 1].map((k) => (
-            <div key={k} className="flex gap-10" aria-hidden={k === 1}>
-              {(Object.keys(LENS_ICON) as LensId[]).map((l) => <span key={l} className="flex items-center gap-2 font-display text-xl text-mist/80"><Emblem id={LENS_ICON[l]} className="h-6 w-6" />{c.compat.lenses[l].name}</span>)}
+            <div key={k} className="flex shrink-0 gap-7 pr-7 sm:gap-10 sm:pr-10" aria-hidden={k === 1}>
+              {(Object.keys(LENS_ICON) as LensId[]).map((l) => <span key={l} className="flex items-center gap-2 font-display text-[15px] text-mist/75 sm:text-xl"><Emblem id={LENS_ICON[l]} className="h-4 w-4 opacity-80 sm:h-6 sm:w-6" />{c.compat.lenses[l].name}</span>)}
             </div>
           ))}
         </div>

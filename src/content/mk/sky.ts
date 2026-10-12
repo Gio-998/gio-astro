@@ -3,7 +3,7 @@ export const sky = {
   hero: {
     tonight: (phase: string, sign: string, pct: number) => `Вечерва: ${phase} во ${sign} · ${pct}%`,
     begin: "Започни го читањето ✦",
-    orDate: "или почни со датумот на раѓање",
+    orDate: "Со датум на раѓање",
     go: "Оди",
     touch: "Допрете го небото",
     calm: "Пресметано, не погодено",

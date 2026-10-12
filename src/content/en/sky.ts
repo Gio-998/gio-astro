@@ -3,7 +3,7 @@ export const sky = {
   hero: {
     tonight: (phase: string, sign: string, pct: number) => `Tonight: ${phase} in ${sign} · ${pct}%`,
     begin: "Begin your reading ✦",
-    orDate: "or start with your birth date",
+    orDate: "With birth date",
     go: "Go",
     touch: "Touch the sky",
     calm: "Calculated, not guessed",

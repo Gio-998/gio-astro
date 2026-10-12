@@ -72,14 +72,12 @@ export function Hero() {
             </div>
           ) : (
             <div className="rise-in mb-4 max-w-xl" style={{ animationDelay: ".7s" }}>
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+              <div className="flex flex-col gap-2 sm:max-w-[420px]">
                 <Link href={h("/start/")} onClick={() => haptic("tick")} className="btn-primary min-h-[56px] px-8 text-[17px]" data-testid="hero-begin">{S.begin}</Link>
-
               </div>
-              <div className="mt-1 flex flex-wrap items-center gap-x-1 text-[13.5px]">
-                {!showDate && <button type="button" onClick={() => setShowDate(true)} className="min-h-[40px] rounded-full px-1 text-gold underline-offset-4 hover:underline" aria-expanded={showDate} data-testid="hero-date-toggle">{S.orDate}</button>}
-                {!showDate && <span className="text-dim" aria-hidden>·</span>}
-                <Link href={h("/match/")} className="min-h-[40px] content-center rounded-full px-1 text-gold underline-offset-4 hover:underline">{H.orMatch}</Link>
+              <div className="mt-2.5 grid grid-cols-2 gap-2 sm:max-w-[420px]">
+                {!showDate && <button type="button" onClick={() => setShowDate(true)} className="inline-flex min-h-[40px] min-w-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/12 bg-white/[0.04] px-2 text-[12.5px] font-medium min-[380px]:px-3 min-[380px]:text-[13px] text-gold/95 backdrop-blur transition hover:border-gold/40 hover:bg-white/[0.08] sm:px-4" aria-expanded={showDate} data-testid="hero-date-toggle"><span aria-hidden className="text-[11px] opacity-80 max-[379px]:hidden">✦</span>{S.orDate}</button>}
+                <Link href={h("/match/")} className="inline-flex min-h-[40px] min-w-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/12 bg-white/[0.04] px-2 text-[12.5px] font-medium min-[380px]:px-3 min-[380px]:text-[13px] text-gold/95 backdrop-blur transition hover:border-gold/40 hover:bg-white/[0.08] sm:px-4"><span aria-hidden className="text-[12px] opacity-80 max-[379px]:hidden">♡</span>{H.orMatch}</Link>
               </div>
               {showDate && (
                 <form onSubmit={go} className="glass rise-in mt-3 flex flex-col gap-2 rounded-[24px] p-2.5 sm:flex-row sm:items-end">
