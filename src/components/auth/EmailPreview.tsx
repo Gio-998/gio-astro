@@ -25,7 +25,7 @@ export function EmailPreview() {
         <Segmented label="Width" value={w} onChange={setW} options={[{ value: "390", label: "📱 390" }, { value: "640", label: "🖥 640" }]} />
       </div>
       <div className="card !p-3"><p className="mb-2 text-sm"><span className="text-dim">{B.emailsSubject}:</span> <b>{mail.subject}</b></p>
-        <div className="flex justify-center overflow-hidden rounded-2xl bg-black/30 p-2"><iframe title={mail.subject} srcDoc={mail.html} sandbox="" style={{ width: Number(w), maxWidth: "100%", height: 860, border: 0, borderRadius: 16, background: "#120f2e" }} /></div>
+        <div className="flex justify-center overflow-hidden rounded-2xl bg-black/30 p-2"><iframe title={mail.subject} srcDoc={mail.html.replaceAll("{{ .Token }}", "482916").replaceAll("{{ .ConfirmationURL }}", "#")} sandbox="" style={{ width: Number(w), maxWidth: "100%", height: 860, border: 0, borderRadius: 16, background: "#120f2e" }} /></div>
       </div>
       <details className="card text-sm"><summary className="cursor-pointer text-gold">HTML</summary><textarea readOnly className="input mt-2 h-48 font-mono text-xs" value={mail.html} /></details>
     </div>
