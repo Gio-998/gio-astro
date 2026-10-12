@@ -12,14 +12,14 @@ export type PlanId = "free" | "plus" | "duo";
 /** Prices in euro cents. */
 export const PLAN_PRICES: Record<PlanId, { month: number; year: number }> = {
   free: { month: 0, year: 0 },
-  plus: { month: 299, year: 2400 },
-  duo: { month: 449, year: 3600 },
+  plus: { month: 749, year: 5900 },
+  duo: { month: 1149, year: 8900 },
 };
 export const RECOMMENDED: PlanId = "plus";
 export type ReportId = "match" | "year" | "deep";
 export const REPORT_PRICES: Record<ReportId, number> = { match: 499, year: 699, deep: 499 };
 
-/** Yearly saving vs 12 monthly payments, whole percent rounded down (24 vs 35.88 → 33%). */
+/** Yearly saving vs 12 monthly payments, whole percent rounded down (59 vs 89.88 → 34%). */
 export const yearlySaving = (p: PlanId) => { const { month, year } = PLAN_PRICES[p]; return month ? Math.floor((1 - year / (month * 12)) * 100) : 0; };
 /** Yearly price expressed per month, in cents (rounded). */
 export const perMonthOfYear = (p: PlanId) => Math.round(PLAN_PRICES[p].year / 12);
