@@ -5,7 +5,6 @@ export const sky = {
     begin: "Begin your reading ✦",
     orDate: "or start with your birth date",
     go: "Go",
-    tilt: "Tilt your phone to move the sky",
     touch: "Touch the sky",
     calm: "Calculated, not guessed",
   },

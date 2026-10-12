@@ -6,7 +6,6 @@ import { ZodiacWheel } from "../art/ZodiacWheel";
 import { useHref, useContent } from "@/lib/content-context";
 import { DatePicker } from "../DatePicker";
 import { useBetaLocked } from "../auth/Beta";
-import { TiltPrompt } from "../sky/LivingSky";
 import { moonPhase } from "@/engine/daily";
 import { SIGN_GLYPH } from "@/engine/zodiac";
 import { haptic } from "@/lib/haptics";
@@ -54,7 +53,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0e0b26] to-transparent" aria-hidden />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-5">
-        <div className="flex flex-wrap items-center gap-2"><Tonight /><TiltPrompt label={S.tilt} /></div>
+        <Tonight />
         <div className="mt-auto max-w-2xl pt-8 md:my-auto">
           <p className="eyebrow mb-4 kinetic-word" style={{ "--i": 0 } as React.CSSProperties}>{H.eyebrow}</p>
           <h1 className="h-display mb-5 text-[clamp(2.85rem,12.4vw,4rem)] md:text-[clamp(3.6rem,5.2vw,5.2rem)] font-medium leading-[0.98] tracking-[-0.015em] [text-wrap:balance]">

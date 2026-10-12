@@ -40,27 +40,3 @@ export function LivingSky() {
     </div>
   );
 }
-
-type OrientationCtor = typeof DeviceOrientationEvent & { requestPermission?: () => Promise<"granted" | "denied"> };
-
-/** iOS needs a tap to allow motion sensors. Shows a small pill only there (Android just works). */
-export function TiltPrompt({ label, className = "" }: { label: string; className?: string }) {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const D = (typeof window !== "undefined" ? window.DeviceOrientationEvent : undefined) as OrientationCtor | undefined;
-    let asked = false; try { asked = localStorage.getItem("horoscop:tilt") != null; } catch { /* */ }
-    const ios = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    if (ios && D && typeof D.requestPermission === "function" && !asked && !prefersReducedMotion()) requestAnimationFrame(() => setShow(true));
-  }, []);
-  if (!show) return null;
-  const ask = async () => {
-    const D = window.DeviceOrientationEvent as OrientationCtor;
-    try { const r = await D.requestPermission!(); localStorage.setItem("horoscop:tilt", r); } catch { /* dismissed */ }
-    setShow(false);
-  };
-  return (
-    <button type="button" onClick={ask} className={`inline-flex min-h-[36px] items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] px-3.5 text-xs text-mist/90 backdrop-blur-md transition active:scale-95 ${className}`} data-testid="tilt-prompt">
-      <span aria-hidden className="inline-block animate-[tilt_2.4s_ease-in-out_infinite]">📱</span>{label}
-    </button>
-  );
-}
