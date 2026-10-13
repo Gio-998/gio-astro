@@ -28,14 +28,14 @@ export const nav: Nav = {
         { href: "/match/", icon: "bond", title: "Kompatibilität", desc: "Zwei Menschen, alle Perspektiven, mit Tipps" },
         { href: "/bond/", icon: "attachment", title: "Beziehungscheck", desc: "Acht Fragen, die ihr gemeinsam beantwortet" },
         { href: "/people/", icon: "care", title: "Personen", desc: "Alle Gespeicherten, bereit zum Vergleich" },
-        { href: "/play/", icon: "tarot", title: "Play Mirror", desc: "Sieben kurze Spiele, die zeigen, wie du handelst" },
+        { href: "/play/", icon: "tarot", title: "Spielspiegel", desc: "Sieben kurze Spiele, die zeigen, wie du handelst" },
       ],
     },
     tests: {
       label: "Tests", feature: { title: "Sieben kurze Tests", text: "Jeder fügt deinem Profil eine Ebene hinzu. Volle Ergebnisse gratis.", cta: "Alle Tests ansehen" },
       allHref: "/quizzes/", allTitle: "Alle Tests", allDesc: "Such dir einen aus, je drei Minuten",
       play: { href: "/play/", title: "Play-Mirror-Spiele", desc: "Verhalten statt Selbstbild: Risiko, Vertrauen, Geduld, Fokus" },
-      deep: { href: "/deep/", title: "Deep Read", desc: "Schwere Entscheidungen und Bauchgefühl, passt sich dir an" },
+      deep: { href: "/deep/", title: "Tiefenlesung", desc: "Schwere Entscheidungen und Bauchgefühl, passt sich dir an" },
     },
     discover: {
       label: "Entdecken", feature: { title: "Ehrlich gebaut", text: "Wie jede Zahl entsteht, was die Wissenschaft sagt und was nicht.", cta: "So funktioniert's" },
