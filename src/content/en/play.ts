@@ -193,6 +193,7 @@ export const play = {
     sub: "Questionnaires show how you see yourself. These seven mini-games watch what you do: your choices, your timing, what happens after a fall. About nine minutes in total.",
     honest: "A behavioural signal from a few minutes of play, not a diagnosis. Tired, distracted or just having fun? It all shows up, so play a game again whenever you like.",
     progress: (n: number) => `${n} of 7 played`,
+    short: "Seven quick games that show how you really act, not how you think you act.",
     play: "Play", replay: "Play again", secs: (s: number) => `about ${Math.round(s / 10) * 10} s`,
     resultTitle: "How you actually play", resultEmpty: "Play your first game and your card starts to fill in.",
     playNext: "Play the next game", allDone: "All seven played. This is your full card.",
