@@ -9,6 +9,7 @@ import "../globals.css";
 import { LOCALES, isLocale, getContent } from "@/content";
 import { ContentProvider } from "@/lib/content-context";
 import { Header, Footer } from "@/components/Chrome";
+import { RouteScrollTop } from "@/components/RouteScrollTop";
 import { SITE_URL } from "@/lib/site-url";
 import { localizedMeta } from "@/lib/seo";
 import { PersonalTheme } from "@/components/PersonalTheme";
@@ -51,7 +52,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
     ],
   };
   return (
-    <html lang={lang} className={`${display.variable} ${caps.variable} ${sans.variable}`}>
+    <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${caps.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
         <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}"}</style></noscript>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteLd) }} />
@@ -62,6 +63,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <AccountBoot />
           <UsageBoot />
           <PrintKit />
+          <RouteScrollTop />
           <Header />
           <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate><ExportPdf /></main>
           <Footer />

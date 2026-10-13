@@ -63,15 +63,14 @@ export function LangSwitch({ className = "" }: { className?: string }) {
   );
 }
 
-/** Same-page taps scroll to the top; cross-page taps land at the top of the new page instead of keeping the footer's scroll offset. */
+/** Same-page taps scroll smoothly to the top; cross-page landing at the top is handled globally by RouteScrollTop. */
 function useToTop() {
   const path = usePathname() || "/";
   return useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
     const target = new URL(e.currentTarget.href, window.location.href).pathname;
     const norm = (p: string) => p.replace(/\/+$/, "");
     if (norm(target) === norm(path)) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
-    window.setTimeout(() => window.scrollTo(0, 0), 0);
-    let n = 0; const t = window.setInterval(() => { if (norm(window.location.pathname) === norm(target) || ++n > 40) { window.clearInterval(t); window.scrollTo(0, 0); } }, 50);
+    // cross-page: RouteScrollTop (layout) lands the new page at the top
   }, [path]);
 }
 
