@@ -4,6 +4,7 @@ import { localizedMeta } from "@/lib/seo";
 import { postsFor } from "@/content/blog";
 import { PageHero } from "@/components/ui";
 import { formatDate } from "@/lib/dates";
+import { LdJson, ORG_REF, abs } from "@/lib/schema";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/blog">) {
   const { lang } = await params; const c = getContent(lang); const B = c.blog;
@@ -13,6 +14,7 @@ export default async function Page({ params }: PageProps<"/[lang]/blog">) {
   const { lang } = await params; const c = getContent(lang); const B = c.blog;
   return (
     <div>
+      <LdJson data={{ "@context": "https://schema.org", "@type": "Blog", name: B.title, description: B.meta, url: abs(`/${lang}/blog/`), inLanguage: lang, publisher: ORG_REF, blogPost: postsFor(lang).map((p) => ({ "@type": "BlogPosting", headline: p.title, url: abs(`/${lang}/blog/${p.slug}/`), datePublished: p.date })) }} />
       <PageHero emblem="eye" img="pillars" title={B.title} sub={B.sub} />
       <div className="grid gap-4" data-testid="blog-index">
         {postsFor(lang).map((p) => (

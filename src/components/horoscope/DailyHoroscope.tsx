@@ -32,8 +32,9 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
     "@context": "https://schema.org", "@type": "Article", headline: r.title, description: r.description, datePublished: `${iso}T00:00:00+02:00`, dateModified: `${iso}T00:00:00+02:00`,
     inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogPath(lang, sign, iso, "wide"))], about: { "@type": "Thing", name: r.signName },
     articleSection: B.ui.hubTitle, wordCount: wordCount(r),
-    author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@type": "Organization", name: c.site.brand, url: SITE_URL },
+    author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` },
   };
+  const crumbs = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [[c.site.brand, `/${lang}/`], [U.hubTitle, horoPath(lang)], [r.signName, horoPath(lang, sign)], ...(isToday ? [] : [[r.dateLabel, horoPath(lang, sign, iso)]])].map(([name, p], i) => ({ "@type": "ListItem", position: i + 1, name, item: absolute(p) })) };
   // Only link to dates this build publishes, so the edges of the window never point at a 404.
   const pub = new Set(publishedDates());
   const dayNav = (
@@ -45,7 +46,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   );
   return (
     <article className="mx-auto max-w-xl space-y-3 lg:relative lg:left-1/2 lg:w-[min(1120px,calc(100vw-4rem))] lg:max-w-none lg:-translate-x-1/2 lg:space-y-0" data-testid="daily-horoscope">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([ld, crumbs]) }} />
       <header className="relative overflow-hidden rounded-[28px] border border-gold/20 bg-[radial-gradient(120%_90%_at_80%_0%,rgba(139,108,240,.45),transparent_60%),linear-gradient(170deg,#1d1748,#0e0b26)] px-5 pb-5 pt-5 shadow-[0_30px_80px_-40px_rgba(139,108,240,.9)] lg:rounded-[36px] lg:px-14 lg:py-14">
         <div aria-hidden className="pointer-events-none absolute -right-16 -top-14 h-44 w-44 opacity-40 sm:-right-10 sm:-top-6 sm:h-56 sm:w-56 sm:opacity-75 lg:right-10 lg:top-1/2 lg:h-[400px] lg:w-[400px] lg:-translate-y-1/2 lg:opacity-100 [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(sign, angle) }} />
         <div className="relative lg:max-w-[600px]">

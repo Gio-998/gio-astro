@@ -6,6 +6,7 @@ import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { PageHero } from "@/components/ui";
 import { SignDaily } from "@/components/day/SignDaily";
 import { SITE_URL } from "@/lib/site-url";
+import { breadcrumb, ORG_REF } from "@/lib/schema";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return LOCALES.flatMap((lang) => SIGNS.map((sign) => ({ lang, sign }))); }
@@ -22,10 +23,11 @@ export default async function Page({ params }: PageProps<"/[lang]/daily/[sign]">
   const { lang, sign } = await params;
   if (!(SIGNS as readonly string[]).includes(sign)) notFound();
   const c = getContent(lang); const s = sign as Sign; const S = c.astro.signs[s]; const P = c.day.pub;
-  const ld = { "@context": "https://schema.org", "@type": "WebPage", name: P.signTitle(S.name), description: P.signMeta(S.name), inLanguage: lang, url: `${SITE_URL}/${lang}/daily/${s}/`, isPartOf: { "@type": "WebSite", name: c.site.brand, url: SITE_URL } };
+  const ld = { "@context": "https://schema.org", "@type": "WebPage", name: P.signTitle(S.name), description: P.signMeta(S.name), inLanguage: lang, url: `${SITE_URL}/${lang}/daily/${s}/`, isPartOf: { "@id": `${SITE_URL}/#website` }, publisher: ORG_REF };
+  const crumbs = breadcrumb([[c.site.brand, `/${lang}/`], [P.hubTitle, `/${lang}/daily/`], [P.signTitle(S.name), `/${lang}/daily/${s}/`]]);
   return (
     <div className="space-y-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([ld, crumbs]) }} />
       <PageHero eyebrow={`${SIGN_GLYPH[s]} ${S.name}`} emblem="sun" img="milkyway" title={P.signTitle(S.name)} sub={S.essence} />
       <SignDaily sign={s} buildIso={buildIso()} />
       <section className="card">
