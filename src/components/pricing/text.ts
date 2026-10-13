@@ -119,7 +119,7 @@ export const de: PricingText = {
     free: { name: "Gratis", line: "Lern dich kennen, ohne Kosten", cta: "Gratis starten",
       features: ["Alle Tests mit vollen Ergebnissen", "Dein Basis-Geburtshoroskop", "Grundlagen zu chinesischem Tierkreis und Numerologie", "Einfacher Kompatibilitätswert", "Tageshoroskop für dein Zeichen"] },
     plus: { name: "Plus", line: "Dein ganzer Himmel, jeden Tag", cta: "Gratis starten", lead: "Alles aus Gratis, dazu:",
-      features: ["Tages-, Wochen- und Monatsdeutungen aus deinem Horoskop", "Transit-Hinweise für deine Planeten", "Das ganze Buch über dich", "Volle Beziehungsgeschichten", "Volles Porträt aus Deep Read", "Dein Jahr im Voraus", "Unbegrenzte Kompatibilität", "PDF-Export"] },
+      features: ["Tages-, Wochen- und Monatsdeutungen aus deinem Horoskop", "Transit-Hinweise für deine Planeten", "Das ganze Buch über dich", "Volle Beziehungsgeschichten", "Volles Porträt aus der Tiefenlesung", "Dein Jahr im Voraus", "Unbegrenzte Kompatibilität", "PDF-Export"] },
     duo: { name: "Duo", line: "Plus für euch beide", cta: "Gratis starten", lead: "Alles aus Plus, für zwei:",
       features: ["Zwei verknüpfte Konten", "Gemeinsames Beziehungs-Dashboard", "Paar-Report für euch zwei", "Tagesimpuls für euch beide"] },
   },
@@ -127,7 +127,7 @@ export const de: PricingText = {
     items: {
       match: { name: "Match-PDF", line: "Eure Passung, bereit zum Drucken" },
       year: { name: "Dein Jahr 2027", line: "Monat für Monat, für dich" },
-      deep: { name: "Deep Read", line: "Dein ganzes inneres Porträt" },
+      deep: { name: "Tiefenlesung", line: "Dein ganzes inneres Porträt" },
     } },
   table: { eyebrow: "Vergleich", title: "Was jeder Plan bietet", feature: "Funktion", rows: [
     ["Alle Tests und Ergebnisse", "yes", "yes", "yes"],
@@ -139,7 +139,7 @@ export const de: PricingText = {
     ["Buch über dich", "Erste Kapitel", "Voll", "Voll"],
     ["Kompatibilität", "Basiswert", "Ohne Limit", "Ohne Limit"],
     ["Beziehungsgeschichten", "Kurzfassung", "Voll", "Voll"],
-    ["Deep Read", "Vorschau", "Voll", "Voll"],
+    ["Tiefenlesung", "Vorschau", "Voll", "Voll"],
     ["Dein Jahr im Voraus", "no", "yes", "yes"],
     ["PDF-Export", "no", "yes", "yes"],
     ["Konten", "1", "1", "2"],
