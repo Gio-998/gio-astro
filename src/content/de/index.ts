@@ -7,10 +7,19 @@ import { day } from "./day";
 import * as daily from "./daily";
 import { sky } from "./sky";
 import { blog } from "./blog";
-export const de = { astro, site, landing, ui, day, daily, sky, blog };
+import * as quizzes from "./quizzes";
+import * as psych from "./psych";
+import * as nums from "./numbers";
+import * as chinese from "./chinese";
+import * as vedic from "./vedic";
+import * as compat from "./compat";
+import { lensInfo, lensUi } from "./lens";
+import { book } from "./book";
+import { accuracy } from "./accuracy";
+import { types } from "./types";
+export const de = { astro, site, landing, ui, day, daily, sky, blog, quizzes, psych, nums, chinese, vedic, compat, lensInfo, lensUi, book, accuracy, types };
 
 /** Small partials for strings shown in nav and footer; deeper bodies of these pages fall back to English for now. */
 export const deNavPartials = {
-  you: { metaTitle: "Du, alles auf einen Blick", eyebrow: "Auf einen Blick", title: "Du, alles auf einen Blick" },
   systems: { how: { link: "So funktioniert Horoscop", metaTitle: "So funktioniert Horoscop: Methoden, Belege und Datenschutz", eyebrow: "Offenes Buch", title: "So funktioniert Horoscop" } },
 };

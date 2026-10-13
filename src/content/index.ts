@@ -38,7 +38,8 @@ import { de as dePartial, deNavPartials } from "./de";
 const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: mkSystems, you: mkYou, partners: mkPartners } as DeepPartial<Content>);
 
 /** Add a locale by creating src/content/<code>/* (any subset) and registering it here. */
-const de: Content = deepMerge<Content>(en, { ...dePartial, ...deNavPartials } as DeepPartial<Content>);
+import { you as deYou, partners as dePartners } from "./de/you";
+const de: Content = deepMerge<Content>(en, { ...dePartial, ...deNavPartials, you: deYou, partners: dePartners } as DeepPartial<Content>);
 export const LOCALES = ["en", "mk", "de"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
