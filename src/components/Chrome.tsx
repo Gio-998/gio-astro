@@ -24,18 +24,31 @@ export function Logo({ className = "" }: { className?: string }) {
 export function LangSwitch({ className = "" }: { className?: string }) {
   const { c, locale } = useContent(); const path = usePathname() || "/";
   return (
-    <div className={`flex items-center rounded-full border border-white/15 bg-white/5 p-0.5 text-xs ${className}`} role="group" aria-label={c.site.language}>
+    <div className={`flex shrink-0 items-center rounded-full border border-white/15 bg-white/5 p-0.5 text-xs ${className}`} role="group" aria-label={c.site.language}>
       {LOCALES.map((l) => {
         const href = localePath(path, l) || `/${l}/`;
         return <a key={l} href={href} hrefLang={l} lang={l} title={c.site.languages[l]}
           onClick={(e) => { e.preventDefault(); try { localStorage.setItem("mirrorstar:lang", l); } catch {} window.location.href = href + window.location.search + window.location.hash; }}
-          className={`rounded-full px-2.5 py-1 font-semibold uppercase tracking-wider transition ${l === locale ? "bg-gold text-plum" : "text-dim hover:text-mist"}`}>{l === "mk" ? "мк" : l}</a>;
+          className={`rounded-full px-1.5 py-1 font-semibold uppercase min-[420px]:px-2 sm:px-2.5 tracking-wider transition ${l === locale ? "bg-gold text-plum" : "text-dim hover:text-mist"}`}>{l === "mk" ? "мк" : l}</a>;
       })}
     </div>
   );
 }
 
+/** Same-page taps scroll to the top; cross-page taps land at the top of the new page instead of keeping the footer's scroll offset. */
+function useToTop() {
+  const path = usePathname() || "/";
+  return useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const target = new URL(e.currentTarget.href, window.location.href).pathname;
+    const norm = (p: string) => p.replace(/\/+$/, "");
+    if (norm(target) === norm(path)) { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+    window.setTimeout(() => window.scrollTo(0, 0), 0);
+    let n = 0; const t = window.setInterval(() => { if (norm(window.location.pathname) === norm(target) || ++n > 40) { window.clearInterval(t); window.scrollTo(0, 0); } }, 50);
+  }, [path]);
+}
+
 export function Header() {
+  const toTop = useToTop();
   const { c } = useContent(); const h = useHref(); const N = useNav();
   const [scrolled, setScrolled] = useState(false);
   const [guestMenu, setGuestMenu] = useState(false); const closeGuest = useCallback(() => setGuestMenu(false), []);
@@ -44,9 +57,9 @@ export function Header() {
   const joinHref = `${h("/")}#waitlist`;
   const bar = `sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/70 shadow-[0_10px_40px_-20px_rgba(0,0,0,.6)] backdrop-blur-xl" : "bg-transparent"}`;
   const logo = (
-    <Link href={h("/")} className="group flex shrink-0 items-center gap-2">
-      <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
-      <span className="h-display text-2xl font-semibold tracking-wide text-aurora">{c.site.brand}</span>
+    <Link href={h("/")} aria-label={c.site.brand} className="group flex shrink-0 items-center gap-1.5 sm:gap-2">
+      <Logo className="h-8 w-8 shrink-0 transition min-[380px]:h-6 min-[380px]:w-6 min-[400px]:h-7 min-[400px]:w-7 duration-700 group-hover:rotate-[20deg] sm:h-8 sm:w-8" />
+      <span className="h-display hidden text-[1.05rem] font-semibold tracking-normal text-aurora min-[380px]:inline min-[460px]:text-lg sm:text-2xl sm:tracking-wide">{c.site.brand}</span>
     </Link>
   );
   if (locked) return (
@@ -77,13 +90,13 @@ export function Header() {
   return (
     <>
       <header className={bar}>
-        <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
+        <div className="relative mx-auto flex max-w-6xl min-w-0 items-center justify-between gap-2 px-4 py-3">
           {logo}
           <div className="hidden lg:block"><DesktopNav keys={["me", "bonds", "tests", "discover"]} /></div>
-          <div className="flex items-center gap-2">
+          <div className="flex min-w-0 shrink items-center gap-1 min-[420px]:gap-1.5 sm:gap-2">
             <LangSwitch />
             <AccountChip />
-            <Link href={h("/start/")} className="btn-primary hidden whitespace-nowrap !px-4 !py-1.5 text-xs min-[420px]:inline-flex lg:!py-2 lg:text-sm">{c.site.startShort} ✦</Link>
+            <Link href={h("/start/")} onClick={toTop} className="btn-primary inline-flex shrink-0 whitespace-nowrap !min-h-0 !px-2.5 !py-1.5 text-[11px] leading-none min-[420px]:text-xs sm:!px-4 lg:!py-2 lg:text-sm" data-testid="nav-start">{c.site.startShort}<span className="hidden min-[460px]:inline">&nbsp;✦</span></Link>
           </div>
         </div>
       </header>
@@ -93,7 +106,7 @@ export function Header() {
 }
 
 export function Footer() {
-  const { c, locale } = useContent(); const h = useHref(); const F = c.site.footerCols; const locked = useBetaLocked();
+  const { c, locale } = useContent(); const h = useHref(); const F = c.site.footerCols; const locked = useBetaLocked(); const toTop = useToTop();
   const cols = [
     ...(locked ? [{ t: F.discover, l: [["/quizzes/", F.quizzes], ["/learn/", c.site.nav.learn]] }] : [
     { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/you/", c.you.title], ["/today/", F.today], ["/quizzes/", F.quizzes], ["/play/", playFor(locale).brand]] },
@@ -105,15 +118,15 @@ export function Footer() {
       <ZodiacWheel className="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] animate-spin-slow opacity-[0.12]" />
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-32 pt-14 md:grid-cols-[1.4fr_1fr_1fr_1fr] lg:pb-14">
         <div>
-          <Link href={h("/")} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
+          <Link href={h("/")} onClick={toTop} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
           <p className="mb-4 max-w-xs text-sm text-dim">{c.site.tagline}. {F.blurb}</p>
-          {locked ? <a href={`${h("/")}#waitlist`} className="btn-primary">{c.ui.beta.joinBeta} ✦</a> : <Link href={h("/start/")} className="btn-primary">{c.site.common.start} ✦</Link>}
+          {locked ? <a href={`${h("/")}#waitlist`} className="btn-primary">{c.ui.beta.joinBeta} ✦</a> : <Link href={h("/start/")} onClick={toTop} className="btn-primary" data-testid="footer-start">{c.site.common.start} ✦</Link>}
           <p className="mt-5 text-sm text-dim"><a className="transition hover:text-gold" href="mailto:contact@horoscop.si" data-testid="footer-email">✉ contact@horoscop.si</a></p>
         </div>
         {cols.map((col) => (
           <div key={col.t}>
             <p className="eyebrow mb-3">{col.t}</p>
-            <ul className="space-y-2 text-sm">{col.l.map(([href, label]) => <li key={href}><Link className="text-dim transition hover:text-gold" href={h(href)}>{label}</Link></li>)}</ul>
+            <ul className="space-y-2 text-sm">{col.l.map(([href, label]) => <li key={href}><Link className="text-dim transition hover:text-gold" href={h(href)} onClick={toTop}>{label}</Link></li>)}</ul>
           </div>
         ))}
       </div>
