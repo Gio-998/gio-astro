@@ -110,7 +110,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
           </section>
 
           <p className="flex items-center justify-between gap-2 rounded-full border border-gold/25 bg-gold/[0.06] px-4 py-2 text-[13px]" aria-label={U.lucky}>
-            <span className="flex min-w-0 items-center gap-1.5"><span aria-hidden className="h-3 w-3 shrink-0 rounded-full ring-1 ring-white/30" style={{ background: r.lucky.hex }} /><span className="truncate">{r.lucky.color}</span></span>
+            <span className="flex shrink-0 items-center gap-1.5"><span aria-hidden className="h-3 w-3 shrink-0 rounded-full ring-1 ring-white/30" style={{ background: r.lucky.hex }} /><span className="whitespace-nowrap" data-testid="lucky-color">{r.lucky.color}</span></span>
             <span className="text-gold/50" aria-hidden>·</span><span><span className="sr-only">{U.number} </span><span className="h-display text-lg leading-none text-gold">{r.lucky.number}</span></span>
             <span className="text-gold/50" aria-hidden>·</span><span className="whitespace-nowrap">{r.lucky.window}</span>
           </p>
