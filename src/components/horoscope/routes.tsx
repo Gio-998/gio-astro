@@ -29,7 +29,7 @@ export async function dayMeta(lang: string, slug: string, date?: string): Promis
   if (!sign || !isValidIso(iso)) return {};
   const r = reading(lang, sign, iso); const B = bankFor(lang);
   const title = date ? r.title : `${B.ui.shortTitle(r.signName)}, ${r.dateLabel}`;
-  return meta(lang, title, r.description, date ? horoPath(lang, sign, iso) : horoPath(lang, sign), date ? horoAlternates(sign, iso) : horoAlternates(sign), [absolute(ogPath(lang, sign, iso, "wide"))]);
+  return meta(lang, title, date ? r.description : B.ui.signHubMeta(r.signName), date ? horoPath(lang, sign, iso) : horoPath(lang, sign), date ? horoAlternates(sign, iso) : horoAlternates(sign), [absolute(ogPath(lang, sign, iso, "wide"))]);
 }
 export function DayPage({ lang, slug, date }: { lang: string; slug: string; date?: string }) {
   const sign = signFromSlug(lang, slug); const iso = date ?? todayIso();

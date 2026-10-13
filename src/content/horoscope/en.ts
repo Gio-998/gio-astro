@@ -100,6 +100,9 @@ export const en: HoroBank = {
   ui: {
     title: (s, d) => `${s} daily horoscope, ${d}`,
     shortTitle: (s) => `${s} horoscope today`,
+    signHubMeta: (s) => `${s} daily horoscope, updated every morning from the real sky: love, work, wellbeing, lucky number and the days ahead. Free, no sign-up.`,
+    signHubIntro: (s) => `This page always shows today's ${s} reading. Earlier days stay available below for two weeks.`,
+    recentDays: "Recent days",
     description: (s, d, h) => `${s} horoscope for ${d}. ${h} Love, work, wellbeing and lucky number from the real sky.`,
     hubTitle: "Daily horoscope", homeEyebrow: "Daily horoscope", homeTitle: "Your sign today", homeAll: "All signs", hubSub: "Pick your sign. Fresh every day, worked out from the real sky.",
     love: "Love", work: "Work", well: "Wellbeing", lucky: "Lucky today", color: "Color", number: "Number", window: "Best hours",
