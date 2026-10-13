@@ -24,6 +24,7 @@ const en = {
     // landing
     loading: "Opening your invite…",
     notFound: "This invite link doesn't work any more. Ask for a new one.",
+    home: "Back to home",
     eyebrow: "A personal invite",
     headA: (n: string) => `${n} wants to see `, headB: "how you match",
     sub: "Add your birth date and Horoscop compares your two charts.",
@@ -67,6 +68,7 @@ const mk: InviteCopy = {
     noneYet: "Сѐ уште никој. Испрати го на некој за кого си љубопитен.",
     loading: "Ја отвораме поканата…",
     notFound: "Овој линк веќе не работи. Побарај нов.",
+    home: "Кон почетна",
     eyebrow: "Лична покана",
     headA: (n: string) => `${n} сака да види `, headB: "колку се совпаѓате",
     sub: "Внеси го датумот на раѓање и Horoscop ги споредува двете карти.",

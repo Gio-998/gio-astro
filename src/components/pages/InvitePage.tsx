@@ -38,7 +38,7 @@ export function InvitePage() {
   };
 
   if (!s || inv === null) return <p className="py-16 text-center text-dim">{T.loading}</p>;
-  if (inv === "missing" || !other) return <div className="card mx-auto mt-8 max-w-md text-center" data-testid="invite-missing"><p className="mb-4 text-dim">{T.notFound}</p><Link className="btn-primary" href={h("/")}>Horoscop</Link></div>;
+  if (inv === "missing" || !other) return <div className="card mx-auto mt-8 max-w-md text-center" data-testid="invite-missing"><p className="mb-4 text-dim">{T.notFound}</p><Link className="btn-primary" href={h("/")} data-testid="invite-home">{T.home}</Link></div>;
   const theirSun = profileOf(other).sun; const A = c.astro;
 
   if (phase === "self") return <div className="card mx-auto mt-8 max-w-md text-center"><p className="text-dim">{T.self}</p></div>;
