@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getContent } from "@/content";
 import { SIGNS, SIGN_GLYPH } from "@/engine/zodiac";
 import { publishedDates, todayIso, isValidIso } from "@/engine/skyday";
-import { reading, horoPath, horoAlternates, bankFor, signFromSlug, ogPath, absolute, type HoroLocale } from "@/lib/horoscope";
+import { reading, horoPath, horoAlternates, bankFor, signFromSlug, ogPath, ogImage, absolute, type HoroLocale } from "@/lib/horoscope";
 import { LOCALE_META } from "@/lib/seo";
 import { DailyHoroscope } from "./DailyHoroscope";
 
@@ -27,7 +27,7 @@ export async function dayMeta(lang: string, slug: string, date?: string): Promis
   if (!sign || !isValidIso(iso)) return {};
   const r = reading(lang, sign, iso); const B = bankFor(lang);
   const title = date ? r.title : `${B.ui.shortTitle(r.signName)}, ${r.dateLabel}`;
-  return meta(lang, title, date ? r.description : B.ui.signHubMeta(r.signName), date ? horoPath(lang, sign, iso) : horoPath(lang, sign), date ? horoAlternates(sign, iso) : horoAlternates(sign), [absolute(ogPath(lang, sign, iso, "wide"))]);
+  return meta(lang, title, date ? r.description : B.ui.signHubMeta(r.signName), date ? horoPath(lang, sign, iso) : horoPath(lang, sign), date ? horoAlternates(sign, iso) : horoAlternates(sign), [absolute(ogImage(lang, sign, iso))]);
 }
 export function DayPage({ lang, slug, date }: { lang: string; slug: string; date?: string }) {
   const sign = signFromSlug(lang, slug); const iso = date ?? todayIso();

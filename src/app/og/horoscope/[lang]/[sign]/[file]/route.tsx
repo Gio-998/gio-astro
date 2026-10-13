@@ -1,14 +1,13 @@
 import { SIGNS, type Sign } from "@/engine/zodiac";
-import { publishedDates, todayIso, addDays } from "@/engine/skyday";
-import { HORO_LOCALES } from "@/lib/horoscope";
+import { HORO_LOCALES, ogUniqueDays } from "@/lib/horoscope";
 import { horoscopeImage } from "@/og/horoscope-image";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
 export function generateStaticParams() {
-  // Link previews (wide) for every published page; story cards only for today and tomorrow, to keep the deploy small.
-  const t = todayIso(); const storyDays = new Set([t, addDays(t, 1)]);
-  return HORO_LOCALES.flatMap((lang) => SIGNS.flatMap((sign) => publishedDates().flatMap((d) => (storyDays.has(d) ? (["wide", "story"] as const) : (["wide"] as const)).map((f) => ({ lang, sign, file: `${d}-${f}.png` })))));
+  // Generated cards (wide + story) only for today and tomorrow; older and later dates use the lean per-sign JPEG (lib/horoscope ogImage).
+  const days = [...ogUniqueDays()];
+  return HORO_LOCALES.flatMap((lang) => SIGNS.flatMap((sign) => days.flatMap((d) => (["wide", "story"] as const).map((f) => ({ lang, sign, file: `${d}-${f}.png` })))));
 }
 export async function GET(_req: Request, { params }: { params: Promise<{ lang: string; sign: string; file: string }> }) {
   const { lang, sign, file } = await params;

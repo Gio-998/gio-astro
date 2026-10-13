@@ -4,7 +4,7 @@ import { publishedDates } from "@/engine/skyday";
 import { RetroMark } from "../RetroMark";
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { getContent } from "@/content";
-import { reading, horoPath, bankFor, absolute, ogPath, type Reading } from "@/lib/horoscope";
+import { reading, horoPath, bankFor, absolute, ogPath, ogImage, type Reading } from "@/lib/horoscope";
 import { signHeroSvg, moonPath } from "./art";
 import { SITE_URL } from "@/lib/site-url";
 
@@ -31,7 +31,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   const url = absolute(isToday ? horoPath(lang, sign) : horoPath(lang, sign, iso));
   const ld = {
     "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: `${iso}T00:00:00+02:00`, dateModified: `${iso}T00:00:00+02:00`,
-    inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogPath(lang, sign, iso, "wide"))], about: { "@type": "Thing", name: r.signName },
+    inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogImage(lang, sign, iso))], about: { "@type": "Thing", name: r.signName },
     articleSection: B.ui.hubTitle, wordCount: wordCount(r),
     author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` },
   };

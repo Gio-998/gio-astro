@@ -120,8 +120,8 @@ export function skyDay(iso: string, sign: Sign): SkyDay {
 
 export const addDays = (iso: string, n: number) => DateTime.fromISO(iso, { zone: SKY_ZONE }).plus({ days: n }).toISODate()!;
 export const todayIso = (now = new Date()) => DateTime.fromJSDate(now, { zone: SKY_ZONE }).toISODate()!;
-/** Dates published by the current build: today in Skopje minus `back` to plus `ahead` days. Env overrides for the nightly job. */
-export function publishedDates(now = new Date(), back = Number(process.env.DAILY_DAYS_BACK ?? 3), ahead = Number(process.env.DAILY_DAYS_AHEAD ?? 3)): string[] {
+/** Dates published by the current build: today in Skopje minus `back` (14) to plus `ahead` (3) days. Env overrides for the nightly job. */
+export function publishedDates(now = new Date(), back = Number(process.env.DAILY_DAYS_BACK ?? 14), ahead = Number(process.env.DAILY_DAYS_AHEAD ?? 3)): string[] {
   const t = todayIso(now); const out: string[] = [];
   for (let i = -back; i <= ahead; i++) out.push(addDays(t, i));
   return out;

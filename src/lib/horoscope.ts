@@ -3,7 +3,7 @@ import { getContent } from "@/content";
 import { en } from "@/content/horoscope/en";
 import { mk } from "@/content/horoscope/mk";
 import type { HoroBank } from "@/content/horoscope/types";
-import { skyDay, addDays, nextEvents, BODIES, type SkyDay, type Body } from "@/engine/skyday";
+import { skyDay, addDays, todayIso, nextEvents, BODIES, type SkyDay, type Body } from "@/engine/skyday";
 import { SIGNS, type Sign, type Element } from "@/engine/zodiac";
 import { formatDate } from "./dates";
 import { SITE_URL } from "./site-url";
@@ -24,6 +24,10 @@ export function horoPath(lang: string, sign?: Sign, iso?: string): string {
 }
 export const horoAlternates = (sign?: Sign, iso?: string) => ({ ...Object.fromEntries(HORO_LOCALES.map((l) => [l, horoPath(l, sign, iso)])), "x-default": horoPath("en", sign, iso) });
 export const ogPath = (lang: string, sign: Sign, iso: string, fmt: "wide" | "story") => `/og/horoscope/${lang}/${sign}/${iso}-${fmt}.png`;
+/** Days that get their own generated share image (today + tomorrow); every other date uses the lean per-sign JPEG. */
+export const ogUniqueDays = (now = new Date()) => { const t = todayIso(now); return new Set([t, addDays(t, 1)]); };
+/** Share image for a sign + date: unique PNG for today/tomorrow, else /og/sign/<lang>-<sign>.jpg (~50 KB). */
+export const ogImage = (lang: string, sign: Sign, iso: string) => (ogUniqueDays().has(iso) ? ogPath(lang, sign, iso, "wide") : `/og/sign/${(HORO_LOCALES as readonly string[]).includes(lang) ? lang : "en"}-${sign}.jpg`);
 export const absolute = (p: string) => `${SITE_URL}${p}`;
 
 export interface Reading {
