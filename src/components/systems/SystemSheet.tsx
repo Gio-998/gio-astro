@@ -38,7 +38,7 @@ export function BioBars({ bio }: { bio: NonNullable<SysCard["bio"]> }) {
   );
 }
 
-/** Bottom sheet (phone) / centred card (desktop) for one system: what it is, what it says for you, method and sources. */
+/** Bottom sheet (phone) / centred card (desktop) for one system: what it is, what it says for you, and method. */
 export function SystemSheet({ card, onClose }: { card: SysCard | null; onClose: () => void }) {
   const { c } = useContent(); const h = useHref(); const reduce = useReducedMotion(); const mounted = useMounted();
   const U = c.systems.ui; const L = c.lensUi; const [heavyOpen, setHeavyOpen] = useState(false); const [method, setMethod] = useState(false);
@@ -90,7 +90,6 @@ export function SystemSheet({ card, onClose }: { card: SysCard | null; onClose: 
                   <div className="mt-2 space-y-2 text-sm text-mist/90" data-testid="system-method">
                     <p><b>{U.inputsLabel}</b> {m.inputs}</p>
                     <p>{m.method}</p>
-                    <ul className="list-disc pl-5 text-xs text-dim">{m.sources.map((s) => <li key={s}>{s}</li>)}</ul>
                   </div>
                 )}
                 <Link className="mt-2 block text-dim underline decoration-dotted underline-offset-4 hover:text-mist" href={h(`/how-it-works/#${card.key}`)}>{c.systems.how.link} ↗</Link>

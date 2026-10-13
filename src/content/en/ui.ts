@@ -283,7 +283,7 @@ export const chart = {
   houseLine: (n: number, h: string) => `House ${n}: this energy shows up most in ${h}.`,
   aspectsTitle: " Inner conversations (aspects)",
   orb: (name: string, orb: string) => `(${name}, orb ${orb}°)`,
-  foot: "Positions computed on your device with the open-source astronomy-engine library (MIT, ~1 arc-minute accuracy). Uranus, Neptune and Pluto move slowly and describe generations more than individuals.",
+  foot: "Positions calculated on your device from precise astronomical data, accurate to about one arc-minute. Uranus, Neptune and Pluto move slowly and describe generations more than individuals.",
 };
 
 export const quiz = {

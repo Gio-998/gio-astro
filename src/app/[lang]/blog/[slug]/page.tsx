@@ -32,7 +32,6 @@ export default async function Page({ params }: PageProps<"/[lang]/blog/[slug]">)
         if (b.t === "quote") return <blockquote key={i} className="h-display my-6 border-l-2 border-gold/60 pl-4 text-2xl italic">{b.text}</blockquote>;
         return <p key={i} className="not-prose my-6"><Link className="btn-primary" href={`/${lang}${b.href}`}>{b.text} →</Link></p>;
       })}
-      {p.sources && <><h2>{B.sources}</h2><ul className="text-xs text-dim">{p.sources.map((s, j) => <li key={j}>{s}</li>)}</ul></>}
     </article>
   );
 }

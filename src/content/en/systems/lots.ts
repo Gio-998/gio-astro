@@ -5,13 +5,13 @@ export const metaExtra: Record<"arabic" | "numextra", SysMeta> = {
   arabic: { name: "Part of Fortune", short: "Lots", evidence: "astronomy",
     what: "Lots are points made from three parts of your chart. Hellenistic astrologers used them first, and Persian and Arab astrologers built on them, which is why they're called Arabic parts. Fortune is read as where life feels easy and well supplied; Spirit as what you choose to go after.",
     inputs: "Birth date, exact time and place (for the Ascendant).",
-    method: "Day birth (Sun above the horizon): Fortune = Ascendant + Moon − Sun, Spirit = Ascendant + Sun − Moon. Night birth swaps them, as Vettius Valens and Paulus Alexandrinus did. Sun, Moon and Ascendant come from astronomy-engine for your birth moment.",
-    sources: ["Vettius Valens, Anthology, book 2 (2nd century)", "Paulus Alexandrinus, Introduction, ch. 23 (378 CE)", "Abu Ma'shar, The Abbreviation of the Introduction to Astrology (9th century)"] },
+    method: "Day birth (Sun above the horizon): Fortune = Ascendant + Moon − Sun, Spirit = Ascendant + Sun − Moon. Night birth swaps them, as Vettius Valens and Paulus Alexandrinus did. Sun, Moon and Ascendant are calculated from precise astronomical data for your birth moment.",
+    sources: [] },
   numextra: { name: "Numbers this month", short: "Number extras", evidence: "popular",
     what: "Three more numbers from Pythagorean numerology: your maturity number (who you grow into after about 40), your personal month and your personal day. A birthday of 13, 14, 16 or 19 is called a karmic debt day, read as a lesson that keeps coming back until you learn it.",
     inputs: "Birth date, full birth name and today's date.",
     method: "Maturity = life path + expression, reduced (11, 22 and 33 kept). Personal month = personal year + calendar month, reduced. Personal day = personal month + day of the month, reduced. All recalculated live from today's date.",
-    sources: ["Matthew Oliver Goodwin, Numerology: The Complete Guide (1981)", "Hans Decoz, Numerology: Key to Your Inner Self (1994)"] },
+    sources: [] },
 };
 export const uiExtra = {
   fortune: "Part of Fortune",

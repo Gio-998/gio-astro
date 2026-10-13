@@ -31,7 +31,7 @@ export const posts: BlogPost[] = [
       { t: "quote", text: "A type is a starting point for a conversation with yourself, not a verdict." },
       { t: "p", text: "Four-letter types are a popular-psychology tool. They give people a shared language and they can be a lot of fun, but they have weaker research support than the Big Five. We label them that way in the app, and we're not affiliated with any type-test publisher." },
     ],
-    sources: ["Pittenger, D. J. (2005). Cautionary comments regarding the Myers-Briggs Type Indicator. Consulting Psychology Journal, 57(3).", "McCrae, R. R., & Costa, P. T. (1989). Reinterpreting the Myers-Briggs Type Indicator from the perspective of the five-factor model. Journal of Personality, 57(1).", "Swann, W. B. (1983). Self-verification: Bringing social reality into harmony with the self."],
+    sources: [],
   },
   {
     slug: "birth-time-daylight-saving-rising-sign",
@@ -45,7 +45,7 @@ export const posts: BlogPost[] = [
       { t: "p", text: "A birth time that's off by 20 minutes is usually fine. A time that's off by a whole hour can easily give you the wrong rising sign, and with it different houses for every planet." },
       { t: "h", text: "The hidden hour: daylight saving time" },
       { t: "p", text: "The most common source of a one-hour error isn't a wrong birth certificate. It's daylight saving time. Clocks in most of Europe and North America move forward an hour in spring and back in autumn, and the rules have changed many times over the decades. Some countries skipped it in certain years. Others used double summer time during the Second World War." },
-      { t: "p", text: "To work out the real moment of your birth, a chart calculator has to know which rules applied in your town on your birth date. We use the IANA time-zone database, the same historical record that phones and computers rely on, which tracks these changes back to the late 1800s for most places." },
+      { t: "p", text: "To work out the real moment of your birth, a chart calculator has to know which rules applied in your town on your birth date. We use a complete historical record of time zone rules, the same kind phones and computers rely on, which tracks these changes back to the late 1800s for most places." },
       { t: "h", text: "Two special cases" },
       { t: "ul", items: [
         "A time that never existed. On the spring changeover, clocks jump from 2:00 straight to 3:00. If a birth time says 2:30 on that night, it can't be right as written. We flag it and use the most likely reading.",
@@ -54,7 +54,7 @@ export const posts: BlogPost[] = [
       { t: "h", text: "Before time zones existed" },
       { t: "p", text: "Standard time zones are younger than you might think. Before they were adopted, towns kept their own local time based on the Sun, so noon in one city could be several minutes different from noon in the next. For births in those years we use the local mean time of the birthplace itself, worked out from its longitude." },
       { t: "h", text: "How accurate is the rest of the chart?" },
-      { t: "p", text: "Planet positions are the easy part. We test ours against NASA JPL's Horizons system, the reference used for spacecraft, and every planet lands within 30 arc-seconds. That's about one hundredth of a degree, far smaller than anything that could change a sign. We also compare full charts, including the rising sign and Midheaven, against published reference charts, and they match to within a few arc-minutes." },
+      { t: "p", text: "Planet positions are the easy part. We test ours against the high precision data used for spacecraft navigation, and every planet lands within 30 arc-seconds. That's about one hundredth of a degree, far smaller than anything that could change a sign. We also compare full charts, including the rising sign and Midheaven, against published reference charts, and they match to within a few arc-minutes." },
       { t: "p", text: "So when a chart is wrong, the cause is almost always the input: the birth time, the place, or the time zone. That's where it pays to double-check." },
       { t: "h", text: "How to check your birth time" },
       { t: "ul", items: [
@@ -67,7 +67,7 @@ export const posts: BlogPost[] = [
       { t: "cta", text: "See your birth chart", href: "/chart/" },
       { t: "p", text: "Astrology here is a language for reflection, not a prediction. But if you're going to read your chart, it should at least be your chart." },
     ],
-    sources: ["IANA Time Zone Database (tz), iana.org/time-zones.", "NASA JPL Horizons System, ssd.jpl.nasa.gov/horizons.", "Hong Kong Observatory, solar terms and lunar calendar tables."],
+    sources: [],
   },
   {
     slug: "what-actually-predicts-a-happy-relationship",
@@ -101,6 +101,6 @@ export const posts: BlogPost[] = [
       { t: "cta", text: "Try the Bond Check", href: "/bond/" },
       { t: "p", text: "If your signs say you clash, don't panic. If they say you're a perfect match, don't relax too much either. Either way, the most useful thing you can do tonight is notice one thing your partner did right, and tell them." },
     ],
-    sources: ["Joel, S., et al. (2020). Machine learning uncovers the most robust self-report predictors of relationship quality across 43 longitudinal couples studies. PNAS, 117(32).", "Malouff, J. M., et al. (2010). The Five-Factor Model of personality and relationship satisfaction of intimate partners: A meta-analysis. Journal of Research in Personality, 44(1).", "Dyrenforth, P. S., et al. (2010). Predicting relationship and life satisfaction from personality in nationally representative samples from three countries. JPSP, 99(4).", "Voas, D. (2007). Ten million marriages: A test of astrological 'love signs'.", "Gottman, J. M., & Levenson, R. W. (1999). What predicts change in marital interaction over time?"],
+    sources: [],
   },
 ];

@@ -12,7 +12,7 @@ function PageEn() {
       <h2>What leaves your device</h2>
       <ul>
         <li>Loading the site and the city list from our static host (standard web server logs such as IP address, kept by the host).</li>
-        <li>Only if you have an account: your email, profile, quiz results and answers, the people you added, Bond Check results, journal entries and your consent choices. These are stored with our database provider Supabase in the EU (Stockholm, Sweden), protected so only your signed-in account can read them. Sign-in emails are sent by Supabase.</li>
+        <li>Only if you have an account: your email, profile, quiz results and answers, the people you added, Bond Check results, journal entries and your consent choices. These are stored with our database hosting provider in the EU (Sweden), protected so only your signed-in account can read them. Sign-in emails are sent through our email delivery provider.</li>
         <li>Nothing else. No analytics cookies, no advertising trackers. We never sell data.</li>
       </ul>
       <h2>Sensitive answers</h2>
@@ -39,7 +39,7 @@ function PageMk() {
       <h2>Што го напушта твојот уред</h2>
       <ul>
         <li>Вчитувањето на страницата и листата на градови од нашиот статичен хостинг (стандардни дневници на веб-серверот, како IP-адреса, што ги чува хостингот).</li>
-        <li>Само ако имаш сметка: твојата е-пошта, профилот, резултатите и одговорите од квизовите, додадените луѓе, резултатите од Проверката на врската, записите во дневникот и твоите согласности. Се чуваат кај нашиот добавувач на база Supabase во ЕУ (Стокхолм, Шведска), заштитени така што може да ги чита само твојата најавена сметка. Е-пораките за најава ги испраќа Supabase.</li>
+        <li>Само ако имаш сметка: твојата е-пошта, профилот, резултатите и одговорите од квизовите, додадените луѓе, резултатите од Проверката на врската, записите во дневникот и твоите согласности. Се чуваат кај нашиот добавувач на хостинг за база на податоци во ЕУ (Шведска), заштитени така што може да ги чита само твојата најавена сметка. Е-пораките за најава се испраќаат преку нашиот добавувач за испорака на е-пошта.</li>
         <li>Ништо друго. Без аналитички колачиња, без рекламни следачи. Никогаш не продаваме податоци.</li>
       </ul>
       <h2>Чувствителни одговори</h2>

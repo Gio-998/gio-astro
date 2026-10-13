@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 const TONE: Record<SysEvidence, string> = { astronomy: "border-sky-300/40 text-sky-200", traditional: "border-gold/40 text-gold", modern: "border-rose/40 text-rose", research: "border-sage/40 text-sage", popular: "border-lilac/40 text-lilac" };
 const ORDER = ["chiron", "nodes", "lilith", "sundegree", "solarreturn", "biorhythm", "nameday", "slavic", "ninestar", "iching", "mayan", "celtic", "norse", "egyptian", "kabbalah", "arabic", "numextra"];
 
-/** Public methodology page: every lens with inputs, method, evidence and sources; cultural order rule; privacy. Server-rendered, no JS needed. */
+/** Public methodology page: every lens with inputs, method, evidence; cultural order rule; privacy. Server-rendered, no JS needed. */
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params; const c = getContent(lang); const H = c.systems.how; const E = c.systems.evidence;
   const href = (p: string) => `/${lang}${p}`;
@@ -29,7 +29,6 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
         <p><b>{H.inputs}:</b> {m.inputs}</p>
         <p><b>{H.calc}:</b> {m.method}</p>
         <p><b>{H.evidence}:</b> {E[m.evidence].icon} {E[m.evidence].label}. {E[m.evidence].text}</p>
-        <div><b>{H.sources}:</b><ul className="mt-1 list-disc pl-5 text-dim">{m.sources.map((s) => <li key={s}>{s}</li>)}</ul></div>
       </div>
     </details>
   );
