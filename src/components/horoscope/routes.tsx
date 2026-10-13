@@ -54,7 +54,7 @@ export function HubPage({ lang }: { lang: string }) {
               <span aria-hidden className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-white/[0.04] opacity-80 [&>svg]:block [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(s, skyDay(iso, s).moon.angle, { moon: false }) }} />
               <span className="min-w-0 flex-1">
                 <span className="block text-[15px] font-medium transition group-hover:text-gold"><span className="text-gold">{SIGN_GLYPH[s]}</span> {c.astro.signs[s].name}</span>
-                <span className="block truncate text-[12.5px] text-mist/65">{r.headline}</span>
+                <span className="mt-0.5 block text-pretty text-[12.5px] leading-snug text-mist/65">{r.headline}</span>
               </span>
               <span aria-hidden className="text-mist/40 transition group-hover:translate-x-0.5 group-hover:text-gold">→</span>
             </Link>
