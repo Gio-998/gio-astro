@@ -41,10 +41,20 @@ export const viewport: Viewport = { themeColor: "#0e0b26", width: "device-width"
 export default async function LangLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
+  const site = getContent(lang).site;
+  // Site-level schema on every page: who publishes the site (Organization) and the site itself (WebSite).
+  const siteLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: site.brand, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 } },
+      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: site.brand, url: `${SITE_URL}/${lang}/`, inLanguage: lang, description: site.description, publisher: { "@id": `${SITE_URL}/#organization` } },
+    ],
+  };
   return (
     <html lang={lang} className={`${display.variable} ${caps.variable} ${sans.variable}`}>
       <body className="font-sans antialiased">
         <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}"}</style></noscript>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteLd) }} />
         <SvgDefs />
         <ContentProvider locale={lang}>
           <LivingSky />
