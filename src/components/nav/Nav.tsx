@@ -59,9 +59,9 @@ function ItemLink({ it, onPick, compact }: { it: Item; onPick?: () => void; comp
 function Feature({ g, onPick }: { g: Group; onPick?: () => void }) {
   const h = useHref();
   return (
-    <Link href={h(g.feature.href)} onClick={onPick} className={`group/f relative flex flex-col justify-end overflow-hidden rounded-[22px] border border-white/15 bg-gradient-to-br ${g.feature.glow} p-5 outline-none focus-visible:ring-1 focus-visible:ring-gold/60`}>
+    <Link href={h(g.feature.href)} onClick={onPick} className={`group/f relative flex min-h-[248px] flex-col justify-end overflow-hidden rounded-[22px] border border-white/15 bg-gradient-to-br ${g.feature.glow} p-5 outline-none focus-visible:ring-1 focus-visible:ring-gold/60`}>
       <span className="pointer-events-none absolute inset-0 bg-[radial-gradient(1px_1px_at_20%_30%,#fff,transparent),radial-gradient(1px_1px_at_70%_20%,#fff,transparent),radial-gradient(1.5px_1.5px_at_40%_70%,#fff,transparent),radial-gradient(1px_1px_at_85%_60%,#fff,transparent)] opacity-60" />
-      <Emblem id={g.feature.icon} className="pointer-events-none absolute -right-6 -top-6 h-40 w-40 opacity-80 transition duration-700 group-hover/f:rotate-12 group-hover/f:scale-110 glow-gold" />
+      <Emblem id={g.feature.icon} className="pointer-events-none absolute -right-4 -top-4 h-32 w-32 opacity-80 transition duration-700 group-hover/f:rotate-12 group-hover/f:scale-110 glow-gold" />
       <span className="relative h-display mb-1 text-2xl leading-tight">{g.feature.title}</span>
       <span className="relative mb-3 text-xs leading-snug text-mist/85">{g.feature.text}</span>
       <span className="relative inline-flex w-max items-center gap-1 rounded-full bg-gold px-3 py-1.5 text-xs font-semibold text-plum">{g.feature.cta} →</span>
