@@ -68,7 +68,7 @@ export function Header() {
         <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
           {logo}
           <div className="hidden lg:block"><DesktopNav keys={["tests", "discover"]} showToday={false} /></div>
-          <nav className="flex items-center gap-1.5 text-sm">
+          <nav aria-label={N.aria.utility} className="flex items-center gap-1.5 text-sm">
             <LangSwitch className="lg:ml-2" />
             <Link href={h("/account/")} className="ml-1 hidden whitespace-nowrap rounded-full px-3 py-1.5 text-mist hover:text-gold lg:inline" data-testid="nav-login">{B.login}</Link>
             <a href={joinHref} className="btn-primary ml-1 hidden whitespace-nowrap !py-2 lg:inline-flex" data-testid="nav-join">{B.joinBeta} ✦</a>
@@ -80,7 +80,7 @@ export function Header() {
         </div>
       </header>
       {/* Phones: the two guest actions live in a bottom bar where the app tabs would be; everything else is in the menu sheet. */}
-      <nav className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-2 gap-2 rounded-3xl border border-white/15 bg-ink/85 p-2 shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl lg:hidden" data-testid="guest-bar">
+      <nav aria-label={N.aria.quick} className="fixed inset-x-3 bottom-3 z-40 grid grid-cols-2 gap-2 rounded-3xl border border-white/15 bg-ink/85 p-2 shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl lg:hidden" data-testid="guest-bar">
         <Link href={h("/account/")} className="btn-ghost !py-2.5 text-center text-sm" data-testid="bar-login">{B.login}</Link>
         <a href={joinHref} className="btn-primary !py-2.5 text-center text-sm" data-testid="bar-join">{B.joinBeta} ✦</a>
       </nav>

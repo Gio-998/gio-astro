@@ -1,6 +1,7 @@
 import type { Nav } from "../en/nav";
 
 export const nav: Nav = {
+  aria: { utility: "Јазик и сметка", quick: "Брзи акции", tabs: "Главни делови" },
   more: "Повеќе", menu: "Мени", close: "Затвори", account: "Сметка", language: "Јазик",
   trust: [
     { icon: "🔒", text: "Приватно, секогаш", href: "/privacy/" },

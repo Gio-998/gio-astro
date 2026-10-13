@@ -187,7 +187,7 @@ export function TabBar() {
   ];
   return (
     <>
-      <nav className="fixed inset-x-3 bottom-3 z-[56] grid grid-cols-5 rounded-3xl border border-white/15 bg-ink/85 pb-[env(safe-area-inset-bottom)] shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl lg:hidden" data-testid="tab-bar">
+      <nav aria-label={N.aria.tabs} className="fixed inset-x-3 bottom-3 z-[56] grid grid-cols-5 rounded-3xl border border-white/15 bg-ink/85 pb-[env(safe-area-inset-bottom)] shadow-[0_20px_50px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl lg:hidden" data-testid="tab-bar">
         {tabs.map((t) => { const on = !more && t.match.some((m) => path.includes(m)); return (
           <Link key={t.href} href={h(t.href)} aria-current={on ? "page" : undefined} className={`relative flex min-h-[56px] flex-col items-center justify-center gap-0.5 text-[10.5px] transition ${on ? "text-gold" : "text-dim"}`}>
             {on && <span className="absolute inset-x-3 top-1 h-[3px] rounded-full bg-gold shadow-[0_0_10px_rgba(246,207,122,.9)]" />}

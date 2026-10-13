@@ -1,5 +1,6 @@
 /** Header mega-menus + phone "More" sheet. Hrefs are locale-free; /play, /daily, /blog and /premium are new routes. */
 export const nav = {
+  aria: { utility: "Language and account", quick: "Quick actions", tabs: "Main sections" },
   more: "More", menu: "Menu", close: "Close", account: "Account", language: "Language",
   trust: [
     { icon: "🔒", text: "Private by default", href: "/privacy/" },
