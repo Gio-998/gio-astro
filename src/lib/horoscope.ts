@@ -2,6 +2,7 @@
 import { getContent } from "@/content";
 import { en } from "@/content/horoscope/en";
 import { mk } from "@/content/horoscope/mk";
+import { de } from "@/content/horoscope/de";
 import type { HoroBank } from "@/content/horoscope/types";
 import { skyDay, addDays, todayIso, nextEvents, BODIES, type SkyDay, type Body } from "@/engine/skyday";
 import { SIGNS, type Sign, type Element } from "@/engine/zodiac";
@@ -9,9 +10,9 @@ import { formatDate } from "./dates";
 import { SITE_URL } from "./site-url";
 import { routeAlternates } from "./i18n-routes";
 
-export const HORO_LOCALES = ["en", "mk"] as const;
+export const HORO_LOCALES = ["en", "mk", "de"] as const;
 export type HoroLocale = (typeof HORO_LOCALES)[number];
-export const BANKS: Record<HoroLocale, HoroBank> = { en, mk };
+export const BANKS: Record<HoroLocale, HoroBank> = { en, mk, de };
 export const bankFor = (lang: string): HoroBank => BANKS[(lang as HoroLocale)] ?? en;
 export const COLOR_HEX: Record<Element, [string, string, string]> = {
   fire: ["#d9573b", "#f2a33a", "#e9c78a"], earth: ["#6f8f4e", "#b8643e", "#d8c29a"], air: ["#8ec5ff", "#b9a7f5", "#c9cbd6"], water: ["#1f9a95", "#5b5fd6", "#e8e4f0"],
@@ -94,10 +95,10 @@ export function reading(lang: string, sign: Sign, iso: string): Reading {
     lang: L, sign, iso, sky, signName, dateLabel, weekday,
     title: B.ui.title(signName, dateLabel), description: B.ui.description(signName, dateLabel, headline),
     headline, love, work, well, sky_: lines.slice(0, 5), moonLine,
-    lucky: { color: B.colors[el][sky.lucky.color], hex: COLOR_HEX[el][sky.lucky.color], number: sky.lucky.number, window: `${pad(sky.lucky.window[0])} ${L === "mk" ? "до" : "to"} ${pad(sky.lucky.window[1])}` },
+    lucky: { color: B.colors[el][sky.lucky.color], hex: COLOR_HEX[el][sky.lucky.color], number: sky.lucky.number, window: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}` },
     prev: addDays(iso, -1), next: addDays(iso, 1),
     overview, single, couple, money, body: M.body[sky.moon.sign], friends: [...M.friends[mh - 1], M.family[sky.moon.phase]].join(" "), why,
-    best: `${pad(sky.lucky.window[0])} ${L === "mk" ? "до" : "to"} ${pad(sky.lucky.window[1])}. ${M.bestBy[sky.lucky.window[0] < 12 ? 0 : sky.lucky.window[0] < 17 ? 1 : 2]}`,
+    best: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}. ${M.bestBy[sky.lucky.window[0] < 12 ? 0 : sky.lucky.window[0] < 17 ? 1 : 2]}`,
     avoid, prompt: M.prompt[mh - 1][v(2, 11)], week, planets,
   };
 }

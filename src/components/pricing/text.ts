@@ -1,4 +1,4 @@
-/** Pricing page copy, EN + MK. Prices live in src/lib/pricing.ts. */
+/** Pricing page copy, EN + MK + DE. Prices live in src/lib/pricing.ts. */
 import type { PlanId, ReportId } from "@/lib/pricing";
 
 type Cell = "yes" | "no" | string;
@@ -56,7 +56,7 @@ export const en: PricingText = {
     ["Can I cancel anytime?", "Yes. One click in your account, with a reminder before every renewal. No weekly plans, no trials that turn into charges."],
     ["What stays free forever?", "Every test and its full result, your basic chart, the basic compatibility score and the daily horoscope for your sign."],
     ["How can I pay?", "Card payments are coming soon. Until then everything you see is free, and your profile carries over when plans open."],
-    ["Which languages?", "Everything is in English and Macedonian, including reports and PDFs. You can switch at any time."],
+    ["Which languages?", "The site is in English, Macedonian and German. You can switch at any time with the flag at the top."],
     ["Do prices include VAT?", "Yes. The price you see is the price you pay, in euro."],
   ] },
   bottom: { title: "Start with the free version", sub: "Make your chart and take the tests. Upgrade only if you want more.", cta: "Start free" },
@@ -108,4 +108,52 @@ export const mk: PricingText = {
   ] },
   bottom: { title: "Започни со бесплатната верзија", sub: "Направи ја твојата карта и пополни ги тестовите. Надгради само ако сакаш повеќе.", cta: "Започни бесплатно" },
 };
-export const pricingText = (lang: string) => (lang === "mk" ? mk : en);
+
+export const de: PricingText = {
+  meta: { title: "Preise: für immer gratis, Plus und Duo", description: "Jeder Test und jedes Ergebnis bleibt für immer gratis. Plus ab 7,49 € im Monat für deine vollen persönlichen Deutungen. Duo für Paare." },
+  eyebrow: "Preise", title: ["Einfache Pläne, ", "im Kern gratis"], sub: "Jeder Test und jedes Ergebnis bleibt gratis. Plus bringt mehr Tiefe, jeden Tag, aus deinem eigenen Horoskop.",
+  monthly: "Monatlich", yearly: "Jährlich", save: (p) => `${p} % sparen`,
+  perMonth: "/ Monat", perYear: "/ Jahr", billedYearly: (p) => `${p} einmal im Jahr`, forever: "für immer gratis",
+  recommended: "Empfohlen", soon: "Zahlungen starten bald. Fang heute gratis an, alles, was du anlegst, bleibt dir.",
+  plans: {
+    free: { name: "Gratis", line: "Lern dich kennen, ohne Kosten", cta: "Gratis starten",
+      features: ["Alle Tests mit vollen Ergebnissen", "Dein Basis-Geburtshoroskop", "Grundlagen zu chinesischem Tierkreis und Numerologie", "Einfacher Kompatibilitätswert", "Tageshoroskop für dein Zeichen"] },
+    plus: { name: "Plus", line: "Dein ganzer Himmel, jeden Tag", cta: "Gratis starten", lead: "Alles aus Gratis, dazu:",
+      features: ["Tages-, Wochen- und Monatsdeutungen aus deinem Horoskop", "Transit-Hinweise für deine Planeten", "Das ganze Buch über dich", "Volle Beziehungsgeschichten", "Volles Porträt aus Deep Read", "Dein Jahr im Voraus", "Unbegrenzte Kompatibilität", "PDF-Export"] },
+    duo: { name: "Duo", line: "Plus für euch beide", cta: "Gratis starten", lead: "Alles aus Plus, für zwei:",
+      features: ["Zwei verknüpfte Konten", "Gemeinsames Beziehungs-Dashboard", "Paar-Report für euch zwei", "Tagesimpuls für euch beide"] },
+  },
+  reports: { eyebrow: "Einmalige Reports", title: "Nur eine Deutung?", sub: "Einmal zahlen, für immer behalten. Kein Plan nötig.", once: "einmalig",
+    items: {
+      match: { name: "Match-PDF", line: "Eure Passung, bereit zum Drucken" },
+      year: { name: "Dein Jahr 2027", line: "Monat für Monat, für dich" },
+      deep: { name: "Deep Read", line: "Dein ganzes inneres Porträt" },
+    } },
+  table: { eyebrow: "Vergleich", title: "Was jeder Plan bietet", feature: "Funktion", rows: [
+    ["Alle Tests und Ergebnisse", "yes", "yes", "yes"],
+    ["Geburtshoroskop", "Basis", "Voll", "Voll"],
+    ["Chinesischer Tierkreis, Numerologie", "Basis", "Voll", "Voll"],
+    ["Tageshoroskop", "Nach Zeichen", "Persönlich", "Persönlich"],
+    ["Wochen- und Monatsdeutungen", "no", "yes", "yes"],
+    ["Transit-Hinweise", "no", "yes", "yes"],
+    ["Buch über dich", "Erste Kapitel", "Voll", "Voll"],
+    ["Kompatibilität", "Basiswert", "Ohne Limit", "Ohne Limit"],
+    ["Beziehungsgeschichten", "Kurzfassung", "Voll", "Voll"],
+    ["Deep Read", "Vorschau", "Voll", "Voll"],
+    ["Dein Jahr im Voraus", "no", "yes", "yes"],
+    ["PDF-Export", "no", "yes", "yes"],
+    ["Konten", "1", "1", "2"],
+    ["Gemeinsames Dashboard", "no", "no", "yes"],
+    ["Paar-Report", "no", "no", "yes"],
+  ] },
+  faq: { eyebrow: "Fragen", title: "Gut zu wissen", items: [
+    ["Kann ich jederzeit kündigen?", "Ja. Ein Klick in deinem Konto, mit einer Erinnerung vor jeder Verlängerung. Keine Wochenabos, keine Testphasen, die heimlich kostenpflichtig werden."],
+    ["Was bleibt für immer gratis?", "Jeder Test mit vollem Ergebnis, dein Basis-Horoskop, der einfache Kompatibilitätswert und das Tageshoroskop für dein Zeichen."],
+    ["Wie kann ich zahlen?", "Kartenzahlung kommt bald. Bis dahin ist alles, was du siehst, gratis, und dein Profil bleibt erhalten, wenn die Pläne starten."],
+    ["Welche Sprachen?", "Die Seite gibt es auf Deutsch, Englisch und Mazedonisch. Du kannst jederzeit oben über die Flagge wechseln."],
+    ["Sind die Preise inklusive MwSt.?", "Ja. Der Preis, den du siehst, ist der Preis, den du zahlst, in Euro."],
+  ] },
+  bottom: { title: "Starte mit der Gratis-Version", sub: "Erstell dein Horoskop und mach die Tests. Upgrade nur, wenn du mehr willst.", cta: "Gratis starten" },
+};
+
+export const pricingText = (lang: string) => ({ en, mk, de } as Record<string, PricingText>)[lang] ?? en;

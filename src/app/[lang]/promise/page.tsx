@@ -42,7 +42,27 @@ function PageMk() {
     </article>
   );
 }
+function PageDe() {
+  return (
+    <article className="prose-soft" lang="de">
+      <PageHero emblem="eye" img="helix" title={<>Unser Versprechen</>} />
+      <p>Diese Branche ist bekannt für Testabos für 1 €, die still zu 40 € im Monat werden, für Kündigungslabyrinthe und Angstmache beim Verkaufen. Wir finden das falsch. Das versprechen wir dir, in klaren Worten:</p>
+      <ul>
+        <li><b>Ergebnisse immer gratis.</b> Jedes Quiz zeigt sein volles Ergebnis, sobald du fertig bist. Keine E-Mail-Pflicht, keine Bezahlschranke am Ende.</li>
+        <li><b>Der Kern bleibt gratis.</b> Geburtshoroskop, Profil, Quizze, Kompatibilität und Tagesimpulse kosten uns kaum etwas, also bleiben sie gratis.</li>
+        <li><b>Klare Preise.</b> Wenn wir kostenpflichtige Extras anbieten (etwa einen ausführlichen Report zum Drucken), steht der Preis auf dem Button, bevor du klickst.</li>
+        <li><b>Keine Testphasen, die zu Abos werden.</b> Kein „1 € jetzt, 40 € später“.</li>
+        <li><b>Kündigen mit einem Klick.</b> Jede Mitgliedschaft lässt sich mit einem Klick kündigen, mit einer Erinnerung vor jeder Verlängerung.</li>
+        <li><b>Erstattung in Geld, nicht in Gutscheinen.</b></li>
+        <li><b>Keine Angst, kein künstlicher Druck.</b> Keine Countdowns, keine „Gefahr in deinem Horoskop“, kein „Hellseherin schreibt…“.</li>
+        <li><b>Keine Untergangsprognosen.</b> Wir sagen nie, dass zwei Menschen „nicht zusammenpassen“. Wir zeigen Stärken, Wachstumsfelder und Übungen.</li>
+        <li><b>Deine Daten gehören dir.</b> Ohne Konto bleibt alles nur in deinem Browser. Lösch es jederzeit auf der Datenschutzseite.</li>
+      </ul>
+      <p>Wenn wir dieses Versprechen je brechen, sag es uns, und wir bringen es in Ordnung.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
 }

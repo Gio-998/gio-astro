@@ -46,7 +46,29 @@ function PageMk() {
     </article>
   );
 }
+function PageDe() {
+  return (
+    <article className="prose-soft" lang="de">
+      <PageHero emblem="tarot" img="milkyway" title={<>Nutzungsbedingungen</>} />
+      <p className="text-sm text-dim">Entwurf v0.1: wird vor der Annahme von Zahlungen anwaltlich geprüft.</p>
+      <h2>Was das ist</h2>
+      <p>Diese App bietet Astrologie, Numerologie, Tarot, traditionelle Systeme und Persönlichkeitsfragebögen <b>zur Selbstreflexion und Unterhaltung</b>. Sie ist keine psychologische, medizinische, rechtliche oder finanzielle Beratung und kann weder die Zukunft vorhersagen noch, ob eine Beziehung gelingt. Triff wichtige Entscheidungen nicht allein auf ihrer Grundlage.</p>
+      <h2>Alter</h2>
+      <p>Du musst mindestens 16 Jahre alt sein, um die App zu nutzen (das Alter der digitalen Einwilligung in Polen).</p>
+      <h2>Daten anderer Menschen</h2>
+      <p>Wenn du jemanden hinzufügst, gib nur Angaben ein, die diese Person dir gern geben würde, am besten mit ihrer Erlaubnis. Nutze die App nicht, um andere zu belästigen, unter Druck zu setzen oder über sie zu entscheiden.</p>
+      <h2>Wohlbefinden</h2>
+      <p>Der Fragebogen zu Körper und Energie ist von Traditionen inspiriert und gibt nur allgemeine Ideen fürs Wohlbefinden. Bei gesundheitlichen Sorgen geh bitte zu einer Ärztin oder einem Arzt. Wenn du dich in einer Beziehung nicht sicher fühlst, wende dich an den Notruf oder ein Hilfetelefon in deiner Nähe.</p>
+      <h2>Gratis-Angebot und kostenpflichtige Extras</h2>
+      <p>Das Kernangebot ist gratis und wird „wie besehen“ bereitgestellt. Künftige kostenpflichtige Extras zeigen ihren Preis vor dem Kauf klar an, lassen sich mit einem Klick kündigen und unterliegen deinen gesetzlichen Verbraucherrechten in der EU.</p>
+      <h2>Inhalte</h2>
+      <p>Die Deutungstexte sind unsere eigenen. Persönlichkeitsfragen aus dem International Personality Item Pool sind gemeinfrei. Städtedaten © GeoNames (CC BY 4.0). Marken Dritter werden nicht verwendet, und wir sind mit keinem Testverlag verbunden.</p>
+      <h2>Kontakt</h2>
+      <p>Fragen oder Anliegen zu deinen Daten? Schreib an <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
 }

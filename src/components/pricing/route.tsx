@@ -10,7 +10,7 @@ import { PLAN_PRICES } from "@/lib/pricing";
 import { LdJson, breadcrumb, faqPage, ORG_REF } from "@/lib/schema";
 
 export function pricingMeta(lang: string): Metadata {
-  const T = pricingText(lang); const brand = getContent(lang).site.brand; const l = (lang === "mk" ? "mk" : "en") as PricingLocale;
+  const T = pricingText(lang); const brand = getContent(lang).site.brand; const l = (["en", "mk", "de"].includes(lang) ? lang : "en") as PricingLocale;
   const canonical = `/${l}${pricingPath(l)}`; const title = `${T.meta.title} · ${brand}`;
   return {
     title: T.meta.title, description: T.meta.description, robots: { index: true, follow: true },

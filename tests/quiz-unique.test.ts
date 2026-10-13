@@ -5,7 +5,7 @@ import { CARE_PAIRS, CARE_ORDER, scoreCare } from "../src/engine/quizzes";
 
 const norm = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 
-describe.each(["en", "mk"] as const)("quiz items are unique (%s)", (lang) => {
+describe.each(["en", "mk", "de"] as const)("quiz items are unique (%s)", (lang) => {
   const defs = quizDefs(getContent(lang));
   it.each([...ALL_QUIZ_IDS])("%s has no repeated questions or options", (id) => {
     const items = defs[id].items;

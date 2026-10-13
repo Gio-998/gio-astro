@@ -216,7 +216,7 @@ export function VerifyPage() {
 function SignedIn() {
   const a = useAccount(); const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const fmt = useDate(); const router = useRouter();
   const [cons, setCons] = useState({ terms: false, data: false, mkt: false }); const [msg, setMsg] = useState("");
-  const time = (iso: string) => new Date(iso).toLocaleTimeString(locale === "mk" ? "mk-MK" : "en-GB", { hour: "2-digit", minute: "2-digit" });
+  const time = (iso: string) => new Date(iso).toLocaleTimeString(locale === "mk" ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB", { hour: "2-digit", minute: "2-digit" });
   return (
     <div className="space-y-4">
       <div className="card space-y-3">

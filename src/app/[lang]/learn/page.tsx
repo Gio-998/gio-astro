@@ -62,7 +62,37 @@ function PageMk() {
     </article>
   );
 }
+function PageDe() {
+  return (
+    <article className="prose-soft" lang="de">
+      <PageHero emblem="chart" img="orion" title={<>So funktioniert&apos;s</>} />
+      <p className="text-sm text-dim">Horoscop dient der Selbstreflexion und dem Spaß. Es ist keine psychologische, medizinische oder finanzielle Beratung.</p>
+      <p><b>Unsere Haltung:</b> Die Sterne bereiten die Bühne, die Psychologie erklärt das Muster, und wie ihr miteinander umgeht, schreibt die Geschichte. Alles hier ist ein Spiegel zum Nachdenken, nie eine Prophezeiung oder ein Urteil.</p>
+      <h2>Was die Forschung sagt</h2>
+      <p>Kontrollierte Studien haben keine Vorhersagekraft der Astrologie für Persönlichkeit oder dafür gefunden, wer wen heiratet (z. B. Carlson, <i>Nature</i> 1985; Voas&apos; Auswertung von rund 10 Millionen Ehen in Großbritannien, 2007/2008). Auch Numerologie, Tarot und ähnliche Systeme sind empirisch nicht belegt. Wir nehmen sie auf, weil sie reiche, alte Sprachen zum Nachdenken sind, und kennzeichnen sie mit ✨ Traditionell und symbolisch.</p>
+      <p>Die Big-Five-Persönlichkeitsmerkmale sind gut erforscht. In Paaren sagen die emotionale Stabilität, Wärme und Verlässlichkeit jedes einzelnen Partners die Zufriedenheit voraus. Wie ähnlich man sich ist, spielt kaum eine Rolle (Malouff et al., 2010; Dyrenforth et al., 2010). Am stärksten hängt die Beziehungsqualität davon ab, wie beide <i>diese</i> Beziehung erleben: Wertschätzung, Verbindlichkeit, Vertrauen, Versöhnung, Spaß (Joel et al., 2020, PNAS). Genau dafür gibt es den Beziehungscheck. Diese Perspektiven tragen das 🔬 Abzeichen. 🧭 Perspektiven aus der Populärpsychologie (Temperamente, Vier-Buchstaben-Stil, neun Motivationen, Fürsorgestile, Schatten und Licht) bieten hilfreiche Begriffe bei begrenzter Evidenz.</p>
+      <h2>Berechnungen</h2>
+      <ul>
+        <li><b>Planeten:</b> auf deinem Gerät aus präzisen astronomischen Daten berechnet. Wir testen gegen hochgenaue Referenzdaten: Jeder Planet liegt innerhalb von 30 Bogensekunden, vollständige Geburtshoroskope stimmen mit professionellen Referenzhoroskopen auf wenige Bogenminuten überein. Tropischer Tierkreis, geozentrische scheinbare Positionen, mittlerer Mondknoten. Aszendent und Himmelsmitte aus Sternzeit und Geburtsort. Ganzzeichen-Häuser.</li>
+        <li><b>Zeitzonen:</b> historische Abweichungen, Kriegszeit und Sommerzeit aus einem vollständigen historischen Verzeichnis der Zeitzonenregeln. Solange eine Region noch nach Ortszeit lebte, nutzen wir den Längengrad deines Geburtsorts. Fällt deine Geburtszeit in einen Zeitsprung (eine Uhrzeit, die es nie gab oder doppelt gab), sagen wir es dir. Du kannst den Versatz selbst festlegen.</li>
+        <li><b>Geburtsorte:</b> Städte mit mehr als 15.000 Einwohnern.</li>
+        <li><b>Unbekannte Geburtszeit:</b> wir nehmen 12 Uhr mittags, lassen den Aszendenten weg und zeigen beide Mondzeichen, falls der Mond an dem Tag das Zeichen gewechselt hat.</li>
+        <li><b>Vedisch:</b> Lahiri-Ayanamsa nach der Definition des indischen Kalenderreform-Komitees (der professionelle Standard, auf etwa eine Bogensekunde genau), 27 Nakshatras und das traditionelle 36-Punkte-System Guna Milan (Ashtakoota) mit allen klassischen Tabellen, darunter die 14 × 14 Yoni-Tabelle und die Vashya-Gruppen, die Schütze und Steinbock bei 15° teilen. Die klassischen Tabellen lesen in eine Richtung (Braut und Bräutigam), daher mitteln wir beide Richtungen, so passt der Wert für jedes Paar. Doshas zeigen wir mit den traditionellen Aufhebungen, nie als Warnung.</li>
+        <li><b>Chinesischer Tierkreis:</b> ein genauer Mondkalender, auf deinem Gerät berechnet. Dein Tier wechselt am <b>Chinesischen Neujahr</b> (die volkstümliche Regel). Weicht das Tier nach Li Chun (Frühlingsbeginn) ab, wie es die Vier-Säulen-Astrologie nutzt, zeigen wir es auch. Tagesmeister und Balance der fünf Elemente stammen aus den vier Säulen: Jahres- und Monatssäule wechseln im exakten Moment des Sonnenabschnitts, Tages- und Stundensäule nutzen die wahre Sonnenzeit am Geburtsort, wie in der klassischen Praxis.</li>
+        <li><b>Numerologie:</b> pythagoreische Buchstabenwerte. Die Lebenszahl reduziert Monat, Tag und Jahr einzeln und behält die Meisterzahlen 11, 22 und 33. Akzente werden entfernt (ł→l, ö→o).</li>
+        <li><b>Tarot-Geburtskarten:</b> Monat + Tag + Jahr, reduziert auf 22 oder weniger (eine Methode, die Mary K. Greer bekannt gemacht hat).</li>
+        <li><b>Big Five:</b> das Mini-IPIP mit 20 Fragen (Donnellan et al., 2006) oder die längeren IPIP Big-Five Factor Markers mit 50 Fragen (Goldberg, 1992), beide aus dem gemeinfreien International Personality Item Pool. Wenn du die lange Version machst, nutzen wir sie. Perzentile beruhen auf ungefähren veröffentlichten Durchschnittswerten. Die vier Temperamente ergeben sich aus Extraversion × emotionaler Empfindsamkeit (Eysenck). Der Vier-Buchstaben-Stil kommt aus unserem eigenen Präferenz-Quiz mit 28 Fragen, je Buchstabenpaar ausgewertet und mit einem Klarheitswert. Bis du es machst, schätzen wir ihn aus deinen Big Five (McCrae und Costa, 1989). Du kannst jederzeit sagen, dass ein Ergebnis nicht passt, und das passende wählen: wir behalten beide und zeigen, welches welches ist. Es ist kein offizieller Typentest, und wir sind mit keinem Verlag für Typentests verbunden.</li>
+        <li><b>Eigene Fragebögen:</b> Bindung (Dimensionen Angst und Vermeidung), neun Motivationen, Fürsorgestile, Schatten und Licht, Körper- und Energietyp (vom Ayurveda inspiriert) sowie Autopilot oder Entdecker plus soziale Haltung (inspiriert vom neurokognitiven und verhaltensorientierten Ansatz von Dr. Jacques Fradin, kein offizielles Verfahren).</li>
+      </ul>
+      <h2>So entstehen die Kompatibilitätswerte</h2>
+      <p>Jede Perspektive liefert zwei Zahlen: <b>Harmonie</b> (Leichtigkeit und Fluss) und <b>Funke</b> (Energie, Herausforderung, Wachstum). Reibung zählt zum Funken, nicht gegen dich. Wir haben jede Perspektive mit Zehntausenden zufälligen Paaren durchgerechnet und wandeln deinen Rohwert in ein Perzentil unter diesen Paaren um. Angezeigt wird 45 + 55 × Perzentil, also eine Skala von 45 bis 100, auf der ein typisches Paar bei etwa 72 liegt. Jede Verbindung hat etwas zu bieten, deshalb beginnt die Skala bei 45.</p>
+      <p>Die Perspektiven fließen zur <b>Resonanz</b> zusammen, gewichtet nach Art der Beziehung (romantisch, Freundschaft, Familie, Kollegen) und nach Sicherheit (eine fehlende Geburtszeit senkt zum Beispiel das Gewicht der Astrologie). Der Schalter <b>nur wissenschaftlich gestützt</b> zeigt einen Wert allein aus Big Five und Bindung. Eine Stufe „passt nicht“ gibt es nicht: Seelenfluss, Natürliche Verbündete, Ergänzender Weg, Katalysator-Bindung und Tiefe Lehrer-Bindung. Zu jedem Wachstumsfeld gibt es Übungen.</p>
+      <h2>Dein Schutz</h2>
+      <p>Wir nutzen das Wissen über Schattenseiten und ungesunde Muster, damit du sie <i>bemerkst</i>, nie, um einen anderen Menschen abzustempeln, und nie gegen dich (keine Angstmache beim Verkaufen, kein künstlicher Druck). Wenn du dich in einer Beziehung nicht sicher fühlst, wende dich bitte an den Notruf oder ein Hilfetelefon gegen häusliche Gewalt.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
 }

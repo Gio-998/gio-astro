@@ -45,6 +45,7 @@ export function rarity(p: Profile): Rarity {
 export function bigNumber(n: number, locale: string): string {
   const mk = locale === "mk";
   const units: [number, string, string][] = [[1e12, "trillion", "трилиони"], [1e9, "billion", "милијарди"], [1e6, "million", "милиони"]];
-  for (const [v, en, m] of units) if (n >= v) return `${(n / v).toLocaleString(mk ? "mk-MK" : "en-GB", { maximumFractionDigits: n / v < 10 ? 1 : 0 })} ${mk ? m : en}`;
-  return Math.round(n).toLocaleString(mk ? "mk-MK" : "en-GB");
+  const deU: Record<number, string> = { 1e12: "Billionen", 1e9: "Milliarden", 1e6: "Millionen" };
+  for (const [v, en, m] of units) if (n >= v) return `${(n / v).toLocaleString(mk ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB", { maximumFractionDigits: n / v < 10 ? 1 : 0 })} ${mk ? m : locale === "de" ? deU[v] : en}`;
+  return Math.round(n).toLocaleString(mk ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB");
 }

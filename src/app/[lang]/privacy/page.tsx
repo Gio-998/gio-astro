@@ -55,7 +55,33 @@ function PageMk() {
     </article>
   );
 }
+function PageDe() {
+  return (
+    <article className="prose-soft" lang="de">
+      <PageHero emblem="moon" img="milkyway" title={<>Datenschutz</>} />
+      <p className="text-sm text-dim">Entwurf v0.2 (Oktober 2026): wird vor der Einführung von Zahlungen anwaltlich geprüft.</p>
+      <h2>Kurz gesagt</h2>
+      <p>Alles, was du eingibst (Geburtsdaten, Quizantworten, hinzugefügte Personen, Tagebucheinträge), wird <b>in deinem Browser</b> (localStorage) auf diesem Gerät gespeichert, und alle Berechnungen laufen auf deinem Gerät. <b>Ein Konto ist freiwillig.</b> Ohne Konto wird nichts hochgeladen. Wenn du ein Konto anlegst, speichern wir eine Kopie in unserer Datenbank, damit deine Geräte synchron bleiben, aber erst, nachdem du die Einwilligungen angehakt hast.</p>
+      <h2>Was dein Gerät verlässt</h2>
+      <ul>
+        <li>Das Laden der Seite und der Städteliste von unserem statischen Hosting (übliche Server-Logs wie die IP-Adresse, gespeichert vom Hoster).</li>
+        <li>Nur mit Konto: deine E-Mail, dein Profil, Quizergebnisse und Antworten, hinzugefügte Personen, Ergebnisse des Beziehungschecks, Tagebucheinträge und deine Einwilligungen. Sie liegen bei unserem Datenbank-Hoster in der EU (Schweden) und sind so geschützt, dass nur dein angemeldetes Konto sie lesen kann. Anmelde-E-Mails verschicken wir über unseren E-Mail-Dienstleister.</li>
+        <li>Sonst nichts. Keine Analyse-Cookies, keine Werbetracker. Wir verkaufen niemals Daten.</li>
+      </ul>
+      <h2>Sensible Antworten</h2>
+      <p>Quizantworten zu Beziehungen, Gefühlen und deinem Körper können persönlich sein. Ohne Konto bleiben sie auf deinem Gerät. Mit Konto werden sie nur nach deiner ausdrücklichen Einwilligung gespeichert, und du kannst sie widerrufen, indem du dein Konto löschst. Profilcodes, die du teilst, enthalten deine Geburtsdaten und Ergebnisse, teile sie also nur mit Menschen, denen du vertraust.</p>
+      <h2>Andere Menschen</h2>
+      <p>Wenn du jemanden hinzufügst, bleiben dessen Daten auf deinem Gerät und, falls vorhanden, in deinem Konto. Bitte füg Menschen nur mit ihrem Wissen hinzu. Sie (oder du) können sie jederzeit löschen.</p>
+      <h2>Konto löschen</h2>
+      <p>Auf der Kontoseite entfernt „Mein Konto löschen“ dein Konto und alle darin gespeicherten Daten sofort und endgültig. Du kannst dich auch abmelden und die Kopie auf diesem Gerät behalten oder entfernen.</p>
+      <h2>Deine Einstellungen</h2>
+      <PrivacyControls />
+      <h2>Kontakt</h2>
+      <p>Fragen oder Anliegen zu deinen Daten? Schreib an <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
 }

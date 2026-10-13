@@ -4,7 +4,7 @@ export const site = {
   themeOn: "My colours: on", themeOff: "My colours: off", themeHint: "Colour the whole site with your personal element palette, or switch back to the default look.",
   datePicker: { day: "Day", month: "Month", year: "Year", done: "Done", placeholder: "Choose a date", title: "Your date", timePh: "Choose a time", hour: "Hour", minute: "Minute" },
   brand: "Horoscop",
-  language: "Language", languages: { en: "English", mk: "Македонски" } as Record<string, string>,
+  language: "Language", languages: { en: "English", mk: "Македонски", de: "Deutsch" } as Record<string, string>,
   startShort: "Start",
   hero: { eyebrow: "Stars · numbers · elements · science", see: "See ", words: ["yourself", "your love", "your friends", "your family"], mid: " and the people around you ", end: "in new colours.", bornOn: "I was born on", reveal: "Reveal my sky ✦", sub: "Your birth chart, Chinese zodiac, numbers, tarot and the personality science that actually holds up, pulled together into one honest mirror for you and your relationships. Free, in 90 seconds.", perks: ["✦ No sign-up", "✦ Full results free", "✦ Data stays on your device"], orMatch: "Check a match", scroll: "Scroll", scrollDown: "Scroll down" },
   carousel: { prev: "Previous signs", next: "Next signs", gifts: "Gifts:", edge: "Growth edge:", more: "Your Sun sign is just one of 18 lenses. Your Moon, rising sign, Chinese animal and numbers often tell a very different story.", cta: "See my full sky ✦" },

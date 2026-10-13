@@ -6,7 +6,7 @@ export default function RootPage() {
   return (
     <main style={{ fontFamily: "system-ui", padding: 40, color: "#ece6ff" }}>
       {/* Only an explicit saved language choice redirects; browser language just triggers a suggestion banner (no auto-redirects for crawlers). */}
-      <script dangerouslySetInnerHTML={{ __html: `try{var l=localStorage.getItem("mirrorstar:lang");if(l==="mk"||l==="en"){location.replace("/"+l+"/")}}catch(e){}` }} />
+      <script dangerouslySetInnerHTML={{ __html: `try{var l=localStorage.getItem("mirrorstar:lang");if(l==="mk"||l==="en"||l==="de"){location.replace("/"+l+"/")}}catch(e){}` }} />
       <meta httpEquiv="refresh" content={`0;url=/${DEFAULT_LOCALE}/`} />
       {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- plain links on the no-JS redirect page */}
       <a href={`/${DEFAULT_LOCALE}/`}>Continue →</a> · <a href="/mk/">Продолжи на македонски →</a>

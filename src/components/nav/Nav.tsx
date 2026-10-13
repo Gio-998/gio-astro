@@ -6,12 +6,13 @@ import { useContent, useHref } from "@/lib/content-context";
 import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { nav as en, type NavGroupKey } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
+import { nav as de } from "@/content/de/nav";
 import { Emblem, type EmblemId } from "../art/Emblem";
 import { pricingPath } from "@/lib/pricing";
 import { sectionSlug } from "@/lib/i18n-routes";
 const horoHubPath = (lang: string) => `/${sectionSlug(lang, "horoscope")}/`;
 
-export const useNav = () => (useContent().locale === "mk" ? mk : en);
+export const useNav = () => ({ en, mk, de })[useContent().locale] ?? en;
 type Item = { href: string; icon: EmblemId; title: string; desc: string };
 type Group = { key: NavGroupKey; label: string; items: Item[]; feature: { title: string; text: string; cta: string; href: string; icon: EmblemId; glow: string } };
 

@@ -34,12 +34,14 @@ function deepMerge<T>(base: T, over: DeepPartial<T> | undefined): T {
   for (const [k, v] of Object.entries(over as Record<string, unknown>)) out[k] = deepMerge((base as Record<string, unknown>)[k], v as never);
   return out as T;
 }
+import { de as dePartial } from "./de";
 const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: mkSystems, you: mkYou, partners: mkPartners } as DeepPartial<Content>);
 
 /** Add a locale by creating src/content/<code>/* (any subset) and registering it here. */
-export const LOCALES = ["en", "mk"] as const;
+const de: Content = deepMerge<Content>(en, dePartial as DeepPartial<Content>);
+export const LOCALES = ["en", "mk", "de"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
-export const contents: Record<Locale, Content> = { en, mk };
+export const contents: Record<Locale, Content> = { en, mk, de };
 export const isLocale = (s: string): s is Locale => (LOCALES as readonly string[]).includes(s);
 export const getContent = (l: string): Content => contents[isLocale(l) ? l : DEFAULT_LOCALE];

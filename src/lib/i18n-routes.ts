@@ -12,19 +12,20 @@
 import type { Sign } from "@/engine/zodiac";
 
 /** Keep in sync with LOCALES in src/content (asserted in tests/i18n-routes.test.ts). */
-export const ROUTE_LOCALES = ["en", "mk"] as const;
+export const ROUTE_LOCALES = ["en", "mk", "de"] as const;
 export type RouteLocale = (typeof ROUTE_LOCALES)[number];
 export const X_DEFAULT: RouteLocale = "en";
 
 /** First path segment: internal folder name → public slug per locale. */
 export const SECTION_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
-  pricing: { en: "pricing", mk: "ceni" },
-  horoscope: { en: "horoscope", mk: "dneven-horoskop" },
+  pricing: { en: "pricing", mk: "ceni", de: "preise" },
+  horoscope: { en: "horoscope", mk: "dneven-horoskop", de: "tageshoroskop" },
 };
 /** Second segment inside sections that list zodiac signs. */
 export const SIGN_SLUGS: Record<RouteLocale, Record<Sign, string>> = {
   en: { aries: "aries", taurus: "taurus", gemini: "gemini", cancer: "cancer", leo: "leo", virgo: "virgo", libra: "libra", scorpio: "scorpio", sagittarius: "sagittarius", capricorn: "capricorn", aquarius: "aquarius", pisces: "pisces" },
   mk: { aries: "oven", taurus: "bik", gemini: "blizanci", cancer: "rak", leo: "lav", virgo: "devica", libra: "vaga", scorpio: "skorpija", sagittarius: "strelec", capricorn: "jarec", aquarius: "vodolija", pisces: "ribi" },
+  de: { aries: "widder", taurus: "stier", gemini: "zwillinge", cancer: "krebs", leo: "loewe", virgo: "jungfrau", libra: "waage", scorpio: "skorpion", sagittarius: "schuetze", capricorn: "steinbock", aquarius: "wassermann", pisces: "fische" },
 };
 const SIGN_SECTIONS = new Set(["horoscope"]);
 const isRouteLocale = (l: string): l is RouteLocale => (ROUTE_LOCALES as readonly string[]).includes(l);

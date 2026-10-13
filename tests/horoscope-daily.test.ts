@@ -31,6 +31,7 @@ describe("public daily horoscope", () => {
           expect(t).not.toMatch(DASH);
           expect(t).not.toMatch(/\w\/\w/u); // no gendered slashes
           if (lang === "mk") expect(t.replace(/\d|:|%|[A-Za-z]{0}/g, "")).not.toMatch(/[A-Za-z]/); // Macedonian copy is fully Cyrillic
+          if (lang === "de") { expect(t).not.toMatch(/\b(the|and|your|you|today|with)\b/); expect(t).not.toMatch(/\b(Sie|Ihnen)\b/); } // German, du-form, no English leaks
         }
         expect(x.lucky.number).toBeGreaterThanOrEqual(1); expect(x.lucky.number).toBeLessThanOrEqual(9);
       }
@@ -48,6 +49,8 @@ describe("public daily horoscope", () => {
   it("has clean, reversible slugs per locale", () => {
     expect(horoPath("mk", "scorpio", "2026-10-13")).toBe("/mk/dneven-horoskop/skorpija/2026-10-13/");
     expect(horoPath("en", "scorpio", "2026-10-13")).toBe("/en/horoscope/scorpio/2026-10-13/");
+    expect(horoPath("de", "scorpio", "2026-10-13")).toBe("/de/tageshoroskop/skorpion/2026-10-13/");
+    expect(signFromSlug("de", "loewe")).toBe("leo");
     for (const l of HORO_LOCALES) for (const s of SIGNS) expect(signFromSlug(l, horoPath(l, s).split("/")[3])).toBe(s);
     expect(isValidIso("2026-02-30")).toBe(false);
   });

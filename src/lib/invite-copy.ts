@@ -1,4 +1,4 @@
-/** Copy for the "Your sky today" share card and friend invites (kept self-contained: EN + native MK). */
+/** Copy for the "Your sky today" share card and friend invites (kept self-contained: EN + native MK + DE). */
 import type { Locale } from "@/content";
 
 const en = {
@@ -89,4 +89,48 @@ const mk: InviteCopy = {
   },
 };
 
-export const inviteCopy = (l: Locale): InviteCopy => (l === "mk" ? mk : en);
+
+const de: InviteCopy = {
+  card: {
+    eyebrow: "Dein Himmel heute",
+    title: "Deine Himmelskarte",
+    desc: "Der Himmel von heute, nur für dich.",
+    story: "Story", square: "Quadrat",
+    share: "Teilen", making: "Wird erstellt…", saved: "In deinen Fotos gespeichert", done: "Geteilt",
+    sun: (s: string) => `Sonne im Zeichen ${s}`, moon: (s: string) => `Mond im Zeichen ${s}`,
+    day: (n: number) => `Tag ${n}`, lit: (n: number) => `${n} % beleuchtet`,
+    scan: "Scannen und deinen Himmel sehen",
+  },
+  invite: {
+    title: "Freunde einladen",
+    desc: "Sobald dein Link geöffnet wird, seht ihr beide eure Passung.",
+    share: "Meinen Link teilen", copy: "Kopieren", copied: "Kopiert",
+    shareText: (n: string) => `${n} möchte sehen, wie gut ihr zusammenpasst. Dauert eine Minute:`,
+    shareTitle: "Wie gut passen wir?",
+    joined: "Über deinen Link dabei",
+    seeMatch: "Ansehen",
+    noneYet: "Noch niemand. Schick ihn jemandem, auf den du neugierig bist.",
+    loading: "Deine Einladung wird geöffnet…",
+    notFound: "Dieser Einladungslink funktioniert nicht mehr. Frag nach einem neuen.",
+    home: "Zur Startseite",
+    eyebrow: "Eine persönliche Einladung",
+    headA: (n: string) => `${n} möchte sehen, `, headB: "wie ihr zusammenpasst",
+    sub: "Gib dein Geburtsdatum ein und Horoscop vergleicht eure beiden Horoskope.",
+    their: (s: string) => `Sonne im Zeichen ${s}`,
+    asMe: (n: string) => `Unsere Passung als ${n} ansehen`,
+    formTitle: "Deine Geburtsdaten",
+    submit: "Unsere Passung zeigen",
+    privacy: (n: string) => `${n} sieht deinen Namen und deine Geburtsdaten, um dieselbe Passung zu sehen.`,
+    working: "Beide Horoskope werden gelesen…",
+    resultEyebrow: "Eure Passung",
+    resultTitle: (a: string, b: string) => `${a} & ${b}`,
+    resultSent: (n: string) => `${n} kann sie auch sehen.`,
+    resonance: "Resonanz", spark: "Funke",
+    full: "Die ganze Beziehungsgeschichte lesen",
+    join: "Konto erstellen",
+    self: "Das ist dein eigener Link. Teil ihn mit Freunden.",
+    error: "Etwas ist schiefgelaufen. Versuch es nochmal.",
+  },
+};
+
+export const inviteCopy = (l: Locale): InviteCopy => ({ en, mk, de })[l] ?? en;

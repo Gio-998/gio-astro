@@ -9,6 +9,7 @@ const PRINTABLE = /^\/[a-z]{2}\/(match|book|me|bond|person|chart)\/?$/;
 const T: Record<string, { btn: string; pick: string; name: string }> = {
   en: { btn: "Export PDF", pick: "PDF language", name: "English" },
   mk: { btn: "Извези PDF", pick: "Јазик на PDF", name: "Македонски" },
+  de: { btn: "PDF exportieren", pick: "Sprache der PDF", name: "Deutsch" },
 };
 const t = (l: string) => T[l] ?? T.en;
 

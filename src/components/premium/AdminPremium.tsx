@@ -35,7 +35,7 @@ export function AdminPremium() {
         <h2 className="h-display mb-2 text-2xl">{T.demo.interest} · {rows?.length ?? "…"}</h2>
         {rows && rows.length === 0 && <p className="text-sm text-dim">{T.demo.noInterest}</p>}
         {rows && rows.length > 0 && <ul className="divide-y divide-white/10 text-sm">{Object.entries(counts).map(([p, n]) => <li key={p} className="flex justify-between py-2"><span>{p === "premium" ? "Premium" : T.products[p]?.name ?? p}</span><span className="text-gold">{n}</span></li>)}</ul>}
-        {rows && rows.length > 0 && <p className="mt-2 text-xs text-dim">{new Date(rows[0].created_at).toLocaleString(locale === "mk" ? "mk-MK" : "en-GB")}</p>}
+        {rows && rows.length > 0 && <p className="mt-2 text-xs text-dim">{new Date(rows[0].created_at).toLocaleString(locale === "mk" ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB")}</p>}
       </div>
       <div className="card">
         <h2 className="h-display mb-2 text-2xl">{A.checklist}</h2>

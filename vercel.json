@@ -1,15 +1,236 @@
 {
   "routes": [
-    { "src": "/en/(premium|upgrade)/?", "status": 308, "headers": { "Location": "/en/pricing/" } },
-    { "src": "/mk/(premium|upgrade)/?", "status": 308, "headers": { "Location": "/mk/ceni/" } },
-    { "src": "/en/ceni/?", "status": 308, "headers": { "Location": "/en/pricing/" } },
-    { "src": "/mk/pricing/?", "status": 308, "headers": { "Location": "/mk/ceni/" } },
-    { "src": "/en/dneven-horoskop(?:/.*)?", "status": 308, "headers": { "Location": "/en/horoscope/" } },
-    { "src": "/mk/horoscope(?:/.*)?", "status": 308, "headers": { "Location": "/mk/dneven-horoskop/" } },
-    { "handle": "filesystem" },
-    { "src": "/invite/[a-zA-Z0-9]{8}/?", "dest": "/en/invite/" },
-    { "src": "/(en|mk)/invite/[a-zA-Z0-9]{8}/?", "dest": "/$1/invite/" },
-    { "src": "/en/horoscope/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?", "status": 308, "headers": { "Location": "/en/horoscope/$1/" } },
-    { "src": "/mk/dneven-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?", "status": 308, "headers": { "Location": "/mk/dneven-horoskop/$1/" } }
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/en/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "lang",
+          "value": "mk"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/mk/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "cookie",
+          "key": "lang",
+          "value": "de"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/de/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "MK"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/mk/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "DE"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/de/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "AT"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/de/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "CH"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/de/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "LI"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/de/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "status": 307,
+      "headers": {
+        "Location": "/en/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/en/(premium|upgrade)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/pricing/"
+      }
+    },
+    {
+      "src": "/mk/(premium|upgrade)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/ceni/"
+      }
+    },
+    {
+      "src": "/de/(premium|upgrade)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/preise/"
+      }
+    },
+    {
+      "src": "/en/(ceni|preise)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/pricing/"
+      }
+    },
+    {
+      "src": "/mk/(pricing|preise)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/ceni/"
+      }
+    },
+    {
+      "src": "/de/(pricing|ceni)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/preise/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/"
+      }
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/invite/[a-zA-Z0-9]{8}/?",
+      "dest": "/en/invite/"
+    },
+    {
+      "src": "/(en|mk|de)/invite/[a-zA-Z0-9]{8}/?",
+      "dest": "/$1/invite/"
+    },
+    {
+      "src": "/en/horoscope/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/$1/"
+      }
+    },
+    {
+      "src": "/mk/dneven-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/$1/"
+      }
+    },
+    {
+      "src": "/de/tageshoroskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/$1/"
+      }
+    }
   ]
 }

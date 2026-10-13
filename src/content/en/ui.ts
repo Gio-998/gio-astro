@@ -438,7 +438,7 @@ export const beta = {
   lockedEyebrow: "Private beta", lockedTitle: "This part opens with an invite", lockedText: "Your profile, readings and matches are for our small group of testers right now. Got an invite? Log in. If not, join the waitlist and we'll make room for you soon.",
   login: "Log in", joinBeta: "Join the beta", joinWaitlist: "Join the waitlist",
   heroNote: "Private beta: invited testers can log in, everyone else can save a spot on the waitlist.",
-  heroPerks: ["✦ Free during the beta", "✦ English and Macedonian", "✦ Your data stays yours"],
+  heroPerks: ["✦ Free during the beta", "✦ English, Macedonian and German", "✦ Your data stays yours"],
   sectionEyebrow: "Private beta · by invitation", sectionTitleA: "Be one of the ", sectionTitleB: "first to try it", sectionText: "We're opening Horoscop to a small circle first, so we can listen properly and polish every reading. Leave your email and we'll send an invite when there's a place.",
   badge: "Private beta",
   banner: "We're in a small private beta. Join the waitlist, or sign in if you have an invite.",
@@ -446,7 +446,7 @@ export const beta = {
   gateText: "Horoscop is open to a small circle of testers while we polish it. Leave your email and we'll send you an invite as soon as there's a place.",
   emailLabel: "Your email for the waitlist", emailPh: "you@example.com", join: "Join the waitlist ✦", joined: "You're on the list. We'll email you when your invite is ready. 💫",
   invalid: "Please enter a valid email address.", haveInvite: "Have an invite? Sign in →", privacy: "We only use your email to send the invite. No spam, unsubscribe any time.",
-  teasers: ["Your birth chart, Chinese sign, numbers and tarot in one place", "A living aura shaped by your answers", "Rich, story-like readings in English and Macedonian", "Compatibility for love, friends, family and work"],
+  teasers: ["Your birth chart, Chinese sign, numbers and tarot in one place", "A living aura shaped by your answers", "Rich, story-like readings in English, Macedonian and German", "Compatibility for love, friends, family and work"],
   emailsTitle: "Email previews", emailsNote: "Demo templates only. Nothing is sent from here. The sign-in code template can be pasted into Supabase as is.", emailsSubject: "Subject", emailsLink: "Email previews", adminHint: "Waitlist sign-ups, invites and email previews", adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove",
   used: "joined", pending: "not joined yet", waitlist: "Waitlist", invite: "Invite", added: (n: number) => `${n} added.`, empty: "Nothing here yet.",
 };

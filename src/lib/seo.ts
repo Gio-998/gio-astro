@@ -11,6 +11,7 @@ import { localizedPath, routeAlternates } from "./i18n-routes";
 export const LOCALE_META: Record<(typeof LOCALES)[number], { hreflang: string; og: string; name: string }> = {
   en: { hreflang: "en", og: "en_US", name: "English" },
   mk: { hreflang: "mk", og: "mk_MK", name: "Македонски" },
+  de: { hreflang: "de", og: "de_DE", name: "Deutsch" },
 };
 /** Private beta flag (accounts are invite-only while on). */
 export const betaOn = process.env.NEXT_PUBLIC_BETA !== "0";

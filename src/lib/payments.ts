@@ -45,7 +45,7 @@ export const yearlySavePct = Math.floor((1 - SKUS["premium-yearly"].cents / (SKU
 export function groupThousands(n: number, sep: string): string { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep); }
 export function eur(cents: number, locale: string): string {
   const whole = Math.floor(cents / 100), frac = cents % 100;
-  if (locale === "mk") return `${groupThousands(whole, ".")}${frac ? `,${String(frac).padStart(2, "0")}` : ""} €`;
+  if (locale === "mk" || locale === "de") return `${groupThousands(whole, ".")}${frac ? `,${String(frac).padStart(2, "0")}` : ""} €`;
   return `€${groupThousands(whole, ",")}${frac ? `.${String(frac).padStart(2, "0")}` : ""}`;
 }
 
