@@ -13,7 +13,9 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/blog/[slug
   const { lang, slug } = await params; const c = getContent(lang); const p = postFor(lang, slug);
   if (!p) return {};
   const m = localizedMeta(lang, `/blog/${slug}/`, { title: p.title, description: p.description, siteName: c.site.brand });
-  return { title: p.title, description: p.description, ...m, openGraph: { ...m.openGraph, type: "article", publishedTime: p.date, modifiedTime: p.updated ?? p.date, tags: p.tags } };
+  // Long post titles drop the " · Horoscop" suffix so the full headline fits in search results (~60 chars).
+  const full = `${p.title} · ${c.site.brand}`;
+  return { title: full.length > 60 ? { absolute: p.title } : p.title, description: p.description, ...m, openGraph: { ...m.openGraph, type: "article", publishedTime: p.date, modifiedTime: p.updated ?? p.date, tags: p.tags } };
 }
 export default async function Page({ params }: PageProps<"/[lang]/blog/[slug]">) {
   const { lang, slug } = await params; const c = getContent(lang); const p = postFor(lang, slug); const B = c.blog;
