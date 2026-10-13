@@ -34,11 +34,11 @@ function deepMerge<T>(base: T, over: DeepPartial<T> | undefined): T {
   for (const [k, v] of Object.entries(over as Record<string, unknown>)) out[k] = deepMerge((base as Record<string, unknown>)[k], v as never);
   return out as T;
 }
-import { de as dePartial } from "./de";
+import { de as dePartial, deNavPartials } from "./de";
 const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: mkSystems, you: mkYou, partners: mkPartners } as DeepPartial<Content>);
 
 /** Add a locale by creating src/content/<code>/* (any subset) and registering it here. */
-const de: Content = deepMerge<Content>(en, dePartial as DeepPartial<Content>);
+const de: Content = deepMerge<Content>(en, { ...dePartial, ...deNavPartials } as DeepPartial<Content>);
 export const LOCALES = ["en", "mk", "de"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
