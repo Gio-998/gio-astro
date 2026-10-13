@@ -43,9 +43,9 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
     <article className="mx-auto max-w-xl space-y-3 lg:relative lg:left-1/2 lg:w-[min(1120px,calc(100vw-4rem))] lg:max-w-none lg:-translate-x-1/2 lg:space-y-0" data-testid="daily-horoscope">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <header className="relative overflow-hidden rounded-[28px] border border-gold/20 bg-[radial-gradient(120%_90%_at_80%_0%,rgba(139,108,240,.45),transparent_60%),linear-gradient(170deg,#1d1748,#0e0b26)] px-5 pb-5 pt-5 shadow-[0_30px_80px_-40px_rgba(139,108,240,.9)] lg:rounded-[36px] lg:px-14 lg:py-14">
-        <div aria-hidden className="pointer-events-none absolute -right-10 -top-6 h-56 w-56 opacity-75 lg:right-10 lg:top-1/2 lg:h-[400px] lg:w-[400px] lg:-translate-y-1/2 lg:opacity-100 [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(sign, angle) }} />
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-14 h-44 w-44 opacity-40 sm:-right-10 sm:-top-6 sm:h-56 sm:w-56 sm:opacity-75 lg:right-10 lg:top-1/2 lg:h-[400px] lg:w-[400px] lg:-translate-y-1/2 lg:opacity-100 [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(sign, angle) }} />
         <div className="relative lg:max-w-[600px]">
-          <p className="eyebrow mb-2 pr-28 text-[11px] lg:mb-4 lg:pr-0 lg:text-[13px]">{SIGN_GLYPH[sign]} {r.signName} · {r.weekday}</p>
+          <p className="eyebrow mb-2 whitespace-nowrap text-[11px] tracking-[.14em] sm:tracking-[.2em] lg:mb-4 lg:text-[13px]" data-testid="horo-eyebrow">{SIGN_GLYPH[sign]} {r.signName} · {r.weekday}</p>
           <h1 className="h-display max-w-[15ch] pr-2 text-[2rem] font-medium leading-[1.05] lg:max-w-none lg:text-[3.3rem]!">{r.title.replace(r.dateLabel, nbsp(r.dateLabel))}</h1>
           <p className="h-display mt-4 text-[1.35rem] italic leading-snug text-gold/95 lg:mt-7 lg:text-[2.25rem] lg:leading-[1.2]">{r.headline}</p>
           <p className="mt-3 flex items-start gap-2 text-[13px] text-mist/75 lg:mt-7 lg:text-[15px]"><MoonDisc angle={angle} className="mt-px h-4 w-4 shrink-0 lg:h-5 lg:w-5" /><span>{r.moonLine}</span></p>
