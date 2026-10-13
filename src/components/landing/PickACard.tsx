@@ -32,8 +32,8 @@ export function PickACard() {
                 <img src={cosmos("orion")} alt="" loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-70" />
                 <span className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
                 <Emblem id="sun" className="absolute left-1/2 top-6 h-14 w-14 -translate-x-1/2 glow-gold" />
-                <span className="relative h-display text-lg leading-tight text-gold">{t.name}</span>
-                <span className="relative text-[11px] text-mist/80">{t.keyword}</span>
+                <span className="relative w-full font-display leading-[1.1] text-gold [overflow-wrap:anywhere] [text-wrap:balance]" style={{ fontSize: t.name.length > 13 ? "13px" : t.name.length > 10 ? "15px" : "18px" }}>{t.name}</span>
+                <span className="relative mt-0.5 w-full text-[11px] leading-tight text-mist/80 [overflow-wrap:anywhere]">{t.keyword}</span>
               </span>
             </button>
           );

@@ -40,7 +40,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <ScrollFx />
 
       {/* Lens marquee */}
-      <div className="bleed relative -mt-6 overflow-hidden border-y border-white/[0.07] bg-white/[0.025] py-3 sm:py-4 [mask-image:linear-gradient(90deg,transparent,#000_14%,#000_86%,transparent)]" aria-label={L.lensesIncluded}>
+      <div className="bleed relative overflow-hidden border-y border-white/[0.07] bg-white/[0.025] py-3 sm:py-4 [mask-image:linear-gradient(90deg,transparent,#000_14%,#000_86%,transparent)]" aria-label={L.lensesIncluded}>
         <div className="flex w-max animate-marquee whitespace-nowrap motion-reduce:animate-none">
           {[0, 1].map((k) => (
             <div key={k} className="flex shrink-0 gap-7 pr-7 sm:gap-10 sm:pr-10" aria-hidden={k === 1}>
@@ -86,7 +86,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         <div className="relative mx-auto max-w-5xl px-4">
           <SectionHead eyebrow={L.s3.eyebrow} title={T(L.s3.title)} sub={L.s3.sub} />
           <Reveal><PickACard /></Reveal>
-          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4" data-fx="pop">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
             {(["/start/", "/match/", "/quizzes/", "/today/"].map((href, i) => [href, L.tools[i][0], L.tools[i][1], (["chart", "bond", "big-five", "moon"] as EmblemId[])[i]]) as [string, string, string, EmblemId][]).map(([href, t, d, e], i) => (
               <Reveal key={href} delay={i * 0.07}>
                 <Link href={h(href)} className="card card-hover block h-full text-center">
@@ -195,7 +195,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       {/* Quiz grid */}
       <section className="pb-24">
         <SectionHead eyebrow={L.s7.eyebrow} title={T(L.s7.title)} sub={L.s7.sub} />
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4" data-fx="pop">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {QUIZ_IDS.map((id, i) => (
             <Reveal key={id} delay={(i % 4) * 0.07}>
               <Link href={h(`/quiz/${id}/`)} className="block h-full">

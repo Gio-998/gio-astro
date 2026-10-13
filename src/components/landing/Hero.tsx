@@ -45,16 +45,15 @@ export function Hero() {
   const go = (e?: React.FormEvent) => { e?.preventDefault(); haptic("tick"); router.push(h(`/start/${date ? `?date=${date}` : ""}`)); };
   const locked = useBetaLocked(); const B = c.ui.beta;
   return (
-    <section className="bleed relative -mt-[72px] flex min-h-[100svh] flex-col overflow-hidden pb-8 pt-[84px] md:-mt-[76px] md:pt-[96px]" data-testid="hero">
+    <section className="bleed relative -mt-[72px] flex flex-col overflow-hidden pb-10 md:min-h-[100svh] md:pb-8 pt-[84px] md:-mt-[76px] md:pt-[96px]" data-testid="hero">
       {/* gilded wheel, slowly turning; the Living Sky (global, fixed) shows through everything */}
       <div className="pointer-events-none absolute -right-[38vw] top-[10%] h-[110vmin] w-[110vmin] opacity-[0.28] sm:-right-[20vw] md:right-[-8vw] md:top-[6%] md:h-[92vmin] md:w-[92vmin] md:opacity-40" aria-hidden>
         <ZodiacWheel className="h-full w-full animate-spin-slow drop-shadow-[0_0_30px_rgba(255,200,97,.25)]" />
       </div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0e0b26] to-transparent" aria-hidden />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-5">
         <Tonight />
-        <div className="mt-auto max-w-2xl pt-8 md:my-auto">
+        <div className="max-w-2xl pt-10 md:my-auto md:pt-8">
           <p className="eyebrow mb-4 kinetic-word" style={{ "--i": 0 } as React.CSSProperties}>{H.eyebrow}</p>
           <h1 className="h-display mb-5 text-[clamp(2.85rem,12.4vw,4rem)] md:text-[clamp(3.6rem,5.2vw,5.2rem)] font-medium leading-[0.98] tracking-[-0.015em] [text-wrap:balance]">
             <span className="block whitespace-nowrap"><Words text={H.see.trim()} start={0} />{" "}<Rotator words={H.words} /></span>

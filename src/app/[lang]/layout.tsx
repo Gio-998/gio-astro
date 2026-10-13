@@ -13,7 +13,6 @@ import { localizedMeta } from "@/lib/seo";
 import { PersonalTheme } from "@/components/PersonalTheme";
 import { AccountBoot } from "@/components/auth/Auth";
 import { BetaGate } from "@/components/auth/Beta";
-import { LangSuggest } from "@/components/LangSuggest";
 import { FeedbackButton, UsageBoot } from "@/components/admin/Feedback";
 
 const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
@@ -53,7 +52,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <UsageBoot />
           <PrintKit />
           <Header />
-          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><LangSuggest /><BetaGate>{children}</BetaGate></main>
+          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate></main>
           <Footer />
           <FeedbackButton />
         </ContentProvider>
