@@ -8,8 +8,8 @@ import { nav as en, type NavGroupKey } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
 import { Emblem, type EmblemId } from "../art/Emblem";
 import { pricingPath } from "@/lib/pricing";
-import { HORO_SLUGS } from "@/lib/horo-slugs";
-const horoHubPath = (lang: string) => `/${(HORO_SLUGS[lang as keyof typeof HORO_SLUGS] ?? HORO_SLUGS.en).section}/`;
+import { sectionSlug } from "@/lib/i18n-routes";
+const horoHubPath = (lang: string) => `/${sectionSlug(lang, "horoscope")}/`;
 
 export const useNav = () => (useContent().locale === "mk" ? mk : en);
 type Item = { href: string; icon: EmblemId; title: string; desc: string };

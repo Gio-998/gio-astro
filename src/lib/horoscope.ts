@@ -7,6 +7,7 @@ import { skyDay, addDays, todayIso, nextEvents, BODIES, type SkyDay, type Body }
 import { SIGNS, type Sign, type Element } from "@/engine/zodiac";
 import { formatDate } from "./dates";
 import { SITE_URL } from "./site-url";
+import { routeAlternates } from "./i18n-routes";
 
 export const HORO_LOCALES = ["en", "mk"] as const;
 export type HoroLocale = (typeof HORO_LOCALES)[number];
@@ -22,7 +23,8 @@ export function horoPath(lang: string, sign?: Sign, iso?: string): string {
   const b = bankFor(lang);
   return `/${lang}/${b.slug}/${sign ? `${b.signSlug[sign]}/` : ""}${iso ? `${iso}/` : ""}`;
 }
-export const horoAlternates = (sign?: Sign, iso?: string) => ({ ...Object.fromEntries(HORO_LOCALES.map((l) => [l, horoPath(l, sign, iso)])), "x-default": horoPath("en", sign, iso) });
+/** hreflang map from the shared slug map (internal route /horoscope/<sign>/<date>/). */
+export const horoAlternates = (sign?: Sign, iso?: string) => routeAlternates(`/horoscope/${sign ? `${sign}/` : ""}${iso ? `${iso}/` : ""}`);
 export const ogPath = (lang: string, sign: Sign, iso: string, fmt: "wide" | "story") => `/og/horoscope/${lang}/${sign}/${iso}-${fmt}.png`;
 /** Days that get their own generated share image (today + tomorrow); every other date uses the lean per-sign JPEG. */
 export const ogUniqueDays = (now = new Date()) => { const t = todayIso(now); return new Set([t, addDays(t, 1)]); };

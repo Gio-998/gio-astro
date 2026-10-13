@@ -6,6 +6,7 @@
 import type { Metadata } from "next";
 import { LOCALES, DEFAULT_LOCALE } from "@/content";
 import { SITE_URL } from "./site-url";
+import { localizedPath, routeAlternates } from "./i18n-routes";
 
 export const LOCALE_META: Record<(typeof LOCALES)[number], { hreflang: string; og: string; name: string }> = {
   en: { hreflang: "en", og: "en_US", name: "English" },
@@ -28,9 +29,9 @@ export function isIndexable(path: string): boolean {
 
 /** `path` is the locale-less route, starting and ending with "/" (e.g. "/", "/match/", "/quiz/big-five/"). */
 export function languageAlternates(path: string): Record<string, string> {
-  const out: Record<string, string> = {};
-  for (const l of LOCALES) out[LOCALE_META[l].hreflang] = `/${l}${path}`;
-  out["x-default"] = `/${DEFAULT_LOCALE}${path}`;
+  const r = routeAlternates(path); const out: Record<string, string> = {};
+  for (const l of LOCALES) out[LOCALE_META[l].hreflang] = r[l];
+  out["x-default"] = localizedPath(DEFAULT_LOCALE, path);
   return out;
 }
 /** Lean default share image per locale (public/og/default/<lang>.jpg, built by scripts/build-og-defaults.py). */
@@ -40,9 +41,9 @@ export function localizedMeta(lang: string, path: string, m: { title?: string; d
   return {
     // Private pages pass their own robots via pageMeta(extra), which wins over this default.
     robots: isIndexable(path) ? { index: true, follow: true } : { index: false, follow: true },
-    alternates: { canonical: `/${l}${path}`, languages: languageAlternates(path) },
+    alternates: { canonical: localizedPath(l, path), languages: languageAlternates(path) },
     openGraph: {
-      siteName: m.siteName, type: "website", url: `${SITE_URL}/${l}${path}`, locale: LOCALE_META[l].og,
+      siteName: m.siteName, type: "website", url: `${SITE_URL}${localizedPath(l, path)}`, locale: LOCALE_META[l].og,
       alternateLocale: LOCALES.filter((x) => x !== l).map((x) => LOCALE_META[x].og),
       images: [defaultOgImage(l)],
       ...(m.title ? { title: m.title } : {}), ...(m.description ? { description: m.description } : {}),

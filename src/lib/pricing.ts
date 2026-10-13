@@ -2,11 +2,13 @@
  * Public price list for the Pricing page (EUR, incl. VAT). Change prices here only.
  * Source: OFFER-PLAN.md section 4 (Balkan-friendly tier). Payments are not live yet.
  */
-export const PRICING_PATHS = { en: "/pricing/", mk: "/ceni/" } as const;
-export type PricingLocale = keyof typeof PRICING_PATHS;
+import { ROUTE_LOCALES, localizedPath, routeAlternates, type RouteLocale } from "./i18n-routes";
+/** Locale-less pricing path per locale (from the shared slug map), e.g. { en: "/pricing/", mk: "/ceni/" }. */
+export const PRICING_PATHS = Object.fromEntries(ROUTE_LOCALES.map((l) => [l, localizedPath(l, "/pricing/").slice(l.length + 1)])) as Record<RouteLocale, string>;
+export type PricingLocale = RouteLocale;
 export const pricingPath = (lang: string) => PRICING_PATHS[(lang as PricingLocale)] ?? PRICING_PATHS.en;
 /** hreflang map for the page (each locale has its own slug). */
-export const pricingAlternates = () => ({ en: `/en${PRICING_PATHS.en}`, mk: `/mk${PRICING_PATHS.mk}`, "x-default": `/en${PRICING_PATHS.en}` });
+export const pricingAlternates = () => routeAlternates("/pricing/");
 
 export type PlanId = "free" | "plus" | "duo";
 /** Prices in euro cents. */
