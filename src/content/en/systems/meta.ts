@@ -102,7 +102,7 @@ export const ui = {
   featuredWhy: { birthplace: "your birthplace", language: "your language", browser: "your browser language" },
   orderRule: "How we order these",
   orderRuleText: "Systems from the culture of your birthplace come first, then ones linked to the language you use. Nothing is hidden; you can open every card.",
-  method: "Method and sources",
+  method: "Method",
   inputsLabel: "What we use:",
   readInMk: "Born in Macedonia? Read Horoscop in Macedonian.",
   provenance: (what: string) => `Calculated from ${what}`,
