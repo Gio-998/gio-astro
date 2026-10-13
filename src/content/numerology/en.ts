@@ -1,6 +1,8 @@
 import { chars } from "./en-chars";
 import { angel } from "./en-angel";
-import { years, karmic, explain } from "./en-more";
+import { years, karmic, explain as explain1 } from "./en-more";
+import { explain2 } from "./en-p2";
+const explain = { ...explain1, ...explain2 };
 
 const ui = {
   section: "Numerology",
@@ -13,7 +15,7 @@ const ui = {
   yearTitle: (n: number) => `Personal year ${n}: what the year asks of you`,
   yearMeta: (n: number) => `Personal year ${n} in numerology: themes, love, work, health and how the months tend to unfold.`,
   number: "Number", digits: "The digits inside", digitsSum: (sum: string, root: number) => `Added together: ${sum}, which reduces to ${root}.`,
-  sec: { scene: "Where you might see it", meaning: "What it means", love: "In love", work: "Work and money", act: "What to do now", why: "Why it keeps appearing", questions: "Questions to sit with", faq: "Frequent questions", story: "The character", gifts: "Gifts", money: "Money", shadow: "The shadow side", week: "How it shows up in a week", growth: "Growth", practices: "Practices", strengths: "Strengths", shadows: "Watch for", focus: "Focus", caution: "Be careful with", months: "How the year unfolds", body: "Energy and health", close: "By the end of the year", related: "Related numbers", explore: "Keep exploring", also: "More angel numbers" },
+  sec: { mood: "The mood of the year", scene: "Where you might see it", meaning: "What it means", love: "In love", work: "Work and money", act: "What to do now", why: "Why it keeps appearing", questions: "Questions to sit with", faq: "Frequent questions", story: "The character", gifts: "Gifts", money: "Money", shadow: "The shadow side", week: "How it shows up in a week", growth: "Growth", practices: "Practices", strengths: "Strengths", shadows: "Watch for", focus: "Focus", caution: "Be careful with", months: "How the year unfolds", body: "Energy and health", close: "By the end of the year", related: "Related numbers", explore: "Keep exploring", also: "More angel numbers" },
   faq: {
     angelMean: (n: string) => `What does ${n} mean?`, angelLove: (n: string) => `What does ${n} mean in love?`, angelDo: (n: string) => `What should I do when I see ${n}?`, angelWhy: (n: string) => `Why do I keep seeing ${n}?`,
     lpMean: (n: number) => `What does life path ${n} mean?`, lpLove: (n: number) => `Who is life path ${n} compatible with?`, lpWork: (n: number) => `What careers suit life path ${n}?`, lpCalc: (n: number) => `How do I know if my life path is ${n}?`,

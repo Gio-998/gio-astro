@@ -1,7 +1,9 @@
 import type { NumContent } from "./en";
 import { chars } from "./mk-chars";
 import { angel } from "./mk-angel";
-import { years, karmic, explain } from "./mk-more";
+import { years, karmic, explain as explain1 } from "./mk-more";
+import { explain2 } from "./mk-p2";
+const explain = { ...explain1, ...explain2 };
 
 const ui: NumContent["ui"] = {
   section: "Нумерологија",
@@ -14,7 +16,7 @@ const ui: NumContent["ui"] = {
   yearTitle: (n) => `Лична година ${n}: што бара годината од тебе`,
   yearMeta: (n) => `Лична година ${n} во нумерологијата: теми, љубов, работа, здравје и како обично течат месеците.`,
   number: "Број", digits: "Цифрите во бројот", digitsSum: (sum, root) => `Збирот е ${sum}, што се сведува на ${root}.`,
-  sec: { scene: "Каде може да го видиш", meaning: "Што значи", love: "Во љубовта", work: "Работа и пари", act: "Што да направиш сега", why: "Зошто постојано се појавува", questions: "Прашања за размислување", faq: "Чести прашања", story: "Карактерот", gifts: "Дарови", money: "Пари", shadow: "Сенката", week: "Како изгледа во една недела", growth: "Раст", practices: "Вежби", strengths: "Силни страни", shadows: "Внимавај на", focus: "Фокус", caution: "Внимавај со", months: "Како тече годината", body: "Енергија и здравје", close: "До крајот на годината", related: "Поврзани броеви", explore: "Истражувај понатаму", also: "Уште ангелски броеви" },
+  sec: { mood: "Расположението на годината", scene: "Каде може да го видиш", meaning: "Што значи", love: "Во љубовта", work: "Работа и пари", act: "Што да направиш сега", why: "Зошто постојано се појавува", questions: "Прашања за размислување", faq: "Чести прашања", story: "Карактерот", gifts: "Дарови", money: "Пари", shadow: "Сенката", week: "Како изгледа во една недела", growth: "Раст", practices: "Вежби", strengths: "Силни страни", shadows: "Внимавај на", focus: "Фокус", caution: "Внимавај со", months: "Како тече годината", body: "Енергија и здравје", close: "До крајот на годината", related: "Поврзани броеви", explore: "Истражувај понатаму", also: "Уште ангелски броеви" },
   faq: {
     angelMean: (n) => `Што значи ${n}?`, angelLove: (n) => `Што значи ${n} во љубовта?`, angelDo: (n) => `Што да направам кога го гледам ${n}?`, angelWhy: (n) => `Зошто постојано го гледам ${n}?`,
     lpMean: (n) => `Што значи патеката на животот ${n}?`, lpLove: (n) => `Со кого е компатибилна патеката ${n}?`, lpWork: (n) => `Кои професии ѝ одговараат на патеката ${n}?`, lpCalc: (n) => `Како да знам дали мојата патека е ${n}?`,

@@ -13,7 +13,7 @@ const btn = "inline-flex h-11 shrink-0 items-center justify-center whitespace-no
 export function Calculator({ lang, mode, L, names, pages, compact = false }: { lang: string; mode: CalcMode; L: CalcLabels; names: Record<number, string>; pages: string[]; compact?: boolean }) {
   const [birth, setBirth] = useState(""); const [name, setName] = useState(""); const [err, setErr] = useState("");
   const [res, setRes] = useState<{ label: string; n: number; href?: string }[] | null>(null);
-  const page = (sec: string, n: number) => { const p = `/numerology/${sec}/${n}/`; return pages.includes(p) ? localizedPath(lang, p) : undefined; };
+  const page = (sec: string, n: number) => { const p = `/numerology/${sec}/${n}/`; const h = `/numerology/${sec}/`; return pages.includes(p) ? localizedPath(lang, p) : pages.includes(h) ? localizedPath(lang, h) : undefined; };
   const year = new Date().getFullYear();
   function run(e: React.FormEvent) {
     e.preventDefault(); setErr("");

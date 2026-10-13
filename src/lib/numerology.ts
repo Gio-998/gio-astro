@@ -2,19 +2,22 @@
 import { numContent } from "@/content/numerology";
 import { getContent } from "@/content";
 import { localizedPath } from "./i18n-routes";
-import { reduce } from "@/engine/numerology";
+import { reduce, rootOf } from "@/engine/numerology";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
 export const LIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
 export const YEARS = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
 export const KARMIC = [13, 14, 16, 19] as const;
-export const CALCS = ["life-path", "name"] as const;
+export const CALCS = ["life-path", "name", "personal-year"] as const;
+export const CORE = ["expression-number", "soul-urge-number", "personality-number", "birthday-number", "maturity-number"] as const;
 export type CalcMode = (typeof CALCS)[number] | "personal-year" | "compatibility";
 
 const N = "/numerology/";
 /** Every public numerology route (internal paths). */
 export function numPaths(): string[] {
-  return [N, `${N}angel-numbers/`, ...ANGEL.map((a) => `${N}angel-numbers/${a}/`), `${N}calculator/`, ...CALCS.map((c) => `${N}calculator/${c}/`)];
+  return [N, `${N}angel-numbers/`, ...ANGEL.map((a) => `${N}angel-numbers/${a}/`), `${N}calculator/`, ...CALCS.map((c) => `${N}calculator/${c}/`),
+    `${N}life-path/`, ...LIFE.map((n) => `${N}life-path/${n}/`), `${N}master-numbers/`, `${N}personal-year/`, ...YEARS.map((n) => `${N}personal-year/${n}/`),
+    ...CORE.map((c) => `${N}${c}/`), `${N}karmic-debt/`, ...KARMIC.map((n) => `${N}karmic-debt/${n}/`)];
 }
 /** Pages that may be listed in the sitemap (generated families join only after their overlap test passes). */
 export const numIndexable = (p: string) => numPaths().includes(p);
@@ -42,7 +45,7 @@ export function numModel(lang: string, path: string): NumModel | null {
     const E = C.explain.hub;
     return { path, kind: "hub", eyebrow: U.section, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub], faq: E.faq,
       blocks: [{ id: "intro", title: U.section, paras: E.intro }, { id: "how", title: U.sec.explore, paras: [...E.how, U.method] }],
-      items: [{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }, ...calcItems()],
+      items: [{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }, { href: lp(lang, `${N}life-path/`), label: U.lifePathHub, sub: C.explain["life-path"].sub }, { href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }, { href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, ...CORE.map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })), { href: lp(lang, `${N}karmic-debt/`), label: U.karmicHub, sub: C.explain["karmic-debt"].sub }, ...calcItems()],
       related: angelItems().slice(0, 12) };
   }
   const [sec, item] = parts;
@@ -84,6 +87,82 @@ export function numModel(lang: string, path: string): NumModel | null {
     return { path, kind: "calc", eyebrow: U.calcHub, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub, [U.calcHub, lp(lang, `${N}calculator/`)], [E.title, lp(lang, path)]], faq: E.faq,
       blocks: [{ id: "intro", title: U.sec.meaning, paras: E.intro }, { id: "how", title: U.calc.steps, paras: E.how }], calc: item as CalcMode,
       related: calcItems().filter((_, k) => CALCS[k] !== item).concat([{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }]) };
+  }
+  const D = getContent(lang).deep; const NUMS = getContent(lang).nums.numbers;
+  const lifeItems = (): LinkItem[] => LIFE.map((n) => ({ href: lp(lang, `${N}life-path/${n}/`), label: C.chars[n].name, sub: C.chars[n].essence, big: String(n) }));
+  const yearItems = (): LinkItem[] => YEARS.map((n) => ({ href: lp(lang, `${N}personal-year/${n}/`), label: D.personalYearDeep[n].title, sub: U.yearShort(n), big: String(n) }));
+  const karmicItems = (): LinkItem[] => KARMIC.map((n) => ({ href: lp(lang, `${N}karmic-debt/${n}/`), label: C.karmic[n].title, sub: C.karmic[n].lesson, big: String(n) }));
+  const hubOf = (key: string, crumb: string, items: LinkItem[], extra: Block[] = [], calc?: CalcMode, related?: LinkItem[]): NumModel => {
+    const E = C.explain[key];
+    return { path, kind: "hub", eyebrow: U.section, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub, [crumb, lp(lang, path)]], faq: E.faq,
+      blocks: [{ id: "intro", title: crumb, paras: E.intro }, ...extra, { id: "how", title: U.calc.steps, paras: E.how }], items, calc, related };
+  };
+  if (sec === "life-path" && !item) return hubOf("life-path", U.lifePathHub, lifeItems(), [], "life-path", [{ href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, { href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }]);
+  if (sec === "life-path" && item && (LIFE as readonly number[]).includes(Number(item))) {
+    const n = Number(item) as (typeof LIFE)[number]; const ch = C.chars[n]; const dp = D.lifePathDeep[n]; const k = LIFE.indexOf(n);
+    const prevN = LIFE[(k + LIFE.length - 1) % LIFE.length], nextN = LIFE[(k + 1) % LIFE.length];
+    const rep = n > 9 ? `${n}${n}` : `${n}${n}${n}`; const angelRep = (ANGEL as readonly string[]).includes(rep) ? rep : undefined;
+    const rel: LinkItem[] = [
+      ...(n > 9 ? [{ href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, { href: lp(lang, `${N}life-path/${rootOf(n)}/`), label: U.lifePathShort(rootOf(n)), sub: C.chars[rootOf(n)].name, big: String(rootOf(n)) }] : [{ href: lp(lang, `${N}personal-year/${n}/`), label: U.yearShort(n), sub: D.personalYearDeep[n].title, big: String(n) }]),
+      ...(angelRep ? [{ href: lp(lang, `${N}angel-numbers/${angelRep}/`), label: `${U.angelHub} ${angelRep}`, sub: C.angel[angelRep].tag, big: angelRep }] : []),
+    ];
+    return { path, kind: "article", eyebrow: `${U.lifePathHub} · ${ch.name}`, h1: U.lifePathTitle(n), title: U.lifePathTitle(n), description: U.lifePathMeta(n, ch.name), lead: dp.quote, big: String(n),
+      crumbs: [home, hub, [U.lifePathHub, lp(lang, `${N}life-path/`)], [String(n), lp(lang, path)]],
+      blocks: [
+        { id: "story", title: dp.title, paras: [...dp.story, ch.story] },
+        { id: "gifts", title: U.sec.gifts, paras: [ch.gifts, NUMS[n].lifePath], list: dp.strengths },
+        { id: "love", title: U.sec.love, paras: [dp.love ?? "", ch.love].filter(Boolean) },
+        { id: "work", title: U.sec.work, paras: [dp.work ?? "", ch.work, ch.money].filter(Boolean) },
+        { id: "shadow", title: U.sec.shadow, paras: [ch.shadow], list: dp.shadows },
+        { id: "week", title: U.sec.week, paras: [ch.week] },
+        { id: "growth", title: U.sec.growth, quote: dp.growth ?? ch.questions[0] },
+        { id: "practices", title: U.sec.practices, list: [...(dp.practices ?? [])] },
+        { id: "questions", title: U.sec.questions, list: [...ch.questions, ...(dp.journal ?? [])] },
+      ].filter((b) => (b.paras?.length ?? 0) + (b.list?.length ?? 0) + (b.quote ? 1 : 0) > 0),
+      faq: [[U.faq.lpMean(n), `${ch.name}: ${ch.essence}. ${NUMS[n].lifePath}`], [U.faq.lpLove(n), ch.love], [U.faq.lpWork(n), ch.work], [U.faq.lpCalc(n), U.faq.lpCalcA]],
+      related: rel, prev: { href: lp(lang, `${N}life-path/${prevN}/`), label: String(prevN) }, next: { href: lp(lang, `${N}life-path/${nextN}/`), label: String(nextN) }, calc: "life-path" };
+  }
+  if (sec === "master-numbers" && !item) {
+    const ms = [11, 22, 33] as const;
+    return hubOf("master-numbers", U.masterHub, lifeItems().slice(9), ms.map((n) => ({ id: `m${n}`, title: `${n}, ${C.chars[n].name}`, paras: [C.chars[n].story, C.chars[n].gifts, C.chars[n].shadow] })), "life-path");
+  }
+  if (sec === "personal-year" && !item) return hubOf("personal-year", U.yearHub, yearItems(), [], "personal-year");
+  if (sec === "personal-year" && item && (YEARS as readonly number[]).includes(Number(item))) {
+    const n = Number(item); const y = C.years[n]; const dy = D.personalYearDeep[n];
+    const prevN = n === 1 ? 9 : n - 1, nextN = n === 9 ? 1 : n + 1;
+    return { path, kind: "article", eyebrow: `${U.yearHub} · ${n}`, h1: U.yearTitle(n), title: U.yearTitle(n), description: U.yearMeta(n), lead: dy.title, big: String(n),
+      crumbs: [home, hub, [U.yearHub, lp(lang, `${N}personal-year/`)], [String(n), lp(lang, path)]],
+      blocks: [
+        { id: "scene", title: U.sec.mood, paras: [y.scene, dy.text] },
+        { id: "focus", title: U.sec.focus, list: dy.focus },
+        { id: "months", title: U.sec.months, paras: [y.months] },
+        { id: "love", title: U.sec.love, paras: [y.love] },
+        { id: "work", title: U.sec.work, paras: [y.work] },
+        { id: "body", title: U.sec.body, paras: [y.body] },
+        { id: "caution", title: U.sec.caution, quote: dy.caution },
+        { id: "close", title: U.sec.close, paras: [y.close, C.chars[n].week] },
+      ],
+      faq: [[U.faq.yrMean(n), `${dy.title}. ${dy.text}`], [U.faq.yrCalc, U.faq.yrCalcA]],
+      related: [{ href: lp(lang, `${N}life-path/${n}/`), label: U.lifePathShort(n), sub: C.chars[n].name, big: String(n) }],
+      prev: { href: lp(lang, `${N}personal-year/${prevN}/`), label: String(prevN) }, next: { href: lp(lang, `${N}personal-year/${nextN}/`), label: String(nextN) }, calc: "personal-year" };
+  }
+  if ((CORE as readonly string[]).includes(sec) && !item) {
+    const line = (n: number) => sec === "expression-number" ? NUMS[n].expression : sec === "soul-urge-number" ? NUMS[n].soul : sec === "personality-number" ? `${C.chars[n].essence}. ${C.chars[n].gifts}` : sec === "maturity-number" ? C.chars[n].gifts : C.chars[n].essence;
+    const nums = LIFE as readonly number[];
+    const extra: Block[] = sec === "birthday-number" ? [] : [{ id: "numbers", title: U.pickNumber, list: nums.map((n) => `${n}, ${C.chars[n].name}: ${line(n)}`) }];
+    const calc: CalcMode | undefined = sec === "birthday-number" || sec === "maturity-number" ? "life-path" : "name";
+    return hubOf(sec, C.explain[sec].title.split(":")[0], sec === "birthday-number" ? [] : lifeItems(), extra, calc, CORE.filter((c) => c !== sec).map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })));
+  }
+  if (sec === "karmic-debt" && !item) return hubOf("karmic-debt", U.karmicHub, karmicItems(), [], "life-path");
+  if (sec === "karmic-debt" && item && (KARMIC as readonly number[]).includes(Number(item))) {
+    const n = Number(item) as (typeof KARMIC)[number]; const K = C.karmic[n]; const r = reduce(n, false); const i = KARMIC.indexOf(n);
+    const prevN = KARMIC[(i + 3) % 4], nextN = KARMIC[(i + 1) % 4];
+    return { path, kind: "article", eyebrow: `${U.karmicHub} · ${n}`, h1: K.title, title: K.title, description: `${K.story[0]} ${K.lesson}`.slice(0, 158), lead: K.lesson, big: String(n),
+      crumbs: [home, hub, [U.karmicHub, lp(lang, `${N}karmic-debt/`)], [String(n), lp(lang, path)]],
+      blocks: [{ id: "story", title: U.sec.meaning, paras: K.story }, { id: "root", title: `${r}, ${C.chars[r].name}`, paras: [C.chars[r].shadow, C.chars[r].gifts] }, { id: "act", title: U.sec.practices, quote: K.practice }, { id: "questions", title: U.sec.questions, list: C.chars[r].questions }],
+      faq: [[U.faq.angelMean(String(n)), `${K.lesson} ${K.story[0]}`]],
+      related: [{ href: lp(lang, `${N}life-path/${r}/`), label: U.lifePathShort(r), sub: C.chars[r].name, big: String(r) }],
+      prev: { href: lp(lang, `${N}karmic-debt/${prevN}/`), label: String(prevN) }, next: { href: lp(lang, `${N}karmic-debt/${nextN}/`), label: String(nextN) }, calc: "life-path" };
   }
   return null;
 }

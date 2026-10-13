@@ -1,7 +1,9 @@
 import type { NumContent } from "./en";
 import { chars } from "./de-chars";
 import { angel } from "./de-angel";
-import { years, karmic, explain } from "./de-more";
+import { years, karmic, explain as explain1 } from "./de-more";
+import { explain2 } from "./de-p2";
+const explain = { ...explain1, ...explain2 };
 
 const ui: NumContent["ui"] = {
   section: "Numerologie",
@@ -14,7 +16,7 @@ const ui: NumContent["ui"] = {
   yearTitle: (n) => `Persönliches Jahr ${n}: was das Jahr von dir will`,
   yearMeta: (n) => `Persönliches Jahr ${n} in der Numerologie: Themen, Liebe, Beruf, Gesundheit und wie die Monate meist verlaufen.`,
   number: "Zahl", digits: "Die Ziffern darin", digitsSum: (sum, root) => `Zusammengezählt: ${sum}, reduziert ergibt das ${root}.`,
-  sec: { scene: "Wo du sie sehen könntest", meaning: "Was sie bedeutet", love: "In der Liebe", work: "Beruf und Geld", act: "Was du jetzt tun kannst", why: "Warum sie immer wieder auftaucht", questions: "Fragen zum Nachdenken", faq: "Häufige Fragen", story: "Der Charakter", gifts: "Gaben", money: "Geld", shadow: "Die Schattenseite", week: "So zeigt sie sich in einer Woche", growth: "Wachstum", practices: "Übungen", strengths: "Stärken", shadows: "Achte auf", focus: "Fokus", caution: "Vorsicht bei", months: "Wie das Jahr verläuft", body: "Energie und Gesundheit", close: "Zum Jahresende", related: "Verwandte Zahlen", explore: "Weiter entdecken", also: "Mehr Engelszahlen" },
+  sec: { mood: "Die Stimmung des Jahres", scene: "Wo du sie sehen könntest", meaning: "Was sie bedeutet", love: "In der Liebe", work: "Beruf und Geld", act: "Was du jetzt tun kannst", why: "Warum sie immer wieder auftaucht", questions: "Fragen zum Nachdenken", faq: "Häufige Fragen", story: "Der Charakter", gifts: "Gaben", money: "Geld", shadow: "Die Schattenseite", week: "So zeigt sie sich in einer Woche", growth: "Wachstum", practices: "Übungen", strengths: "Stärken", shadows: "Achte auf", focus: "Fokus", caution: "Vorsicht bei", months: "Wie das Jahr verläuft", body: "Energie und Gesundheit", close: "Zum Jahresende", related: "Verwandte Zahlen", explore: "Weiter entdecken", also: "Mehr Engelszahlen" },
   faq: {
     angelMean: (n) => `Was bedeutet ${n}?`, angelLove: (n) => `Was bedeutet ${n} in der Liebe?`, angelDo: (n) => `Was soll ich tun, wenn ich ${n} sehe?`, angelWhy: (n) => `Warum sehe ich ständig ${n}?`,
     lpMean: (n) => `Was bedeutet Lebenszahl ${n}?`, lpLove: (n) => `Mit wem passt Lebenszahl ${n} zusammen?`, lpWork: (n) => `Welche Berufe passen zur Lebenszahl ${n}?`, lpCalc: (n) => `Woher weiß ich, ob meine Lebenszahl ${n} ist?`,
