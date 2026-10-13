@@ -83,19 +83,19 @@ export function PricingPage() {
         <p className="eyebrow mb-2 text-center">✦ {T.table.eyebrow}</p>
         <h2 className="h-display mb-6 text-center text-[clamp(1.8rem,6vw,2.6rem)]">{T.table.title}</h2>
         <div className="overflow-hidden rounded-[24px] border border-white/12">
-          <table className="w-full table-fixed text-[12.5px] sm:text-sm">
-            <colgroup><col className="w-[40%]" /><col /><col /><col /></colgroup>
+          <table className="w-full table-fixed text-[11px] sm:text-sm">
+            <colgroup><col className="w-[37%] sm:w-[40%]" /><col /><col /><col /></colgroup>
             <thead className="bg-white/[0.04]">
               <tr>
-                <th scope="col" className="px-3 py-3 text-left font-semibold text-dim">{T.table.feature}</th>
-                {PLANS.map((id) => <th key={id} scope="col" className={`px-1 py-3 text-center font-semibold ${id === RECOMMENDED ? "bg-gold/10 text-gold" : "text-mist"}`}>{T.plans[id].name}</th>)}
+                <th scope="col" className="px-2 py-3 text-left font-semibold text-dim sm:px-3">{T.table.feature}</th>
+                {PLANS.map((id) => <th key={id} scope="col" className={`px-0.5 py-3 text-center text-[10.5px] font-semibold tracking-tight sm:px-1 sm:text-sm sm:tracking-normal ${id === RECOMMENDED ? "bg-gold/10 text-gold" : "text-mist"}`}>{T.plans[id].name}</th>)}
               </tr>
             </thead>
             <tbody>
               {T.table.rows.map(([f, ...cells]) => (
                 <tr key={f} className="border-t border-white/[0.07]">
-                  <th scope="row" className="px-3 py-2.5 text-left font-normal leading-snug text-mist/90">{f}</th>
-                  {cells.map((v, i) => <td key={i} className={`px-1 py-2.5 text-center leading-tight ${PLANS[i] === RECOMMENDED ? "bg-gold/[0.06]" : ""}`}><Mark v={v} hi={PLANS[i] === RECOMMENDED} /></td>)}
+                  <th scope="row" className="py-2.5 pl-2 pr-1 text-left text-[11px] font-normal leading-snug text-mist/90 sm:px-3 sm:text-sm">{f}</th>
+                  {cells.map((v, i) => <td key={i} className={`break-words px-0.5 py-2.5 text-center leading-tight sm:px-1 ${PLANS[i] === RECOMMENDED ? "bg-gold/[0.06]" : ""}`}><Mark v={v} hi={PLANS[i] === RECOMMENDED} /></td>)}
                 </tr>
               ))}
             </tbody>
