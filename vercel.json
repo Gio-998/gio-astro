@@ -1,58 +1,15 @@
 {
-  "redirects": [
-    {
-      "source": "/en/premium/",
-      "destination": "/en/pricing/",
-      "statusCode": 308
-    },
-    {
-      "source": "/mk/premium/",
-      "destination": "/mk/ceni/",
-      "statusCode": 308
-    },
-    {
-      "source": "/en/upgrade/",
-      "destination": "/en/pricing/",
-      "statusCode": 308
-    },
-    {
-      "source": "/mk/upgrade/",
-      "destination": "/mk/ceni/",
-      "statusCode": 308
-    },
-    {
-      "source": "/mk/pricing/",
-      "destination": "/mk/ceni/",
-      "statusCode": 308
-    },
-    {
-      "source": "/en/ceni/",
-      "destination": "/en/pricing/",
-      "statusCode": 308
-    },
-    {
-      "source": "/mk/horoscope/:path*",
-      "destination": "/mk/dneven-horoskop/",
-      "statusCode": 308
-    },
-    {
-      "source": "/en/dneven-horoskop/:path*",
-      "destination": "/en/horoscope/",
-      "statusCode": 308
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/invite/:code([a-zA-Z0-9]{8})",
-      "destination": "/en/invite/"
-    },
-    {
-      "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})",
-      "destination": "/:lang/invite/"
-    },
-    {
-      "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})/",
-      "destination": "/:lang/invite/"
-    }
+  "routes": [
+    { "src": "/en/(premium|upgrade)/?", "status": 308, "headers": { "Location": "/en/pricing/" } },
+    { "src": "/mk/(premium|upgrade)/?", "status": 308, "headers": { "Location": "/mk/ceni/" } },
+    { "src": "/en/ceni/?", "status": 308, "headers": { "Location": "/en/pricing/" } },
+    { "src": "/mk/pricing/?", "status": 308, "headers": { "Location": "/mk/ceni/" } },
+    { "src": "/en/dneven-horoskop(?:/.*)?", "status": 308, "headers": { "Location": "/en/horoscope/" } },
+    { "src": "/mk/horoscope(?:/.*)?", "status": 308, "headers": { "Location": "/mk/dneven-horoskop/" } },
+    { "handle": "filesystem" },
+    { "src": "/invite/[a-zA-Z0-9]{8}/?", "dest": "/en/invite/" },
+    { "src": "/(en|mk)/invite/[a-zA-Z0-9]{8}/?", "dest": "/$1/invite/" },
+    { "src": "/en/horoscope/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?", "status": 308, "headers": { "Location": "/en/horoscope/$1/" } },
+    { "src": "/mk/dneven-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?", "status": 308, "headers": { "Location": "/mk/dneven-horoskop/$1/" } }
   ]
 }
