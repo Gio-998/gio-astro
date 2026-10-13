@@ -12,7 +12,7 @@ export const site = {
   skyNow: { title: "The sky right now", note: "Calculated live in your browser from real planetary positions.", cta: "See what today means for your chart →" },
   footerCols: { discover: "Discover", rel: "Relationships", trust: "Trust", chart: "Free birth chart", me: "My profile", today: "Today's guidance", quizzes: "All quizzes", match: "Compatibility", bond: "Bond Check for two", people: "Saved people", extras: "Extras", blurb: "Every lens, honestly labelled. Full results free, data on your device." },
   tagline: "An honest mirror for you and your relationships",
-  description: "Free birth chart, Chinese zodiac, numerology, personality and attachment quizzes, and compatibility across every lens for partners, friends, family and colleagues. Full results free.",
+  description: "Free birth chart, daily horoscope, personality quizzes and compatibility for partners, friends and family. Every full result is free.",
   nav: { today: "Today", me: "My profile", match: "Compatibility", people: "People", bond: "Bond Check", quizzes: "Quizzes", learn: "How it works" },
   footer: {
     privacy: "Privacy", terms: "Terms", promise: "Our promise", learn: "Methodology", credits: "Credits",

@@ -36,7 +36,7 @@ export const posts: BlogPost[] = [
   {
     slug: "birth-time-daylight-saving-rising-sign",
     title: "Your birth time, daylight saving and your rising sign",
-    description: "Your rising sign changes about every two hours, so a small error in birth time or time zone can change it. Here's how daylight saving and old time zones trip up charts, and how to check yours.",
+    description: "Your rising sign changes every two hours, so a small birth-time error can change it. How daylight saving trips up charts, and how to check yours.",
     date: "2026-10-12", minutes: 6, tags: ["astrology", "birth chart", "accuracy"],
     lead: "Your Sun sign depends on the day you were born. Your rising sign depends on the minute. That makes it the most personal part of a birth chart, and also the easiest one to get wrong.",
     blocks: [
