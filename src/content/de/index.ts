@@ -1,3 +1,12 @@
+import { aries, taurus, gemini, cancer } from "./deep/signs-a";
+import { leo, virgo, libra, scorpio } from "./deep/signs-b";
+import { sagittarius, capricorn, aquarius, pisces } from "./deep/signs-c";
+import * as synth from "./deep/synthesis";
+import * as bondDe from "./deep/bond";
+import { bigFiveDeep, attachDeep } from "./deep/psych-a";
+import * as psychB from "./deep/psych-b";
+import * as chineseDeep from "./deep/chinese";
+import * as numbersDeep from "./deep/numbers";
 /** German content. Anything not yet translated falls back to English via deepMerge in ../index.ts. */
 import * as astro from "./astro";
 import { site } from "./site";
@@ -17,4 +26,4 @@ import { lensInfo, lensUi } from "./lens";
 import { book } from "./book";
 import { accuracy } from "./accuracy";
 import { types } from "./types";
-export const de = { astro, site, landing, ui, day, daily, sky, blog, quizzes, psych, nums, chinese, vedic, compat, lensInfo, lensUi, book, accuracy, types };
+export const de = { astro, site, landing, ui, day, daily, sky, blog, quizzes, psych, nums, chinese, vedic, compat, lensInfo, lensUi, book, accuracy, types, deep: { ...synth, ...bondDe, bigFiveDeep, attachDeep, ...psychB, ...chineseDeep, ...numbersDeep, signDeep: { aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces } } };
