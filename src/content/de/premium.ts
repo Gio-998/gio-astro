@@ -119,9 +119,9 @@ export const premium: PremiumText = {
   },
   gate: {
     badge: "Premium",
-    titles: { book: "Der Rest deines Buchs über dich", bond: "Der Rest dieser Beziehungsgeschichte", day: "Deine Woche und dein Monat" } as Record<string, string>,
+    titles: { name: "Deine vollständige Namensanalyse", duo: "Die tiefe Deutung für zwei", book: "Der Rest deines Buchs über dich", bond: "Der Rest dieser Beziehungsgeschichte", day: "Deine Woche und dein Monat" } as Record<string, string>,
     texts: {
-      book: "Diese Kapitel gehören zu Premium: Liebe, Arbeit, Körper und Geist und das Jahr, in dem du stehst.",
+      name: "Die vollständige Namensanalyse, alle fünf Zahlen gemeinsam gelesen, gehört zu Premium.", duo: "Ausdrucks und Seelenzahl Paare und eure gemeinsamen Jahre gehören zu Premium.", book: "Diese Kapitel gehören zu Premium: Liebe, Arbeit, Körper und Geist und das Jahr, in dem du stehst.",
       bond: "Die ganze Geschichte von euch beiden, Kapitel für Kapitel, gehört zu Premium.",
       day: "Ein Wochenüberblick und das Thema dieses Monats, aus deinem Horoskop gemacht, gehören zu Premium.",
     } as Record<string, string>,

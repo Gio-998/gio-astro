@@ -3,7 +3,8 @@ import { chars } from "./mk-chars";
 import { angel } from "./mk-angel";
 import { years, karmic, explain as explain1 } from "./mk-more";
 import { explain2 } from "./mk-p2";
-const explain = { ...explain1, ...explain2 };
+import { days, p3, explain3 } from "./mk-p3";
+const explain = { ...explain1, ...explain2, ...explain3 };
 
 const ui: NumContent["ui"] = {
   section: "Нумерологија",
@@ -36,4 +37,4 @@ const ui: NumContent["ui"] = {
   method: "Нумерологијата е традиција за размислување, а не наука. Читај ја како огледало.",
 };
 
-export const numerology: NumContent = { ui, chars, angel, years, karmic, explain };
+export const numerology: NumContent = { ui, chars, angel, years, karmic, explain, days, p3 };

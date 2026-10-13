@@ -9,6 +9,7 @@ import { LOCALE_META } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
 import { breadcrumb, faqPage, LdJson, abs } from "@/lib/schema";
 import { Calculator, type CalcLabels } from "./Calculator";
+import { DuoCalc, NameReport } from "./Personal";
 
 /** Static params for one locale's slug folder (other locales get the "_" placeholder that renders a 404). */
 export function numParams(lang: string, owner: string) {
@@ -70,11 +71,17 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
   if (m.kind === "hub" && m.items) ld.push({ "@context": "https://schema.org", "@type": "ItemList", name: m.title, itemListElement: m.items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.label, url: abs(it.href) })) });
   if (m.kind === "calc") ld.push({ "@context": "https://schema.org", "@type": "WebApplication", name: m.title, url, applicationCategory: "LifestyleApplication", operatingSystem: "Any", inLanguage: lang, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } });
 
+  const plain = <T extends object>(o: T) => Object.fromEntries(Object.entries(o).filter(([, v]) => typeof v !== "function")) as T;
+  const P = { ...C.p3, duo: plain(C.p3.duo), report: plain(C.p3.report) }; const nums = c.nums;
+  const duo = <DuoCalc L={{ ...P.duo, go: U.calc.go, read: U.lifePathShort(0).replace(/\s*0$/, ""), cycleTpl: C.p3.duo.cycleLine(1111, 2222, 3333).replace("1111", "{y}").replace("2222", "{a}").replace("3333", "{b}") }} names={names}
+    kinds={nums.numberPairKinds as Record<string, string>} deepKinds={c.deep.lifePathPair as Record<string, string>} lpHref={Object.fromEntries(Object.keys(C.chars).filter((k) => pages.includes(`/numerology/life-path/${k}/`)).map((k) => [k, localizedPath(lang, `/numerology/life-path/${k}/`)]))} />;
+  const report = m.path === "/numerology/calculator/name/" && <NameReport L={{ ...P.report, name: U.calc.name, namePh: U.calc.namePh, go: U.calc.go, sameTpl: C.p3.report.same(0).replace("0", "{a}"), mixTpl: C.p3.report.mix(1111, 2222).replace("1111", "{a}").replace("2222", "{b}") }} chars={C.chars} karmic={C.karmic}
+    lines={{ expression: Object.fromEntries(Object.entries(nums.numbers).map(([k, v]) => [k, v.expression])), soul: Object.fromEntries(Object.entries(nums.numbers).map(([k, v]) => [k, v.soul])) }} />;
   const calcBox = m.calc && (
     <section aria-labelledby="calc-h">
       <h2 id="calc-h" className={`${label} mb-2`}>{m.kind === "calc" ? m.h1 : U.calcCta}</h2>
       {m.kind !== "calc" && <p className="mb-2 text-[13px] text-mist/65">{U.calcCtaSub}</p>}
-      <Calculator lang={lang} mode={m.calc} L={L} names={names} pages={pages} />
+      {m.calc === "compatibility" ? duo : <Calculator lang={lang} mode={m.calc} L={L} names={names} pages={pages} />}
     </section>
   );
   return (
@@ -87,12 +94,13 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
         {m.big && <span aria-hidden className="pointer-events-none absolute -right-2 -top-3 select-none font-display text-[6.5rem] leading-none text-gold/15 sm:text-[8rem] lg:right-12 lg:top-1/2 lg:-translate-y-1/2 lg:text-[15rem] lg:text-gold/25">{m.big}</span>}
         <div className="relative lg:max-w-[640px]">
           <p className="eyebrow mb-2 text-[11px] tracking-[.14em] lg:mb-4 lg:text-[13px]">{m.eyebrow}</p>
-          <h1 className="h-display text-balance break-words pr-2 text-[1.9rem] font-medium leading-[1.08] lg:text-[3.2rem]!">{noOrphan(m.h1)}</h1>
+          <h1 className={`h-display text-balance break-words pr-2 ${Math.max(...m.h1.split(" ").map((w) => w.length)) > 11 ? "text-[1.5rem]" : "text-[1.9rem]"} font-medium leading-[1.08] lg:text-[3.2rem]!`}>{noOrphan(m.h1)}</h1>
           <p className="h-display mt-3 text-pretty text-[1.25rem] italic leading-snug text-gold/95 lg:mt-6 lg:text-[2rem] lg:leading-[1.25]">{m.lead}</p>
         </div>
       </header>
 
       {m.kind === "calc" && <div className="lg:mt-10">{calcBox}</div>}
+      {report && <div className="lg:mt-4">{report}</div>}
 
       <div className="space-y-3 lg:mt-14 lg:grid lg:grid-cols-[minmax(0,680px)_300px] lg:justify-between lg:gap-16 lg:space-y-0">
         <div className="space-y-3 lg:space-y-9">

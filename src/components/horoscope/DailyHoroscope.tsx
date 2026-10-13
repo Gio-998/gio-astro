@@ -7,6 +7,9 @@ import { getContent } from "@/content";
 import { reading, horoPath, bankFor, absolute, ogPath, ogImage, type Reading } from "@/lib/horoscope";
 import { signHeroSvg, moonPath } from "./art";
 import { SITE_URL } from "@/lib/site-url";
+import { numContent } from "@/content/numerology";
+import { DayNumber } from "../numerology/Personal";
+import { localizedPath } from "@/lib/i18n-routes";
 
 const pill = "inline-flex h-9 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/12 bg-white/[0.05] px-3.5 text-[13px] text-mist/90 hover:border-gold/45";
 /** Phone: compact glass card. Desktop: flowing magazine prose with a hairline divider, no box. */
@@ -120,6 +123,8 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
             <span className="text-gold/50" aria-hidden>·</span><span><span className="sr-only">{U.number} </span><span className="h-display text-lg leading-none text-gold">{r.lucky.number}</span></span>
             <span className="text-gold/50" aria-hidden>·</span><span className="whitespace-nowrap">{r.lucky.window}</span>
           </p>
+
+          {(() => { const NC = numContent(lang); return <DayNumber iso={iso} days={NC.days} names={Object.fromEntries(Object.entries(NC.chars).map(([k, v]) => [k, v.name]))} href={localizedPath(lang, "/numerology/personal-day/")} L={{ title: NC.p3.dayTitle, intro: NC.p3.dayIntro, need: NC.p3.dayNeed, link: NC.p3.dayLink, year: NC.p3.dayYear(0).replace("0", "{n}"), month: NC.p3.dayMonth(0).replace("0", "{n}"), birth: NC.ui.calc.birth }} />; })()}
 
           <section className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3.5 lg:rounded-3xl lg:px-5">
             <h2 className={`${label} mb-2`}>{M.planets}</h2>

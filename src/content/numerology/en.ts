@@ -2,7 +2,8 @@ import { chars } from "./en-chars";
 import { angel } from "./en-angel";
 import { years, karmic, explain as explain1 } from "./en-more";
 import { explain2 } from "./en-p2";
-const explain = { ...explain1, ...explain2 };
+import { days, p3, explain3 } from "./en-p3";
+const explain = { ...explain1, ...explain2, ...explain3 };
 
 const ui = {
   section: "Numerology",
@@ -35,5 +36,5 @@ const ui = {
   method: "Numerology is a reflective tradition, not a science. Read it as a mirror.",
 };
 
-export const numerology = { ui, chars, angel, years, karmic, explain };
+export const numerology = { ui, chars, angel, years, karmic, explain, days, p3 };
 export type NumContent = typeof numerology;

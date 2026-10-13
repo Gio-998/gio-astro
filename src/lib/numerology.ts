@@ -2,22 +2,23 @@
 import { numContent } from "@/content/numerology";
 import { getContent } from "@/content";
 import { localizedPath } from "./i18n-routes";
+import { bankFor } from "./horoscope";
 import { reduce, rootOf } from "@/engine/numerology";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
 export const LIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
 export const YEARS = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
 export const KARMIC = [13, 14, 16, 19] as const;
-export const CALCS = ["life-path", "name", "personal-year"] as const;
+export const CALCS = ["life-path", "name", "personal-year", "compatibility"] as const;
 export const CORE = ["expression-number", "soul-urge-number", "personality-number", "birthday-number", "maturity-number"] as const;
-export type CalcMode = (typeof CALCS)[number] | "personal-year" | "compatibility";
+export type CalcMode = (typeof CALCS)[number];
 
 const N = "/numerology/";
 /** Every public numerology route (internal paths). */
 export function numPaths(): string[] {
   return [N, `${N}angel-numbers/`, ...ANGEL.map((a) => `${N}angel-numbers/${a}/`), `${N}calculator/`, ...CALCS.map((c) => `${N}calculator/${c}/`),
     `${N}life-path/`, ...LIFE.map((n) => `${N}life-path/${n}/`), `${N}master-numbers/`, `${N}personal-year/`, ...YEARS.map((n) => `${N}personal-year/${n}/`),
-    ...CORE.map((c) => `${N}${c}/`), `${N}karmic-debt/`, ...KARMIC.map((n) => `${N}karmic-debt/${n}/`)];
+    ...CORE.map((c) => `${N}${c}/`), `${N}karmic-debt/`, ...KARMIC.map((n) => `${N}karmic-debt/${n}/`), `${N}personal-day/`];
 }
 /** Pages that may be listed in the sitemap (generated families join only after their overlap test passes). */
 export const numIndexable = (p: string) => numPaths().includes(p);
@@ -153,6 +154,7 @@ export function numModel(lang: string, path: string): NumModel | null {
     const calc: CalcMode | undefined = sec === "birthday-number" || sec === "maturity-number" ? "life-path" : "name";
     return hubOf(sec, C.explain[sec].title.split(":")[0], sec === "birthday-number" ? [] : lifeItems(), extra, calc, CORE.filter((c) => c !== sec).map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })));
   }
+  if (sec === "personal-day" && !item) return hubOf("personal-day", C.explain["personal-day"].title.split(":")[0], [], [{ id: "days", title: U.pickNumber, list: YEARS.map((n) => `${n}, ${C.chars[n].name}: ${C.days[n][0]}`) }], "personal-year", [{ href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }, { href: localizedPath(lang, "/horoscope/"), label: bankFor(lang).ui.hubTitle, sub: C.p3.dayTitle }]);
   if (sec === "karmic-debt" && !item) return hubOf("karmic-debt", U.karmicHub, karmicItems(), [], "life-path");
   if (sec === "karmic-debt" && item && (KARMIC as readonly number[]).includes(Number(item))) {
     const n = Number(item) as (typeof KARMIC)[number]; const K = C.karmic[n]; const r = reduce(n, false); const i = KARMIC.indexOf(n);

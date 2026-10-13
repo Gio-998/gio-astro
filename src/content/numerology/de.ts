@@ -3,7 +3,8 @@ import { chars } from "./de-chars";
 import { angel } from "./de-angel";
 import { years, karmic, explain as explain1 } from "./de-more";
 import { explain2 } from "./de-p2";
-const explain = { ...explain1, ...explain2 };
+import { days, p3, explain3 } from "./de-p3";
+const explain = { ...explain1, ...explain2, ...explain3 };
 
 const ui: NumContent["ui"] = {
   section: "Numerologie",
@@ -36,4 +37,4 @@ const ui: NumContent["ui"] = {
   method: "Numerologie ist eine Tradition zum Nachdenken, keine Wissenschaft. Lies sie wie einen Spiegel.",
 };
 
-export const numerology: NumContent = { ui, chars, angel, years, karmic, explain };
+export const numerology: NumContent = { ui, chars, angel, years, karmic, explain, days, p3 };

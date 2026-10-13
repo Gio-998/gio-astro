@@ -8,7 +8,7 @@ import { Sheet } from "../controls";
 import { useAccess } from "./access";
 import { usePremiumText, BuyButton, EarlyAccess, DemoBadge } from "./bits";
 
-export type GateKind = "book" | "bond" | "day";
+export type GateKind = "book" | "bond" | "day" | "name" | "duo";
 /** How many chapters stay free when locks are on. */
 export const FREE_CHAPTERS: Record<"book" | "bond", number> = { book: 3, bond: 2 };
 

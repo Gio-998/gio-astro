@@ -132,9 +132,9 @@ export const premium = {
   },
   gate: {
     badge: "Premium",
-    titles: { book: "The rest of your Book of You", bond: "The rest of this Bond Story", day: "Your week and month ahead" } as Record<string, string>,
+    titles: { name: "Your full name report", duo: "The deep reading for two", book: "The rest of your Book of You", bond: "The rest of this Bond Story", day: "Your week and month ahead" } as Record<string, string>,
     texts: {
-      book: "These chapters are part of Premium: love, work, body and mind, and the year you're in.",
+      name: "The full name report (all five numbers read together) is part of Premium.", duo: "Expression and soul urge pairs and your shared years are part of Premium.", book: "These chapters are part of Premium: love, work, body and mind, and the year you're in.",
       bond: "The full story of the two of you, chapter by chapter, is part of Premium.",
       day: "A weekly overview and this month's theme, made from your chart, are part of Premium.",
     } as Record<string, string>,
