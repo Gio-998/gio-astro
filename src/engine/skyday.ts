@@ -22,11 +22,36 @@ export type SkyEvent =
   | { kind: "ingress"; body: Body; to: Sign; house: number }
   | { kind: "aspect"; a: Body; b: Body; type: AspectKind; exact: boolean };
 
+export type MoonAspect = { body: Body; type: AspectKind; time: string };
+const MOON_TARGETS: Body[] = ["sun", "mercury", "venus", "mars", "jupiter", "saturn"];
+const MOON_ANGLES: [number, AspectKind][] = [[0, "conjunction"], [60, "sextile"], [90, "square"], [120, "trine"], [180, "opposition"], [240, "trine"], [270, "square"], [300, "sextile"]];
+/** Moments when the Moon's angle to a planet crosses an exact aspect, found hourly then refined by bisection. */
+function moonAspectsOf(start: Date, end: Date): MoonAspect[] {
+  const out: (MoonAspect & { t: number })[] = [];
+  const t0 = start.getTime(), span = end.getTime() - t0, steps = 24;
+  const rel = (b: Body, t: number) => norm(longitude("moon", new Date(t)) - longitude(b, new Date(t)));
+  for (const b of MOON_TARGETS) {
+    const r = Array.from({ length: steps + 1 }, (_, k) => rel(b, t0 + (span * k) / steps));
+    for (const [ang, type] of MOON_ANGLES) {
+      const g = (x: number) => ((x - ang + 540) % 360) - 180;
+      for (let k = 0; k < steps; k++) {
+        if (!(g(r[k]) < 0 && g(r[k + 1]) >= 0)) continue;
+        let lo = t0 + (span * k) / steps, hi = t0 + (span * (k + 1)) / steps;
+        for (let i = 0; i < 16; i++) { const mid = (lo + hi) / 2; if (g(rel(b, mid)) < 0) lo = mid; else hi = mid; }
+        out.push({ body: b, type, time: hhmm(new Date(hi)), t: hi });
+      }
+    }
+  }
+  return out.sort((a, b) => a.t - b.t).map(({ body, type, time }) => ({ body, type, time }));
+}
+
 export interface SkyDay {
   iso: string; sign: Sign;
   moon: { sign: Sign; phase: MoonPhase; angle: number; illumination: number; house: number; element: Element; moves?: { to: Sign; time: string; house: number } };
   houses: Record<Body, number>; signs: Record<Body, Sign>; retro: Body[];
   events: SkyEvent[]; seed: number;
+  /** Exact Moon aspects to Sun through Saturn during the local day, in time order. */
+  moonAspects: MoonAspect[];
   lucky: { color: number; number: number; window: [number, number] };
 }
 
@@ -88,7 +113,7 @@ function skyOfDate(iso: string) {
     for (let k = 0; k < 30; k++) { const mid = (lo + hi) / 2; if (signFromLongitude(longitude("moon", new Date(mid))) === m0) lo = mid; else hi = mid; }
     moves = { to: m1, time: hhmm(new Date(hi)) };
   }
-  return { signs, retro, raw, aspects: aspects.slice(0, 3), moon: mp, moves, moon0: m0 };
+  return { signs, retro, raw, aspects: aspects.slice(0, 3), moon: mp, moves, moon0: m0, moonAspects: moonAspectsOf(start, end) };
 }
 
 const RANK: Record<SkyEvent["kind"], number> = { quarter: 40, station: 30, ingress: 20, aspect: 10 };
@@ -112,7 +137,7 @@ export function skyDay(iso: string, sign: Sign): SkyDay {
   const digits = String(y).split("").map(Number).reduce((a, b) => a + b, 0) + mo + d + SIGNS.indexOf(sign) + 1;
   let n = digits; while (n > 9) n = String(n).split("").map(Number).reduce((a, b) => a + b, 0);
   return {
-    iso, sign, houses, signs: s.signs, retro: s.retro, events: events.slice(0, 4), seed,
+    iso, sign, houses, signs: s.signs, retro: s.retro, events: events.slice(0, 4), seed, moonAspects: s.moonAspects,
     moon: { sign: moonSign, phase: s.moon.phase, angle: s.moon.angle, illumination: s.moon.illumination, house: mh, element: SIGN_ELEMENT[moonSign], moves: s.moves ? { ...s.moves, house: houseFrom(sign, s.moves.to) } : undefined },
     lucky: { color: (seed >>> 4) % 3, number: n, window: [startH, startH + 2] },
   };

@@ -4,6 +4,11 @@ import { en } from "@/content/horoscope/en";
 import { mk } from "@/content/horoscope/mk";
 import { de } from "@/content/horoscope/de";
 import type { HoroBank } from "@/content/horoscope/types";
+import type { HoroVariety, DayCtx, LeadSection } from "@/content/horoscope/variety-types";
+import { enVariety } from "@/content/horoscope/en-variety";
+import { mkVariety } from "@/content/horoscope/mk-variety";
+import { deVariety } from "@/content/horoscope/de-variety";
+import { hash } from "@/engine/daily";
 import { skyDay, addDays, todayIso, nextEvents, BODIES, type SkyDay, type Body } from "@/engine/skyday";
 import { SIGNS, type Sign, type Element } from "@/engine/zodiac";
 import { formatDate } from "./dates";
@@ -13,6 +18,7 @@ import { routeAlternates } from "./i18n-routes";
 export const HORO_LOCALES = ["en", "mk", "de"] as const;
 export type HoroLocale = (typeof HORO_LOCALES)[number];
 export const BANKS: Record<HoroLocale, HoroBank> = { en, mk, de };
+export const VARIETY: Record<HoroLocale, HoroVariety> = { en: enVariety, mk: mkVariety, de: deVariety };
 export const bankFor = (lang: string): HoroBank => BANKS[(lang as HoroLocale)] ?? en;
 export const COLOR_HEX: Record<Element, [string, string, string]> = {
   fire: ["#d9573b", "#f2a33a", "#e9c78a"], earth: ["#6f8f4e", "#b8643e", "#d8c29a"], air: ["#8ec5ff", "#b9a7f5", "#c9cbd6"], water: ["#1f9a95", "#5b5fd6", "#e8e4f0"],
@@ -43,21 +49,49 @@ export interface Reading {
   planets: { body: Body; name: string; sign: Sign; signName: string; retro: boolean }[];
 }
 
+const gcd = (a: number, b: number): number => (b ? gcd(b, a % b) : a);
+/** Days since 1970-01-01 for an ISO date. */
+export const dayNumber = (iso: string) => { const [y, m, d] = iso.split("-").map(Number); return Math.floor(Date.UTC(y, m - 1, d) / 864e5); };
+/**
+ * Deterministic rotation through a pool of n: a sign and slot specific offset plus a step coprime to n per day,
+ * so consecutive days never share a pick and pools of 7+ never repeat within a week.
+ */
+export function rotate(n: number, iso: string, salt: string): number {
+  const step = [3, 5, 7, 11, 13, 2].find((k) => k % n !== 0 && gcd(k, n) === 1) ?? 1;
+  return (((dayNumber(iso) * step + hash(salt)) % n) + n) % n;
+}
+const lower = (s: string) => s.replace(/^(The|Die) /, (m) => m.toLowerCase());
+
 export function reading(lang: string, sign: Sign, iso: string): Reading {
   const L = (HORO_LOCALES as readonly string[]).includes(lang) ? (lang as HoroLocale) : "en";
   const B = BANKS[L]; const c = getContent(L); const sky = skyDay(iso, sign);
   const N = (s: Sign) => c.astro.signs[s].name; const T = (h: number) => B.topics[h - 1];
   const signName = N(sign); const dateLabel = formatDate(iso, c.site.months);
   const [y, m, d] = iso.split("-").map(Number); const weekday = B.weekdays[new Date(Date.UTC(y, m - 1, d)).getUTCDay()];
-  const headline = B.headline[sky.moon.house - 1][sky.seed % 3];
-  const love = [B.love[sky.moon.house - 1], sky.retro.includes("venus") ? `${B.venus[sky.houses.venus - 1]} ${B.venusRetro}` : B.venus[sky.houses.venus - 1]];
-  const work = [B.work[sky.houses.mercury - 1]];
-  if (sky.retro.includes("mercury")) work.push(B.mercuryRetro); else if (sky.retro.includes("mars")) work.push(B.marsRetro); else work.push(B.mars[sky.houses.mars - 1]);
-  const well = [B.well[sky.moon.phase], B.wellEl[sky.moon.element]];
+  const V = VARIETY[L]; const prevSky = skyDay(addDays(iso, -1), sign); const dn = dayNumber(iso); const alt = ((dn % 2) + 2) % 2;
+  const R = (n: number, slot: string) => rotate(n, iso, `${sign}|${slot}`);
+  const pick = <T,>(arr: T[], slot: string) => arr[R(arr.length, slot)];
+  const ctx: DayCtx = { day: weekday, moon: N(sky.moon.sign), phase: (V.phaseForm ?? B.phases)[sky.moon.phase], topic: T(sky.moon.house) };
+  const lead = (sec: LeadSection) => pick(V.lead[sec], `lead-${sec}`)(ctx);
+  const planetLine = (p: "mercury" | "venus" | "mars" | "jupiter" | "saturn", extra?: string) => { const pool = [...V.planet[p].map((f) => f(T(sky.houses[p]))), ...(extra ? [extra] : [])]; return pool[R(pool.length, p)]; };
+  const moonChanged = sky.moon.sign !== prevSky.moon.sign; const phaseChanged = sky.moon.phase !== prevSky.moon.phase; const houseChanged = sky.moon.house !== prevSky.moon.house;
+  const prev2 = skyDay(addDays(iso, -2), sign);
+  // Slow moving notes (phase mood, element mood) show on the day they change and then every other day, never two days running.
+  const showPhase = phaseChanged || (alt === 0 && prevSky.moon.phase === prev2.moon.phase);
+  const showHouse = houseChanged || (alt === 0 && prevSky.moon.house === prev2.moon.house);
+  const showEl = moonChanged || (alt === 1 && prevSky.moon.sign === prev2.moon.sign);
+  const ma = sky.moonAspects[R(Math.max(1, sky.moonAspects.length), "ma")];
+  const moonAspectLine = ma ? pick(V.moonAspect[ma.type], `ma-${ma.type}`)(lower(B.bodies[ma.body]), ma.time) : "";
+  const headline = pick(V.headline, "headline")(ctx);
+  const love = [[lead("love"), showHouse ? B.love[sky.moon.house - 1] : ""].filter(Boolean).join(" "), [planetLine("venus", B.venus[sky.houses.venus - 1]), sky.retro.includes("venus") ? pick(V.retro.venus, "rv") : ""].filter(Boolean).join(" ")];
+  const work = [`${lead("work")} ${planetLine("mercury", B.work[sky.houses.mercury - 1])}`];
+  if (sky.retro.includes("mercury")) work.push(pick(V.retro.mercury, "rm")); else if (sky.retro.includes("mars")) work.push(pick(V.retro.mars, "rma")); else work.push(planetLine("mars", B.mars[sky.houses.mars - 1]));
+  const well = [lead("well"), moonChanged ? B.wellEl[sky.moon.element] : phaseChanged ? B.well[sky.moon.phase] : pick(V.tip, "tip")];
   const S = B.sky; const lines: string[] = [];
   const moonLine = S.moonIn(N(sky.moon.sign), B.phases[sky.moon.phase], sky.moon.illumination) + (sky.moon.moves ? ` ${S.moonMoves(N(sky.moon.moves.to), sky.moon.moves.time)}` : "");
   lines.push(`${moonLine} ${S.forYou(T(sky.moon.house))}`); const usedHouses = new Set<number>([sky.moon.house]);
   const stationed = new Set<string>();
+  if (ma) lines.push(moonAspectLine);
   for (const e of sky.events) {
     if ("house" in e) usedHouses.add(e.house);
     if (e.kind === "quarter") lines.push(S.quarter[e.quarter](N(e.sign), e.time, T(e.house)));
@@ -71,19 +105,21 @@ export function reading(lang: string, sign: Sign, iso: string): Reading {
   if (lines.length === 1) lines.push(S.calm);
   // Long-form blocks.
   const M = B.more; const mh = sky.moon.house; const v = (n: number, k: number) => (sky.seed >>> k) % n;
-  const overview = [...M.theme[mh - 1], M.phaseMood[sky.moon.phase], M.elMood[sky.moon.element], M.signNote[sign], M.close[v(4, 7)]].join(" ");
-  const single = [...M.single[mh - 1]].join(" "); const couple = [...M.couple[mh - 1]].join(" ");
-  const money = [M.money[sky.houses.venus - 1], M.jupiter[sky.houses.jupiter - 1], M.saturn[sky.houses.saturn - 1]];
-  const why: string[] = [`${M.why.moon(M.ordinal[mh - 1], N(sky.moon.sign))} ${M.houseWhy[mh - 1]} ${M.why.pace}`];
+  void v;
+  const dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+  const overview = [lead("overview"), M.theme[mh - 1][alt], V.weekday[new Date(Date.UTC(y, m - 1, d)).getUTCDay()], moonAspectLine, showPhase ? M.phaseMood[sky.moon.phase] : "", showEl ? M.elMood[sky.moon.element] : "", pick(M.close, "close")].filter(Boolean).join(" ");
+  const single = `${lead("single")} ${M.single[mh - 1][alt]} ${V.dayLove[new Date(Date.UTC(y, m - 1, d)).getUTCDay()]}`; const ma2 = sky.moonAspects.find((x) => x !== ma);
+  const couple = [lead("couple"), M.couple[mh - 1][alt], ma2 ? pick(V.moonAspect[ma2.type], `ma2-${ma2.type}`)(lower(B.bodies[ma2.body]), ma2.time) : ""].filter(Boolean).join(" ");
+  const money = [lead("money"), planetLine("jupiter", M.jupiter[sky.houses.jupiter - 1]), planetLine("saturn", M.saturn[sky.houses.saturn - 1])];
+  const why: string[] = [`${pick(V.whyMoon, "wm")(M.ordinal[mh - 1], N(sky.moon.sign))}${showHouse ? ` ${M.houseWhy[mh - 1]}` : ""}`];
   const drv = sky.events.find((e) => e.kind !== "aspect");
-  const hw = (h: number) => (h === mh ? "" : ` ${M.houseWhy[h - 1]}`);
-  if (drv?.kind === "quarter") why.push(M.why.quarter(M.quarterName[drv.quarter], M.ordinal[drv.house - 1]) + hw(drv.house));
-  else if (drv?.kind === "station") why.push(M.why.station(B.bodies[drv.body], M.planetWhy[drv.body], drv.dir, M.ordinal[drv.house - 1]) + hw(drv.house));
-  else if (drv?.kind === "ingress") why.push(M.why.ingress(B.bodies[drv.body], M.planetWhy[drv.body], N(drv.to), M.ordinal[drv.house - 1]) + hw(drv.house));
-  else { const r = (["mercury", "venus", "mars"] as const).find((p) => sky.retro.includes(p)); if (r) why.push(M.why.retro(B.bodies[r], M.planetWhy[r], M.ordinal[sky.houses[r] - 1]) + hw(sky.houses[r])); }
-  why.push(M.sunWhy(N(sky.signs.sun), M.ordinal[sky.houses.sun - 1]) + (sky.houses.sun === mh ? "" : ` ${M.houseWhy[sky.houses.sun - 1]}`));
+  if (drv?.kind === "quarter") why.push(M.why.quarter(M.quarterName[drv.quarter], M.ordinal[drv.house - 1]));
+  else if (drv?.kind === "station") why.push(M.why.station(B.bodies[drv.body], M.planetWhy[drv.body], drv.dir, M.ordinal[drv.house - 1]));
+  else if (drv?.kind === "ingress") why.push(M.why.ingress(B.bodies[drv.body], M.planetWhy[drv.body], N(drv.to), M.ordinal[drv.house - 1]));
+  else { const r = (["mercury", "venus", "mars"] as const).find((p) => sky.retro.includes(p)); if (r && alt === 0) why.push(M.why.retro(B.bodies[r], M.planetWhy[r], M.ordinal[sky.houses[r] - 1])); }
+  why.push(pick(V.whySun, "ws")(N(sky.signs.sun), M.ordinal[sky.houses.sun - 1]));
   const retroP = (["mercury", "venus", "mars"] as const).find((p) => sky.retro.includes(p));
-  const avoid = [M.avoid[sky.moon.phase], retroP ? M.avoidRetro[retroP] : ""].filter(Boolean).join(" ");
+  const avoid = [pick(V.avoid, "avoid")(ctx.phase), phaseChanged ? M.avoid[sky.moon.phase] : "", retroP && alt === 1 ? M.avoidRetro[retroP] : ""].filter(Boolean).join(" ");
   const week = nextEvents(iso, sign, 3).map(({ iso: wi, event: e }) => {
     const text = e.kind === "quarter" ? M.week.quarter(M.quarterName[e.quarter], N(e.sign), T(e.house)) : e.kind === "station" ? M.week.station(B.bodies[e.body], e.dir, N(e.sign)) : M.week.ingress(B.bodies[e.body], N(e.to), T(e.house));
     const [yy, mm, dd] = wi.split("-").map(Number);
@@ -97,8 +133,8 @@ export function reading(lang: string, sign: Sign, iso: string): Reading {
     headline, love, work, well, sky_: lines.slice(0, 5), moonLine,
     lucky: { color: B.colors[el][sky.lucky.color], hex: COLOR_HEX[el][sky.lucky.color], number: sky.lucky.number, window: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}` },
     prev: addDays(iso, -1), next: addDays(iso, 1),
-    overview, single, couple, money, body: M.body[sky.moon.sign], friends: [...M.friends[mh - 1], M.family[sky.moon.phase]].join(" "), why,
-    best: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}. ${M.bestBy[sky.lucky.window[0] < 12 ? 0 : sky.lucky.window[0] < 17 ? 1 : 2]}`,
-    avoid, prompt: M.prompt[mh - 1][v(2, 11)], week, planets,
+    overview, single, couple, money, body: [moonChanged ? M.body[sky.moon.sign] : "", pick(V.bodyTip, "body"), well[1] === pick(V.tip, "tip") ? "" : pick(V.tip, "tip")].filter(Boolean).join(" "), friends: [lead("friends"), M.friends[mh - 1][alt], V.dayPeople[dow], showPhase ? M.family[sky.moon.phase] : ""].filter(Boolean).join(" "), why,
+    best: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}: ${pick(V.best[sky.lucky.window[0] < 12 ? 0 : sky.lucky.window[0] < 17 ? 1 : 2], "best")} ${V.dayTip[dow]}`,
+    avoid, prompt: M.prompt[mh - 1][alt], week, planets,
   };
 }
