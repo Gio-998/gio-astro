@@ -16,7 +16,7 @@ export interface PricingText {
 }
 
 export const en: PricingText = {
-  meta: { title: "Pricing", description: "Free forever for every test and result. Plus from €7.49 a month for your full personal readings. Duo for couples." },
+  meta: { title: "Pricing: free forever, Plus and Duo plans", description: "Free forever for every test and result. Plus from €7.49 a month for your full personal readings. Duo for couples." },
   eyebrow: "Pricing", title: ["Simple plans, ", "free at the core"], sub: "Every test and result stays free. Plus adds depth, every day, from your own chart.",
   monthly: "Monthly", yearly: "Yearly", save: (p) => `Save ${p}%`,
   perMonth: "/ month", perYear: "/ year", billedYearly: (p) => `${p} billed once a year`, forever: "free forever",
@@ -63,7 +63,7 @@ export const en: PricingText = {
 };
 
 export const mk: PricingText = {
-  meta: { title: "Цени", description: "Секој тест и резултат е бесплатен засекогаш. Плус од 7,49 € месечно за целосни лични читања. Дуо за парови." },
+  meta: { title: "Цени: бесплатно засекогаш, Плус и Дуо", description: "Секој тест и резултат е бесплатен засекогаш. Плус од 7,49 € месечно за целосни лични читања. Дуо за парови." },
   eyebrow: "Цени", title: ["Едноставни планови, ", "бесплатна основа"], sub: "Секој тест и резултат останува бесплатен. Плус додава длабочина, секој ден, од твојата карта.",
   monthly: "Месечно", yearly: "Годишно", save: (p) => `Заштеди ${p}%`,
   perMonth: "/ месец", perYear: "/ година", billedYearly: (p) => `${p} еднаш годишно`, forever: "бесплатно засекогаш",

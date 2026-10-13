@@ -8,7 +8,7 @@ import { LdJson, ORG_REF, abs } from "@/lib/schema";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/blog">) {
   const { lang } = await params; const c = getContent(lang); const B = c.blog;
-  return { title: B.title, description: B.meta, ...localizedMeta(lang, "/blog/", { title: `${B.title} · ${c.site.brand}`, description: B.meta, siteName: c.site.brand }) };
+  return { title: B.metaTitle, description: B.meta, ...localizedMeta(lang, "/blog/", { title: `${B.metaTitle} · ${c.site.brand}`, description: B.meta, siteName: c.site.brand }) };
 }
 export default async function Page({ params }: PageProps<"/[lang]/blog">) {
   const { lang } = await params; const c = getContent(lang); const B = c.blog;
