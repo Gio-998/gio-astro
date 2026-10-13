@@ -30,7 +30,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   const r = reading(lang, sign, iso); const B = bankFor(lang); const U = B.ui; const M = B.more.ui; const c = getContent(lang); const angle = r.sky.moon.angle;
   const url = absolute(isToday ? horoPath(lang, sign) : horoPath(lang, sign, iso));
   const ld = {
-    "@context": "https://schema.org", "@type": "Article", headline: r.title, description: r.description, datePublished: `${iso}T00:00:00+02:00`, dateModified: `${iso}T00:00:00+02:00`,
+    "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: `${iso}T00:00:00+02:00`, dateModified: `${iso}T00:00:00+02:00`,
     inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogPath(lang, sign, iso, "wide"))], about: { "@type": "Thing", name: r.signName },
     articleSection: B.ui.hubTitle, wordCount: wordCount(r),
     author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` },
