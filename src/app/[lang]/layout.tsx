@@ -1,4 +1,5 @@
 import { PrintKit } from "@/components/PrintKit";
+import { ExportPdf } from "@/components/ExportPdf";
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Cormorant_Garamond, Inter, Unbounded } from "next/font/google";
@@ -52,7 +53,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <UsageBoot />
           <PrintKit />
           <Header />
-          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate></main>
+          <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate><ExportPdf /></main>
           <Footer />
           <FeedbackButton />
         </ContentProvider>
