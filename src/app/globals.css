@@ -377,3 +377,5 @@ p, li, figcaption, blockquote { text-wrap: pretty; overflow-wrap: break-word; }
 
 /* Decorative art (hero wheel) must never widen the page on phones. */
 html, body { overflow-x: clip; }
+
+:lang(de) h1, :lang(de) h2, :lang(de) h3, :lang(de) p, :lang(de) li { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
