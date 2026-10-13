@@ -7,8 +7,6 @@ import { publishedDates, todayIso, isValidIso } from "@/engine/skyday";
 import { reading, horoPath, horoAlternates, bankFor, signFromSlug, ogPath, absolute, type HoroLocale } from "@/lib/horoscope";
 import { LOCALE_META } from "@/lib/seo";
 import { DailyHoroscope } from "./DailyHoroscope";
-import { signHeroSvg } from "./art";
-import { skyDay } from "@/engine/skyday";
 
 /** Each locale owns its own slug folder (/en/horoscope, /mk/dneven-horoskop); other locales 404 there. */
 // Static export refuses an empty list, so the other locale gets one "_" placeholder that renders the 404 page.
@@ -51,7 +49,7 @@ export function HubPage({ lang }: { lang: string }) {
         {SIGNS.map((s) => { const r = reading(lang, s, iso); return (
           <li key={s} className="border-t border-white/10">
             <Link href={horoPath(lang, s)} className="group relative isolate flex items-center gap-3 overflow-hidden py-3.5 pr-2">
-              <span aria-hidden className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-white/[0.04] opacity-80 [&>svg]:block [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(s, skyDay(iso, s).moon.angle, { moon: false }) }} />
+              <span aria-hidden className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full bg-white/[0.04] opacity-80"><img src={`/art/sign/${s}.svg`} alt="" width={48} height={48} loading="lazy" className="block h-full w-full" /></span>
               <span className="min-w-0 flex-1">
                 <span className="block text-[15px] font-medium transition group-hover:text-gold"><span className="text-gold">{SIGN_GLYPH[s]}</span> {c.astro.signs[s].name}</span>
                 <span className="mt-0.5 block text-pretty text-[12.5px] leading-snug text-mist/65">{r.headline}</span>
