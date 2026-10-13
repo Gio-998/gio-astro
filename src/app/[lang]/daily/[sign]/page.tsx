@@ -6,6 +6,7 @@ import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { PageHero } from "@/components/ui";
 import { SignDaily } from "@/components/day/SignDaily";
 import { SITE_URL } from "@/lib/site-url";
+import { horoPath } from "@/lib/horoscope";
 import { breadcrumb, ORG_REF } from "@/lib/schema";
 
 export const dynamicParams = false;
@@ -30,6 +31,7 @@ export default async function Page({ params }: PageProps<"/[lang]/daily/[sign]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([ld, crumbs]) }} />
       <PageHero eyebrow={`${SIGN_GLYPH[s]} ${S.name}`} emblem="sun" img="milkyway" title={P.signTitle(S.name)} sub={S.essence} />
       <SignDaily sign={s} buildIso={buildIso()} />
+      <p className="text-sm"><Link className="text-gold underline-offset-4 hover:underline" href={horoPath(lang, s)}>{P.horoLink(S.name)} →</Link></p>
       <section className="card">
         <h2 className="h-display mb-2 text-2xl">{P.about(S.name)}</h2>
         <p className="text-sm leading-relaxed">{S.sun}</p>

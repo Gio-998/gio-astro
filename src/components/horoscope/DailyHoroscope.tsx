@@ -141,6 +141,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
               {SIGNS.filter((x) => x !== sign).map((x) => <Link key={x} href={isToday ? horoPath(lang, x) : horoPath(lang, x, iso)} title={c.astro.signs[x].name} className="flex h-12 flex-col items-center justify-center gap-0.5 rounded-xl border border-white/10 bg-white/[0.04] px-0.5 text-[11px] leading-none hover:border-gold/40 sm:h-10 sm:flex-row sm:gap-1 sm:px-1 sm:text-[12px] lg:h-11 lg:rounded-full" data-testid="other-sign"><span aria-hidden className="text-[13px] leading-none text-gold sm:text-[12px] lg:text-lg">{SIGN_GLYPH[x]}</span><span className="whitespace-nowrap lg:sr-only">{c.astro.signs[x].name}</span></Link>)}
             </div>
           </nav>
+          <p className="mt-2 text-[13px]"><Link className="text-gold underline-offset-4 hover:underline" href={`/${lang}/daily/${sign}/`} data-testid="motivation-link">{U.motivationLink(r.signName)} →</Link></p>
           {isToday && (
             <nav aria-label={U.recentDays} data-testid="recent-days">
               <h2 className={`${label} mb-1 mt-2`}>{U.recentDays}</h2>

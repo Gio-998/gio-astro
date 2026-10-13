@@ -120,6 +120,7 @@ export const day = {
     hubSub: "A short reading for your Sun sign, written fresh for each day from the real sky: the Moon's phase, where the Moon is, and what the faster planets are doing.",
     hubMeta: "Free daily motivation and horoscope for all 12 zodiac signs, built from today's real sky. A line to hold on to, one small practice and a question for the day.",
     signTitle: (sign: string) => `${sign} daily motivation`,
+    horoLink: (sign: string) => `Read the full ${sign} horoscope for today`,
     signMeta: (sign: string) => `Today's motivation for ${sign}: a short reading from the real sky, one small practice and a question to carry. Updated every day.`,
     today: "Today", yesterday: "Yesterday", tomorrow: "Tomorrow",
     about: (sign: string) => `About ${sign}`,
