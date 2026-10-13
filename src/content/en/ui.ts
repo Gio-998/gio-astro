@@ -444,7 +444,7 @@ export const beta = {
   banner: "We're in a small private beta. Join the waitlist, or sign in if you have an invite.",
   gateEyebrow: "Private beta · by invitation", gateTitleA: "A new way to see yourself ", gateTitleB: "is almost here",
   gateText: "Horoscop is open to a small circle of testers while we polish it. Leave your email and we'll send you an invite as soon as there's a place.",
-  emailPh: "you@example.com", join: "Join the waitlist ✦", joined: "You're on the list. We'll email you when your invite is ready. 💫",
+  emailLabel: "Your email for the waitlist", emailPh: "you@example.com", join: "Join the waitlist ✦", joined: "You're on the list. We'll email you when your invite is ready. 💫",
   invalid: "Please enter a valid email address.", haveInvite: "Have an invite? Sign in →", privacy: "We only use your email to send the invite. No spam, unsubscribe any time.",
   teasers: ["Your birth chart, Chinese sign, numbers and tarot in one place", "A living aura shaped by your answers", "Rich, story-like readings in English and Macedonian", "Compatibility for love, friends, family and work"],
   emailsTitle: "Email previews", emailsNote: "Demo templates only. Nothing is sent from here. The sign-in code template can be pasted into Supabase as is.", emailsSubject: "Subject", emailsLink: "Email previews", adminHint: "Waitlist sign-ups, invites and email previews", adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove",

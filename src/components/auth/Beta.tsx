@@ -95,7 +95,7 @@ export function Waitlist({ source = "gate" }: { source?: string }) {
   return (
     <form id="waitlist" onSubmit={submit} className="space-y-2">
       <div className="flex flex-col gap-2 sm:flex-row">
-        <input className="input flex-1" type="email" required placeholder={B.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} onFocus={() => setTouched(true)} autoComplete="email" data-testid="waitlist-email" />
+        <input className="input flex-1" type="email" required aria-label={B.emailLabel} placeholder={B.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} onFocus={() => setTouched(true)} autoComplete="email" data-testid="waitlist-email" />
         <button className="btn-primary shrink-0" disabled={state === "busy"} data-testid="waitlist-submit">{state === "busy" ? "…" : B.join}</button>
       </div>
       {cap.widget}
