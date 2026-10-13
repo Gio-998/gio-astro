@@ -1,13 +1,58 @@
 {
   "redirects": [
-    { "source": "/en/premium/", "destination": "/en/pricing/", "statusCode": 308 },
-    { "source": "/mk/premium/", "destination": "/mk/ceni/", "statusCode": 308 },
-    { "source": "/en/upgrade/", "destination": "/en/pricing/", "statusCode": 308 },
-    { "source": "/mk/upgrade/", "destination": "/mk/ceni/", "statusCode": 308 }
+    {
+      "source": "/en/premium/",
+      "destination": "/en/pricing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/mk/premium/",
+      "destination": "/mk/ceni/",
+      "statusCode": 308
+    },
+    {
+      "source": "/en/upgrade/",
+      "destination": "/en/pricing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/mk/upgrade/",
+      "destination": "/mk/ceni/",
+      "statusCode": 308
+    },
+    {
+      "source": "/mk/pricing/",
+      "destination": "/mk/ceni/",
+      "statusCode": 308
+    },
+    {
+      "source": "/en/ceni/",
+      "destination": "/en/pricing/",
+      "statusCode": 308
+    },
+    {
+      "source": "/mk/horoscope/:path*",
+      "destination": "/mk/dneven-horoskop/",
+      "statusCode": 308
+    },
+    {
+      "source": "/en/dneven-horoskop/:path*",
+      "destination": "/en/horoscope/",
+      "statusCode": 308
+    }
   ],
   "rewrites": [
-    { "source": "/invite/:code([a-zA-Z0-9]{8})", "destination": "/en/invite/" },
-    { "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})", "destination": "/:lang/invite/" },
-    { "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})/", "destination": "/:lang/invite/" }
+    {
+      "source": "/invite/:code([a-zA-Z0-9]{8})",
+      "destination": "/en/invite/"
+    },
+    {
+      "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})",
+      "destination": "/:lang/invite/"
+    },
+    {
+      "source": "/:lang(en|mk)/invite/:code([a-zA-Z0-9]{8})/",
+      "destination": "/:lang/invite/"
+    }
   ]
 }
