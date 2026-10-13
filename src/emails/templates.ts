@@ -3,7 +3,8 @@
  * render in Gmail, Outlook and Apple Mail. Supabase variables like {{ .Token }} are kept literally in the
  * sign-in template so the same HTML can be pasted into Supabase > Auth > Email Templates.
  */
-export type EmailLang = "en" | "mk";
+import { localizedPath } from "@/lib/i18n-routes";
+export type EmailLang = "en" | "mk" | "de";
 export type EmailId = "code" | "welcome" | "daily" | "weekly" | "report" | "bond";
 export const EMAIL_IDS: EmailId[] = ["code", "welcome", "daily", "weekly", "report", "bond"];
 const SITE = "https://horoscop.si";
@@ -29,6 +30,16 @@ const T = {
     report: { pre: "Вашата Приказна за врската со Марко е подготвена", title: "Вашата Приказна за врската е подготвена", lead: "Те споредивме со Марко од 14 агли: ѕвезди, бројки, елементи и психологија.", score: "Вкупна хармонија", bondType: "Тип на врска", bondTypeText: "Градителите: стабилни, верни, бавно почнуваат, а тешко се разделуваат", strength: "Вашата најсилна леќа", strengthText: "Начини на грижа: си давате токму она што на другиот му треба", btn: "Прочитај ја нашата приказна" },
     bond: { pre: "Три минути, осум прашања, еден искрен разговор", title: "Време е за Проверка на врската", lead: "Помина еден месец од последната Проверка на врската со Марко. По осум кратки прашања, на еден телефон, околу три минути.", why: "Паровите што редовно проверуваат ги фаќаат ситните работи пред да пораснат. Минатиот пат најсилна ви беше довербата, а за внимание беше одморот.", btn: "Почни ја проверката", later: "Не сега? Ќе те потсетиме за една недела." },
   },
+  de: {
+    names: { code: "Anmeldecode", welcome: "Willkommen", daily: "Tageshoroskop", weekly: "Wochennewsletter", report: "Paarbericht ist fertig", bond: "Erinnerung an den Beziehungscheck" },
+    footer: "Du bekommst diese E-Mail, weil du ein Konto bei Horoscop hast.", unsubscribe: "Abmelden", prefs: "E-Mail-Einstellungen", privacy: "Datenschutz",
+    code: { pre: "Hier ist dein Code für Horoscop. Er gilt eine Stunde.", title: "Dein Anmeldecode", lead: "Tipp diesen Code auf der Anmeldeseite ein oder füg ihn ein. Er gilt eine Stunde.", or: "Oder öffne diesen Link auf demselben Gerät:", btn: "Bei Horoscop anmelden", ignore: "Du hast keinen Code angefordert? Dann kannst du diese E-Mail ignorieren. Ohne den Code kann sich niemand anmelden." },
+    welcome: { pre: "Dein Himmel ist bereit. Hier fängst du an.", title: "Willkommen bei Horoscop, Elena", lead: "Du gehörst zu unseren ersten Testerinnen und Testern, und wir freuen uns sehr, dass du da bist. Dein Profil, deine Deutungen und Vergleiche begleiten dich jetzt auf jedem Gerät.", steps: ["Öffne dein Buch über dich, deine persönliche Deutung in 11 Kapiteln", "Mach einen der 7 kostenlosen Tests und schalte tiefere Ebenen frei", "Füg einen Menschen hinzu, der dir wichtig ist, und lies eure Beziehungsgeschichte"], btn: "Mein Profil öffnen", ps: "PS: Antworte jederzeit auf diese E-Mail. Jede Nachricht liest ein echter Mensch." },
+    daily: { pre: "Waage · Mond in Fische · ein sanfter Tag für ehrliche Gespräche", title: "Montag, 12. Oktober", sign: "Waage", moon: "Mond in Fische, zunehmende Sichel", body: "Ein sanfter Tag. Der Mond im Wasser macht es leichter, das auszusprechen, um das du seit einer Woche herumredest. Sag es schlicht und hör dann länger zu, als es sich natürlich anfühlt.", focus: "Fokus", focusText: "Ein ehrliches Gespräch", card: "Karte des Tages", cardText: "Der Stern: Hoffnung, die daraus wächst, dass du gut für dich sorgst", journal: "Frage fürs Tagebuch", journalText: "Worum würde ich bitten, wenn ich wüsste, dass die Antwort Ja ist?", btn: "Den Tag in der App lesen" },
+    weekly: { pre: "Die Woche vor dir: Merkur wird langsamer, Venus wird wärmer", title: "Deine Woche, 12. bis 18. Oktober", lead: "Drei Dinge am Himmel diese Woche, in einfachen Worten.", items: [["Merkur wird langsamer", "Prüf Pläne und Nachrichten vor Donnerstag lieber zweimal. Alte Gespräche kommen vielleicht zurück und finden ein besseres Ende."], ["Venus wechselt in den Skorpion", "Liebe wird tiefer und privater. Eine gute Woche, um darüber zu reden, was du wirklich willst."], ["Erstes Viertel, Donnerstag", "Ein Anstoß, das weiterzuführen, was du bei Neumond begonnen hast."]], tip: "Für die Waage", tipText: "Sag diese Woche einmal Nein, freundlich und ohne lange Ausrede. Merk, wie viel Energie dir das zurückgibt.", btn: "Meine Woche ansehen" },
+    report: { pre: "Eure Beziehungsgeschichte mit Marko ist fertig", title: "Eure Beziehungsgeschichte ist fertig", lead: "Wir haben dich und Marko durch 14 Blickwinkel gelesen: Sterne, Zahlen, Elemente und die Psychologie, die wirklich trägt.", score: "Gesamtharmonie", bondType: "Art der Verbindung", bondTypeText: "Die Baumeister: beständig, treu, langsam im Anfang und schwer zu erschüttern", strength: "Euer stärkster Blickwinkel", strengthText: "Fürsorgestile: Ihr gebt einander genau das, was der andere braucht", btn: "Unsere Beziehungsgeschichte lesen" },
+    bond: { pre: "Drei Minuten, acht Fragen, ein ehrlicher Check", title: "Zeit für euren Beziehungscheck", lead: "Euer letzter Beziehungscheck mit Marko ist einen Monat her. Acht kurze Fragen für jeden, auf einem Handy, etwa drei Minuten.", why: "Paare, die regelmäßig nachfragen, bemerken Kleinigkeiten, bevor sie groß werden. Letztes Mal war Vertrauen euer stärkster Bereich, und auf Erholung solltet ihr achten.", btn: "Beziehungscheck starten", later: "Gerade nicht? Wir erinnern dich in einer Woche." },
+  },
 } as const;
 
 const C = { night: "#120f2e", card: "#1c1645", ink: "#2b2448", gold: "#f6cf7a", rose: "#f6b5cf", mist: "#ece6ff", dim: "#b9aee0", paper: "#fbf6ee" };
@@ -52,42 +63,42 @@ function layout(lang: EmailLang, pre: string, body: string, opts: { marketing?: 
     <tr><td align="center" style="padding:22px 10px;font:12px/1.6 Helvetica,Arial,sans-serif;color:${C.dim}">
       ${esc(L.footer)}<br>
       <a href="mailto:contact@horoscop.si" style="color:${C.dim}">contact@horoscop.si</a><br>
-      ${opts.marketing ? `<a href="${SITE}/${lang}/account/" style="color:${C.dim}">${esc(L.unsubscribe)}</a> · <a href="${SITE}/${lang}/account/" style="color:${C.dim}">${esc(L.prefs)}</a> · ` : ""}<a href="${SITE}/${lang}/privacy/" style="color:${C.dim}">${esc(L.privacy)}</a><br>✦ ✧ ✦
+      ${opts.marketing ? `<a href="${SITE}${localizedPath(lang, "/account/")}" style="color:${C.dim}">${esc(L.unsubscribe)}</a> · <a href="${SITE}${localizedPath(lang, "/account/")}" style="color:${C.dim}">${esc(L.prefs)}</a> · ` : ""}<a href="${SITE}${localizedPath(lang, "/privacy/")}" style="color:${C.dim}">${esc(L.privacy)}</a><br>✦ ✧ ✦
     </td></tr>
   </table>
 </td></tr></table></body></html>`;
 }
 
 export function renderEmail(id: EmailId, lang: EmailLang): { subject: string; html: string } {
-  const L = T[lang]; const site = `${SITE}/${lang}`;
+  const L = T[lang]; const site = `${SITE}/${lang}`; const to = (path: string) => `${SITE}${localizedPath(lang, path)}`;
   switch (id) {
     case "code": {
       const X = L.code;
       const code = `<div style="margin:22px 0;text-align:center"><span style="display:inline-block;padding:16px 22px;border-radius:18px;background:${C.paper};font:700 34px/1 'Courier New',monospace;letter-spacing:.32em;color:${C.ink}">{{ .Token }}</span></div>`;
-      return { subject: lang === "mk" ? "Твојот код за Хороскоп: {{ .Token }}" : "Your Horoscop code: {{ .Token }}", html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${code}${p(X.or, `font-size:13px;color:${C.dim}`)}${btn("{{ .ConfirmationURL }}", X.btn)}${p(X.ignore, `margin-top:18px;font-size:13px;color:${C.dim}`)}`) };
+      return { subject: lang === "mk" ? "Твојот код за Хороскоп: {{ .Token }}" : lang === "de" ? "Dein Code für Horoscop: {{ .Token }}" : "Your Horoscop code: {{ .Token }}", html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${code}${p(X.or, `font-size:13px;color:${C.dim}`)}${btn("{{ .ConfirmationURL }}", X.btn)}${p(X.ignore, `margin-top:18px;font-size:13px;color:${C.dim}`)}`) };
     }
     case "welcome": {
       const X = L.welcome;
       const steps = X.steps.map((s, i) => `<tr><td style="padding:8px 12px 8px 0;vertical-align:top;font:700 18px/1 Georgia,serif;color:${C.gold}">${i + 1}</td><td style="padding:8px 0;font:15px/1.5 Helvetica,Arial,sans-serif;color:${C.mist}">${esc(s)}</td></tr>`).join("");
-      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0">${steps}</table>${btn(`${site}/me/`, X.btn)}${p(X.ps, `margin-top:18px;font-size:13px;color:${C.dim}`)}`) };
+      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}<table role="presentation" cellpadding="0" cellspacing="0" style="margin:8px 0">${steps}</table>${btn(to("/me/"), X.btn)}${p(X.ps, `margin-top:18px;font-size:13px;color:${C.dim}`)}`) };
     }
     case "daily": {
       const X = L.daily;
-      return { subject: `${X.sign} · ${X.title}`, html: layout(lang, X.pre, `${label(`${X.sign} · ${X.moon}`)}${h1(X.title)}${p(X.body)}${box(`${label(X.focus)}${p(X.focusText, "margin:0")}`)}${box(`${label(X.card)}${p(X.cardText, "margin:0")}`)}${box(`${label(X.journal)}${p(X.journalText, "margin:0;font-style:italic")}`)}${btn(`${site}/today/`, X.btn)}`, { marketing: true }) };
+      return { subject: `${X.sign} · ${X.title}`, html: layout(lang, X.pre, `${label(`${X.sign} · ${X.moon}`)}${h1(X.title)}${p(X.body)}${box(`${label(X.focus)}${p(X.focusText, "margin:0")}`)}${box(`${label(X.card)}${p(X.cardText, "margin:0")}`)}${box(`${label(X.journal)}${p(X.journalText, "margin:0;font-style:italic")}`)}${btn(to("/today/"), X.btn)}`, { marketing: true }) };
     }
     case "weekly": {
       const X = L.weekly;
       const items = X.items.map(([t, d]) => box(`<p style="margin:0 0 4px;font:600 17px/1.3 Georgia,serif;color:${C.gold}">${esc(t)}</p>${p(d, "margin:0")}`)).join("");
-      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${items}${box(`${label(X.tip)}${p(X.tipText, "margin:0")}`)}${btn(`${site}/today/`, X.btn)}`, { marketing: true }) };
+      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${items}${box(`${label(X.tip)}${p(X.tipText, "margin:0")}`)}${btn(to("/today/"), X.btn)}`, { marketing: true }) };
     }
     case "report": {
       const X = L.report;
       const ring = `<div style="margin:20px 0;text-align:center"><span style="display:inline-block;width:120px;height:120px;border-radius:50%;border:6px solid ${C.gold};font:600 40px/120px Georgia,serif;color:${C.mist}">82</span><p style="margin:8px 0 0;font:12px Helvetica,Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:${C.dim}">${esc(X.score)}</p></div>`;
-      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${ring}${box(`${label(X.bondType)}${p(X.bondTypeText, "margin:0")}`)}${box(`${label(X.strength)}${p(X.strengthText, "margin:0")}`)}${btn(`${site}/match/`, X.btn)}`) };
+      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${ring}${box(`${label(X.bondType)}${p(X.bondTypeText, "margin:0")}`)}${box(`${label(X.strength)}${p(X.strengthText, "margin:0")}`)}${btn(to("/match/"), X.btn)}`) };
     }
     case "bond": {
       const X = L.bond;
-      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${box(p(X.why, "margin:0"))}${btn(`${site}/bond/`, X.btn)}${p(X.later, `margin-top:14px;font-size:13px;color:${C.dim};text-align:center`)}`, { marketing: true }) };
+      return { subject: X.title, html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${box(p(X.why, "margin:0"))}${btn(to("/bond/"), X.btn)}${p(X.later, `margin-top:14px;font-size:13px;color:${C.dim};text-align:center`)}`, { marketing: true }) };
     }
   }
 }

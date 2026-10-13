@@ -65,7 +65,7 @@ export function AccountPage() {
 
 function SignInForm() {
   const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const router = useRouter(); const s = useStore();
-  const nextParam = useSearchParams().get("next"); const dest = nextParam && /^\/(en|mk)\/[\w\-/]*$/.test(nextParam) ? nextParam : h("/me");
+  const nextParam = useSearchParams().get("next"); const dest = nextParam && /^\/(en|mk|de)\/[\w\-/]*$/.test(nextParam) ? nextParam : h("/me");
   const [tab, setTab] = useState<"signup" | "login" | "otp">("signup"); const creating = tab === "signup";
   const [sent, setSent] = useState<"" | "signup" | "otp">("");
   const [email, setEmail] = useState(""); const [pw, setPw] = useState(""); const [cons, setCons] = useState({ terms: false, data: false, mkt: false });

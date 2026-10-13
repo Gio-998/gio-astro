@@ -16,7 +16,7 @@ const sid = () => {
     return s;
   } catch { return null; }
 };
-const loc = () => (location.pathname.startsWith("/mk") ? "mk" : "en");
+const loc = () => (location.pathname.startsWith("/mk") ? "mk" : location.pathname.startsWith("/de") ? "de" : "en");
 const recent = new Map<string, number>();
 
 export function track(kind: EventKind, meta: Record<string, string | number | boolean> = {}) {

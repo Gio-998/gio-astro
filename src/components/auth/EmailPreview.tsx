@@ -10,7 +10,7 @@ import { Segmented } from "../controls";
 export function EmailPreview() {
   const a = useAccount(); const { c, locale } = useContent(); const B = c.ui.beta; const h = useHref();
   const isAdmin = (a.user?.app_metadata as { role?: string } | undefined)?.role === "admin";
-  const [id, setId] = useState<EmailId>("code"); const [lang, setLang] = useState<EmailLang>(locale === "mk" ? "mk" : "en");
+  const [id, setId] = useState<EmailId>("code"); const [lang, setLang] = useState<EmailLang>(locale === "mk" || locale === "de" ? locale : "en");
   const [w, setW] = useState<"390" | "640">("390");
   if (!a.ready) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!isAdmin) return <div className="card text-dim" data-testid="not-admin">{B.notAdmin} {!a.user && <Link className="text-gold" href={h("/account")}>{B.haveInvite}</Link>}</div>;
@@ -21,7 +21,7 @@ export function EmailPreview() {
       <p className="text-sm text-dim">{B.emailsNote}</p>
       <div className="flex flex-wrap gap-2">{EMAIL_IDS.map((k) => <button key={k} type="button" onClick={() => setId(k)} className={`rounded-full border px-3 py-1.5 text-sm ${id === k ? "border-gold bg-gold/15 text-gold" : "border-white/15 text-dim"}`}>{emailName(k, lang)}</button>)}</div>
       <div className="grid grid-cols-2 gap-2 sm:max-w-md">
-        <Segmented label="Language" value={lang} onChange={setLang} options={[{ value: "en", label: "English" }, { value: "mk", label: "Македонски" }]} />
+        <Segmented label="Language" value={lang} onChange={setLang} options={[{ value: "en", label: "English" }, { value: "mk", label: "Македонски" }, { value: "de", label: "Deutsch" }]} />
         <Segmented label="Width" value={w} onChange={setW} options={[{ value: "390", label: "📱 390" }, { value: "640", label: "🖥 640" }]} />
       </div>
       <div className="card !p-3"><p className="mb-2 text-sm"><span className="text-dim">{B.emailsSubject}:</span> <b>{mail.subject}</b></p>

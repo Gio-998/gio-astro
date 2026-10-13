@@ -15,13 +15,14 @@ const COUNTRIES = ["MK", "SI", "EU", "XX"] as const;
 const COUNTRY_LABEL: Record<string, Record<(typeof COUNTRIES)[number], string>> = {
   en: { MK: "North Macedonia", SI: "Slovenia", EU: "Another EU country", XX: "Outside the EU" },
   mk: { MK: "Северна Македонија", SI: "Словенија", EU: "Друга земја од ЕУ", XX: "Надвор од ЕУ" },
+  de: { MK: "Nordmazedonien", SI: "Slowenien", EU: "Anderes EU-Land", XX: "Außerhalb der EU" },
 };
 
 export function CheckoutPage() {
   const T = usePremiumText(); const C = T.checkout; const acc = useAccess(); const { c, locale } = useContent(); const h = useHref();
   const params = useSearchParams(); const a = useAccount(); const s = useStore();
   const initial: Sku = isSku(params.get("sku")) ? (params.get("sku") as Sku) : "premium-yearly";
-  const ret = params.get("return"); const safeReturn = ret && /^\/(en|mk)\/[\w\-/]*$/.test(ret) ? ret : null;
+  const ret = params.get("return"); const safeReturn = ret && /^\/(en|mk|de)\/[\w\-/]*$/.test(ret) ? ret : null;
   const [sku, setSku] = useState<Sku>(initial);
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<Record<string, string>>({});
@@ -77,7 +78,7 @@ export function CheckoutPage() {
         <label className="block"><span className="label">{C.name}</span><input className="input" value={form.name ?? ""} onChange={set("name")} autoComplete="name" /></label>
         <label className="block"><span className="label">{C.email}</span><input className="input" type="email" value={form.email ?? a.user?.email ?? ""} onChange={set("email")} autoComplete="email" /></label>
         <div><span className="label">{C.country}</span>
-          <SheetSelect title={C.country} value={(form.country as (typeof COUNTRIES)[number]) ?? (locale === "mk" ? "MK" : "")} onChange={(v) => setForm({ ...form, country: v })} options={COUNTRIES.map((k) => ({ value: k, label: COUNTRY_LABEL[locale === "mk" ? "mk" : "en"][k] }))} />
+          <SheetSelect title={C.country} value={(form.country as (typeof COUNTRIES)[number]) ?? (locale === "mk" ? "MK" : "")} onChange={(v) => setForm({ ...form, country: v })} options={COUNTRIES.map((k) => ({ value: k, label: COUNTRY_LABEL[locale === "mk" || locale === "de" ? locale : "en"][k] }))} />
           <p className="mt-1 text-xs text-dim">{C.countryHint}</p></div>
         {product === "couple-deep-dive" && all.length > 0 && <div><span className="label">{C.partner}</span><SheetSelect title={C.partner} value={people[0] ?? ""} onChange={(v) => setPeople([v])} options={all.filter((p) => p.id !== "me").map((p) => ({ value: p.id, label: p.name }))} /></div>}
         {product === "constellation" && <div><span className="label">{C.people}</span><div className="grid gap-1.5">{all.map((p) => (
@@ -90,7 +91,7 @@ export function CheckoutPage() {
         </>}
         {product === "session" && <>
           <label className="block"><span className="label">{C.session.topic}</span><textarea className="input h-24" value={form.topic ?? ""} onChange={set("topic")} /></label>
-          <label className="block"><span className="label">{C.session.times}</span><input className="input" value={form.times ?? ""} onChange={set("times")} placeholder={locale === "mk" ? "пр. вт или чет навечер" : "e.g. Tue or Thu evening"} /></label>
+          <label className="block"><span className="label">{C.session.times}</span><input className="input" value={form.times ?? ""} onChange={set("times")} placeholder={locale === "mk" ? "пр. вт или чет навечер" : locale === "de" ? "z. B. Di oder Do abends" : "e.g. Tue or Thu evening"} /></label>
           <div><span className="label">{C.session.lang}</span><SheetSelect title={C.session.lang} value={(form.lang as "en" | "mk") ?? locale} onChange={(v) => setForm({ ...form, lang: v })} options={[{ value: "en", label: "English" }, { value: "mk", label: "Македонски" }]} /></div>
         </>}
         {product === "hardcover" && <label className="block"><span className="label">{C.shipping}</span><textarea className="input h-24" value={form.address ?? ""} onChange={set("address")} autoComplete="street-address" /></label>}

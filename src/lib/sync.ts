@@ -53,7 +53,7 @@ async function hasDataConsent(): Promise<boolean> {
   return latest.get("birth_data") === true && latest.get("sensitive_quiz_data") === true;
 }
 
-const locale = () => (typeof location !== "undefined" && location.pathname.startsWith("/mk") ? "mk" : "en");
+const locale = () => (typeof location !== "undefined" && location.pathname.startsWith("/mk") ? "mk" : location.pathname.startsWith("/de") ? "de" : "en");
 
 // ——— push one change ———
 async function push(ch: Change, uid: string) {
