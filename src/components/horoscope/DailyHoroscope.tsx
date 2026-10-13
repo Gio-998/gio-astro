@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { publishedDates } from "@/engine/skyday";
 import { RetroMark } from "../RetroMark";
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { getContent } from "@/content";
@@ -33,11 +34,13 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
     articleSection: B.ui.hubTitle, wordCount: wordCount(r),
     author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@type": "Organization", name: c.site.brand, url: SITE_URL },
   };
+  // Only link to dates this build publishes, so the edges of the window never point at a 404.
+  const pub = new Set(publishedDates());
   const dayNav = (
     <nav className="flex items-center justify-between gap-2" aria-label={U.others}>
-      <Link className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</Link>
+      {pub.has(r.prev) ? <Link className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</Link> : <span />}
       {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLink}</Link>}
-      <Link className={pill} href={horoPath(lang, sign, r.next)} rel="next">{U.tomorrow} →</Link>
+      {pub.has(r.next) ? <Link className={pill} href={horoPath(lang, sign, r.next)} rel="next">{U.tomorrow} →</Link> : <span />}
     </nav>
   );
   return (
