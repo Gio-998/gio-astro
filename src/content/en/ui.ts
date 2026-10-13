@@ -323,7 +323,7 @@ export const privacyControls = {
 };
 
 export const pageMeta = {
-  credits: { title: "Credits" },
+  credits: { title: "Credits", description: "Credits for the space photography and place data used on Horoscop, with the licences that apply to each." },
   account: { title: "Your account" },
   verify: { title: "Enter your code" },
   bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer eight questions about your relationship and see strengths, perception gaps and practices." },
@@ -335,11 +335,11 @@ export const pageMeta = {
   me: { title: "My profile" },
   people: { title: "People" },
   person: { title: "Profile" },
-  privacy: { title: "Privacy" },
+  privacy: { title: "Privacy", description: "How Horoscop handles your data: what stays on your device, what an account stores, how to export or delete it, and who we never sell it to." },
   promise: { title: "Our promise", description: "Free full results, no fake urgency, one-click cancel, published prices and refunds in money: an astrology app without subscription traps." },
   quizzes: { title: "Free personality & self-discovery quizzes", description: "Big Five, attachment style, nine motivations, care styles, Shadow & Light, body & energy type and autopilot vs explorer: full results free." },
   start: { title: "Free birth chart & profile in 90 seconds", description: "Enter your birth date to get your Western, Vedic and Chinese signs, numerology, tarot birth card, archetype animal and colour palette: free." },
-  terms: { title: "Terms of use" },
+  terms: { title: "Terms of use", description: "The rules for using Horoscop: what the readings are and are not, accounts, future paid plans, refunds and how to reach us." },
   today: { title: "Today" },
   upgrade: { title: "Extras" },
 };
