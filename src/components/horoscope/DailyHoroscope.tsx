@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RetroMark } from "../RetroMark";
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { getContent } from "@/content";
 import { reading, horoPath, bankFor, absolute, ogPath, type Reading } from "@/lib/horoscope";
@@ -118,7 +119,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
           <section className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3.5 lg:rounded-3xl lg:px-5">
             <h2 className={`${label} mb-2`}>{M.planets}</h2>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-1 text-[13px] lg:grid-cols-1">
-              {r.planets.map((p) => <li key={p.body} className="flex justify-between gap-2 border-b border-white/5 py-0.5"><span className="text-mist/70">{p.name}</span><span className="whitespace-nowrap text-mist">{p.signName}{p.retro && <span className="ml-1 text-[10px] uppercase tracking-wider text-gold/80" title={M.retroMark}>℞</span>}</span></li>)}
+              {r.planets.map((p) => <li key={p.body} className="flex justify-between gap-2 border-b border-white/5 py-0.5"><span className="text-mist/70">{p.name}</span><span className="whitespace-nowrap text-mist">{p.signName}{p.retro && <RetroMark label={M.retroMark} />}</span></li>)}
             </ul>
           </section>
 

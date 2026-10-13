@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { RetroMark } from "../RetroMark";
 import { useEffect, useMemo, useState } from "react";
 import type { Profile } from "@/engine/profile";
 import type { StoredPerson } from "@/lib/store";
@@ -41,7 +42,7 @@ export function TodayFeed({ profile, people, now }: { profile: Profile; people: 
           <span className="shrink-0 text-[14px] text-gold">{SIGN_GLYPH[m.moonSign]} {A.signs[m.moonSign].name}</span>
         </li>))}</ul>) });
     const retro = SLOW.filter((p) => { let dd = longitude(p, new Date(now.getTime() + 864e5)) - longitude(p, now); if (dd > 180) dd -= 360; if (dd < -180) dd += 360; return dd < 0; });
-    out.push({ key: "retro", eyebrow: F.retro, body: retro.length ? <div className="space-y-3">{retro.map((p) => <p key={p} className="text-[19px] leading-snug text-pretty">℞ {F.retroLine(A.points[p].name)}</p>)}</div> : <p className="text-[22px] leading-snug text-pretty">{F.noRetro}</p> });
+    out.push({ key: "retro", eyebrow: F.retro, body: retro.length ? <div className="space-y-3">{retro.map((p) => <p key={p} className="text-[19px] leading-snug text-pretty"><RetroMark className="!ml-0 mr-2 align-[3px]" />{F.retroLine(A.points[p].name)}</p>)}</div> : <p className="text-[22px] leading-snug text-pretty">{F.noRetro}</p> });
     const q = QUIZ_IDS.find((id) => !profile.quiz[defs[id].resultKey as keyof typeof profile.quiz]);
     if (q) out.push({ key: "quiz", eyebrow: F.quiz, body: <><p className="h-display text-[34px] leading-tight text-balance">{defs[q].title}</p><p className="mt-3 text-[17px] text-mist/85 text-pretty">{defs[q].tagline}</p><p className="mt-2 text-sm text-dim">{F.quizLine(defs[q].title, defs[q].minutes)}</p></>, href: h(`/quiz/${q}/`) });
     const bd = people.map((p) => ({ p, d: daysToBirthday(p.date, now) })).filter((x) => x.d <= 14).sort((a, b) => a.d - b.d)[0];

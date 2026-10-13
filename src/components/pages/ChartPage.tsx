@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { RetroMark } from "../RetroMark";
 import { useSearchParams } from "next/navigation";
 import { useStore, findPerson } from "@/lib/store";
 import { profileOf } from "@/lib/profile";
@@ -12,7 +13,7 @@ import { EvidenceBadge, PageHero } from "../ui";
 const ORDER: Point[] = ["sun", "moon", "asc", "mercury", "venus", "mars", "jupiter", "saturn", "uranus", "neptune", "pluto", "node", "mc"];
 
 export function ChartPage() {
-  const s = useStore(); const { c } = useContent(); const h = useHref(); const fmt = useDate(); const U = c.ui.chart;
+  const s = useStore(); const { c, locale } = useContent(); const h = useHref(); const fmt = useDate(); const U = c.ui.chart;
   const id = useSearchParams().get("id") ?? "me";
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
   const person = findPerson(s, id);
@@ -33,7 +34,7 @@ export function ChartPage() {
           <thead><tr className="text-left text-dim"><th className="py-1">{U.point}</th><th>{U.sign}</th><th>{U.degree}</th><th>{U.house}</th></tr></thead>
           <tbody>
             {ORDER.filter((p) => ch.placements[p]).map((p) => { const pl = ch.placements[p]!; return (
-              <tr key={p} className="border-t border-white/5"><td className="py-1.5">{A.points[p].glyph} {A.points[p].name}{pl.retrograde ? " ℞" : ""}</td><td>{SIGN_GLYPH[pl.sign]} {A.signs[pl.sign].name}</td><td>{formatDegree(pl.lon)}</td><td>{pl.house ?? "·"}</td></tr>
+              <tr key={p} className="border-t border-white/5"><td className="py-1.5">{A.points[p].glyph} {A.points[p].name}{pl.retrograde && <RetroMark label={locale === "mk" ? "ретроградно" : "retrograde"} />}</td><td>{SIGN_GLYPH[pl.sign]} {A.signs[pl.sign].name}</td><td>{formatDegree(pl.lon)}</td><td>{pl.house ?? "·"}</td></tr>
             ); })}
           </tbody>
         </table>
