@@ -132,7 +132,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
           <nav aria-label={U.others}>
             <h2 className={`${label} mb-2 mt-2`}>{U.others}</h2>
             <div className="grid grid-cols-4 gap-1.5 lg:grid-cols-6">
-              {SIGNS.filter((x) => x !== sign).map((x) => <Link key={x} href={isToday ? horoPath(lang, x) : horoPath(lang, x, iso)} title={c.astro.signs[x].name} className="flex h-10 items-center justify-center gap-1 rounded-xl border border-white/10 bg-white/[0.04] px-1 text-[12px] hover:border-gold/40 lg:h-11 lg:rounded-full"><span aria-hidden className="text-gold lg:text-lg">{SIGN_GLYPH[x]}</span><span className="truncate lg:sr-only">{c.astro.signs[x].name}</span></Link>)}
+              {SIGNS.filter((x) => x !== sign).map((x) => <Link key={x} href={isToday ? horoPath(lang, x) : horoPath(lang, x, iso)} title={c.astro.signs[x].name} className="flex h-12 flex-col items-center justify-center gap-0.5 rounded-xl border border-white/10 bg-white/[0.04] px-0.5 text-[11px] leading-none hover:border-gold/40 sm:h-10 sm:flex-row sm:gap-1 sm:px-1 sm:text-[12px] lg:h-11 lg:rounded-full" data-testid="other-sign"><span aria-hidden className="text-[13px] leading-none text-gold sm:text-[12px] lg:text-lg">{SIGN_GLYPH[x]}</span><span className="whitespace-nowrap lg:sr-only">{c.astro.signs[x].name}</span></Link>)}
             </div>
           </nav>
         </aside>
