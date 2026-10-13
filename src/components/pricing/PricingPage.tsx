@@ -50,11 +50,11 @@ export function PricingPage() {
               <h2 className="h-display text-3xl">{p.name}</h2>
               <p className="mb-4 truncate text-sm text-dim">{p.line}</p>
               <div className="mb-1 flex items-baseline gap-1.5">
-                <span className="h-display text-4xl text-mist">{big}</span>
-                <span className="text-sm text-dim">{free ? T.forever : T.perMonth}</span>
+                <span className="h-display text-4xl text-mist whitespace-nowrap!">{big}</span>
+                <span className="whitespace-nowrap text-sm text-dim md:text-[13px] lg:text-sm">{free ? T.forever : T.perMonth}</span>
               </div>
               <p className="mb-5 h-5 text-xs text-dim">{!free && (yearly ? T.billedYearly(money(pr.year)) : `${money(pr.year)} ${T.perYear} · ${T.save(yearlySaving(id))}`)}</p>
-              <Link href={join} className={`${rec ? "btn-primary" : "btn-ghost"} mb-5 w-full whitespace-nowrap !py-2.5 text-center text-sm`} data-testid={`cta-${id}`}>{p.cta}{rec ? " ✦" : ""}</Link>
+              <Link href={join} className={`${rec ? "btn-primary" : "btn-ghost"} mb-5 w-full whitespace-nowrap !py-2.5 text-center text-sm md:!px-3 lg:!px-5`} data-testid={`cta-${id}`}>{p.cta}{rec ? " ✦" : ""}</Link>
               {p.lead && <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-gold/90">{p.lead}</p>}
               <ul className="space-y-2 text-sm">
                 {p.features.map((f) => <li key={f} className="flex gap-2"><span className={rec ? "text-gold" : "text-sage"} aria-hidden>✓</span><span className="text-mist/90">{f}</span></li>)}
