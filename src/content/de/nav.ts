@@ -40,6 +40,7 @@ export const nav: Nav = {
     discover: {
       label: "Entdecken", feature: { title: "Ehrlich gebaut", text: "Wie jede Zahl entsteht, was die Wissenschaft sagt und was nicht.", cta: "So funktioniert's" },
       items: [
+        { href: "/numerology/", icon: "number", title: "Numerologie", desc: "Engelszahlen, Lebenszahl und Rechner" },
         { href: "/daily/", icon: "moon", title: "Täglich nach Zeichen", desc: "Der heutige Impuls für alle 12 Zeichen" },
         { href: "/blog/", icon: "palette", title: "Blog", desc: "Geschichten über Zeichen, Liebe und Innenleben" },
         { href: "/learn/", icon: "number", title: "So funktioniert's", desc: "Methoden und Ehrlichkeit" },

@@ -41,6 +41,7 @@ export const nav: Nav = {
     discover: {
       label: "Откриј", feature: { title: "Без тајни", text: "Како пресметуваме и што вели науката.", cta: "Како функционира" },
       items: [
+        { href: "/numerology/", icon: "number", title: "Нумерологија", desc: "Ангелски броеви, патека на животот, калкулатори" },
         { href: "/daily/", icon: "moon", title: "Дневно по знак", desc: "Порака за секој знак" },
         { href: "/blog/", icon: "palette", title: "Блог", desc: "Знаци, љубов и душа" },
         { href: "/learn/", icon: "number", title: "Како функционира", desc: "Методи и искреност" },

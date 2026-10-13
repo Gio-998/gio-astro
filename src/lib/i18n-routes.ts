@@ -20,7 +20,29 @@ export const X_DEFAULT: RouteLocale = "en";
 export const SECTION_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
   pricing: { en: "pricing", mk: "ceni", de: "preise" },
   horoscope: { en: "horoscope", mk: "dneven-horoskop", de: "tageshoroskop" },
+  numerology: { en: "numerology", mk: "numerologija", de: "numerologie" },
 };
+/** Second (and calculator third) segment inside /numerology/. Numbers stay digits; pairs use a localized joiner. */
+export const NUM_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
+  "angel-numbers": { mk: "angelski-broevi", de: "engelszahlen" },
+  "life-path": { mk: "pateka-na-zivotot", de: "lebenszahl" },
+  "master-numbers": { mk: "master-broevi", de: "meisterzahlen" },
+  "personal-year": { mk: "licna-godina", de: "persoenliches-jahr" },
+  "personal-day": { mk: "licen-den", de: "persoenlicher-tag" },
+  "expression-number": { mk: "broj-na-izrazot", de: "ausdruckszahl" },
+  "soul-urge-number": { mk: "broj-na-dusata", de: "seelenzahl" },
+  "personality-number": { mk: "broj-na-licnosta", de: "persoenlichkeitszahl" },
+  "birthday-number": { mk: "broj-na-rodendenot", de: "geburtstagszahl" },
+  "maturity-number": { mk: "broj-na-zrelosta", de: "reifezahl" },
+  "karmic-debt": { mk: "karmicki-dolg", de: "karmische-schuld" },
+  compatibility: { mk: "kompatibilnost", de: "kompatibilitaet" },
+  calculator: { mk: "kalkulator", de: "rechner" },
+  "mirror-hours": { mk: "ogledalni-casovi", de: "spiegelzahlen" },
+  name: { mk: "ime", de: "name" },
+};
+const PAIR_JOIN: Record<RouteLocale, string> = { en: "and", mk: "i", de: "und" };
+const numSlug = (l: RouteLocale, k: string) => NUM_SLUGS[k]?.[l] ?? k;
+const numKey = (l: RouteLocale, slug: string) => Object.keys(NUM_SLUGS).find((k) => numSlug(l, k) === slug);
 /** Second segment inside sections that list zodiac signs. */
 export const SIGN_SLUGS: Record<RouteLocale, Record<Sign, string>> = {
   en: { aries: "aries", taurus: "taurus", gemini: "gemini", cancer: "cancer", leo: "leo", virgo: "virgo", libra: "libra", scorpio: "scorpio", sagittarius: "sagittarius", capricorn: "capricorn", aquarius: "aquarius", pisces: "pisces" },
@@ -40,6 +62,10 @@ export function localizedPath(locale: string, path: string): string {
   if (section && SECTION_SLUGS[section]) {
     parts[1] = sectionSlug(l, section);
     if (SIGN_SECTIONS.has(section) && parts[2] && parts[2] in SIGN_SLUGS.en) parts[2] = SIGN_SLUGS[l][parts[2] as Sign];
+    if (section === "numerology") for (let i = 2; i < parts.length; i++) {
+      if (NUM_SLUGS[parts[i]]) parts[i] = numSlug(l, parts[i]);
+      else if (/^\d+-and-\d+$/.test(parts[i])) parts[i] = parts[i].replace("-and-", `-${PAIR_JOIN[l]}-`);
+    }
   }
   return `/${l}${parts.join("/")}`;
 }
@@ -53,6 +79,10 @@ export function parsePath(url: string): [RouteLocale, string] | null {
   if (section) {
     parts[1] = section;
     if (SIGN_SECTIONS.has(section)) { const s = (Object.keys(SIGN_SLUGS[l]) as Sign[]).find((x) => SIGN_SLUGS[l][x] === parts[2]); if (s) parts[2] = s; }
+    if (section === "numerology") for (let i = 2; i < parts.length; i++) {
+      const k = numKey(l, parts[i]); if (k) parts[i] = k;
+      else if (new RegExp(`^\\d+-${PAIR_JOIN[l]}-\\d+$`).test(parts[i])) parts[i] = parts[i].replace(`-${PAIR_JOIN[l]}-`, "-and-");
+    }
   }
   return [l, parts.join("/")];
 }

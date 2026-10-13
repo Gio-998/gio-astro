@@ -16,7 +16,7 @@ const PUBLIC = ["", "reset", "privacy", "terms", "promise", "pricing", "learn", 
 // Localized slugs (/mk/ceni/, /de/preise/, /de/tageshoroskop/…) map back to internal route names via the shared slug map.
 const routeOf = (path: string) => { const p = parsePath(path.endsWith("/") ? path : `${path}/`); return (p ? p[1] : path).replace(/^\/|\/$/g, ""); };
 // Public sections (with all their sub-pages): mini-games, daily sign pages, blog, trust page. Personal pages stay behind login.
-const PUBLIC_SECTIONS = ["play", "daily", "invite", "blog", "how-it-works", "challenge", "horoscope"];
+const PUBLIC_SECTIONS = ["play", "daily", "invite", "blog", "how-it-works", "challenge", "horoscope", "numerology"];
 const inSection = (r: string) => PUBLIC_SECTIONS.some((s) => r === s || r.startsWith(`${s}/`));
 export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || inSection(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout"); };
 

@@ -453,6 +453,27 @@
       }
     },
     {
+      "src": "/en/(numerologija|numerologie)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/numerology/"
+      }
+    },
+    {
+      "src": "/mk/(numerology|numerologie)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/numerologija/"
+      }
+    },
+    {
+      "src": "/de/(numerology|numerologija)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/numerologie/"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

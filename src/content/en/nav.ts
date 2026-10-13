@@ -40,6 +40,7 @@ export const nav = {
     discover: {
       label: "Discover", feature: { title: "Honest by design", text: "How every number is made, what science says, and what it doesn't.", cta: "How it works" },
       items: [
+        { href: "/numerology/", icon: "number", title: "Numerology", desc: "Angel numbers, life path and calculators" },
         { href: "/daily/", icon: "moon", title: "Daily by sign", desc: "Today's note for all twelve signs" },
         { href: "/blog/", icon: "palette", title: "Blog", desc: "Stories on signs, love and the inner life" },
         { href: "/learn/", icon: "number", title: "How it works", desc: "Methods and honesty" },

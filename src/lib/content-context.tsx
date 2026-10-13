@@ -1,4 +1,5 @@
 "use client";
+import { localizedPath } from "./i18n-routes";
 import { createContext, useContext } from "react";
 import { contents, Content, Locale } from "@/content";
 import { formatDate, localIso } from "./dates";
@@ -16,5 +17,5 @@ export function useDate() {
 /** Locale-prefixed href helper. */
 export function useHref() {
   const { locale } = useContext(Ctx);
-  return (path: string) => `/${locale}${path.startsWith("/") ? path : `/${path}`}`;
+  return (path: string) => localizedPath(locale, path.startsWith("/") ? path : `/${path}`);
 }

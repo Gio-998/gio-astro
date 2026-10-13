@@ -8,6 +8,7 @@ import { localizedPath } from "@/lib/i18n-routes";
 import { SIGNS } from "@/engine/zodiac";
 import { BLOG_SLUGS, postFor } from "@/content/blog";
 import { publishedDates } from "@/engine/skyday";
+import { numPaths, numIndexable } from "@/lib/numerology";
 
 // Every URL comes from one internal (locale-less) route path; localizedPath/languageAlternates turn it into each
 // locale's public URL and hreflang set, so localized slugs (/mk/ceni/, /mk/dneven-horoskop/…) need no special cases.
@@ -24,6 +25,7 @@ function entries(): Entry[] {
   const blogDate = (l: string, p: string) => { const m = p.match(/^\/blog\/([^/]+)\/$/); const post = m ? postFor(l, m[1]) : undefined; return post ? (post.updated ?? post.date) : BUILD; };
   return [
     ...HORO.map((p): Entry => { const d = dated(p); return { path: p, lastModified: () => d ?? BUILD, changeFrequency: d ? "yearly" : "daily", priority: d ? 0.5 : 0.7 }; }),
+    ...numPaths().filter(numIndexable).map((p): Entry => ({ path: p, lastModified: () => BUILD, changeFrequency: "monthly", priority: p === "/numerology/" ? 0.7 : 0.6 })),
     { path: "/pricing/", lastModified: () => BUILD, changeFrequency: "monthly", priority: 0.7 },
     ...PUBLIC.map((p): Entry => ({ path: p, lastModified: (l) => blogDate(l, p), changeFrequency: p.startsWith("/daily/") ? "daily" : "monthly", priority: p === "/" ? 1 : 0.6 })),
   ];
