@@ -24,12 +24,12 @@ export function QuizHub() {
       </PageHero>
       <Link href={h("/deep/")} data-testid="deep-banner" className="group relative mb-5 block overflow-hidden rounded-[28px] border border-gold/30 bg-gradient-to-br from-indigo/60 via-ink/80 to-violet/30 p-5 transition active:scale-[.99] hover:border-gold/60">
         <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gold/20 blur-3xl transition group-hover:bg-gold/30" />
-        <div className="relative flex items-center gap-4">
-          <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-ink/70 text-2xl text-gold ring-1 ring-gold/40">⚡</div>
+        <div className="relative flex items-center gap-3 sm:gap-4">
+          <div className="grid h-11 w-11 shrink-0 place-items-center self-start rounded-2xl bg-ink/70 text-xl text-gold ring-1 ring-gold/40 sm:h-14 sm:w-14 sm:self-center sm:text-2xl">⚡</div>
           <div className="min-w-0 flex-1">
             <p className="eyebrow mb-0.5">✦ {AD.hub.badge}{s?.me?.quiz.adaptive ? " · ✓" : ""}</p>
-            <p className="h-display text-2xl leading-tight">{AD.hub.title}</p>
-            <p className="text-sm text-mist/80">{AD.hub.tagline}</p>
+            <p className="h-display whitespace-nowrap text-2xl leading-tight">{AD.hub.title}</p>
+            <p className="text-sm text-mist/80 [text-wrap:pretty]">{AD.hub.tagline}</p>
           </div>
           <span className="text-xl text-gold transition group-hover:translate-x-1">→</span>
         </div>
