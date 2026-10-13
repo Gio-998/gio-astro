@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
   distDir: process.env.NEXT_DIST_DIR || ".next",
   trailingSlash: true,
   images: { unoptimized: true },
+  // Branded 404 for unmatched URLs (the app has two root layouts, so a plain not-found.tsx cannot cover them).
+  experimental: { globalNotFound: true },
   turbopack: {
     rules: {
       "*.css": {
