@@ -47,8 +47,8 @@ export const partners = {
   facts: [
     ["Commission", "30% of each sale, including the first year of a subscription"],
     ["Cookie window", "60 days from the first click"],
-    ["Payouts", "Monthly through Lemon Squeezy, by bank or PayPal, from 50 EUR"],
-    ["Tracking", "Lemon Squeezy affiliate dashboard, live"],
+    ["Payouts", "Monthly through our payment partner, by bank transfer, from 50 EUR"],
+    ["Tracking", "Your own partner dashboard, live"],
     ["Who fits", "Creators, tarot and astrology readers, coaches, communities"],
   ] as [string, string][],
   rulesTitle: "A few rules",

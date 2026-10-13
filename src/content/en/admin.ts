@@ -23,7 +23,7 @@ export const admin = {
     signups_open: { name: "Open sign-ups", on: "On: anyone can create an account, no invite needed.", off: "Off: only emails on the invite list can create an account." },
     captcha: { name: "Captcha (bot check)", on: "On: the app shows the Turnstile check on login and the waitlist.", off: "Off: no bot check in the app." },
   } as Record<string, { name: string; on: string; off: string }>,
-  captchaWarn: "Keep this in step with Supabase › Auth › Attack Protection. If Supabase requires a captcha and this is off, logins fail.",
+  captchaWarn: "Keep this in step with the bot protection setting in the sign-in backend. If the backend requires a captcha and this is off, logins fail.",
   saved: "Saved", changedBy: (d: string) => `changed ${d}`,
   // Stats
   range: (d: number) => `Last ${d} days`,

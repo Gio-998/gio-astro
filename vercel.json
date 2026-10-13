@@ -180,6 +180,90 @@
       }
     },
     {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(aries|oven|widder)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/aries/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(taurus|bik|stier)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/taurus/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/gemini/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(cancer|rak|krebs)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/cancer/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(leo|lav|loewe)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/leo/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/virgo/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(libra|vaga|waage)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/libra/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/scorpio/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(sagittarius|strelec|schuetze)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/sagittarius/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(capricorn|jarec|steinbock)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/capricorn/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/aquarius/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop)/(pisces|ribi|fische)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope/pisces/"
+      }
+    },
+    {
       "src": "/en/(dneven-horoskop|tageshoroskop)(?:/.*)?",
       "status": 308,
       "headers": {
@@ -187,10 +271,178 @@
       }
     },
     {
+      "src": "/mk/(horoscope|tageshoroskop)/(aries|oven|widder)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/oven/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(taurus|bik|stier)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/bik/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/blizanci/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(cancer|rak|krebs)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/rak/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(leo|lav|loewe)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/lav/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/devica/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(libra|vaga|waage)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/vaga/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/skorpija/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(sagittarius|strelec|schuetze)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/strelec/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(capricorn|jarec|steinbock)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/jarec/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/vodolija/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope|tageshoroskop)/(pisces|ribi|fische)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/dneven-horoskop/ribi/"
+      }
+    },
+    {
       "src": "/mk/(horoscope|tageshoroskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(aries|oven|widder)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/widder/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(taurus|bik|stier)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/stier/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/zwillinge/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(cancer|rak|krebs)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/krebs/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(leo|lav|loewe)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/loewe/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/jungfrau/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(libra|vaga|waage)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/waage/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/skorpion/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(sagittarius|strelec|schuetze)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/schuetze/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(capricorn|jarec|steinbock)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/steinbock/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/wassermann/"
+      }
+    },
+    {
+      "src": "/de/(horoscope|dneven-horoskop)/(pisces|ribi|fische)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/tageshoroskop/fische/"
       }
     },
     {
