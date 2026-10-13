@@ -33,6 +33,8 @@ export function languageAlternates(path: string): Record<string, string> {
   out["x-default"] = `/${DEFAULT_LOCALE}${path}`;
   return out;
 }
+/** Lean default share image per locale (public/og/default/<lang>.jpg, built by scripts/build-og-defaults.py). */
+export const defaultOgImage = (lang: string) => ({ url: `${SITE_URL}/og/default/${(LOCALES as readonly string[]).includes(lang) ? lang : DEFAULT_LOCALE}.jpg`, width: 1200, height: 630 });
 export function localizedMeta(lang: string, path: string, m: { title?: string; description?: string; siteName: string }): Metadata {
   const l = (LOCALES as readonly string[]).includes(lang) ? (lang as (typeof LOCALES)[number]) : DEFAULT_LOCALE;
   return {
@@ -42,8 +44,9 @@ export function localizedMeta(lang: string, path: string, m: { title?: string; d
     openGraph: {
       siteName: m.siteName, type: "website", url: `${SITE_URL}/${l}${path}`, locale: LOCALE_META[l].og,
       alternateLocale: LOCALES.filter((x) => x !== l).map((x) => LOCALE_META[x].og),
+      images: [defaultOgImage(l)],
       ...(m.title ? { title: m.title } : {}), ...(m.description ? { description: m.description } : {}),
     },
-    twitter: { card: "summary_large_image", ...(m.title ? { title: m.title } : {}), ...(m.description ? { description: m.description } : {}) },
+    twitter: { card: "summary_large_image", images: [defaultOgImage(l).url], ...(m.title ? { title: m.title } : {}), ...(m.description ? { description: m.description } : {}) },
   };
 }

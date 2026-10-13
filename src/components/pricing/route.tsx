@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getContent } from "@/content";
-import { LOCALE_META } from "@/lib/seo";
+import { LOCALE_META, defaultOgImage } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
 import { pricingAlternates, pricingPath, type PricingLocale } from "@/lib/pricing";
 import { pricingText } from "./text";
@@ -15,8 +15,8 @@ export function pricingMeta(lang: string): Metadata {
   return {
     title: T.meta.title, description: T.meta.description, robots: { index: true, follow: true },
     alternates: { canonical, languages: pricingAlternates() },
-    openGraph: { type: "website", siteName: brand, title, description: T.meta.description, url: `${SITE_URL}${canonical}`, locale: LOCALE_META[l].og },
-    twitter: { card: "summary_large_image", title, description: T.meta.description },
+    openGraph: { type: "website", siteName: brand, title, description: T.meta.description, url: `${SITE_URL}${canonical}`, locale: LOCALE_META[l].og, images: [defaultOgImage(l)] },
+    twitter: { card: "summary_large_image", images: [defaultOgImage(l).url], title, description: T.meta.description },
   };
 }
 /** Each locale owns its slug (/en/pricing, /mk/ceni); the other locale 404s there. */
