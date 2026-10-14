@@ -605,5 +605,221 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "10": {
+  "title": "Born on the 10th: the fresh beginner",
+  "lead": "The 10th carries the 1 with a zero beside it: the drive to start, amplified by a sense of completion and a second chance.",
+  "sections": [
+   {
+    "title": "The gift of the 10th",
+    "paras": [
+     "Ten is one full cycle closed and a new one opening, and people born on this day often feel that rhythm in their lives. They know how to end something cleanly and begin again without dragging the past along. The zero beside the one is read as potential, an open space around the spark, so the drive of the 1 comes with more room to grow."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may have reinvented yourself more than once: a new city, a new field, a new style. Setbacks rarely keep you down for long; you treat them as the end of a chapter. Friends come to you when they need courage to restart, because you make it look possible."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Resilience, initiative, optimism, a talent for turnarounds and a strong instinct for timing. The 10th is good at launching second versions: the improved product, the better relationship, the wiser career move."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Restarting can become a habit that avoids depth. The 10th may leave just before the hard middle part where real mastery happens. Growth comes from staying one season longer than feels comfortable and seeing what that patience gives."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 10th brings energy and hope into love, often after a past relationship has taught them a lot. They need a partner who supports their fresh starts and does not hold old mistakes against them, and they grow by offering the same grace."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Start ups, turnaround management, coaching, sport, sales, product development and any role that rewards renewal. They are especially good at rescuing projects others have given up on."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Marko, born on 10 May, failed with his first two cafés. The third, opened in an old bakery, became the busiest in his town. He keeps the menus of the first two framed on the wall and tells young owners that each closure taught him exactly what the next place needed."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 2 or 4 life path, a 10th birthday adds courage to begin. On a 7 path it turns insight into action. On a 1 path it doubles the pioneer energy, so finishing becomes the special skill. On a 9 path it brings fresh hope after endings."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A clean notebook bought in September, the first swim of summer, a door painted a new colour: small rituals of renewal suit the 10th. Use them on purpose when a chapter closes."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Before starting anything new, write three lessons from the last attempt. Carry them into the fresh start, so that each beginning stands on the shoulders of the one before."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Every ending you survive becomes ground you can build on."
+    ]
+   }
+  ]
+ },
+ "11": {
+  "title": "Born on the 11th: the intuitive messenger",
+  "lead": "A birthday on the 11th carries a master number: heightened intuition, inspiration and a nervous system tuned to subtle signals.",
+  "sections": [
+   {
+    "title": "The gift of the 11th",
+    "paras": [
+     "Eleven is the first master number, read both as itself and as a 2. People born on this day often sense things before they happen and understand people without words. Their gift is inspiration: they can put into words or images what others only half feel, and in doing so they light a path."
+    ]
+   },
+   {
+    "title": "Everyday signs",
+    "paras": [
+     "You may have vivid dreams, strong hunches and a sensitivity to noise, crowds or harsh light. Music and art can move you to tears. People confide in you quickly. At times you feel like an antenna picking up too many stations at once."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Intuition, vision, empathy, creativity and the ability to inspire. Many teachers, artists, healers, inventors and spiritual guides share this day. When grounded, the 11th turns sensitivity into insight that helps many people."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "The charge of a master number can tip into anxiety, self doubt or nervous exhaustion. The 11th may feel pressure to live up to a big calling. Growth comes from grounding: sleep, nature, simple routines and remembering that the 2 inside the 11 is about gentle partnership, not grand performance."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love is deep and almost telepathic for the 11th. They need a calm, patient partner who honours their sensitivity and helps them rest. Harsh words cut them more than most."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Teaching, counselling, art, music, writing, healing professions, design and innovation. They thrive in roles where intuition and meaning matter more than speed and volume."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Jovana, born on 11 February, works as a music therapist with children who do not speak. Parents say she seems to hear what their children want to say. She protects her evenings fiercely: no screens, a walk, and early sleep, because she knows her gift needs rest to stay clear."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 4 or 8 life path, an 11th birthday adds vision to practical strength. On a 2 or 11 path, the sensitivity doubles, so grounding is essential. On a 5 path it gives freedom a sense of purpose. On a 9 path it deepens the humanitarian call."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A quiet room at dawn, a candle, a notebook open for the first thoughts of the day: the 11th often receives its best ideas in such still moments, before the world gets loud."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Write down your hunches for a month and later check which were right. The record builds trust in intuition and shows when anxiety is speaking instead."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your sensitivity is a gift when you give it rest as well as work."
+    ]
+   }
+  ]
+ },
+ "12": {
+  "title": "Born on the 12th: the creative organiser",
+  "lead": "The 12th blends the 1 and the 2 and reduces to 3: leadership and cooperation feeding a lively gift for expression.",
+  "sections": [
+   {
+    "title": "The gift of the 12th",
+    "paras": [
+     "Twelve is a number of completeness in many traditions: twelve months, twelve signs, twelve hours on the clock. People born on this day often bring that sense of a full set. Their gift is creative structure, the ability to take a playful idea and give it a frame so it can be shared."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You might be the friend who turns a vague party idea into an evening everyone remembers, or the colleague who makes the dull report readable and even funny. You see both the big picture and the people involved. You like variety but feel best when it has a shape."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Communication, imagination, organisation, empathy and a gift for seeing things from new angles. The 12th often makes a fine editor, event planner, teacher, designer or community builder."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Self sacrifice is a hidden risk, as in the Hanged Man, card twelve of the tarot. The 12th may put their own creative dreams last while organising everyone else's. Growth comes from claiming time for their own work and letting others carry some of the load."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 12th is warm, playful and attentive in love. They need a partner who enjoys their ideas and gives back attention. Clear communication about needs prevents quiet resentment."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Media, publishing, events, education, design, marketing, social projects and creative management. They shine where people and ideas meet."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Elena, born on 12 August, started a monthly neighbourhood book swap in a library courtyard. Within two years it had grown into a small street festival with readings, music and food stalls. She still writes poems, now finally finding time for them on Sunday mornings."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 4 or 7 life path, a 12th birthday adds warmth and expression to a serious nature. On a 3 path it doubles creativity, so structure matters. On a 6 path it turns care into creative community. On an 8 path it softens ambition with humour."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A wall calendar covered in colourful notes, a table set for twelve, a shared playlist for a road trip: these are the small creations of the 12th, practical and joyful at once."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Keep one hour a week for your own creative project, blocked in the calendar like any other appointment. Treat it as seriously as the plans you make for others, and notice how your energy for everyone else grows when your own spark is fed."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your own ideas deserve the same care you give to everyone else's."
+    ]
+   }
+  ]
  }
 };

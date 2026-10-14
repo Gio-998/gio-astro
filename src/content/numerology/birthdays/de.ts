@@ -641,5 +641,221 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "10": {
+  "title": "Geboren am 10.: die frischen Neuanfänger",
+  "lead": "Die 10 trägt die 1 mit einer Null daneben: den Drang zu beginnen, verstärkt durch ein Gefühl von Abschluss und zweiter Chance.",
+  "sections": [
+   {
+    "title": "Die Gabe des 10.",
+    "paras": [
+     "Zehn ist ein abgeschlossener Zyklus und ein neuer, der sich öffnet, und wer an diesem Tag geboren ist, spürt diesen Rhythmus oft im eigenen Leben. Du kannst etwas sauber beenden und neu anfangen, ohne die Vergangenheit hinter dir herzuziehen. Die Null neben der Eins gilt als Potenzial, offener Raum um den Funken, also kommt der Antrieb der 1 mit mehr Platz zum Wachsen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht hast du dich schon mehrmals neu erfunden: neue Stadt, neues Fach, neuer Stil. Rückschläge halten dich selten lange unten, du siehst sie als Ende eines Kapitels. Freunde kommen zu dir, wenn sie Mut für einen Neustart brauchen, weil es bei dir möglich aussieht."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Widerstandskraft, Initiative, Optimismus, Talent für Wendepunkte und ein starkes Gespür für Timing. Der 10. ist gut darin, zweite Versionen zu starten: das bessere Produkt, die bessere Beziehung, den klügeren Karriereschritt."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Neustarts können zur Gewohnheit werden, die Tiefe vermeidet. Manchmal gehst du kurz vor der schwierigen Mitte, in der echte Meisterschaft entsteht. Wachstum kommt, wenn du eine Jahreszeit länger bleibst, als es bequem ist, und siehst, was diese Geduld bringt."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du bringst Energie und Hoffnung in die Liebe, oft nachdem eine frühere Beziehung dich viel gelehrt hat. Du brauchst einen Menschen, der deine Neuanfänge unterstützt und dir alte Fehler nicht vorhält, und du wächst, wenn du dieselbe Großzügigkeit schenkst."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Start ups, Sanierungsmanagement, Coaching, Sport, Vertrieb, Produktentwicklung und jede Rolle, die Erneuerung belohnt. Besonders gut bist du darin, Projekte zu retten, die andere aufgegeben haben."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Marko, geboren am 10. Mai, scheiterte mit seinen ersten beiden Cafés. Das dritte, in einer alten Bäckerei, wurde das vollste der Stadt. Die Speisekarten der ersten beiden hängen gerahmt an der Wand, und jungen Gastronomen erzählt er, jede Schließung habe ihn genau gelehrt, was der nächste Ort brauchte."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 2 oder 4 schenkt ein Geburtstag am 10. Mut zum Anfangen. Auf der 7 verwandelt er Einsicht in Handlung. Auf der 1 verdoppelt er die Pionierenergie, Vollenden wird zur besonderen Fähigkeit. Auf der 9 bringt er frische Hoffnung nach Abschlüssen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein neues Heft im September, das erste Bad im Sommer, eine Tür in neuer Farbe: Kleine Rituale der Erneuerung passen zum 10. Nutze sie bewusst, wenn ein Kapitel endet."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Schreib vor jedem Neuanfang drei Lektionen aus dem letzten Versuch auf. Nimm sie mit, damit jeder Anfang auf den Schultern des vorigen steht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Jedes Ende, das du überstehst, wird zu Boden, auf dem du bauen kannst. Neues Spiel, neues Glück, sagt man, und du weißt, dass es stimmt."
+    ]
+   }
+  ]
+ },
+ "11": {
+  "title": "Geboren am 11.: die intuitiven Botschafter",
+  "lead": "Ein Geburtstag am 11. trägt eine Meisterzahl: gesteigerte Intuition, Inspiration und ein Nervensystem, das auf feine Signale eingestellt ist.",
+  "sections": [
+   {
+    "title": "Die Gabe des 11.",
+    "paras": [
+     "Elf ist die erste Meisterzahl und wird als sie selbst und als 2 gelesen. Wer an diesem Tag geboren ist, spürt Dinge oft, bevor sie geschehen, und versteht Menschen ohne Worte. Die Gabe ist Inspiration: in Worte oder Bilder fassen, was andere nur halb fühlen, und so einen Weg erhellen."
+    ]
+   },
+   {
+    "title": "Zeichen im Alltag",
+    "paras": [
+     "Vielleicht hast du lebhafte Träume, starke Ahnungen und eine Empfindlichkeit für Lärm, Menschenmengen oder grelles Licht. Musik und Kunst können dich zu Tränen rühren. Menschen vertrauen sich dir schnell an. Manchmal fühlst du dich wie eine Antenne, die zu viele Sender zugleich empfängt."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Intuition, Vision, Empathie, Kreativität und die Fähigkeit zu inspirieren. Viele Lehrkräfte, Kunstschaffende, Heilende, Erfinder und spirituelle Begleiter teilen diesen Tag. Geerdet verwandelt der 11. Empfindsamkeit in Einsicht, die vielen hilft."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Die Ladung einer Meisterzahl kann in Angst, Selbstzweifel oder nervöse Erschöpfung kippen. Vielleicht spürst du Druck, einer großen Berufung gerecht zu werden. Wachstum kommt durch Erdung: Schlaf, Natur, einfache Routinen und die Erinnerung, dass die 2 in der 11 von sanfter Partnerschaft handelt, nicht von großer Darbietung."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe ist für den 11. tief und fast telepathisch. Du brauchst einen ruhigen, geduldigen Menschen, der deine Empfindsamkeit achtet und dir hilft, auszuruhen. Harte Worte schneiden dich tiefer als die meisten."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Unterricht, Beratung, Kunst, Musik, Schreiben, Heilberufe, Design und Innovation. Du blühst in Rollen auf, in denen Intuition und Sinn mehr zählen als Tempo und Menge."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Jovana, geboren am 11. Februar, arbeitet als Musiktherapeutin mit Kindern, die nicht sprechen. Eltern sagen, sie scheine zu hören, was ihre Kinder sagen wollen. Ihre Abende schützt sie streng: keine Bildschirme, ein Spaziergang, früher Schlaf, denn sie weiß, dass ihre Gabe Ruhe braucht, um klar zu bleiben."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 8 fügt ein Geburtstag am 11. praktischer Stärke Vision hinzu. Auf der 2 oder 11 verdoppelt sich die Empfindsamkeit, Erdung ist unverzichtbar. Auf der 5 gibt er Freiheit einen Sinn. Auf der 9 vertieft er die humanitäre Berufung."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein stiller Raum im Morgengrauen, eine Kerze, ein offenes Notizbuch für die ersten Gedanken des Tages: Der 11. empfängt seine besten Ideen oft in solchen ruhigen Momenten, bevor die Welt laut wird."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Schreib einen Monat lang deine Ahnungen auf und prüf später, welche stimmten. Die Aufzeichnung stärkt das Vertrauen in die Intuition und zeigt, wann eigentlich die Angst spricht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Empfindsamkeit ist ein Geschenk, wenn du ihr Ruhe gönnst und nicht nur Arbeit. Ein stiller Abend ist für dich keine verlorene Zeit, sondern Pflege deiner Gabe."
+    ]
+   }
+  ]
+ },
+ "12": {
+  "title": "Geboren am 12.: die kreativen Organisatoren",
+  "lead": "Die 12 verbindet 1 und 2 und reduziert sich auf 3: Führung und Zusammenarbeit nähren eine lebendige Begabung zum Ausdruck.",
+  "sections": [
+   {
+    "title": "Die Gabe des 12.",
+    "paras": [
+     "Zwölf gilt in vielen Traditionen als Zahl der Vollständigkeit: zwölf Monate, zwölf Zeichen, zwölf Stunden auf dem Zifferblatt. Wer an diesem Tag geboren ist, bringt oft dieses Gefühl eines ganzen Satzes mit. Die Gabe ist kreative Struktur, eine verspielte Idee so zu rahmen, dass sie geteilt werden kann."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht bist du die Freundin, die aus einer vagen Partyidee einen Abend macht, an den sich alle erinnern, oder der Kollege, der den trockenen Bericht lesbar und sogar witzig macht. Du siehst das große Bild und die Menschen darin. Du magst Abwechslung, fühlst dich aber am wohlsten, wenn sie eine Form hat."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Kommunikation, Vorstellungskraft, Organisation, Empathie und die Gabe, Dinge aus neuen Blickwinkeln zu sehen. Der 12. ist oft eine gute Lektorin, ein Eventplaner, eine Lehrerin, ein Designer oder jemand, der Gemeinschaft stiftet."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Ein verborgenes Risiko ist Selbstaufopferung, wie beim Gehängten, der zwölften Karte des Tarot. Manchmal stellst du eigene kreative Träume hintan, während du die der anderen organisierst. Wachstum kommt, wenn du dir Zeit für dein eigenes Werk nimmst und andere einen Teil der Last tragen lässt."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "In der Liebe bist du warm, verspielt und aufmerksam. Du brauchst einen Menschen, der deine Ideen genießt und Aufmerksamkeit zurückgibt. Klare Worte über Bedürfnisse verhindern stillen Groll."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Medien, Verlagswesen, Veranstaltungen, Bildung, Design, Marketing, soziale Projekte und kreatives Management. Du glänzt dort, wo Menschen und Ideen sich begegnen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Elena, geboren am 12. August, begann einen monatlichen Büchertausch im Hof einer Bibliothek. Innerhalb von zwei Jahren wurde daraus ein kleines Straßenfest mit Lesungen, Musik und Essensständen. Sie schreibt weiter Gedichte und findet jetzt endlich sonntagmorgens Zeit dafür."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 7 schenkt ein Geburtstag am 12. einer ernsten Natur Wärme und Ausdruck. Auf der 3 verdoppelt er die Kreativität, Struktur wird wichtig. Auf der 6 wird Fürsorge zu kreativer Gemeinschaft. Auf der 8 mildert er Ehrgeiz mit Humor."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Wandkalender voller bunter Notizen, ein Tisch für zwölf gedeckt, eine gemeinsame Playlist für eine Autofahrt: Das sind die kleinen Schöpfungen des 12., praktisch und fröhlich zugleich."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Reservier dir pro Woche eine Stunde für dein eigenes kreatives Projekt, im Kalender geblockt wie jeder andere Termin. Nimm sie so ernst wie die Pläne, die du für andere machst, und beobachte, wie deine Kraft für alle anderen wächst, wenn dein eigener Funke genährt wird."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine eigenen Ideen verdienen dieselbe Sorgfalt, die du den Ideen aller anderen schenkst. Wer viele Feste ausrichtet, darf auch einmal selbst gefeiert werden."
+    ]
+   }
+  ]
  }
 };
