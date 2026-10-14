@@ -3,6 +3,7 @@ import { numContent } from "@/content/numerology";
 import { getContent } from "@/content";
 import { localizedPath } from "./i18n-routes";
 import { bankFor } from "./horoscope";
+import { angelLong } from "@/content/numerology/long";
 import { reduce, rootOf } from "@/engine/numerology";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
@@ -68,6 +69,7 @@ export function numModel(lang: string, path: string): NumModel | null {
       blocks: [
         { id: "scene", title: U.sec.scene, paras: [a.scene] },
         { id: "meaning", title: U.sec.meaning, paras: a.meaning },
+        ...angelLong(lang, item).map((x, k) => ({ id: `story-${k}`, title: x.title, paras: x.paras })),
         { id: "digits", title: U.digits, paras: digitParas },
         { id: "love", title: U.sec.love, paras: [a.love] },
         { id: "work", title: U.sec.work, paras: [a.work] },
