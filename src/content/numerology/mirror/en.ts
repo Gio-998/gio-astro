@@ -803,5 +803,206 @@ export const mirrorEn: MirrorSet = {
     ]
    }
   ]
+ },
+ "20-20": {
+  "title": "Mirror hour 20:20: patience, listening and quiet support",
+  "lead": "20:20 appears in the evening, when most people are home and the pace slows. It doubles the gentle two and the open zero, and it often speaks of partnership, patience and the strength that grows when you stop pushing.",
+  "sections": [
+   {
+    "title": "What 20:20 can mean",
+    "paras": [
+     "Twenty pairs the cooperative two with the zero of possibility. Seen twice, 20:20 can suggest that an answer will come through listening rather than forcing. It often turns up when a situation needs time, tact and trust before it can move forward.",
+     "Some people link the time with the phrase twenty twenty vision, which describes clear sight. That association fits nicely: this hour invites you to see a person or a situation as it really is, without the filter of hurry or worry."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 20:20 favours tenderness, small rituals and conversations where each person feels heard. It can appear when a relationship is healing after a difficult period. For someone single, it may suggest that a slow, friendly connection has more promise than a sudden spark."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 20:20 supports diplomacy, mediation and patient teamwork. It is not the best signal for a bold solo move, but it is excellent for building trust with a client or colleague. With money, it favours steady saving over risky bets."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to four, the number of foundations. Combined with the soft two, this tells you that quiet cooperation, repeated day after day, builds something solid."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often notice 20:20 during family dinners, late calls with a friend, while waiting for news or in seasons when they are learning to be more patient."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Elena and her sister had not spoken properly in months after an argument about their parents' house. One evening at 20:20 Elena called and, instead of defending herself, simply listened for half an hour. The conversation ended with both of them crying and laughing, and a plan to meet that weekend."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Put the phone down and give one person your full attention for a few minutes. Ask a question and listen to the whole answer before you reply."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Waiting calmly should never mean hiding what you need. 20:20 favours gentleness, but it still asks you to speak up kindly when something matters."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "Where would listening a little longer change the outcome?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Clear sight often arrives once you stop rushing."
+    ]
+   }
+  ]
+ },
+ "21-21": {
+  "title": "Mirror hour 21:21: rewards, joy and finishing well",
+  "lead": "21:21 comes later in the evening, when the day is mostly behind you. It mirrors twenty one, a number often associated with completion and success, and it encourages you to celebrate how far you have come.",
+  "sections": [
+   {
+    "title": "What 21:21 can mean",
+    "paras": [
+     "Twenty one joins the partnership of two with the independence of one, and it reduces to three, the number of creativity and joy. Doubled, 21:21 often points to a cycle that is reaching a satisfying close. Effort you have invested is ready to show results.",
+     "This mirror hour also asks you to share your success. Three is a social number, so recognition tends to feel best when it includes the people who helped you."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 21:21 favours playful affection, laughter and celebrations. It can appear around anniversaries, proposals or moments when a couple realises how much they have grown together. For someone single, it may encourage meeting people through creative hobbies."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 21:21 supports finishing projects, presenting your work and receiving praise. It is a good time to update your portfolio or ask for recognition that you have earned. With money, it can hint at rewards from long effort, though wise spending still matters."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to six, the number of harmony and care. Combined with the joyful three that twenty one reduces to, the overall tone is warm, generous and sociable."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often see 21:21 after exams, at the end of a big project, during birthday evenings or while looking back over a year that went better than expected."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Bojan had spent three years restoring an old boat with his neighbours. On the night they finally launched it, someone pointed at the harbour clock showing 21:21. They made a toast to every weekend of sanding and painting, and the boat was named after the time."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Name one thing you finished recently and give yourself credit for it. Then thank one person who helped you get there, even with a short message."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Celebration is healthy, but 21:21 is not a sign to stop growing. Enjoy the result, then decide gently what you want to build next."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What have I completed that I have not yet allowed myself to celebrate?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Finishing well is a gift you give your future self."
+    ]
+   }
+  ]
+ },
+ "22-22": {
+  "title": "Mirror hour 22:22: the master builder before sleep",
+  "lead": "22:22 is the last doubled time before midnight. It repeats the master number twenty two, often called the master builder, and invites you to think about the lasting things you want to create while the house grows quiet.",
+  "sections": [
+   {
+    "title": "What 22:22 can mean",
+    "paras": [
+     "Twenty two is a master number in numerology, linked with turning big visions into practical reality. Seen twice, 22:22 can suggest that a large dream is possible if you give it structure, time and steady effort. It often appears when a person is ready to think bigger.",
+     "Because it comes late at night, this time also carries a reflective mood. It encourages you to review the day calmly and to choose the one step that will matter most tomorrow."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 22:22 favours commitment, shared plans and long term building, such as a home or a family. It can appear when a couple starts talking seriously about the future. For someone single, it may encourage clarity about the kind of partnership worth investing in."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 22:22 supports ambitious projects, leadership and work that benefits many people. It favours careful planning over quick wins. With money, it points toward long horizon investments, property or savings that grow slowly."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to eight, the number of achievement and material results. Together with the master number twenty two, this makes 22:22 one of the most practical and goal oriented mirror hours."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often notice 22:22 while working late on a personal project, when writing plans for the coming year or on nights when they cannot stop thinking about a big idea."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Tamara had always wanted to open a small library cafe in her town. She saw 22:22 on the oven clock one night while sketching floor plans at the kitchen table. Instead of filing the sketch away again, she booked a meeting with the bank. Two years later the cafe opened its doors."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Write one sentence about the biggest thing you would like to build, then one sentence about the first concrete step. Leave the note where you will see it in the morning."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Big visions can keep people awake. 22:22 is also a reminder to rest, because a builder who never sleeps cannot build for long."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What lasting thing would I build if I trusted myself to take it one step at a time?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Great things are built from ordinary days repeated with intention."
+    ]
+   }
+  ]
  }
 };

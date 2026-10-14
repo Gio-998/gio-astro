@@ -803,5 +803,206 @@ export const mirrorDe: MirrorSet = {
     ]
    }
   ]
+ },
+ "20-20": {
+  "title": "Spiegelzahl 20:20: Geduld, Zuhören und stille Unterstützung",
+  "lead": "20:20 erscheint am Abend, wenn die meisten zu Hause sind und das Tempo sinkt. Sie verdoppelt die sanfte Zwei und die offene Null und spricht oft von Partnerschaft, Geduld und der Kraft, die wächst, wenn du aufhörst zu drängen.",
+  "sections": [
+   {
+    "title": "Was 20:20 bedeuten kann",
+    "paras": [
+     "Zwanzig verbindet die kooperative Zwei mit der Null der Möglichkeiten. Zweimal gesehen, kann 20:20 andeuten, dass eine Antwort durch Zuhören kommt statt durch Zwang. Sie taucht oft auf, wenn eine Lage Zeit, Takt und Vertrauen braucht, bevor sie vorangehen kann.",
+     "Manche verbinden die Uhrzeit mit dem englischen Ausdruck für perfekte Sehschärfe. Das passt gut: Diese Stunde lädt dich ein, einen Menschen oder eine Situation so zu sehen, wie sie wirklich ist, ohne den Filter von Eile oder Sorge."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe begünstigt 20:20 Zärtlichkeit, kleine Rituale und Gespräche, in denen sich jeder gehört fühlt. Sie kann erscheinen, wenn eine Beziehung nach einer schweren Zeit heilt. Für Singles kann sie andeuten, dass eine langsame, freundschaftliche Verbindung mehr verspricht als ein plötzlicher Funke."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich unterstützt 20:20 Diplomatie, Vermittlung und geduldige Teamarbeit. Für einen kühnen Alleingang ist sie nicht das beste Zeichen, doch hervorragend, um Vertrauen zu einem Kunden oder Kollegen aufzubauen. Beim Geld begünstigt sie stetiges Sparen statt riskanter Wetten."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben vier, die Zahl des Fundaments. Zusammen mit der weichen Zwei heißt das: Stille Zusammenarbeit, Tag für Tag wiederholt, baut etwas Festes."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen bemerken 20:20 oft beim Familienessen, bei späten Telefonaten mit Freunden, beim Warten auf Nachrichten oder in Zeiten, in denen sie lernen, geduldiger zu sein."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Elena und ihre Schwester hatten nach einem Streit um das Elternhaus monatelang nicht richtig miteinander gesprochen. Eines Abends um 20:20 rief Elena an und hörte, statt sich zu verteidigen, eine halbe Stunde lang einfach zu. Das Gespräch endete mit Tränen und Lachen bei beiden und einer Verabredung fürs Wochenende."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Leg das Handy weg und schenk einem Menschen ein paar Minuten deine volle Aufmerksamkeit. Stell eine Frage und hör die ganze Antwort, bevor du erwiderst."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Geduld ist nicht dasselbe wie Schweigen über deine Bedürfnisse. 20:20 begünstigt Sanftheit, bittet dich aber trotzdem, freundlich das Wort zu ergreifen, wenn etwas wichtig ist."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Wo würde etwas längeres Zuhören den Ausgang verändern?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Klarer Blick kommt oft, sobald du aufhörst zu hetzen."
+    ]
+   }
+  ]
+ },
+ "21-21": {
+  "title": "Spiegelzahl 21:21: Lohn, Freude und ein guter Abschluss",
+  "lead": "21:21 kommt später am Abend, wenn der Tag größtenteils hinter dir liegt. Sie spiegelt die Einundzwanzig, eine Zahl, die oft mit Vollendung und Erfolg verbunden wird, und ermutigt dich zu feiern, wie weit du gekommen bist.",
+  "sections": [
+   {
+    "title": "Was 21:21 bedeuten kann",
+    "paras": [
+     "Einundzwanzig verbindet die Partnerschaft der Zwei mit der Unabhängigkeit der Eins und ergibt drei, die Zahl von Kreativität und Freude. Verdoppelt deutet 21:21 oft auf einen Zyklus hin, der zu einem befriedigenden Ende kommt. Die Mühe, die du investiert hast, ist bereit, Ergebnisse zu zeigen.",
+     "Diese Spiegelzeit bittet dich auch, deinen Erfolg zu teilen. Die Drei ist eine gesellige Zahl, und Anerkennung fühlt sich am besten an, wenn sie die Menschen einschließt, die geholfen haben."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe begünstigt 21:21 verspielte Zuneigung, Lachen und Feiern. Sie kann um Jahrestage, Heiratsanträge oder Momente erscheinen, in denen ein Paar merkt, wie sehr es zusammen gewachsen ist. Für Singles kann sie ermutigen, Menschen über kreative Hobbys kennenzulernen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich unterstützt 21:21 das Abschließen von Projekten, das Präsentieren deiner Arbeit und das Annehmen von Lob. Eine gute Zeit, deine Mappe zu aktualisieren oder um verdiente Anerkennung zu bitten. Beim Geld kann sie Lohn für lange Mühe andeuten, doch kluges Ausgeben bleibt wichtig."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben sechs, die Zahl von Harmonie und Fürsorge. Zusammen mit der fröhlichen Drei, zu der die Einundzwanzig wird, ist der Grundton warm, großzügig und gesellig."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen sehen 21:21 oft nach Prüfungen, am Ende eines großen Projekts, an Geburtstagsabenden oder beim Rückblick auf ein Jahr, das besser lief als erwartet."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Bojan hatte drei Jahre lang mit seinen Nachbarn ein altes Boot restauriert. Am Abend, als sie es endlich zu Wasser ließen, zeigte jemand auf die Hafenuhr, die 21:21 anzeigte. Sie stießen auf jedes Wochenende voller Schleifen und Streichen an, und das Boot bekam die Uhrzeit als Namen."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Nenne eine Sache, die du kürzlich abgeschlossen hast, und rechne sie dir an. Dann danke einem Menschen, der dir dabei geholfen hat, und sei es mit einer kurzen Nachricht."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Feiern ist gesund, doch 21:21 ist kein Zeichen, mit dem Wachsen aufzuhören. Genieß das Ergebnis und entscheide dann in Ruhe, was du als Nächstes bauen willst."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was habe ich vollendet, ohne es mir bisher zu erlauben, es zu feiern?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein guter Abschluss ist ein Geschenk an dein künftiges Ich."
+    ]
+   }
+  ]
+ },
+ "22-22": {
+  "title": "Spiegelzahl 22:22: der Meisterbaumeister vor dem Schlaf",
+  "lead": "22:22 ist die letzte doppelte Uhrzeit vor Mitternacht. Sie wiederholt die Meisterzahl Zweiundzwanzig, oft Meisterbaumeister genannt, und lädt dich ein, über das Bleibende nachzudenken, das du schaffen willst, während das Haus still wird.",
+  "sections": [
+   {
+    "title": "Was 22:22 bedeuten kann",
+    "paras": [
+     "Zweiundzwanzig ist in der Numerologie eine Meisterzahl, verbunden mit der Kunst, große Visionen in greifbare Wirklichkeit zu verwandeln. Zweimal gesehen, kann 22:22 andeuten, dass ein großer Traum möglich ist, wenn du ihm Struktur, Zeit und stetige Mühe gibst. Sie erscheint oft, wenn jemand bereit ist, größer zu denken.",
+     "Weil sie spät am Abend kommt, trägt diese Uhrzeit auch eine nachdenkliche Stimmung. Sie ermutigt dich, den Tag ruhig zu überblicken und den einen Schritt zu wählen, der morgen am meisten zählt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe begünstigt 22:22 Verbindlichkeit, gemeinsame Pläne und langfristiges Bauen, etwa ein Zuhause oder eine Familie. Sie kann erscheinen, wenn ein Paar ernsthaft über die Zukunft zu sprechen beginnt. Für Singles kann sie Klarheit darüber fördern, in welche Art von Partnerschaft es sich zu investieren lohnt."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich unterstützt 22:22 ehrgeizige Projekte, Führung und Arbeit, die vielen Menschen nützt. Sie begünstigt sorgfältige Planung mehr als schnelle Erfolge. Beim Geld weist sie auf langfristige Anlagen, Immobilien oder langsam wachsende Ersparnisse hin."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben acht, die Zahl von Leistung und greifbaren Ergebnissen. Zusammen mit der Meisterzahl Zweiundzwanzig macht das 22:22 zu einer der praktischsten und zielstrebigsten Spiegelzeiten."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen bemerken 22:22 oft, wenn sie spät an einem persönlichen Projekt arbeiten, Pläne fürs kommende Jahr schreiben oder in Nächten, in denen eine große Idee sie nicht loslässt."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Tamara wollte schon immer ein kleines Café mit Bibliothek in ihrer Stadt eröffnen. Eines Nachts, als sie am Küchentisch Grundrisse skizzierte, sah sie 22:22 auf der Herduhr. Statt die Skizze wieder wegzulegen, vereinbarte sie einen Termin bei der Bank. Zwei Jahre später öffnete das Café seine Türen."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Schreib einen Satz über das Größte, das du bauen möchtest, und dann einen über den ersten konkreten Schritt. Leg den Zettel dorthin, wo du ihn morgens siehst."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Große Visionen können Menschen wach halten. 22:22 erinnert auch ans Ausruhen, denn wer nie schläft, kann nicht lange bauen."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was Bleibendes würde ich bauen, wenn ich mir zutraue, Schritt für Schritt zu gehen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Große Dinge entstehen aus gewöhnlichen Tagen, die mit Absicht wiederholt werden."
+    ]
+   }
+  ]
  }
 };
