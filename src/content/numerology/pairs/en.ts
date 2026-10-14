@@ -630,6 +630,228 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "4-and-4": {
+  "title": "Life path 4 and 4: two pillars side by side",
+  "lead": "Two fours share discipline, loyalty and a love of order. This is one of the most reliable pairings in numerology, as long as it leaves room for play and change.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two fours often meet through work, study or a shared practical task: a building site, an office, a long training course. Respect comes before romance. Each notices the other is punctual, careful and honest, qualities both value above charm."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You understand each other's need for security and routine. Promises are kept, bills are paid, plans are followed. You feel safe together. Many 4 and 4 couples build homes, savings and businesses steadily over decades."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two fours can be stubborn, each convinced their way is the correct one. Life may become rigid, predictable or joyless. Change, such as a move, a new job or a child, can feel threatening, and neither may want to admit fear."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is loyal and practical. You show care through actions: fixing things, saving money, being there. Romance grows when you schedule fun as seriously as work and when you share feelings, not only plans."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the reliable pair others count on. At work two fours can run anything well: construction, accounting, logistics, engineering, administration. You may need a creative outsider for new ideas."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Zoran and Mirjana, both life path 4, ran a family carpentry business for thirty years without one missed deadline. When their son suggested selling online, both refused for a year. When they finally agreed, orders tripled. They admit that the hardest tool to use was a new idea."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each allows the other some flexibility and when you plan regular breaks from routine together."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two calendars that match exactly, a garage with labelled boxes, a Sunday walk on the same route every week and, once a year, a trip somewhere completely new."
+    ]
+   },
+   {
+    "title": "A note on change",
+    "paras": [
+     "Fours fear chaos, but life brings it anyway. Treating change as a project, with steps and a plan, helps two fours face it together instead of resisting it."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, each of you suggests one new thing to try: a dish, a place, a hobby. You do both, even if it feels uncomfortable."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A strong foundation is worth most when something beautiful is built on top of it."
+    ]
+   }
+  ]
+ },
+ "4-and-5": {
+  "title": "Life path 4 and 5: the rock and the river",
+  "lead": "The 4 values stability, the 5 values freedom. A challenging but valuable pairing in which each can teach the other what they most need to learn.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 4 is often surprised by how much fun they have with the 5. The 5 is curious about the 4's calm and steadiness. You may meet when the 5 needs something fixed, built or organised, and the 4 is the person who does it."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 5 brings excitement, flexibility and new experiences into the 4's structured life. The 4 gives the 5 a safe base and practical support. Each sees in the other a quality they secretly wish they had."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 4 wants routine and plans; the 5 wants spontaneity and change. The 4 may feel the 5 is irresponsible, and the 5 may feel the 4 is controlling or boring. Money and commitment are common battlegrounds."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance can be surprisingly passionate, because opposites attract. Love lasts when the 4 allows freedom without fear and the 5 offers reliability on agreed points. Clear agreements help both feel secure in their own way."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 5 drags the 4 into adventures and the 4 helps the 5 when plans fall apart. At work the 5 brings ideas and contacts, the 4 brings execution and order."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Saša, life path 5, wanted to sail around the Adriatic. Dejan, life path 4, a shipwright, spent two winters restoring an old boat to make it safe. They sailed together for three months. He says he enjoyed it more than he expected; she says she never felt safer on water."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 4 sees the 5's freedom as fresh air, not chaos, and the 5 sees the 4's structure as support, not a cage."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A packed suitcase next to a neatly filed folder of tickets, insurance and maps: the 5's spirit and the 4's care travelling together."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A rolling stone gathers no moss, they say. The 4 likes moss; the 5 likes rolling. The trick is to roll together sometimes and rest together sometimes."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Agree on a monthly adventure planned by the 5, with one practical condition set by the 4, such as a budget or a return date. Both keep their part."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "The river shapes the rock, and the rock guides the river; both are changed for the better."
+    ]
+   }
+  ]
+ },
+ "4-and-6": {
+  "title": "Life path 4 and 6: builders of a home",
+  "lead": "The 4 brings structure and hard work, the 6 brings love and responsibility. A solid, family centred pairing that values security and care.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 4 and a 6 often meet through family, community or shared responsibilities: a school committee, a neighbourhood project, a family business. Each recognises the other as dependable and kind."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share values: home, loyalty, duty and care. The 4 provides stability and practical skill; the 6 provides warmth, beauty and emotional support. Together you create a secure, comfortable home that others love to visit."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both can be stubborn and controlling in different ways: the 4 about methods and money, the 6 about people and appearances. Too much duty can leave little room for romance or spontaneity."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is steady, devoted and protective. The 4 shows love through building and providing; the 6 through nurturing and beautifying. It deepens when both say thank you often and plan time just for the two of you."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the couple who host the holidays. At work you suit family businesses, healthcare, education, real estate and hospitality."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ljiljana, life path 6, and Boris, life path 4, built their house with their own hands over seven summers. She designed the garden; he laid every stone of the path. Their grandchildren now race along it, and every guest leaves with a jar of her plum jam."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when duty is balanced with delight, and when both remember they are partners, not only parents or providers."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A table set for many, a toolbox in the hallway, flowers on the windowsill and a calendar full of birthdays."
+    ]
+   },
+   {
+    "title": "A note on romance",
+    "paras": [
+     "Practical couples sometimes forget romance because there is always something to fix. A small surprise, a dinner out or a love note in a lunchbox keeps the spark alive."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Many hands make light work, the saying goes. In a 4 and 6 home that is literally true: the 4 fixes, the 6 cooks, the children set the table and the guests do the dishes. The danger is that the two hosts never sit down. Make sure they do."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, leave the house and all responsibilities for an evening. No chores, no relatives, no lists, just the two of you."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A home built with strong hands and a loving heart shelters everyone who enters."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",

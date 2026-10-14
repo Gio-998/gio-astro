@@ -642,6 +642,234 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "4-and-4": {
+  "title": "Lebenszahl 4 und 4: zwei Säulen nebeneinander",
+  "lead": "Zwei Vieren teilen Disziplin, Treue und Liebe zur Ordnung. Eines der verlässlichsten Paare der Numerologie, solange es Raum für Spiel und Veränderung lässt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Vieren begegnen sich oft über Arbeit, Studium oder eine gemeinsame praktische Aufgabe: auf einer Baustelle, in einem Büro, in einer langen Ausbildung. Respekt kommt vor Romantik. Jede Seite bemerkt, dass die andere pünktlich, sorgfältig und ehrlich ist, Eigenschaften, die beide höher schätzen als Charme."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr versteht das Bedürfnis des anderen nach Sicherheit und Routine. Versprechen werden gehalten, Rechnungen bezahlt, Pläne befolgt. Ihr fühlt euch sicher miteinander. Viele Paare aus 4 und 4 bauen über Jahrzehnte beständig Häuser, Ersparnisse und Betriebe auf."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Vieren können stur sein, jede Seite überzeugt, dass ihr Weg der richtige ist. Das Leben wird vielleicht starr, vorhersehbar oder freudlos. Veränderung, ein Umzug, ein neuer Job, ein Kind, kann bedrohlich wirken, und keiner will die Angst zugeben."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier treu und praktisch. Ihr zeigt Fürsorge durch Taten: reparieren, sparen, da sein. Die Romantik wächst, wenn ihr Vergnügen so ernst plant wie Arbeit und Gefühle teilt, nicht nur Pläne."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr das verlässliche Paar, auf das andere zählen. Bei der Arbeit können zwei Vieren alles gut führen: Bau, Buchhaltung, Logistik, Technik, Verwaltung. Für neue Ideen braucht ihr vielleicht jemand Kreatives von außen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Zoran und Mirjana, beide Lebenszahl 4, führten dreißig Jahre lang eine Familientischlerei, ohne eine einzige Frist zu verpassen. Als ihr Sohn vorschlug, online zu verkaufen, lehnten beide ein Jahr lang ab. Als sie endlich zustimmten, verdreifachten sich die Aufträge. Sie geben zu, dass das schwierigste Werkzeug eine neue Idee war."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite der anderen etwas Beweglichkeit lässt und ihr gemeinsam regelmäßige Pausen von der Routine plant."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Kalender, die genau übereinstimmen, eine Garage mit beschrifteten Kisten, ein Sonntagsspaziergang auf derselben Runde jede Woche und einmal im Jahr eine Reise an einen völlig neuen Ort."
+    ]
+   },
+   {
+    "title": "Über Veränderung",
+    "paras": [
+     "Vieren fürchten Chaos, doch das Leben bringt es trotzdem. Wer Veränderung wie ein Projekt behandelt, mit Schritten und Plan, hilft zwei Vieren, ihr gemeinsam zu begegnen, statt sich zu sträuben."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Gut Ding will Weile haben, heißt es, und zwei Vieren glauben fest daran. Manchmal will aber auch ein gutes Ding einfach ausprobiert werden, bevor es perfekt geplant ist."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Schlagt einmal im Monat jeweils eine neue Sache zum Ausprobieren vor: ein Gericht, einen Ort, ein Hobby. Ihr macht beides, auch wenn es sich unbequem anfühlt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein festes Fundament ist am meisten wert, wenn etwas Schönes darauf gebaut wird."
+    ]
+   }
+  ]
+ },
+ "4-and-5": {
+  "title": "Lebenszahl 4 und 5: Fels und Fluss",
+  "lead": "Die 4 schätzt Beständigkeit, die 5 Freiheit. Ein herausforderndes, aber wertvolles Paar, in dem jede Seite der anderen beibringen kann, was sie am meisten lernen muss.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 4 ist oft überrascht, wie viel Spaß sie mit der 5 hat. Die 5 ist neugierig auf die Ruhe und Beständigkeit der 4. Vielleicht begegnet ihr euch, wenn die 5 etwas repariert, gebaut oder organisiert braucht und die 4 genau das tut."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 5 bringt Aufregung, Beweglichkeit und neue Erfahrungen in das geordnete Leben der 4. Die 4 gibt der 5 eine sichere Basis und praktische Hilfe. Jede Seite sieht in der anderen eine Eigenschaft, die sie heimlich gern hätte."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 4 will Routine und Pläne, die 5 Spontaneität und Wechsel. Die 4 findet die 5 vielleicht verantwortungslos, die 5 die 4 bestimmend oder langweilig. Geld und Verbindlichkeit sind häufige Streitpunkte."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik kann überraschend leidenschaftlich sein, denn Gegensätze ziehen sich an. Die Liebe hält, wenn die 4 Freiheit ohne Angst gewährt und die 5 in vereinbarten Punkten Verlässlichkeit bietet. Klare Absprachen helfen beiden, sich auf ihre Art sicher zu fühlen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde zieht die 5 die 4 in Abenteuer, und die 4 hilft der 5, wenn Pläne zerfallen. Bei der Arbeit bringt die 5 Ideen und Kontakte, die 4 Umsetzung und Ordnung."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Saša, Lebenszahl 5, wollte die Adria umsegeln. Dejan, Lebenszahl 4, Bootsbauer, verbrachte zwei Winter damit, ein altes Boot sicher zu machen. Drei Monate segelten sie zusammen. Er sagt, er habe es mehr genossen als erwartet; sie sagt, sie habe sich auf dem Wasser nie sicherer gefühlt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 4 die Freiheit der 5 als frische Luft sieht und nicht als Chaos, und die 5 die Struktur der 4 als Halt sieht und nicht als Käfig."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein gepackter Koffer neben einer ordentlich abgelegten Mappe mit Tickets, Versicherung und Karten: der Geist der 5 und die Sorgfalt der 4 reisen zusammen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ein rollender Stein setzt kein Moos an, sagt man. Die 4 mag Moos, die 5 mag das Rollen. Der Trick ist, manchmal gemeinsam zu rollen und manchmal gemeinsam zu ruhen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Vereinbart ein monatliches Abenteuer, das die 5 plant, mit einer praktischen Bedingung der 4, etwa einem Budget oder einem Rückkehrdatum. Beide halten ihren Teil ein."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Der Fluss formt den Fels, und der Fels lenkt den Fluss; beide verändern sich zum Guten."
+    ]
+   }
+  ]
+ },
+ "4-and-6": {
+  "title": "Lebenszahl 4 und 6: gemeinsam ein Zuhause bauen",
+  "lead": "Die 4 bringt Struktur und Fleiß, die 6 Liebe und Verantwortung. Ein solides, familienorientiertes Paar, das Sicherheit und Fürsorge schätzt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 4 und eine 6 begegnen sich oft über Familie, Gemeinschaft oder gemeinsame Pflichten: einen Elternbeirat, ein Nachbarschaftsprojekt, einen Familienbetrieb. Jede Seite erkennt die andere als verlässlich und freundlich."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Werte: Zuhause, Treue, Pflicht und Fürsorge. Die 4 sorgt für Stabilität und praktisches Können, die 6 für Wärme, Schönheit und emotionalen Halt. Zusammen schafft ihr ein sicheres, gemütliches Zuhause, das andere gern besuchen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide können auf verschiedene Weise stur und bestimmend sein: die 4 bei Methoden und Geld, die 6 bei Menschen und Äußerlichkeiten. Zu viel Pflicht lässt wenig Raum für Romantik oder Spontaneität."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier beständig, hingebungsvoll und beschützend. Die 4 zeigt Liebe durch Bauen und Versorgen, die 6 durch Umsorgen und Verschönern. Sie vertieft sich, wenn beide oft danke sagen und Zeit nur für sich zwei planen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr das Paar, das die Feiertage ausrichtet. Beruflich passen Familienbetriebe, Gesundheitswesen, Bildung, Immobilien und Gastgewerbe."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ljiljana, Lebenszahl 6, und Boris, Lebenszahl 4, bauten ihr Haus über sieben Sommer mit eigenen Händen. Sie entwarf den Garten, er legte jeden Stein des Weges. Heute rennen die Enkel darauf entlang, und jeder Gast geht mit einem Glas ihrer Pflaumenmarmelade nach Hause."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Pflicht und Freude im Gleichgewicht sind und beide daran denken, dass sie ein Paar sind, nicht nur Eltern oder Versorgende."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Tisch, gedeckt für viele, ein Werkzeugkasten im Flur, Blumen auf der Fensterbank und ein Kalender voller Geburtstage."
+    ]
+   },
+   {
+    "title": "Über Romantik",
+    "paras": [
+     "Praktische Paare vergessen manchmal die Romantik, weil immer etwas zu reparieren ist. Eine kleine Überraschung, ein Essen auswärts oder ein Liebeszettel in der Brotdose halten den Funken lebendig."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Viele Hände, schnelles Ende, sagt man. In einem Zuhause von 4 und 6 stimmt das wörtlich: Die 4 repariert, die 6 kocht, die Kinder decken den Tisch, und die Gäste spülen ab. Die Gefahr ist nur, dass die beiden Gastgebenden sich nie hinsetzen. Sorgt dafür, dass ihr es tut, und lasst euch ab und zu selbst bewirten."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Verlasst einmal im Monat für einen Abend das Haus und alle Pflichten. Keine Hausarbeit, keine Verwandten, keine Listen, nur ihr zwei."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein Zuhause, gebaut mit starken Händen und liebendem Herzen, schützt alle, die eintreten."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",
