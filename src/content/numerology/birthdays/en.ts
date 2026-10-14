@@ -1271,5 +1271,239 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "19": {
+  "title": "Born on the 19th: the independent sun",
+  "lead": "The 19th reduces to 1 and carries a karmic debt number: strong will and self reliance, with a lesson about sharing power.",
+  "sections": [
+   {
+    "title": "The gift of the 19th",
+    "paras": [
+     "Nineteen runs from the first digit to the last and returns to 1, a complete circle of experience feeding a single will. People born on this day are often remarkably self reliant. Card nineteen of the tarot is the Sun, and many of them do radiate warmth and confidence. Their gift is the courage to stand on their own feet and light the way."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may prefer doing things yourself to explaining them to others. Asking for help can feel like losing. You often end up in charge, even when you did not plan it. Life may have placed you in situations where you had to manage alone, and you did."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Independence, determination, originality, leadership and resilience. The 19th makes a natural founder, pioneer, surgeon, athlete or creative director, someone who goes first and shows it can be done."
+    ]
+   },
+   {
+    "title": "The karmic lesson",
+    "paras": [
+     "As a karmic debt day, the 19th is linked with an old pattern of using power selfishly. In this life the lesson is the balance between independence and interdependence. Real strength includes asking for help, listening and sharing credit."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 19th needs a partner who is strong in their own right and will not be steamrolled. Love deepens when they share decisions and allow vulnerability, letting someone see the person behind the competence."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Entrepreneurship, leadership roles, surgery, sport, design, invention and independent consulting. They do best with autonomy and grow fastest when they also build a trusted team."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Damjan, born on 19 January, built a software company alone for seven years and nearly burned out. When he finally hired a co founder he trusted, the company tripled. He says learning to say I need you was harder than writing any code."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 2 or 6 life path, a 19th birthday adds backbone to kindness. On a 1 path it doubles the independence, so partnership becomes the key lesson. On a 7 path it gives the thinker courage to act. On a 9 path it turns ideals into bold initiatives."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A morning run before the city wakes, a to do list written in firm handwriting, and, if all goes well, a phone with a few names that are called when help is needed: the 19th at its best is both sun and part of a sky full of stars."
+    ]
+   },
+   {
+    "title": "A note on help",
+    "paras": [
+     "Many people born on the 19th discover in midlife that the people around them wanted to help all along and were simply never asked. Letting them in often brings not only relief but a new kind of joy."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each week, ask for help with one small task you could easily do yourself. Notice what happens to the relationship. It is practice for the moments when help really matters."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your light is strongest when it warms others instead of standing alone."
+    ]
+   }
+  ]
+ },
+ "20": {
+  "title": "Born on the 20th: the sensitive partner",
+  "lead": "The 20th carries the 2 with a zero beside it: cooperation and intuition amplified, with a deep need for harmony.",
+  "sections": [
+   {
+    "title": "The gift of the 20th",
+    "paras": [
+     "Twenty doubles the ten and reduces to 2, and the zero is read as an open space that magnifies the gentle gifts of the 2. People born on this day often have an exceptional sensitivity to others, a talent for teamwork and a quiet spiritual streak. Card twenty of the tarot is Judgement, a symbol of awakening and calling."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may pick up on emotions in a room before anyone speaks. You prefer working with others to working alone and often become the glue in a group. Harsh environments affect you physically. You may have a strong sense that your life has a purpose that slowly reveals itself."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Empathy, diplomacy, patience, attention to detail and intuitive insight. The 20th excels in caring professions, mediation, music and any role that needs a calm, attentive presence."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Over sensitivity and dependence on others' approval are the risks. The 20th may avoid conflict at all costs or feel lost without a partner. Growth comes from building an inner centre that stays steady even when others disagree."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love is everything to many people born on the 20th. They flourish in a gentle, devoted partnership and suffer in cold or chaotic ones. Choosing partners who give back the same tenderness is the key lesson."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Counselling, nursing, teaching, music, mediation, human resources, administration and any partnership based work."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Katerina, born on 20 October, works as a midwife in a small town. Mothers say her calm voice is the first thing they remember about giving birth. At forty she started singing in a choir and found that her sensitivity, once a burden, had become her art."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 1 or 8 life path, a 20th birthday softens ambition with empathy. On a 2 path it doubles the sensitivity, so boundaries matter. On a 5 path it brings loyalty into freedom. On a 7 path it opens the thinker to others."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two cups of tea on a table, a soft lamp, a long conversation that goes deeper than planned: the 20th feels most alive in such moments of shared presence."
+    ]
+   },
+   {
+    "title": "A note on calling",
+    "paras": [
+     "Many people born on the 20th describe a moment, often in their thirties or forties, when they suddenly knew what they were meant to do. Until then, every job that taught them to care for others was quiet preparation."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each morning, before checking messages, sit for two minutes and notice how you feel before anyone else's mood enters. It strengthens the inner centre."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your gentleness is a strength when it includes gentleness toward yourself."
+    ]
+   }
+  ]
+ },
+ "21": {
+  "title": "Born on the 21st: the joyful finisher",
+  "lead": "The 21st reduces to 3 and joins the cooperation of 2 with the initiative of 1: creativity, sociability and a talent for bringing things to completion.",
+  "sections": [
+   {
+    "title": "The gift of the 21st",
+    "paras": [
+     "Card twenty one of the tarot is the World, the card of completion and celebration. People born on the 21st often have a gift for bringing projects and people together into a satisfying whole. The 3 at the root gives expression and charm, while the 2 and 1 add tact and drive."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may be the one who finishes the group project and makes the final presentation shine. You enjoy people and parties, but also have a strong sense of what makes something complete. Travel, languages and cultures fascinate you."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Creativity, communication, social grace, adaptability and a sense of the big picture. The 21st does well in media, the arts, diplomacy and international work."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "The 21st may hide insecurity behind charm or avoid difficult emotions by staying busy and social. Growth comes from allowing quiet, depth and honest conversations about what really matters."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love is warm and playful. The 21st needs a partner who enjoys their social life and also offers a safe harbour. Relationships thrive on shared projects and celebrations."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Writing, media, design, events, tourism, diplomacy, teaching and creative project management."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Luka, born on 21 August, organises cultural festivals that bring together musicians from across the Balkans. He speaks four languages and can calm a nervous artist in any of them. He says the best moment is the last night, when everything has come together."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 4 or 7 life path, a 21st birthday adds warmth and lightness. On a 3 path it doubles the creative energy, so focus matters. On a 6 path it turns care into celebration. On a 9 path it gives global ideals a joyful voice."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A suitcase with stickers from many countries, a phone full of photos of shared meals, a finished project celebrated with friends: the 21st collects moments of completion like souvenirs."
+    ]
+   },
+   {
+    "title": "A note on endings",
+    "paras": [
+     "People born on the 21st often find endings easier than others do, because they see them as celebrations rather than losses. A finished chapter, for them, is something to toast."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "When you finish something, mark it: a small celebration, a note in a journal, a thank you to those who helped. Completion becomes a source of energy for the next beginning, and the people who helped will gladly join you again."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Every finished circle is a reason to celebrate and a doorway to the next."
+    ]
+   }
+  ]
  }
 };

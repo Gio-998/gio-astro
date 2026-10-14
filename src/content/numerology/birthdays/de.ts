@@ -1307,5 +1307,239 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "19": {
+  "title": "Geboren am 19.: die eigenständige Sonne",
+  "lead": "Die 19 reduziert sich auf 1 und ist eine karmische Schuldzahl: starker Wille und Eigenständigkeit, mit einer Lektion über geteilte Macht.",
+  "sections": [
+   {
+    "title": "Die Gabe des 19.",
+    "paras": [
+     "Neunzehn reicht von der ersten bis zur letzten Ziffer und kehrt zur 1 zurück, ein ganzer Kreis an Erfahrung, der einen einzigen Willen nährt. Wer an diesem Tag geboren ist, ist oft bemerkenswert eigenständig. Die neunzehnte Tarotkarte ist die Sonne, und viele strahlen tatsächlich Wärme und Zuversicht aus. Die Gabe ist der Mut, auf eigenen Füßen zu stehen und den Weg zu erhellen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht machst du Dinge lieber selbst, als sie anderen zu erklären. Um Hilfe zu bitten, fühlt sich an wie Verlieren. Oft landest du in der Leitung, auch ohne es geplant zu haben. Das Leben hat dich vielleicht in Lagen gebracht, in denen du allein zurechtkommen musstest, und du hast es geschafft."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Unabhängigkeit, Entschlossenheit, Originalität, Führung und Widerstandskraft. Der 19. ist eine natürliche Gründerin, ein Pionier, eine Chirurgin, ein Sportler oder eine Kreativdirektorin, jemand, der vorangeht und zeigt, dass es geht."
+    ]
+   },
+   {
+    "title": "Die karmische Lektion",
+    "paras": [
+     "Als karmischer Schuldtag ist der 19. mit einem alten Muster verbunden, Macht selbstsüchtig zu nutzen. In diesem Leben geht es um das Gleichgewicht zwischen Unabhängigkeit und Verbundenheit. Echte Stärke schließt ein, um Hilfe zu bitten, zuzuhören und Anerkennung zu teilen."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du brauchst einen Menschen, der selbst stark ist und sich nicht überrollen lässt. Liebe vertieft sich, wenn du Entscheidungen teilst und Verletzlichkeit zulässt, wenn jemand den Menschen hinter der Kompetenz sehen darf."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Unternehmertum, Führungsrollen, Chirurgie, Sport, Design, Erfindungen und selbstständige Beratung. Du arbeitest am besten mit Freiraum und wächst am schnellsten, wenn du auch ein vertrautes Team aufbaust."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Damjan, geboren am 19. Januar, baute sieben Jahre lang allein eine Softwarefirma auf und brannte fast aus. Als er endlich einen Mitgründer fand, dem er vertraute, verdreifachte sich die Firma. Er sagt, ich brauche dich sagen zu lernen, sei schwerer gewesen als jeder Code."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 2 oder 6 gibt ein Geburtstag am 19. der Freundlichkeit Rückgrat. Auf der 1 verdoppelt er die Unabhängigkeit, Partnerschaft wird zur Schlüssellektion. Auf der 7 schenkt er dem Denken Mut zum Handeln. Auf der 9 werden Ideale zu kühnen Initiativen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Morgenlauf, bevor die Stadt erwacht, eine Liste in fester Handschrift und, wenn alles gut läuft, ein Telefon mit ein paar Namen, die angerufen werden, wenn Hilfe nötig ist: Der 19. ist im besten Fall Sonne und zugleich Teil eines Himmels voller Sterne."
+    ]
+   },
+   {
+    "title": "Über Hilfe",
+    "paras": [
+     "Viele vom 19. entdecken in der Lebensmitte, dass die Menschen um sie herum immer helfen wollten und nur nie gefragt wurden. Sie hereinzulassen, bringt oft nicht nur Erleichterung, sondern eine neue Art von Freude."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Bitte jede Woche um Hilfe bei einer kleinen Aufgabe, die du leicht selbst erledigen könntest. Achte darauf, was mit der Beziehung geschieht. Es ist Übung für die Momente, in denen Hilfe wirklich zählt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Dein Licht ist am stärksten, wenn es andere wärmt, statt allein zu stehen."
+    ]
+   }
+  ]
+ },
+ "20": {
+  "title": "Geboren am 20.: die feinfühligen Partner",
+  "lead": "Die 20 trägt die 2 mit einer Null daneben: Zusammenarbeit und Intuition verstärkt, mit einem tiefen Bedürfnis nach Harmonie.",
+  "sections": [
+   {
+    "title": "Die Gabe des 20.",
+    "paras": [
+     "Zwanzig verdoppelt die Zehn und reduziert sich auf 2, und die Null gilt als offener Raum, der die sanften Gaben der 2 verstärkt. Wer an diesem Tag geboren ist, hat oft ein außergewöhnliches Gespür für andere, Talent für Teamarbeit und eine stille spirituelle Ader. Die zwanzigste Tarotkarte ist das Gericht, ein Symbol für Erwachen und Berufung."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht nimmst du Gefühle im Raum wahr, bevor jemand spricht. Du arbeitest lieber mit anderen als allein und wirst oft zum Kitt einer Gruppe. Raue Umgebungen setzen dir auch körperlich zu. Vielleicht hast du das starke Gefühl, dass dein Leben einen Sinn hat, der sich langsam zeigt."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Empathie, Diplomatie, Geduld, Sorgfalt und intuitive Einsicht. Der 20. glänzt in Pflegeberufen, Vermittlung, Musik und jeder Rolle, die eine ruhige, aufmerksame Präsenz braucht."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Überempfindlichkeit und Abhängigkeit von der Zustimmung anderer sind die Risiken. Manchmal wird Konflikt um jeden Preis gemieden, oder du fühlst dich ohne Partner verloren. Wachstum kommt durch eine innere Mitte, die stabil bleibt, auch wenn andere widersprechen."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Für viele vom 20. ist Liebe alles. Du blühst in einer sanften, hingebungsvollen Partnerschaft und leidest in kalten oder chaotischen. Menschen zu wählen, die dieselbe Zärtlichkeit zurückgeben, ist die Schlüssellektion."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Beratung, Pflege, Unterricht, Musik, Mediation, Personalwesen, Verwaltung und jede partnerschaftliche Arbeit."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Katerina, geboren am 20. Oktober, arbeitet als Hebamme in einer Kleinstadt. Mütter sagen, ihre ruhige Stimme sei das Erste, woran sie sich bei der Geburt erinnern. Mit vierzig begann sie, im Chor zu singen, und merkte, dass ihre Empfindsamkeit, einst eine Last, zu ihrer Kunst geworden war."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 1 oder 8 mildert ein Geburtstag am 20. den Ehrgeiz mit Empathie. Auf der 2 verdoppelt er die Empfindsamkeit, Grenzen werden wichtig. Auf der 5 bringt er Treue in die Freiheit. Auf der 7 öffnet er Denkende für andere."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Tassen Tee auf dem Tisch, eine weiche Lampe, ein langes Gespräch, das tiefer geht als geplant: In solchen Momenten geteilter Gegenwart fühlt sich der 20. am lebendigsten."
+    ]
+   },
+   {
+    "title": "Über Berufung",
+    "paras": [
+     "Viele vom 20. beschreiben einen Moment, oft in ihren Dreißigern oder Vierzigern, in dem sie plötzlich wussten, wozu sie da sind. Bis dahin war jede Arbeit, die sie lehrte, für andere zu sorgen, stille Vorbereitung."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Setz dich jeden Morgen, bevor du Nachrichten liest, zwei Minuten hin und spür, wie es dir geht, bevor die Stimmung anderer hereinkommt. Das stärkt die innere Mitte."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Sanftheit ist eine Stärke, wenn sie auch Sanftheit dir selbst gegenüber einschließt. Wer gut für sich sorgt, kann lange für andere da sein."
+    ]
+   }
+  ]
+ },
+ "21": {
+  "title": "Geboren am 21.: die fröhlichen Vollender",
+  "lead": "Die 21 reduziert sich auf 3 und verbindet die Zusammenarbeit der 2 mit der Initiative der 1: Kreativität, Geselligkeit und Talent, Dinge abzuschließen.",
+  "sections": [
+   {
+    "title": "Die Gabe des 21.",
+    "paras": [
+     "Die einundzwanzigste Tarotkarte ist die Welt, die Karte der Vollendung und des Feierns. Wer am 21. geboren ist, hat oft die Gabe, Projekte und Menschen zu einem stimmigen Ganzen zu fügen. Die 3 an der Wurzel gibt Ausdruck und Charme, die 2 und die 1 fügen Takt und Antrieb hinzu."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht bist du es, die das Gruppenprojekt beendet und die Schlusspräsentation glänzen lässt. Du magst Menschen und Feste, hast aber auch einen starken Sinn dafür, was etwas vollständig macht. Reisen, Sprachen und Kulturen faszinieren dich. Auf Familienfesten bist du oft diejenige Person, die Fotos macht, Reden hält und am Ende dafür sorgt, dass jeder Gast sich gesehen fühlt und mit einem Lächeln nach Hause geht."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Kreativität, Kommunikation, gesellschaftliche Anmut, Anpassungsfähigkeit und Blick fürs Ganze. Der 21. kommt in Medien, Kunst, Diplomatie und internationaler Arbeit gut zurecht."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Manchmal versteckt der 21. Unsicherheit hinter Charme oder weicht schwierigen Gefühlen aus, indem er beschäftigt und gesellig bleibt. Wachstum kommt, wenn du Stille, Tiefe und ehrliche Gespräche über das Wesentliche zulässt."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe ist warm und verspielt. Du brauchst einen Menschen, der dein soziales Leben genießt und zugleich einen sicheren Hafen bietet. Beziehungen gedeihen durch gemeinsame Projekte und Feste."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Schreiben, Medien, Design, Veranstaltungen, Tourismus, Diplomatie, Unterricht und kreative Projektleitung."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Luka, geboren am 21. August, organisiert Kulturfestivals, die Musiker aus dem ganzen Balkan zusammenbringen. Er spricht vier Sprachen und kann eine nervöse Künstlerin in jeder davon beruhigen. Er sagt, der schönste Moment sei der letzte Abend, wenn alles zusammengekommen ist."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 7 bringt ein Geburtstag am 21. Wärme und Leichtigkeit. Auf der 3 verdoppelt er die kreative Energie, Fokus wird wichtig. Auf der 6 wird Fürsorge zum Fest. Auf der 9 bekommen weltweite Ideale eine fröhliche Stimme."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Koffer mit Aufklebern aus vielen Ländern, ein Handy voller Fotos gemeinsamer Mahlzeiten, ein beendetes Projekt, gefeiert mit Freunden: Der 21. sammelt Momente der Vollendung wie Souvenirs."
+    ]
+   },
+   {
+    "title": "Über Abschlüsse",
+    "paras": [
+     "Menschen vom 21. fällt das Ende oft leichter als anderen, weil sie es als Fest sehen und nicht als Verlust. Ein abgeschlossenes Kapitel ist für sie ein Grund anzustoßen. Sie räumen auf, danken, lassen los und schauen dann neugierig nach vorn, ohne lange zurückzublicken oder sich an Vergangenem festzuhalten."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Wenn du etwas beendest, markiere es: eine kleine Feier, ein Eintrag im Tagebuch, ein Dank an alle, die geholfen haben. Vollendung wird so zur Kraftquelle für den nächsten Anfang, und die Helfenden sind gern wieder dabei."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Jeder geschlossene Kreis ist ein Grund zu feiern und eine Tür zum nächsten. Ende gut, alles gut, und danach beginnt das nächste Fest."
+    ]
+   }
+  ]
  }
 };
