@@ -8,6 +8,12 @@ import { mkB2 } from "./mk-b2";
 import { mkB2b } from "./mk-b2b";
 import { deB2 } from "./de-b2";
 import { deB2b } from "./de-b2b";
-const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b }, mk: { ...mkB1, ...mkB2, ...mkB2b }, de: { ...deB1, ...deB2, ...deB2b } };
+import { enB3 } from "./en-b3";
+import { enB3b } from "./en-b3b";
+import { mkB3 } from "./mk-b3";
+import { mkB3b } from "./mk-b3b";
+import { deB3 } from "./de-b3";
+import { deB3b } from "./de-b3b";
+const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b } };
 /** Long story sections for an angel number page, if that batch is written. */
 export function angelLong(lang: string, n: string) { return ALL[lang]?.[n] ?? []; }
