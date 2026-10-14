@@ -1217,5 +1217,227 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-8": {
+  "title": "Lebenszahl 2 und 8: Diplomatie und Durchsetzungskraft",
+  "lead": "Die 8 bringt Macht, Ehrgeiz und materielles Geschick, die 2 Diplomatie und emotionale Intelligenz. Ein klassisches Paar aus Stärke und Sanftheit.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 8 bemerkt die 2 oft als die Person, die hinter den Kulissen alles reibungslos laufen lässt. Die 2 wird von der Zuversicht der 8 angezogen und von ihrer Fähigkeit, Dinge geschehen zu lassen. Der Respekt wächst in beide Richtungen, manchmal bevor jemand die Anziehung zugibt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 8 bietet Schutz, Stabilität und Ehrgeiz, die 2 Fürsorge, Treue und ein Gespür für Menschen. Die 2 mildert die harten Kanten der 8, und die 8 hilft der 2, sich sicher genug zu fühlen, um zu glänzen. Gemeinsam könnt ihr ein erfolgreiches, gut geführtes Leben aufbauen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 kann dominant oder arbeitsbesessen sein, sodass die 2 sich zweitrangig fühlt. Die 2 vermeidet es vielleicht, der 8 Nein zu sagen, und fühlt sich dann überrollt. Geld und Entscheidungen können ungleich verteilt werden, wenn beide nicht aufpassen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik verbindet Sicherheit und Zärtlichkeit. Die 8 versorgt gern, die 2 umsorgt gern. Die Liebe vertieft sich, wenn die 8 Verletzlichkeit zeigt und nach der Sicht der 2 fragt, und wenn die 2 ihre Bedürfnisse bestimmt äußert, statt auf Erlaubnis zu warten."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde öffnet die 8 Türen und die 2 hält den Kreis eng. Bei der Arbeit ist das eine starke Kombination: die 8 in der Leitung, die 2 als Partnerin in Verhandlungen, Personalwesen oder Kundenbetreuung."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Vera, Lebenszahl 8, baute eine Spedition von einem Lastwagen auf vierzig aus. Ihr Mann Toni, Lebenszahl 2, führte das Büro und kannte die Familie jedes Fahrers. Als sie Kosten senken wollte, zeigte er ihr, welche Fahrer gehen würden. Sie hörte auf ihn, erhöhte stattdessen die Löhne, und in zehn Jahren ging niemand."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Macht offen geteilt wird und der leise Einfluss der 2 benannt und geschätzt wird, statt selbstverständlich zu sein."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine späte Besprechung, die mit einem Anruf nach Hause endet, ein warmgehaltenes Abendessen, ein ruhiges Gespräch, in dem die 2 der 8 hilft, die Menschen hinter den Zahlen zu sehen."
+    ]
+   },
+   {
+    "title": "Über Macht",
+    "paras": [
+     "Die 8 misst Erfolg in Ergebnissen, die 2 in Beziehungen. Jede allein ist unvollständig. Paare, die beides im Blick behalten, Gewinn und Wohlwollen, halten am längsten."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Mit Speck fängt man Mäuse, sagt man. Die 2 weiß von Natur aus, dass Freundlichkeit mehr erreicht als Druck, und die 8 lernt es an ihrer Seite, besonders am Verhandlungstisch."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche bittet die 8 die 2 um Rat bei einer Entscheidung und folgt ihm, auch wenn es nicht die erste Wahl wäre. Das Vertrauen wächst auf beiden Seiten."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Stärke baut das Haus, Freundlichkeit hält die Menschen darin."
+    ]
+   }
+  ]
+ },
+ "2-and-9": {
+  "title": "Lebenszahl 2 und 9: die sanften Menschenfreunde",
+  "lead": "Die 2 und die 9 teilen Mitgefühl, Idealismus und den Wunsch zu helfen. Dieses zärtliche Paar fühlt tief und gibt großzügig und muss lernen, das eigene Herz zu schützen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 2 und eine 9 begegnen sich oft im Dienst an anderen, in der Kunst oder in einem gemeinsamen Gefühl: bei einer Benefizveranstaltung, einem Konzert, einer Beerdigung, bei der beide andere trösten. Das Erkennen ist sanft, aber stark; jede Seite spürt die Güte der anderen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 9 bringt einen weiten Blick, Weisheit und Großzügigkeit, die 2 Nähe, Geduld und Hingabe. Die 9 hilft der 2, das große Ganze zu sehen, und die 2 schenkt der 9 die persönliche Nähe, die der 9, so beschäftigt mit der Sorge um die Welt, oft fehlt."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 9 kann distanziert oder in Anliegen versunken sein, was die 2 verletzt. Die 2 wünscht sich vielleicht mehr Aufmerksamkeit, als die 9 geben kann. Beide sind empfindsam und halten Enttäuschungen still fest. Der 9 fällt es manchmal schwer, die Vergangenheit loszulassen, der 2 die Angst."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier romantisch, idealistisch und gütig. Sie gedeiht durch gemeinsame Werte und Taten der Fürsorge. Die 9 sollte daran denken, dass die 2 sich persönlich gewählt fühlen muss, nicht geliebt als Teil der Menschheit. Die 2 sollte die Aufgabe der 9 unterstützen, ohne mit ihr zu konkurrieren."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde tröstet ihr euch und träumt von einer besseren Welt. Beruflich passen gemeinnützige Organisationen, Heilberufe, Bildung und Kunst."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ema, Lebenszahl 2, und Damjan, Lebenszahl 9, lernten sich als Freiwillige nach Überschwemmungen in ihrer Region kennen. Eine Woche lang räumten sie Seite an Seite Häuser aus. Heute führen sie eine kleine Stiftung, die Familien nach Katastrophen beim Wiederaufbau hilft, und verbringen jeden Jahrestag in der Stadt, in der sie sich trafen."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn es einen Teil seines Mitgefühls für sich selbst aufhebt, mit Ruhe, Spiel und privater Zeit, die kein Anliegen beanspruchen darf."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Kisten mit gespendeter Kleidung im Flur, eine Kerze auf dem Tisch, zwei Menschen, die spät noch über jemanden reden, dem sie geholfen haben, und über jemanden, bei dem es nicht gelang."
+    ]
+   },
+   {
+    "title": "Über Grenzen",
+    "paras": [
+     "Mitfühlenden Menschen fällt Nein oft schwer. Für dieses Paar kann ein gemeinsames Nein zu einer weiteren Bitte ein Akt der Liebe zueinander sein."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Verbringt einmal im Monat einen ganzen Tag mit etwas nur für euch zwei: kein Helfen, kein Reparieren, keine Nachrichten. Nur Freude."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ihr könnt für die Welt sorgen und trotzdem ein kleines warmes Zimmer nur für zwei behalten."
+    ]
+   }
+  ]
+ },
+ "2-and-11": {
+  "title": "Lebenszahl 2 und 11: Echo desselben Tons",
+  "lead": "Die 11 ist die Meisteroktave der 2, darum teilt dieses Paar eine tiefe Empfindsamkeit. Intuitives Verstehen fällt leicht, emotionale Überlastung ist das Risiko.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 2 und die 11 begegnen sich oft mit einem seltsamen Gefühl von Vertrautheit, als hätten sie sich schon gekannt. Gespräche wenden sich schnell dem Innenleben zu: Träumen, Ahnungen, Familiengeschichten. Beide fühlen sich ungewöhnlich sicher darin, sie selbst zu sein."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 11 bringt Inspiration, Vision und spirituellen Hunger, die 2 Beständigkeit, Geduld und praktische Sorge um Gefühle. Die 2 hilft der 11, zur Ruhe zu kommen und sich gehalten zu fühlen, die 11 hilft der 2, größer zu träumen und der eigenen Intuition zu trauen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide sind sehr empfindsam. Ein schlechter Tag bei einer Seite überträgt sich schnell auf die andere. Die 11 schwankt vielleicht zwischen Begeisterung und Unruhe, und die 2 nimmt alles auf. Entscheidungen stocken, weil keiner den anderen verletzen will."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist innig, seelenvoll und fürsorglich. Oft versteht ihr euch ohne Worte. Die Beziehung blüht, wenn ihr für schwierige Dinge trotzdem Worte findet und jede Seite eigene Wege hat, sich zu beruhigen, die nicht von der anderen abhängen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr Vertraute fürs Leben. Beruflich passen Beratung, Kunst, Musik, spirituelle Arbeit und jedes Umfeld, das Empathie schätzt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ivana, Lebenszahl 11, schreibt Lieder über das Dorf ihrer Großmutter. Petar, Lebenszahl 2, Tontechniker, nimmt sie in einem kleinen Studio zu Hause auf. Er sagt, an ihrem Atem höre er, ob eine Aufnahme die richtige ist. Sie sagt, er sei der einzige, der hört, was sie singen wollte."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit erdenden Gewohnheiten: regelmäßiger Schlaf, Zeit in der Natur, Freunde, die euch zum Lachen bringen, und ein ruhiges Zuhause, in dem sich Gefühle setzen können."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 11 trägt mehr Spannung als die 2, deshalb wird die 2 oft zur stabilisierenden Kraft. Diese Rolle ist wertvoll, aber auch die 2 braucht manchmal jemanden, der sie hält. Abwechseln schützt beide."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Kopfhörer auf dem Tisch, ein Notizbuch mit halben Liedzeilen, eine Kanne Kräutertee und zwei Menschen, die am Fenster stehen und den Regen hören, ohne etwas sagen zu müssen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wenn eine Seite überwältigt ist, sagt die andere nur: Ich bin da, lass dir Zeit. Kein Rat, keine Analyse. Erst wenn Ruhe eingekehrt ist, wird geredet."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Zwei empfindsame Herzen können ein Zufluchtsort sein, wenn jedes lernt, sein eigenes Licht zu halten."
+    ]
+   }
+  ]
  }
 };

@@ -1205,5 +1205,215 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-8": {
+  "title": "Life path 2 and 8: the diplomat and the executive",
+  "lead": "The 8 brings power, ambition and material skill; the 2 brings diplomacy and emotional intelligence. A classic pairing of strength and softness.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 8 often notices the 2 as the person who makes everything run smoothly behind the scenes. The 2 is drawn to the 8's confidence and capacity to make things happen. Respect grows in both directions, sometimes before either admits attraction."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 8 offers protection, stability and ambition; the 2 offers care, loyalty and an instinct for people. The 2 softens the 8's hard edges, and the 8 helps the 2 feel secure enough to shine. Together you can build a prosperous, well run life."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 can be dominant or work obsessed, leaving the 2 feeling secondary. The 2 may avoid saying no to the 8, then feel overpowered. Money and decision making can become uneven unless both pay attention."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance blends security and tenderness. The 8 likes to provide; the 2 likes to nurture. Love deepens when the 8 shows vulnerability and asks for the 2's view, and when the 2 asserts their needs firmly rather than waiting for permission."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 8 opens doors and the 2 keeps the circle close. At work this is a powerful combination: the 8 as director, the 2 as partner in negotiation, human resources or client care."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Vera, life path 8, built a logistics company from one truck to forty. Her husband Toni, life path 2, ran the office and knew every driver's family. When she wanted to cut costs, he showed her which drivers would leave. She listened, raised wages instead, and nobody left in ten years."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when power is shared openly and when the 2's quiet influence is named and valued, not taken for granted."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A late meeting that ends with a phone call home, a dinner kept warm, a quiet conversation where the 2 helps the 8 see the people behind the numbers."
+    ]
+   },
+   {
+    "title": "A note on power",
+    "paras": [
+     "The 8 tends to measure success in results, the 2 in relationships. Each is incomplete alone. Couples that track both, profit and goodwill, last the longest."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 8 asks the 2 for advice on one decision and follows it, even if it is not their first choice. Trust grows on both sides."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Strength builds the house; kindness keeps the people inside."
+    ]
+   }
+  ]
+ },
+ "2-and-9": {
+  "title": "Life path 2 and 9: the gentle humanitarians",
+  "lead": "The 2 and the 9 share compassion, idealism and a wish to help. This tender pairing feels deeply and gives generously, and must learn to protect its own heart.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 2 and a 9 often meet in service, art or a moment of shared emotion: a charity event, a concert, a funeral where both comfort others. Recognition is gentle but strong; each senses the other's kindness."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 9 brings broad vision, wisdom and generosity; the 2 brings intimacy, patience and devotion. The 9 helps the 2 see the bigger picture, and the 2 gives the 9 the personal closeness that the 9, so busy caring for the world, often lacks."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 9 can be distant or absorbed in causes, which hurts the 2. The 2 may want more attention than the 9 can give. Both are sensitive and can hold on to disappointments silently. The 9 sometimes struggles with letting go of the past, the 2 with letting go of fear."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is romantic, idealistic and kind. It thrives on shared values and acts of care. The 9 should remember that the 2 needs to feel chosen personally, not loved as part of humanity. The 2 should support the 9's mission without competing with it."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you comfort each other and dream about a better world. At work you suit nonprofit organisations, healing, education and the arts."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ema, life path 2, and Damjan, life path 9, met while volunteering after floods in their region. They cleaned houses side by side for a week. Today they run a small foundation that helps families rebuild after disasters, and still spend every anniversary in the town where they met."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when it saves some of its compassion for itself, with rest, play and private time that no cause can claim."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Boxes of donated clothes in the hallway, a candle on the table, two people talking late about someone they helped and someone they could not."
+    ]
+   },
+   {
+    "title": "A note on boundaries",
+    "paras": [
+     "Compassionate people often find it hard to say no. For this pair, a shared no to an extra request can be an act of love toward each other."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, spend a whole day on something only for the two of you: no helping, no fixing, no news. Just joy."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "You can care for the world and still keep a small warm room just for two."
+    ]
+   }
+  ]
+ },
+ "2-and-11": {
+  "title": "Life path 2 and 11: echoes of the same note",
+  "lead": "The 11 is the master octave of the 2, so this pair shares a deep sensitivity. Intuitive understanding comes easily; emotional overload is the risk.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 2 and the 11 often meet with a strange sense of familiarity, as if they had already known each other. Conversations move quickly to inner life: dreams, intuitions, family stories. Both feel unusually safe being themselves."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 11 brings inspiration, vision and spiritual hunger; the 2 brings steadiness, patience and practical care for feelings. The 2 helps the 11 rest and feel held; the 11 helps the 2 dream bigger and trust their own intuition."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both are highly sensitive. A bad day for one can spread quickly to the other. The 11 may swing between excitement and anxiety, and the 2 may absorb it all. Decisions may stall because neither wants to hurt the other."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is intimate, soulful and caring. You often understand each other without words. The relationship thrives when you also use words for difficult things, and when each has their own ways of calming down that do not depend on the other."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are confidants for life. At work you suit counselling, art, music, spiritual work and any setting that values empathy."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ivana, life path 11, writes songs about her grandmother's village. Petar, life path 2, a sound engineer, records them in a small studio at home. He says he can tell from her breathing whether a take is the one. She says he is the only person who hears what she meant to sing."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with grounding habits: regular sleep, time in nature, friends who make you laugh and a calm home where emotions can settle."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 11 carries more voltage than the 2, so the 2 often becomes the stabiliser. That role is valuable, but the 2 also needs someone to stabilise them sometimes. Taking turns protects both."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "When one of you is overwhelmed, the other says only: I am here, take your time. No advice, no analysis. Then, once calm, talk."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Two sensitive hearts can be a sanctuary when each learns to hold its own light."
+    ]
+   }
+  ]
  }
 };
