@@ -414,6 +414,234 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "3-and-11": {
+  "title": "Lebenszahl 3 und 11: Botschaft und Vision",
+  "lead": "Die 3 gibt Ideen eine Stimme, die Meisterzahl 11 empfängt sie wie Lichtblitze. Ein kreatives, inspirierendes Paar, das Ruhe braucht, um seine hohe Ladung zu tragen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 11 trifft die 3 oft in einem Moment des kreativen Durchbruchs: in einer Werkstatt, bei einem offenen Mikrofon, auf einem spirituellen Seminar, das unerwartet lustig wurde. Die 3 ist fasziniert von der Intensität der 11, und die 11 entspannt sich in der Wärme des Lachens der 3."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 11 sieht Visionen, die 3 weiß, wie man sie so teilt, dass Menschen zuhören. Die 3 bringt Leichtigkeit in den Ernst der 11, die 11 bringt Sinn in das Talent der 3. Gemeinsam könnt ihr schreiben, auftreten oder lehren, sodass ein Publikum berührt wird."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 11 kann launisch und nach innen gekehrt sein, und die 3 versucht sie aufzuheitern, wenn sie eigentlich Ruhe braucht. Die zerstreute Energie der 3 kann die empfindsame 11 verunsichern. Beide meiden womöglich Praktisches, während sie der Inspiration folgen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist fantasievoll und gefühlvoll. Die 3 wirbt mit Worten und Spiel, die 11 mit Tiefe und Hingabe. Die Liebe wächst, wenn die 3 lernt, die schweren Stimmungen der 11 auszuhalten, ohne sie reparieren zu wollen, und die 11 lernt, die Leichtigkeit der 3 zu genießen, ohne sie als oberflächlich abzutun."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde träumt ihr laut zusammen. Beruflich passen Medien, Musik, Schreiben, Coaching und jedes Feld, in dem Inspiration auf Publikum trifft."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Lea, Lebenszahl 11, schreibt Gedichte in ein Heft, das sie niemandem zeigt. Miha, Lebenszahl 3, Radiomoderator, fand eines auf einem Zugsitz, las es auf Sendung vor und bat die Verfasserin, sich zu melden. Sie rief an, wütend. Ein Jahr später nahmen sie ein Album mit ihren Gedichten zu seiner Musik auf."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit geerdeter Routine, regelmäßigem Schlaf und einem gemeinsamen kreativen Projekt, das der hohen Energie eine sinnvolle Richtung gibt."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 11 trägt eine nervöse Intensität, die ausbrennen kann. Der Humor der 3 ist oft die beste Medizin, solange er sanft und im richtigen Moment kommt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Mikrofon auf dem Küchentisch, ein Heft voller durchgestrichener Zeilen, eine Kerze und zwei Menschen, die über einen Witz lachen, der zu einem Lied wurde."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wo man singt, da lass dich ruhig nieder, sagt ein altes Wort. Bei diesem Paar entsteht der Gesang oft aus den schweren Abenden der 11, und die 3 trägt ihn zu den Menschen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Erschafft jede Woche zusammen etwas Kleines: ein Lied, eine Zeichnung, einen Brief an einen Freund. Das Fertigstellen beruhigt die 11 und bündelt die 3."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Inspiration findet ihre Stimme, wenn jemand bereit ist, sie zu singen."
+    ]
+   }
+  ]
+ },
+ "3-and-22": {
+  "title": "Lebenszahl 3 und 22: Farben auf dem Gerüst des Meisterbaus",
+  "lead": "Die Meisterzahl 22 baut Großes und Dauerhaftes, die 3 macht es schön und geliebt. Ein Paar, das Werke mit Größe und Seele schaffen kann.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 22 begegnet der 3 oft, wenn ein großes Projekt ein Gesicht oder eine Geschichte braucht: eine Eröffnung, einen Start, eine Kampagne. Die 22 staunt, wie leicht die 3 Menschen gewinnt. Die 3 ist beeindruckt von der stillen Autorität der 22."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 22 liefert Vision, Disziplin und Struktur, die 3 Fantasie, Charme und Kommunikation. Die 22 gibt der 3 eine verlässliche Basis, und die 3 gibt dem Werk der 22 Wärme und Freude. Gemeinsam könnt ihr etwas schaffen, das Menschen nutzen und bewundern."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 kann ernst, fordernd und auf lange Ziele fixiert sein, die 3 will jetzt Spaß. Die 3 fühlt sich für ihre Verspieltheit kritisiert, und die 22 hat das Gefühl, die 3 nehme Verantwortung nicht ernst genug."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist ein Gleichgewicht aus Sicherheit und Freude. Die 22 baut ein festes Leben, die 3 füllt es mit Farbe. Die Liebe vertieft sich, wenn die 22 Zeit für Spiel schafft und die 3 zeigt, dass man sich auf sie verlassen kann, wenn es darauf ankommt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde holt die 3 die 22 aus dem Büro, und die 22 hilft der 3, ihre Träume zu planen. Bei der Arbeit ist das Architektur mit Gestaltung, Politik mit Kommunikation, Technik mit Marketing."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Jovana, Lebenszahl 3, malte Wandbilder für Kinder. Stefan, Lebenszahl 22, baute einen neuen Krankenhausflügel und beauftragte sie, die Kinderstation weniger beängstigend zu machen. Sie malte einen ganzen Ozean. Die Ärzte sagen, die Kinder wollen wiederkommen. Die beiden heirateten im Dachgarten des Krankenhauses."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 22 die Kreativität der 3 als Teil des großen Plans sieht und nicht als Dekoration, und die 3 die Geduld der 22 respektiert."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 22 spürt oft eine schwere Pflicht, etwas Wichtiges zu bauen. Die 3 kann dieses Gewicht mit Humor erleichtern und die 22 daran erinnern, dass auch Freude ein Fundament ist."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Bauplan mit einer Karikatur in der Ecke, eine ernste Besprechung, die in Lachen endet, ein Wochenende, an dem eine Wand bemalt wird, die eigentlich grau bleiben sollte."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Zu jedem ernsten Plan der 22 fügt die 3 ein fröhliches Element hinzu: eine Feier, eine Farbe, einen Moment des Spiels. Schreibt es von Anfang an in den Plan."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Feste Mauern stehen länger, wenn jemand sie mit Liebe bemalt hat."
+    ]
+   }
+  ]
+ },
+ "3-and-33": {
+  "title": "Lebenszahl 3 und 33: Freude im Dienst",
+  "lead": "Die 33 ist die Meisterzahl des mitfühlenden Lehrens, gebaut auf der 3 des Ausdrucks. Dieses Paar teilt Kreativität und ein warmes Herz und kann viele Menschen inspirieren.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 3 und die 33 begegnen sich oft in kreativer oder sorgender Arbeit: beim Kunstunterricht für Kinder, bei Auftritten in Krankenhäusern, beim Organisieren von Stadtteilfesten. Sie erkennen die Wärme des anderen und die Gabe, andere aufzurichten."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 33 bringt Weisheit, Heilung und Verantwortungsgefühl, die 3 Verspieltheit, Witz und Leichtigkeit. Die 33 hilft der 3, einen tieferen Sinn zu entdecken, die 3 hilft der 33, zu lachen und auszuruhen. Ihr teilt die Liebe zu Schönheit und Menschen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 33 trägt vielleicht zu viel Verantwortung und findet die 3 nicht ernst genug. Die 3 empfindet die 33 als belehrend oder überbehütend. Beide vernachlässigen womöglich Praktisches wie Geld und Planung."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm, ausdrucksvoll und zärtlich. Ihr sorgt mit Worten und Gesten füreinander. Die Beziehung blüht, wenn die 33 die Leichtigkeit der 3 als Geschenk annimmt und die 3 die Aufgabe der 33 mit beständiger Gegenwart unterstützt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde holt ihr das Beste aus einander heraus. Beruflich passen Lehre, Kunsttherapie, Kindermedien, Gemeinschaftsprojekte und spirituelle Begleitung."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ivana, Lebenszahl 33, arbeitet als Musiktherapeutin mit alten Menschen. Nikola, Lebenszahl 3, Clown, begleitete sie einmal in ein Pflegeheim. Heute kommen sie jede Woche zusammen. Sie spielt Klavier, er bringt die Bewohner zum Lachen, und die Pflegekräfte sagen, das ganze Haus sei danach ruhiger."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Freude und Dienst zusammengehen, sodass Helfen sich wie Spiel anfühlt und nicht wie Pflicht."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 33 spürt manchmal einen so starken Ruf, dass sie die eigenen Bedürfnisse vergisst. Die natürliche Leichtigkeit der 3 erinnert die 33 daran, dass eine glückliche Lehrerin besser lehrt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Auto voller Instrumente und Kostüme, eine Liste mit Pflegeheimen, zwei Menschen, die auf den Vordersitzen singen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Lachen ist die beste Medizin, sagt man. Die 3 und die 33 verteilen sie großzügig und müssen nur daran denken, selbst auch eine Dosis zu nehmen, vor allem vor einer vollen Woche."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Macht einmal im Monat etwas Kreatives nur für euch, ohne jemandem zu helfen oder etwas beizubringen. Es darf albern sein."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Lachen und Liebe sind beide Medizin; zusammen heilen sie tiefer."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",

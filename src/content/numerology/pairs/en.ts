@@ -408,6 +408,228 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "3-and-11": {
+  "title": "Life path 3 and 11: the messenger and the visionary",
+  "lead": "The 3 gives ideas a voice, the master 11 receives them like flashes of light. A creative, inspiring pairing that needs calm to carry its high charge.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 11 often meets the 3 at a moment of creative breakthrough: a workshop, an open mic night, a spiritual retreat that turned unexpectedly funny. The 3 is fascinated by the 11's intensity, and the 11 relaxes in the warmth of the 3's laughter."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 11 sees visions; the 3 knows how to share them so that people listen. The 3 brings lightness to the 11's seriousness, and the 11 brings meaning to the 3's talent. Together you can write, perform or teach in ways that move audiences."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 11 can be moody and inward, and the 3 may try to cheer them up when what they need is quiet. The 3's scattered energy can unsettle the sensitive 11. Both can avoid practical matters while chasing inspiration."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is imaginative and emotional. The 3 courts with words and play; the 11 with depth and devotion. Love grows when the 3 learns to sit with the 11's heavy moods without fixing them, and the 11 learns to enjoy the 3's lightness without judging it as shallow."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you dream out loud together. At work you suit media, music, writing, coaching and any field where inspiration meets an audience."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Lea, life path 11, writes poems in a notebook she never shows anyone. Miha, life path 3, a radio presenter, found one on a train seat and read it on air, asking the author to call. She did, furious. A year later they recorded an album of her poems set to his music."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with a grounded routine, regular sleep and a shared creative project that gives the high energy somewhere useful to go."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 11 carries a nervous intensity that can burn out. The 3's humour is often the best medicine, as long as it is offered gently and at the right moment."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A microphone on the kitchen table, a notebook full of crossed out lines, a candle and two people laughing at a joke that turned into a song."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each week, create something small together: a song, a drawing, a letter to a friend. Finishing it calms the 11 and focuses the 3."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Inspiration finds its voice when someone is ready to sing it."
+    ]
+   }
+  ]
+ },
+ "3-and-22": {
+  "title": "Life path 3 and 22: the dreamer's colours on a builder's frame",
+  "lead": "The master 22 builds big and lasting things; the 3 makes them beautiful and loved. A pairing that can create works with both scale and soul.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 22 often meets the 3 when a big project needs a face or a story: the opening of a building, a launch, a campaign. The 22 is surprised by how easily the 3 wins people over. The 3 is impressed by the 22's quiet authority."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 22 provides vision, discipline and structure; the 3 provides imagination, charm and communication. The 22 gives the 3 a reliable base, and the 3 gives the 22's work warmth and joy. Together you can make something that people both use and admire."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 can be serious, demanding and focused on long term goals; the 3 wants fun now. The 3 may feel criticised for being playful, and the 22 may feel the 3 is not taking responsibility seriously."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is a balance of security and delight. The 22 builds a solid life; the 3 fills it with colour. Love deepens when the 22 makes time for play and the 3 shows they can be counted on when it matters."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 3 pulls the 22 out of the office and the 22 helps the 3 plan their dreams. At work this is architecture with design, policy with communication, engineering with marketing."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Jovana, life path 3, painted children's murals. Stefan, life path 22, was building a new hospital wing and hired her to make the children's ward less frightening. She painted a whole ocean. Doctors say the children ask to come back. The two of them married on the hospital roof garden."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 22 sees the 3's creativity as part of the master plan, not decoration, and when the 3 respects the 22's patience."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 22 often feels a heavy duty to build something important. The 3 can lighten that weight with humour and remind the 22 that joy is also a foundation."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A blueprint with a cartoon drawn in the corner, a serious meeting that ends in laughter, a weekend spent painting a wall that was supposed to stay grey."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "For each serious plan the 22 makes, the 3 adds one joyful element: a celebration, a colour, a moment of play. Put it in the plan from the start."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Strong walls stand longer when someone has painted them with love."
+    ]
+   }
+  ]
+ },
+ "3-and-33": {
+  "title": "Life path 3 and 33: joy in service",
+  "lead": "The 33 is the master number of compassionate teaching, built on the 3 of expression. This pair shares creativity and a warm heart, and can inspire many people.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 3 and the 33 often meet through creative or caring work: teaching art to children, performing for hospitals, organising community festivals. They recognise each other's warmth and gift for lifting others."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 33 brings wisdom, healing and a sense of responsibility; the 3 brings playfulness, wit and lightness. The 33 helps the 3 discover deeper purpose; the 3 helps the 33 laugh and rest. You share a love of beauty and people."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 33 can carry too much responsibility and feel the 3 is not serious enough. The 3 can feel the 33 is preachy or overprotective. Both can neglect practical matters like money and planning."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm, expressive and tender. You care for each other with words and gestures. The relationship thrives when the 33 accepts the 3's lightness as a gift and the 3 supports the 33's mission with steady presence."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you bring out each other's best. At work you suit teaching, therapy through art, children's media, community projects and spiritual guidance."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ivana, life path 33, works as a music therapist with elderly patients. Nikola, life path 3, a clown, joined her for one session at a care home. Now they visit together every week. She plays the piano, he makes the residents laugh, and the nurses say the whole building is calmer afterwards."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when joy and service go together, so that helping others feels like play rather than duty."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 33 can feel a calling so strong that it forgets its own needs. The 3's natural lightness reminds the 33 that a happy teacher teaches better."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A car full of musical instruments and costumes, a list of care homes to visit, two people singing in the front seats."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A merry heart does good like a medicine, says an old proverb. The 3 and the 33 seem to have read it early and taken it as a job description. Their task is to remember that the medicine works on themselves, too, and to take a dose before every busy week."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, do something creative purely for yourselves, with no one to help or teach. Let it be silly."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Laughter and love are both medicine; together they heal deeper."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",
