@@ -870,6 +870,234 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "4-and-7": {
+  "title": "Lebenszahl 4 und 7: Methode und Sinn",
+  "lead": "Die 4 vertraut dem, was sich bauen und messen lässt, die 7 sucht, was unter der Oberfläche liegt. Ein nachdenkliches, ernstes Paar mit starker geistiger Verbindung.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 4 und eine 7 begegnen sich oft in ruhigen, konzentrierten Umgebungen: einem Labor, einer Bibliothek, einem Fachkurs, einer langen Wanderung. Smalltalk gibt es kaum. Die Verbindung wächst über gemeinsame Interessen und die Freude an einem präzisen Gespräch."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr schätzt beide Wahrheit, Privatsphäre und Können. Die 4 gibt der 7 praktische Erdung und Verlässlichkeit, die 7 der 4 Tiefe, Einsicht und neue Sichtweisen. Keiner braucht ständige Aufmerksamkeit, also lasst ihr euch ganz natürlich Raum."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 4 will klare Antworten und Pläne, die 7 fragt vielleicht weiter und schiebt auf. Die 7 wirkt auf die 4 distanziert oder verschlossen, die 4 auf die 7 starr oder zu wörtlich. Gefühle werden auf beiden Seiten womöglich selten ausgedrückt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist ruhig, treu und zurückhaltend. Liebe zeigt sich durch Verlässlichkeit und durchdachte Gesten, nicht durch große Worte. Sie vertieft sich, wenn ihr bewusst Gefühle teilt, auch wenn es ungelenk ist, und kleine Rituale der Nähe plant."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde genießt ihr lange Spaziergänge und tiefe Gespräche. Beruflich passen Forschung, Technik, Informatik, Medizin, Datenanalyse und jedes Feld, das Methode und Einsicht verbindet."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Milica, Lebenszahl 7, erforscht alte Handschriften. Darko, Lebenszahl 4, Buchbinder, restaurierte einen ihrer seltenen Bände so sorgfältig, dass sie ihm einen Dankesbrief schrieb. Sie trafen sich auf einen Kaffee, um über Leder zu sprechen, und blieben vier Stunden. Heute führen sie gemeinsam eine kleine Restaurierungswerkstatt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 4 akzeptiert, dass manche Fragen Zeit brauchen, und die 7 akzeptiert, dass manche Entscheidungen fallen müssen, bevor jede Antwort bekannt ist."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Schreibtischlampe über einem Mikroskop, ein ordentlicher Stapel Notizen daneben, zwei Tassen Tee und eine lange Stille, die beiden angenehm ist."
+    ]
+   },
+   {
+    "title": "Über Gefühle",
+    "paras": [
+     "Die 4 und die 7 behandeln Gefühle manchmal wie unordentliche Daten. Ein Gefühl pro Tag zu benennen, einfach und ohne Analyse, hält das Herz im Gespräch."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wer suchet, der findet, heißt es. Die 7 sucht nach Wahrheit, die 4 nach dem richtigen Fundament. Wenn beide an derselben Stelle graben, finden sie etwas, das für beide wertvoll ist."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche erklärt die 7 eine Idee, die sie erforscht, und die 4 ein Projekt, das sie baut. Jede Seite stellt zwei echte Fragen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Wahrheit finden die, die graben, und bewahren die, die bauen."
+    ]
+   }
+  ]
+ },
+ "4-and-8": {
+  "title": "Lebenszahl 4 und 8: gemeinsam ein Reich aufbauen",
+  "lead": "Die 4 und die 8 teilen Disziplin, Ehrgeiz und einen praktischen Verstand. Zusammen können sie dauerhaften materiellen Erfolg aufbauen, wenn sie daran denken, dass ein Zuhause keine Bilanz ist.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 4 und eine 8 begegnen sich oft im Geschäftsleben, in der Finanzwelt oder an einem fordernden Arbeitsplatz. Jede Seite erkennt die andere als fähig und ernsthaft. Die Anziehung wächst aus Respekt vor Kompetenz und gemeinsamen Zielen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr schätzt beide Sicherheit, Leistung und harte Arbeit. Die 4 bringt Methode, Geduld und Verlässlichkeit, die 8 Vision, Autorität und die Fähigkeit zu wachsen. Zusammen könnt ihr Betriebe, Besitz und ein starkes finanzielles Fundament aufbauen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide können bestimmend und arbeitsfixiert sein. Die 8 drängt auf Wachstum, die 4 will Vorsicht. Streit dreht sich um Geld, Macht oder darum, wer entscheidet. Arbeit kann Zärtlichkeit und Ruhe verdrängen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier treu und beschützend. Ihr zeigt Fürsorge durch Versorgen und Planen. Die Beziehung vertieft sich, wenn ihr Raum für Weichheit, Spiel und zwecklose Zeit schafft und euch für unsichtbare Mühen dankt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr füreinander ein verlässliches Netz. Bei der Arbeit ist das eine starke Kombination für Management, Finanzen, Immobilien, Recht, Bau und Produktion."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Goran, Lebenszahl 8, und Biljana, Lebenszahl 4, gründeten eine kleine Baufirma mit einem einzigen Transporter. Sie kümmerte sich um Verträge und Zeitpläne, er gewann die Kundschaft. Zwanzig Jahre später beschäftigen sie zweihundert Menschen. Noch immer verbringen sie ein Wochenende im Monat in einer Hütte ohne Internet, eine Regel, auf der sie bestand."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn der Erfolg einem gemeinsamen Leben dient und nicht umgekehrt, und wenn Macht über klare Rollen geteilt wird."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Tabelle auf dem einen Laptop, ein Bauplan auf dem anderen und eine Reservierung für ein ruhiges Abendessen, die beide tatsächlich einhalten."
+    ]
+   },
+   {
+    "title": "Über Ruhe",
+    "paras": [
+     "Die 4 und die 8 haben manchmal ein schlechtes Gewissen beim Ausruhen. Wer freie Zeit als Wartung betrachtet, wie die Inspektion einer Maschine, kann sie leichter annehmen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ohne Fleiß kein Preis, sagt man, und davon haben diese beiden genug. Doch auch der schönste Preis will genossen werden, sonst bleibt er nur eine Zahl auf dem Konto."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Schreibt jeden Monat eine Leistung und einen gemeinsamen Moment der Freude auf. Lest am Jahresende die Freudenliste laut vor."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Baut euer Reich gemeinsam und vergesst nicht, darin zu leben."
+    ]
+   }
+  ]
+ },
+ "4-and-9": {
+  "title": "Lebenszahl 4 und 9: praktische Idealisten",
+  "lead": "Die 4 baut Schritt für Schritt, die 9 träumt von einer besseren Welt. Ein unerwartetes Paar, das Ideale in echte, nützliche Vorhaben verwandeln kann.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 4 und eine 9 begegnen sich oft über eine gute Sache oder ein Gemeinschaftsprojekt. Die 9 bringt eine große Vision, die 4 fragt, wie sie funktionieren soll. Anfangs findet die 9 die 4 vielleicht zu vorsichtig und die 4 die 9 zu verträumt, doch die Neugier siegt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 9 bringt Mitgefühl, Idealismus und einen weiten Blick, die 4 Struktur, Verlässlichkeit und praktisches Können. Die 4 hilft der 9, Träume greifbar zu machen, die 9 hilft der 4, einen Sinn jenseits der Pflicht zu sehen. Jede Seite fühlt sich mit der anderen vollständiger."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 9 kann emotional und unberechenbar sein, was die 4 verunsichert. Die 4 wirkt auf die 9 vielleicht starr oder eng. Die 9 gibt anderen großzügig, während die 4 sich um Ersparnisse und Grenzen sorgt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Hier verlieben sich eine Träumerin und ein Baumeister langsam, dann aber für immer. Die 9 bringt große Gesten und tiefe Gefühle, die 4 Treue und stille Fürsorge. Die Liebe wächst, wenn die 4 sich den Träumen der 9 öffnet und die 9 das Sicherheitsbedürfnis der 4 respektiert."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gleicht ihr euch aus: die 9 inspiriert, die 4 erdet. Beruflich passen gemeinnützige Organisationen, öffentlicher Dienst, Bildung und Sozialunternehmen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Daniela, Lebenszahl 9, wollte in ihrem Dorf eine kostenlose Praxis eröffnen. Marko, Lebenszahl 4, Buchhalter, bot an, ihr Budget zu prüfen, und schrieb am Ende den ganzen Plan. Die Praxis öffnete pünktlich und im Budget. Sie sagt, sie hatte das Herz dafür; er sorgte dafür, dass es ein Dach hatte."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite die Art respektiert, wie die andere sich kümmert: die 9 durch Vision und Großzügigkeit, die 4 durch Planung und Schutz."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Wand voller Fotos von Menschen, denen geholfen wurde, und daneben ein ordentlicher Ordner mit Belegen und Genehmigungen."
+    ]
+   },
+   {
+    "title": "Über Großzügigkeit",
+    "paras": [
+     "Die 9 gibt frei, die 4 sorgt sich um Grenzen. Ein gemeinsames Spendenbudget, im Voraus vereinbart, lässt die 9 großzügig sein und die 4 sich sicher fühlen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wählt jede Jahreszeit gemeinsam ein Anliegen. Die 9 formt die Vision, die 4 schreibt den Plan. Feiert, wenn es geschafft ist."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Träume verändern die Welt, wenn jemand den Plan zeichnet und den ersten Stein legt."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",

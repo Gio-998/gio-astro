@@ -852,6 +852,228 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "4-and-7": {
+  "title": "Life path 4 and 7: method and meaning",
+  "lead": "The 4 trusts what can be built and measured, the 7 seeks what lies beneath the surface. A thoughtful, serious pairing with a strong intellectual bond.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 4 and a 7 often meet in quiet, focused settings: a laboratory, a library, a technical course, a long hike. Small talk is minimal. The connection grows through shared interests and the pleasure of a precise conversation."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you value truth, privacy and competence. The 4 gives the 7 practical grounding and reliability; the 7 gives the 4 depth, insight and new ways of seeing. Neither needs constant attention, so you give each other room naturally."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 4 wants clear answers and plans; the 7 may keep questioning and postponing. The 7 can seem distant or secretive to the 4, and the 4 can seem rigid or too literal to the 7. Emotional expression may be rare on both sides."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is calm, loyal and understated. Love shows through reliability and thoughtful gestures rather than grand words. It deepens when you deliberately share feelings, even awkwardly, and plan small rituals of closeness."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you enjoy long walks and deep talks. At work you suit research, engineering, IT, medicine, data analysis and any field that combines method with insight."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Milica, life path 7, studies old manuscripts. Darko, life path 4, a bookbinder, restored one of her rare volumes so carefully that she wrote him a thank you letter. They met for coffee to discuss leather and stayed four hours. Now they run a small restoration workshop together."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 4 accepts that some questions take time and the 7 accepts that some decisions must be made before every answer is known."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A desk lamp over a microscope, a neat stack of notes beside it, two cups of tea and a long silence that feels comfortable to both."
+    ]
+   },
+   {
+    "title": "A note on feelings",
+    "paras": [
+     "Both the 4 and the 7 can treat feelings as untidy data. Naming one emotion a day, simply and without analysis, keeps the heart part of the conversation."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 7 explains one idea they are exploring and the 4 explains one project they are building. Each asks two genuine questions."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Truth is found by those who dig, and kept by those who build."
+    ]
+   }
+  ]
+ },
+ "4-and-8": {
+  "title": "Life path 4 and 8: the empire builders",
+  "lead": "The 4 and the 8 share discipline, ambition and a practical mind. Together they can build lasting material success, if they remember that a home is not only a balance sheet.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 4 and an 8 often meet in business, finance or a demanding workplace. Each recognises the other as capable and serious. Attraction grows through respect for competence and shared goals."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both value security, achievement and hard work. The 4 brings method, patience and reliability; the 8 brings vision, authority and the ability to scale. Together you can build businesses, property and a strong financial foundation."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both can be controlling and work focused. The 8 may push for growth while the 4 wants caution. Arguments can be about money, power or who decides. Work may crowd out tenderness and rest."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is loyal and protective. You show care by providing and planning. The relationship deepens when you make room for softness, play and time without goals, and when you thank each other for invisible efforts."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are a reliable network for each other. At work this is a strong combination for management, finance, real estate, law, construction and manufacturing."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Goran, life path 8, and Biljana, life path 4, started a small construction firm with one van. She handled contracts and schedules; he won the clients. Twenty years later they employ two hundred people. They still take one weekend a month in a cabin without internet, a rule she insisted on."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when success serves a shared life, not the other way round, and when power is shared through clear roles."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A spreadsheet open on one laptop, a building plan on the other, and a reservation for a quiet dinner that both actually keep."
+    ]
+   },
+   {
+    "title": "A note on rest",
+    "paras": [
+     "The 4 and the 8 can feel guilty about rest. Treating time off as maintenance, like servicing a machine, makes it easier for both to accept."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Rome was not built in a day, the saying goes. The 4 and the 8 know this better than most, and they are usually still laying bricks long after everyone else has gone home. The lesson for this pair is that the city is also for living in, and the evenings are part of the plan."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each month, write down one achievement and one moment of joy you shared. Read the joy list aloud at the end of the year."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Build your empire together, and remember to live in it."
+    ]
+   }
+  ]
+ },
+ "4-and-9": {
+  "title": "Life path 4 and 9: the practical idealists",
+  "lead": "The 4 builds step by step, the 9 dreams of a better world. An unexpected pairing that can turn ideals into real, useful projects.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 4 and a 9 often meet through a cause or a community project. The 9 brings a big vision; the 4 asks how it can work. At first the 9 may find the 4 too cautious, and the 4 may find the 9 too dreamy, but curiosity wins."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 9 brings compassion, idealism and a wide view; the 4 brings structure, reliability and practical skill. The 4 helps the 9 make dreams concrete; the 9 helps the 4 see purpose beyond duty. Each feels more complete with the other."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 9 can be emotional and unpredictable, which unsettles the 4. The 4 can seem rigid or narrow to the 9. The 9 may give generously to others while the 4 worries about savings and limits."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Here a dreamer and a builder fall for each other slowly, then for good. The 9 brings big gestures and depth of feeling; the 4 brings loyalty and quiet care. Love grows when the 4 opens to the 9's dreams and the 9 respects the 4's need for security."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you balance each other: the 9 inspires, the 4 grounds. At work you suit nonprofit organisations, public service, education and social enterprises."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Daniela, life path 9, wanted to open a free clinic in her village. Marko, life path 4, an accountant, offered to check her budget and ended up writing the whole plan. The clinic opened on time and within budget. She says she had the heart for it; he made sure it had a roof."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each respects the other's way of caring: the 9 through vision and generosity, the 4 through planning and protection."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A wall covered with photos of people helped, and next to it a neat folder of receipts and permits."
+    ]
+   },
+   {
+    "title": "A note on generosity",
+    "paras": [
+     "The 9 gives freely; the 4 worries about limits. A shared giving budget, agreed in advance, lets the 9 be generous and the 4 feel safe."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each season, choose one cause together. The 9 shapes the vision; the 4 writes the plan. Celebrate when it is done."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Dreams change the world when someone draws the plan and lays the first brick."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",
