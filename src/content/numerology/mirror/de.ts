@@ -200,5 +200,206 @@ export const mirrorDe: MirrorSet = {
     ]
    }
   ]
+ },
+ "03-03": {
+  "title": "Spiegelzahl 03:03: ein Funke Ausdruck in der Nacht",
+  "lead": "03:03 bringt die helle, verspielte Energie der Drei in die stillste Stunde. Sie wird oft als Einladung gelesen, zu sprechen, etwas zu gestalten und wieder ein wenig Freude in eine schwere Zeit zu lassen.",
+  "sections": [
+   {
+    "title": "Was 03:03 bedeuten kann",
+    "paras": [
+     "Die Drei ist die Zahl der Kreativität, der Kommunikation und des Optimismus. Sie ist das Kind von Eins und Zwei, der Moment, in dem eine Idee und ein Gefühl sich treffen und etwas Neues ausgedrückt wird. Wenn du immer wieder 03:03 siehst, weist sie vielleicht auf Worte hin, die du zurückhältst, oder auf ein Talent, das du nicht mehr nutzt.",
+     "Drei Uhr morgens gilt auch als unruhige Stunde, in der Sorgen größer werden, als sie sind. So gesehen kann 03:03 ein Gegengewicht sein, eine Erinnerung daran, dass Leichtigkeit und Humor ebenfalls Werkzeuge sind, um durchzukommen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe begünstigt 03:03 offene Gespräche und Verspieltheit. Wenn es ernst und angespannt geworden ist, rät sie, etwas zu finden, worüber ihr gemeinsam lachen könnt. Sie ermutigt dich vielleicht auch, ein Kompliment auszusprechen, das du bisher nur gedacht hast, oder die Nachricht zu schreiben, die du im Kopf immer wieder umformulierst."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich unterstützt diese Zeit Schreiben, Präsentieren, Unterrichten, Marketing und jede Rolle, in der deine Stimme zählt. Sie erscheint womöglich vor einem Vorstellungsgespräch oder einem Pitch. Bereite dich gut vor und erlaube dir dann, natürlich zu sprechen statt nach Skript."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 6, die Zahl der Fürsorge, des Zuhauses und der Verantwortung. Diese Verbindung deutet an, dass Ausdruck am besten wirkt, wenn er den Menschen dient, die du liebst, und dass Kreativität eine Form der Fürsorge sein kann."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen bemerken 03:03 in kreativen Schüben, beim Lernen für Prüfungen oder in Nächten, in denen der Kopf nicht aufhört zu reden. Manche sehen sie nach einer langen Zeit, in der sie ihre Gefühle für sich behalten haben."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Ivana malte als Jugendliche jedes Wochenende und hörte dann fünfzehn Jahre lang auf. In einem harten Winter wachte sie immer wieder um 03:03 auf. Eines Nachts fand sie ein altes Skizzenbuch und zeichnete im Licht der Straßenlaterne den Blick aus ihrem Fenster. Im Frühling darauf meldete sie sich zu einem Abendkurs im Malen an, und die Nächte wurden ruhiger."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Schreib drei Zeilen, worüber auch immer: eine Erinnerung, einen Witz, einen Wunsch. Bewerte sie nicht. Wenn du nicht schlafen kannst, wähle ein Lied, das dich aufheitert, und hör es einmal mit voller Aufmerksamkeit."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Spiegelzeiten weisen auf Themen hin, nicht auf Gewissheiten. Wenn 03:03 nachts mit dunklen Gedanken kommt, nimm es als Anlass, am Morgen mit einem Menschen zu sprechen, dem du vertraust, und nicht als Botschaft, alles allein durchzustehen."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was würde ich sagen, schaffen oder teilen, wenn ich keine Angst hätte, wie es aufgenommen wird?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein kleines Lied in der Nacht kann dich bis zum Morgen tragen."
+    ]
+   }
+  ]
+ },
+ "04-04": {
+  "title": "Spiegelzahl 04:04: Fundamente und stetige Arbeit",
+  "lead": "04:04 trägt die Energie der Vier: Ordnung, Fleiß und Verlässlichkeit. Sie wird oft als Zeichen gelesen, dass geduldige, praktische Arbeit jetzt schützt, was dir später wichtig ist.",
+  "sections": [
+   {
+    "title": "Was 04:04 bedeuten kann",
+    "paras": [
+     "Die Vier ist die Zahl des Quadrats, des Tisches und des Hauses. Sie steht für Struktur, Disziplin und den langsamen Aufbau von etwas Dauerhaftem. 04:04 zu sehen kann daran erinnern, deine Fundamente zu prüfen: Gesundheit, Finanzen, tägliche Gewohnheiten, gegebene Versprechen.",
+     "Weil die Vier auch mit Grenzen verbunden ist, erscheint diese Zeit vielleicht, wenn du dich zu sehr verausgabst. Sie bittet dich, weniger Aufgaben zu wählen und sie gut zu erledigen. Eine gut abgeschlossene Sache wiegt mehr als fünf angefangene."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe begünstigt 04:04 Verbindlichkeit, die sich in Taten zeigt. Sie taucht womöglich auf, wenn eine Beziehung mehr regelmäßige Pflege braucht als große Gesten: pünktlich sein, kleine Versprechen halten, Aufgaben fair teilen. Sie rät auch, Vertrauen Schritt für Schritt aufzubauen statt zu eilen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich ist dies eine der praktischsten Spiegelzeiten. Sie unterstützt Planung, Budgets, Verträge und lange Projekte. Wenn du Papierkram oder eine schwierige Tabelle vor dir herschiebst, rät 04:04, sie in gleichmäßigen Portionen anzugehen."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 8, die Zahl des materiellen Erfolgs und der Autorität. Zusammen sagen Vier und Acht, dass Disziplin heute zu Stabilität und Lohn morgen führt, aber nur, wenn die Grundlage ehrlich und gut gebaut ist."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen sehen 04:04 oft, wenn sie früh zur Arbeit aufstehen, in Zeiten finanziellen Drucks oder wenn sie renovieren, umziehen oder ein neues Zuhause einrichten."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Dejan versuchte, Schulden abzubezahlen, und wachte immer wieder um 04:04 auf. Statt wach zu liegen und zu grübeln, nutzte er diese Stunde, um ein einfaches Heft mit jeder Ausgabe zu führen. Nach sechs Monaten waren die Schulden weg, und das Heft führte er aus Gewohnheit weiter."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Wähle eine kleine Aufgabe, die deine Grundlage stärkt, und erledige sie morgen: eine Rechnung, einen Arzttermin, eine Sicherung deiner Dateien. Schreib sie auf, bevor du wieder einschläfst, damit dein Kopf loslassen kann."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Struktur hilft, Starrheit nicht. Wenn 04:04 immer wieder erscheint, während du dich von der Routine gefangen fühlst, bittet sie dich vielleicht, deinen Tagesplan neu zu bauen, statt ihn noch fester zu halten."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Welcher Teil meines Lebens braucht ein festeres Fundament, bevor ich höher baue?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Starke Mauern entstehen aus einem ehrlichen Ziegel nach dem anderen."
+    ]
+   }
+  ]
+ },
+ "05-05": {
+  "title": "Spiegelzahl 05:05: Veränderung ist unterwegs",
+  "lead": "05:05 kommt in der Morgendämmerung, wenn das Licht sich zu wandeln beginnt. Sie trägt die unruhige Energie der Fünf und wird oft als Zeichen gelesen, dass Veränderung, eine Reise oder eine neue Erfahrung nahe ist.",
+  "sections": [
+   {
+    "title": "Was 05:05 bedeuten kann",
+    "paras": [
+     "Die Fünf ist die Zahl der Freiheit, der Bewegung und der Neugier. Sie steht in der Mitte der Zahlen von eins bis neun und markiert daher oft einen Wendepunkt. 05:05 zu sehen kann auf eine Veränderung hinweisen, die du schon spürst: einen Umzug, eine neue Stelle, eine Reise oder einen Wandel in der Art, wie du dich selbst siehst.",
+     "Die Fünf verlangt auch Beweglichkeit. Wenn diese Zeit erscheint, ist sie vielleicht ein Hinweis, den Griff um die Vorstellung zu lockern, wie die Dinge laufen sollen, und offen für einen anderen Weg zu bleiben."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe kann 05:05 frischen Wind bringen. Sie erscheint womöglich, bevor du jemanden Neues triffst, oder wenn eine lange Beziehung Abenteuer braucht. Sie lädt euch ein, gemeinsam etwas Unbekanntes zu probieren, einen neuen Ort oder eine neue Gewohnheit, und ehrlich über Freiheit und Nähe zu sprechen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt diese Zeit Verkauf, Reisen, Medien und jede Aufgabe, die schnelle Anpassung verlangt. Sie kann auch ein Jobangebot oder eine plötzliche Planänderung ankündigen. Leg etwas Geld für Unerwartetes beiseite und vermeide leichtsinnige Entscheidungen, die nur aus Langeweile entstehen."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 10, was sich auf 1 reduziert. Fünf und Eins zusammen beschreiben eine Veränderung, die zu einem Neubeginn führt. Was sich jetzt unruhig anfühlt, schafft vielleicht Platz für etwas, das du frei wählen wirst."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen bemerken 05:05 oft vor frühen Flügen, wenn sie an einem wichtigen Tag vor dem Wecker aufwachen, oder in unruhigen Zeiten, in denen die Routine zu eng wirkt."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Sara sah im letzten Monat in einem Job, aus dem sie herausgewachsen war, immer wieder 05:05 auf ihrem Handy. Eines Morgens ging sie in der Dämmerung spazieren, statt durch den Bildschirm zu scrollen. Auf diesem Spaziergang beschloss sie, sich auf eine Stelle in einer anderen Stadt zu bewerben. Drei Monate später fing sie dort an."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Öffne ein Fenster oder geh für eine Minute hinaus. Bemerke, was in deinem Leben abgestanden wirkt, und nenne eine kleine Veränderung, die du diese Woche ausprobieren könntest, selbst etwas so Einfaches wie einen neuen Weg zur Arbeit."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Veränderung kann aufregend sein, doch nicht jeder Drang zur Flucht ist klug. Wenn 05:05 oft erscheint, frag dich, ob du dich auf etwas zubewegst oder nur vor Unbehagen davonläufst."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Welche Veränderung spüre ich bereits, und was ist ein sicherer Schritt darauf zu?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Morgendämmerung fragt nicht um Erlaubnis, bevor sie den Himmel verändert."
+    ]
+   }
+  ]
  }
 };

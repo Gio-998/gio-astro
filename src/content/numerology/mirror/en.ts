@@ -200,5 +200,206 @@ export const mirrorEn: MirrorSet = {
     ]
    }
   ]
+ },
+ "03-03": {
+  "title": "03:03 mirror hour: a spark of expression in the night",
+  "lead": "03:03 brings the bright, playful energy of the number three into the quietest hour. It is often read as an invitation to speak, create and let a little joy back into a heavy time.",
+  "sections": [
+   {
+    "title": "What 03:03 can mean",
+    "paras": [
+     "Three is the number of creativity, communication and optimism. It is the child of one and two, the moment when an idea and a feeling meet and something new is expressed. When you keep seeing 03:03, it may point to words you have been holding back or a talent you have stopped using.",
+     "Three in the morning is also known as a restless hour, when worries grow larger than they are. Seen in that light, 03:03 can act as a counterweight, a reminder that lightness and humour are also tools for getting through."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 03:03 favours open conversation and playfulness. If things have become serious and tense, it suggests finding something to laugh about together. It can also encourage you to say a compliment you have only thought, or to write the message you keep rewriting in your head."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work this time supports writing, presenting, teaching, marketing and any role where your voice matters. It may show up before an interview or a pitch. Prepare well, then allow yourself to speak naturally rather than from a script."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 6, the number of care, home and responsibility. That pairing suggests that self expression works best when it serves the people you love, and that creativity can be a form of care."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People notice 03:03 during creative bursts, while studying for exams, or in nights when the mind will not stop talking. Some see it after a long stretch of keeping their feelings to themselves."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Ivana had painted every weekend as a teenager and then stopped for fifteen years. During a hard winter she kept waking at 03:03. One night she found an old sketchbook and drew the view from her window by streetlight. Next spring she joined an evening painting class, and the nights grew calmer."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Write three lines, about anything: a memory, a joke, a wish. Do not judge them. If you cannot sleep, choose a song that cheers you and listen to it once with full attention."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Mirror hours point to themes, not certainties. If 03:03 comes with dark thoughts at night, treat it as a reason to talk to someone you trust in the morning, not as a message to face things alone."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What would I say, make or share if I were not afraid of how it would be received?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A small song in the night can carry you to morning."
+    ]
+   }
+  ]
+ },
+ "04-04": {
+  "title": "04:04 mirror hour: foundations and steady work",
+  "lead": "04:04 carries the energy of the number four: order, effort and reliability. It is often read as a sign that patient, practical work now will protect what matters to you later.",
+  "sections": [
+   {
+    "title": "What 04:04 can mean",
+    "paras": [
+     "Four is the number of the square, the table and the house. It stands for structure, discipline and the slow building of something that lasts. Seeing 04:04 can be a reminder to check your foundations: your health, your finances, your daily habits, the promises you have made.",
+     "Because four is also linked with limits, this time may appear when you are stretching yourself too thin. It asks you to choose fewer tasks and do them well."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 04:04 favours commitment shown through actions. It may appear when a relationship needs routine care more than grand gestures: being on time, keeping small promises, sharing chores fairly. It also suggests building trust step by step rather than rushing."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work this is one of the most practical mirror hours. It supports planning, budgets, contracts and long projects. If you have been avoiding paperwork or a difficult spreadsheet, 04:04 suggests tackling it in steady portions."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 8, the number of material success and authority. Together, four and eight say that discipline today leads to stability and reward tomorrow, but only if the base is honest and well made."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often see 04:04 when they wake early to work, during periods of financial pressure, or when they are renovating, moving or setting up a new home."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Dejan was trying to pay off a debt and kept waking at 04:04. Instead of lying awake worrying, he started using that hour to update a simple notebook of every expense. Within six months the debt was gone, and he kept the notebook out of habit."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Choose one small task that strengthens your base and do it tomorrow: a bill, a doctor's appointment, a backup of your files. Write it down before going back to sleep so your mind can let go."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Structure helps, but rigidity does not. If 04:04 keeps appearing while you feel trapped by routine, it may be asking you to rebuild your schedule rather than to hold it tighter."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "Which part of my life needs a firmer foundation before I build anything higher?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Strong walls are built one honest brick at a time."
+    ]
+   }
+  ]
+ },
+ "05-05": {
+  "title": "05:05 mirror hour: change is on the way",
+  "lead": "05:05 arrives at dawn, when the light begins to shift. It carries the restless energy of the number five and is often read as a sign that change, travel or a new experience is near.",
+  "sections": [
+   {
+    "title": "What 05:05 can mean",
+    "paras": [
+     "Five is the number of freedom, movement and curiosity. It sits in the middle of the numbers from one to nine and so it often marks a turning point. Seeing 05:05 can point to a change you are already sensing: a move, a new job, a trip or a shift in how you see yourself.",
+     "Five also asks for flexibility. When this time appears, it may be a hint to loosen your grip on how things should go and to stay open to a different route."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 05:05 can bring fresh air. It may appear before meeting someone new or when a long relationship needs adventure. It invites you to try something unfamiliar together, a new place or a new habit, and to talk honestly about freedom and closeness."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work this time favours sales, travel, media and any task that requires quick adaptation. It can also signal a job offer or a sudden change of plans. Keep a little money aside for the unexpected and avoid reckless decisions made only out of boredom."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 10, which reduces to 1. Five and one together describe change that leads to a new beginning. What feels unsettled now may be clearing space for something you will choose freely."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often notice 05:05 before early flights, when they wake before the alarm on an important day, or during seasons of restlessness when routine feels too small."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Sara kept seeing 05:05 on her phone during her last month in a job she had outgrown. One morning she went for a walk at dawn instead of scrolling. On that walk she decided to apply for a position in another city. She started there three months later."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Open a window or step outside for a minute. Notice what feels stale in your life and name one small change you could try this week, even something as simple as a new route to work."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Change can be exciting, but not every urge to escape is wise. If 05:05 appears often, ask whether you are moving toward something or only running from discomfort."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What change am I already sensing, and what is one safe step toward it?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Dawn does not ask permission to change the sky."
+    ]
+   }
+  ]
  }
 };
