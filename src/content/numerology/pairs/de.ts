@@ -3168,6 +3168,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "8-and-8": {
+  "title": "Lebenszahl 8 und 8: zwei Kapitäne auf einem Schiff",
+  "lead": "Zwei Achten teilen Ehrgeiz, Stärke und ein Talent für Erfolg. Zusammen können sie ein Imperium aufbauen, solange sie klären, wer welchen Teil des Schiffs steuert.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Achten begegnen sich oft an der Spitze von etwas: in einer Vorstandssitzung, bei einer Branchenpreisverleihung, in einer Verhandlung, bei der beide Seiten von der stärksten Person im Raum geführt werden. Respekt entsteht sofort, mit einem Hauch Rivalität. Jede will wissen, wie die andere dorthin gekommen ist."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr versteht den Antrieb des anderen und verlangt nie, dass er weniger will. Über Geld, Status und langfristige Ziele sprecht ihr offen. Ihr seid beide diszipliniert, entschlossen und großzügig, sobald ihr jemandem vertraut. Ein Paar aus zwei Achten kann in zehn Jahren mehr erreichen als viele in einem ganzen Leben."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei starke Willen können zusammenstoßen. Machtkämpfe um Entscheidungen, Geld und Kontrolle sind häufig. Beide zeigen ungern Schwäche, also ist Zärtlichkeit selten. Die Arbeit kann zur ganzen Beziehung werden und der Erfolg zu einem stillen Wettbewerb."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist leidenschaftlich, stolz und treu. Ihr bewundert gegenseitig eure Kraft und feiert gern gemeinsam Siege. Die Liebe vertieft sich, wenn einer von euch den Mut hat, zuerst Verletzlichkeit zu zeigen, und der andere sie mit Sorgfalt behandelt statt als Vorteil."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde öffnet ihr einander Türen. Beruflich können zwei Achten ein großes Unternehmen, eine Kanzlei, eine Investmentgruppe oder jedes ehrgeizige Vorhaben leiten, wenn die Rollen klar verteilt sind."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Vladimir und Simona, beide Lebenszahl 8, führten jahrelang konkurrierende Immobilienbüros in derselben Stadt. Nach einem langen Bieterkampf um ein Gebäude gingen sie essen, um die Sache zu klären, und fusionierten am Ende ihre Büros. Sie teilten die Firma in zwei Bereiche mit einer einzigen Regel: nach neun Uhr abends kein Wort über Geschäfte."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite einen klaren Bereich hat, ihr die Erfolge des anderen als gemeinsame feiert und das Zuhause ein Ort ist, an dem niemand das Kommando hat."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Ledertaschen an der Tür, zwei Handys beim Abendessen mit dem Display nach unten und ein Kalender, in dem jeden Monat ein Wochenende fett für Erholung markiert ist."
+    ]
+   },
+   {
+    "title": "Über Macht",
+    "paras": [
+     "Achten fühlen sich am sichersten, wenn sie die Kontrolle haben. Wer im Voraus vereinbart, wer was entscheidet und wie Streit geschlichtet wird, verhindert viele Schlachten."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Viele Köche verderben den Brei, sagt man. Zwei Achten können das Sprichwort widerlegen, aber nur, wenn sie das Rezept teilen und abwechselnd am Herd stehen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt einmal im Monat jeder eine Sache, die ihr fürchtet zu verlieren. Hört zu, ohne eine Lösung anzubieten, und nennt dann einen Weg, einander zu stützen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Geteilte Stärke wird zu Sicherheit, konkurrierende Stärke zu Krieg."
+    ]
+   }
+  ]
+ },
+ "8-and-9": {
+  "title": "Lebenszahl 8 und 9: Macht und Mitgefühl",
+  "lead": "Die 8 baut Wohlstand und Einfluss auf, die 9 will beides für das Gemeinwohl einsetzen. Zusammen können sie ein großzügiges, beeindruckendes Paar sein, das echtes Gutes in der Welt bewirkt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 8 und eine 9 begegnen sich oft bei einer Benefizgala, einer Spendenkampagne, im Vorstand einer Stiftung oder auf einer internationalen Konferenz. Die 9 bemerkt, wie die 8 Dinge in Gang bringt. Die 8 bemerkt die Wärme und moralische Klarheit der 9, die sie in ihren Kreisen selten findet."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 8 bringt Strategie, Mittel und Führung. Die 9 bringt Vision, Empathie und ein weites Verantwortungsgefühl. Die 9 zeigt der 8, wofür ihr Erfolg da sein kann, und die 8 gibt den Idealen der 9 die Kraft, Wirklichkeit zu werden."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 9 hält die 8 womöglich für materialistisch, die 8 die 9 für naiv oder unpraktisch im Umgang mit Geld. Die 9 gibt frei, die 8 will eine Rendite. Beide sind stolz, und beide können stur sein, wenn es um Werte geht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm, reif und großzügig. Ihr schätzt die Stärken des anderen. Die Liebe vertieft sich, wenn die 8 ihre weichere Seite zeigt und die 9 das Bedürfnis der 8 nach Struktur und Sicherheit achtet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde verbindet ihr praktische Hilfe mit großen Herzen. Beruflich passt ihr zu Philanthropie, Sozialunternehmen, Gesundheitsmanagement, internationaler Entwicklung und Kulturinstitutionen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Martin, Lebenszahl 8, besaß eine Apothekenkette. Jelena, Lebenszahl 9, Ärztin, bat ihn um Medikamente für ein Flüchtlingslager. Er fuhr selbst hin, bevor er entschied. Er spendete doppelt so viel wie erbeten und baute später mit ihr eine Klinik. Sie zieht ihn bis heute damit auf, er habe es wegen der Steuer getan, und er lässt sie bis heute in dem Glauben."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn der Erfolg der 8 und die Ideale der 9 einem gemeinsamen Zweck dienen und ihr im Voraus festlegt, wie viel ihr gebt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Bilanzen neben Briefen von Menschen, denen geholfen wurde, ein elegantes Abendessen nach einer Benefizveranstaltung und zwei müde Menschen, die bis spät über das nächste Anliegen reden."
+    ]
+   },
+   {
+    "title": "Über Geld",
+    "paras": [
+     "Geld kann dieses Paar trennen oder verbinden. Ein klarer gemeinsamer Plan fürs Sparen, Ausgeben und Geben lässt beide sich respektiert fühlen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wem viel gegeben ist, bei dem wird man viel suchen, heißt es in der alten Schrift. Die 8 empfängt viel, und die 9 sorgt dafür, dass es der Welt mit Zinsen zurückgegeben wird."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wählt einmal im Jahr gemeinsam ein Anliegen. Die 9 erklärt, warum es wichtig ist, die 8, wie man es gut unterstützt, und ihr besucht beide den Ort, an dem ihr helft."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Macht findet ihren Sinn, wenn sie lernt zu dienen."
+    ]
+   }
+  ]
+ },
+ "8-and-11": {
+  "title": "Lebenszahl 8 und 11: der General und die Visionärin",
+  "lead": "Die 8 weiß, wie man Dinge in der materiellen Welt umsetzt, die 11 sieht, was sein könnte. Eine kraftvolle Verbindung von Strategie und Inspiration, die Geduld braucht, um zu gedeihen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 8 und eine 11 begegnen sich oft, wenn die 11 eine Idee hat, die Rückhalt braucht: bei einem Pitch vor Investoren, einem Kulturprojekt auf Sponsorensuche, einem Verein, der ein starkes Vorstandsmitglied sucht. Die 8 ist beeindruckt von der Überzeugung der 11. Die 11 ist beeindruckt vom Selbstvertrauen der 8 und davon, dass sie liefert."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 11 bringt Intuition, Idealismus und ein Gefühl für Bestimmung. Die 8 bringt Disziplin, Mittel und Organisationstalent. Die 8 macht aus den Träumen der 11 konkrete Pläne, und die 11 gibt der Macht der 8 einen Sinn jenseits des Profits."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 kann schroff und kontrollierend sein, was die empfindsame 11 verletzt. Die 11 kann gefühlvoll und unberechenbar sein, was die 8 frustriert. Die 8 tut Intuition womöglich ab, die 11 praktische Grenzen. Unter Druck werden beide angespannt und abwehrend."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist intensiv und beschützend. Die 8 bietet Sicherheit, die 11 Inspiration und emotionale Tiefe. Die Liebe hält, wenn die 8 sanft spricht und Gefühlen zuhört und die 11 das Bedürfnis der 8 nach Plänen und Ergebnissen achtet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gibt die 8 der 11 Selbstvertrauen, und die 11 gibt der 8 einen Blick von außen. Beruflich passt ihr zu Unternehmertum, Medien, Kulturleitung, Coaching und Firmen mit einer Mission."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ivana, Lebenszahl 11, träumte von einem Jugendtheater in ihrer Heimatstadt. Robert, Lebenszahl 8, Geschäftsmann, hörte sie auf einer Bürgerversammlung sprechen und bot an, die Hälfte zu finanzieren, wenn sie den Rest binnen eines Jahres auftreibt. Sie schaffte es in zehn Monaten. Heute leitet er den Vorstand des Theaters, und sie inszeniert jede Premiere."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Vision der 11 die Richtung vorgibt und die Strategie der 8 den Weg plant, und wenn beide die Art achten, wie die andere Seite weiß."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Budgettabelle neben einer Pinnwand voller Bilder, ein spätes Telefonat mit einem Sponsor und ein ruhiger Abend, an dem die 8 der neuesten Idee der 11 zuhört, ohne die Zahlen zu prüfen."
+    ]
+   },
+   {
+    "title": "Über den Ton",
+    "paras": [
+     "Die 11 hört jede Kante in der Stimme. Die 8 muss ihre Botschaft nicht ändern, nur den Ton, um gehört zu werden."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wo ein Wille ist, ist auch ein Weg, sagt man. Die 11 bringt den Willen zu träumen, und die 8 findet den Weg, es wahr zu machen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal im Monat stellt die 11 einen Traum vor, und die 8 skizziert die ersten drei Schritte. Dann wählt die 11, welcher Schritt zuerst kommt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Vision ohne Strategie verblasst, und Strategie ohne Vision irrt umher."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",

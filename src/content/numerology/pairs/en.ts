@@ -3144,6 +3144,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "8-and-8": {
+  "title": "Life path 8 and 8: two captains on one ship",
+  "lead": "Two eights share ambition, strength and a talent for success. Together they can build an empire, as long as they decide who steers which part of the ship.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two eights often meet at the top of something: a board meeting, an industry award, a negotiation where both sides are led by the strongest person in the room. Respect comes instantly, with a hint of rivalry. Each wants to know how the other got there."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You understand each other's drive and never ask the other to want less. Money, status and long term goals are spoken about openly. Both of you are disciplined, decisive and generous once you trust someone. A pair of eights can achieve more in ten years than many do in a lifetime."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two strong wills can collide. Power struggles over decisions, money and control are common. Both may avoid showing weakness, so tenderness is rare. Work can become the whole relationship, and success can turn into a silent competition."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is passionate, proud and loyal. You admire each other's strength and enjoy celebrating wins together. Love deepens when one of you is brave enough to show vulnerability first and the other treats it with care instead of advantage."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you open doors for each other. At work two eights can lead a large company, a law firm, an investment group or any ambitious enterprise, if roles are clearly divided."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Vladimir and Simona, both life path 8, ran competing real estate agencies in the same city for years. After a long bidding war over one building, they had dinner to settle it and ended up merging the agencies. They split the company into two divisions with one rule: no business talk after nine in the evening."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each of you has a clear domain, when you celebrate each other's wins as shared, and when home is a place where nobody is in charge."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two leather briefcases by the door, two phones turned face down at dinner, and a calendar with one weekend each month blocked in bold for rest."
+    ]
+   },
+   {
+    "title": "A note on power",
+    "paras": [
+     "Eights feel safest in control. Agreeing in advance who decides what, and how disagreements are settled, prevents many battles."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Two captains sink the ship, sailors warn. Two eights can prove the saying wrong, but only if they share the map and take turns at the wheel."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, each of you names one thing you are afraid of losing. Listen without offering a solution, then name one way to support each other."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Strength shared becomes safety; strength competing becomes war."
+    ]
+   }
+  ]
+ },
+ "8-and-9": {
+  "title": "Life path 8 and 9: power and compassion",
+  "lead": "The 8 builds wealth and influence; the 9 wants to use them for the greater good. Together they can be a generous, impressive couple that does real good in the world.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 8 and a 9 often meet at a charity gala, a fundraising campaign, a foundation board or an international conference. The 9 notices the 8's ability to make things happen. The 8 notices the 9's warmth and moral clarity, which it may find rare in its circles."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 8 brings strategy, resources and leadership. The 9 brings vision, empathy and a wide sense of responsibility. The 9 shows the 8 what its success can be for, and the 8 gives the 9's ideals the power to become real."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 9 may see the 8 as materialistic, the 8 may see the 9 as naive or impractical with money. The 9 gives freely; the 8 wants a return on investment. Both are proud, and both can be stubborn when values are at stake."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm, mature and generous. You admire each other's strengths. Love deepens when the 8 shows its softer side and the 9 respects the 8's need for structure and security."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you combine practical help with big hearts. At work you suit philanthropy, social enterprise, healthcare management, international development and cultural institutions."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Martin, life path 8, owned a chain of pharmacies. Jelena, life path 9, a doctor, asked him to donate medicine for a refugee camp. He came to see the camp himself before deciding. He donated twice what she asked and later built a clinic with her. She still teases him that he did it for the tax relief, and he still lets her think so."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 8's success and the 9's ideals share a common purpose and when you agree in advance on how much to give."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Financial statements next to letters from people helped, an elegant dinner after a charity event, and two tired people talking until late about the next cause."
+    ]
+   },
+   {
+    "title": "A note on money",
+    "paras": [
+     "Money can divide or unite this pair. A clear shared plan for saving, spending and giving lets both of you feel respected."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "To whom much is given, much will be required, the old text says. The 8 receives much and the 9 makes sure it is returned with interest to the world."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a year, choose one cause together. The 9 explains why it matters, the 8 explains how to support it well, and you both visit the place you help."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Power finds its purpose when it learns to serve."
+    ]
+   }
+  ]
+ },
+ "8-and-11": {
+  "title": "Life path 8 and 11: the general and the visionary",
+  "lead": "The 8 knows how to make things happen in the material world; the 11 sees what could be. A powerful pairing of strategy and inspiration that needs patience to thrive.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 8 and an 11 often meet when the 11 has an idea that needs backing: a pitch to investors, a cultural project looking for a sponsor, a nonprofit seeking a strong board member. The 8 is struck by the 11's conviction. The 11 is impressed by the 8's confidence and ability to deliver."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 11 brings intuition, idealism and a sense of mission. The 8 brings discipline, resources and the ability to organise. The 8 turns the 11's dreams into concrete plans, and the 11 gives the 8's power a meaning beyond profit."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 can be blunt and controlling, which wounds the sensitive 11. The 11 can be emotional and unpredictable, which frustrates the 8. The 8 may dismiss intuition, the 11 may dismiss practical limits. Under stress, both become tense and defensive."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is intense and protective. The 8 offers security, the 11 offers inspiration and emotional depth. Love lasts when the 8 speaks gently and listens to feelings, and when the 11 respects the 8's need for plans and results."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 8 gives the 11 confidence, and the 11 gives the 8 perspective. At work you suit entrepreneurship, media, cultural leadership, coaching and mission driven companies."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ivana, life path 11, dreamed of a theatre for young people in her hometown. Robert, life path 8, a businessman, heard her speak at a local meeting and offered to fund half if she could raise the rest in a year. She did it in ten months. He now chairs the theatre's board, and she directs every opening night."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 11's vision sets the direction and the 8's strategy plans the route, and when both respect each other's way of knowing."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A budget spreadsheet beside a mood board full of images, a late phone call about a sponsor, and a quiet evening where the 8 listens to the 11's newest idea without checking the numbers."
+    ]
+   },
+   {
+    "title": "A note on tone",
+    "paras": [
+     "The 11 hears every edge in the voice. The 8 does not need to change its message, only its tone, to be heard."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Where there is a will, there is a way, people say. The 11 brings the will to dream and the 8 finds the way to make it real."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, the 11 presents one dream and the 8 drafts the first three steps. Then the 11 chooses which step to take first."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Vision without strategy fades, and strategy without vision wanders."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",
