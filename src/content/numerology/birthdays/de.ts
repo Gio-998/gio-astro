@@ -425,5 +425,221 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "7": {
+  "title": "Geboren am 7.: die tiefen Denker",
+  "lead": "Ein Geburtstag am 7. bringt die nach innen gerichteten Gaben der Zahl 7: Analyse, Intuition, Alleinsein und Hunger nach der Wahrheit unter der Oberfläche.",
+  "sections": [
+   {
+    "title": "Die Gabe des 7.",
+    "paras": [
+     "Der 7. schenkt einen Geist, der warum fragt und dann noch einmal warum. Wer an diesem Tag geboren ist, gibt sich selten mit der ersten Antwort zufrieden. Du liest die Fußnoten, prüfst die Behauptung und hörst auf das Ungesagte. Die Gabe ist Tiefe, die Geduld, bei einer Frage zu bleiben, bis sie sich öffnet."
+    ]
+   },
+   {
+    "title": "Zeichen im Alltag",
+    "paras": [
+     "Du brauchst Zeit allein, um aufzutanken, und du schützt sie. Vielleicht liegt ein Bücherstapel neben deinem Bett, und du hast wenige enge Freunde statt vieler Bekannter. Smalltalk ermüdet dich, doch ein Gespräch über Träume, Wissenschaft oder Sinn hält dich bis drei Uhr wach. Manche halten dich für geheimnisvoll, dabei denkst du einfach nach."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Forschung, Analyse, Intuition, Konzentration und die ehrliche Weigerung, etwas vorzuspielen. Der 7. ist eine gute Wissenschaftlerin, ein Ermittler, eine Philosophin, ein Programmierer oder ein spirituell Suchender. Du erkennst Muster, die andere übersehen, und liegst bei Menschen oft richtig, lange bevor es Beweise gibt."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Das Risiko ist Distanz. Der 7. zieht sich manchmal in den Kopf zurück und lässt das Herz draußen, oder wird so skeptisch, dass nichts mehr vertrauenswürdig scheint. Wachstum kommt, wenn du innere Entdeckungen teilst und ein paar Menschen nah genug lässt, um deinen weichen Kern zu sehen."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe braucht Vertrauen und Raum. Du wünschst dir einen Menschen, der Stille respektiert und tiefe Gespräche liebt. Einmal gebunden, bist du treu, brauchst aber vielleicht Ermutigung, Gefühle auszusprechen, statt sie zu analysieren."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Wissenschaft, Forschung, Medizin, Daten, Schreiben, Psychologie, Recht, Archäologie und alles, was Fachwissen belohnt. Großraumbüros und Dauersitzungen erschöpfen dich, ein stiller Raum und ein schweres Problem machen dich lebendig."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Teodora, geboren am 7. Oktober, erforschte zehn Jahre lang Bodenmikroben, bevor sich außerhalb ihres Labors jemand dafür interessierte. Als die Dürre kam, riefen Landwirte sie täglich an. Sie mag ihr Mikroskop immer noch lieber als ein Mikrofon, hat aber gelernt, ihre Arbeit in einfachen Worten zu erklären."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 3 oder 5 gibt ein Geburtstag am 7. einer geselligen Natur Tiefe. Auf der 1 oder 8 bringt er Strategie und Einsicht in den Ehrgeiz. Auf der 7 braucht die doppelte Innerlichkeit Freunde und frische Luft. Auf der 2 oder 6 schenkt er der Fürsorge eine weise Mitte."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Lampe, die spät im Arbeitszimmer brennt, ein Notizbuch voller Fragen, ein langer Spaziergang allein am Wasser: Das sind die natürlichen Orte des 7. Schaff dir solche Orte bewusst, und deine besten Ideen werden dich dort finden."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Teil jede Woche eine Entdeckung, ein Buch, eine Idee, ein Gefühl, mit einem Menschen. Es laut zu erklären, vertieft dein eigenes Verständnis und lässt jemanden in deine innere Welt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Antworten, die du in der Stille suchst, sind es wert, im Licht geteilt zu werden."
+    ]
+   }
+  ]
+ },
+ "8": {
+  "title": "Geboren am 8.: die fähigen Führungskräfte",
+  "lead": "Wer am 8. geboren ist, trägt die starke, praktische Energie der Zahl 8: Ehrgeiz, Autorität, Geldsinn und den Willen, Dinge durchzuziehen.",
+  "sections": [
+   {
+    "title": "Die Gabe des 8.",
+    "paras": [
+     "Der 8. schenkt einen Sinn für Größenordnungen. Wer an diesem Tag geboren ist, denkt wie selbstverständlich in Systemen, Budgets und langfristigen Ergebnissen. Du kannst eine chaotische Lage ordnen, bis sie funktioniert und sich lohnt. Die Gabe ist Gestaltungsmacht: Entscheidungen treffen und ihr Gewicht tragen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht hattest du ein Sparbuch, bevor deine Freunde Taschengeld bekamen. Du bemerkst, wer in einem Raum die Macht hat. Qualität zieht dich an, und du arbeitest hart dafür. Wenn eine Krise kommt, schauen die Leute zu dir, und meist trittst du vor."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Führung, Widerstandskraft, finanzielle Intelligenz, Organisation und der Mut zu harten Entscheidungen. Der 8. ist eine natürliche Managerin, ein Unternehmer, eine Verhandlerin oder ein Investor. Große Visionen werden konkret, Versprechen werden auch im Großen gehalten."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Kontrolle und Arbeitssucht sind die Fallen. Manchmal wird der eigene Wert nur am Erfolg gemessen oder Macht ohne genug Sorgfalt eingesetzt. Wachstum kommt durch Großzügigkeit, Ruhe und die Erinnerung, dass Menschen der Zweck des Systems sind, nicht seine Teile."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du wünschst dir einen starken, fähigen, ehrlichen Menschen. Respekt zählt so viel wie Romantik. Liebe zeigst du durch Versorgen und Beschützen, und du wächst, wenn du auch Zärtlichkeit und Zeit schenkst."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Wirtschaft, Finanzen, Recht, Management, Immobilien, Politik, Sport und große Projekte. Du blühst dort auf, wo es Verantwortung, ein klares Ziel und einen fairen Lohn gibt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Viktor, geboren am 8. Januar, übernahm mit neunundzwanzig die angeschlagene Druckerei seines Vaters. Er senkte Kosten, schulte das Personal um und stieg auf Verpackungen um. Zehn Jahre später beschäftigt die Firma neunzig Menschen, und er sagt, die beste Entscheidung sei gewesen, alle am Gewinn zu beteiligen."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Ein Geburtstag am 8. auf der Lebenszahl 2 oder 6 gibt einer sanften Natur Selbstvertrauen. Auf der 3 hilft er kreativem Talent, angemessen zu verdienen. Auf der 8 braucht der doppelte Antrieb Balance und Ruhe. Auf der 7 oder 9 gibt er Idealen praktische Kraft."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine gut geführte Küche in einem vollen Restaurant ist ein schönes Bild für den 8.: viele Hände, klare Rollen, hohe Ansprüche und ein ruhiger Mensch, der alles in Bewegung hält. Wenn es läuft, bemerkt niemand die Leitung, nur das ausgezeichnete Essen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Verschenk am Ende jedes Monats etwas: Geld für einen guten Zweck, Zeit für einen Menschen, Wissen für jemanden, der lernt. Das hält die Energie des 8. im Fluss und erinnert den Erfolg daran, wozu er da ist."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Echte Macht misst sich daran, wie viele Menschen durch dich wachsen. Ohne Fleiß kein Preis, doch der schönste Preis ist der, den du teilst."
+    ]
+   }
+  ]
+ },
+ "9": {
+  "title": "Geboren am 9.: die weisen Menschenfreunde",
+  "lead": "Ein Geburtstag am 9. bringt die weiten Gaben der Zahl 9: Mitgefühl, Idealismus, Kreativität und ein Gefühl für die ganze Menschheit.",
+  "sections": [
+   {
+    "title": "Die Gabe des 9.",
+    "paras": [
+     "Die 9 ist die letzte einstellige Zahl, und wer am 9. geboren ist, trägt oft ein Gespür für die ganze Geschichte in sich. Die Gabe ist ein weites Herz. Du sorgst dich um Fremde, Tiere, ferne Länder und künftige Generationen und spürst Ungerechtigkeit fast körperlich. Viele haben auch eine künstlerische Ader, die Gefühl in Schönheit verwandelt."
+    ]
+   },
+   {
+    "title": "Zeichen im Alltag",
+    "paras": [
+     "Du weinst bei Filmen und gibst Menschen auf der Straße Geld. Freunde aus ganz verschiedenen Welten fühlen sich bei dir zu Hause. Vielleicht hast du das starke Gefühl, in einem Leben viele Leben zu leben. Das Loslassen der Vergangenheit ist ein wiederkehrendes Thema, ebenso Vergebung."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Mitgefühl, Großzügigkeit, Toleranz, künstlerische Vision und der Blick fürs Ganze. Der 9. ist eine natürliche Lehrerin, ein Heiler, eine Künstlerin, ein Aktivist oder eine Diplomatin. Du inspirierst andere, über sich hinauszudenken."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Märtyrertum und Enttäuschung sind die Risiken. Manchmal gibst du, bis nichts mehr übrig ist, oder fühlst dich verraten, wenn Menschen deinen Idealen nicht gerecht werden. Wachstum kommt, wenn du für dich sorgst als Teil der Welt, für die du sorgst, und Menschen liebst, wie sie sind, nicht wie sie sein sollten."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du liebst tief und großzügig und wählst manchmal Menschen, die gerettet werden wollen. Gesunde Liebe ist für dich eine Partnerschaft gemeinsamer Werte, in der beide geben und beide empfangen."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Unterricht, Medizin, Sozialarbeit, humanitäre Organisationen, Kunst, Beratung, internationale Arbeit und jede Rolle mit einem Sinn jenseits des Profits."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Sara, geboren am 9. Juni, arbeitete in drei Ländern als Pflegerin, bevor sie einen kleinen Verein für Kinder mit Hörverlust gründete. Ihr Zuhause ist voller Postkarten ehemaliger Patienten. Sie sagt, die schwerste Lektion sei gewesen, Urlaub machen zu lernen."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 1 oder 8 gibt ein Geburtstag am 9. dem Ehrgeiz einen humanitären Zweck. Auf der 4 wird Struktur zum Dienst. Auf der 9 braucht doppelter Idealismus Bodenhaftung. Auf der 5 bekommt das Reisen eine tiefere Bedeutung."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein altes Haus mit offenen Türen für die Nachbarschaft, ein Regal mit Büchern in fünf Sprachen, ein Garten, der mehr Menschen nährt als die eigene Familie: So eine Welt versuchen viele vom 9. zu bauen, Geste für Geste. Oft werden sie der Mensch, an den sich eine ganze Straße in schweren Zeiten wendet."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Tu jede Woche eine großzügige Tat anonym und eine freundliche Tat für dich selbst. Beides zu bemerken, hält das Herz des 9. offen, ohne es zu erschöpfen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Du kannst die ganze Welt lieben und trotzdem ein kleines warmes Zimmer für dich behalten."
+    ]
+   }
+  ]
  }
 };

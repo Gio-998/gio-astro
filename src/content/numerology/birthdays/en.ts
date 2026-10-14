@@ -389,5 +389,221 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "7": {
+  "title": "Born on the 7th: the deep thinker",
+  "lead": "A birthday on the 7th brings the inward gifts of the number 7: analysis, intuition, solitude and a hunger for truth beneath the surface.",
+  "sections": [
+   {
+    "title": "The gift of the 7th",
+    "paras": [
+     "The 7th gives a mind that asks why, and then asks why again. People born on this day rarely accept the first answer. They read the footnotes, test the claim and listen for what is left unsaid. Their gift is depth, the patience to stay with a question until it opens."
+    ]
+   },
+   {
+    "title": "Signs in everyday life",
+    "paras": [
+     "You need time alone to recharge, and you guard it. You may have a pile of books by the bed and a few close friends rather than many acquaintances. Small talk tires you, but a conversation about dreams, science or meaning can keep you up until three. People sometimes call you mysterious when you are simply thinking."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Research, analysis, intuition, focus and an honest refusal to pretend. The 7th makes a fine scientist, detective, philosopher, programmer or spiritual seeker. They notice patterns others miss and are often right about people long before the evidence arrives."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Distance is the risk. The 7th can retreat into the head and leave the heart outside, or become so sceptical that nothing feels trustworthy. Growth comes through sharing inner discoveries and letting a few people close enough to see the soft centre."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love needs trust and space. The 7th wants a partner who respects silence and enjoys deep talk. Once committed, they are loyal, but they may need encouragement to say what they feel rather than analyse it."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Science, research, medicine, data, writing, psychology, law, archaeology and anything that rewards expertise. Open plan offices and constant meetings drain them; a quiet room and a hard problem bring them alive."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Teodora, born on 7 October, spent ten years studying soil microbes before anyone outside her lab cared. When drought hit, farmers began calling her daily. She still prefers her microscope to a microphone, but she has learned to explain her work in plain words."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 3 or 5 life path, a 7th birthday adds depth to a social nature. On a 1 or 8 path it brings strategy and insight to ambition. On a 7 path the double inwardness needs friends and fresh air. On a 2 or 6 path it gives a wise centre to care."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each week, share one thing you have discovered, a book, an idea, a feeling, with one person. Explaining it aloud will deepen your own understanding and let someone into your inner world."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A lamp left on late in a study, a notebook full of questions, a long walk alone by the sea: these are the natural settings of the 7th. Give yourself such places on purpose, and your best ideas will find you there."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "The answers you look for in silence are worth sharing in the light."
+    ]
+   }
+  ]
+ },
+ "8": {
+  "title": "Born on the 8th: the capable leader",
+  "lead": "People born on the 8th carry the strong, practical energy of the number 8: ambition, authority, money sense and the will to see things through.",
+  "sections": [
+   {
+    "title": "The gift of the 8th",
+    "paras": [
+     "The 8th gives a sense of scale. People born on this day naturally think in systems, budgets and long term results. They can take a messy situation and organise it into something that works and pays. Their gift is executive power: the ability to make decisions and carry their weight."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may have had a savings account before your friends had pocket money. You notice who holds power in a room. You are drawn to quality and willing to work hard for it. When a crisis hits, people look to you, and you usually step forward."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Leadership, resilience, financial intelligence, organisation and the courage to make tough calls. The 8th is a natural manager, entrepreneur, negotiator or investor. They make big visions concrete and keep promises at scale."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Control and workaholism are the traps. The 8th may measure worth only by success or use power without enough care. Growth comes from generosity, rest and remembering that people are the purpose of the system, not its parts."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 8th wants a partner who is strong, capable and honest. Respect matters as much as romance. They show love by providing and protecting, and they grow when they also show tenderness and time."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Business, finance, law, management, real estate, politics, sport and large projects. They thrive where there is responsibility, a clear goal and a fair reward."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Viktor, born on 8 January, took over his father's failing printing house at twenty nine. He cut costs, retrained staff and moved into packaging. Ten years later the company employs ninety people, and he says the best decision was giving every worker a share in the profit."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "A birthday on the 8th on a 2 or 6 life path adds confidence to a gentle nature. On a 3 path it helps creative talent earn its worth. On an 8 path the double drive needs balance and rest. On a 7 or 9 path it gives practical power to ideals."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "At the end of each month, give something away: money to a cause, time to a person, knowledge to a learner. It keeps the energy of the 8th flowing and reminds success why it matters."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A well run kitchen in a busy restaurant is a good picture of the 8th: many hands, clear roles, high standards and one calm person who keeps it all moving. When it works, nobody notices the leader, only the excellent meal."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Real power is measured by how many people grow because of you."
+    ]
+   }
+  ]
+ },
+ "9": {
+  "title": "Born on the 9th: the wise humanitarian",
+  "lead": "A birthday on the 9th brings the wide gifts of the number 9: compassion, idealism, creativity and a feeling for the whole of humanity.",
+  "sections": [
+   {
+    "title": "The gift of the 9th",
+    "paras": [
+     "The 9th is the last single digit, and people born on it often carry a sense of the whole story. Their gift is breadth of heart. They care about strangers, animals, distant countries and future generations, and they feel injustice almost physically. Many also have an artistic streak that turns feeling into beauty."
+    ]
+   },
+   {
+    "title": "Everyday signs",
+    "paras": [
+     "You cry at films and give money to people on the street. Friends from very different backgrounds feel at home with you. You may have a strong sense of having lived many lives in one. Letting go of the past is a recurring theme, and so is forgiveness."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Compassion, generosity, tolerance, artistic vision and the ability to see the big picture. The 9th makes a natural teacher, healer, artist, activist or diplomat. They inspire others to think beyond themselves."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Martyrdom and disappointment are the risks. The 9th may give until empty, or feel betrayed when people do not live up to their ideals. Growth comes from caring for yourself as part of the world you care for, and from loving people as they are, not as they should be."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 9th loves deeply and generously, sometimes choosing partners who need saving. Healthy love for them is a partnership of shared values, where both give and both receive."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Teaching, medicine, social work, humanitarian organisations, the arts, counselling, international work and any role with meaning beyond profit."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Sara, born on 9 June, worked as a nurse in three countries before founding a small charity for children with hearing loss. Her home is full of postcards from former patients. She says the hardest lesson was learning to take holidays."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 1 or 8 life path, a 9th birthday adds a humanitarian purpose to ambition. On a 4 path it turns structure into service. On a 9 path the double idealism needs grounding. On a 5 path it gives travel a deeper meaning."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each week, do one generous act anonymously, and one kind act for yourself. Noticing both keeps the heart of the 9th open without draining it."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "An old house with doors open to neighbours, a shelf of books in five languages, a garden that feeds more people than the family: this is the world many people born on the 9th try to build, one generous gesture at a time. They often become the person a whole street turns to in hard times, simply because they never stopped caring."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "You can love the whole world and still keep a small warm room for yourself."
+    ]
+   }
+  ]
  }
 };
