@@ -1776,6 +1776,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "5-and-22": {
+  "title": "Life path 5 and 22: the scout and the architect",
+  "lead": "The 22 plans structures meant to last for generations; the 5 runs ahead to see what is changing. A surprising pair that can combine vision with timing, if the 22 can live with surprises.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and a 22 often meet when a big project needs fresh eyes: a city planning consultation, a startup accelerator, a large festival build. The 22 is drawn to the 5's ease with people and change. The 5 is fascinated by the sheer size of what the 22 wants to build."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 22 brings long range vision, method and the patience to finish huge tasks. The 5 brings speed, adaptability, contacts and a feeling for trends. The 5 tells the 22 what the world wants now; the 22 shows the 5 how one bold idea can outlive a lifetime."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 dislikes unpredictability and can see the 5 as careless. The 5 dislikes heavy plans and can see the 22 as rigid or overbearing. Pressure builds when the 22 carries the weight alone and the 5 wanders off at the wrong moment."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance mixes excitement and security. The 5 keeps life light and spontaneous, the 22 offers a strong, loyal base. Love grows when the 22 schedules real play and the 5 shows up on the days the plan needs every hand."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 5 drags the 22 to parties and the 22 helps the 5 think long term. At work you suit urban development, event production, international business and fast growing companies."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Marija, life path 22, an engineer, designed a footbridge for her river town. Viktor, life path 5, a journalist, wrote one article about the project and kept coming back for updates. He talked the council into a public vote; she built the bridge. They now organise a yearly festival on it."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 22 owns the blueprint and the 5 owns the outreach, and both agree on a few dates that never move."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Blueprints rolled under one arm, a festival flyer in the other hand, and a phone that never stops ringing because the 5 gave the number to everyone."
+    ]
+   },
+   {
+    "title": "A note on surprises",
+    "paras": [
+     "The 22 can treat a surprise like a structural fault. Leaving a little open space in every plan lets the 5's gifts arrive without breaking anything."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Strike when the time is right, builders and sailors both say. The 5 reads the wind; the 22 builds the ship. Neither crosses the sea alone."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each month, the 5 brings one piece of news from outside and the 22 asks how it could change the plan. Write down one adjustment and one thing that stays fixed."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A great design needs a good moment, and a good moment needs a design."
+    ]
+   }
+  ]
+ },
+ "5-and-33": {
+  "title": "Life path 5 and 33: the free spirit and the caretaker",
+  "lead": "The 33 gives itself to others; the 5 gives itself to life. Together they can bring joy to people who need it, as long as freedom and care stop competing.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and a 33 often meet in lively but caring places: a children's camp, a community theatre, a street food project for people in need. The 33 notices how the 5 makes everyone laugh. The 5 notices how the 33 makes everyone feel looked after."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 33 brings warmth, devotion and a healer's patience. The 5 brings humour, energy and a sense that the world is wide. The 5 lightens the 33's heavy sense of responsibility, and the 33 gives the 5 a soft place to land after each adventure."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 33 can feel abandoned when the 5 needs space, and the 5 can feel smothered by the 33's care. The 33 may expect more commitment than the 5 is ready to give. The 5 may joke when the 33 needs seriousness."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is tender and playful. The 33 gives with open arms, the 5 brings fun and fresh air. Love deepens when the 5 learns to stay for the hard conversations and the 33 learns that letting go for a weekend is also an act of love."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 5 gets the 33 out of the house and the 33 checks in when the 5 goes quiet. At work you suit youth work, arts for children, travel with a social purpose and community events."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Katerina, life path 33, ran a small shelter for old dogs. Filip, life path 5, a cyclist, stopped one day for water and stayed to walk three of them. He now leads weekend rides that raise money for the shelter, and she keeps a bowl of water by the gate for every rider."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when care and freedom are both treated as gifts, and neither is used as a weapon in an argument."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Muddy boots by the door, a pot of tea that never goes cold, and a map of the next ride pinned next to a list of animals that need homes."
+    ]
+   },
+   {
+    "title": "A note on space",
+    "paras": [
+     "The 33 can read distance as rejection. Telling the 33 where you are going and when you will be back costs the 5 nothing and gives the 33 great peace."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Laughter is the best medicine, people say. The 33 heals with care and the 5 with laughter, and together they keep a whole neighbourhood well."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 33 names one thing it needs for itself and the 5 names one place it wants to explore. Make room for both before the week ends."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Care holds the door open, and freedom remembers the way back."
+    ]
+   }
+  ]
+ },
+ "6-and-6": {
+  "title": "Life path 6 and 6: a house full of love",
+  "lead": "Two sixes share devotion, a love of home and a strong sense of duty. This is one of the warmest pairings, with one risk: both may give so much to others that they forget each other.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two sixes often meet through family, friends or caring work: a cousin's christening, a school parents' meeting, a hospital ward, a choir. They recognise each other quickly. Each is the one bringing food, tidying up and making sure nobody is left out."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share values: loyalty, kindness, beauty and the wish to build a real home. You understand without explaining why family matters so much. Many 6 and 6 couples create homes where friends, children and neighbours love to gather."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two sixes can both want to be the one who takes care, and both can feel unappreciated. Small resentments pile up when needs go unspoken. Worry is contagious: one anxious six can make the other anxious too. Perfectionism about the home can also cause friction."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is affectionate, loyal and devoted. You notice small details and remember what matters to the other. Love grows when you take turns receiving care and when you protect time for just the two of you, away from duties."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the hosts everyone thanks. At work you suit teaching, health care, interior design, hospitality, counselling and family businesses."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Sonja and Dejan, both life path 6, opened a bakery in the ground floor of their building. They know every customer's name and every child's birthday. For years they never took a holiday, until a regular customer offered to run the shop for a week. They came back rested and admitted they had forgotten how to sit still together."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you ask each other directly what you need instead of guessing, and when duty leaves room for romance."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A table set for eight on a weekday, fresh flowers in every room, and two people who finally sit down together after the last guest leaves."
+    ]
+   },
+   {
+    "title": "A note on worry",
+    "paras": [
+     "Two sixes can worry in a loop. Saying a worry out loud once, then choosing one action, stops it from spinning all night."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A full table makes a full heart, grandmothers like to say. For two sixes, the heart is big, so the home must have room for both of you as well as everyone else."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Every Sunday, each of you names one thing the other did for you that week. Then plan one evening that is only for the two of you."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Care for each other first, and the whole house will be warmer for it."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",

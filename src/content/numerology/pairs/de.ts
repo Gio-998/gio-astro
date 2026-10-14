@@ -1800,6 +1800,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "5-and-22": {
+  "title": "Lebenszahl 5 und 22: Kundschafter und Architektin",
+  "lead": "Die 22 plant Bauten, die Generationen überdauern sollen, die 5 läuft voraus, um zu sehen, was sich verändert. Ein überraschendes Paar, das Vision und Timing verbinden kann, wenn die 22 mit Überraschungen leben lernt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 22 begegnen sich oft, wenn ein großes Vorhaben frische Augen braucht: bei einer Bürgerbeteiligung zur Stadtplanung, in einem Gründerprogramm, beim Aufbau eines großen Festivals. Die 22 zieht die Leichtigkeit der 5 im Umgang mit Menschen und Wandel an. Die 5 ist fasziniert von der schieren Größe dessen, was die 22 bauen will."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 22 bringt weitreichende Vision, Methode und Geduld für riesige Aufgaben. Die 5 bringt Tempo, Anpassungsfähigkeit, Kontakte und ein Gespür für Trends. Die 5 sagt der 22, was die Welt gerade will, die 22 zeigt der 5, wie eine kühne Idee ein ganzes Leben überdauern kann."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 mag keine Unberechenbarkeit und hält die 5 womöglich für leichtsinnig. Die 5 mag keine schweren Pläne und hält die 22 womöglich für starr oder bestimmend. Der Druck steigt, wenn die 22 die Last allein trägt und die 5 im falschen Moment davonzieht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik mischt Aufregung und Sicherheit. Die 5 hält das Leben leicht und spontan, die 22 bietet ein starkes, treues Fundament. Die Liebe wächst, wenn die 22 echtes Spiel in den Kalender schreibt und die 5 an den Tagen da ist, an denen der Plan jede Hand braucht."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde schleppt die 5 die 22 auf Feste, und die 22 hilft der 5, langfristig zu denken. Beruflich passt ihr zu Stadtentwicklung, Veranstaltungsproduktion, internationalem Geschäft und schnell wachsenden Firmen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Marija, Lebenszahl 22, Ingenieurin, entwarf eine Fußgängerbrücke für ihr Städtchen am Fluss. Viktor, Lebenszahl 5, Journalist, schrieb einen Artikel über das Projekt und kam immer wieder, um nach Neuigkeiten zu fragen. Er überredete den Stadtrat zu einer öffentlichen Abstimmung, sie baute die Brücke. Heute veranstalten sie jedes Jahr ein Fest darauf."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 22 über den Bauplan bestimmt und die 5 über die Kontakte nach außen, und wenn beide sich auf ein paar Termine einigen, die sich nie verschieben."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Baupläne unter dem einen Arm, ein Festivalflyer in der anderen Hand und ein Telefon, das nie aufhört zu klingeln, weil die 5 die Nummer allen gegeben hat."
+    ]
+   },
+   {
+    "title": "Über Überraschungen",
+    "paras": [
+     "Die 22 behandelt eine Überraschung manchmal wie einen Baufehler. Wer in jedem Plan ein wenig freien Raum lässt, sorgt dafür, dass die Gaben der 5 ankommen, ohne dass etwas zerbricht."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Alles zu seiner Zeit, sagt der Volksmund. Die 5 liest den Wind, die 22 baut das Schiff. Keine von beiden überquert das Meer allein."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat bringt die 5 eine Neuigkeit von draußen mit, und die 22 fragt, wie sie den Plan verändern könnte. Schreibt eine Anpassung auf und eine Sache, die fest bleibt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein großer Entwurf braucht den richtigen Moment, und der richtige Moment braucht einen Entwurf."
+    ]
+   }
+  ]
+ },
+ "5-and-33": {
+  "title": "Lebenszahl 5 und 33: der freie Geist und die Fürsorgliche",
+  "lead": "Die 33 schenkt sich anderen, die 5 schenkt sich dem Leben. Zusammen können sie Menschen Freude bringen, die sie brauchen, sobald Freiheit und Fürsorge aufhören, miteinander zu wetteifern.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 33 begegnen sich oft an lebhaften und zugleich fürsorglichen Orten: in einem Kinderferienlager, einem Laientheater, einem Projekt, das Straßenessen für Bedürftige kocht. Die 33 bemerkt, wie die 5 alle zum Lachen bringt. Die 5 bemerkt, wie die 33 allen das Gefühl gibt, umsorgt zu sein."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 33 bringt Wärme, Hingabe und die Geduld einer Heilerin. Die 5 bringt Humor, Energie und das Gefühl, dass die Welt weit ist. Die 5 erleichtert das schwere Verantwortungsgefühl der 33, und die 33 gibt der 5 nach jedem Abenteuer einen weichen Landeplatz."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 33 fühlt sich verlassen, wenn die 5 Raum braucht, und die 5 fühlt sich von der Fürsorge der 33 erdrückt. Die 33 erwartet vielleicht mehr Verbindlichkeit, als die 5 geben kann. Die 5 macht vielleicht Witze, wenn die 33 Ernst braucht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zärtlich und verspielt. Die 33 gibt mit offenen Armen, die 5 bringt Spaß und frische Luft. Die Liebe vertieft sich, wenn die 5 lernt, für schwierige Gespräche zu bleiben, und die 33 lernt, dass ein Wochenende Loslassen auch Liebe ist."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde holt die 5 die 33 aus dem Haus, und die 33 meldet sich, wenn die 5 still wird. Beruflich passt ihr zu Jugendarbeit, Kunst für Kinder, Reisen mit sozialem Zweck und Veranstaltungen für die Nachbarschaft."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Katerina, Lebenszahl 33, führte ein kleines Heim für alte Hunde. Filip, Lebenszahl 5, Radfahrer, hielt eines Tages für Wasser an und blieb, um drei davon auszuführen. Heute leitet er Wochenendtouren, die Geld für das Heim sammeln, und sie stellt für jeden Fahrer eine Schale Wasser ans Tor."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Fürsorge und Freiheit beide als Geschenke gelten und keine von beiden im Streit als Waffe dient."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Schlammige Stiefel an der Tür, eine Kanne Tee, die nie kalt wird, und die Karte der nächsten Tour neben einer Liste von Tieren, die ein Zuhause brauchen."
+    ]
+   },
+   {
+    "title": "Über Freiraum",
+    "paras": [
+     "Die 33 deutet Abstand leicht als Ablehnung. Wenn die 5 sagt, wohin sie geht und wann sie zurück ist, kostet das nichts und schenkt der 33 großen Frieden."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wer lacht, hat mehr vom Leben, behauptet ein Spruch. Die 33 heilt mit Fürsorge, die 5 mit Lachen, und zusammen halten sie ein ganzes Viertel gesund."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche nennt die 33 etwas, das sie für sich selbst braucht, und die 5 einen Ort, den sie erkunden will. Schafft Platz für beides, bevor die Woche endet."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Fürsorge hält die Tür offen, und Freiheit weiß den Weg zurück."
+    ]
+   }
+  ]
+ },
+ "6-and-6": {
+  "title": "Lebenszahl 6 und 6: ein Haus voller Liebe",
+  "lead": "Zwei Sechsen teilen Hingabe, Liebe zum Zuhause und ein starkes Pflichtgefühl. Das ist eine der wärmsten Verbindungen, mit einem Risiko: Beide geben anderen vielleicht so viel, dass sie einander vergessen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Sechsen begegnen sich oft über Familie, Freunde oder helfende Berufe: bei einer Taufe im Verwandtenkreis, einem Elternabend, auf einer Krankenhausstation, in einem Chor. Sie erkennen sich schnell. Jede ist die, die Essen mitbringt, aufräumt und darauf achtet, dass niemand außen vor bleibt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Werte: Treue, Freundlichkeit, Schönheit und den Wunsch, ein echtes Zuhause zu schaffen. Ohne Erklärung versteht ihr, warum Familie so wichtig ist. Viele Paare aus zwei Sechsen schaffen ein Zuhause, in dem Freunde, Kinder und Nachbarn gern zusammenkommen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Sechsen wollen vielleicht beide diejenige sein, die sorgt, und beide fühlen sich nicht genug geschätzt. Kleine Kränkungen häufen sich, wenn Bedürfnisse unausgesprochen bleiben. Sorge steckt an: Eine ängstliche Sechs macht leicht auch die andere ängstlich. Perfektionismus im Haushalt kann ebenfalls reiben."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist liebevoll, treu und hingebungsvoll. Ihr bemerkt kleine Details und erinnert euch, was dem anderen wichtig ist. Die Liebe wächst, wenn ihr abwechselnd Fürsorge empfangt und Zeit nur für euch zwei schützt, fern von Pflichten."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr die Gastgeber, denen alle danken. Beruflich passt ihr zu Unterricht, Gesundheitswesen, Innenarchitektur, Gastgewerbe, Beratung und Familienbetrieben."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Sonja und Dejan, beide Lebenszahl 6, eröffneten eine Bäckerei im Erdgeschoss ihres Hauses. Sie kennen den Namen jeder Kundin und den Geburtstag jedes Kindes. Jahrelang machten sie keinen Urlaub, bis eine Stammkundin anbot, den Laden eine Woche zu führen. Sie kamen erholt zurück und gaben zu, dass sie vergessen hatten, wie man zusammen stillsitzt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr einander direkt fragt, was ihr braucht, statt zu raten, und wenn die Pflicht Raum für Romantik lässt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Tisch für acht an einem Werktag, frische Blumen in jedem Zimmer und zwei Menschen, die sich endlich zusammen hinsetzen, wenn der letzte Gast gegangen ist."
+    ]
+   },
+   {
+    "title": "Über Sorgen",
+    "paras": [
+     "Zwei Sechsen können sich im Kreis sorgen. Wer eine Sorge einmal laut ausspricht und dann eine Handlung wählt, verhindert, dass sie sich die ganze Nacht dreht."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ein voller Tisch macht ein volles Herz, sagen Großmütter gern. Bei zwei Sechsen ist das Herz groß, also muss das Zuhause auch für euch beide Platz haben, nicht nur für alle anderen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt jeden Sonntag eine Sache, die der andere in dieser Woche für euch getan hat. Plant dann einen Abend nur für euch zwei."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Sorgt zuerst füreinander, dann wird das ganze Haus wärmer."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",
