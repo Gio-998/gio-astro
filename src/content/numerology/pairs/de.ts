@@ -191,5 +191,203 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "1-and-4": {
+  "title": "Lebenszahl 1 und 4: Vision und Fundament",
+  "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 1 und eine 4 begegnen sich oft über die Arbeit oder ein gemeinsames Vorhaben. Die 1 kommt mit einer kühnen Idee, die 4 fragt, wie sie konkret umgesetzt wird. Anfangs fühlt sich das nach Reibung an, doch bald merkt jede Seite, dass die andere genau das hat, was ihr fehlt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 1 bewundert die Beständigkeit, Ehrlichkeit und das Können der 4. Die 4 bewundert den Mut der 1, Unerprobtes zu wagen. Ihr seid beide fleißig und nehmt Ziele ernst. Keiner von euch verschwendet gern Zeit, und beide schätzen Treue."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Das Tempo ist das Hauptthema. Die 1 will jetzt los und Details später klären, die 4 will zuerst Plan und Budget. Die 1 fühlt sich gebremst, die 4 ins Risiko gedrängt. Beide sind stur, also enden Streits eher in langem Schweigen als im Kompromiss."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Liebe zwischen einer 1 und einer 4 ist treu und praktisch. Romantik entsteht vielleicht beim gemeinsamen Hausbau, bei der Renovierung einer Wohnung oder beim Planen der Zukunft. Die 1 sollte das Sicherheitsbedürfnis der 4 achten, die 4 der 1 etwas Überraschung und Abenteuer gönnen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde zieht die 1 die 4 aus der Routine, und die 4 erdet die 1. Bei der Arbeit kann das ein starkes Duo sein: die 1 als Gründung oder Leitung, die 4 als Betriebsleitung, Technik oder Finanzen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Nenad, Lebenszahl 1, wollte eine Berghütte für Wandernde eröffnen. Seine Partnerin Biljana, Lebenszahl 4, verbrachte einen Winter damit, Kosten, Genehmigungen und Wasserversorgung durchzurechnen. Die Hütte öffnete zwei Jahre später als erhofft, musste aber seitdem keine einzige Saison schließen."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar funktioniert, wenn es sich auf einen gemeinsamen Plan mit klaren Etappen einigt. Die 1 darf anfangen, die 4 bekommt Struktur. Jede abgeschlossene Etappe zu feiern hält beide motiviert."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Karte an der Wand mit roten Kreisen von der 1 und ordentlichen Randnotizen von der 4: zwei Arten von Energie, die auf denselben Plan schreiben."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Rom wurde nicht an einem Tag erbaut, sagt man. Die 4 erinnert die 1 daran, und die 1 erinnert die 4, dass Rom ohne den Entschluss anzufangen gar nicht erbaut worden wäre."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Bei jeder neuen Idee beschreibt die 1 den Traum, und die 4 nennt die ersten drei praktischen Schritte. Ihr fangt erst an, wenn beide die Schritte für realistisch halten."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine Vision braucht ein Fundament, und ein Fundament braucht einen Grund, gebaut zu werden."
+    ]
+   }
+  ]
+ },
+ "1-and-5": {
+  "title": "Lebenszahl 1 und 5: zwei freie Geister in Bewegung",
+  "lead": "Die 1 und die 5 teilen die Liebe zu Freiheit, Neuem und Tat. Ein aufregendes, schnelles Paar, das ein wenig Anker braucht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 1 und eine 5 begegnen sich oft unterwegs: auf Reisen, auf einem Festival, in einem neuen Job oder einer neuen Stadt. Sofort liegt Abenteuer in der Luft. Gespräche springen von Thema zu Thema, und Pläne entstehen auf der Stelle."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr hasst es beide, wenn man euch sagt, was ihr tun sollt. Ihr lasst euch Raum ohne Eifersucht und probiert gern gemeinsam Neues aus. Die 1 bringt Entschlossenheit, die 5 Neugier und Charme. Zusammen habt ihr das Gefühl, dass alles möglich ist."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Keiner von euch mag Routine, also kann der Alltag entgleiten: Rechnungen, Putzen, langfristige Pläne. Die 1 will vielleicht das Abenteuer anführen, während die 5 auf halbem Weg die Richtung ändern will. Rastlosigkeit auf beiden Seiten kann bedeuten, dass der Beziehung eine ruhige Mitte fehlt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist lebendig, körperlich und voller Überraschungen. Ihr bleibt füreinander interessant. Liebe hält, wenn ihr Bindung als gemeinsames Abenteuer wählt und nicht als Käfig, und wenn eine Seite sich ohne Groll um die langweiligen Grundlagen kümmert."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde plant ihr ständig die nächste Reise. Beruflich passen schnelle Felder: Vertrieb, Startups, Medien, Tourismus. Für die Details braucht ihr eine dritte Person oder ein klares System."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ana, Lebenszahl 5, und Viktor, Lebenszahl 1, lernten sich in einem Nachtbus über die Alpen kennen. Das erste Jahr ihrer Beziehung verbrachten sie in vier verschiedenen Ländern. Heute führen sie ein kleines Reisebüro und streiten noch immer darüber, wer das nächste Ziel aussuchen darf."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit einem festen Zuhause und einem gemeinsamen Kalender voller Abenteuer. Freiheit fühlt sich reicher an, wenn es einen Ort gibt, an den man zurückkehrt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Rucksäcke neben der Tür, eine Karte mit Nadeln an schon gesehenen und noch wartenden Orten, ein Wecker für den frühen Zug: Die 1 und die 5 sind zu Hause schon halb unterwegs."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wählt ein wöchentliches Ritual, das sich nie ändert, ein Sonntagsfrühstück oder ein Abendtelefonat, und schützt es. Alles andere darf spontan bleiben."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Freiheit ist süßer, wenn man sie teilt, und ein gemeinsamer Weg braucht einen Ort zum Ausruhen."
+    ]
+   }
+  ]
+ },
+ "1-and-6": {
+  "title": "Lebenszahl 1 und 6: Führung und Fürsorge",
+  "lead": "Die 1 bringt Ehrgeiz und Richtung, die 6 Wärme, Fürsorge und ein Gefühl von Zuhause. Dieses Paar kann eine starke Familie oder ein starkes Team bilden, wenn Macht und Fürsorge im Gleichgewicht sind.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 6 wird oft von der Zuversicht und Energie der 1 angezogen, während die 1 sich in der Nähe der 6 ungewöhnlich wohlfühlt. Schon früh kümmert sich die 6 im Kleinen um die 1, ein Essen, eine Erinnerung, ein offenes Ohr, und die 1 merkt, wie gut das tut."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 1 bietet Schutz und Antrieb, die 6 Liebe, Verantwortung und Schönheit im Alltag. Beide schätzen Treue. Die 1 hilft der 6 oft, an die eigenen Gaben zu glauben, und die 6 hilft der 1, sich emotional getragen zu fühlen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 6 gibt vielleicht zu viel und fühlt sich dann nicht gewürdigt. Die 1 ist womöglich so auf Ziele fixiert, dass die Familienzeit an zweiter Stelle steht. Beide können auf ihre Art kontrollieren: die 1 durch Entscheidungen, die 6 durch Fürsorge, die zum Ratschlag wird."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Das ist oft ein hingebungsvolles, familienorientiertes Paar. Die 6 schafft ein warmes Zuhause, und die 1 arbeitet daran, es abzusichern. Die Liebe wächst, wenn die 1 Wertschätzung offen zeigt und die 6 der 1 Unabhängigkeit lässt, ohne sich zurückgewiesen zu fühlen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde denkt die 6 an die Geburtstage, und die 1 plant die große Feier. Bei der Arbeit führt die 1 und die 6 kümmert sich um die Menschen, eine natürliche Kombination in Schulen, Praxen und Familienbetrieben."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Kristina, Lebenszahl 6, leitete die Küche im Restaurant ihrer Familie. Aleksandar, Lebenszahl 1, kam als Koch mit großen Ideen. Einen Monat lang stritten sie, im zweiten verliebten sie sich. Heute entwirft er die Speisekarte, und sie sorgt dafür, dass sich jeder Gast wie zu Hause fühlt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar strahlt, wenn die Fürsorge der 6 als Geschenk und nicht als Pflicht angenommen wird und der Ehrgeiz der 1 der Familie oder dem Team dient, nicht nur dem eigenen Erfolg."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche kocht oder organisiert die 1 etwas für die 6, ohne darum gebeten zu werden. Die 6 empfängt einfach. Für einen Abend tauschen sich die Rollen, und beide lernen etwas."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Führung schützt das Zuhause, und Fürsorge macht es schützenswert."
+    ]
+   }
+  ]
  }
 };
