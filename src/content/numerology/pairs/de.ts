@@ -2268,6 +2268,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "6-and-11": {
+  "title": "Lebenszahl 6 und 11: die Nährende und der Bote",
+  "lead": "Die 11 empfängt Inspiration und trägt sie zu anderen, die 6 sorgt dafür, dass der Bote satt, ausgeruht und geliebt ist. Ein zärtliches, idealistisches Paar mit einem starken Gefühl der Berufung.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 6 und eine 11 begegnen sich oft an Orten der Heilung oder der Kunst: in einem Yogastudio, einem Kinderkrankenhaus, einem Kirchenchor, bei einer kleinen Vernissage. Die 11 ist bewegt von der stillen Güte der 6. Die 6 ist berührt von der Feinfühligkeit der 11 und dem Leuchten in ihren Augen, wenn sie von einer Idee spricht."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr wollt beide Menschen helfen und fühlt beide tief. Die 11 bringt Vision, Intuition und spirituelle Einsicht. Die 6 bringt Beständigkeit, Wärme und praktische Liebe. Die 6 gibt der 11 ein sicheres Nest, und die 11 zeigt der 6, dass ihre Fürsorge weit über die Familie hinausreichen kann."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 11 kann launisch und in ihre Innenwelt versunken sein, sodass die 6 sich übersehen fühlt. Die 6 kann ängstlich oder kontrollierend werden, was Gesundheit und Gewohnheiten der 11 betrifft. Beide reagieren empfindlich auf Kritik, also verletzen kleine Bemerkungen mehr als beabsichtigt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist weich, hingebungsvoll und gefühlvoll. Ihr versteht das Bedürfnis des anderen, gebraucht zu werden. Die Liebe hält, wenn die 11 mit schlichten Worten Danke sagt und die 6 der 11 ihre Stimmungen lässt, ohne sie reparieren zu wollen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde hört ihr besser zu als die meisten. Beruflich passt ihr zu Beratung, Kunsttherapie, Musik, Pflege, Unterricht und spiritueller Gemeindearbeit."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Irena, Lebenszahl 11, schrieb Lieder, die sie sich nicht vorzutragen traute. Toni, Lebenszahl 6, führte ein Café mit einer winzigen Bühne. Jeden Donnerstag stellte er zwei Kerzen und einen Stuhl hin und sagte ihr, der Platz gehöre ihr, wenn sie wolle. Nach vier Monaten sang sie. Heute sind die Donnerstagabende die vollsten der Woche."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 6 die stillen Stunden der 11 schützt und die 11 ihre Inspiration ins Zuhause zurückbringt, statt sie ganz draußen zu verbrauchen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Gitarre an einem Küchenstuhl, ein Topf Suppe, bereit für den Moment, in dem die 11 aus ihren Gedanken auftaucht, und ein Heft mit Liedtexten, offen auf dem Tisch, damit die 6 es lesen kann."
+    ]
+   },
+   {
+    "title": "Über Empfindsamkeit",
+    "paras": [
+     "Ihr beide spürt den Ton mehr als die Worte. Wer sanft spricht, besonders wenn ihr müde seid, verhindert, dass aus vielen kleinen Kränkungen Abstand wird."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ein geteiltes Lied klingt doppelt, sagen Musiker gern. Die 11 bringt die Melodie und die 6 den Raum, in dem Menschen zuhören wollen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche teilt die 11 etwas Neues, das sie geschaffen oder gefühlt hat, und die 6 eine Art, wie sie für jemanden gesorgt hat. Jede Seite antwortet mit einem ehrlichen Kompliment."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Inspiration braucht ein warmes Haus, und ein warmes Haus braucht ein wenig Zauber."
+    ]
+   }
+  ]
+ },
+ "6-and-22": {
+  "title": "Lebenszahl 6 und 22: Zuhause und Vermächtnis",
+  "lead": "Die 22 baut Werke, die ein Leben überdauern sollen, die 6 die Familie, die sie erben wird. Verantwortungsvoll, treu und ernst kann dieses Paar im privaten wie im öffentlichen Leben etwas Bleibendes schaffen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 6 und eine 22 begegnen sich oft über ein Vorhaben mit gesellschaftlichem Wert: ein neues Schulgebäude, eine Wohnungsgenossenschaft, einen Klinikflügel, eine Familienfirma. Die 22 achtet die Hingabe der 6 an Menschen. Die 6 bewundert, wie die 22 gewaltige Pläne tragen kann."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr nehmt beide Verantwortung ernst. Die 22 bringt Vision, Struktur und Ausdauer zum Bauen. Die 6 bringt Fürsorge, Harmonie und einen Blick dafür, was einen Ort menschlich macht. Die 22 gibt der Liebe der 6 eine große Bühne, und die 6 erinnert die 22 daran, für wen die Gebäude gedacht sind."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 versinkt vielleicht in Arbeit und vergisst den Familienkalender. Die 6 fühlt sich womöglich hinter der Mission eingereiht. Beide neigen zu Perfektionismus, die 22 bei Ergebnissen, die 6 im Zuhause, und Spannung zeigt sich als Müdigkeit und kurze Geduld."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist beständig und hingebungsvoll. Liebe zeigt sich durch Verlässlichkeit und ein gemeinsames Ziel. Sie wächst, wenn die 22 die Familie zum Teil des Plans macht und nicht zur Nebensache, und wenn die 6 die Mission der 22 ohne Schuldgefühle oder Klagen unterstützt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gebt ihr praktische Hilfe und klugen Rat. Beruflich passt ihr zu Architektur, sozialem Wohnungsbau, Bildungsverwaltung, Klinikverwaltung und großen Familienunternehmen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Snežana, Lebenszahl 6, Schulleiterin, brauchte ein neues Gebäude für ihre Schule. Kiril, Lebenszahl 22, Architekt, entwarf es mit lichtdurchfluteten Klassenzimmern und einem Garten auf dem Dach. Während des Baus stritten sie über jedes Fenster. Bei der Eröffnung gab er zu, dass die Fenster, die sie wollte, das Beste am ganzen Haus waren. Im Sommer darauf heirateten sie, auf diesem Dach."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Mission und Familie denselben Kalender teilen und Erholung mit derselben Sorgfalt geplant wird wie eine Baustelle."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Architekturmodelle auf dem Esstisch, daneben eine Kinderzeichnung und ein Abendessen pünktlich um sieben, weil die 6 darauf besteht und die 22 gelernt hat zu gehorchen."
+    ]
+   },
+   {
+    "title": "Über Überlastung",
+    "paras": [
+     "Ihr könnt beide zu lange zu viel tragen. Eine wöchentliche Prüfung, wie müde jede Seite wirklich ist, bewahrt das Fundament vor Rissen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wir pflanzen Bäume, in deren Schatten wir vielleicht nie sitzen werden, sagt ein alter Satz. Die 22 pflanzt die Bäume, und die 6 sorgt dafür, dass schon heute jemand im Schatten sitzt."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat zeigt die 22 der 6 einen Teil ihres aktuellen Projekts, und die 6 zeigt der 22 einen Familienmoment, den sie verpasst hat. Beide fragt ihr, was sich ändern ließe."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Baut für die Zukunft, und sorgt dafür, dass heute Abend jemand, den ihr liebt, zu Hause ist."
+    ]
+   }
+  ]
+ },
+ "6-and-33": {
+  "title": "Lebenszahl 6 und 33: der Kreis der Fürsorge",
+  "lead": "Die 33 gilt als Meisterlehrerin der Liebe, die 6 ist die Zahl des Zuhauses. Zusammen bilden sie ein Paar mit enormer Fähigkeit zur Güte, das lernen muss, auch zu empfangen und nicht nur zu geben.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 6 und eine 33 begegnen sich oft, wenn beide schon jemandem helfen: an einem Krankenbett, in einer Unterkunft, in einer Gemeindeküche, in einer Schule für Kinder mit besonderem Förderbedarf. Sie erkennen sofort eine verwandte Seele. Viele Worte braucht es nicht."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Mitgefühl, Treue und den Wunsch zu dienen. Die 6 bringt häusliche Wärme und praktische Fürsorge. Die 33 bringt tiefe Empathie und die Fähigkeit, Liebe durch Vorbild zu lehren. Euer Zuhause kann zur Zuflucht für Freunde, Familie und alle in Not werden."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Ihr opfert euch vielleicht beide zu sehr auf und werdet dann bitter. Grenzen sind eine Herausforderung, und andere stützen sich womöglich mehr auf euch, als fair ist. Sorgen und Perfektionismus wachsen auf beiden Seiten, und keine bittet gern um Hilfe."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zutiefst hingebungsvoll und nährend. Ihr spürt die Bedürfnisse des anderen ohne Worte. Die Liebe vertieft sich, wenn ihr euch auch erlaubt, müde, manchmal selbstbezogen und einfach menschlich zu sein."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr der erste Anruf in jeder Krise. Beruflich passt ihr zu Medizin, Sozialarbeit, Seelsorge, Sonderpädagogik und der Leitung gemeinnütziger Organisationen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ljubica, Lebenszahl 33, und Zlatko, Lebenszahl 6, führten ein kleines Heim für ältere Nachbarn, die sonst niemanden hatten. Jahrelang verließen sie die Stadt nicht. Eines Frühlings zog ein Neffe für einen Monat ein, damit sie ans Meer fahren konnten. Am dritten Tag schrieb Ljubica in ihr Tagebuch, sie habe die Farbe ihres eigenen Glücks vergessen."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr einen kleinen privaten Raum schützt, der nur euch zweien gehört, und die Last mit anderen teilt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zu viele Mäntel im Flur, ein Kalender voller Termine anderer Leute und ein Abend pro Woche, rot eingekreist, nur für euch zwei."
+    ]
+   },
+   {
+    "title": "Über das Empfangen",
+    "paras": [
+     "Die 6 und die 33 können gut geben und tun sich schwer beim Empfangen. Das Empfangen zu üben, eine Mahlzeit, ein Lob, einen freien Tag, ist so wichtig wie jeder Dienst."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Aus einem leeren Brunnen schöpft man kein Wasser, sagten die Alten im Dorf. Füllt euren eigenen Brunnen immer wieder auf, damit das Wasser für alle reicht, die kommen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt einmal im Monat jeder eine Grenze, die ihr halten wollt. Helft euch gegenseitig, sie zu wahren, auch wenn jemand freundlich bittet."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Liebe, die bleibt, muss auch ruhen dürfen."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",

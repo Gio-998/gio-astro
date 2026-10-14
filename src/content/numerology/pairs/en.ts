@@ -2244,6 +2244,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "6-and-11": {
+  "title": "Life path 6 and 11: the nurturer and the messenger",
+  "lead": "The 11 receives inspiration and carries it to others; the 6 makes sure the messenger is fed, rested and loved. A tender, idealistic couple with a strong sense of calling.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 6 and an 11 often meet in places of healing or art: a yoga studio, a children's hospital, a church choir, a small gallery opening. The 11 is moved by the 6's quiet goodness. The 6 is touched by the 11's sensitivity and the light in its eyes when it speaks about an idea."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you want to help people and both feel things deeply. The 11 brings vision, intuition and spiritual insight. The 6 brings steadiness, warmth and practical love. The 6 gives the 11 a safe nest, and the 11 shows the 6 that its care can reach far beyond the family."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 11 can be moody and absorbed in its own inner world, leaving the 6 feeling unseen. The 6 can become anxious or controlling about the 11's health and habits. Both are sensitive to criticism, so small remarks can wound more than intended."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is soft, devoted and emotional. You understand each other's need to feel needed. Love lasts when the 11 says thank you in plain words and the 6 lets the 11 have its moods without trying to fix them."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you listen better than most. At work you suit counselling, art therapy, music, nursing, teaching and spiritual community work."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Irena, life path 11, wrote songs she was too shy to perform. Toni, life path 6, ran a café with a tiny stage. He set out two candles and a chair every Thursday and told her it was hers if she wanted it. After four months she sang. Now the Thursday evenings are the busiest night of the week."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 6 protects the 11's quiet hours and the 11 brings its inspiration back into the home instead of spending it all outside."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A guitar leaning on a kitchen chair, a pot of soup ready for whenever the 11 surfaces, and a notebook of lyrics left open on the table for the 6 to read."
+    ]
+   },
+   {
+    "title": "A note on sensitivity",
+    "paras": [
+     "Both of you feel tone more than words. Speaking gently, especially when tired, saves many small hurts from growing into distance."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A song shared is a song doubled, musicians like to say. The 11 brings the melody and the 6 brings the room where people want to listen."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 11 shares something new it made or felt, and the 6 shares one way it cared for someone. Each of you answers with one honest compliment."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Inspiration needs a warm house, and a warm house needs a little magic."
+    ]
+   }
+  ]
+ },
+ "6-and-22": {
+  "title": "Life path 6 and 22: home and legacy",
+  "lead": "The 22 builds works meant to last beyond a lifetime; the 6 builds the family that will inherit them. Responsible, loyal and serious, this pair can create something lasting in both private and public life.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 6 and a 22 often meet through a project with social value: a new school building, a housing cooperative, a hospital wing, a family company. The 22 respects the 6's devotion to people. The 6 admires the 22's capacity to carry enormous plans."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both take responsibility seriously. The 22 brings vision, structure and the stamina to build. The 6 brings care, harmony and an eye for what makes a place feel human. The 22 gives the 6's love a large stage, and the 6 reminds the 22 who the buildings are for."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 may sink into work and forget the family calendar. The 6 may feel second to the mission. Both can be perfectionists, the 22 about results and the 6 about the home, and tension shows up as tiredness and short tempers."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is steady and devoted. Love is shown through reliability and shared purpose. It grows when the 22 makes the family part of the plan, not an afterthought, and when the 6 supports the 22's mission without guilt or complaint."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you give practical help and wise advice. At work you suit architecture, public housing, education management, hospital administration and large family businesses."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Snežana, life path 6, a school principal, needed a new building for her school. Kiril, life path 22, an architect, designed it with classrooms full of daylight and a garden on the roof. During construction they argued about every window. At the opening he admitted the windows she wanted were the best part. They married the next summer, on that roof."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the mission and the family share the same calendar, and when rest is planned with the same care as a building site."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Architectural models on the dining table, a child's drawing pinned beside them, and dinner served exactly at seven because the 6 insists and the 22 has learned to obey."
+    ]
+   },
+   {
+    "title": "A note on overwork",
+    "paras": [
+     "Both of you can carry too much for too long. A weekly check on how tired each of you really is keeps the foundation from cracking."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "We plant trees whose shade we may never sit in, an old line goes. The 22 plants the trees, and the 6 makes sure someone sits in the shade today."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Every month, the 22 shows the 6 one part of its current project, and the 6 shows the 22 one family moment it missed. Both of you ask what each could change."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Build for the future, and make sure someone you love is home tonight."
+    ]
+   }
+  ]
+ },
+ "6-and-33": {
+  "title": "Life path 6 and 33: the circle of care",
+  "lead": "The 33 is often called the master teacher of love, and the 6 is the number of the home. Together they form a pair with enormous capacity for kindness, and they must learn to receive as well as give.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 6 and a 33 often meet when both are already helping someone: at a hospital bedside, in a shelter, at a parish kitchen, in a school for children with special needs. They recognise a kindred spirit at once. Few words are needed."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share compassion, loyalty and a desire to serve. The 6 brings domestic warmth and practical care. The 33 brings deep empathy and the ability to teach love by example. Your home may become a refuge for friends, family and anyone in need."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both of you can sacrifice too much and then feel resentful. Boundaries are a challenge, and others may lean on you more than is fair. Worry and perfectionism can grow on both sides, and neither likes to ask for help."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is deeply devoted and nurturing. You sense each other's needs without words. Love deepens when you also give each other permission to be tired, selfish now and then, and simply human."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the first call in any crisis. At work you suit medicine, social work, pastoral care, special education and nonprofit leadership."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ljubica, life path 33, and Zlatko, life path 6, ran a small home for elderly neighbours who had nobody else. For years they never left town. One spring, a nephew moved in for a month so they could travel to the sea. On the third day, Ljubica wrote in her diary that she had forgotten the colour of her own happiness."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you protect a small private space that belongs only to the two of you, and when you share the load with others."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Too many coats in the hallway, a calendar full of other people's appointments, and one evening a week circled in red for just the two of you."
+    ]
+   },
+   {
+    "title": "A note on receiving",
+    "paras": [
+     "The 6 and the 33 are good at giving and clumsy at receiving. Practising receiving, a meal, a compliment, a day off, is as important as any service."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "An empty well gives no water, the village elders used to say. Keep refilling your own well so the water lasts for everyone who comes to it."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, each of you names one boundary you want to keep. Help each other keep it, even when someone asks nicely."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Love that lasts must also be allowed to rest."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",
