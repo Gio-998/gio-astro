@@ -1415,5 +1415,227 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-22": {
+  "title": "Life path 2 and 22: the quiet partner of a great plan",
+  "lead": "The master 22 builds on a large scale; the 2 brings the patience and human touch that big plans need. A pairing of vision and devotion.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 22 often notices the 2 as the person who quietly holds a team together while others argue. The 2 is drawn to the 22's calm authority and sense of purpose. Their first collaboration is usually practical: a project, a renovation, a family plan that needs both minds."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 22 brings ambition with structure; the 2 brings tact, loyalty and emotional intelligence. The 2 makes the 22's plans humane, and the 22 gives the 2 a sense of being part of something meaningful and lasting."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 can be so focused on the big picture that small emotional moments are missed. The 2 may feel like an assistant rather than a partner. The 22 can become rigid under pressure, and the 2 may withdraw instead of objecting."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is steady, loyal and quietly romantic. The 22 shows love by building a secure future; the 2 by daily tenderness. It works best when the 22 makes time for intimacy without an agenda, and when the 2 claims an equal voice in shared plans."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are dependable and calm in a crisis. At work the 22 designs and leads, while the 2 negotiates, mediates and keeps everyone motivated: architecture, public service, healthcare and large organisations suit you."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Branko, life path 22, an engineer, spent years designing a water system for mountain villages. Danica, life path 2, a teacher in one of those villages, organised the meetings where people agreed to dig the trenches. He says the pipes were the easy part; she got the people to believe in them."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when both see the relationship itself as one of the most important things they are building."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 22 can carry heavy pressure and sometimes forget that it needs care too. The 2 is often the only one who notices the exhaustion behind the competence. Saying it aloud is a gift."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Blueprints on the kitchen table pushed aside for two plates of dinner, a phone turned face down, a long conversation that starts with work and ends somewhere much softer."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each month, the 22 shares the big plan and the 2 adds one human detail that would make it better for the people involved. Write both down together."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Great works stand on strong foundations and gentle hands."
+    ]
+   }
+  ]
+ },
+ "2-and-33": {
+  "title": "Life path 2 and 33: devotion and compassion",
+  "lead": "The master 33 is the teacher of love, and the 2 is love's quiet listener. A deeply caring pairing that must guard against giving itself away.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 2 and a 33 often meet in caring work: a hospital, a school for children with special needs, a community kitchen. They recognise each other immediately as people who put others first."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 33 offers wisdom, healing presence and wide compassion; the 2 offers attentive support and sensitivity. Both value harmony, family and service. The home you share can become a refuge for many people."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The danger is shared self neglect. Both can give until empty, and neither may stop the other. The 33 may take on a parental role toward the 2, and the 2 may feel small beside the 33's calling. Unspoken resentment can grow under the kindness."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is tender, devoted and spiritual. You care for each other in countless small ways. The relationship deepens when you also allow playfulness and selfish pleasures, a lazy morning, a holiday with no duties, an evening that belongs only to you."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are a safe harbour for each other. At work you suit healing professions, teaching, counselling, charities and spiritual guidance."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ljubica, life path 33, runs a small hospice. Goran, life path 2, came to visit his dying father and stayed to volunteer. Years later they are married. He says she taught him that a hand held at the right moment is a whole sermon."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each takes care of the other's rest as seriously as they take care of strangers."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 33 can feel a weight of responsibility for the whole world. The 2 can help simply by reminding the 33 that they are allowed to be held, too."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A quiet house at dusk after a long shift, a pot of tea, two people sitting close without talking, letting the day leave their shoulders."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, plan one thing purely for pleasure, with no benefit to anyone else. Protect it like an appointment with a patient."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Love that serves the world grows deeper when it also rests in itself."
+    ]
+   }
+  ]
+ },
+ "3-and-3": {
+  "title": "Life path 3 and 3: a house full of laughter",
+  "lead": "Two threes create a playful, creative and sociable pairing. Life is rarely dull; the challenge is depth, focus and the boring essentials.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two threes usually meet where people gather: a party, a stage, a writing class, a crowded café. The conversation sparkles from the first minute. Each finds someone who matches their wit and enthusiasm."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share humour, imagination and a love of expression. Ideas multiply when you are together. You enjoy art, music, travel and friends, and your home is often full of colour and noise."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two threes can scatter energy in many directions and finish little. Money may slip through your fingers. When feelings get heavy, both may joke instead of talking, so real problems stay hidden behind laughter."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is playful, affectionate and full of surprises. Love lasts when you learn to sit with serious moments together, and when at least one of you takes charge of planning and practical tasks."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are inseparable and endlessly entertaining. At work you shine in creative fields: media, theatre, advertising, design, teaching. Hire or befriend someone organised."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Saška and Vlado, both life path 3, met in an amateur theatre group and married on stage after a performance. They now run a children's drama school. Their accounts were a mess until their accountant, a patient 4, set up a system. They say she saved their dream."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with structure that protects creativity: a budget, a calendar, deadlines for projects that matter."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A living room with half finished paintings, a guitar on the sofa, friends arriving unannounced, and a pile of unopened letters on the shelf."
+    ]
+   },
+   {
+    "title": "A note on depth",
+    "paras": [
+     "Threes often fear that seriousness will kill the fun. In fact, couples who can cry together laugh even better afterwards."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "All work and no play makes Jack a dull boy, the saying goes. For two threes the opposite warning applies: all play and no work leaves the rent unpaid and the best ideas unfinished. The trick is to treat finishing as part of the game, and to celebrate each completed piece with the same joy you bring to starting."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, sit together for fifteen minutes without jokes or screens and talk about one real worry each. Then go and have fun."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Laughter keeps the house bright; honest words keep it standing."
+    ]
+   }
+  ]
  }
 };

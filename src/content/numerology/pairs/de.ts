@@ -1439,5 +1439,233 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-22": {
+  "title": "Lebenszahl 2 und 22: die stille Kraft hinter dem großen Plan",
+  "lead": "Die Meisterzahl 22 baut im großen Maßstab, die 2 bringt die Geduld und Menschlichkeit, die große Pläne brauchen. Ein Paar aus Vision und Hingabe.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 22 bemerkt die 2 oft als die Person, die ein Team still zusammenhält, während andere streiten. Die 2 wird von der ruhigen Autorität und dem Sinn für Bestimmung der 22 angezogen. Die erste Zusammenarbeit ist meist praktisch: ein Projekt, eine Renovierung, ein Familienplan, der beide Köpfe braucht."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 22 bringt Ehrgeiz mit Struktur, die 2 Takt, Treue und emotionale Intelligenz. Die 2 macht die Pläne der 22 menschlich, und die 22 gibt der 2 das Gefühl, Teil von etwas Bedeutendem und Dauerhaftem zu sein."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 ist vielleicht so aufs große Ganze konzentriert, dass kleine emotionale Momente untergehen. Die 2 fühlt sich womöglich wie eine Assistenz statt wie ein Gegenüber. Unter Druck wird die 22 starr, und die 2 zieht sich zurück, statt zu widersprechen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier beständig, treu und still romantisch. Die 22 zeigt Liebe, indem sie eine sichere Zukunft baut, die 2 durch tägliche Zärtlichkeit. Am besten gelingt es, wenn die 22 Zeit für Nähe ohne Tagesordnung schafft und die 2 eine gleichberechtigte Stimme in gemeinsamen Plänen beansprucht."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr verlässlich und ruhig in der Krise. Bei der Arbeit entwirft und leitet die 22, während die 2 verhandelt, vermittelt und alle motiviert: Architektur, öffentlicher Dienst, Gesundheitswesen und große Organisationen passen zu euch."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Branko, Lebenszahl 22, Ingenieur, plante jahrelang eine Wasserversorgung für Bergdörfer. Danica, Lebenszahl 2, Lehrerin in einem dieser Dörfer, organisierte die Versammlungen, auf denen die Leute zustimmten, die Gräben auszuheben. Er sagt, die Rohre seien der leichte Teil gewesen, sie habe die Menschen dazu gebracht, daran zu glauben."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn beide die Beziehung selbst als eines der wichtigsten Dinge sehen, die sie aufbauen."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 22 trägt oft schweren Druck und vergisst manchmal, dass auch sie Fürsorge braucht. Die 2 ist oft die einzige, die die Erschöpfung hinter der Kompetenz bemerkt. Es laut auszusprechen ist ein Geschenk."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Baupläne auf dem Küchentisch, beiseitegeschoben für zwei Teller Abendessen, ein Telefon mit dem Display nach unten, ein langes Gespräch, das bei der Arbeit beginnt und an einem viel weicheren Ort endet."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat teilt die 22 den großen Plan, und die 2 fügt ein menschliches Detail hinzu, das ihn für die Beteiligten besser machen würde. Schreibt beides zusammen auf."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Große Werke stehen auf festen Fundamenten und sanften Händen."
+    ]
+   }
+  ]
+ },
+ "2-and-33": {
+  "title": "Lebenszahl 2 und 33: Hingabe und Mitgefühl",
+  "lead": "Die Meisterzahl 33 ist die Lehrerin der Liebe, die 2 ihre stille Zuhörerin. Ein zutiefst fürsorgliches Paar, das aufpassen muss, sich nicht ganz zu verschenken.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 2 und eine 33 begegnen sich oft in sorgender Arbeit: in einem Krankenhaus, einer Schule für Kinder mit besonderen Bedürfnissen, einer Suppenküche. Sie erkennen sich sofort als Menschen, die andere an erste Stelle setzen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 33 bietet Weisheit, heilende Gegenwart und weites Mitgefühl, die 2 aufmerksamen Halt und Feingefühl. Beide schätzen Harmonie, Familie und Dienst. Euer gemeinsames Zuhause kann für viele Menschen zur Zuflucht werden."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die Gefahr ist gemeinsame Selbstvernachlässigung. Beide können geben, bis nichts mehr übrig ist, und keiner bremst den anderen. Die 33 übernimmt vielleicht eine elterliche Rolle gegenüber der 2, und die 2 fühlt sich klein neben der Berufung der 33. Unter der Freundlichkeit kann unausgesprochener Groll wachsen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier zärtlich, hingebungsvoll und spirituell. Ihr sorgt auf unzählige kleine Arten füreinander. Die Beziehung vertieft sich, wenn ihr auch Verspieltheit und eigennützige Freuden zulasst: einen faulen Morgen, einen Urlaub ohne Pflichten, einen Abend, der nur euch gehört."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr füreinander ein sicherer Hafen. Beruflich passen Heilberufe, Lehre, Beratung, Hilfsorganisationen und spirituelle Begleitung."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ljubica, Lebenszahl 33, leitet ein kleines Hospiz. Goran, Lebenszahl 2, kam, um seinen sterbenden Vater zu besuchen, und blieb als Freiwilliger. Jahre später sind sie verheiratet. Er sagt, sie habe ihm beigebracht, dass eine im richtigen Moment gehaltene Hand eine ganze Predigt ist."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite die Ruhe der anderen so ernst nimmt wie die Fürsorge für Fremde."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 33 spürt manchmal das Gewicht der Verantwortung für die ganze Welt. Die 2 kann helfen, indem sie die 33 einfach daran erinnert, dass auch sie gehalten werden darf."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein stilles Haus in der Dämmerung nach einer langen Schicht, eine Kanne Tee, zwei Menschen, die nah beieinander sitzen, ohne zu reden, und den Tag von ihren Schultern gleiten lassen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wer anderen eine Freude macht, soll sich selbst nicht vergessen, sagen die Alten. Für dieses Paar ist das keine Nebensache, sondern die Bedingung, um lange geben zu können."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Plant einmal pro Woche etwas rein zum Vergnügen, ohne Nutzen für irgendwen sonst. Schützt es wie einen Termin mit einem Patienten."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine Liebe, die der Welt dient, wird tiefer, wenn sie auch in sich selbst ruht."
+    ]
+   }
+  ]
+ },
+ "3-and-3": {
+  "title": "Lebenszahl 3 und 3: ein Haus voller Lachen",
+  "lead": "Zwei Dreien bilden ein verspieltes, kreatives und geselliges Paar. Das Leben ist selten langweilig, die Herausforderung sind Tiefe, Fokus und die lästigen Grundlagen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Dreien begegnen sich meist dort, wo Menschen zusammenkommen: auf einer Feier, einer Bühne, in einem Schreibkurs, in einem vollen Café. Das Gespräch funkelt ab der ersten Minute. Jede Seite findet jemanden, der ihrem Witz und ihrer Begeisterung gewachsen ist."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Humor, Fantasie und die Liebe zum Ausdruck. Ideen vermehren sich, wenn ihr zusammen seid. Ihr genießt Kunst, Musik, Reisen und Freunde, und euer Zuhause ist oft voller Farbe und Lärm."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Dreien können ihre Energie in viele Richtungen verstreuen und wenig zu Ende bringen. Geld rinnt euch vielleicht durch die Finger. Wenn Gefühle schwer werden, machen womöglich beide Witze, statt zu reden, und echte Probleme bleiben hinter dem Lachen verborgen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist verspielt, zärtlich und voller Überraschungen. Die Liebe hält, wenn ihr lernt, ernste Momente gemeinsam auszuhalten, und wenn mindestens eine Seite Planung und Praktisches übernimmt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr unzertrennlich und unendlich unterhaltsam. Beruflich glänzt ihr in kreativen Feldern: Medien, Theater, Werbung, Gestaltung, Unterricht. Holt euch jemanden Organisiertes ins Boot."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Saška und Vlado, beide Lebenszahl 3, lernten sich in einer Laientheatergruppe kennen und heirateten nach einer Vorstellung auf der Bühne. Heute führen sie eine Theaterschule für Kinder. Ihre Buchhaltung war ein Chaos, bis ihre Steuerberaterin, eine geduldige 4, ein System einführte. Sie sagen, sie habe ihren Traum gerettet."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit Struktur, die Kreativität schützt: ein Budget, ein Kalender, Fristen für Projekte, die zählen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Wohnzimmer mit halbfertigen Bildern, eine Gitarre auf dem Sofa, Freunde, die unangemeldet vorbeikommen, und ein Stapel ungeöffneter Briefe im Regal."
+    ]
+   },
+   {
+    "title": "Über Tiefe",
+    "paras": [
+     "Dreien fürchten oft, Ernst würde den Spaß zerstören. Tatsächlich lachen Paare, die zusammen weinen können, danach noch besser."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Erst die Arbeit, dann das Vergnügen, heißt es. Für zwei Dreien ist die Reihenfolge oft umgekehrt, und das darf sein, solange die Arbeit trotzdem drankommt. Macht das Fertigwerden zum Teil des Spiels und feiert jedes abgeschlossene Stück mit derselben Freude wie den Anfang."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Setzt euch einmal pro Woche fünfzehn Minuten ohne Witze und Bildschirme zusammen und sprecht über je eine echte Sorge. Dann geht und habt Spaß."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Lachen hält das Haus hell, ehrliche Worte halten es aufrecht."
+    ]
+   }
+  ]
  }
 };
