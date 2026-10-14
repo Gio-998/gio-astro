@@ -3378,6 +3378,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "8-and-22": {
+  "title": "Life path 8 and 22: the executive and the master builder",
+  "lead": "The 8 commands resources; the 22 turns huge visions into lasting structures. Few pairings have this much practical power, and few need so much care to stay tender.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 8 and a 22 usually meet on a big stage: a national infrastructure tender, a merger, the founding of a company that will employ hundreds. The 8 sees in the 22 a partner who thinks even bigger. The 22 sees in the 8 someone who can raise the money and hold the line."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share discipline, stamina and a respect for results. The 8 brings authority, financial skill and negotiation. The 22 brings vision, method and the patience to build for decades. Together you can create institutions, companies and buildings that outlive you both."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both want to lead, and both can be stubborn. The 8 may focus on profit while the 22 thinks of legacy. Work can swallow everything, and both may treat feelings as a distraction. Arguments can become cold negotiations instead of honest talks."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is serious, loyal and protective. You respect each other deeply. Love grows when you agree that home is not another project and when each of you lets the other see tiredness and doubt."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you give each other strategic advice and real support in hard times. At work you suit construction, finance, public administration, energy, logistics and the leadership of large organisations."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Kosta, life path 8, ran a construction company. Ljiljana, life path 22, an urban planner, won the competition to design a new district on the edge of their city. He won the contract to build it. For five years they met weekly on site, arguing over costs and parks. When the district opened, they moved into one of its flats, the one facing the largest park."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 22 holds the long vision and the 8 secures the means, and when both protect private time as firmly as a contract."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Hard hats and laptops by the door, a model of the next project on the table, and a quiet Sunday morning where neither phone is allowed to ring."
+    ]
+   },
+   {
+    "title": "A note on softness",
+    "paras": [
+     "Two strong builders may forget that softness is also strength. A small gesture of care each day keeps the foundation of the relationship as firm as any building."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Measure your strength before you lift the stone, builders used to warn. The 8 measures resources and the 22 measures the design, and the heaviest stones are lifted together."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, take an evening with no work talk at all. Each of you brings one memory from childhood to share."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Build great things together, and keep a small warm room for the two of you."
+    ]
+   }
+  ]
+ },
+ "8-and-33": {
+  "title": "Life path 8 and 33: strength in service of love",
+  "lead": "The 8 has the power to provide and protect; the 33 has the heart to heal and teach. This pairing can turn ambition into care on a large scale.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 8 and a 33 often meet when the 33 needs support for people in its care: a school, a shelter, a hospital ward, a programme for families. The 8 is moved by the 33's devotion and impressed by its results. The 33 sees in the 8 a protector who can make good things last."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 8 brings authority, resources and organisation. The 33 brings compassion, patience and moral strength. The 8 gives the 33's love a solid base, and the 33 gives the 8's achievements a human meaning. Both are responsible and keep their promises."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 may seem cold or calculating to the 33, especially about money. The 33 may seem impractical or overly self sacrificing to the 8. The 8 may want control, the 33 may want harmony at any cost. Both can neglect their own needs."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm and protective. The 8 shelters, the 33 nurtures. Love deepens when the 8 allows itself to be cared for and the 33 allows itself to be provided for without guilt."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you combine practical help with emotional support. At work you suit healthcare management, education, social enterprise, foundations and family businesses with a social mission."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Aleksandra, life path 33, ran a centre for children with disabilities in a borrowed building. Vlatko, life path 8, a banker, visited to deliver a cheque from his bank and stayed for the afternoon. A year later he left the bank to manage the centre's finances. The centre now owns its building and has a waiting list of volunteers."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 8's strength protects the 33's mission and the 33's heart keeps the 8 connected to why it works so hard."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A spreadsheet of donations, a drawing given by a child, and a dinner where the 8 reports the numbers and the 33 tells the stories behind them."
+    ]
+   },
+   {
+    "title": "A note on self care",
+    "paras": [
+     "Both of you can give until empty. Scheduling rest, and defending it from emergencies, is part of your service, not a break from it."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "The strong should carry the weak, the old village rule said, and the strong should also be carried sometimes. This pair needs both halves of that rule."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 33 tells the 8 one way its work helped someone, and the 8 tells the 33 one way it plans to protect the 33's energy."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Strength becomes kindness when it learns to kneel."
+    ]
+   }
+  ]
+ },
+ "9-and-9": {
+  "title": "Life path 9 and 9: two old souls",
+  "lead": "Two nines share compassion, idealism and a wide view of the world. This is a generous and creative pairing, with one task: to make sure their own home gets as much love as the world does.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two nines often meet while helping: at a disaster relief centre, an art project for prisoners, a teaching programme abroad, a protest for a good cause. They feel as if they have known each other before. Within days they are talking about how to change the world together."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share ideals, empathy and a love of beauty and culture. Neither has to explain the urge to help. Both are tolerant and forgiving. Together you can create art, projects or a home that touches many lives."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two nines can both lose themselves in other people's problems. Emotions run high, and sadness can spread between you. Practical matters, money and plans may be neglected. Endings are hard for both, so old wounds may linger."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is romantic in the old sense: poetic, generous and full of feeling. You understand each other's sorrows. Love grows when both of you set limits on giving and spend time just enjoying each other's company."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you share causes and long talks about life. At work you suit humanitarian work, art, teaching, healing professions and international organisations."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Emilija and Nenad, both life path 9, met as volunteers after an earthquake. They spent a month building temporary schools and promised to keep in touch. Ten years later they run a foundation that rebuilds schools after disasters. Every year they take one week off, alone, in a quiet village where nobody knows them."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you keep a few practical anchors, such as a budget, a home routine and a shared calendar, and when you remember to receive as well as give."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A house full of art and books, a sleeping bag ready for the next mission, and two people who light a candle each evening and say what they were grateful for."
+    ]
+   },
+   {
+    "title": "A note on endings",
+    "paras": [
+     "Nines finish cycles, and two nines feel each ending twice. Marking the end of a project, a year or a hard time with a small ritual helps you both let go."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Give a little each day, and keep a little for tomorrow, the old housekeepers said. Two nines love the first half and must practise the second."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, each of you names one need of your own and the other helps meet it, before helping anyone else."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Love the world, and keep a corner of it just for the two of you."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",

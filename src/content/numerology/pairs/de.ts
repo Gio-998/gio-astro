@@ -3402,6 +3402,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "8-and-22": {
+  "title": "Lebenszahl 8 und 22: die Führungskraft und der Meisterbaumeister",
+  "lead": "Die 8 verfügt über Mittel, die 22 verwandelt riesige Visionen in dauerhafte Bauwerke. Wenige Verbindungen haben so viel praktische Kraft, und wenige brauchen so viel Pflege, um zärtlich zu bleiben.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 8 und eine 22 begegnen sich meist auf großer Bühne: bei einer nationalen Ausschreibung für Infrastruktur, einer Fusion, der Gründung einer Firma, die Hunderte beschäftigen wird. Die 8 sieht in der 22 eine Partnerin, die noch größer denkt. Die 22 sieht in der 8 jemanden, der das Geld auftreiben und die Linie halten kann."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Disziplin, Ausdauer und Respekt vor Ergebnissen. Die 8 bringt Autorität, Finanzgeschick und Verhandlungsstärke. Die 22 bringt Vision, Methode und die Geduld, über Jahrzehnte zu bauen. Zusammen könnt ihr Institutionen, Firmen und Gebäude schaffen, die euch beide überdauern."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide wollen führen, und beide können stur sein. Die 8 richtet sich vielleicht auf Gewinn aus, während die 22 an das Vermächtnis denkt. Die Arbeit kann alles verschlingen, und beide behandeln Gefühle womöglich als Ablenkung. Streit wird leicht zur kühlen Verhandlung statt zum ehrlichen Gespräch."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist ernst, treu und beschützend. Ihr achtet einander zutiefst. Die Liebe wächst, wenn ihr vereinbart, dass das Zuhause kein weiteres Projekt ist, und jeder den anderen Müdigkeit und Zweifel sehen lässt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gebt ihr einander strategischen Rat und echten Halt in schweren Zeiten. Beruflich passt ihr zu Bauwesen, Finanzen, öffentlicher Verwaltung, Energie, Logistik und der Leitung großer Organisationen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Kosta, Lebenszahl 8, führte eine Baufirma. Ljiljana, Lebenszahl 22, Stadtplanerin, gewann den Wettbewerb für ein neues Viertel am Rand ihrer Stadt. Er bekam den Auftrag, es zu bauen. Fünf Jahre lang trafen sie sich wöchentlich auf der Baustelle und stritten über Kosten und Parks. Als das Viertel eröffnet wurde, zogen sie in eine der Wohnungen, die zum größten Park hinausgeht."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 22 die lange Vision hält und die 8 die Mittel sichert, und wenn beide private Zeit so fest schützen wie einen Vertrag."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Bauhelme und Laptops an der Tür, ein Modell des nächsten Projekts auf dem Tisch und ein ruhiger Sonntagmorgen, an dem kein Telefon klingeln darf."
+    ]
+   },
+   {
+    "title": "Über Weichheit",
+    "paras": [
+     "Zwei starke Baumeister vergessen leicht, dass auch Weichheit Stärke ist. Eine kleine Geste der Fürsorge jeden Tag hält das Fundament der Beziehung so fest wie jedes Gebäude."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Miss deine Kraft, bevor du den Stein hebst, warnten die alten Meister. Die 8 misst die Mittel, die 22 den Entwurf, und die schwersten Steine hebt ihr gemeinsam."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nehmt euch einmal im Monat einen Abend ganz ohne Gespräche über Arbeit. Jeder bringt eine Erinnerung aus der Kindheit mit."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Baut gemeinsam Großes, und bewahrt ein kleines warmes Zimmer nur für euch zwei."
+    ]
+   }
+  ]
+ },
+ "8-and-33": {
+  "title": "Lebenszahl 8 und 33: Stärke im Dienst der Liebe",
+  "lead": "Die 8 hat die Kraft zu versorgen und zu schützen, die 33 das Herz zu heilen und zu lehren. Diese Verbindung kann Ehrgeiz in Fürsorge im großen Stil verwandeln.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 8 und eine 33 begegnen sich oft, wenn die 33 Unterstützung für die Menschen in ihrer Obhut braucht: eine Schule, eine Unterkunft, eine Krankenstation, ein Familienprogramm. Die 8 ist bewegt von der Hingabe der 33 und beeindruckt von ihren Ergebnissen. Die 33 sieht in der 8 einen Beschützer, der Gutes dauerhaft machen kann."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 8 bringt Autorität, Mittel und Organisation. Die 33 bringt Mitgefühl, Geduld und moralische Stärke. Die 8 gibt der Liebe der 33 ein festes Fundament, die 33 gibt den Leistungen der 8 einen menschlichen Sinn. Beide sind verantwortungsbewusst und halten ihr Wort."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 wirkt auf die 33 manchmal kühl oder berechnend, besonders beim Geld. Die 33 wirkt auf die 8 manchmal unpraktisch oder zu aufopfernd. Die 8 will Kontrolle, die 33 Harmonie um jeden Preis. Beide vernachlässigen leicht die eigenen Bedürfnisse."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm und beschützend. Die 8 bietet Schutz, die 33 nährt. Die Liebe vertieft sich, wenn die 8 sich umsorgen lässt und die 33 sich ohne Schuldgefühle versorgen lässt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde verbindet ihr praktische Hilfe mit emotionalem Halt. Beruflich passt ihr zu Gesundheitsmanagement, Bildung, Sozialunternehmen, Stiftungen und Familienbetrieben mit sozialem Auftrag."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Aleksandra, Lebenszahl 33, leitete ein Zentrum für Kinder mit Behinderung in einem geliehenen Gebäude. Vlatko, Lebenszahl 8, Banker, kam, um einen Scheck seiner Bank zu überbringen, und blieb den ganzen Nachmittag. Ein Jahr später verließ er die Bank, um die Finanzen des Zentrums zu führen. Heute gehört dem Zentrum sein Gebäude, und es hat eine Warteliste für Freiwillige."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Stärke der 8 die Aufgabe der 33 schützt und das Herz der 33 die 8 mit dem Grund verbunden hält, warum sie so hart arbeitet."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Spendentabelle, eine Zeichnung, die ein Kind geschenkt hat, und ein Abendessen, bei dem die 8 die Zahlen berichtet und die 33 die Geschichten dahinter erzählt."
+    ]
+   },
+   {
+    "title": "Über Selbstfürsorge",
+    "paras": [
+     "Ihr könnt beide geben, bis nichts mehr übrig ist. Ruhe einzuplanen und gegen Notfälle zu verteidigen ist Teil eures Dienstes und keine Pause davon."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Der Starke soll den Schwachen tragen, lautete die alte Dorfregel, und auch der Starke muss manchmal getragen werden. Dieses Paar braucht beide Hälften dieser Regel."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche erzählt die 33 der 8, wie ihre Arbeit jemandem geholfen hat, und die 8 erzählt der 33, wie sie deren Kraft schützen will."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Stärke wird zu Güte, wenn sie lernt, sich hinzuknien."
+    ]
+   }
+  ]
+ },
+ "9-and-9": {
+  "title": "Lebenszahl 9 und 9: zwei alte Seelen",
+  "lead": "Zwei Neunen teilen Mitgefühl, Idealismus und einen weiten Blick auf die Welt. Eine großzügige, kreative Verbindung mit einer Aufgabe: dafür zu sorgen, dass das eigene Zuhause so viel Liebe bekommt wie die Welt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Neunen begegnen sich oft beim Helfen: in einem Katastrophenhilfszentrum, einem Kunstprojekt mit Gefangenen, einem Lehrprogramm im Ausland, bei einem Protest für eine gute Sache. Sie fühlen sich, als kennten sie sich von früher. Nach wenigen Tagen sprechen sie schon darüber, wie sie gemeinsam die Welt verändern."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Ideale, Empathie und die Liebe zu Schönheit und Kultur. Keiner muss den Drang zu helfen erklären. Beide sind tolerant und verzeihen. Zusammen könnt ihr Kunst, Projekte oder ein Zuhause schaffen, das viele Leben berührt."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Neunen können sich beide in den Problemen anderer verlieren. Die Gefühle sind stark, und Traurigkeit kann sich zwischen euch ausbreiten. Praktisches, Geld und Pläne bleiben womöglich liegen. Abschiede fallen beiden schwer, also heilen alte Wunden langsam."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist romantisch im alten Sinn: poetisch, großzügig und voller Gefühl. Ihr versteht den Kummer des anderen. Die Liebe wächst, wenn ihr beide dem Geben Grenzen setzt und Zeit damit verbringt, einfach die Gesellschaft des anderen zu genießen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt ihr Anliegen und lange Gespräche über das Leben. Beruflich passt ihr zu humanitärer Arbeit, Kunst, Unterricht, heilenden Berufen und internationalen Organisationen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Emilija und Nenad, beide Lebenszahl 9, lernten sich als Freiwillige nach einem Erdbeben kennen. Einen Monat lang bauten sie Notschulen und versprachen, in Kontakt zu bleiben. Zehn Jahre später führen sie eine Stiftung, die nach Katastrophen Schulen wieder aufbaut. Jedes Jahr nehmen sie sich eine Woche frei, allein, in einem stillen Dorf, wo niemand sie kennt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr ein paar praktische Anker pflegt, ein Budget, eine Hausroutine und einen gemeinsamen Kalender, und daran denkt, auch zu empfangen und nicht nur zu geben."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Haus voller Kunst und Bücher, ein Schlafsack, bereit für den nächsten Einsatz, und zwei Menschen, die jeden Abend eine Kerze anzünden und sagen, wofür sie dankbar waren."
+    ]
+   },
+   {
+    "title": "Über Abschlüsse",
+    "paras": [
+     "Neunen schließen Kreise, und zwei Neunen spüren jedes Ende doppelt. Wer das Ende eines Projekts, eines Jahres oder einer schweren Zeit mit einem kleinen Ritual markiert, kann leichter loslassen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Gib jeden Tag ein wenig und bewahre ein wenig für morgen, sagten die alten Hausfrauen. Zwei Neunen lieben die erste Hälfte und müssen die zweite üben."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt einmal im Monat jeder ein eigenes Bedürfnis, und der andere hilft, es zu erfüllen, bevor ihr irgendjemand anderem helft."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Liebt die Welt, und behaltet eine Ecke davon nur für euch zwei."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
