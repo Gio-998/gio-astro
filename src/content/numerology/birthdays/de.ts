@@ -2009,5 +2009,239 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "28": {
+  "title": "Geboren am 28.: die teamfähigen Anführer",
+  "lead": "Der 28. reduziert sich über 10 auf 1 und verbindet die Feinfühligkeit der 2 mit dem Ehrgeiz der 8: eine Führung, die gewinnt, indem sie Menschen mitnimmt.",
+  "sections": [
+   {
+    "title": "Die Gabe des 28.",
+    "paras": [
+     "Achtundzwanzig geht über die 10 zur 1, trägt also den Pioniergeist der 1, gemildert durch die Diplomatie der 2 und gestützt von der Tatkraft der 8. Wer an diesem Tag geboren ist, will oft führen, führt aber am besten, wenn er zuhört. Die Gabe ist, Neues zu beginnen und andere einzuladen, es zu ihrem Eigenen zu machen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht hast du klare Meinungen und eine klare Richtung und merkst trotzdem, wie andere darüber fühlen. Du bist gern vorn, freust dich aber auch an einem Team, das funktioniert. Viele vom 28. verhandeln, überzeugen und glätten Spannungen, damit ein Plan vorankommt."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Initiative, Überzeugungskraft, Fairness, Organisationstalent und eine Balance aus Ehrgeiz und Wärme. Der 28. kommt gut zurecht als Teamleiterin, Anwalt, Unternehmerin, Trainer, Politikerin oder Produzent."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Sturheit und die Angst, von anderen abhängig zu sein, sind die Risiken. Du bestehst vielleicht auf deinem Weg und sagst dabei, du suchst Einigung, oder bist gekränkt, wenn eine Partnerschaft Kompromisse verlangt. Wachstum kommt durch echte Zusammenarbeit, bei der das Ergebnis allen gehört."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "In der Liebe bist du zärtlich und beschützend, brauchst aber Respekt für deine Unabhängigkeit. Am besten passt ein Mensch mit eigenen Zielen, damit zwei Führende nebeneinander gehen statt zu konkurrieren."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Management, Recht, Unternehmertum, Politik, Film und Musikproduktion, Sporttraining, Vertriebsleitung und der Aufbau neuer Abteilungen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ivana, geboren am 28. Februar, gründete in ihrem Tal eine Genossenschaft von Obstbauern, nachdem die Händler die Preise immer weiter drückten. Bei jeder Versammlung unterschrieb sie zuerst und sprach zuletzt. Zehn Jahre später exportiert die Genossenschaft Aprikosenmarmelade, und sie besteht noch immer darauf, dass jedes Mitglied eine gleiche Stimme hat."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 2 oder 6 gibt ein Geburtstag am 28. fürsorglichen Gaben Selbstvertrauen und Initiative. Auf der 1 verdoppelt sich der Antrieb, Geduld wird zur Lektion. Auf der 4 lenkt er beständige Arbeit zu kühnen Zielen. Auf der 7 bekommt Forschung eine öffentliche Stimme."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Whiteboard voller Pfeile, eine Runde Telefonate vor dem Frühstück, ein Teamessen, bei dem das schwierigste Problem beim Nachtisch gelöst wird: Der 28. führt aus der Mitte des Tisches."
+    ]
+   },
+   {
+    "title": "Über die Null",
+    "paras": [
+     "Weil die 28 über die 10 geht, sehen viele darin einen Kreislauf aus Enden und Neuanfängen. Der 28. fängt oft neu an: eine neue Stadt, ein neues Fach, ein neues Vorhaben, jedes Mal mit mehr Erfahrung im ersten Schritt."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Frag vor deiner nächsten Entscheidung zwei Menschen nach ihrer Sicht und ändere mindestens ein Detail deines Plans wegen ihrer Antwort. Führung wächst, wenn andere ihre Spuren darin sehen. Gemeinsam statt einsam, heißt es nicht umsonst."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Geh voran und lass die Tür offen, damit andere mit dir hindurchgehen."
+    ]
+   }
+  ]
+ },
+ "29": {
+  "title": "Geboren am 29.: die intuitive Brücke",
+  "lead": "Der 29. ergibt 11, eine Meisterzahl: geschärfte Intuition, emotionale Tiefe und die Fähigkeit zu inspirieren, in Spannung mit großer Empfindsamkeit.",
+  "sections": [
+   {
+    "title": "Die Gabe des 29.",
+    "paras": [
+     "Neunundzwanzig ergibt 11, die Meisterzahl der Erleuchtung, und erst dann 2. Die Ziffern verbinden die Feinfühligkeit der 2 mit dem Mitgefühl der 9. Wer an diesem Tag geboren ist, hat oft eine starke Intuition, lebhafte Träume und ein Gespür dafür, was eine Gruppe braucht. Die Gabe ist, eine Brücke zwischen sichtbarer und innerer Welt zu sein."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht fühlst du alles intensiv, Freude wie Trauer. Vielleicht weißt du, wer anruft, bevor du aufs Telefon schaust. Menschen suchen deinen Rat, manchmal mehr, als du tragen kannst. Deine Stimmung wechselt schnell, und du brauchst regelmäßig Stille, um zu trennen, was deins ist und was du von anderen aufgenommen hast."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Intuition, Empathie, Inspiration, Kreativität und Diplomatie. Der 29. glänzt in Beratung, Kunst, spiritueller Arbeit, Lehre, Mediation und jeder Rolle, in der das Lesen von Menschen zählt."
+    ]
+   },
+   {
+    "title": "Die Lektion der Meisterzahl",
+    "paras": [
+     "Die 11 bringt hohe Spannung. Ohne Ausgleich pendelst du vielleicht zwischen Zuversicht und Selbstzweifel oder zwischen totalem Geben und Verschließen. Die Lektion ist Erdung: Schlaf, Routine, Natur und ehrliche Menschen, die die Inspiration mit dem Alltag verbinden."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du liebst tief und brauchst einen Menschen, der emotional stabil und freundlich ist. Harte Worte verletzen dich lange. In einer sicheren Beziehung wirst du eine bemerkenswerte Quelle von Ermutigung und Einsicht."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Psychotherapie, Musik, Film, Schreiben, spirituelle Begleitung, Pflege, Mediation, Design und Lehre, besonders mit Kindern oder in den Künsten."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Nikola, geboren am 29. Oktober, arbeitete jahrelang in einer Bank und schrieb nachts Lieder. Nach einer langen Krankheit ging er, um auf einer Kinderstation im Krankenhaus Musik zu unterrichten. Eltern sagen, er weiß, welches Lied ein Kind braucht, bevor das Kind es selbst weiß."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 1 oder 8 bringt ein Geburtstag am 29. Intuition und Herz in den Ehrgeiz. Auf der 2 oder 11 verdoppelt sich die Empfindsamkeit, Schutz vor Überlastung wird wichtig. Auf der 4 kommt Inspiration in die Struktur. Auf der 5 bekommt das Abenteuer Tiefe."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Traumtagebuch auf dem Nachttisch, eine Playlist für jede Stimmung, ein langer Spaziergang am Fluss nach einem vollen Tag: Der 29. lädt sich durch stille Schönheit auf."
+    ]
+   },
+   {
+    "title": "Über Träume",
+    "paras": [
+     "Viele vom 29. berichten von bedeutsamen Träumen. Ein Monat Aufschreiben zeigt oft Muster, die Beachtung verdienen, doch es ist klug, sie als Einladung zum Nachdenken zu sehen und nicht als Befehl."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Nimm dir nach Treffen zehn Minuten allein und benenne laut drei Gefühle, die deine sind, und eines, das du vielleicht von jemand anderem aufgenommen hast. Dann lass dieses eine los."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Empfindsamkeit ist eine Laterne; hüte die Flamme, und sie leuchtet vielen den Weg."
+    ]
+   }
+  ]
+ },
+ "30": {
+  "title": "Geboren am 30.: die ausdrucksstarken Erzählenden",
+  "lead": "Der 30. reduziert sich auf 3 mit einer Null daneben: Kreativität und Ausdruck verstärkt, mit natürlicher Begabung für Worte und gesellige Wärme.",
+  "sections": [
+   {
+    "title": "Die Gabe des 30.",
+    "paras": [
+     "Dreißig trägt die 3 mit einer offenen Null, ein Zeichen, dass die schöpferische Kraft der 3 vergrößert ist. Wer an diesem Tag geboren ist, erzählt oft von Natur aus gut, schnell mit Worten, Bildern und Humor. Die Gabe ist, Ideen lebendig zu machen und die Stimmung in jedem Raum zu heben."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht liebst du Gespräche, Schreiben, Auftritte oder Gestaltung. Du bemerkst Schönheit und kannst sie so beschreiben, dass andere sie auch sehen. Vielleicht beginnst du viele Projekte mit Begeisterung. Wenn dich etwas verletzt, versteckst du es vielleicht hinter einem Witz oder verschwindest in vollen Plänen."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Fantasie, Redegewandtheit, Charme, Optimismus und ein Talent für Präsentation. Der 30. kommt gut zurecht im Schreiben, Schauspiel, Unterricht, in Werbung, sozialen Medien, Design und jedem Beruf, der auf Kommunikation baut."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Zerstreuter Fokus und eine spitze Zunge sind die Risiken. Du sprichst vielleicht, bevor du denkst, oder lässt die Laune entscheiden, ob Arbeit erledigt wird. Wachstum kommt durch Disziplin, die das Talent schützt: Fristen, Überarbeitung und ein paar nahe Kritiker."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du brauchst einen Menschen, der deinen Witz genießt und auch die ernsten Gefühle unter dem Humor hört. Gemeinsame Kreativität, Reisen und Lachen halten die Liebe frisch."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Schreiben, Journalismus, Theater, Film, Lehre, Werbung, Öffentlichkeitsarbeit, Illustration, Mode und Gastgewerbe."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Sara, geboren am 30. Mai, begann damit, ihren jüngeren Cousins Geschichten zu erzählen, und moderiert heute eine beliebte Radiosendung über lokale Legenden. Sie nimmt Gespräche mit Großmüttern in Dörfern auf und macht daraus kurze Folgen. Sie sagt, ihre besten Geschichten sind die, nach denen sie fast vergessen hätte zu fragen."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 7 bringt ein Geburtstag am 30. Farbe und Stimme in ernste Wege. Auf der 3 verdoppelt sich die Kreativität, Struktur wird nötig. Auf der 6 wird Fürsorge verspielt. Auf der 8 bekommt das Geschäft eine Gabe zur Überzeugung."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Caféterrasse, ein Notizbuch voller halber Sätze, Freunde, die sich vorbeugen, um das Ende einer Geschichte zu hören: Der 30. macht aus gewöhnlichen Momenten Szenen, die man nicht vergisst."
+    ]
+   },
+   {
+    "title": "Über Kritik",
+    "paras": [
+     "Weil du so viel von dir in den Ausdruck legst, kann Kritik stechen. Es hilft, das Werk von der Person zu trennen und eine vertraute Leserin oder einen vertrauten Leser zu haben, deren Ehrlichkeit sich sicher anfühlt."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Schreib oder nimm jede Woche ein kurzes Stück auf und mach es fertig, auch wenn es unvollkommen ist. Ein fertiges kleines Ding gibt mehr Selbstvertrauen als viele glänzende Anfänge."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Worte können einen Raum erhellen; gib ihnen Zeit und Sorgfalt, und sie bleiben."
+    ]
+   }
+  ]
  }
 };

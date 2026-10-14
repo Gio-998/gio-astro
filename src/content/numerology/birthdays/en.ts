@@ -1973,5 +1973,239 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "28": {
+  "title": "Born on the 28th: the cooperative leader",
+  "lead": "The 28th reduces to 1 through 10 and joins the sensitivity of 2 with the ambition of 8: a leader who wins by bringing people along.",
+  "sections": [
+   {
+    "title": "The gift of the 28th",
+    "paras": [
+     "Twenty eight passes through 10 on its way to 1, so it carries the pioneering spirit of 1 softened by the diplomacy of 2 and backed by the executive power of 8. People born on this day often want to lead, but they lead best when they listen. Their gift is starting new things and inviting others to own them too."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may have strong opinions and a clear sense of direction, yet you notice how others feel about it. You enjoy being first, but you also enjoy a team that clicks. Many of the 28th find themselves negotiating, persuading and smoothing tension so that a plan can move forward."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Initiative, persuasion, fairness, organisational skill and a balance of ambition and warmth. The 28th does well as a team lead, lawyer, entrepreneur, coach, politician or producer."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "A stubborn streak and a fear of depending on others are the risks. The 28th can insist on their own way while claiming to seek agreement, or feel hurt when a partnership needs compromise. Growth comes from real collaboration, where the result belongs to everyone."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "In love the 28th is affectionate and protective but needs respect for their independence. They do best with a partner who has their own ambitions, so that two leaders walk side by side rather than compete."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Management, law, entrepreneurship, politics, film and music production, sports coaching, sales leadership and starting new departments."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ivana, born on the 28th of February, started a cooperative of fruit growers in her valley after buyers kept lowering prices. She was the first to sign and the last to speak at every meeting. Ten years later the cooperative exports apricot jam abroad, and she still insists every member gets an equal vote."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 2 or 6, a 28th birthday adds confidence and initiative to caring gifts. On 1 it doubles the drive, so patience becomes the lesson. On 4 it pushes steady work toward bold goals. On 7 it gives research a public voice."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A whiteboard full of arrows, a round of phone calls before breakfast, a team lunch where the hardest problem gets solved over dessert: the 28th leads from the middle of the table."
+    ]
+   },
+   {
+    "title": "A note on the zero",
+    "paras": [
+     "Because 28 passes through 10, many numerologists see a cycle of endings and new beginnings in it. The 28th often restarts: a new city, a new field, a new venture, each time bringing more experience into the first step."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Before your next decision, ask two people for their view and change at least one detail of your plan because of what they said. Leadership grows when others see their fingerprints on it."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Go first, and leave the door open for others to walk through with you."
+    ]
+   }
+  ]
+ },
+ "29": {
+  "title": "Born on the 29th: the intuitive bridge",
+  "lead": "The 29th reduces to 11, a master number: heightened intuition, emotional depth and the capacity to inspire, held in tension with sensitivity.",
+  "sections": [
+   {
+    "title": "The gift of the 29th",
+    "paras": [
+     "Twenty nine adds up to 11, the master number of illumination, and only then to 2. Its digits combine the sensitivity of 2 with the compassion of 9. People born on this day often have strong intuition, vivid dreams and an ability to sense what a group needs. Their gift is acting as a bridge between the visible world and the inner one."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may feel things intensely, both joy and sorrow. You might know who is calling before you look at the phone. People seek your advice, sometimes more than you can carry. Your moods can shift quickly, and you need regular quiet to sort what belongs to you from what you picked up from others."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Intuition, empathy, inspiration, creativity and diplomacy. The 29th shines in counselling, the arts, spiritual work, teaching, mediation and any role where reading people matters."
+    ]
+   },
+   {
+    "title": "The master number lesson",
+    "paras": [
+     "The 11 brings high voltage. When unbalanced, the 29th may swing between confidence and self doubt, or between giving everything and closing off. The lesson is grounding: sleep, routine, nature and honest people who keep the inspiration connected to daily life."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 29th loves deeply and needs a partner who is emotionally steady and kind. Harsh words wound them for a long time. In a safe relationship they become a remarkable source of encouragement and insight."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Psychotherapy, music, film, writing, spiritual guidance, nursing, mediation, design and teaching, especially of children or the arts."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Nikola, born on the 29th of October, worked in a bank for years while writing songs at night. After a long illness he left to teach music in a hospital ward for children. Parents say he can tell which song a child needs before the child knows it."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 1 or 8, a 29th birthday adds intuition and heart to ambition. On 2 or 11 it doubles the sensitivity, so protection from overload matters. On 4 it brings inspiration into structure. On 5 it lends depth to adventure."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A dream journal on the night table, a playlist for every mood, a long walk by the river after a crowded day: the 29th recharges through quiet beauty."
+    ]
+   },
+   {
+    "title": "A note on dreams",
+    "paras": [
+     "Many of the 29th report meaningful dreams. Writing them down for a month often reveals patterns worth noticing, though it is wise to treat them as invitations to reflect rather than orders."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "After social events, take ten minutes alone and name aloud three feelings that are yours and one you may have absorbed from someone else. Then let that one go."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your sensitivity is a lantern; tend the flame and it will light the way for many."
+    ]
+   }
+  ]
+ },
+ "30": {
+  "title": "Born on the 30th: the expressive storyteller",
+  "lead": "The 30th reduces to 3 with a zero beside it: creativity and self expression amplified, with a natural gift for words and social warmth.",
+  "sections": [
+   {
+    "title": "The gift of the 30th",
+    "paras": [
+     "Thirty carries the 3 with an open zero, a sign that the creative power of 3 is magnified. People born on this day are often natural storytellers, quick with words, images and humour. Their gift is making ideas vivid and lifting the mood of any room they enter."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may love conversation, writing, performance or design. You notice beauty and can describe it so others see it too. You might start many projects with enthusiasm. When you feel hurt, you may hide it behind a joke or vanish into busy plans."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Imagination, eloquence, charm, optimism and a gift for presentation. The 30th does well in writing, acting, teaching, advertising, social media, design and any career built on communication."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Scattered focus and a sharp tongue are the risks. The 30th can speak before thinking, or let mood decide whether work gets done. Growth comes from discipline that protects the talent: deadlines, editing and a few close critics."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 30th needs a partner who enjoys their wit and also listens to the serious feelings under the humour. Shared creativity, travel and laughter keep love fresh."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Writing, journalism, theatre, film, teaching, advertising, public relations, illustration, fashion and hospitality."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Sara, born on the 30th of May, began telling stories to her younger cousins and now hosts a popular radio show about local legends. She records interviews with grandmothers in villages and turns them into short episodes. She says her best stories are the ones she nearly forgot to ask about."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 4 or 7, a 30th birthday adds colour and voice to serious paths. On 3 it doubles the creativity, so structure is needed. On 6 it makes care playful. On 8 it gives business a gift for persuasion."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A café terrace, a notebook full of half sentences, friends leaning in to hear the end of a story: the 30th turns ordinary moments into scenes worth remembering."
+    ]
+   },
+   {
+    "title": "A note on criticism",
+    "paras": [
+     "Because the 30th puts so much of themselves into expression, criticism can sting. It helps to separate the work from the person and to keep one trusted reader whose honesty feels safe."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Write or record one short piece every week and finish it, even if it is imperfect. A finished small thing builds more confidence than many brilliant beginnings."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your words can light a room; give them time and care, and they will last."
+    ]
+   }
+  ]
  }
 };
