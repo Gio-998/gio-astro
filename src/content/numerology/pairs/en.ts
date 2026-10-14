@@ -587,5 +587,203 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "1-and-11": {
+  "title": "Life path 1 and 11: the pioneer and the visionary",
+  "lead": "The 1 brings will and momentum, the master 11 brings intuition and inspiration. A charged pairing where courage meets a sense of calling.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 11 is often drawn to the 1's certainty, a welcome anchor for a sensitive, idea filled mind. The 1 senses something unusual in the 11: a depth, a vision, a way of seeing what others miss. Meetings often feel fated, as if the timing was arranged."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 11 dreams of what could be; the 1 knows how to make a first move. The 1 helps the 11 trust their visions enough to act, and the 11 gives the 1's ambition a higher purpose. Together you can lead projects that inspire many people."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 11 is highly sensitive and can be wounded by the 1's bluntness. The 1 may lose patience with the 11's mood swings or long periods of doubt. The 11 sometimes needs to process for days what the 1 would decide in minutes."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is intense and meaningful. The 11 wants a soul connection; the 1 wants loyalty and passion. Love grows when the 1 softens their tone and the 11 states needs clearly rather than hoping to be understood without words."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 11 brings insight and the 1 brings the push. At work the 11 is the inspiring voice or creative director, the 1 the driving force who turns the vision into launches and deadlines."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Teodora, life path 11, painted large murals and dreamed of covering her grey neighbourhood in colour. Stefan, life path 1, a city council member, heard her speak at a meeting and pushed the project through in a year. Now twelve walls glow along the river, and he still asks her where the next one should go."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 1 protects the 11's energy and the 11 trusts the 1's timing. Shared work with meaning keeps the bond strong."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 11 carries a high voltage that can tip into anxiety. A calm, steady 1 who offers routine and reassurance helps the 11 stay grounded, while the 11 reminds the 1 that not everything worth doing can be measured."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each evening, the 11 shares one idea or feeling from the day and the 1 listens without fixing it. Then the 1 shares one plan, and the 11 offers an intuition about it."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Vision lights the path and will walks it; keep one hand on each."
+    ]
+   }
+  ]
+ },
+ "1-and-22": {
+  "title": "Life path 1 and 22: the starter and the master builder",
+  "lead": "The 1 opens doors and the master 22 builds the house behind them. A pairing with rare capacity to create lasting things on a large scale.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 1 and a 22 often meet over a project too big for one person. The 1 brings boldness; the 22 brings a plan that already includes the next ten years. Respect is immediate, and both feel they have found someone serious about results."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you are driven and practical. The 1 provides initiative and speed; the 22 provides long range vision and disciplined execution. The 1 is impressed by the 22's scale, and the 22 is energised by the 1's courage to start before every detail is settled."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 can carry heavy responsibility and feel the 1 is reckless. The 1 can feel the 22 is controlling or slow to celebrate. Both can overwork, leaving the relationship with little time for rest and simple fun."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is loyal and solid, often built around shared goals: a home, a business, a family legacy. The relationship flourishes when you protect time that has nothing to do with work, and when the 22 allows the 1 to bring spontaneity into routine."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you encourage each other to aim high. At work this is a founder and architect duo, ideal for construction, institutions, technology and anything built to last."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Luka, life path 1, wanted to open a sports hall in his town. Jelena, life path 22, an engineer, drew plans for a complex with a pool, a library and a youth centre. It took eight years. At the opening, he said he had wanted a hall and she gave the town a heart."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair works best when the 1 respects the 22's long horizon and the 22 respects the 1's need to see progress now. Clear milestones serve both."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 22 can feel crushed by its own vision. The 1's gift is to say: start with this one step today. That simple courage often unlocks the 22's huge potential."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, take a day off together with no plans at all. Notice who finds it harder, and be kind about it."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Begin boldly, build wisely, and rest together between the floors."
+    ]
+   }
+  ]
+ },
+ "1-and-33": {
+  "title": "Life path 1 and 33: the leader and the master teacher",
+  "lead": "The 1 brings direction, the master 33 brings compassion and a calling to heal and teach. A pairing that can turn kindness into real change.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 33 is rare and often meets the 1 in a moment of need, as a teacher, healer or mentor. The 1 feels deeply seen. The 33 is drawn to the 1's strength and clarity, which can help carry a large heart into the world."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 33 lives for service and love; the 1 lives for action and progress. The 1 helps the 33 set boundaries and pursue goals; the 33 helps the 1 lead with compassion. Together you can build schools, clinics, communities and families that nurture many."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 33 can sacrifice too much, and the 1 may take that care for granted. The 1's directness can feel harsh to the 33. The 33 may try to heal or improve the 1, which the independent 1 resists."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is warm, devoted and often family centred. The 33 gives deeply; the 1 protects fiercely. It works when the 1 actively gives back, with time, gratitude and gentleness, and when the 33 lets the 1 be who they are without trying to fix them."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 33 is the wise listener and the 1 the brave companion. At work the 1 runs the organisation and the 33 shapes its culture and mission."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ivan, life path 1, ran a busy hospital department. Dragana, life path 33, a nurse, started an evening program where volunteers read to lonely patients. He doubted it would last. Five years later it runs in nine hospitals, and he jokes that she is the real director."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair shines when care and leadership work for the same cause and when both guard the 33 against burnout."
+    ]
+   },
+   {
+    "title": "A note on the master number",
+    "paras": [
+     "The 33 is a number of compassion that can forget itself. A loving 1 is often the one who insists that the 33 eats, sleeps and takes a holiday."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each week, the 1 asks the 33 one question: what do you need this week? Then the 1 makes sure it happens."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A strong hand and a kind heart can move the world when they move together."
+    ]
+   }
+  ]
  }
 };

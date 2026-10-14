@@ -593,5 +593,209 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "1-and-11": {
+  "title": "Lebenszahl 1 und 11: Pionierkraft und Vision",
+  "lead": "Die 1 bringt Willen und Schwung, die Meisterzahl 11 Intuition und Inspiration. Ein aufgeladenes Paar, in dem Mut auf ein Gefühl von Berufung trifft.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 11 wird oft von der Gewissheit der 1 angezogen, einem willkommenen Anker für einen empfindsamen, ideenreichen Geist. Die 1 spürt etwas Ungewöhnliches in der 11: Tiefe, Vision, einen Blick für das, was andere übersehen. Begegnungen fühlen sich oft schicksalhaft an, als wäre der Zeitpunkt arrangiert."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 11 träumt davon, was sein könnte, die 1 weiß, wie man den ersten Schritt macht. Die 1 hilft der 11, ihren Visionen genug zu trauen, um zu handeln, und die 11 gibt dem Ehrgeiz der 1 einen höheren Sinn. Gemeinsam könnt ihr Projekte leiten, die viele Menschen inspirieren."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 11 ist sehr empfindsam und kann von der Direktheit der 1 verletzt werden. Die 1 verliert vielleicht die Geduld mit Stimmungsschwankungen oder langen Zweifelsphasen der 11. Die 11 braucht manchmal Tage, um zu verarbeiten, was die 1 in Minuten entscheiden würde."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist intensiv und bedeutungsvoll. Die 11 sucht eine Verbindung der Seelen, die 1 Treue und Leidenschaft. Die Liebe wächst, wenn die 1 ihren Ton weicher macht und die 11 Bedürfnisse klar ausspricht, statt zu hoffen, ohne Worte verstanden zu werden."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde bringt die 11 Einsicht und die 1 den Anstoß. Bei der Arbeit ist die 11 die inspirierende Stimme oder kreative Leitung, die 1 die treibende Kraft, die aus der Vision Starttermine und Fristen macht."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Teodora, Lebenszahl 11, malte große Wandbilder und träumte davon, ihr graues Viertel in Farbe zu tauchen. Stefan, Lebenszahl 1, Stadtrat, hörte sie bei einer Versammlung sprechen und setzte das Projekt in einem Jahr durch. Heute leuchten zwölf Wände am Fluss, und er fragt sie noch immer, wo die nächste hinkommen soll."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 1 die Energie der 11 schützt und die 11 dem Zeitgefühl der 1 vertraut. Gemeinsame Arbeit mit Sinn hält die Bindung stark."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 11 trägt eine hohe Spannung, die in Unruhe kippen kann. Eine ruhige, beständige 1, die Routine und Zuspruch bietet, hilft der 11, geerdet zu bleiben, während die 11 die 1 daran erinnert, dass nicht alles Wertvolle messbar ist."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Abend teilt die 11 eine Idee oder ein Gefühl des Tages, und die 1 hört zu, ohne etwas zu reparieren. Dann teilt die 1 einen Plan, und die 11 sagt, was ihre Intuition dazu meint."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Vision erhellt den Weg, der Wille geht ihn; behaltet eine Hand an beidem."
+    ]
+   }
+  ]
+ },
+ "1-and-22": {
+  "title": "Lebenszahl 1 und 22: Aufbruch und Meisterbau",
+  "lead": "Die 1 öffnet Türen, und die Meisterzahl 22 baut das Haus dahinter. Ein Paar mit seltener Fähigkeit, Dauerhaftes in großem Maßstab zu schaffen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 1 und eine 22 begegnen sich oft bei einem Vorhaben, das für einen Menschen zu groß ist. Die 1 bringt Kühnheit, die 22 einen Plan, der schon die nächsten zehn Jahre enthält. Der Respekt ist sofort da, und beide spüren, dass sie jemanden gefunden haben, dem Ergebnisse ernst sind."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr seid beide getrieben und praktisch. Die 1 liefert Initiative und Tempo, die 22 weitreichende Vision und disziplinierte Umsetzung. Die 1 ist beeindruckt vom Maßstab der 22, die 22 schöpft Energie aus dem Mut der 1, anzufangen, bevor jedes Detail geklärt ist."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 trägt oft schwere Verantwortung und findet die 1 leichtsinnig. Die 1 empfindet die 22 als kontrollierend oder zu langsam beim Feiern. Beide können sich überarbeiten, sodass der Beziehung wenig Zeit für Ruhe und einfachen Spaß bleibt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier treu und solide, oft um gemeinsame Ziele gebaut: ein Zuhause, ein Betrieb, ein Familienerbe. Die Beziehung blüht, wenn ihr Zeit schützt, die nichts mit Arbeit zu tun hat, und die 22 der 1 erlaubt, Spontaneität in die Routine zu bringen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde ermutigt ihr euch, hoch zu zielen. Bei der Arbeit ist das ein Duo aus Gründung und Architektur, ideal für Bau, Institutionen, Technik und alles, was bleiben soll."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Luka, Lebenszahl 1, wollte in seiner Stadt eine Sporthalle eröffnen. Jelena, Lebenszahl 22, Ingenieurin, zeichnete Pläne für einen Komplex mit Schwimmbad, Bibliothek und Jugendzentrum. Es dauerte acht Jahre. Bei der Eröffnung sagte er, er habe eine Halle gewollt, und sie habe der Stadt ein Herz geschenkt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar gelingt am besten, wenn die 1 den langen Horizont der 22 respektiert und die 22 das Bedürfnis der 1, jetzt Fortschritt zu sehen. Klare Etappen dienen beiden."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 22 kann sich von ihrer eigenen Vision erdrückt fühlen. Die Gabe der 1 ist zu sagen: Fang heute mit diesem einen Schritt an. Dieser einfache Mut entfesselt oft das große Potenzial der 22."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nehmt euch einmal im Monat einen gemeinsamen freien Tag ganz ohne Pläne. Beobachtet, wem es schwerer fällt, und seid freundlich dabei."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Beginnt kühn, baut weise und ruht euch zwischen den Stockwerken gemeinsam aus."
+    ]
+   }
+  ]
+ },
+ "1-and-33": {
+  "title": "Lebenszahl 1 und 33: Führung und Meisterlehre",
+  "lead": "Die 1 bringt Richtung, die Meisterzahl 33 Mitgefühl und den Ruf zu heilen und zu lehren. Ein Paar, das Güte in echte Veränderung verwandeln kann.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 33 ist selten und begegnet der 1 oft in einem Moment der Not, als Lehrerin, Heiler oder Mentorin. Die 1 fühlt sich tief gesehen. Die 33 wird von der Stärke und Klarheit der 1 angezogen, die helfen kann, ein großes Herz in die Welt zu tragen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 33 lebt für Dienst und Liebe, die 1 für Tat und Fortschritt. Die 1 hilft der 33, Grenzen zu setzen und Ziele zu verfolgen, die 33 hilft der 1, mit Mitgefühl zu führen. Gemeinsam könnt ihr Schulen, Praxen, Gemeinschaften und Familien aufbauen, die viele nähren."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 33 opfert sich vielleicht zu sehr auf, und die 1 nimmt diese Fürsorge als selbstverständlich. Die Direktheit der 1 kann für die 33 hart klingen. Die 33 versucht vielleicht, die 1 zu heilen oder zu verbessern, wogegen sich die unabhängige 1 wehrt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier warm, hingebungsvoll und oft familienzentriert. Die 33 gibt tief, die 1 schützt heftig. Es gelingt, wenn die 1 aktiv zurückgibt, mit Zeit, Dankbarkeit und Sanftheit, und wenn die 33 die 1 so sein lässt, wie sie ist, ohne sie reparieren zu wollen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde ist die 33 die weise Zuhörerin und die 1 die mutige Begleitung. Bei der Arbeit leitet die 1 die Organisation, und die 33 prägt ihre Kultur und ihren Auftrag."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ivan, Lebenszahl 1, leitete eine volle Krankenhausabteilung. Dragana, Lebenszahl 33, Pflegerin, startete ein Abendprogramm, bei dem Freiwillige einsamen Patienten vorlesen. Er zweifelte, ob es halten würde. Fünf Jahre später läuft es in neun Krankenhäusern, und er scherzt, sie sei die eigentliche Direktorin."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar strahlt, wenn Fürsorge und Führung für dieselbe Sache arbeiten und beide die 33 vor dem Ausbrennen schützen."
+    ]
+   },
+   {
+    "title": "Über die Meisterzahl",
+    "paras": [
+     "Die 33 ist eine Zahl des Mitgefühls, die sich selbst vergessen kann. Eine liebevolle 1 ist oft diejenige, die darauf besteht, dass die 33 isst, schläft und Urlaub macht."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Geteilte Freude ist doppelte Freude, geteiltes Leid ist halbes Leid. Die 33 lebt den zweiten Teil, die 1 kann ihr helfen, auch den ersten nicht zu vergessen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jede Woche stellt die 1 der 33 eine Frage: Was brauchst du diese Woche? Dann sorgt die 1 dafür, dass es geschieht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine starke Hand und ein gütiges Herz können die Welt bewegen, wenn sie sich gemeinsam bewegen."
+    ]
+   }
+  ]
  }
 };
