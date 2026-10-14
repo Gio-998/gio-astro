@@ -2676,6 +2676,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "7-and-7": {
+  "title": "Life path 7 and 7: two scholars of the soul",
+  "lead": "Two sevens share a love of truth, silence and deep thought. They can understand each other better than anyone, but they must remember to step out of their heads and into the relationship.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two sevens often meet in quiet places devoted to thought: a philosophy seminar, an observatory, a monastery guesthouse, a reading room at closing time. Conversation starts slowly, with one precise question. Hours later both realise they have not looked at the clock."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You respect each other's need for privacy and never demand constant chatter. Ideas, books and spiritual questions fill your time together. Each feels safe from superficiality. Few couples can sit in silence as comfortably as two sevens."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two sevens can both withdraw at the same time, leaving nobody to reach out. Suspicion and criticism may creep in: each analyses the other's motives. Practical life can be neglected, and feelings may stay locked away until they explode."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is cerebral, private and loyal. Love is shown through shared discoveries and complete honesty. It deepens when one of you takes the first step to speak about feelings, even clumsily, and the other responds with patience instead of analysis."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you exchange books and long letters. At work you suit research, academia, software, philosophy, theology, forensic work and any field that rewards careful thought."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Dimitar and Tanja, both life path 7, are mathematicians who met while arguing in the margins of the same library book. Each left notes for the other without knowing who it was. When they finally met at the returns desk, they recognised each other's handwriting before each other's faces. They now share an office and a single, very full bookshelf."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you schedule time to share inner life as faithfully as you schedule time for study, and when you agree that silence is welcome but secrets are not."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two armchairs facing a window, two cups of cooling tea, two open books, and every half hour one of you reads a sentence aloud to the other."
+    ]
+   },
+   {
+    "title": "A note on trust",
+    "paras": [
+     "Sevens test before they trust. Telling each other directly what worries you, rather than investigating quietly, keeps suspicion from taking root."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Two heads are better than one, people say, and for two sevens this is especially sweet. Just remember that two hearts are also better than one."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, each of you finishes the sentence: this week I felt. No analysis allowed, only listening."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Seek the truth together, and let the heart join the search."
+    ]
+   }
+  ]
+ },
+ "7-and-8": {
+  "title": "Life path 7 and 8: the mind and the market",
+  "lead": "The 7 seeks the hidden truth; the 8 seeks results in the material world. A pairing of depth and power that can achieve a great deal when respect runs both ways.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 7 and an 8 often meet in professional settings: the 8 hires the 7 as an expert, or the two cross paths on a board, in a lab funded by the 8, or in a negotiation. The 8 values the 7's intelligence and discretion. The 7 values the 8's ability to turn ideas into reality."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 7 brings analysis, insight and a strategic mind. The 8 brings ambition, leadership and resources. The 8 gives the 7's ideas a platform, the 7 gives the 8's power wisdom and ethics. Both are serious and dislike wasting time."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 focuses on money and status, which the 7 may find shallow. The 7 seems slow or detached to the 8. The 8 wants decisions, the 7 wants more data. Both can be proud and stubborn, and emotional warmth may be missing."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is reserved but strong. You show love through respect and commitment. It deepens when the 8 slows down for quiet moments with the 7 and the 7 shows interest in the 8's achievements and struggles."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you give each other frank advice. At work you suit finance, law, consulting, technology companies, research management and investigative journalism."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Lazar, life path 8, ran an investment fund and needed someone who could spot fraud in company reports. Mila, life path 7, an accountant known for reading every footnote, found three in her first week. He offered her a promotion; she asked for a quieter office instead. Today she heads his research team, and he calls her before every major decision."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 8 trusts the 7's judgement and the 7 respects the 8's drive, and when both make room for feelings, not only strategy."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A spreadsheet on one screen, a philosophy podcast on the other, and a late dinner where the 8 tells the day's battles and the 7 asks the question nobody else thought of."
+    ]
+   },
+   {
+    "title": "A note on pace",
+    "paras": [
+     "The 8 moves quickly, the 7 deliberately. Agreeing on a time limit for each decision lets the 7 think and the 8 act."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Knowledge is power, Francis Bacon wrote. The 7 holds the knowledge and the 8 the power, and they work best when they remember both belong to the same sentence."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, the 8 shares one goal and the 7 one concern about it. Spend an hour turning the concern into a plan."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Wisdom guides power, and power gives wisdom a voice."
+    ]
+   }
+  ]
+ },
+ "7-and-9": {
+  "title": "Life path 7 and 9: the sage and the humanitarian",
+  "lead": "The 7 searches for truth within, the 9 seeks to serve the world. Both are spiritual and idealistic, making this a thoughtful and compassionate couple with a shared sense of meaning.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 7 and a 9 often meet in spiritual, artistic or humanitarian circles: a meditation centre, a charity conference, a pilgrimage route, a poetry reading. The 9 is drawn to the 7's depth and calm. The 7 is drawn to the 9's open heart and wide vision."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share interest in big questions and a dislike of the superficial. The 7 brings insight, discernment and analytical clarity. The 9 brings compassion, creativity and generosity. The 7 helps the 9 understand, the 9 helps the 7 feel and act."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 9 can be emotional and dramatic, the 7 cool and reserved. The 9 may feel the 7 is withholding love, the 7 may feel the 9 is overwhelming. Both can drift away from daily practical matters, and both may avoid conflict until it grows."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is soulful and quiet. You love talking late into the night about life and meaning. Love deepens when the 7 expresses feelings directly and the 9 gives the 7 space to retreat without taking it personally."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you share books, causes and travels. At work you suit spiritual teaching, psychology, writing, international aid, research and the arts."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Andrej, life path 7, a monk turned librarian, met Slavica, life path 9, a painter, when she came to copy old icons for a charity exhibition. She talked while she painted; he listened while he catalogued. After the exhibition sold out, she asked him to write the texts for her next one. They have collaborated, and lived together, ever since."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 7's search and the 9's service feed each other, when what the 7 learns helps the 9 give wisely."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Candles on a windowsill, a stack of old books, a canvas drying in the corner, and two people quietly working on different things in the same warm room."
+    ]
+   },
+   {
+    "title": "A note on feelings",
+    "paras": [
+     "The 9 shows emotion like weather; the 7 hides it like a buried spring. Asking each other gently, without pressure, brings both to the surface."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Know thyself, the Greek temple advised. The 7 lives by these words, and the 9 adds a second line: and serve others well."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 7 shares one insight and the 9 one act of kindness it witnessed. End with a few minutes of shared silence."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Understanding and compassion are two wings of the same bird."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",

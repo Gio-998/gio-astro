@@ -2700,6 +2700,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "7-and-7": {
+  "title": "Lebenszahl 7 und 7: zwei Gelehrte der Seele",
+  "lead": "Zwei Siebenen teilen die Liebe zu Wahrheit, Stille und tiefem Denken. Sie können einander besser verstehen als irgendwer sonst, müssen aber daran denken, aus dem Kopf heraus und in die Beziehung hineinzutreten.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Siebenen begegnen sich oft an stillen Orten des Denkens: in einem Philosophieseminar, einer Sternwarte, einem Klostergästehaus, einem Lesesaal kurz vor Schluss. Das Gespräch beginnt langsam, mit einer einzigen genauen Frage. Stunden später merken beide, dass sie nicht auf die Uhr geschaut haben."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr achtet das Bedürfnis des anderen nach Privatsphäre und verlangt nie ständiges Plaudern. Ideen, Bücher und spirituelle Fragen füllen eure gemeinsame Zeit. Jede Seite fühlt sich vor Oberflächlichkeit sicher. Wenige Paare können so entspannt zusammen schweigen wie zwei Siebenen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Siebenen ziehen sich womöglich gleichzeitig zurück, und niemand streckt die Hand aus. Misstrauen und Kritik schleichen sich ein: Jede Seite analysiert die Beweggründe der anderen. Der praktische Alltag bleibt liegen, und Gefühle bleiben verschlossen, bis sie explodieren."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist geistig, privat und treu. Liebe zeigt sich durch gemeinsame Entdeckungen und völlige Ehrlichkeit. Sie vertieft sich, wenn einer von euch den ersten Schritt macht und über Gefühle spricht, auch ungeschickt, und der andere mit Geduld statt mit Analyse antwortet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde tauscht ihr Bücher und lange Briefe. Beruflich passt ihr zu Forschung, Hochschule, Software, Philosophie, Theologie, Forensik und jedem Feld, das sorgfältiges Denken belohnt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Dimitar und Tanja, beide Lebenszahl 7, sind Mathematiker und lernten sich kennen, indem sie an den Rändern desselben Bibliotheksbuchs stritten. Jeder hinterließ Notizen für den anderen, ohne zu wissen, wer es war. Als sie sich endlich an der Rückgabe trafen, erkannten sie zuerst die Handschrift und dann das Gesicht. Heute teilen sie ein Büro und ein einziges, sehr volles Bücherregal."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr Zeit für das Teilen des Innenlebens so treu einplant wie Zeit fürs Studium, und wenn ihr vereinbart, dass Schweigen willkommen ist, Geheimnisse aber nicht."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Sessel vor einem Fenster, zwei Tassen Tee, die kalt werden, zwei offene Bücher, und jede halbe Stunde liest einer dem anderen einen Satz laut vor."
+    ]
+   },
+   {
+    "title": "Über Vertrauen",
+    "paras": [
+     "Siebenen prüfen, bevor sie vertrauen. Wer direkt sagt, was ihn beunruhigt, statt still zu ermitteln, lässt Misstrauen keine Wurzeln schlagen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Vier Augen sehen mehr als zwei, sagt man, und für zwei Siebenen ist das besonders schön. Denkt nur daran, dass auch zwei Herzen mehr fühlen als eines."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche vervollständigt jeder den Satz: Diese Woche habe ich gefühlt. Keine Analyse, nur Zuhören."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Sucht die Wahrheit gemeinsam, und lasst das Herz an der Suche teilnehmen."
+    ]
+   }
+  ]
+ },
+ "7-and-8": {
+  "title": "Lebenszahl 7 und 8: der Verstand und der Markt",
+  "lead": "Die 7 sucht die verborgene Wahrheit, die 8 Ergebnisse in der materiellen Welt. Eine Verbindung von Tiefe und Macht, die viel erreichen kann, wenn der Respekt in beide Richtungen fließt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 7 und eine 8 begegnen sich oft beruflich: Die 8 holt die 7 als Expertin, oder beide treffen sich in einem Gremium, in einem von der 8 finanzierten Labor, bei einer Verhandlung. Die 8 schätzt die Intelligenz und Diskretion der 7. Die 7 schätzt die Fähigkeit der 8, Ideen Wirklichkeit werden zu lassen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 7 bringt Analyse, Einsicht und strategischen Verstand. Die 8 bringt Ehrgeiz, Führung und Mittel. Die 8 gibt den Ideen der 7 eine Bühne, die 7 gibt der Macht der 8 Weisheit und Ethik. Beide sind ernsthaft und verschwenden ungern Zeit."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 richtet sich auf Geld und Status aus, was die 7 oberflächlich finden mag. Die 7 wirkt auf die 8 langsam oder abwesend. Die 8 will Entscheidungen, die 7 mehr Daten. Beide können stolz und stur sein, und emotionale Wärme fehlt womöglich."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zurückhaltend, aber stark. Ihr zeigt Liebe durch Respekt und Verbindlichkeit. Sie vertieft sich, wenn die 8 für stille Momente mit der 7 langsamer wird und die 7 Interesse an den Erfolgen und Kämpfen der 8 zeigt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gebt ihr einander offenen Rat. Beruflich passt ihr zu Finanzen, Recht, Beratung, Technologiefirmen, Forschungsmanagement und investigativem Journalismus."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Lazar, Lebenszahl 8, leitete einen Investmentfonds und brauchte jemanden, der Betrug in Firmenberichten erkennen konnte. Mila, Lebenszahl 7, eine Buchhalterin, die dafür bekannt war, jede Fußnote zu lesen, fand in ihrer ersten Woche drei Fälle. Er bot ihr eine Beförderung an, sie bat stattdessen um ein ruhigeres Büro. Heute leitet sie sein Researchteam, und er ruft sie vor jeder großen Entscheidung an."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 8 dem Urteil der 7 vertraut und die 7 den Antrieb der 8 achtet, und wenn beide Raum für Gefühle lassen, nicht nur für Strategie."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Tabelle auf dem einen Bildschirm, ein Philosophiepodcast auf dem anderen und ein spätes Abendessen, bei dem die 8 von den Kämpfen des Tages erzählt und die 7 die Frage stellt, an die sonst niemand gedacht hat."
+    ]
+   },
+   {
+    "title": "Über das Tempo",
+    "paras": [
+     "Die 8 bewegt sich schnell, die 7 bedächtig. Wer für jede Entscheidung eine Frist vereinbart, lässt die 7 denken und die 8 handeln."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wissen ist Macht, schrieb Francis Bacon. Die 7 hält das Wissen und die 8 die Macht, und am besten arbeiten sie, wenn sie daran denken, dass beides in denselben Satz gehört."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal im Monat teilt die 8 ein Ziel und die 7 eine Sorge dazu. Verbringt eine Stunde damit, aus der Sorge einen Plan zu machen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Weisheit lenkt die Macht, und Macht gibt der Weisheit eine Stimme."
+    ]
+   }
+  ]
+ },
+ "7-and-9": {
+  "title": "Lebenszahl 7 und 9: der Weise und die Menschenfreundin",
+  "lead": "Die 7 sucht die Wahrheit im Inneren, die 9 will der Welt dienen. Beide sind spirituell und idealistisch, was dieses Paar nachdenklich und mitfühlend macht, mit einem gemeinsamen Gefühl für Sinn.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 7 und eine 9 begegnen sich oft in spirituellen, künstlerischen oder humanitären Kreisen: in einem Meditationszentrum, auf einer Hilfskonferenz, auf einem Pilgerweg, bei einer Lyriklesung. Die 9 zieht die Tiefe und Ruhe der 7 an. Die 7 zieht das offene Herz und der weite Blick der 9 an."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt das Interesse an großen Fragen und eine Abneigung gegen das Oberflächliche. Die 7 bringt Einsicht, Urteilskraft und analytische Klarheit. Die 9 bringt Mitgefühl, Kreativität und Großzügigkeit. Die 7 hilft der 9 zu verstehen, die 9 hilft der 7 zu fühlen und zu handeln."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 9 kann gefühlvoll und dramatisch sein, die 7 kühl und zurückhaltend. Die 9 meint vielleicht, die 7 halte Liebe zurück, die 7 findet die 9 womöglich überwältigend. Beide können sich vom praktischen Alltag entfernen und Konflikten ausweichen, bis sie groß werden."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist seelenvoll und still. Ihr redet gern bis spät in die Nacht über das Leben und seinen Sinn. Die Liebe vertieft sich, wenn die 7 Gefühle direkt ausspricht und die 9 der 7 Raum zum Rückzug lässt, ohne es persönlich zu nehmen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt ihr Bücher, Anliegen und Reisen. Beruflich passt ihr zu spiritueller Lehre, Psychologie, Schreiben, internationaler Hilfe, Forschung und Kunst."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Andrej, Lebenszahl 7, ein Mönch, der Bibliothekar wurde, lernte Slavica, Lebenszahl 9, Malerin, kennen, als sie alte Ikonen für eine Benefizausstellung kopierte. Sie redete beim Malen, er hörte beim Katalogisieren zu. Als die Ausstellung ausverkauft war, bat sie ihn, die Texte für die nächste zu schreiben. Seitdem arbeiten und leben sie zusammen."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Suche der 7 und der Dienst der 9 sich gegenseitig nähren, wenn das, was die 7 lernt, der 9 hilft, klug zu geben."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Kerzen auf dem Fensterbrett, ein Stapel alter Bücher, eine Leinwand, die in der Ecke trocknet, und zwei Menschen, die still an verschiedenen Dingen im selben warmen Raum arbeiten."
+    ]
+   },
+   {
+    "title": "Über Gefühle",
+    "paras": [
+     "Die 9 zeigt Gefühle wie Wetter, die 7 verbirgt sie wie eine verschüttete Quelle. Wer sanft und ohne Druck nachfragt, bringt beide an die Oberfläche."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Erkenne dich selbst, riet der griechische Tempel. Die 7 lebt nach diesen Worten, und die 9 fügt eine zweite Zeile hinzu: und diene anderen gut."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche teilt die 7 eine Einsicht und die 9 eine gute Tat, die sie erlebt hat. Schließt mit ein paar Minuten gemeinsamer Stille."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Verstehen und Mitgefühl sind zwei Flügel desselben Vogels."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
