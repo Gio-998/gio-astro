@@ -3846,6 +3846,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "11-and-11": {
+  "title": "Life path 11 and 11: two antennas tuned to the same signal",
+  "lead": "Two elevens share intuition, sensitivity and a strong sense of calling. They can understand each other almost without words, and they must learn to keep their shared current from overloading.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two elevens often meet in places of inspiration: a spiritual retreat, a music workshop, an evening of poetry, a conversation that starts with a dream one of them had. The recognition is fast and almost uncanny. Each finishes the other's sentences within the first hour."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both see meaning everywhere and feel things others miss. Neither needs to defend its sensitivity. Ideas, art and spiritual questions are part of daily life. Together you can inspire many people, through teaching, art or healing work."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two elevens can amplify each other's nerves. When one is anxious, the other picks it up at once. Both can drift away from practical tasks, and both may expect perfect understanding. Disappointment can feel enormous when it does not come."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is intense, spiritual and tender. You may feel you have found your other half. Love lasts when you also build simple daily routines and allow each other to be ordinary, tired and imperfect."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you share visions and protect each other from harsh worlds. At work you suit the arts, music, spiritual teaching, counselling, writing and inspirational media."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Lina and Teo, both life path 11, met at a silent retreat where talking was forbidden for seven days. They communicated by leaving drawings on a shared windowsill. On the last day they spoke for the first time and laughed because they already knew each other's favourite colours. They now teach a course on listening."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with grounding habits: regular meals, sleep, walks in nature and a shared calendar that keeps daily life from slipping."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two journals on the kitchen table, a vase of wild grasses, and a whiteboard with the week's practical tasks that one of you insisted on putting up."
+    ]
+   },
+   {
+    "title": "A note on overload",
+    "paras": [
+     "Two sensitive systems can short circuit together. When tension rises, separate for an hour, breathe, and come back to talk calmly."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Still the water and the moon appears, the meditation teachers say. Two elevens see clearly when they are calm together, not when they stir each other up."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each evening, one of you names a worry and the other names one simple fact that makes it smaller. Then switch roles the next evening."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Two lights shine brighter when both are steady."
+    ]
+   }
+  ]
+ },
+ "11-and-22": {
+  "title": "Life path 11 and 22: the vision and the blueprint",
+  "lead": "The 11 receives inspiration, the 22 builds it into reality. These two master numbers can create something remarkable together, as long as they respect each other's very different rhythms.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 11 and a 22 often meet when an idea needs a builder: an architecture contest, a social project, a startup with a mission, a cultural centre that needs both soul and structure. The 11 is amazed by the 22's ability to make things concrete. The 22 is moved by the 11's vision and spark."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you feel called to something larger than yourselves. The 11 brings intuition, inspiration and spiritual sense. The 22 brings method, discipline and stamina. The 11 gives the 22's projects a soul, and the 22 gives the 11's visions a solid form."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 may grow impatient with the 11's moods and changes of direction. The 11 may feel crushed by the 22's plans and deadlines. The 22 wants certainty, the 11 trusts feelings. Under stress, the 22 controls and the 11 withdraws."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is deep and purposeful. You admire each other's gifts. Love lasts when the 22 takes time for tenderness and the 11 shows up for practical commitments, even on difficult days."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you dream and plan together. At work you suit architecture, urban planning with a social aim, cultural institutions, education and mission driven businesses."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Maja, life path 11, imagined a garden on the roof of a hospital where patients could sit among plants. Stojan, life path 22, a structural engineer, calculated how much soil the roof could hold and found the money to reinforce it. The garden opened two years later. Nurses say patients there ask for fewer painkillers."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 11's inspiration sets the direction and the 22's plan sets the pace, and when each trusts the other's way of knowing."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Sketches of dreams on loose sheets, a technical drawing pinned beside them, and a calm evening where the 22 listens to the 11 without reaching for a pen."
+    ]
+   },
+   {
+    "title": "A note on rhythm",
+    "paras": [
+     "The 11 works in bursts, the 22 in steady steps. Planning projects with both phases, inspiration and execution, honours both rhythms."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Dreams build castles in the air, and work puts foundations under them, as the old line goes. The 11 builds the castle and the 22 lays the foundations."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, the 11 shares one inspiration and the 22 chooses one part of it to make real in the next four weeks."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Vision and structure together can change the shape of a city and a life."
+    ]
+   }
+  ]
+ },
+ "11-and-33": {
+  "title": "Life path 11 and 33: the messenger and the healer",
+  "lead": "The 11 brings inspiration, the 33 brings unconditional love. Both master numbers are deeply spiritual and devoted to others, which makes this a rare and luminous pairing.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 11 and a 33 often meet in spiritual, healing or creative communities: a choir, a hospice, a meditation group, a centre for children. They are drawn to each other's goodness and sensitivity. The connection feels like an old friendship."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you want to uplift others. The 11 brings intuition, vision and a gift for inspiring. The 33 brings warmth, devotion and the ability to care for many people. The 11 shows the 33 new paths, and the 33 shows the 11 how love works in daily life."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both are sensitive and can be overwhelmed. The 11 may become anxious and the 33 overprotective. The 33 may sacrifice too much, and the 11 may withdraw into its inner world. Both may forget practical matters and their own needs."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is tender, spiritual and devoted. Each of you sees the other's work as sacred. Love grows when you create quiet time just for the two of you and when you allow each other to receive care, not only give it."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are a refuge for each other and for many others. At work you suit healing professions, spiritual teaching, the arts, counselling and humanitarian service."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ema, life path 33, ran a choir for people with dementia. Bojko, life path 11, a composer, wrote songs for them based on the old melodies they still remembered. At the first concert, a woman who had not spoken for months sang every word. They have written forty songs together since then."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when inspiration and care work hand in hand and when you protect your energy as carefully as you protect others."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Sheet music on the piano, a list of birthdays of choir members, and two people humming the same tune while making dinner."
+    ]
+   },
+   {
+    "title": "A note on boundaries",
+    "paras": [
+     "Both of you find it hard to say no. Agreeing on one evening a week that is never given away protects your health and your love."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A song from the heart reaches the heart, the singers of old used to say. The 11 writes from the heart and the 33 sings to the heart, and the circle is complete."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, each of you names one thing that drained you and one thing that filled you. Plan more of the second for the week ahead."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Inspiration and love together can lift a whole room."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",

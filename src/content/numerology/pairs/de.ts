@@ -3870,6 +3870,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "11-and-11": {
+  "title": "Lebenszahl 11 und 11: zwei Antennen auf derselben Frequenz",
+  "lead": "Zwei Elfen teilen Intuition, Feinfühligkeit und ein starkes Gefühl der Berufung. Sie verstehen sich fast ohne Worte und müssen lernen, dass ihr gemeinsamer Strom sie nicht überlastet.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Elfen begegnen sich oft an Orten der Inspiration: bei einem spirituellen Retreat, einem Musikworkshop, einem Lyrikabend, in einem Gespräch, das mit einem Traum beginnt, den eine von ihnen hatte. Das Erkennen geht schnell und ist fast unheimlich. Schon in der ersten Stunde beendet jede die Sätze der anderen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr seht beide überall Sinn und spürt, was anderen entgeht. Keiner muss seine Empfindsamkeit verteidigen. Ideen, Kunst und spirituelle Fragen gehören zum Alltag. Zusammen könnt ihr viele Menschen inspirieren, durch Unterricht, Kunst oder heilende Arbeit."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Elfen können gegenseitig ihre Nervosität verstärken. Ist die eine ängstlich, spürt die andere es sofort. Beide entfernen sich leicht von praktischen Aufgaben, und beide erwarten womöglich vollkommenes Verständnis. Bleibt es aus, wirkt die Enttäuschung riesig."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist intensiv, spirituell und zärtlich. Vielleicht habt ihr das Gefühl, eure andere Hälfte gefunden zu haben. Die Liebe hält, wenn ihr auch einfache tägliche Routinen aufbaut und einander erlaubt, gewöhnlich, müde und unvollkommen zu sein."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt ihr Visionen und schützt einander vor einer rauen Welt. Beruflich passt ihr zu Kunst, Musik, spiritueller Lehre, Beratung, Schreiben und inspirierenden Medien."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Lina und Teo, beide Lebenszahl 11, lernten sich bei einem Schweigeretreat kennen, bei dem sieben Tage lang nicht gesprochen werden durfte. Sie verständigten sich mit Zeichnungen auf einem gemeinsamen Fensterbrett. Am letzten Tag sprachen sie zum ersten Mal und lachten, weil sie die Lieblingsfarben des anderen schon kannten. Heute geben sie einen Kurs über das Zuhören."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit erdenden Gewohnheiten: regelmäßige Mahlzeiten, Schlaf, Spaziergänge in der Natur und ein gemeinsamer Kalender, der den Alltag nicht entgleiten lässt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Tagebücher auf dem Küchentisch, eine Vase mit wilden Gräsern und eine Tafel mit den praktischen Aufgaben der Woche, auf die einer von euch bestanden hat."
+    ]
+   },
+   {
+    "title": "Über Überlastung",
+    "paras": [
+     "Zwei empfindliche Systeme können gemeinsam einen Kurzschluss erzeugen. Wenn die Spannung steigt, trennt euch für eine Stunde, atmet und kommt dann ruhig zum Gespräch zurück."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Beruhige das Wasser, und der Mond erscheint, sagen Meditationslehrer. Zwei Elfen sehen klar, wenn sie gemeinsam ruhig sind, nicht wenn sie sich gegenseitig aufwühlen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Abend nennt einer von euch eine Sorge, und der andere eine einfache Tatsache, die sie kleiner macht. Am nächsten Abend tauscht ihr die Rollen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Zwei Lichter leuchten heller, wenn beide ruhig brennen."
+    ]
+   }
+  ]
+ },
+ "11-and-22": {
+  "title": "Lebenszahl 11 und 22: die Vision und der Bauplan",
+  "lead": "Die 11 empfängt Inspiration, die 22 baut sie in die Wirklichkeit. Diese beiden Meisterzahlen können zusammen Bemerkenswertes schaffen, solange sie ihre sehr verschiedenen Rhythmen achten.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 11 und eine 22 begegnen sich oft, wenn eine Idee eine Baumeisterin braucht: bei einem Architekturwettbewerb, einem Sozialprojekt, einem Start-up mit Mission, einem Kulturzentrum, das Seele und Struktur braucht. Die 11 staunt, wie die 22 Dinge greifbar macht. Die 22 ist bewegt von der Vision und dem Funken der 11."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr fühlt euch beide zu etwas Größerem berufen. Die 11 bringt Intuition, Inspiration und spirituellen Sinn. Die 22 bringt Methode, Disziplin und Ausdauer. Die 11 gibt den Projekten der 22 eine Seele, und die 22 gibt den Visionen der 11 eine feste Form."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 wird vielleicht ungeduldig mit den Stimmungen und Richtungswechseln der 11. Die 11 fühlt sich womöglich von den Plänen und Fristen der 22 erdrückt. Die 22 will Gewissheit, die 11 vertraut Gefühlen. Unter Druck kontrolliert die 22, und die 11 zieht sich zurück."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist tief und zielgerichtet. Ihr bewundert die Gaben des anderen. Die Liebe hält, wenn die 22 sich Zeit für Zärtlichkeit nimmt und die 11 bei praktischen Verpflichtungen da ist, auch an schweren Tagen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde träumt und plant ihr gemeinsam. Beruflich passt ihr zu Architektur, Stadtplanung mit sozialem Ziel, Kulturinstitutionen, Bildung und Unternehmen mit einer Mission."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Maja, Lebenszahl 11, stellte sich einen Garten auf dem Dach eines Krankenhauses vor, in dem Kranke zwischen Pflanzen sitzen könnten. Stojan, Lebenszahl 22, Statiker, berechnete, wie viel Erde das Dach tragen kann, und fand das Geld, um es zu verstärken. Der Garten öffnete zwei Jahre später. Das Pflegepersonal sagt, die Kranken dort fragten seltener nach Schmerzmitteln."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Inspiration der 11 die Richtung bestimmt und der Plan der 22 das Tempo, und wenn jede Seite der Art vertraut, wie die andere weiß."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Traumskizzen auf losen Blättern, daneben eine technische Zeichnung und ein ruhiger Abend, an dem die 22 der 11 zuhört, ohne nach einem Stift zu greifen."
+    ]
+   },
+   {
+    "title": "Über den Rhythmus",
+    "paras": [
+     "Die 11 arbeitet in Schüben, die 22 in gleichmäßigen Schritten. Wer Projekte mit beiden Phasen plant, Inspiration und Umsetzung, ehrt beide Rhythmen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Träume bauen Schlösser in die Luft, und die Arbeit setzt Fundamente darunter, heißt es. Die 11 baut das Schloss, und die 22 legt die Fundamente."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal im Monat teilt die 11 eine Eingebung, und die 22 wählt einen Teil davon, den sie in den nächsten vier Wochen umsetzt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Vision und Struktur zusammen können die Gestalt einer Stadt und eines Lebens verändern."
+    ]
+   }
+  ]
+ },
+ "11-and-33": {
+  "title": "Lebenszahl 11 und 33: der Bote und die Heilerin",
+  "lead": "Die 11 bringt Inspiration, die 33 bedingungslose Liebe. Beide Meisterzahlen sind zutiefst spirituell und anderen ergeben, was diese Verbindung selten und leuchtend macht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 11 und eine 33 begegnen sich oft in spirituellen, heilenden oder kreativen Gemeinschaften: in einem Chor, einem Hospiz, einer Meditationsgruppe, einem Kinderzentrum. Sie fühlen sich von der Güte und Empfindsamkeit des anderen angezogen. Die Verbindung fühlt sich an wie eine alte Freundschaft."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr wollt beide andere aufrichten. Die 11 bringt Intuition, Vision und die Gabe zu inspirieren. Die 33 bringt Wärme, Hingabe und die Fähigkeit, für viele Menschen zu sorgen. Die 11 zeigt der 33 neue Wege, und die 33 zeigt der 11, wie Liebe im Alltag funktioniert."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide sind empfindsam und können überwältigt werden. Die 11 wird womöglich ängstlich und die 33 überbehütend. Die 33 opfert vielleicht zu viel, und die 11 zieht sich in ihre Innenwelt zurück. Beide vergessen leicht Praktisches und die eigenen Bedürfnisse."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zärtlich, spirituell und hingebungsvoll. Jeder sieht die Arbeit des anderen als etwas Heiliges. Die Liebe wächst, wenn ihr stille Zeit nur für euch zwei schafft und einander erlaubt, Fürsorge auch zu empfangen und nicht nur zu geben."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr eine Zuflucht füreinander und für viele andere. Beruflich passt ihr zu heilenden Berufen, spiritueller Lehre, Kunst, Beratung und humanitärem Dienst."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ema, Lebenszahl 33, leitete einen Chor für Menschen mit Demenz. Bojko, Lebenszahl 11, Komponist, schrieb Lieder für sie auf Grundlage der alten Melodien, an die sie sich noch erinnerten. Beim ersten Konzert sang eine Frau, die seit Monaten nicht gesprochen hatte, jedes Wort mit. Seitdem haben sie vierzig Lieder zusammen geschrieben."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Inspiration und Fürsorge Hand in Hand gehen und ihr eure Kraft so sorgfältig schützt wie die anderer."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Noten auf dem Klavier, eine Liste mit Geburtstagen der Chormitglieder und zwei Menschen, die beim Kochen dieselbe Melodie summen."
+    ]
+   },
+   {
+    "title": "Über Grenzen",
+    "paras": [
+     "Euch beiden fällt das Neinsagen schwer. Ein Abend pro Woche, der niemals verschenkt wird, schützt eure Gesundheit und eure Liebe."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Was von Herzen kommt, geht zu Herzen, sagten die alten Sänger. Die 11 schreibt aus dem Herzen, die 33 singt zum Herzen, und der Kreis schließt sich."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt einmal pro Woche jeder eine Sache, die Kraft gekostet hat, und eine, die Kraft geschenkt hat. Plant für die kommende Woche mehr von der zweiten."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Inspiration und Liebe zusammen können einen ganzen Raum emporheben."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
