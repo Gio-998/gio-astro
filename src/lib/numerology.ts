@@ -6,6 +6,7 @@ import { bankFor } from "./horoscope";
 import { angelLong, pageLong } from "@/content/numerology/long";
 import { reduce, rootOf } from "@/engine/numerology";
 import { BIRTHDAYS } from "@/content/numerology/birthdays";
+import { PAIRS, PAIR_HUB } from "@/content/numerology/pairs";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
 export const LIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
@@ -15,6 +16,10 @@ export const CALCS = ["life-path", "name", "personal-year", "compatibility"] as 
 export const CORE = ["expression-number", "soul-urge-number", "personality-number", "birthday-number", "maturity-number"] as const;
 /** Birthday day pages that exist in every language (gated by tests/numerology-birthday-overlap.test.ts). */
 export const BDAY_DAYS: number[] = Object.keys(BIRTHDAYS.en).map(Number).filter((d) => BIRTHDAYS.mk[d] && BIRTHDAYS.de[d]).sort((a, b) => a - b);
+/** Every unordered life path pair (78), keyed "a-and-b" in LIFE order. */
+export const ALL_PAIRS: string[] = LIFE.flatMap((a, i) => LIFE.slice(i).map((b) => `${a}-and-${b}`));
+/** Compatibility pair pages that exist in every language (gated by tests/numerology-pair-overlap.test.ts). */
+export const PAIR_KEYS: string[] = ALL_PAIRS.filter((k) => PAIRS.en[k] && PAIRS.mk[k] && PAIRS.de[k]);
 export type CalcMode = (typeof CALCS)[number];
 
 const N = "/numerology/";
@@ -22,7 +27,8 @@ const N = "/numerology/";
 export function numPaths(): string[] {
   return [N, `${N}angel-numbers/`, ...ANGEL.map((a) => `${N}angel-numbers/${a}/`), `${N}calculator/`, ...CALCS.map((c) => `${N}calculator/${c}/`),
     `${N}life-path/`, ...LIFE.map((n) => `${N}life-path/${n}/`), `${N}master-numbers/`, `${N}personal-year/`, ...YEARS.map((n) => `${N}personal-year/${n}/`),
-    ...CORE.map((c) => `${N}${c}/`), ...BDAY_DAYS.map((d) => `${N}birthday-number/${d}/`), `${N}karmic-debt/`, ...KARMIC.map((n) => `${N}karmic-debt/${n}/`), `${N}personal-day/`];
+    ...CORE.map((c) => `${N}${c}/`), ...BDAY_DAYS.map((d) => `${N}birthday-number/${d}/`), `${N}karmic-debt/`, ...KARMIC.map((n) => `${N}karmic-debt/${n}/`), `${N}personal-day/`,
+    ...(PAIR_KEYS.length ? [`${N}compatibility/`, ...PAIR_KEYS.map((k) => `${N}compatibility/${k}/`)] : [])];
 }
 /** Pages that may be listed in the sitemap (generated families join only after their overlap test passes). */
 export const numIndexable = (p: string) => numPaths().includes(p);
@@ -171,6 +177,23 @@ function numModelBase(lang: string, path: string): NumModel | null {
       crumbs: [home, hub, [hubLabel, lp(lang, `${N}birthday-number/`)], [String(d), lp(lang, path)]],
       blocks: B.sections.map((s, k) => ({ id: `b${k}`, title: s.title, paras: s.paras })), faq: [], related: rel,
       prev: { href: lp(lang, `${N}birthday-number/${prevD}/`), label: String(prevD) }, next: { href: lp(lang, `${N}birthday-number/${nextD}/`), label: String(nextD) }, calc: "life-path" };
+  }
+  if (sec === "compatibility" && !item && PAIR_KEYS.length) {
+    const H = PAIR_HUB[lang] ?? PAIR_HUB.en;
+    return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: [],
+      blocks: [{ id: "intro", title: H.crumb, paras: H.intro }], calc: "compatibility",
+      items: PAIR_KEYS.map((k) => { const [a, b] = k.split("-and-").map(Number); return { href: lp(lang, `${N}compatibility/${k}/`), label: (PAIRS[lang]?.[k] ?? PAIRS.en[k]).title, sub: `${C.chars[a].name} · ${C.chars[b].name}`, big: `${a}+${b}` }; }),
+      related: [{ href: lp(lang, `${N}life-path/`), label: U.lifePathHub, sub: C.explain["life-path"].sub }] };
+  }
+  if (sec === "compatibility" && item && PAIR_KEYS.includes(item)) {
+    const P = PAIRS[lang]?.[item] ?? PAIRS.en[item]; const H = PAIR_HUB[lang] ?? PAIR_HUB.en; const [a, b] = item.split("-and-").map(Number); const i = PAIR_KEYS.indexOf(item);
+    const prevK = PAIR_KEYS[(i + PAIR_KEYS.length - 1) % PAIR_KEYS.length], nextK = PAIR_KEYS[(i + 1) % PAIR_KEYS.length];
+    const lab = (k: string) => k.replace("-and-", " + ");
+    const rel: LinkItem[] = [...new Set([a, b])].map((n) => ({ href: lp(lang, `${N}life-path/${n}/`), label: U.lifePathShort(n), sub: C.chars[n].name, big: String(n) }));
+    return { path, kind: "article", eyebrow: `${H.crumb} · ${a} + ${b}`, h1: P.title, title: P.title, description: P.lead.slice(0, 158), lead: P.lead, big: `${a}+${b}`,
+      crumbs: [home, hub, [H.crumb, lp(lang, `${N}compatibility/`)], [lab(item), lp(lang, path)]],
+      blocks: P.sections.map((s, k) => ({ id: `p${k}`, title: s.title, paras: s.paras })), faq: [], related: rel,
+      prev: { href: lp(lang, `${N}compatibility/${prevK}/`), label: lab(prevK) }, next: { href: lp(lang, `${N}compatibility/${nextK}/`), label: lab(nextK) }, calc: "compatibility" };
   }
   if ((CORE as readonly string[]).includes(sec) && !item) {
     const line = (n: number) => sec === "expression-number" ? NUMS[n].expression : sec === "soul-urge-number" ? NUMS[n].soul : sec === "personality-number" ? `${C.chars[n].essence}. ${C.chars[n].gifts}` : sec === "maturity-number" ? C.chars[n].gifts : C.chars[n].essence;
