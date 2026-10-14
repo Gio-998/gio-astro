@@ -1542,6 +1542,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "5-and-8": {
+  "title": "Life path 5 and 8: speed meets strategy",
+  "lead": "The 5 moves fast and loves opportunity; the 8 thinks in power, money and long term results. Together they can be a bold, ambitious couple that turns chances into success.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and an 8 often meet where deals happen: a trade fair, a pitch evening, a sales team, a business trip that runs late. The 8 notices the 5's charm and quick thinking. The 5 notices the 8's confidence and the way a room goes quiet when the 8 speaks."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 5 brings adaptability, salesmanship and fresh ideas. The 8 brings direction, discipline and the ability to scale. The 5 spots openings, the 8 builds them into something solid. Both enjoy a good challenge and neither is easily scared."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 likes control and long plans, the 5 hates being managed. The 8 may see the 5 as unreliable, the 5 may see the 8 as bossy or obsessed with status. Money is a hot topic: the 5 spends on experiences, the 8 invests for the future."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is exciting and a little competitive. You admire each other's strength. Love deepens when the 8 relaxes its grip and the 5 shows it can be counted on, and when success is celebrated together rather than measured against each other."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you push each other to aim higher. At work you suit sales, marketing, entrepreneurship, investment, international trade and media businesses."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Nina, life path 5, sold advertising and changed jobs every two years. Dragan, life path 8, owned a small chain of gyms. She pitched him a campaign; he hired her agency, then hired her as a partner. With her ideas and his budgets, the chain grew from three locations to fourteen. She still refuses to attend his Monday meetings."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when roles are clear: the 5 opens doors and explores, the 8 decides and builds, and both share the reward."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two phones buzzing on the table, a whiteboard full of numbers, and a last minute weekend in a city neither of you has seen, booked by the 5 and approved by the 8."
+    ]
+   },
+   {
+    "title": "A note on control",
+    "paras": [
+     "The 8 feels safe when things are managed; the 5 feels alive when they are not. Agreeing on which areas are planned and which are free gives both what they need."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Fortune favours the bold, the Romans said. This pair is bold enough; the trick is to be bold in the same direction."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Every month, the 5 brings one new idea and the 8 judges it for ten minutes without saying no. Then you pick one small test together."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Chance knocks for the quick, and stays for the prepared."
+    ]
+   }
+  ]
+ },
+ "5-and-9": {
+  "title": "Life path 5 and 9: citizens of the world",
+  "lead": "The 5 craves freedom and experience, the 9 craves meaning and connection with humanity. Both look beyond their own street, which makes this an open minded, generous and adventurous pair.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and a 9 often meet far from home or among people from many places: a volunteer camp abroad, an international school, a refugee aid project, a multicultural neighbourhood. They bond over stories of places and people and a shared dislike of narrow thinking."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 5 brings curiosity, flexibility and courage. The 9 brings compassion, wisdom and a sense of purpose. The 5 helps the 9 enjoy life instead of only serving it, and the 9 gives the 5's travels a reason. Both are tolerant and quick to forgive."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 9 can drift into sadness or martyrdom, and the 5 may escape rather than stay with heavy emotions. The 5 may seem selfish to the 9, the 9 may seem dramatic to the 5. Neither likes routine, so practical life can fall apart."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm, open and a little idealistic. You love each other's spirit. Love grows when the 5 stays present during the 9's hard moments and the 9 lets the 5 have fun without needing every adventure to mean something."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you share long trips and big conversations about the world. At work you suit international aid, education, travel, journalism, the arts and cultural exchange."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ilija, life path 9, a doctor, joined a medical mission in the mountains of Nepal. Sara, life path 5, a translator, signed up for the same trip on a whim. Three missions later, they married in a village they had served. Today they train young volunteers before their first assignments abroad."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when adventure and service are mixed: trips with a purpose, causes with a sense of fun."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A shelf of souvenirs from twenty countries, a stack of letters from people you helped, and an unpaid bill that the 9 noticed only because the 5 laughed about it."
+    ]
+   },
+   {
+    "title": "A note on endings",
+    "paras": [
+     "The 9 feels endings deeply, the 5 moves on quickly. Taking a moment together to say goodbye to a place, a job or a chapter keeps both hearts in step."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "The world is a book, and those who do not travel read only one page, Saint Augustine wrote. This pair wants to read the whole book, and the 9 likes to underline the kind passages."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a season, choose one adventure the 5 suggests and one good deed the 9 suggests, and do them in the same week."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "See the world, and leave it a little kinder than you found it."
+    ]
+   }
+  ]
+ },
+ "5-and-11": {
+  "title": "Life path 5 and 11: lightning in two forms",
+  "lead": "The 5 is restless energy in the body, the 11 is electric energy in the mind and heart. This pair is inspiring and intense, and it needs grounding to avoid burning out.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and an 11 often meet in creative or spiritual spaces: a music festival, a meditation retreat, a theatre workshop, a late night debate online. The attraction is immediate and almost dizzying. Each feels the other is unlike anyone met before."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 5 brings freedom, humour and the courage to try. The 11 brings intuition, inspiration and depth. The 5 helps the 11 loosen up and act on ideas; the 11 shows the 5 that change can have a higher purpose. Conversations are rarely ordinary."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both can be nervous and changeable. The 11 needs emotional safety and can feel hurt by the 5's flightiness. The 5 can feel suffocated by the 11's intensity and sensitivity. Without routine, you may both run on adrenaline until you crash."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is passionate and inspiring. You can feel deeply understood. Love lasts when the 5 offers reliable gestures of commitment and the 11 gives the 5 freedom without reading every absence as rejection."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you spark ideas and travel together. At work you suit the arts, music, coaching, public speaking, media and alternative healing."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Teodora, life path 11, a singer, met Aleksandar, life path 5, a sound engineer, at a summer festival when the power failed during her set. He rigged a battery speaker in four minutes; she sang the rest unplugged to a hushed crowd. They now tour together, and he is the only person she lets adjust her microphone."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with simple anchors: regular meals, sleep, a shared calendar and quiet evenings that protect the 11's nerves and give the 5 a home base."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Guitars on the wall, a meditation cushion in the corner, a van with fuel enough for one more tour and a kettle that always seems to be boiling."
+    ]
+   },
+   {
+    "title": "A note on burnout",
+    "paras": [
+     "Both of you can run too hot. Watching each other's energy, and calling a rest day before either of you hits the wall, is an act of love."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Strike while the iron is hot, the smith says, but every smith also lets the iron cool. This pair knows the first half by heart and must practise the second."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, spend one hour together with phones off and no plan. The 11 chooses the setting, the 5 chooses the activity."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Inspiration and freedom grow stronger with a steady hearth between them."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",

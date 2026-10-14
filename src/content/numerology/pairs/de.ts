@@ -1566,6 +1566,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "5-and-8": {
+  "title": "Lebenszahl 5 und 8: Tempo trifft Strategie",
+  "lead": "Die 5 bewegt sich schnell und liebt Gelegenheiten, die 8 denkt in Macht, Geld und langfristigen Ergebnissen. Zusammen können sie ein mutiges, ehrgeiziges Paar sein, das Chancen in Erfolg verwandelt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 8 begegnen sich oft dort, wo Geschäfte entstehen: auf einer Messe, einem Pitchabend, in einem Vertriebsteam, auf einer Geschäftsreise, die spät endet. Die 8 bemerkt den Charme und das schnelle Denken der 5. Die 5 bemerkt das Selbstvertrauen der 8 und wie still ein Raum wird, wenn die 8 spricht."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 5 bringt Anpassungsfähigkeit, Verkaufstalent und frische Ideen. Die 8 bringt Richtung, Disziplin und die Fähigkeit, Dinge groß zu machen. Die 5 entdeckt Öffnungen, die 8 baut daraus etwas Festes. Beide mögen eine gute Herausforderung, und keine lässt sich leicht einschüchtern."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 mag Kontrolle und lange Pläne, die 5 hasst es, gelenkt zu werden. Die 8 hält die 5 vielleicht für unzuverlässig, die 5 die 8 für herrisch oder statusversessen. Geld ist ein heißes Thema: Die 5 gibt es für Erlebnisse aus, die 8 legt es für die Zukunft an."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist aufregend und ein wenig wettbewerbsorientiert. Jede Seite imponiert der anderen mit ihrer Kraft. Die Liebe vertieft sich, wenn die 8 den Griff lockert und die 5 zeigt, dass man sich auf sie verlassen kann, und wenn ihr Erfolge gemeinsam feiert, statt euch aneinander zu messen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde spornt ihr euch an, höher zu zielen. Beruflich passt ihr zu Vertrieb, Marketing, Unternehmertum, Investitionen, internationalem Handel und Medienunternehmen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Nina, Lebenszahl 5, verkaufte Werbung und wechselte alle zwei Jahre den Job. Dragan, Lebenszahl 8, besaß eine kleine Kette von Fitnessstudios. Sie bot ihm eine Kampagne an, er beauftragte ihre Agentur und nahm sie später als Partnerin auf. Mit ihren Ideen und seinen Budgets wuchs die Kette von drei auf vierzehn Standorte. Zu seinen Montagsmeetings geht sie bis heute nicht."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Rollen klar sind: Die 5 öffnet Türen und erkundet, die 8 entscheidet und baut, und den Gewinn teilen beide."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Handys, die auf dem Tisch vibrieren, ein Whiteboard voller Zahlen und ein spontanes Wochenende in einer Stadt, die keiner von euch kennt, gebucht von der 5 und abgesegnet von der 8."
+    ]
+   },
+   {
+    "title": "Über Kontrolle",
+    "paras": [
+     "Die 8 fühlt sich sicher, wenn Dinge gesteuert werden, die 5 fühlt sich lebendig, wenn sie es nicht werden. Wer festlegt, welche Bereiche geplant und welche frei sind, gibt beiden, was sie brauchen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Dem Mutigen gehört die Welt, sagt man. Mutig genug ist dieses Paar, die Kunst besteht darin, in dieselbe Richtung mutig zu sein."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat bringt die 5 eine neue Idee mit, und die 8 prüft sie zehn Minuten lang, ohne Nein zu sagen. Dann wählt ihr gemeinsam einen kleinen Versuch."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Chance klopft bei den Schnellen an und bleibt bei den Vorbereiteten."
+    ]
+   }
+  ]
+ },
+ "5-and-9": {
+  "title": "Lebenszahl 5 und 9: Weltbürger",
+  "lead": "Die 5 sehnt sich nach Freiheit und Erfahrung, die 9 nach Sinn und Verbundenheit mit der Menschheit. Beide schauen über die eigene Straße hinaus, was dieses Paar offen, großzügig und abenteuerlustig macht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 9 begegnen sich oft fern der Heimat oder unter Menschen aus vielen Ländern: in einem Freiwilligencamp im Ausland, einer internationalen Schule, einem Hilfsprojekt für Geflüchtete, einem bunten Stadtviertel. Sie verbinden Geschichten über Orte und Menschen und eine gemeinsame Abneigung gegen engstirniges Denken."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 5 bringt Neugier, Beweglichkeit und Mut. Die 9 bringt Mitgefühl, Weisheit und ein Gefühl für Bestimmung. Die 5 hilft der 9, das Leben zu genießen, statt ihm nur zu dienen, und die 9 gibt den Reisen der 5 einen Grund. Beide sind tolerant und verzeihen schnell."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 9 kann in Traurigkeit oder Märtyrertum abgleiten, und die 5 flieht vielleicht, statt bei schweren Gefühlen zu bleiben. Der 9 erscheint die 5 manchmal selbstsüchtig, der 5 die 9 dramatisch. Keine mag Routine, also kann der praktische Alltag zerfallen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm, offen und ein wenig idealistisch. Ihr liebt den Geist des anderen. Die Liebe wächst, wenn die 5 in den schweren Momenten der 9 präsent bleibt und die 9 der 5 Spaß gönnt, ohne dass jedes Abenteuer etwas bedeuten muss."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt ihr lange Reisen und große Gespräche über die Welt. Beruflich passt ihr zu internationaler Hilfe, Bildung, Reisen, Journalismus, Kunst und Kulturaustausch."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ilija, Lebenszahl 9, Arzt, schloss sich einer medizinischen Mission in den Bergen Nepals an. Sara, Lebenszahl 5, Übersetzerin, meldete sich aus einer Laune heraus für dieselbe Reise. Drei Missionen später heirateten sie in einem Dorf, in dem sie geholfen hatten. Heute bereiten sie junge Freiwillige auf ihre ersten Einsätze im Ausland vor."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Abenteuer und Dienst sich mischen: Reisen mit einem Zweck und gute Zwecke mit einer Prise Spaß."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Regal mit Andenken aus zwanzig Ländern, ein Stapel Briefe von Menschen, denen ihr geholfen habt, und eine offene Rechnung, die die 9 nur bemerkte, weil die 5 darüber lachte."
+    ]
+   },
+   {
+    "title": "Über Abschiede",
+    "paras": [
+     "Die 9 erlebt Abschiede tief, die 5 zieht schnell weiter. Wer sich gemeinsam einen Moment nimmt, um sich von einem Ort, einer Arbeit oder einem Kapitel zu verabschieden, hält beide Herzen im Gleichschritt."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Die Welt ist ein Buch, und wer nicht reist, liest nur eine Seite, schrieb Augustinus. Dieses Paar will das ganze Buch lesen, und die 9 unterstreicht gern die freundlichen Stellen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wählt jede Jahreszeit ein Abenteuer, das die 5 vorschlägt, und eine gute Tat, die die 9 vorschlägt, und erledigt beides in derselben Woche."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Seht die Welt und hinterlasst sie ein wenig freundlicher, als ihr sie vorgefunden habt."
+    ]
+   }
+  ]
+ },
+ "5-and-11": {
+  "title": "Lebenszahl 5 und 11: ein Blitz in zwei Formen",
+  "lead": "Die 5 ist unruhige Energie im Körper, die 11 elektrische Energie in Geist und Herz. Dieses Paar ist inspirierend und intensiv und braucht Erdung, um nicht auszubrennen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 11 begegnen sich oft an kreativen oder spirituellen Orten: auf einem Musikfestival, einem Meditationsretreat, in einem Theaterworkshop, bei einer nächtlichen Onlinedebatte. Die Anziehung ist sofort da und fast schwindelerregend. Jede Seite spürt, dass die andere niemandem gleicht, den sie bisher kannte."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 5 bringt Freiheit, Humor und den Mut, etwas zu wagen. Die 11 bringt Intuition, Inspiration und Tiefe. Die 5 hilft der 11, lockerer zu werden und Ideen umzusetzen, die 11 zeigt der 5, dass Veränderung einen höheren Sinn haben kann. Eure Gespräche sind selten gewöhnlich."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide können nervös und wechselhaft sein. Die 11 braucht emotionale Sicherheit und fühlt sich von der Sprunghaftigkeit der 5 verletzt. Die 5 fühlt sich von der Intensität und Empfindsamkeit der 11 eingeengt. Ohne Routine lauft ihr vielleicht beide auf Adrenalin, bis ihr zusammenbrecht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist leidenschaftlich und beflügelnd. Ihr könnt euch zutiefst verstanden fühlen. Die Liebe hält, wenn die 5 verlässliche Zeichen der Bindung gibt und die 11 der 5 Freiheit lässt, ohne jede Abwesenheit als Ablehnung zu deuten."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde entzündet ihr Ideen und reist zusammen. Beruflich passt ihr zu Kunst, Musik, Coaching, öffentlichem Reden, Medien und alternativen Heilweisen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Teodora, Lebenszahl 11, Sängerin, lernte Aleksandar, Lebenszahl 5, Tontechniker, auf einem Sommerfestival kennen, als mitten in ihrem Auftritt der Strom ausfiel. Er schloss in vier Minuten einen Akkulautsprecher an, und sie sang den Rest ohne Verstärkung vor einem stillen Publikum. Heute touren sie gemeinsam, und nur ihm erlaubt sie, ihr Mikrofon einzustellen."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit einfachen Ankern: regelmäßige Mahlzeiten, Schlaf, ein gemeinsamer Kalender und ruhige Abende, die die Nerven der 11 schützen und der 5 einen Heimathafen geben."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Gitarren an der Wand, ein Meditationskissen in der Ecke, ein Bus mit genug Sprit für eine weitere Tour und ein Wasserkocher, der scheinbar immer kocht."
+    ]
+   },
+   {
+    "title": "Über Ausbrennen",
+    "paras": [
+     "Ihr könnt beide zu heiß laufen. Auf die Energie des anderen zu achten und einen Ruhetag auszurufen, bevor jemand gegen die Wand fährt, ist ein Liebesbeweis."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Man muss das Eisen schmieden, solange es heiß ist, sagt der Schmied, doch jeder Schmied lässt es auch abkühlen. Dieses Paar kennt den ersten Teil auswendig und muss den zweiten üben."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Verbringt einmal pro Woche eine Stunde zusammen, ohne Handy und ohne Plan. Die 11 wählt den Ort, die 5 die Beschäftigung."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Inspiration und Freiheit werden stärker, wenn zwischen ihnen ein ruhiges Herdfeuer brennt."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",
