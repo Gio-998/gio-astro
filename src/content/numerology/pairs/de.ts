@@ -1332,6 +1332,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "5-and-5": {
+  "title": "Lebenszahl 5 und 5: zwei Reisende auf einer Straße",
+  "lead": "Zwei Fünfen teilen Neugier, Unruhe und Hunger nach Freiheit. Das gemeinsame Leben ist selten langweilig, und die eigentliche Frage lautet, ob jemand lange genug zu Hause bleibt, um die Pflanzen zu gießen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Fünfen begegnen sich meist in Bewegung: an einer Flughafenbar, auf einem Festival, bei einem Sprachaustausch, auf einer Party, die als schneller Kaffee begann. Der Funke springt schnell. Nach einer Stunde planen sie schon eine Reise, die vielleicht stattfindet, vielleicht auch nicht."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr versteht das Bedürfnis des anderen nach Raum, Abwechslung und neuen Erfahrungen. Niemand verlangt vom anderen, kleiner zu werden. Das Gespräch springt von Musik zu Politik zu einem Rezept aus Lissabon, und beide genießen die Fahrt. Ihr erlaubt euch gegenseitig, ganz lebendig zu sein."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei Fünfen können beide Verbindlichkeit, Routine und lästige Pflichten meiden. Rechnungen stapeln sich, Pläne ändern sich in letzter Minute, und niemand will die vernünftige Rolle übernehmen. Die echte Gefahr ist Langeweile: Wenn das Leben ruhiger wird, sucht einer vielleicht anderswo Aufregung."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist verspielt, sinnlich und abenteuerlustig. Ihr flirtet leicht und überrascht euch ständig. Die Bindung vertieft sich, wenn ihr Freiheit gemeinsam definiert, damit beide wissen, wo die Grenzen liegen, und wenn ihr euch nach jeder Reise neu füreinander entscheidet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr das Duo, das zu allem Ja sagt. Beruflich glänzen zwei Fünfen in Tourismus, Medien, Verkauf, Veranstaltungen, Journalismus und jedem Job, der sich täglich ändert. Das Archiv sollte jemand anderes führen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Luka und Tamara, beide Lebenszahl 5, lernten sich in einem Nachtbus zwischen zwei Städten kennen und arbeiteten das folgende Jahrzehnt in Saisonjobs auf drei Kontinenten. Als sie endlich eine Wohnung mieteten, malten sie eine Wand als Landkarte an und steckten eine Nadel in jeden Ort, an dem sie geschlafen hatten. Wenn sie über die nächste Reise streiten, verschieben sie die Nadeln noch heute."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr eine leichte Struktur baut, die eure Freiheit schützt: eine gemeinsame Kasse, ein paar feste Rituale und für jede langweilige Aufgabe eine zuständige Person."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Rucksäcke an der Tür, ein Kühlschrank mit einer halben Zitrone und drei exotischen Soßen und ein Kalender, in dem nur die Flüge mit Kugelschreiber eingetragen sind."
+    ]
+   },
+   {
+    "title": "Über Langeweile",
+    "paras": [
+     "Für zwei Fünfen ist nicht der Partner der Feind, sondern das Immergleiche. Wer die Umgebung wechselt und nicht den Menschen, hält die Beziehung frisch."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ein rollender Stein setzt kein Moos an, heißt es. Zwei Fünfen stimmen vielleicht zu, doch ein wenig Moos auf dem gemeinsamen Zuhause ist nichts Schlechtes."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat plant einer von euch ein kleines Abenteuer in der Nähe, und der andere erledigt ungefragt eine lästige Pflicht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Geteilte Freiheit ist doppelte Freiheit."
+    ]
+   }
+  ]
+ },
+ "5-and-6": {
+  "title": "Lebenszahl 5 und 6: der Wanderer und das Zuhause",
+  "lead": "Die 5 will die offene Straße, die 6 ein warmes Haus voller Menschen. Diese Verbindung lehrt beide, dass Wurzeln und Flügel zum selben Leben gehören können.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 6 begegnen sich oft, wenn die 5 in den Kreis der 6 gerät: ein Familienessen, eine Hochzeit bei Freunden, ein Café im Viertel, in dem die 6 alle kennt. Die 6 ist von den Geschichten der 5 bezaubert, die 5 davon, wie willkommen die 6 alle fühlen lässt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 5 bringt Aufregung, Humor und eine weitere Welt. Die 6 bringt Fürsorge, Schönheit und Zugehörigkeit. Die 5 findet in der 6 einen Ort zum Zurückkehren, die 6 findet in der 5 einen Grund, aus der Routine auszubrechen und Neues zu probieren."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 6 fühlt sich vernachlässigt, wenn die 5 reist oder Pläne ändert. Die 5 fühlt sich beobachtet oder angebunden, wenn die 6 mehr Zweisamkeit will. Verantwortung ist ein häufiger Streitpunkt: Die 6 übernimmt zu viel, die 5 zu wenig, und der Groll wächst leise."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm und lebhaft. Die 6 schenkt Zuneigung und Stabilität, die 5 Spiel und Überraschung. Die Liebe wächst, wenn die 5 bei den Momenten, die der 6 wichtig sind, verlässlich da ist und die 6 die 5 ohne Schuldgefühle ziehen lässt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde schleppt die 5 die 6 an neue Orte, und die 6 sorgt dafür, dass die 5 ordentlich isst. Beruflich passt ihr zu Gastgewerbe, Veranstaltungen, Unterricht, Reisediensten und kreativen Betrieben, die von zu Hause aus geführt werden."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Petar, Lebenszahl 5, Reiseleiter, lernte Elena, Lebenszahl 6, kennen, als er eine Gruppe in die Pension ihrer Familie brachte. Sie bewirtete alle und gab ihm ein Glas Marmelade mit. Im nächsten Frühling kam er allein zurück. Heute führen sie die Pension gemeinsam: Er nimmt die Gäste mit auf Wanderungen, sie hält die Zimmer belegt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn das Zuhause ein Stützpunkt ist und kein Käfig, und wenn die Reisen immer an denselben Tisch zurückführen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein halb ausgepackter Koffer im Flur, ein Topf Suppe auf dem Herd und eine Postkarte am Kühlschrank von der letzten gemeinsamen Reise."
+    ]
+   },
+   {
+    "title": "Über Pflichten",
+    "paras": [
+     "Die 6 trägt den Haushalt oft still. Eine klare Aufteilung der Aufgaben, bei der einige allein der 5 gehören, bewahrt die Liebe davor, zur Buchhaltung zu werden."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Daheim ist es am schönsten, behaupten viele, nur will die 5 das selbst nachprüfen. Die 6 muss darauf vertrauen, dass die 5 es bei der Rückkehr ernst meint."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Plant jede Jahreszeit eine Reise, die die 5 aussucht, und ein Treffen zu Hause, das die 6 aussucht. Beide seid ihr bei beidem mit voller Aufmerksamkeit dabei."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Gebt einander Wurzeln zum Zurückkommen und Flügel zum Aufbrechen."
+    ]
+   }
+  ]
+ },
+ "5-and-7": {
+  "title": "Lebenszahl 5 und 7: der Entdecker und der Suchende",
+  "lead": "Die 5 erkundet die Welt draußen, die 7 die Welt im Inneren. Beide sind neugierig und schätzen Freiheit, was dieses Paar klug, unabhängig und manchmal schwer greifbar macht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 5 und eine 7 begegnen sich oft über Ideen: eine Vorlesung, eine Buchhandlung, ein Onlineforum, ein langes Nachtgespräch nach einem Konzert. Die 5 zieht das Geheimnisvolle und die Tiefe der 7 an. Die 7 zieht der schnelle Verstand der 5 an und dass sie nicht urteilt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr braucht beide Raum und mögt keine Kontrolle. Die 5 bringt Energie, Humor und Lust auf Erfahrung. Die 7 bringt Nachdenken, Analyse und spirituelle Tiefe. Die 5 lockt die 7 aus dem Arbeitszimmer, die 7 hilft der 5, Sinn in all der Bewegung zu finden."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 5 will Handlung und Gesellschaft, die 7 Stille und Alleinsein. Die 5 findet die 7 vielleicht kühl oder verschlossen, die 7 die 5 oberflächlich oder rastlos. Beide meiden gern Gefühlsgespräche, und Abstand wächst, ohne dass es jemand merkt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist geistig und unkonventionell. Ihr genießt zuerst den Verstand des anderen. Die Liebe vertieft sich, wenn ihr euch einigt, wie viel Zeit getrennt gesund ist, und wenn ihr Gefühle laut aussprecht, statt anzunehmen, dass sie verstanden werden."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt ihr Bücher, Reisen und lange Debatten. Beruflich passt ihr zu Forschung, Schreiben, Journalismus, Technik, Psychologie und Studien rund ums Reisen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Bojan, Lebenszahl 7, Astronom, lernte Kristina, Lebenszahl 5, Reisefotografin, in einem Sternenpark in den Bergen kennen. Sie wollte ein Bild der Milchstraße, er wusste, wohin sie die Kamera richten musste. Heute veröffentlichen sie einen kleinen Führer zu Orten für Sternbeobachtung, mit ihren Fotos und seinen Notizen zu jedem Sternbild."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite die Art achtet, wie die andere erkundet, und wenn ihr regelmäßig zurückkehrt, um zu teilen, was ihr gefunden habt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Teleskop auf dem Balkon, eine Karte auf dem Boden mit Kaffeerändern darauf und zwei Menschen, die in getrennten Zimmern lesen und froh sind, im selben Haus zu sein."
+    ]
+   },
+   {
+    "title": "Über Stille",
+    "paras": [
+     "Die 7 tankt allein auf, die 5 in Bewegung. Keins von beidem ist Ablehnung. Wer jeden Tag sagt, welche Art Erholung gerade nötig ist, vermeidet Kränkungen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Stille Wasser sind tief, sagt das Sprichwort. Die 5 ist ein schneller Bach und die 7 ein tiefer See, doch beide sind Wasser und können ineinanderfließen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche teilt die 5 ein Erlebnis und die 7 einen Gedanken, den sie lange gewälzt hat. Stellt zu jedem eine Frage und hört bis zum Ende zu."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Erkundet nach außen und nach innen, und trefft euch dann in der Mitte, um die Geschichte zu erzählen."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",

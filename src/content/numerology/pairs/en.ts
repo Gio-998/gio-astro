@@ -1308,6 +1308,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "5-and-5": {
+  "title": "Life path 5 and 5: two travellers on one road",
+  "lead": "Two fives share curiosity, restlessness and a hunger for freedom. Life together is rarely dull, and the real question is whether anyone will stay home long enough to water the plants.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two fives tend to meet on the move: at an airport bar, a festival, a language exchange, a spontaneous party that started as a quick coffee. The spark is fast. Within an hour they are already planning a trip they may or may not take."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You understand each other's need for space, variety and new experience. Neither asks the other to shrink. Conversation jumps from music to politics to a recipe from Lisbon, and both enjoy the ride. You give each other permission to be fully alive."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two fives can both avoid commitment, routine and dull duties. Bills pile up, plans change at the last minute, and nobody wants to be the responsible one. Boredom is the real danger: when life slows down, one may look for excitement elsewhere."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is playful, sensual and adventurous. You flirt easily and keep surprising each other. The bond deepens when freedom is defined together, so that both know where the edges are, and when you choose each other again after every trip."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the duo that says yes to everything. At work two fives shine in travel, media, sales, events, journalism and any job that changes daily. Someone else should keep the archive."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Luka and Tamara, both life path 5, met on a night bus between two cities and spent the next decade working seasonal jobs on three continents. When they finally rented a flat, they painted one wall as a map and pinned every place they had slept. They still move the pins around when they argue about the next trip."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you build a light structure that protects your freedom: a shared fund, a few fixed rituals, one person in charge of each boring task."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two backpacks by the door, a fridge with half a lemon and three exotic sauces, and a calendar where only the flights are written in pen."
+    ]
+   },
+   {
+    "title": "A note on boredom",
+    "paras": [
+     "For two fives, the enemy is not the partner but sameness. Changing the setting, not the person, keeps the relationship fresh."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A rolling stone gathers no moss, people say. Two fives may agree, but a little moss on the home they share is not a bad thing."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each month, one of you plans a small adventure close to home and the other takes care of one dull chore without being asked."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Freedom shared is freedom doubled."
+    ]
+   }
+  ]
+ },
+ "5-and-6": {
+  "title": "Life path 5 and 6: the wanderer and the home",
+  "lead": "The 5 wants the open road; the 6 wants a warm house full of people. This pairing teaches both that roots and wings can belong to the same life.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and a 6 often meet when the 5 drifts into the 6's circle: a family dinner, a friend's wedding, a neighbourhood café where the 6 knows everyone. The 6 is charmed by the 5's stories; the 5 is charmed by how welcome the 6 makes everyone feel."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 5 brings excitement, humour and a wider world. The 6 brings care, beauty and a sense of belonging. The 5 finds in the 6 a place to return to, and the 6 finds in the 5 a reason to step out of routine and try something new."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 6 can feel neglected when the 5 travels or changes plans. The 5 can feel watched or tied down when the 6 wants more togetherness. Responsibility is a common fight: the 6 takes on too much, the 5 too little, and resentment grows quietly."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm and lively. The 6 gives affection and stability, the 5 brings play and surprise. Love grows when the 5 shows up reliably for the moments that matter to the 6, and the 6 lets the 5 go without guilt."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 5 drags the 6 to new places and the 6 makes sure the 5 eats properly. At work you suit hospitality, events, teaching, travel services and creative businesses run from home."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Petar, life path 5, a tour guide, met Elena, life path 6, when he brought a group to her family's guesthouse. She fed everyone and sent him off with a jar of jam. He came back alone the next spring. Today they run the guesthouse together; he takes guests on hikes, she keeps the rooms full."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the home is a base and not a cage, and when the travels always lead back to the same table."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A suitcase half unpacked in the hallway, a pot of soup on the stove, and a postcard on the fridge from the last trip you took together."
+    ]
+   },
+   {
+    "title": "A note on duty",
+    "paras": [
+     "The 6 often carries the household quietly. Splitting tasks clearly, with a few that belong only to the 5, keeps love from turning into accounting."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "East or west, home is best, the saying goes. The 5 needs to see the east and the west first, and the 6 needs to trust that the 5 means it on return."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Every season, plan one trip chosen by the 5 and one gathering at home chosen by the 6. Both of you attend both with full attention."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Give each other roots to come back to and wings to leave with."
+    ]
+   }
+  ]
+ },
+ "5-and-7": {
+  "title": "Life path 5 and 7: the explorer and the seeker",
+  "lead": "The 5 explores the world outside; the 7 explores the world within. Both are curious and both value freedom, which makes this an intelligent, independent and sometimes elusive pair.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 5 and a 7 often meet through ideas: a lecture, a bookshop, an online forum, a long night conversation after a concert. The 5 is drawn to the 7's mystery and depth. The 7 is drawn to the 5's quick mind and lack of judgement."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both need space and dislike being controlled. The 5 brings energy, humour and a taste for experience. The 7 brings reflection, analysis and spiritual depth. The 5 helps the 7 leave the study; the 7 helps the 5 find meaning in all that movement."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 5 wants action and company, the 7 wants silence and solitude. The 5 may find the 7 cold or withdrawn, the 7 may find the 5 shallow or restless. Both can avoid emotional conversations, and distance may grow without anyone noticing."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is intellectual and unconventional. You enjoy each other's minds before anything else. Love deepens when you agree on how much time apart is healthy and when you say feelings out loud instead of assuming they are understood."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you share books, trips and long debates. At work you suit research, writing, journalism, technology, psychology and travel related study."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Bojan, life path 7, an astronomer, met Kristina, life path 5, a travel photographer, at a dark sky reserve in the mountains. She wanted a shot of the Milky Way; he knew where to point. They now publish a small guide to stargazing places, with her photographs and his notes on each constellation."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each respects the other's way of exploring and when you return regularly to share what you found."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A telescope on the balcony, a map spread on the floor with coffee rings on it, and two people reading in separate rooms, happy to be in the same house."
+    ]
+   },
+   {
+    "title": "A note on silence",
+    "paras": [
+     "The 7 recharges alone, the 5 recharges in motion. Neither is rejection. Naming the kind of rest you need each day prevents hurt feelings."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Still waters run deep, the proverb says. The 5 is a quick stream and the 7 a deep lake; both are water, and they can flow into each other."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 5 shares an experience and the 7 shares a thought it has been turning over. Ask one question about each and listen to the end."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Explore outward and inward, then meet in the middle to tell the story."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",
