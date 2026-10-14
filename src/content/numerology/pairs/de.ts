@@ -797,5 +797,209 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-2": {
+  "title": "Lebenszahl 2 und 2: zwei sanfte Herzen",
+  "lead": "Zwei Zweien bilden eines der weichsten, aufmerksamsten Paare der Numerologie. Tiefe Harmonie fällt leicht, die Herausforderung sind Ehrlichkeit und Richtung.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei Zweien begegnen sich oft leise: in einem Chor, einer Bibliothek, einer Selbsthilfegruppe, in der Küche einer Feier, in die beide vor dem Lärm geflohen sind. Das erste Gespräch kann Stunden dauern. Jede Seite fühlt sich mühelos verstanden, als kenne man sich seit Jahren."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr schätzt beide Freundlichkeit, Treue und Frieden. Keiner von euch muss dominieren. Ihr bemerkt die Stimmungen des anderen, merkt euch kleine Vorlieben und genießt es, einfache Dinge nebeneinander zu tun. Das Zuhause, das ihr zusammen schafft, ist meist ruhig, warm und schön."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Das Risiko ist nicht offener Streit, sondern stilles Auseinanderdriften. Beide meiden Konfrontation, also werden Probleme eher geschluckt als gelöst. Entscheidungen werden vertagt, weil jede Seite darauf wartet, dass die andere wählt. Mit der Zeit können unausgesprochene Bedürfnisse zu leiser Traurigkeit werden."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zärtlich, liebevoll und voller kleiner Gesten. Die Liebe ist am stärksten, wenn beide üben, Schwieriges sanft, aber klar zu sagen. Eine gemeinsame Regel, dass kein Thema zu unangenehm ist, um es anzusprechen, kann diese Beziehung über Jahrzehnte schützen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr füreinander ein sicherer Ort. Bei der Arbeit sind zwei Zweien hervorragende Unterstützungsteams, Beratende, Vermittelnde oder Pflegende, brauchen aber vielleicht eine klare Leitung oder eine feste Frist, um große Vorhaben voranzubringen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Maja und Zoran, beide Lebenszahl 2, führten zwanzig Jahre lang eine kleine Buchhandlung. Die Kundschaft liebte die Ruhe. Als die Miete stieg, wollte keiner aussprechen, dass der Laden schließen könnte. Ihre Tochter brachte sie schließlich zum Reden, und binnen einer Woche fanden sie gemeinsam eine Lösung: ein Lesecafé, das heute die Miete trägt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar gelingt am besten, wenn ihr euch beim Entscheiden abwechselt und beide Ehrlichkeit als eine Form von Freundlichkeit seht, nicht als Bedrohung dafür."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Tassen Tee, die kalt werden, weil das Gespräch zu gut ist, eine gemeinsame Decke auf dem Sofa, eine Liste mit Entscheidungen am Kühlschrank, die noch getroffen werden wollen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche vervollständigt jede Seite den Satz: Etwas, das ich noch nicht gesagt habe, ist. Hört zu, ohne euch zu verteidigen. Dann entscheidet ihr gemeinsam eine Sache."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Frieden ist kostbar, und kostbar ist auch die Wahrheit, die ihn echt hält."
+    ]
+   }
+  ]
+ },
+ "2-and-3": {
+  "title": "Lebenszahl 2 und 3: Zuhören und Erzählen",
+  "lead": "Die 2 bringt Feingefühl und Halt, die 3 Freude, Worte und Farbe. Ein liebenswertes, geselliges Paar, in dem eine Seite strahlt und die andere das Strahlen sicher macht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 3 steht oft im Mittelpunkt einer Runde und erzählt eine Geschichte, die 2 lacht genau im richtigen Moment. Die 3 bemerkt, dass die 2 wirklich zuhört. Die 2 ist bezaubert von der Leichtigkeit der 3, die ihr hilft, sich zu entspannen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 3 hebt die Stimmung der 2 und bringt Spaß ins Leben. Die 2 gibt der 3 emotionale Tiefe und ein treues Publikum. Beide genießen Schönheit, Musik und Gesellschaft. Gemeinsam schafft ihr einen warmen Freundeskreis, zu dem andere gehören wollen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 3 kann sprunghaft oder flirtend sein, was die empfindsame 2 beunruhigt. Die 2 braucht vielleicht mehr Bestätigung, als die 3 von selbst gibt. Wenn sie verletzt ist, macht die 3 Witze und die 2 verstummt, sodass Probleme ungelöst vorbeigleiten."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist verspielt und zärtlich. Die 3 bringt Überraschungen, die 2 Hingabe. Es gelingt, wenn die 3 beständige Zeichen der Bindung gibt und die 2 klar sagt, was sie beunruhigt, statt zu hoffen, dass die 3 es errät."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr ein natürliches Gastgeberpaar. Bei der Arbeit präsentiert und gestaltet die 3, während die 2 koordiniert und die Kundschaft zufrieden hält: Veranstaltungen, Medien, Gastgewerbe, Unterricht."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Lina, Lebenszahl 3, leitete ein Puppentheater für Kinder. Bojan, Lebenszahl 2, kam dazu, um die Kulissen zu bauen, und wurde derjenige, der nervöse Kinder vor der Vorstellung beruhigt. Heute sind sie verheiratet und touren gemeinsam durch Schulen. Sie bringt die Kinder zum Lachen, er achtet darauf, dass kein Kind außen vor bleibt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 3 sich erinnert, dass die Empfindsamkeit der 2 eine Gabe ist, und die 2 sich erinnert, dass die Leichtigkeit der 3 kein Mangel an Fürsorge ist."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Tisch voller Freunde, eine Gitarre in der Ecke, die 3 erzählt von der Reise, während die 2 leise allen Tee nachschenkt und bemerkt, wer heute traurig wirkt. Später, allein, spülen sie das Geschirr und lachen noch einmal über dieselben Witze."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Abend erzählt die 3 einen lustigen und einen ernsten Moment des Tages. Die 2 antwortet auf beide. So bleiben das Verspielte und das Tiefe im Gleichgewicht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Freude, geteilt mit jemandem, der wirklich zuhört, wird zu etwas, das man behalten kann."
+    ]
+   }
+  ]
+ },
+ "2-and-4": {
+  "title": "Lebenszahl 2 und 4: der sichere Hafen",
+  "lead": "Die 2 bringt Wärme und Takt, die 4 Struktur und Verlässlichkeit. Zusammen bilden sie eines der stabilsten und sichersten Paare überhaupt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 2 und eine 4 begegnen sich oft im Alltag, bei der Arbeit, in der Nachbarschaft, über die Familie. Die Anziehung wächst langsam, durch Verlässlichkeit: die 4 ist immer da, die 2 bemerkt es immer. Vertrauen kommt vor der Leidenschaft, und das passt beiden."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr schätzt beide Sicherheit, Treue und ein ruhiges Zuhause. Die 4 bietet der 2 festen Boden, die 2 der 4 emotionale Wärme und Anerkennung. Der praktische Alltag läuft bei euch rund: Rechnungen bezahlt, Pläne gemacht, Versprechen gehalten."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 4 kann starr und unverblümt sein, was die 2 verletzen kann. Die 2 wünscht sich vielleicht mehr Zärtlichkeit und Gespräch, als die 4 leicht gibt. Routine kann zu Langeweile erstarren, wenn niemand frische Luft in die Beziehung bringt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier treu und beständig. Die 4 zeigt Liebe durch Taten, reparieren, bauen, versorgen, die 2 durch Worte und Berührung. Die Sprache des anderen zu lernen ist der Schlüssel. Ein wenig Abenteuer, notfalls sorgfältig geplant, hält die Romantik lebendig."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr die Verlässlichen, die alle anrufen. Bei der Arbeit kümmert sich die 4 um Systeme und die 2 um Menschen. Verwaltung, Gesundheitswesen, Finanzen und Familienbetriebe passen zu diesem Paar."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Snežana, Lebenszahl 2, und Dragan, Lebenszahl 4, führen seit fünfundzwanzig Jahren eine kleine Apotheke. Er hält Regale und Bücher perfekt, sie kennt die Geschichte jeder Kundin. Als die Pandemie kam, sagte die ganze Straße, ihre sei der einzige Ort, an dem nie etwas ausging, schon gar nicht die Freundlichkeit."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 4 sich Zeit für Gefühle nimmt und die 2 die Taten der 4 als Liebe wertschätzt. Kleine Rituale vertiefen die Bindung."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine aufgeräumte Küche, ein Werkzeugkasten neben der Tür, frische Blumen auf dem Tisch und ein Einkaufszettel in zwei Handschriften: die stille Poesie eines Zuhauses von 2 und 4."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Trautes Heim, Glück allein, sagt man. Für dieses Paar stimmt es fast: Die 4 baut das Heim, die 2 macht es traut, und das Glück entsteht dazwischen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal im Monat plant die 2 eine Überraschung, und die 4 sagt im Voraus zu, Ja zu sagen. Neues innerhalb von Sicherheit ist genau das, was dieses Paar braucht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein sicherer Hafen besteht aus festen Mauern und warmem Licht; ihr seid beides."
+    ]
+   }
+  ]
  }
 };

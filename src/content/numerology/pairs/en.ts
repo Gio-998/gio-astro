@@ -785,5 +785,209 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-2": {
+  "title": "Life path 2 and 2: two gentle hearts",
+  "lead": "Two twos create one of the softest, most attentive pairings in numerology. Deep harmony is easy; the challenge is honesty and direction.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two twos often meet quietly: in a choir, a library, a support group, a kitchen at a party where both have escaped the noise. The first conversation can last hours. Each feels understood without effort, as if they had known each other for years."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both value kindness, loyalty and peace. Neither of you needs to dominate. You notice each other's moods, remember small preferences and enjoy doing simple things side by side. The home you build together is usually calm, warm and beautiful."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The risk is not open conflict but silent drift. Both avoid confrontation, so problems can be swallowed rather than solved. Decisions may be postponed because each waits for the other to choose. Over time, unspoken needs can turn into quiet sadness."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is tender, affectionate and full of small gestures. Love grows strongest when both practise saying difficult things gently but clearly. A shared rule that no topic is too uncomfortable to raise can protect this relationship for decades."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are each other's safe place. At work two twos make excellent support teams, counsellors, mediators or care workers, but you may need a clear leader or a firm deadline to move big projects forward."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Maja and Zoran, both life path 2, ran a small bookshop for twenty years. Customers loved the calm. When rent rose, neither wanted to say the shop might close. Their daughter finally made them talk, and they found a solution together within a week: a reading café that now pays the rent."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair works best when each takes turns being the one who decides, and when both treat honesty as a form of kindness rather than a threat to it."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two cups of tea going cold because the conversation is too good, a shared blanket on the sofa, a list of decisions on the fridge that still need making."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, each of you finishes the sentence: something I have not said yet is. Listen without defending. Then decide one thing together."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Peace is precious, and so is the truth that keeps it real."
+    ]
+   }
+  ]
+ },
+ "2-and-3": {
+  "title": "Life path 2 and 3: the listener and the storyteller",
+  "lead": "The 2 brings sensitivity and support, the 3 brings joy, words and colour. A sweet, social pairing where one shines and the other makes the shining safe.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 3 is often the centre of a group, telling a story; the 2 is the one laughing at exactly the right moment. The 3 notices that the 2 really listens. The 2 is charmed by the 3's lightness, which helps the 2 relax."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 3 lifts the 2's mood and brings fun into life. The 2 gives the 3 emotional depth and a loyal audience. Both enjoy beauty, music and company. Together you create a warm social circle that others want to join."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 3 can be scattered or flirtatious in a way that worries the sensitive 2. The 2 may need more reassurance than the 3 naturally gives. When hurt, the 3 jokes and the 2 goes quiet, so problems slip by unresolved."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love is playful and affectionate. The 3 brings surprises; the 2 brings devotion. It works when the 3 offers steady signs of commitment and the 2 says plainly what worries them instead of hoping the 3 will guess."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are a natural pair of hosts. At work the 3 presents and creates while the 2 coordinates and keeps clients happy: events, media, hospitality, teaching."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Lina, life path 3, ran a puppet theatre for children. Bojan, life path 2, joined to build the sets and became the one who calmed nervous kids before shows. Now married, they tour schools together. She makes the children laugh; he makes sure no child is left out."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 3 remembers that the 2's sensitivity is a gift, and the 2 remembers that the 3's lightness is not a lack of care."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A table full of friends, a guitar in the corner, the 3 telling the story of the trip while the 2 quietly refills everyone's tea and notices who seems sad tonight. Later, alone, they wash the dishes and laugh at the same jokes again."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Laughter is the best medicine, they say. The 3 provides the laughter, and the 2 knows which patient needs it most."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each evening, the 3 shares one funny moment of the day and one serious one. The 2 responds to both. It keeps the playful and the deep in balance."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Joy shared with someone who really listens becomes something you can keep."
+    ]
+   }
+  ]
+ },
+ "2-and-4": {
+  "title": "Life path 2 and 4: the steady harbour",
+  "lead": "The 2 brings warmth and tact, the 4 brings structure and reliability. Together they build one of the most stable and secure pairings of all.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 2 and a 4 often meet in ordinary settings, at work, in a neighbourhood, through family. Attraction grows slowly, through reliability: the 4 always shows up, the 2 always notices. Trust comes before passion, and that suits you both."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both value security, loyalty and a calm home. The 4 offers the 2 a solid ground to stand on; the 2 offers the 4 emotional warmth and appreciation. Practical life runs smoothly between you: bills paid, plans made, promises kept."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 4 can be rigid and blunt, which can hurt the 2. The 2 may want more tenderness and conversation than the 4 easily offers. Routine can harden into boredom if nobody brings fresh air into the relationship."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is faithful and enduring. The 4 shows love through actions, fixing, building, providing; the 2 through words and touch. Learning each other's language is the key. A little adventure, planned carefully if necessary, keeps romance alive."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the reliable ones everyone calls. At work the 4 handles systems and the 2 handles people. Administration, healthcare, finance and family businesses suit this pair."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Snežana, life path 2, and Dragan, life path 4, have run a small pharmacy for twenty five years. He keeps the shelves and accounts perfect; she knows every customer's story. When a pandemic came, the whole street said theirs was the one place that never ran out of anything, especially kindness."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 4 sets aside time for feelings and the 2 values the 4's actions as love. Small rituals deepen the bond."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A tidy kitchen, a toolbox by the door, fresh flowers on the table and a shopping list in two kinds of handwriting: the quiet poetry of a 2 and 4 home."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, the 2 plans a surprise and the 4 agrees in advance to say yes to it. Novelty within safety is exactly what this pair needs."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A safe harbour is built of strong walls and warm light; you are both."
+    ]
+   }
+  ]
  }
 };
