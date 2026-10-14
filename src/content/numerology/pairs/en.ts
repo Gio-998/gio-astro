@@ -4080,6 +4080,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "22-and-22": {
+  "title": "Life path 22 and 22: two master builders",
+  "lead": "Two 22s share enormous ambition, discipline and the wish to leave something lasting. Together they can build on a scale few couples imagine, if they remember that a marriage is not a construction site.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two 22s usually meet through very large work: a national project, a global company, an institution being founded or rebuilt. They notice each other because both stay after everyone else has gone home. Respect is immediate, and so is the question of who leads."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You understand each other's need to build something that matters. Neither asks the other to dream smaller. Both are reliable, methodical and patient with long timelines. Together you can create organisations, buildings or movements that serve many people for decades."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two 22s can both want control of the plan. Each may think its way is the only sound one. Work can swallow the relationship, and both may hide stress until it becomes illness or anger. Rest and play are easily postponed forever."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is steady, serious and loyal. You show love by sharing the load and keeping every promise. Love deepens when you plan time together that has no goal at all and when you allow each other to be tired and uncertain."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you give each other wise, practical advice. At work you can lead major projects in architecture, engineering, government, international business or social reform, if you divide responsibilities clearly."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Verica and Spase, both life path 22, met as engineers on a dam project that lasted nine years. They married in the sixth year, during a two day break. When the dam was finished, they built a small wooden house by the lake it created and made one rule: no blueprints inside. They have kept it for twenty years."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each of you leads its own field, when you meet as equals at home, and when holidays are planned as firmly as deadlines."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two desks facing each other, two cups of coffee gone cold, and a calendar where the only unmovable dates are anniversaries and holidays."
+    ]
+   },
+   {
+    "title": "A note on rest",
+    "paras": [
+     "Master builders forget that machines need maintenance, and so do people. A weekly evening of rest, defended against all emergencies, keeps both of you working for the long term."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Every cathedral was once a single stone and a stubborn idea, the old masons used to say. Two 22s have plenty of both, and the trick is to put one stone aside for your own home."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, each of you names one thing you built together that has nothing to do with work, a habit, a joke, a tradition. Add one more before the next month."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Build for the world, and keep building the quiet house you share."
+    ]
+   }
+  ]
+ },
+ "22-and-33": {
+  "title": "Life path 22 and 33: the builder and the teacher of love",
+  "lead": "The 22 builds structures that last; the 33 fills them with care. Together these two master numbers can create institutions of healing, learning and service on a large scale.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 22 and a 33 often meet when a caring mission needs a builder: a new children's hospital, a network of schools, a centre for the elderly. The 33 brings the dream of what the place should feel like. The 22 brings the plan for how it will stand."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you are devoted to serving others. The 22 brings structure, organisation and the ability to make plans happen. The 33 brings compassion, patience and a gift for teaching by example. The 22 makes the 33's love durable, and the 33 makes the 22's work human."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 may focus on results and timelines while the 33 focuses on people and feelings. The 33 may feel the 22 is cold; the 22 may feel the 33 is too soft. Both can overwork and neglect themselves, each in its own way."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm, loyal and purposeful. You admire each other's dedication. Love deepens when the 22 lets itself be cared for and the 33 accepts help with its burdens."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you support each other's missions with practical and emotional help. At work you suit healthcare, education, social services, foundations and the design of public spaces."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Mirela, life path 33, a paediatrician, dreamed of a children's ward where parents could sleep beside their children. Atanas, life path 22, an architect, designed it with folding beds built into every wall. When the ward opened, a mother told Mirela it was the first night in months she had slept. Atanas keeps that letter on his desk."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 22's plans serve the 33's care and when both of you protect time to rest and simply be together."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Blueprints rolled on the shelf, a box of thank you cards on the table, and two people walking the dog in silence after a long day, glad for each other's company."
+    ]
+   },
+   {
+    "title": "A note on balance",
+    "paras": [
+     "The 22 measures in years, the 33 in hearts. Both measures are true. Naming what each of you values most in a project avoids many quiet misunderstandings."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "The best buildings are built around the people who will live in them, a wise architect once said. The 33 knows the people and the 22 knows the building."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, the 33 tells one story of someone the shared work helped, and the 22 shows one detail of a plan that made it possible."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A strong roof and a warm heart together make a home for many."
+    ]
+   }
+  ]
+ },
+ "33-and-33": {
+  "title": "Life path 33 and 33: a double gift of love",
+  "lead": "Two 33s share the rarest number in numerology, the master teacher of love. Their union is deeply caring and selfless, and its main lesson is to let that love flow back to themselves.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "Two 33s usually meet while serving: on a hospital ward at night, in a shelter, at a school for children with special needs, in a community kitchen. They notice each other because both are the last to leave and the first to offer help. The connection feels natural and calm."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share compassion, responsibility and a wish to make life better for others. Neither has to explain why it gives so much. Both are patient, warm and wise beyond their years. Your home can become a place of healing for many people."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Two 33s can both give until they are exhausted. Both may hide their own pain to protect the other. Boundaries are hard, and others may lean on you too much. Resentment can build quietly if neither of you asks for help."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is gentle, devoted and spiritual. You understand each other's need to serve. Love grows when you take turns being the one who receives and when you plan time where nobody else needs you."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the people everyone trusts. At work you suit medicine, nursing, teaching, social work, spiritual leadership and nonprofit service."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Kalina and Petre, both life path 33, ran a home for children without parents for fifteen years. They raised more than forty children there. When the last group grew up, the children organised a surprise: a trip to the sea for the two of them, paid for together. Kalina says it was the first time anyone had ever taken care of them."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you share caring duties with others, set clear limits, and treat your own rest as part of your service."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A long table with too many chairs, a wall full of photographs of people you helped, and a small quiet bedroom where the two of you rest at the end of the day."
+    ]
+   },
+   {
+    "title": "A note on receiving",
+    "paras": [
+     "Two 33s may both be uncomfortable receiving care. Practising it together, starting with small things, is the deepest gift you can give each other."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Love given away returns twice over, the grandmothers used to promise. Two 33s can test that promise, as long as they leave room for the love to come back."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, each of you does one kind thing for the other without being asked, then names one need of its own out loud."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "The ones who care for everyone also deserve to be cared for."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",

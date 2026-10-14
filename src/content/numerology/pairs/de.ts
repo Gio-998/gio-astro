@@ -4104,6 +4104,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "22-and-22": {
+  "title": "Lebenszahl 22 und 22: zwei Meisterbaumeister",
+  "lead": "Zwei 22er teilen enormen Ehrgeiz, Disziplin und den Wunsch, etwas Bleibendes zu hinterlassen. Zusammen können sie in Größenordnungen bauen, die sich wenige Paare vorstellen, wenn sie daran denken, dass eine Ehe keine Baustelle ist.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei 22er begegnen sich meist bei sehr großer Arbeit: einem nationalen Projekt, einem weltweiten Unternehmen, einer Institution, die gegründet oder neu aufgebaut wird. Sie bemerken einander, weil beide bleiben, wenn alle anderen schon nach Hause gegangen sind. Der Respekt ist sofort da, und ebenso die Frage, wer führt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr versteht das Bedürfnis des anderen, etwas zu bauen, das zählt. Keiner verlangt vom anderen, kleiner zu träumen. Beide sind verlässlich, methodisch und geduldig mit langen Zeiträumen. Zusammen könnt ihr Organisationen, Gebäude oder Bewegungen schaffen, die vielen Menschen jahrzehntelang dienen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei 22er wollen womöglich beide den Plan in der Hand haben. Jede Seite hält ihren Weg vielleicht für den einzig vernünftigen. Die Arbeit kann die Beziehung verschlucken, und beide verbergen Stress, bis er zu Krankheit oder Wut wird. Ruhe und Spiel werden leicht für immer verschoben."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist beständig, ernst und treu. Ihr zeigt Liebe, indem ihr die Last teilt und jedes Versprechen haltet. Die Liebe vertieft sich, wenn ihr gemeinsame Zeit ganz ohne Ziel plant und einander erlaubt, müde und unsicher zu sein."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gebt ihr einander klugen, praktischen Rat. Beruflich könnt ihr große Vorhaben in Architektur, Ingenieurwesen, Verwaltung, internationalem Geschäft oder gesellschaftlicher Reform leiten, wenn ihr die Zuständigkeiten klar teilt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Verica und Spase, beide Lebenszahl 22, lernten sich als Ingenieure beim Bau eines Staudamms kennen, der neun Jahre dauerte. Sie heirateten im sechsten Jahr, während einer zweitägigen Pause. Als der Damm fertig war, bauten sie ein kleines Holzhaus an dem See, den er geschaffen hatte, und stellten eine Regel auf: drinnen keine Baupläne. Sie halten sie seit zwanzig Jahren."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite ihr eigenes Feld leitet, ihr euch zu Hause als Gleiche begegnet und Urlaube so fest geplant werden wie Fristen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Schreibtische, die sich gegenüberstehen, zwei kalt gewordene Tassen Kaffee und ein Kalender, in dem nur Jahrestage und Urlaube unverrückbar sind."
+    ]
+   },
+   {
+    "title": "Über Erholung",
+    "paras": [
+     "Meisterbaumeister vergessen, dass Maschinen Wartung brauchen, und Menschen ebenso. Ein wöchentlicher Ruheabend, gegen alle Notfälle verteidigt, hält euch beide auf lange Sicht arbeitsfähig."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Jede Kathedrale war einmal ein einzelner Stein und eine sture Idee, sagten die alten Steinmetze. Zwei 22er haben von beidem genug, und die Kunst ist, einen Stein für das eigene Zuhause beiseitezulegen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt einmal im Monat jeder etwas Gemeinsames, das nichts mit Arbeit zu tun hat: eine Gewohnheit, einen Witz, eine Tradition. Fügt vor dem nächsten Monat noch eines hinzu."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Baut für die Welt, und baut weiter an dem stillen Haus, das ihr teilt."
+    ]
+   }
+  ]
+ },
+ "22-and-33": {
+  "title": "Lebenszahl 22 und 33: der Baumeister und die Lehrerin der Liebe",
+  "lead": "Die 22 baut Strukturen, die bleiben, die 33 füllt sie mit Fürsorge. Zusammen können diese beiden Meisterzahlen Einrichtungen der Heilung, des Lernens und des Dienens im großen Stil schaffen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 22 und eine 33 begegnen sich oft, wenn eine fürsorgliche Aufgabe einen Baumeister braucht: ein neues Kinderkrankenhaus, ein Schulnetz, ein Zentrum für ältere Menschen. Die 33 bringt den Traum davon, wie sich der Ort anfühlen soll. Die 22 bringt den Plan, wie er stehen wird."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr seid beide dem Dienst an anderen verpflichtet. Die 22 bringt Struktur, Organisation und die Fähigkeit, Pläne umzusetzen. Die 33 bringt Mitgefühl, Geduld und die Gabe, durch Vorbild zu lehren. Die 22 macht die Liebe der 33 dauerhaft, und die 33 macht die Arbeit der 22 menschlich."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 richtet sich vielleicht auf Ergebnisse und Zeitpläne aus, die 33 auf Menschen und Gefühle. Die 33 hält die 22 womöglich für kalt, die 22 die 33 für zu weich. Beide arbeiten leicht zu viel und vernachlässigen sich, jede auf ihre Art."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm, treu und zielgerichtet. Ihr bewundert die Hingabe des anderen. Die Liebe vertieft sich, wenn die 22 sich umsorgen lässt und die 33 Hilfe bei ihren Lasten annimmt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde unterstützt ihr eure Aufgaben mit praktischer und emotionaler Hilfe. Beruflich passt ihr zu Gesundheitswesen, Bildung, sozialen Diensten, Stiftungen und der Gestaltung öffentlicher Räume."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Mirela, Lebenszahl 33, Kinderärztin, träumte von einer Kinderstation, auf der Eltern neben ihren Kindern schlafen können. Atanas, Lebenszahl 22, Architekt, entwarf sie mit Klappbetten in jeder Wand. Als die Station öffnete, schrieb eine Mutter an Mirela, es sei die erste Nacht seit Monaten gewesen, in der sie geschlafen habe. Atanas hat diesen Brief auf seinem Schreibtisch."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Pläne der 22 der Fürsorge der 33 dienen und ihr beide Zeit schützt, um auszuruhen und einfach zusammen zu sein."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Gerollte Baupläne im Regal, eine Schachtel Dankeskarten auf dem Tisch und zwei Menschen, die nach einem langen Tag schweigend mit dem Hund spazieren gehen und froh über die Gesellschaft des anderen sind."
+    ]
+   },
+   {
+    "title": "Über das Gleichgewicht",
+    "paras": [
+     "Die 22 misst in Jahren, die 33 in Herzen. Beide Maße stimmen. Wer benennt, was jeder an einem Projekt am meisten schätzt, vermeidet viele stille Missverständnisse."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Die besten Gebäude werden um die Menschen herum gebaut, die darin leben werden, sagte einmal ein kluger Architekt. Die 33 kennt die Menschen und die 22 das Gebäude."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal im Monat erzählt die 33 die Geschichte eines Menschen, dem die gemeinsame Arbeit geholfen hat, und die 22 zeigt ein Detail des Plans, das es möglich gemacht hat."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein festes Dach und ein warmes Herz zusammen schaffen ein Zuhause für viele."
+    ]
+   }
+  ]
+ },
+ "33-and-33": {
+  "title": "Lebenszahl 33 und 33: ein doppeltes Geschenk der Liebe",
+  "lead": "Zwei 33er teilen die seltenste Zahl der Numerologie, die Meisterlehrerin der Liebe. Ihre Verbindung ist zutiefst fürsorglich und selbstlos, und ihre wichtigste Lektion ist, diese Liebe auch zu sich selbst zurückfließen zu lassen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Zwei 33er begegnen sich meist im Dienst: nachts auf einer Krankenstation, in einer Unterkunft, in einer Schule für Kinder mit besonderem Förderbedarf, in einer Suppenküche. Sie bemerken einander, weil beide als Letzte gehen und als Erste Hilfe anbieten. Die Verbindung wirkt natürlich und ruhig."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Mitgefühl, Verantwortung und den Wunsch, anderen das Leben leichter zu machen. Keiner muss erklären, warum er so viel gibt. Beide sind geduldig, warm und weise über ihre Jahre hinaus. Euer Zuhause kann für viele Menschen ein Ort der Heilung werden."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Zwei 33er können beide geben, bis sie erschöpft sind. Beide verbergen vielleicht den eigenen Schmerz, um den anderen zu schonen. Grenzen fallen schwer, und andere stützen sich womöglich zu sehr auf euch. Groll kann leise wachsen, wenn keiner von euch um Hilfe bittet."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist sanft, hingebungsvoll und spirituell. Ihr versteht das Bedürfnis des anderen zu dienen. Die Liebe wächst, wenn ihr abwechselnd die empfangende Seite seid und Zeit plant, in der euch niemand sonst braucht."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr die Menschen, denen alle vertrauen. Beruflich passt ihr zu Medizin, Pflege, Unterricht, Sozialarbeit, geistlicher Leitung und gemeinnützigem Dienst."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Kalina und Petre, beide Lebenszahl 33, führten fünfzehn Jahre lang ein Heim für Kinder ohne Eltern. Mehr als vierzig Kinder wuchsen dort auf. Als die letzte Gruppe erwachsen war, organisierten die Kinder eine Überraschung: eine Reise ans Meer für die beiden, gemeinsam bezahlt. Kalina sagt, es sei das erste Mal gewesen, dass jemand für sie gesorgt habe."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr fürsorgliche Aufgaben mit anderen teilt, klare Grenzen setzt und eure eigene Erholung als Teil des Dienens betrachtet."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein langer Tisch mit zu vielen Stühlen, eine Wand voller Fotos von Menschen, denen ihr geholfen habt, und ein kleines stilles Schlafzimmer, in dem ihr beide am Ende des Tages ruht."
+    ]
+   },
+   {
+    "title": "Über das Empfangen",
+    "paras": [
+     "Zwei 33ern ist es vielleicht beiden unangenehm, Fürsorge anzunehmen. Es gemeinsam zu üben, mit kleinen Dingen beginnend, ist das tiefste Geschenk, das ihr einander machen könnt."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Verschenkte Liebe kehrt doppelt zurück, versprachen die Großmütter. Zwei 33er können dieses Versprechen prüfen, wenn sie der Liebe Raum lassen zurückzukommen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Tut einmal pro Woche jeder ungefragt etwas Gutes für den anderen und nennt dann laut ein eigenes Bedürfnis."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Wer für alle sorgt, verdient es auch, dass für ihn gesorgt wird."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
