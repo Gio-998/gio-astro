@@ -20,6 +20,12 @@ import { mkB4 } from "./mk-b4";
 import { mkB4b } from "./mk-b4b";
 import { deB4 } from "./de-b4";
 import { deB4b } from "./de-b4b";
-const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b } };
+import { enB5 } from "./en-b5";
+import { enB5b } from "./en-b5b";
+import { mkB5 } from "./mk-b5";
+import { mkB5b } from "./mk-b5b";
+import { deB5 } from "./de-b5";
+import { deB5b } from "./de-b5b";
+const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b, ...enB5, ...enB5b }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b, ...mkB5, ...mkB5b }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b, ...deB5, ...deB5b } };
 /** Long story sections for an angel number page, if that batch is written. */
 export function angelLong(lang: string, n: string) { return ALL[lang]?.[n] ?? []; }
