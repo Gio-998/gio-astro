@@ -1505,5 +1505,239 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "22": {
+  "title": "Born on the 22nd: the master builder",
+  "lead": "The 22nd is a master number day: large visions paired with practical skill, and the patience to turn plans into lasting structures.",
+  "sections": [
+   {
+    "title": "The gift of the 22nd",
+    "paras": [
+     "Twenty two is the master builder of numerology, the 4 raised to a higher octave. People born on this day often see a big picture that others miss and, unusually, also know how to lay the bricks. Their gift is to make ideals concrete: a school, a company, a bridge, a family tradition that outlives them."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may feel a quiet pressure to do something that matters. Small talk bores you, but a hard plan with many moving parts wakes you up. You probably keep lists, timelines and spreadsheets, and you are the one others call when a project is falling apart. At times the size of your own expectations can feel heavy."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Vision, discipline, organisation, reliability and the ability to lead large efforts without losing sight of detail. The 22nd thrives as an architect, engineer, project director, policy maker or founder of institutions."
+    ]
+   },
+   {
+    "title": "The master number lesson",
+    "paras": [
+     "Master numbers carry more voltage. On a bad day the 22nd falls back to an anxious 4, stuck in control and overwork, or freezes because the vision seems too big to start. The lesson is to begin with one stone, accept help and let the work grow at a human pace."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "In love the 22nd is loyal and protective, often the steady partner who builds a home brick by brick. They need someone who respects their mission but also pulls them away from the desk for long walks and laughter."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Architecture, civil engineering, urban planning, large scale management, public service, nonprofit leadership and any role where a long term plan must survive real world conditions."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Marija, born on the 22nd of March, spent ten years turning an abandoned tobacco warehouse in her home town into a library and craft centre. She wrote every grant herself and learned welding to save money. On opening day she admitted the hardest part was letting volunteers do things differently from her drawings."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 3 or 5, a 22nd birthday adds structure to restless talent. On life path 4 it doubles the builder, so rest becomes essential. On 7 it turns research into practical systems. On 11 it pairs intuition with execution, a powerful but demanding mix."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A desk covered in plans held down by a coffee cup, a hard hat hanging by the door, a phone call at dusk to check the concrete has set: the 22nd lives between blueprint and building site."
+    ]
+   },
+   {
+    "title": "A note on scale",
+    "paras": [
+     "People of the 22nd often measure themselves against the largest possible outcome. It helps to remember that a well made small thing, a garden bench or a fair rule at work, is also master building."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each Sunday, write the one structure you are building this year and the single next stone for the week. Cross it off when done. The vision stays large while the steps stay possible."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Build slowly, build well, and let others help carry the stones."
+    ]
+   }
+  ]
+ },
+ "23": {
+  "title": "Born on the 23rd: the curious messenger",
+  "lead": "The 23rd reduces to 5 and blends the cooperation of 2 with the expression of 3: curiosity, wit and a talent for moving between worlds.",
+  "sections": [
+   {
+    "title": "The gift of the 23rd",
+    "paras": [
+     "Twenty three is often called the number of the royal star of the lion in old numerology books, a sign of protection and good fortune for travellers. People born on this day are usually quick, sociable and endlessly curious. Their gift is connecting people and ideas that would never otherwise meet."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may read three books at once and change hobbies with the seasons. You can talk to a farmer and a professor in the same hour and enjoy both. Routine makes you itch. Many of the 23rd have a gift for languages, accents and imitation, and a sharp sense of humour."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Adaptability, communication, charm, quick learning and sensory delight. The 23rd shines in sales, travel, journalism, healing professions that use touch, and any job with variety."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Scattered energy and restlessness are the risks. The 23rd can leave things half done or chase excitement at the cost of depth. Growth comes from choosing a few commitments and discovering that freedom can live inside them."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love for the 23rd needs play, conversation and room to breathe. Jealous or rigid partners make them run. With someone who travels with them, literally or in ideas, they become surprisingly faithful."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Journalism, translation, tourism, marketing, physiotherapy, massage, event work, consulting and entrepreneurship with many small ventures."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Petar, born on the 23rd of June, has worked as a tour guide, a radio host and a wine importer. Now he runs walking tours that end in small family cellars. He says each job taught him the same thing: people want a good story and someone who listens to theirs."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 4 or 8, a 23rd birthday brings lightness and new ideas to serious work. On 5 it doubles the wanderlust, so a home base matters. On 6 it adds social ease to caring. On 7 it gives the thinker a voice."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A backpack that is never fully unpacked, a notebook of words in four languages, a café table where a stranger becomes a friend in twenty minutes: this is the 23rd at ease."
+    ]
+   },
+   {
+    "title": "A note on the senses",
+    "paras": [
+     "Many born on the 23rd are strongly physical: they notice texture, taste and music more than most. Cooking, dancing or hiking calms their busy mind better than any argument."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Pick one project and give it fifteen minutes a day for a month, no matter how bored you feel. Track it on paper. Finishing teaches the 23rd a deeper kind of freedom."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Curiosity is your compass; commitment is the road that lets you arrive."
+    ]
+   }
+  ]
+ },
+ "24": {
+  "title": "Born on the 24th: the devoted caretaker",
+  "lead": "The 24th reduces to 6 and joins the sensitivity of 2 with the order of 4: love expressed through care, home and responsibility.",
+  "sections": [
+   {
+    "title": "The gift of the 24th",
+    "paras": [
+     "Twenty four is the number of hours in a day, and people of this birthday often feel that care is a full time job. They build warm homes, remember birthdays and quietly hold families and teams together. Their gift is love made practical: a cooked meal, a fixed tap, a steady presence."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may be the one who notices that a friend is tired before they say it. Guests feel at home in your space. You like beautiful, orderly surroundings and can get upset when harmony breaks. Fairness matters to you, and injustice toward others moves you deeply."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Loyalty, responsibility, aesthetic sense, patience and protective warmth. The 24th excels in teaching, medicine, interior design, hospitality and family business."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Over responsibility and quiet martyrdom are the risks. The 24th can carry burdens that are not theirs, then feel unappreciated. Growth comes from letting others take care of themselves and learning to receive as easily as they give."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 24th is often deeply romantic and family minded. They need a partner who shows appreciation and shares the chores of daily life. Words of thanks matter more to them than grand gestures."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Nursing, teaching, counselling, interior and garden design, cooking, hotel management, social work and running a family enterprise."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Elena, born on the 24th of September, runs a small guesthouse by the lake. Guests return year after year because she remembers how they take their coffee. When she broke her leg one summer, her regular guests cooked for her, and she cried, surprised to be on the receiving side."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 1 or 5, a 24th birthday adds warmth and roots to independence. On 6 it doubles the caretaker, so boundaries become vital. On 7 it softens solitude with family. On 9 care widens into service to many."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A table set for more people than invited, a vase of fresh flowers, a list of who needs a call this week: the 24th makes everyday life feel looked after."
+    ]
+   },
+   {
+    "title": "A note on beauty",
+    "paras": [
+     "For many born on the 24th, a tidy, beautiful home is not vanity but medicine. Rearranging a room or planting a balcony restores their balance after a hard week."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Once a week, ask someone to do something for you, and simply say thank you without returning the favour at once. Notice how it feels to be cared for."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your care is a gift, and so is letting others care for you."
+    ]
+   }
+  ]
  }
 };

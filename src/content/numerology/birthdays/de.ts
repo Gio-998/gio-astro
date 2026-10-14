@@ -1541,5 +1541,239 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "22": {
+  "title": "Geboren am 22.: die Meisterbauer",
+  "lead": "Der 22. ist ein Meisterzahltag: große Visionen gepaart mit praktischem Können und der Geduld, Pläne in dauerhafte Bauwerke zu verwandeln.",
+  "sections": [
+   {
+    "title": "Die Gabe des 22.",
+    "paras": [
+     "Zweiundzwanzig ist der Meisterbauer der Numerologie, die 4 in einer höheren Oktave. Wer an diesem Tag geboren ist, sieht oft ein großes Bild, das andere übersehen, und weiß ungewöhnlicherweise auch, wie man die Ziegel setzt. Die Gabe ist, Ideale greifbar zu machen: eine Schule, eine Firma, eine Brücke, ein Familienbrauch, der dich überdauert."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht spürst du einen leisen Druck, etwas Bedeutendes zu tun. Smalltalk langweilt dich, aber ein schwieriger Plan mit vielen Teilen weckt dich auf. Wahrscheinlich führst du Listen, Zeitpläne und Tabellen, und dich ruft man, wenn ein Projekt auseinanderfällt. Manchmal wiegt die Größe deiner eigenen Erwartungen schwer."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Vision, Disziplin, Organisation, Verlässlichkeit und die Fähigkeit, große Vorhaben zu leiten, ohne das Detail zu verlieren. Der 22. gedeiht als Architektin, Ingenieur, Projektleiterin, Politikgestalter oder Gründerin von Institutionen."
+    ]
+   },
+   {
+    "title": "Die Lektion der Meisterzahl",
+    "paras": [
+     "Meisterzahlen tragen mehr Spannung. An schlechten Tagen fällt der 22. in eine ängstliche 4 zurück, gefangen in Kontrolle und Überarbeitung, oder erstarrt, weil die Vision zu groß wirkt, um anzufangen. Die Lektion: mit einem Stein beginnen, Hilfe annehmen und das Werk in menschlichem Tempo wachsen lassen."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "In der Liebe bist du treu und beschützend, oft der stabile Teil, der ein Zuhause Stein für Stein baut. Du brauchst einen Menschen, der deine Aufgabe respektiert, dich aber auch vom Schreibtisch weg zu langen Spaziergängen und zum Lachen holt."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Architektur, Bauingenieurwesen, Stadtplanung, Management großer Systeme, öffentlicher Dienst, Leitung gemeinnütziger Organisationen und jede Rolle, in der ein langfristiger Plan die Wirklichkeit überstehen muss."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Marija, geboren am 22. März, verwandelte zehn Jahre lang ein verlassenes Tabaklager in ihrer Heimatstadt in eine Bibliothek mit Handwerkszentrum. Jeden Förderantrag schrieb sie selbst und lernte Schweißen, um Geld zu sparen. Bei der Eröffnung gab sie zu, am schwersten sei gewesen, die Freiwilligen anders arbeiten zu lassen als in ihren Zeichnungen."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 3 oder 5 gibt ein Geburtstag am 22. dem unruhigen Talent Struktur. Auf der 4 verdoppelt sich der Bauer, Ruhe wird unverzichtbar. Auf der 7 wird Forschung zu praktischen Systemen. Auf der 11 verbindet sich Intuition mit Umsetzung, eine starke, aber fordernde Mischung."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Tisch voller Pläne, beschwert mit einer Kaffeetasse, ein Helm am Haken neben der Tür, ein Anruf in der Dämmerung, ob der Beton schon fest ist: Der 22. lebt zwischen Bauplan und Baustelle."
+    ]
+   },
+   {
+    "title": "Über das Maß",
+    "paras": [
+     "Menschen vom 22. messen sich oft am größtmöglichen Ergebnis. Es hilft zu wissen, dass auch ein gut gemachtes kleines Ding, eine Gartenbank oder eine faire Regel im Team, Meisterbau ist. Beim Richtfest feiert man schließlich auch nicht erst das fertige Haus."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Schreib jeden Sonntag das eine Bauwerk auf, an dem du dieses Jahr arbeitest, und den einen nächsten Stein für die Woche. Streich ihn durch, wenn er liegt. Die Vision bleibt groß, die Schritte bleiben machbar."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Bau langsam, bau gut und lass andere die Steine mittragen."
+    ]
+   }
+  ]
+ },
+ "23": {
+  "title": "Geboren am 23.: die neugierigen Boten",
+  "lead": "Der 23. reduziert sich auf 5 und verbindet die Zusammenarbeit der 2 mit dem Ausdruck der 3: Neugier, Witz und ein Talent, zwischen Welten zu wandern.",
+  "sections": [
+   {
+    "title": "Die Gabe des 23.",
+    "paras": [
+     "In alten Numerologiebüchern heißt die 23 der königliche Stern des Löwen, ein Zeichen für Schutz und Glück auf Reisen. Wer an diesem Tag geboren ist, ist meist schnell, gesellig und unendlich neugierig. Die Gabe ist, Menschen und Ideen zu verbinden, die sich sonst nie begegnen würden."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht liest du drei Bücher gleichzeitig und wechselst Hobbys mit den Jahreszeiten. Du kannst in derselben Stunde mit einem Landwirt und einer Professorin reden und beides genießen. Routine juckt dich. Viele vom 23. haben ein Talent für Sprachen, Akzente und Nachahmung und einen scharfen Humor."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Anpassungsfähigkeit, Kommunikation, Charme, schnelles Lernen und Sinnesfreude. Der 23. glänzt im Verkauf, im Tourismus, im Journalismus, in heilenden Berufen mit Berührung und in jeder Arbeit mit Abwechslung."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Verstreute Energie und Rastlosigkeit sind die Risiken. Der 23. lässt Dinge manchmal halb fertig liegen oder jagt dem Reiz nach, auf Kosten der Tiefe. Wachstum kommt, wenn du wenige Verpflichtungen wählst und entdeckst, dass Freiheit auch in ihnen wohnen kann."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe braucht für dich Spiel, Gespräch und Luft zum Atmen. Eifersüchtige oder starre Menschen schlagen dich in die Flucht. Mit jemandem, der mitreist, wörtlich oder in Gedanken, wirst du überraschend treu."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Journalismus, Übersetzung, Tourismus, Marketing, Physiotherapie, Massage, Veranstaltungen, Beratung und Unternehmertum mit vielen kleinen Projekten."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Petar, geboren am 23. Juni, war Reiseleiter, Radiomoderator und Weinimporteur. Heute führt er Wanderungen, die in kleinen Familienkellern enden. Er sagt, jeder Beruf habe ihn dasselbe gelehrt: Menschen wollen eine gute Geschichte und jemanden, der ihrer zuhört."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 8 bringt ein Geburtstag am 23. Leichtigkeit und frische Ideen in ernste Arbeit. Auf der 5 verdoppelt sich das Fernweh, ein fester Heimathafen wird wichtig. Auf der 6 kommt gesellige Leichtigkeit zur Fürsorge. Auf der 7 bekommt das Denken eine Stimme."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Rucksack, der nie ganz ausgepackt ist, ein Heft mit Wörtern in vier Sprachen, ein Cafétisch, an dem aus Fremden in zwanzig Minuten Freunde werden: So sieht der 23. in seinem Element aus."
+    ]
+   },
+   {
+    "title": "Über die Sinne",
+    "paras": [
+     "Viele vom 23. sind stark körperlich: Sie bemerken Textur, Geschmack und Musik mehr als andere. Kochen, Tanzen oder Wandern beruhigt den vollen Kopf besser als jedes Argument. Ein Markt am Samstagmorgen ist für sie Erholung."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Wähle ein Projekt und gib ihm einen Monat lang täglich fünfzehn Minuten, egal wie gelangweilt du bist. Hak es auf Papier ab. Durchhalten lehrt eine tiefere Art von Freiheit."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Neugier ist dein Kompass, Hingabe der Weg, auf dem du ankommst."
+    ]
+   }
+  ]
+ },
+ "24": {
+  "title": "Geboren am 24.: die hingebungsvollen Fürsorgenden",
+  "lead": "Der 24. reduziert sich auf 6 und verbindet die Feinfühligkeit der 2 mit der Ordnung der 4: Liebe, die sich in Fürsorge, Zuhause und Verantwortung zeigt.",
+  "sections": [
+   {
+    "title": "Die Gabe des 24.",
+    "paras": [
+     "Vierundzwanzig Stunden hat der Tag, und Menschen mit diesem Geburtstag spüren oft, dass Fürsorge ein Vollzeitberuf ist. Sie schaffen warme Zuhause, merken sich Geburtstage und halten Familien und Teams still zusammen. Die Gabe ist gelebte Liebe: ein gekochtes Essen, ein reparierter Wasserhahn, eine verlässliche Gegenwart."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht merkst gerade du, dass eine Freundin müde ist, bevor sie es sagt. Gäste fühlen sich bei dir sofort wohl. Du magst schöne, geordnete Räume und wirst unruhig, wenn die Harmonie zerbricht. Gerechtigkeit ist dir wichtig, und Unrecht an anderen berührt dich tief."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Treue, Verantwortung, Sinn für Schönheit, Geduld und schützende Wärme. Der 24. glänzt in Lehre, Medizin, Innenarchitektur, Gastgewerbe und Familienbetrieb."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Übermäßige Verantwortung und stilles Märtyrertum sind die Risiken. Du trägst vielleicht Lasten, die nicht deine sind, und fühlst dich dann nicht gesehen. Wachstum kommt, wenn du andere für sich selbst sorgen lässt und lernst, so leicht zu empfangen, wie du gibst."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Der 24. ist oft zutiefst romantisch und familienorientiert. Du brauchst einen Menschen, der Wertschätzung zeigt und die Pflichten des Alltags teilt. Worte des Dankes bedeuten dir mehr als große Gesten."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Pflege, Lehre, Beratung, Innen und Gartengestaltung, Kochen, Hotelleitung, Sozialarbeit und die Führung eines Familienunternehmens."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Elena, geboren am 24. September, führt eine kleine Pension am See. Die Gäste kommen jedes Jahr wieder, weil sie sich merkt, wie jeder den Kaffee trinkt. Als sie sich in einem Sommer das Bein brach, kochten ihre Stammgäste für sie, und sie weinte, überrascht, einmal auf der empfangenden Seite zu stehen."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 1 oder 5 gibt ein Geburtstag am 24. der Unabhängigkeit Wärme und Wurzeln. Auf der 6 verdoppelt sich die Fürsorge, Grenzen werden entscheidend. Auf der 7 wird das Alleinsein durch Familie weicher. Auf der 9 weitet sich die Fürsorge zum Dienst an vielen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Tisch, gedeckt für mehr Leute als eingeladen, eine Vase mit frischen Blumen, eine Liste, wen man diese Woche anrufen sollte: Der 24. lässt den Alltag umsorgt wirken."
+    ]
+   },
+   {
+    "title": "Über Schönheit",
+    "paras": [
+     "Für viele vom 24. ist ein aufgeräumtes, schönes Zuhause keine Eitelkeit, sondern Medizin. Ein Zimmer umzustellen oder den Balkon zu bepflanzen bringt nach einer harten Woche das Gleichgewicht zurück."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Bitte einmal pro Woche jemanden, etwas für dich zu tun, und sag einfach danke, ohne sofort etwas zurückzugeben. Achte darauf, wie es sich anfühlt, umsorgt zu werden."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Fürsorge ist ein Geschenk, und ein Geschenk ist es auch, dich umsorgen zu lassen."
+    ]
+   }
+  ]
  }
 };
