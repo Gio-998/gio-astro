@@ -1637,5 +1637,221 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "3-and-4": {
+  "title": "Life path 3 and 4: the artist and the craftsman",
+  "lead": "The 3 brings colour, ideas and play; the 4 brings order, patience and skill. A pairing of opposites that can produce beautiful, lasting work.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 4 is often amused and a little puzzled by the 3's energy. The 3 is curious about the 4's calm competence. They frequently meet through work, where the 3 has the concept and the 4 knows how to build it."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 3 makes the 4 laugh and loosen up; the 4 makes the 3 feel safe and supported. The 3 brings imagination to the 4's routines, and the 4 brings structure to the 3's dreams. Each gives the other what is missing."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 4 may find the 3 unreliable, messy or careless with money. The 3 may find the 4 rigid, critical or dull. When stressed, the 4 tightens rules and the 3 rebels or escapes into fun."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance blends warmth and steadiness. The 3 brings compliments and surprises; the 4 brings loyalty and practical care. Love grows when the 4 learns to say affectionate words and the 3 learns that keeping small promises is also romantic."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 3 drags the 4 to parties and the 4 helps the 3 move house. At work this is the designer and the engineer, the writer and the editor, a combination that turns ideas into finished products."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Tina, life path 3, sketched jewellery in notebooks for years. Marjan, life path 4, a watchmaker, saw one sketch and made the piece in a week. Now they sell their work in three cities. She draws; he builds; both sign every box."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when both respect that play and discipline are equally valuable, and that a beautiful thing needs both to exist."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A workbench with neat rows of tools, and on the same bench a cup full of coloured pencils and a half drawn idea."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Measure twice, cut once, the craftsman says. The artist adds: and sing while you do it. This pair needs both voices in the workshop."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each week, the 3 chooses one fun activity and the 4 chooses one useful task, and you do both together. Talk about which one surprised you."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Imagination gives the shape, patience gives the strength; together they make something that lasts."
+    ]
+   }
+  ]
+ },
+ "3-and-5": {
+  "title": "Life path 3 and 5: the adventure duo",
+  "lead": "The 3 and the 5 share curiosity, humour and a love of change. Exciting and sociable, this pair needs some grounding to turn fun into a life.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 3 and a 5 often meet while travelling, at a festival, in a language course, anywhere new. The connection is fast and funny. Within minutes you are planning something spontaneous together."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both love experiences, people and ideas. The 3 brings creativity and charm; the 5 brings courage and a thirst for the unknown. Boredom rarely enters your relationship. Friends envy your stories."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Neither of you likes routine or responsibility, so bills, planning and commitment can be neglected. Both may flirt or wander. When things get serious, you might both look for the exit instead of working it out."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is playful, sensual and full of motion. Love lasts when you agree on what commitment means for you, and when you build a few reliable habits that keep you connected wherever you are."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the life of every party. At work you suit travel, media, entertainment, sales and creative startups, preferably with an organised partner or system."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Kaja, life path 5, and Dimitar, life path 3, met at a street music festival in Lisbon. Now they run a travelling food truck that serves dishes from every country they have visited. They say their only fixed rule is that the truck never leaves without a clean kitchen and a full tank."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with freedom inside a frame: a shared budget, a home base and a few promises that are never broken."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A map full of crosses, a fridge with magnets from twenty cities, a voicemail that says we are in another country again, call you tomorrow."
+    ]
+   },
+   {
+    "title": "A note on commitment",
+    "paras": [
+     "For a 3 and a 5, commitment can sound like a cage. It helps to define it as a shared promise to keep the adventure going together rather than apart."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Pick one tradition that you repeat every year in the same place, a trip, a meal, a celebration. Let it be the anchor of your moving life."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Adventure is sweeter when someone is beside you to tell the story later."
+    ]
+   }
+  ]
+ },
+ "3-and-6": {
+  "title": "Life path 3 and 6: the joyful home",
+  "lead": "The 3 brings creativity and lightness, the 6 brings love, care and beauty. One of the warmest pairings in numerology, full of family, art and friends.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 3 and a 6 often meet at a family gathering, a community event or an art class. The 6 is charmed by the 3's humour; the 3 is touched by the 6's tenderness. You feel at home together almost immediately."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you love beauty, harmony and people. The 3 brings fun and expression; the 6 brings responsibility and devotion. Together you create a home that is lively, warm and welcoming, where friends love to gather."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 6 can become controlling or worried, and the 3 may feel smothered. The 3 can be careless or scattered, and the 6 may feel they carry all the responsibility. Criticism from the 6 can hurt the 3 more than it shows."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is affectionate, romantic and generous. You enjoy spoiling each other. It works best when the 6 trusts the 3's freedom and the 3 shows commitment through steady actions, not only charming words."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the hosts everyone remembers. At work you suit teaching, design, hospitality, the arts and family businesses."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Natalija, life path 6, ran a small kindergarten. Igor, life path 3, a children's book illustrator, came to read to the kids. He painted the walls with forest animals as a gift. Now married, they run the kindergarten together, and parents ask for the room with the bear."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when responsibility is shared fairly and when the 6 lets the 3 bring play into even the serious parts of life."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A long table in the garden, children drawing on paper tablecloths, a pot of stew and someone singing badly but happily."
+    ]
+   },
+   {
+    "title": "A note on criticism",
+    "paras": [
+     "The 6 often shows love by improving things. The 3 can hear that as judgement. Praising before suggesting changes keeps the 3's spirit bright."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each week, the 6 names three things the 3 did well, and the 3 takes over one household task fully without being reminded."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A home full of laughter and care is a gift to everyone who enters it."
+    ]
+   }
+  ]
  }
 };

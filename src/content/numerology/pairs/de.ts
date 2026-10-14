@@ -1667,5 +1667,227 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "3-and-4": {
+  "title": "Lebenszahl 3 und 4: Kunst und Handwerk",
+  "lead": "Die 3 bringt Farbe, Ideen und Spiel, die 4 Ordnung, Geduld und Können. Ein Paar der Gegensätze, das schöne und dauerhafte Arbeit hervorbringen kann.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 4 ist von der Energie der 3 oft belustigt und ein wenig verwirrt. Die 3 ist neugierig auf die ruhige Kompetenz der 4. Häufig begegnen sie sich über die Arbeit, wo die 3 das Konzept hat und die 4 weiß, wie man es baut."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 3 bringt die 4 zum Lachen und Lockerlassen, die 4 gibt der 3 Sicherheit und Halt. Die 3 bringt Fantasie in die Routinen der 4, die 4 Struktur in die Träume der 3. Jede Seite gibt der anderen, was fehlt."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 4 findet die 3 vielleicht unzuverlässig, chaotisch oder leichtsinnig mit Geld. Die 3 findet die 4 starr, kritisch oder langweilig. Unter Druck zieht die 4 die Regeln an, und die 3 rebelliert oder flüchtet ins Vergnügen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik verbindet Wärme und Beständigkeit. Die 3 bringt Komplimente und Überraschungen, die 4 Treue und praktische Fürsorge. Die Liebe wächst, wenn die 4 lernt, liebevolle Worte zu sagen, und die 3 lernt, dass auch gehaltene kleine Versprechen romantisch sind."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde schleppt die 3 die 4 auf Feiern, und die 4 hilft der 3 beim Umzug. Bei der Arbeit ist das Gestaltung und Technik, Text und Lektorat, eine Kombination, die Ideen in fertige Produkte verwandelt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Tina, Lebenszahl 3, zeichnete jahrelang Schmuck in Notizbücher. Marjan, Lebenszahl 4, Uhrmacher, sah eine Skizze und fertigte das Stück in einer Woche. Heute verkaufen sie ihre Arbeiten in drei Städten. Sie zeichnet, er baut, beide signieren jede Schachtel."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn beide anerkennen, dass Spiel und Disziplin gleich wertvoll sind und ein schönes Ding beides braucht, um zu entstehen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Werkbank mit ordentlich aufgereihtem Werkzeug, und auf derselben Bank ein Becher voller Buntstifte und eine halb gezeichnete Idee."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Zweimal messen, einmal schneiden, sagt das Handwerk. Die Kunst ergänzt: und dabei singen. Dieses Paar braucht beide Stimmen in der Werkstatt."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jede Woche wählt die 3 eine vergnügliche Aktivität und die 4 eine nützliche Aufgabe, und ihr macht beides zusammen. Sprecht darüber, was euch überrascht hat."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Fantasie gibt die Form, Geduld gibt die Festigkeit; zusammen entsteht etwas, das bleibt."
+    ]
+   }
+  ]
+ },
+ "3-and-5": {
+  "title": "Lebenszahl 3 und 5: das Abenteuerduo",
+  "lead": "Die 3 und die 5 teilen Neugier, Humor und Lust auf Veränderung. Aufregend und gesellig, braucht dieses Paar etwas Bodenhaftung, damit aus Spaß ein Leben wird.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 3 und eine 5 begegnen sich oft auf Reisen, auf einem Festival, in einem Sprachkurs, überall dort, wo etwas neu ist. Die Verbindung ist schnell und witzig. Nach wenigen Minuten plant ihr schon etwas Spontanes zusammen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr liebt beide Erlebnisse, Menschen und Ideen. Die 3 bringt Kreativität und Charme, die 5 Mut und Durst nach Unbekanntem. Langeweile kommt in eurer Beziehung selten vor. Freunde beneiden euch um eure Geschichten."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Keiner von euch mag Routine oder Verantwortung, also bleiben Rechnungen, Planung und Verbindlichkeit leicht liegen. Beide flirten oder schweifen vielleicht ab. Wenn es ernst wird, sucht womöglich jeder den Ausgang, statt die Sache zu klären."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist verspielt, sinnlich und voller Bewegung. Die Liebe hält, wenn ihr euch einigt, was Bindung für euch bedeutet, und ein paar verlässliche Gewohnheiten schafft, die euch verbinden, wo immer ihr seid."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr die Seele jeder Party. Beruflich passen Tourismus, Medien, Unterhaltung, Vertrieb und kreative Startups, am besten mit einem organisierten Partner oder System."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Kaja, Lebenszahl 5, und Dimitar, Lebenszahl 3, lernten sich auf einem Straßenmusikfestival in Lissabon kennen. Heute betreiben sie einen Foodtruck, der Gerichte aus jedem Land serviert, das sie besucht haben. Ihre einzige feste Regel: Der Truck fährt nie ohne saubere Küche und vollen Tank los."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit Freiheit in einem Rahmen: ein gemeinsames Budget, ein fester Wohnort und ein paar Versprechen, die nie gebrochen werden."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Karte voller Kreuze, ein Kühlschrank mit Magneten aus zwanzig Städten, eine Sprachnachricht: Wir sind schon wieder in einem anderen Land, wir melden uns morgen."
+    ]
+   },
+   {
+    "title": "Über Verbindlichkeit",
+    "paras": [
+     "Für eine 3 und eine 5 klingt Bindung leicht nach Käfig. Es hilft, sie als gemeinsames Versprechen zu sehen, das Abenteuer zusammen weiterzuführen statt getrennt."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Wer rastet, der rostet, sagt man, und diese beiden rosten garantiert nicht. Doch auch ein Paar in Bewegung braucht hin und wieder einen Hafen, in dem es auftanken und die Erlebnisse sortieren kann."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wählt eine Tradition, die ihr jedes Jahr am selben Ort wiederholt, eine Reise, ein Essen, ein Fest. Lasst sie der Anker eures bewegten Lebens sein."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein Abenteuer ist süßer, wenn jemand dabei ist, der die Geschichte später mit dir erzählt."
+    ]
+   }
+  ]
+ },
+ "3-and-6": {
+  "title": "Lebenszahl 3 und 6: das fröhliche Zuhause",
+  "lead": "Die 3 bringt Kreativität und Leichtigkeit, die 6 Liebe, Fürsorge und Schönheit. Eines der wärmsten Paare der Numerologie, voller Familie, Kunst und Freunde.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 3 und eine 6 begegnen sich oft bei einem Familienfest, einer Veranstaltung im Viertel oder in einem Malkurs. Die 6 ist vom Humor der 3 bezaubert, die 3 von der Zärtlichkeit der 6 berührt. Fast sofort fühlt ihr euch miteinander zu Hause."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr liebt beide Schönheit, Harmonie und Menschen. Die 3 bringt Spaß und Ausdruck, die 6 Verantwortung und Hingabe. Zusammen schafft ihr ein Zuhause, das lebendig, warm und einladend ist, wo sich Freunde gern versammeln."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 6 kann bestimmend oder besorgt werden, und die 3 fühlt sich erstickt. Die 3 kann sorglos oder zerstreut sein, und die 6 hat das Gefühl, alle Verantwortung allein zu tragen. Kritik von der 6 trifft die 3 oft tiefer, als man sieht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier zärtlich, romantisch und großzügig. Ihr verwöhnt euch gern. Am besten gelingt es, wenn die 6 der Freiheit der 3 vertraut und die 3 Bindung durch beständige Taten zeigt, nicht nur durch charmante Worte."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr die Gastgeber, an die sich alle erinnern. Beruflich passen Lehre, Gestaltung, Gastgewerbe, Kunst und Familienbetriebe."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Natalija, Lebenszahl 6, leitete einen kleinen Kindergarten. Igor, Lebenszahl 3, Illustrator von Kinderbüchern, kam, um den Kindern vorzulesen. Als Geschenk bemalte er die Wände mit Waldtieren. Heute sind sie verheiratet und leiten den Kindergarten gemeinsam, und die Eltern fragen nach dem Raum mit dem Bären."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Verantwortung fair geteilt wird und die 6 der 3 erlaubt, Spiel auch in die ernsten Teile des Lebens zu bringen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein langer Tisch im Garten, Kinder, die auf Papiertischdecken malen, ein Topf Eintopf und jemand, der schlecht, aber glücklich singt."
+    ]
+   },
+   {
+    "title": "Über Kritik",
+    "paras": [
+     "Die 6 zeigt Liebe oft, indem sie Dinge verbessert. Die 3 hört darin manchmal ein Urteil. Erst loben, dann Änderungen vorschlagen, hält den Geist der 3 hell."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jede Woche nennt die 6 drei Dinge, die die 3 gut gemacht hat, und die 3 übernimmt eine Haushaltsaufgabe vollständig, ohne erinnert zu werden."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein Zuhause voller Lachen und Fürsorge ist ein Geschenk für alle, die es betreten."
+    ]
+   }
+  ]
  }
 };
