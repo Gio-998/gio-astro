@@ -192,6 +192,222 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "3-and-7": {
+  "title": "Life path 3 and 7: the voice and the silence",
+  "lead": "The 3 expresses, the 7 contemplates. An unusual pairing that can be fascinating, as long as both value what the other offers instead of trying to change it.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 3 often notices the 7 as the quiet person in the corner who makes one surprisingly sharp remark. The 7 is amused, sometimes against their will, by the 3's wit. The first conversation may be a playful debate that neither wants to end."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 3 brings warmth, humour and social ease; the 7 brings depth, knowledge and mystery. The 3 helps the 7 enjoy life and people; the 7 helps the 3 find meaning beneath the sparkle. Both love ideas, though you approach them differently."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 3 needs conversation and company; the 7 needs solitude and quiet. The 3 may feel shut out, the 7 may feel drained. The 7 can be critical of what seems superficial, and the 3 can feel judged and hide behind jokes."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is a mix of play and depth. The 3 woos with words and surprises; the 7 shows love through loyalty and thoughtful attention. It works when the 3 respects the 7's need for space and the 7 joins the 3's world sometimes, even if it is louder than they like."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you challenge each other's minds. At work the 7 researches and the 3 communicates: writing, publishing, teaching, science communication and documentary film suit you well."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Elena, life path 3, hosts a popular science podcast. Her partner Viktor, life path 7, an astronomer, refused to be a guest for two years. When he finally agreed, the episode about black holes became their most listened. Now he helps her script every season but still will not appear on video."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when each has their own territory, a social life for the 3 and a quiet study for the 7, and a shared space where both meet with curiosity."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A bookshelf where poetry, comics and physics textbooks lean against each other; a living room that is noisy on Friday and silent on Sunday."
+    ]
+   },
+   {
+    "title": "A note on criticism",
+    "paras": [
+     "The 7's honest analysis can feel cold to the 3. Starting with what is good and ending with a question rather than a verdict makes the 7's insight a gift the 3 can accept."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each week, the 3 chooses one social outing and the 7 one quiet evening at home. Both attend both, fully present."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A voice needs silence to be heard, and silence needs a voice to be shared."
+    ]
+   }
+  ]
+ },
+ "3-and-8": {
+  "title": "Life path 3 and 8: charm meets ambition",
+  "lead": "The 3 brings creativity and charm, the 8 brings strategy and drive. Together they can turn talent into success, if play and power learn to respect each other.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 8 is often impressed by the 3's ability to win a room. The 3 is drawn to the 8's confidence and capacity to make things happen. You may meet at a work event, a launch or a networking dinner where both are at your best."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 3 has ideas and the gift of persuasion; the 8 has the business sense to make ideas profitable. The 3 makes the 8's life more colourful, and the 8 offers the 3 security and a stage. Together you can build brands, shows and companies."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 can be controlling or impatient with the 3's spontaneity. The 3 may feel the 8 sees everything in terms of money or results. Spending habits can clash, as the 3 enjoys pleasure and the 8 focuses on growth."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance can be glamorous and generous. The 8 enjoys providing; the 3 enjoys celebrating. Love deepens when the 8 shows soft feelings and the 3 shows reliability. Shared goals and shared fun are equally important."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you enjoy the good life together. At work the 3 creates and presents while the 8 manages and negotiates: marketing, entertainment, fashion and media are natural fields."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ana, life path 3, sang jazz in small bars. Milan, life path 8, a club owner, heard her once and offered a residency. Within three years they had opened a music venue together. She books the artists, he runs the business, and she insists that one night a week is free for unknown musicians."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 8 treats the 3's creativity as an asset, not a distraction, and the 3 values the 8's discipline as protection for their dreams."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Contracts on one side of the table and sketches on the other, a celebration dinner after a deal, two phones buzzing and one long laugh."
+    ]
+   },
+   {
+    "title": "A note on money",
+    "paras": [
+     "Money can be a sore point. A clear agreement, a shared fund for joy and a shared fund for growth, saves this pair many arguments."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Every month, the 8 sets aside a budget purely for fun and lets the 3 spend it however they like, with no questions asked."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Talent and strategy together can build a stage worth standing on."
+    ]
+   }
+  ]
+ },
+ "3-and-9": {
+  "title": "Life path 3 and 9: artists of the heart",
+  "lead": "The 3 and the 9 share creativity, idealism and warmth. This expressive pairing can inspire many people, if it keeps its feet on the ground.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 3 and a 9 often meet through art, music, theatre or a humanitarian cause. The 9 is charmed by the 3's joy, and the 3 is moved by the 9's depth and generosity. Conversations jump between laughter and big questions."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you love beauty, people and meaningful expression. The 3 brings play and lightness; the 9 brings wisdom and compassion. Together you create, perform and help others with a shared sense of purpose."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both can be emotional and dramatic. The 9 may feel the 3 is too light about serious matters; the 3 may feel the 9 is too heavy or preachy. Practical tasks may be neglected while both chase inspiration."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm, expressive and idealistic. You often share causes and creative projects. Love lasts when you balance dreams with daily care and when both say what they need instead of expecting the other to know."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are a source of laughter and comfort. At work you suit arts, education, charity work, theatre, writing and music."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Marina, life path 9, directs a small theatre that tours villages. Dragan, life path 3, an actor, joined for one season and stayed for fifteen. They write plays based on stories told by local elders, and every tour ends with the audience singing on stage."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when someone, one of you or a trusted friend, keeps the practical side running while you both create and give."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A van full of costumes, a script with coffee stains, a village square at dusk and two people bowing together."
+    ]
+   },
+   {
+    "title": "A note on endings",
+    "paras": [
+     "The 9 is the number of completion, and this pair may face many endings: tours, projects, homes. Each ending can be honoured with a small ritual, and the 3's joy can carry you into the next beginning."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each month, finish one creative project fully, however small, and celebrate it together before starting a new one."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Art that comes from the heart can heal, and two hearts together can reach further."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",

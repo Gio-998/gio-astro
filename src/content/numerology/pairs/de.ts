@@ -192,6 +192,228 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "3-and-7": {
+  "title": "Lebenszahl 3 und 7: Stimme und Stille",
+  "lead": "Die 3 drückt sich aus, die 7 sinnt nach. Ein ungewöhnliches Paar, das faszinierend sein kann, solange beide schätzen, was die andere Seite bietet, statt sie ändern zu wollen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 3 bemerkt die 7 oft als die stille Person in der Ecke, die eine überraschend scharfe Bemerkung macht. Die 7 ist, manchmal gegen ihren Willen, vom Witz der 3 belustigt. Das erste Gespräch wird vielleicht zu einer verspielten Debatte, die keiner beenden will."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 3 bringt Wärme, Humor und gesellige Leichtigkeit, die 7 Tiefe, Wissen und Geheimnis. Die 3 hilft der 7, das Leben und die Menschen zu genießen, die 7 hilft der 3, Sinn unter dem Glanz zu finden. Ihr liebt beide Ideen, auch wenn ihr sie verschieden angeht."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 3 braucht Gespräch und Gesellschaft, die 7 Alleinsein und Ruhe. Die 3 fühlt sich ausgeschlossen, die 7 ausgelaugt. Die 7 kann kritisch gegenüber allem sein, was oberflächlich wirkt, und die 3 fühlt sich beurteilt und versteckt sich hinter Witzen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist eine Mischung aus Spiel und Tiefe. Die 3 wirbt mit Worten und Überraschungen, die 7 zeigt Liebe durch Treue und aufmerksame Gedanken. Es gelingt, wenn die 3 das Raumbedürfnis der 7 respektiert und die 7 manchmal in die Welt der 3 eintritt, auch wenn sie lauter ist als ihr lieb."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde fordert ihr gegenseitig euren Verstand heraus. Bei der Arbeit forscht die 7 und die 3 vermittelt: Schreiben, Verlagswesen, Lehre, Wissenschaftskommunikation und Dokumentarfilm passen gut zu euch."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Elena, Lebenszahl 3, moderiert einen beliebten Wissenschaftspodcast. Ihr Partner Viktor, Lebenszahl 7, Astronom, weigerte sich zwei Jahre lang, Gast zu sein. Als er endlich zusagte, wurde die Folge über Schwarze Löcher ihre meistgehörte. Heute hilft er ihr bei jedem Staffelskript, will aber noch immer nicht vor die Kamera."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jede Seite ihr eigenes Revier hat, ein Sozialleben für die 3 und ein stilles Arbeitszimmer für die 7, und einen gemeinsamen Raum, in dem sich beide mit Neugier treffen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Bücherregal, in dem Gedichtbände, Comics und Physiklehrbücher aneinanderlehnen; ein Wohnzimmer, das freitags laut und sonntags still ist."
+    ]
+   },
+   {
+    "title": "Über Kritik",
+    "paras": [
+     "Die ehrliche Analyse der 7 kann für die 3 kalt klingen. Wer mit dem Guten beginnt und mit einer Frage statt einem Urteil endet, macht die Einsicht der 7 zu einem Geschenk, das die 3 annehmen kann."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jede Woche wählt die 3 einen geselligen Ausflug und die 7 einen ruhigen Abend zu Hause. Beide nehmen an beidem teil, ganz anwesend."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine Stimme braucht Stille, um gehört zu werden, und Stille braucht eine Stimme, um geteilt zu werden."
+    ]
+   }
+  ]
+ },
+ "3-and-8": {
+  "title": "Lebenszahl 3 und 8: Charme trifft Ehrgeiz",
+  "lead": "Die 3 bringt Kreativität und Charme, die 8 Strategie und Antrieb. Zusammen können sie Talent in Erfolg verwandeln, wenn Spiel und Macht lernen, einander zu respektieren.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 8 ist oft beeindruckt davon, wie die 3 einen ganzen Raum für sich gewinnt. Die 3 wird von der Zuversicht der 8 angezogen und von ihrer Fähigkeit, Dinge umzusetzen. Vielleicht begegnet ihr euch bei einem Geschäftstermin, einer Premiere oder einem Netzwerkessen, wo beide in Bestform sind."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 3 hat Ideen und Überzeugungskraft, die 8 den Geschäftssinn, Ideen profitabel zu machen. Die 3 macht das Leben der 8 bunter, die 8 bietet der 3 Sicherheit und eine Bühne. Gemeinsam könnt ihr Marken, Shows und Firmen aufbauen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 kann bestimmend oder ungeduldig mit der Spontaneität der 3 sein. Die 3 hat vielleicht das Gefühl, die 8 sehe alles nur in Geld oder Ergebnissen. Beim Ausgeben prallt ihr aufeinander, denn die 3 genießt, und die 8 denkt an Wachstum."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik kann glamourös und großzügig sein. Die 8 versorgt gern, die 3 feiert gern. Die Liebe vertieft sich, wenn die 8 weiche Gefühle zeigt und die 3 Verlässlichkeit. Gemeinsame Ziele und gemeinsamer Spaß sind gleich wichtig."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde genießt ihr zusammen das gute Leben. Bei der Arbeit erschafft und präsentiert die 3, während die 8 managt und verhandelt: Marketing, Unterhaltung, Mode und Medien sind natürliche Felder."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ana, Lebenszahl 3, sang Jazz in kleinen Bars. Milan, Lebenszahl 8, Clubbesitzer, hörte sie einmal und bot ihr feste Auftritte an. Innerhalb von drei Jahren eröffneten sie gemeinsam eine Musikbühne. Sie bucht die Künstler, er führt das Geschäft, und sie besteht darauf, dass ein Abend pro Woche unbekannten Musikern gehört."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 8 die Kreativität der 3 als Kapital sieht und nicht als Ablenkung, und die 3 die Disziplin der 8 als Schutz für ihre Träume schätzt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Verträge auf der einen Tischseite, Skizzen auf der anderen, ein Festessen nach einem Abschluss, zwei vibrierende Telefone und ein langes Lachen."
+    ]
+   },
+   {
+    "title": "Über Geld",
+    "paras": [
+     "Geld kann ein wunder Punkt sein. Eine klare Absprache, ein gemeinsamer Topf für Freude und einer für Wachstum, erspart diesem Paar viele Streits."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Geld allein macht nicht glücklich, sagt man, aber es beruhigt. Die 8 kennt den zweiten Teil, die 3 den ersten, und zusammen ergibt sich eine gesunde Haltung."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat legt die 8 ein Budget nur für Vergnügen beiseite und lässt die 3 es ausgeben, wie sie will, ohne Fragen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Talent und Strategie zusammen können eine Bühne bauen, auf der zu stehen sich lohnt."
+    ]
+   }
+  ]
+ },
+ "3-and-9": {
+  "title": "Lebenszahl 3 und 9: Kunst aus dem Herzen",
+  "lead": "Die 3 und die 9 teilen Kreativität, Idealismus und Wärme. Dieses ausdrucksstarke Paar kann viele Menschen inspirieren, wenn es auf dem Boden bleibt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 3 und eine 9 begegnen sich oft über Kunst, Musik, Theater oder eine humanitäre Sache. Die 9 ist von der Freude der 3 bezaubert, die 3 von der Tiefe und Großzügigkeit der 9 bewegt. Gespräche springen zwischen Lachen und großen Fragen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr liebt beide Schönheit, Menschen und sinnvollen Ausdruck. Die 3 bringt Spiel und Leichtigkeit, die 9 Weisheit und Mitgefühl. Zusammen erschafft ihr, tretet auf und helft anderen mit einem gemeinsamen Sinn."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide können emotional und dramatisch sein. Die 9 findet die 3 vielleicht zu leicht bei ernsten Dingen, die 3 die 9 zu schwer oder belehrend. Praktische Aufgaben bleiben liegen, während beide der Inspiration nachjagen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm, ausdrucksvoll und idealistisch. Oft teilt ihr Anliegen und kreative Projekte. Die Liebe hält, wenn ihr Träume mit täglicher Fürsorge ausbalanciert und beide sagen, was sie brauchen, statt zu erwarten, dass die andere Seite es weiß."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr eine Quelle von Lachen und Trost. Beruflich passen Kunst, Bildung, Hilfsarbeit, Theater, Schreiben und Musik."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Marina, Lebenszahl 9, leitet ein kleines Theater, das durch Dörfer tourt. Dragan, Lebenszahl 3, Schauspieler, kam für eine Saison und blieb fünfzehn. Sie schreiben Stücke nach Geschichten, die die Ältesten erzählen, und jede Tournee endet damit, dass das Publikum auf der Bühne singt."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn jemand, eine Seite von euch oder ein vertrauter Freund, die praktische Seite am Laufen hält, während ihr beide erschafft und gebt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Transporter voller Kostüme, ein Skript mit Kaffeeflecken, ein Dorfplatz in der Dämmerung und zwei Menschen, die sich gemeinsam verbeugen."
+    ]
+   },
+   {
+    "title": "Über Abschiede",
+    "paras": [
+     "Die 9 ist die Zahl der Vollendung, und dieses Paar erlebt vielleicht viele Enden: Tourneen, Projekte, Wohnorte. Jedes Ende kann mit einem kleinen Ritual gewürdigt werden, und die Freude der 3 trägt euch in den nächsten Anfang."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Bringt jeden Monat ein kreatives Projekt vollständig zu Ende, so klein es auch ist, und feiert es gemeinsam, bevor ihr ein neues beginnt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Kunst, die aus dem Herzen kommt, kann heilen, und zwei Herzen zusammen reichen weiter."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",
