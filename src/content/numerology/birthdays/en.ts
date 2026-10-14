@@ -1037,5 +1037,239 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "16": {
+  "title": "Born on the 16th: the truth seeker",
+  "lead": "The 16th reduces to 7 and carries a karmic debt number: deep insight and intuition, with a lesson about pride and honesty.",
+  "sections": [
+   {
+    "title": "The gift of the 16th",
+    "paras": [
+     "Sixteen joins the independence of 1 with the caring of 6, and the sum, 7, turns both inward. People born on this day often have a piercing intuition and a hunger for what is real. Their gift is the ability to rebuild after a fall and come out wiser, with insight others can lean on."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may sense when someone is pretending, including yourself. You value privacy and may share your deepest thoughts with only one or two people. Life may have brought sudden changes, endings that felt like collapses and later revealed a better path."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Insight, intuition, research skill, spiritual depth and honesty. The 16th makes a fine writer, psychologist, scientist or spiritual guide, and is often the person others turn to after a crisis."
+    ]
+   },
+   {
+    "title": "The karmic lesson",
+    "paras": [
+     "Card sixteen of the tarot is the Tower. As a karmic debt day, the 16th is linked with an old pattern of pride and vanity. Structures built on image tend to fall. The lesson is humility in the healthy sense: build on truth, admit mistakes early and let the ego be smaller than the heart."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love asks for vulnerability, which can feel risky. The 16th needs a loyal, honest partner and grows when they lower their guard. Idealised romances tend to crack; honest ones grow stronger after storms."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Research, psychology, writing, science, investigation, spiritual work and any field that rewards depth over show."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Milena, born on 16 March, built a glamorous career in advertising until a burnout ended it overnight. In the year that followed she trained as a psychotherapist. She says the collapse was the most painful and most useful thing that ever happened to her."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 3 or 8 life path, a 16th birthday adds depth to a public role. On a 1 path it teaches leadership through honesty. On a 7 path it doubles the inward focus, so close friends matter. On a 9 path it turns insight into compassion."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A shelf of well read books, a journal with crossed out drafts, a quiet bench where long walks end: the world of the 16th is full of places where truth is slowly worked out."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Once a week, admit one small mistake to someone it affected, simply and without drama. The habit keeps the tower honest, so it never has to fall."
+    ]
+   },
+   {
+    "title": "A note on endings",
+    "paras": [
+     "Many people with a 16th birthday describe their life as a series of chapters with sharp breaks between them. Each break, painful at the time, later looks like a door. Trusting that pattern makes the next change less frightening."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "What is built on truth can survive any storm."
+    ]
+   }
+  ]
+ },
+ "17": {
+  "title": "Born on the 17th: the steady achiever",
+  "lead": "The 17th reduces to 8 and joins the drive of 1 with the depth of 7: ambition guided by insight, and a hopeful star.",
+  "sections": [
+   {
+    "title": "The gift of the 17th",
+    "paras": [
+     "Card seventeen of the tarot is the Star, a symbol of hope after hardship. People born on the 17th often carry that quality: they recover, keep faith in their goals and quietly achieve a great deal. The 8 at the root gives business sense, while the 1 and 7 add independence and strategic thinking."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may plan your career years ahead and enjoy studying the details that others skip. People trust your judgement about money and decisions. You are private about your feelings but generous with practical help. Setbacks make you more determined, not less."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Strategy, perseverance, intelligence, self discipline and a strong sense of responsibility. The 17th often rises to positions of authority through competence rather than noise."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "The 17th can become too serious, too self reliant or too focused on status. Growth comes from sharing the inner life, accepting help and remembering that hope and joy are part of success, not rewards for later."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 17th takes love seriously and wants a partner who is loyal and capable. They show love by building security. They grow when they also show feelings, laughter and spontaneous tenderness."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Finance, law, management, research, publishing, engineering and any field where expertise leads to responsibility."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Aleksandar, born on 17 September, grew up in a small village and now leads a research institute. Every summer he returns to teach a free science camp for village children, because, he says, someone once lit a star for him."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 2 or 6 life path, a 17th birthday adds confidence to a caring nature. On a 3 or 5 path it gives focus to talent. On an 8 path it doubles the drive, so rest and joy matter. On a 9 path it grounds idealism in practical achievement."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A desk with a long term plan pinned above it, a well kept ledger, and a small window where the night sky is visible: the 17th works steadily toward goals while keeping an eye on something larger."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each month, name one hope that has nothing to do with work, and take one small step toward it. It keeps the Star in your sky."
+    ]
+   },
+   {
+    "title": "A note on hope",
+    "paras": [
+     "Even the most practical people born on the 17th tend to keep a quiet dream alive for years: a book to write, a house by the sea, a school to found. That private hope is not a distraction from their ambition but its deepest fuel, and many of them eventually make the dream real."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Ambition shines brightest when it carries hope for others too."
+    ]
+   }
+  ]
+ },
+ "18": {
+  "title": "Born on the 18th: the compassionate leader",
+  "lead": "The 18th reduces to 9 and joins the drive of 1 with the power of 8: leadership in the service of something bigger.",
+  "sections": [
+   {
+    "title": "The gift of the 18th",
+    "paras": [
+     "People born on the 18th often combine strength with a wide heart. The 1 and 8 give initiative and organisational power, while the 9 at the root points that power toward people and causes. Their gift is to lead with compassion, turning big ideals into practical change."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may feel strongly about injustice and want to do something concrete about it. People look to you to organise, decide and speak up. Your emotions run deep, though you may hide them behind competence. You are moved by art, music and stories of courage."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Leadership, empathy, vision, resilience and the ability to inspire groups. The 18th is a natural organiser of charities, movements, schools or teams that serve others."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Card eighteen of the tarot is the Moon, linked with emotions and illusions. The 18th may be pulled by moods, fears or idealised views of people. Growth comes from emotional honesty, rest and seeing people clearly, with both their light and their shadows."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 18th loves deeply and protectively. They need a partner who shares their values and can hold their emotional depth. They grow when they allow themselves to be cared for, not only to care."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Public service, medicine, education, nonprofit leadership, law, the arts and any role where influence is used to help others."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Vesna, born on 18 May, was a corporate manager who began volunteering at a shelter. Within five years she was running a network of shelters across the region, using every budgeting skill her old job taught her."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 1 or 8 life path, an 18th birthday adds purpose to ambition. On a 2 or 6 path it gives courage to lead. On a 7 path it turns reflection into action. On a 9 path it doubles the humanitarian pull, so self care matters."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A meeting table covered in plans for a community project, a phone that rings with requests for help, a late evening walk under the moon: the 18th lives between action and reflection."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each evening, write one feeling you noticed today and one thing you did with it. The habit brings the Moon's emotions into clear daylight."
+    ]
+   },
+   {
+    "title": "A note on feelings",
+    "paras": [
+     "People born on the 18th often feel the mood of a group as if it were their own. This makes them excellent leaders in hard times, but it also means they need regular solitude to sort out which feelings belong to them and which belong to the room."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your strength is most beautiful when it lifts others with you."
+    ]
+   }
+  ]
  }
 };

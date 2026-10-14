@@ -1073,5 +1073,239 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "16": {
+  "title": "Geboren am 16.: die Wahrheitssuchenden",
+  "lead": "Die 16 reduziert sich auf 7 und ist eine karmische Schuldzahl: tiefe Einsicht und Intuition, mit einer Lektion über Stolz und Ehrlichkeit.",
+  "sections": [
+   {
+    "title": "Die Gabe des 16.",
+    "paras": [
+     "Sechzehn verbindet die Unabhängigkeit der 1 mit der Fürsorge der 6, und die Summe 7 wendet beides nach innen. Wer an diesem Tag geboren ist, hat oft eine durchdringende Intuition und Hunger nach dem Echten. Die Gabe ist, nach einem Sturz neu aufzubauen und weiser daraus hervorzugehen, mit Einsichten, auf die sich andere stützen können."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht spürst du, wenn jemand sich verstellt, auch du selbst. Du schätzt Privatsphäre und teilst deine tiefsten Gedanken nur mit ein oder zwei Menschen. Das Leben hat vielleicht plötzliche Wendungen gebracht, Abschlüsse, die wie Einstürze wirkten und später einen besseren Weg zeigten."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Einsicht, Intuition, Forschergeist, spirituelle Tiefe und Ehrlichkeit. Der 16. ist eine gute Autorin, ein Psychologe, eine Wissenschaftlerin oder ein spiritueller Begleiter und oft der Mensch, an den sich andere nach einer Krise wenden."
+    ]
+   },
+   {
+    "title": "Die karmische Lektion",
+    "paras": [
+     "Die sechzehnte Tarotkarte ist der Turm. Als karmischer Schuldtag ist der 16. mit einem alten Muster von Stolz und Eitelkeit verbunden. Was auf Image gebaut ist, fällt gern. Die Lektion ist Demut im gesunden Sinn: auf Wahrheit bauen, Fehler früh zugeben und das Ego kleiner sein lassen als das Herz."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe verlangt Verletzlichkeit, und das kann riskant wirken. Du brauchst einen treuen, ehrlichen Menschen und wächst, wenn du die Deckung senkst. Idealisierte Romanzen bekommen Risse, ehrliche werden nach Stürmen stärker."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Forschung, Psychologie, Schreiben, Wissenschaft, Ermittlung, spirituelle Arbeit und jedes Feld, das Tiefe mehr belohnt als Schein."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Milena, geboren am 16. März, baute eine glänzende Karriere in der Werbung auf, bis ein Burnout sie über Nacht beendete. Im Jahr danach machte sie eine Ausbildung zur Psychotherapeutin. Sie sagt, der Einsturz sei das Schmerzhafteste und Nützlichste gewesen, was ihr je passiert ist."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 3 oder 8 gibt ein Geburtstag am 16. einer öffentlichen Rolle Tiefe. Auf der 1 lehrt er Führung durch Ehrlichkeit. Auf der 7 verdoppelt er den Blick nach innen, enge Freunde werden wichtig. Auf der 9 wird Einsicht zu Mitgefühl."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Regal mit viel gelesenen Büchern, ein Tagebuch mit durchgestrichenen Entwürfen, eine stille Bank am Ende langer Spaziergänge: Die Welt des 16. ist voller Orte, an denen Wahrheit langsam erarbeitet wird."
+    ]
+   },
+   {
+    "title": "Über Abschlüsse",
+    "paras": [
+     "Viele vom 16. beschreiben ihr Leben als Reihe von Kapiteln mit scharfen Brüchen dazwischen. Jeder Bruch, schmerzhaft im Moment, wirkt später wie eine Tür. Diesem Muster zu vertrauen, macht die nächste Veränderung weniger beängstigend."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Gib einmal pro Woche einen kleinen Fehler gegenüber dem Menschen zu, den er betroffen hat, schlicht und ohne Drama. Die Gewohnheit hält den Turm ehrlich, damit er nie fallen muss."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Was auf Wahrheit gebaut ist, übersteht jeden Sturm. Hochmut kommt vor dem Fall, Ehrlichkeit vor dem Frieden."
+    ]
+   }
+  ]
+ },
+ "17": {
+  "title": "Geboren am 17.: die beständigen Erfolgreichen",
+  "lead": "Die 17 reduziert sich auf 8 und verbindet den Antrieb der 1 mit der Tiefe der 7: Ehrgeiz, geleitet von Einsicht, und ein Stern der Hoffnung.",
+  "sections": [
+   {
+    "title": "Die Gabe des 17.",
+    "paras": [
+     "Die siebzehnte Tarotkarte ist der Stern, ein Symbol der Hoffnung nach schweren Zeiten. Wer am 17. geboren ist, trägt oft diese Qualität: Du erholst dich, hältst an deinen Zielen fest und erreichst still sehr viel. Die 8 an der Wurzel gibt Geschäftssinn, die 1 und die 7 fügen Unabhängigkeit und strategisches Denken hinzu."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht planst du deine Laufbahn Jahre im Voraus und genießt die Details, die andere überspringen. Menschen vertrauen deinem Urteil in Geldfragen und Entscheidungen. Deine Gefühle behältst du für dich, praktische Hilfe gibst du großzügig. Rückschläge machen dich entschlossener, nicht schwächer."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Strategie, Beharrlichkeit, Intelligenz, Selbstdisziplin und ein starkes Verantwortungsgefühl. Der 17. gelangt oft durch Kompetenz statt Lautstärke in Positionen mit Gewicht."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Der 17. kann zu ernst, zu selbstgenügsam oder zu sehr auf Status bedacht werden. Wachstum kommt, wenn du dein Innenleben teilst, Hilfe annimmst und dich erinnerst, dass Hoffnung und Freude Teil des Erfolgs sind, keine Belohnung für später."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du nimmst Liebe ernst und wünschst dir einen treuen, fähigen Menschen. Liebe zeigst du, indem du Sicherheit aufbaust. Du wächst, wenn du auch Gefühle, Lachen und spontane Zärtlichkeit zeigst."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Finanzen, Recht, Management, Forschung, Verlagswesen, Ingenieurwesen und jedes Feld, in dem Fachwissen zu Verantwortung führt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Aleksandar, geboren am 17. September, wuchs in einem kleinen Dorf auf und leitet heute ein Forschungsinstitut. Jeden Sommer kehrt er zurück und leitet ein kostenloses Wissenschaftscamp für Dorfkinder, weil, wie er sagt, einmal jemand auch für ihn einen Stern angezündet hat."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 2 oder 6 gibt ein Geburtstag am 17. einer fürsorglichen Natur Selbstvertrauen. Auf der 3 oder 5 bündelt er Talent. Auf der 8 verdoppelt er den Antrieb, Ruhe und Freude werden wichtig. Auf der 9 erdet er Idealismus in praktischen Erfolgen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Schreibtisch mit einem langfristigen Plan an der Wand, ein sauber geführtes Kassenbuch und ein kleines Fenster mit Blick auf den Nachthimmel: Der 17. arbeitet beständig auf Ziele hin und verliert dabei das Größere nicht aus den Augen."
+    ]
+   },
+   {
+    "title": "Über die Hoffnung",
+    "paras": [
+     "Selbst die praktischsten Menschen vom 17. tragen oft jahrelang einen stillen Traum mit sich: ein Buch, ein Haus am Meer, eine Schule, die sie gründen wollen. Diese private Hoffnung lenkt nicht vom Ehrgeiz ab, sie ist sein tiefster Treibstoff, und viele machen den Traum am Ende wahr."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Benenne jeden Monat eine Hoffnung, die nichts mit Arbeit zu tun hat, und geh einen kleinen Schritt darauf zu. So bleibt der Stern an deinem Himmel."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ehrgeiz leuchtet am hellsten, wenn er auch Hoffnung für andere trägt."
+    ]
+   }
+  ]
+ },
+ "18": {
+  "title": "Geboren am 18.: die mitfühlenden Führungskräfte",
+  "lead": "Die 18 reduziert sich auf 9 und verbindet den Antrieb der 1 mit der Kraft der 8: Führung im Dienst von etwas Größerem.",
+  "sections": [
+   {
+    "title": "Die Gabe des 18.",
+    "paras": [
+     "Wer am 18. geboren ist, verbindet oft Stärke mit einem weiten Herzen. Die 1 und die 8 geben Initiative und Organisationskraft, die 9 an der Wurzel richtet diese Kraft auf Menschen und Anliegen. Die Gabe ist, mit Mitgefühl zu führen und große Ideale in praktische Veränderung zu verwandeln."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht empfindest du Ungerechtigkeit stark und willst konkret etwas tun. Menschen erwarten von dir, dass du organisierst, entscheidest und das Wort ergreifst. Deine Gefühle sind tief, auch wenn du sie hinter Kompetenz versteckst. Kunst, Musik und Geschichten von Mut berühren dich."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Führung, Empathie, Vision, Widerstandskraft und die Fähigkeit, Gruppen zu begeistern. Der 18. organisiert wie selbstverständlich Vereine, Bewegungen, Schulen oder Teams, die anderen dienen."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Die achtzehnte Tarotkarte ist der Mond, verbunden mit Gefühlen und Täuschungen. Stimmungen, Ängste oder idealisierte Bilder von Menschen können dich ziehen. Wachstum kommt durch emotionale Ehrlichkeit, Ruhe und einen klaren Blick auf Menschen, mit ihrem Licht und ihren Schatten."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du liebst tief und beschützend. Du brauchst einen Menschen, der deine Werte teilt und deine emotionale Tiefe halten kann. Du wächst, wenn du dich auch umsorgen lässt."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Öffentlicher Dienst, Medizin, Bildung, Leitung gemeinnütziger Organisationen, Recht, Kunst und jede Rolle, in der Einfluss genutzt wird, um anderen zu helfen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Vesna, geboren am 18. Mai, war Managerin in einem Konzern, als sie begann, in einem Frauenhaus mitzuhelfen. Fünf Jahre später leitete sie ein Netz von Schutzhäusern in der ganzen Region und nutzte jede Budgetfähigkeit, die ihr alter Job sie gelehrt hatte."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 1 oder 8 gibt ein Geburtstag am 18. dem Ehrgeiz einen Zweck. Auf der 2 oder 6 schenkt er Mut zur Führung. Auf der 7 wird Nachdenken zu Handeln. Auf der 9 verdoppelt er den humanitären Zug, Selbstfürsorge wird wichtig."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Besprechungstisch voller Pläne für ein Nachbarschaftsprojekt, ein Telefon, das mit Bitten um Hilfe klingelt, ein später Spaziergang unter dem Mond: Der 18. lebt zwischen Handeln und Besinnung."
+    ]
+   },
+   {
+    "title": "Über Gefühle",
+    "paras": [
+     "Menschen vom 18. spüren die Stimmung einer Gruppe oft wie ihre eigene. Das macht sie zu starken Führungskräften in schweren Zeiten, bedeutet aber auch, dass sie regelmäßig Alleinsein brauchen, um zu sortieren, welche Gefühle ihnen gehören und welche dem Raum."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Schreib jeden Abend ein Gefühl auf, das du heute bemerkt hast, und was du damit getan hast. Die Gewohnheit holt die Gefühle des Mondes ins klare Tageslicht."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Stärke ist am schönsten, wenn sie andere mit dir emporhebt."
+    ]
+   }
+  ]
  }
 };
