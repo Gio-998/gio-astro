@@ -1098,6 +1098,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "4-and-11": {
+  "title": "Lebenszahl 4 und 11: Antenne und Anker",
+  "lead": "Die 11 empfängt Signale, die andere überhören, die 4 macht daraus etwas, das steht. Ein feinfühliger Visionär neben einer ruhigen Baumeisterin kann ein Paar mit tiefem gegenseitigem Halt sein.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 11 und eine 4 begegnen sich oft, wenn die 11 mitten in einer inspirierten Idee steckt und praktische Hilfe braucht. Das kann eine Werkstatt sein, ein Ehrenamtsteam, ein junges Unternehmen oder die Renovierung bei Freunden der Familie. Die 4 staunt über die Einsicht der 11, die 11 wird neben der 4 seltsam ruhig."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 11 bringt Intuition, Idealismus und ein Gespür dafür, was Menschen brauchen. Die 4 bringt Geduld, Struktur und Durchhaltevermögen. Die 11 kämpft oft mit Nervosität und zerstreuter Energie, die 4 bietet festen Boden. Dafür bekommt die 4 einen Menschen, der in gewöhnlicher Arbeit einen Sinn sieht."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 11 fühlt sich missverstanden, wenn die 4 Beweise oder einen Zeitplan verlangt. Die 4 ermüdet an den Gefühlsstürmen und plötzlichen Richtungswechseln der 11. Unter Druck zieht sich die 11 zurück oder reagiert heftig, während die 4 hart wird und verstummt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier zart, braucht aber eine Übersetzung. Die 11 spricht in Gefühlen und Bildern, die 4 in Taten und Gewohnheiten. Wenn die 4 lernt zu sagen, was sie fühlt, und die 11 ein repariertes Regal als Liebesbrief versteht, wird die Bindung sehr sicher."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt die 11 die Träume und die 4 hilft, sie wahr zu machen. Beruflich passt das Paar zu Beratungsstellen, Designstudios, heilenden Berufen, Unterricht und jedem Projekt mit Auftrag und Budget."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Jovana, Lebenszahl 11, träumte von einem stillen Leseraum für Kinder im Krankenhaus. Stefan, Lebenszahl 4, Haustechniker der Klinik, vermaß den Raum, fand gespendete Regale und verkabelte die Lampen. Der Raum öffnete nach drei Monaten. Sie nennt ihn bis heute den, der ihren Traum der Schwerkraft gehorchen ließ."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 4 das empfindliche Nervensystem der 11 mit Routine schützt und die 11 die 4 vor einem Leben bewahrt, das nur aus Pflicht besteht."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Heft voller Skizzen und halber Sätze auf der einen Seite des Schreibtischs, ein ordentlicher Werkzeugkasten auf der anderen und eine warme Lampe, die für beide brennt."
+    ]
+   },
+   {
+    "title": "Über die Nerven",
+    "paras": [
+     "Die 11 trägt viel innere Spannung. Die 4 hilft am meisten, wenn sie das Gefühl nicht reparieren will, sondern Mahlzeiten, Schlaf und Pläne regelmäßig hält, damit der Sturm Wände hat, durch die er ziehen kann."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Zweimal messen, einmal schneiden, sagen Handwerker. Die 4 misst, die 11 spürt, wo der Schnitt hingehört. Zusammen verschwenden sie weniger Holz und weniger Jahre."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Abend nennt die 11 eine Eingebung des Tages und die 4 eine erledigte Aufgabe. Nichts davon wird bewertet. Für beides wird gedankt."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine Vision braucht einen Rahmen, und ein Rahmen braucht etwas, das es wert ist, gehalten zu werden."
+    ]
+   }
+  ]
+ },
+ "4-and-22": {
+  "title": "Lebenszahl 4 und 22: Baumeister und Meisterbaumeister",
+  "lead": "Die 22 gilt oft als die 4 in höherer Potenz. Beide lieben feste Fundamente, doch die 22 träumt in Größenordnungen, die die 4 begeistern oder beunruhigen können.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 4 und eine 22 begegnen sich meist bei ernsthafter Arbeit: Ingenieurwesen, Architektur, öffentliche Vorhaben, große Organisationen. Beide erkennen schnell, dass die andere Seite fähig und beständig ist. Die 4 merkt, dass die 22 in Jahrzehnten und Städten denkt statt in Wochen und Zimmern."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt einen praktischen Verstand und großen Respekt vor Mühe. Die 22 liefert den großen Plan und den Mut, ihn zu wagen. Die 4 liefert Sorgfalt im Detail, verlässliche Abläufe und die Fähigkeit, Dinge fertigzustellen. Wenige Paare können gemeinsam so viel errichten."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 drängt vielleicht auf Wachstum, das der 4 zu riskant ist. Der 22 erscheint die 4 kleinlich, der 4 erscheint die 22 größenwahnsinnig. Beide wollen gern lenken, und Streit wird leicht zum stillen Wettbewerb, wer mehr arbeitet."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist beständig und ernst. Ihr zeigt Liebe, indem ihr Lasten teilt und ein Leben mit klarem Ziel aufbaut. Sie vertieft sich, wenn ihr Zeit schützt, die nichts mit Arbeit zu tun hat, und wenn die 22 der 4 auch ihre Zweifel zeigt, nicht nur ihre Pläne."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gebt ihr einander ehrlichen Rat und echte Hilfe. Beruflich passt ihr zu Bauwesen, Stadtplanung, Infrastruktur, Logistik, Produktion und der Leitung komplexer Projekte."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Vesna, Lebenszahl 22, wollte eine verlassene Fabrik in ein Gemeinschaftszentrum verwandeln. Igor, Lebenszahl 4, Bauleiter, erklärte es für unmöglich und verbrachte dann zwei Jahre damit, sich Balken für Balken zu widerlegen. Heute gibt es dort einen Markt, eine Handwerksschule und ihr eigenes kleines Büro."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 22 die Vorsicht der 4 als Qualitätskontrolle achtet und die 4 der Vision der 22 als Grund zum Weitermachen vertraut."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein großer Plan an der Wand, darunter eine kleinere Checkliste, zwei Bauhelme neben der Tür und ein ruhiges Sonntagsfrühstück ohne Handys auf dem Tisch."
+    ]
+   },
+   {
+    "title": "Über Größenordnungen",
+    "paras": [
+     "Die 22 sieht die Kathedrale, die 4 den nächsten Stein. Keine der beiden Sichtweisen ist falsch. Wer sich einigt, ob gerade geträumt oder gemauert wird, erspart sich viele Streitereien."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Rom wurde nicht an einem Tag erbaut, heißt es. Dieses Paar weiß das genau und weiß auch, dass irgendjemand am ersten Tag anfangen musste."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Schreibt jedes Quartal ein großes Ziel und drei kleine Schritte für den kommenden Monat auf. Die 22 entwirft das Ziel, die 4 die Schritte, und ihr unterschreibt beides."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Große Pläne ruhen auf kleinen, sorgfältigen Taten, die jeden Tag wiederholt werden."
+    ]
+   }
+  ]
+ },
+ "4-and-33": {
+  "title": "Lebenszahl 4 und 33: Pflicht trifft Hingabe",
+  "lead": "Die 33 lebt, um für andere zu sorgen, die 4, um Dauerhaftes zu schaffen. Zusammen können sie ein Zuhause und einen Dienst aufbauen, auf den sich viele stützen, wenn sie auf Erschöpfung achten.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 4 und eine 33 begegnen sich oft in helfenden Berufen oder im Familienkreis: in einer Schule, einer Praxis, einer Gemeinde, einem Nachbarschaftsverein. Die 4 bewundert die Wärme und Geduld der 33 mit Menschen. Die 33 bewundert die Verlässlichkeit und Ruhe der 4 unter Druck."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Beide fühlen sich für andere verantwortlich und beide halten Versprechen. Die 33 bringt Mitgefühl, heilende Kraft und die Gabe, Menschen aufzurichten. Die 4 bringt Organisation, Rücklagen und praktische Hilfe. Zusammen schafft ihr ein Zuhause, in dem sich alle sicher und satt fühlen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 33 gibt vielleicht zu viel, und die 4 sorgt sich um Geld, Zeit oder Grenzen. Der 33 wirkt die 4 manchmal kühl oder starr, der 4 wirkt die 33 übermäßig gefühlvoll oder aufopfernd. Beide tragen Lasten oft schweigend, bis es nicht mehr geht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier warm und hingebungsvoll. Die 33 schenkt Zuneigung und Aufmerksamkeit, die 4 Stabilität und Schutz. Die Liebe wächst, wenn die 33 auch Fürsorge annimmt und die 4 lernt, Zärtlichkeit offen zu zeigen und nicht nur durch Arbeit."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr die, die man in einer Krise anruft. Beruflich passt das Paar zu Unterricht, sozialen Diensten, Pflege, der Leitung gemeinnütziger Einrichtungen und Familienbetrieben, die einer Gemeinschaft dienen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ana, Lebenszahl 33, leitete einen kostenlosen Nachmittagsclub für die Kinder in ihrem Haus. Nikola, Lebenszahl 4, führte die Kasse, reparierte die kaputten Stühle und erstellte einen Dienstplan für Freiwillige. Als Ana einen Winter lang krank war, fiel kein einziger Clubtag aus, weil Nikolas Plan funktionierte. Da lernte sie, ihm einen Teil der Last zu überlassen."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr die Fürsorge teilt, Ruhe einplant und euch erlaubt, so viel zu empfangen, wie ihr gebt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein voller Küchentisch am Sonntag, eine Geburtstagsliste am Kühlschrank und ein Glas für kleine Geschenke, das die 4 immer wieder auffüllt."
+    ]
+   },
+   {
+    "title": "Über Erschöpfung",
+    "paras": [
+     "Die 33 und die 4 vergessen sich leicht selbst. Ruhezeit so fest einzuplanen wie Hilfe für andere ist nicht egoistisch, es hält das Haus aufrecht."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Viele Hände, schnelles Ende, sagt der Volksmund. Dieses Paar bietet oft zuerst die eigenen Hände an und sollte daran denken, auch um fremde zu bitten."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Fragt euch einmal pro Woche: Was trägst du gerade, das ich eine Weile halten könnte? Und nehmt dann wirklich eine Aufgabe von der Liste des anderen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Fürsorge, die bleibt, braucht ein warmes Herz und ein festes Dach."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",

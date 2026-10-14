@@ -1074,6 +1074,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "4-and-11": {
+  "title": "Life path 4 and 11: the antenna and the anchor",
+  "lead": "The 11 picks up signals others miss; the 4 turns those signals into something that stands. A sensitive, high-voltage visionary next to a calm builder can make a deeply supportive couple.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "An 11 and a 4 often meet when the 11 is in the middle of an inspired idea and needs a practical helper. It may be a workshop, a volunteer team, a startup or a family friend's renovation. The 4 is impressed by the 11's insight; the 11 feels oddly calm near the 4."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 11 brings intuition, idealism and a feel for what people need. The 4 brings patience, structure and follow through. The 11 often struggles with nerves and scattered energy, and the 4 offers a steady floor to stand on. In return, the 4 gets a partner who sees meaning in ordinary work."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 11 can feel misunderstood when the 4 asks for proof or a timeline. The 4 can feel tired by the 11's emotional storms and sudden changes of direction. Under stress the 11 withdraws or overreacts, while the 4 hardens and goes quiet."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is tender but needs translation. The 11 speaks in feelings and images, the 4 in deeds and routines. When the 4 learns to say what it feels and the 11 learns to value a repaired shelf as a love letter, the bond becomes very secure."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends, the 11 shares dreams and the 4 helps make them real. At work this pair suits counselling practices, design studios, healing professions, teaching and any project with a mission and a budget."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Jovana, life path 11, had a vision of a quiet reading room for children in hospital. Stefan, life path 4, a hospital technician, measured the space, found donated shelves and wired the lamps. The room opened in three months. She still calls him the one who made her dream obey gravity."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This couple thrives when the 4 protects the 11's sensitive nervous system with routine, and the 11 protects the 4 from a life that is only duty."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A notebook full of sketches and half sentences on one side of the desk, a neat toolbox on the other, and a warm lamp lit for both."
+    ]
+   },
+   {
+    "title": "A note on nerves",
+    "paras": [
+     "The 11 carries a lot of inner tension. The 4 helps most not by fixing the feeling but by keeping meals, sleep and plans regular, so the storm has walls to pass through."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Measure twice and cut once, carpenters say. The 4 measures; the 11 senses where the cut should go. Together they waste less wood and fewer years."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each evening, the 11 names one intuition from the day and the 4 names one task it finished. Neither is judged. Both are thanked."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Vision needs a frame, and a frame needs something worth holding."
+    ]
+   }
+  ]
+ },
+ "4-and-22": {
+  "title": "Life path 4 and 22: the builder and the master builder",
+  "lead": "The 22 is often called the 4 raised to a higher power. Both love solid foundations, but the 22 dreams on a scale that can amaze or worry the 4.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 4 and a 22 usually meet through serious work: engineering, architecture, public projects, large organisations. Each quickly sees that the other is competent and steady. The 4 notices that the 22 thinks in decades and cities rather than weeks and rooms."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share a practical mind and a deep respect for effort. The 22 provides the big plan and the courage to attempt it. The 4 provides care for details, reliable routines and the ability to finish. Few pairs can build as much together."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 may push for growth that the 4 finds risky. The 4 may seem small minded to the 22, while the 22 may seem grandiose to the 4. Both can be controlling, and arguments may turn into silent competitions about who works harder."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is steady and serious. You show love by sharing burdens and building a life with clear purpose. It deepens when you protect time that has nothing to do with work and when the 22 lets the 4 see its doubts, not only its plans."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you give each other honest advice and real help. At work you suit construction, urban planning, infrastructure, logistics, manufacturing and the management of complex projects."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Vesna, life path 22, wanted to rebuild an abandoned factory as a community centre. Igor, life path 4, a site manager, said it was impossible, then spent two years proving himself wrong, beam by beam. Today the centre hosts a market, a school of crafts and their own small office."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 22 respects the 4's caution as quality control and the 4 trusts the 22's vision as a reason to keep going."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A large plan pinned to the wall, a smaller checklist taped beneath it, two hard hats by the door and a quiet Sunday breakfast with no phones on the table."
+    ]
+   },
+   {
+    "title": "A note on scale",
+    "paras": [
+     "The 22 sees the cathedral; the 4 sees the next stone. Neither view is wrong. Agreeing on which stage you are in, dreaming or laying stones, saves many quarrels."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Rome was not built in a day, people like to say. This pair knows it well, and also knows that someone had to start on the first day."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Every quarter, write one large goal and three small steps for the coming month. The 22 drafts the goal, the 4 drafts the steps, and you sign both."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Great plans stand on small, careful acts repeated every day."
+    ]
+   }
+  ]
+ },
+ "4-and-33": {
+  "title": "Life path 4 and 33: duty meets devotion",
+  "lead": "The 33 lives to care for others; the 4 lives to provide what lasts. Together they can create a home and a service that many people lean on, if they watch out for exhaustion.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 4 and a 33 often meet in caring work or family settings: a school, a clinic, a parish, a neighbourhood association. The 4 admires the 33's warmth and patience with people. The 33 admires the 4's dependability and calm under pressure."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both feel responsible for others and both keep promises. The 33 brings compassion, healing energy and a talent for uplifting people. The 4 brings organisation, savings and practical help. Together you can create a home where everyone feels safe and fed."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 33 may give too much, and the 4 may worry about money, time or boundaries. The 4 may seem cold or rigid to the 33, while the 33 may seem overly emotional or self sacrificing to the 4. Both can carry burdens silently until they break."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is warm and devoted. The 33 gives affection and attention, the 4 gives stability and shelter. Love grows when the 33 accepts care in return and the 4 learns to show tenderness openly, not only through work."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the people others call in a crisis. At work this pair suits teaching, social services, nursing, nonprofit management and family businesses that serve a community."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ana, life path 33, ran a free afternoon club for children in her building. Nikola, life path 4, kept the accounts, fixed the broken chairs and drew up a rota of volunteers. When Ana fell ill one winter, the club ran without a single missed day, because Nikola's rota still worked. That was when she learned to let him carry part of the load."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you share the care, plan for rest and allow yourselves to receive as much as you give."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A full kitchen table on a Sunday, a list of birthdays on the fridge and a jar labelled for small gifts, kept topped up by the 4."
+    ]
+   },
+   {
+    "title": "A note on exhaustion",
+    "paras": [
+     "The 33 and the 4 can both forget themselves. Booking time for rest the same way you book help for others is not selfish; it keeps the house standing."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Many hands make light work, the proverb says. This pair often offers its own hands first, and should remember to ask for others too."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, ask each other: what are you carrying that I could hold for a while? Then actually take one task off the other's list."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Care that lasts needs both a warm heart and a strong roof."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",
