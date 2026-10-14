@@ -26,6 +26,12 @@ import { mkB5 } from "./mk-b5";
 import { mkB5b } from "./mk-b5b";
 import { deB5 } from "./de-b5";
 import { deB5b } from "./de-b5b";
-const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b, ...enB5, ...enB5b }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b, ...mkB5, ...mkB5b }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b, ...deB5, ...deB5b } };
+import { enB6 } from "./en-b6";
+import { enB6b } from "./en-b6b";
+import { mkB6 } from "./mk-b6";
+import { mkB6b } from "./mk-b6b";
+import { deB6 } from "./de-b6";
+import { deB6b } from "./de-b6b";
+const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b, ...enB5, ...enB5b, ...enB6, ...enB6b }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b, ...mkB5, ...mkB5b, ...mkB6, ...mkB6b }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b, ...deB5, ...deB5b, ...deB6, ...deB6b } };
 /** Long story sections for an angel number page, if that batch is written. */
 export function angelLong(lang: string, n: string) { return ALL[lang]?.[n] ?? []; }
