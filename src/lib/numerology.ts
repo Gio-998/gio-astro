@@ -7,6 +7,7 @@ import { angelLong, pageLong } from "@/content/numerology/long";
 import { reduce, rootOf } from "@/engine/numerology";
 import { BIRTHDAYS } from "@/content/numerology/birthdays";
 import { PAIRS, PAIR_HUB } from "@/content/numerology/pairs";
+import { MIRRORS, MIRROR_HUB } from "@/content/numerology/mirror";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
 export const LIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
@@ -20,6 +21,10 @@ export const BDAY_DAYS: number[] = Object.keys(BIRTHDAYS.en).map(Number).filter(
 export const ALL_PAIRS: string[] = LIFE.flatMap((a, i) => LIFE.slice(i).map((b) => `${a}-and-${b}`));
 /** Compatibility pair pages that exist in every language (gated by tests/numerology-pair-overlap.test.ts). */
 export const PAIR_KEYS: string[] = ALL_PAIRS.filter((k) => PAIRS.en[k] && PAIRS.mk[k] && PAIRS.de[k]);
+/** Mirror hours we write pages for, keyed "hh-mm". */
+export const MIRROR_ALL = ["00-00", "01-01", "02-02", "03-03", "04-04", "05-05", "10-10", "11-11", "12-12", "13-13", "14-14", "15-15", "20-20", "21-21", "22-22"] as const;
+/** Mirror hour pages that exist in every language (gated by tests/numerology-mirror-overlap.test.ts). */
+export const MIRROR_KEYS: string[] = MIRROR_ALL.filter((k) => MIRRORS.en[k] && MIRRORS.mk[k] && MIRRORS.de[k]);
 export type CalcMode = (typeof CALCS)[number];
 
 const N = "/numerology/";
@@ -28,7 +33,8 @@ export function numPaths(): string[] {
   return [N, `${N}angel-numbers/`, ...ANGEL.map((a) => `${N}angel-numbers/${a}/`), `${N}calculator/`, ...CALCS.map((c) => `${N}calculator/${c}/`),
     `${N}life-path/`, ...LIFE.map((n) => `${N}life-path/${n}/`), `${N}master-numbers/`, `${N}personal-year/`, ...YEARS.map((n) => `${N}personal-year/${n}/`),
     ...CORE.map((c) => `${N}${c}/`), ...BDAY_DAYS.map((d) => `${N}birthday-number/${d}/`), `${N}karmic-debt/`, ...KARMIC.map((n) => `${N}karmic-debt/${n}/`), `${N}personal-day/`,
-    ...(PAIR_KEYS.length ? [`${N}compatibility/`, ...PAIR_KEYS.map((k) => `${N}compatibility/${k}/`)] : [])];
+    ...(PAIR_KEYS.length ? [`${N}compatibility/`, ...PAIR_KEYS.map((k) => `${N}compatibility/${k}/`)] : []),
+    ...(MIRROR_KEYS.length ? [`${N}mirror-hours/`, ...MIRROR_KEYS.map((k) => `${N}mirror-hours/${k}/`)] : [])];
 }
 /** Pages that may be listed in the sitemap (generated families join only after their overlap test passes). */
 export const numIndexable = (p: string) => numPaths().includes(p);
@@ -64,7 +70,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const E = C.explain.hub;
     return { path, kind: "hub", eyebrow: U.section, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub], faq: E.faq,
       blocks: [{ id: "intro", title: U.section, paras: E.intro }, { id: "how", title: U.sec.explore, paras: [...E.how, U.method] }],
-      items: [{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }, { href: lp(lang, `${N}life-path/`), label: U.lifePathHub, sub: C.explain["life-path"].sub }, { href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }, { href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, ...CORE.map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })), { href: lp(lang, `${N}karmic-debt/`), label: U.karmicHub, sub: C.explain["karmic-debt"].sub }, ...calcItems()],
+      items: [{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }, { href: lp(lang, `${N}life-path/`), label: U.lifePathHub, sub: C.explain["life-path"].sub }, { href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }, { href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, ...CORE.map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })), { href: lp(lang, `${N}karmic-debt/`), label: U.karmicHub, sub: C.explain["karmic-debt"].sub }, ...(MIRROR_KEYS.length ? [{ href: lp(lang, `${N}mirror-hours/`), label: (MIRROR_HUB[lang] ?? MIRROR_HUB.en).crumb, sub: (MIRROR_HUB[lang] ?? MIRROR_HUB.en).sub }] : []), ...calcItems()],
       related: angelItems().slice(0, 12) };
   }
   const [sec, item] = parts;
@@ -194,6 +200,24 @@ function numModelBase(lang: string, path: string): NumModel | null {
       crumbs: [home, hub, [H.crumb, lp(lang, `${N}compatibility/`)], [lab(item), lp(lang, path)]],
       blocks: P.sections.map((s, k) => ({ id: `p${k}`, title: s.title, paras: s.paras })), faq: [], related: rel,
       prev: { href: lp(lang, `${N}compatibility/${prevK}/`), label: lab(prevK) }, next: { href: lp(lang, `${N}compatibility/${nextK}/`), label: lab(nextK) }, calc: "compatibility" };
+  }
+  if (sec === "mirror-hours" && !item && MIRROR_KEYS.length) {
+    const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en;
+    return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: [],
+      blocks: [{ id: "intro", title: H.crumb, paras: H.intro }],
+      items: MIRROR_KEYS.map((k) => ({ href: lp(lang, `${N}mirror-hours/${k}/`), label: (MIRRORS[lang]?.[k] ?? MIRRORS.en[k]).title, sub: (MIRRORS[lang]?.[k] ?? MIRRORS.en[k]).lead.split(". ")[0], big: k.replace("-", ":") })),
+      related: [{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }] };
+  }
+  if (sec === "mirror-hours" && item && MIRROR_KEYS.includes(item)) {
+    const P = MIRRORS[lang]?.[item] ?? MIRRORS.en[item]; const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en; const i = MIRROR_KEYS.indexOf(item);
+    const prevK = MIRROR_KEYS[(i + MIRROR_KEYS.length - 1) % MIRROR_KEYS.length], nextK = MIRROR_KEYS[(i + 1) % MIRROR_KEYS.length];
+    const lab = (k: string) => k.replace("-", ":"); const digits = item.replace("-", ""); const root = reduce(digitSum(digits).reduce((x, y) => x + y, 0), true);
+    const angel = (ANGEL as readonly string[]).includes(digits) ? [{ href: lp(lang, `${N}angel-numbers/${digits}/`), label: `${U.angelHub} ${digits}`, sub: C.angel[digits].tag, big: digits }] : [];
+    const life = root > 0 && (LIFE as readonly number[]).includes(root) ? [{ href: lp(lang, `${N}life-path/${root}/`), label: U.lifePathShort(root), sub: C.chars[root].name, big: String(root) }] : [];
+    return { path, kind: "article", eyebrow: `${H.crumb} · ${lab(item)}`, h1: P.title, title: P.title, description: P.lead.slice(0, 158), lead: P.lead, big: lab(item),
+      crumbs: [home, hub, [H.crumb, lp(lang, `${N}mirror-hours/`)], [lab(item), lp(lang, path)]],
+      blocks: P.sections.map((s, k) => ({ id: `m${k}`, title: s.title, paras: s.paras })), faq: [], related: [...angel, ...life],
+      prev: { href: lp(lang, `${N}mirror-hours/${prevK}/`), label: lab(prevK) }, next: { href: lp(lang, `${N}mirror-hours/${nextK}/`), label: lab(nextK) }, calc: "life-path" };
   }
   if ((CORE as readonly string[]).includes(sec) && !item) {
     const line = (n: number) => sec === "expression-number" ? NUMS[n].expression : sec === "soul-urge-number" ? NUMS[n].soul : sec === "personality-number" ? `${C.chars[n].essence}. ${C.chars[n].gifts}` : sec === "maturity-number" ? C.chars[n].gifts : C.chars[n].essence;
