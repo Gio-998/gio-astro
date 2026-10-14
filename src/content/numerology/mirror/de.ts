@@ -401,5 +401,206 @@ export const mirrorDe: MirrorSet = {
     ]
    }
   ]
+ },
+ "10-10": {
+  "title": "Spiegelzahl 10:10: ein neuer Zyklus bei vollem Tageslicht",
+  "lead": "10:10 erscheint mitten am Vormittag, wenn der Tag schon in Bewegung ist. Sie verbindet den Antrieb der Eins mit dem offenen Potenzial der Null, und viele lesen sie als grünes Licht für eine neue Phase.",
+  "sections": [
+   {
+    "title": "Was 10:10 bedeuten kann",
+    "paras": [
+     "Zehn ist eine Eins, gefolgt von einer Null: eine abgeschlossene Zählung, die wieder zum Anfang wird. Zweimal gesehen, deutet sie an, dass etwas, das du lange vorbereitet hast, bereit ist loszugehen. Sie kann auch darauf hinweisen, dass du aus einem alten Zyklus gelernt hast, was du brauchtest, und nun geschickter in den nächsten gehst.",
+     "Weil 10:10 in die Arbeitszeit fällt, ist ihre Botschaft meist praktisch und nach außen gerichtet. Sie begünstigt sichtbares Handeln, Entscheidungen bei Tageslicht und Gespräche von Angesicht zu Angesicht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe kann 10:10 eine neue Stufe markieren: die Familie kennenlernen, zusammenziehen, zum ersten Mal etwas Wichtiges sagen. Für Singles kann sie ermutigen, den ersten Schritt zu machen, statt darauf zu warten, bemerkt zu werden."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Dies ist eine der berufsnächsten Spiegelzeiten. Sie begünstigt Starts, Bewerbungen, Beförderungen und neue Kunden. Wenn du zu lange an einem Projekt feilst, rät 10:10, es in die Welt zu lassen und unterwegs zu verbessern."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 2, die Zahl der Zusammenarbeit. Daher gelingt selbst ein kühner Start unter 10:10 meist mit Verbündeten. Such dir einen Menschen, der unterstützen kann, was du beginnen willst."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen sehen 10:10 oft am ersten Tag einer neuen Stelle, in einer Besprechung, in der eine Entscheidung fällt, oder in einer Zeit, in der sie sich nach langem Warten endlich bereit fühlen."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Petra überarbeitete zwei Jahre lang ihre Mappe. Eines Morgens sah sie genau um 10:10 auf ihren Laptop und schickte halb lachend eine Bewerbung ab, die sie als Entwurf gespeichert hatte. In der Woche darauf bekam sie ein Gespräch und einen Monat später die Stelle."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Nimm die Aufgabe, um die du herumkreist, und schenk ihr sofort zehn konzentrierte Minuten. Zehn Minuten sind kurz genug, um anzufangen, und oft lang genug, um den Bann des Aufschiebens zu brechen."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Grünes Licht ist kein Erfolgsversprechen. 10:10 begünstigt den Anfang, doch du brauchst weiterhin Vorbereitung und ehrliche Rückmeldung, sobald du unterwegs bist."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was habe ich schon gut genug vorbereitet, um heute zu beginnen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein neuer Zyklus beginnt in dem Moment, in dem du den ersten sichtbaren Schritt tust."
+    ]
+   }
+  ]
+ },
+ "11-11": {
+  "title": "Spiegelzahl 11:11: das bekannteste Zeichen auf der Uhr",
+  "lead": "11:11 ist die berühmteste Spiegelzeit. Vier Einsen hintereinander bilden das Bild eines Tores, und für viele ist sie ein Anlass, innezuhalten, sich etwas zu wünschen oder zu bemerken, was sie in genau diesem Moment denken.",
+  "sections": [
+   {
+    "title": "Was 11:11 bedeuten kann",
+    "paras": [
+     "Die Elf ist in der Numerologie eine Meisterzahl, verbunden mit Intuition, Inspiration und spiritueller Einsicht. Verdoppelt auf der Uhr wird sie zum starken Symbol des Einklangs: dem Gefühl, dass innere Gedanken und äußere Ereignisse kurz im Gleichschritt gehen. Viele sagen, sie sähen 11:11, wenn sie kurz vor einer wichtigen Erkenntnis stehen.",
+     "Ein verbreiteter Brauch ist, sich um 11:11 etwas zu wünschen. Bodenständiger ist es, den Gedanken in diesem Moment zu bemerken. Die Uhr wird zum Spiegel und zeigt, was dich öfter beschäftigt, als du ahnst."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe wird 11:11 mit Wiedererkennen und seelischer Verbindung verknüpft. Sie erscheint vielleicht, wenn du jemanden triffst, der dir sofort vertraut vorkommt, oder wenn eine alte Bindung tiefer wird. Sie verlangt auch Ehrlichkeit mit dir selbst darüber, was du dir wirklich von einem Partner wünschst."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt 11:11 Ideen, kreative Durchbrüche und sinnvolle Arbeit. Sie taucht womöglich auf, wenn dich ein Feld anzieht, das zu deinen Werten passt. Schreib die Idee auf, die mit ihr kommt, und gib ihr einen praktischen nächsten Schritt, bevor die Begeisterung verfliegt."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 4, die Zahl der Struktur. Das ist ein nützliches Gleichgewicht: 11:11 bringt Inspiration, und ihre Summe erinnert daran, dass Inspiration eine Form braucht, um zu bleiben."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen bemerken 11:11 in Zeiten des Wandels, der spirituellen Neugier oder emotionaler Offenheit. Sobald du anfängst, sie wahrzunehmen, siehst du sie vielleicht öfter, auch weil dein Kopf nun nach ihr sucht."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Lea sah um 11:11 auf die Uhr, genau in dem Moment, in dem sie beschloss, sich endlich für eine Ausbildung in Musiktherapie anzumelden, wovon sie seit der Schulzeit träumte. Sie lachte und schrieb das Datum in ihr Tagebuch. Drei Jahre später arbeitet sie mit Kindern in einem Krankenhaus, und die Tagebuchseite hängt gerahmt an ihrer Wand."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Halte einen Atemzug lang inne und bemerke den Gedanken, den du gerade hattest. Ist es eine Angst, benenne sie freundlich. Ist es ein Wunsch, schreib ihn auf, zusammen mit einem Schritt, den du diese Woche darauf zu machen kannst."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "11:11 ist ein Symbol, keine Garantie. Sie oft zu sehen heißt nicht, dass ein Wunsch sich von selbst erfüllt oder dass ein Mensch für dich bestimmt ist. Am besten wirkt sie als Moment der Achtsamkeit."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was habe ich gedacht, als ich auf die Uhr sah, und ist es etwas, das ich wachsen lassen will?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Achte auf den Gedanken, der dich am Tor empfängt."
+    ]
+   }
+  ]
+ },
+ "12-12": {
+  "title": "Spiegelzahl 12:12: Harmonie auf der Höhe des Tages",
+  "lead": "12:12 kommt kurz nach Mittag, wenn die Sonne hoch steht. Sie verbindet den Mut der Eins mit der Zusammenarbeit der Zwei und wird oft als Zeichen gelesen, dass ein Gleichgewicht zwischen deinen Zielen und deinen Beziehungen in Reichweite ist.",
+  "sections": [
+   {
+    "title": "Was 12:12 bedeuten kann",
+    "paras": [
+     "Zwölf ist in vielen Traditionen eine Zahl der Vollendung: zwölf Monate, zwölf Stunden auf dem Zifferblatt, zwölf Tierkreiszeichen. Zweimal gesehen, kann 12:12 andeuten, dass sich ein Kreis schließt und du nun mit mehr Weisheit weitergehen kannst.",
+     "Das Paar aus Eins und Zwei darin spricht vom Selbst und vom anderen. 12:12 erscheint oft, wenn du lernst, zu führen, ohne zu beherrschen, und zusammenzuarbeiten, ohne dich zu verlieren."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe begünstigt 12:12 gegenseitige Mühe und fairen Austausch. Sie erscheint vielleicht, wenn eine Beziehung einen gesünderen Rhythmus findet, in dem beide geben und empfangen. Für Singles kann sie auf den Wert von Freundschaften und Bekanntenkreisen als Weg zu einer Begegnung hinweisen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt 12:12 Partnerschaften, Mentoring und Teamprojekte. Sie taucht womöglich auf, wenn es Zeit ist, Verantwortung zu teilen, statt alles allein zu tragen. Ein guter Moment auch, um auf das bisherige Jahr zu schauen und deine Ziele anzupassen."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 6, die Zahl der Harmonie, des Zuhauses und der Fürsorge. Das macht 12:12 zu einer warmen Spiegelzeit: Der Erfolg, auf den sie hinweist, schließt meist die Menschen um dich mit ein."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen sehen 12:12 oft beim Mittagessen mit Freunden oder Kollegen, gegen Jahresende im Dezember oder nachdem ein Konflikt gelöst ist, der lange in der Luft hing."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Zwei Kollegen, Nikola und Vesna, konkurrierten monatelang um dieselbe Beförderung. An dem Tag, an dem endlich verkündet wurde, dass beide gemeinsam ein neues Team leiten, bemerkten sie, dass die Uhr im Besprechungsraum 12:12 zeigte. Heute scherzen sie, die Uhr habe vor dem Vorstand entschieden."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Denk an eine Beziehung, in der Geben und Nehmen ungleich wirken. Wähle einen kleinen Schritt zum Ausgleich: um Hilfe bitten, sie anbieten oder einfach Danke sagen."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Gleichgewicht ist ein Prozess, kein fester Zustand. 12:12 verspricht nicht, dass sich alles auf einmal fügt. Sie zeigt eine Richtung, in die du gehen kannst."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Wo könnte ich eine Last teilen, die ich allein trage, oder einen Teil der Last eines anderen übernehmen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Uhr hat zwei Zeiger, und jede gute Partnerschaft hat sie auch."
+    ]
+   }
+  ]
  }
 };

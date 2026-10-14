@@ -401,5 +401,206 @@ export const mirrorEn: MirrorSet = {
     ]
    }
   ]
+ },
+ "10-10": {
+  "title": "10:10 mirror hour: a fresh cycle in full daylight",
+  "lead": "10:10 shows up in the middle of the morning, when the day is already in motion. It joins the drive of the number one with the open potential of zero, and many read it as a green light for a new phase.",
+  "sections": [
+   {
+    "title": "What 10:10 can mean",
+    "paras": [
+     "Ten is one followed by zero: a completed count that turns back into a beginning. Seen twice, it suggests that something you have been preparing is ready to move. It can also hint that you have learned what you needed from an old cycle and can now step into the next one with more skill.",
+     "Because 10:10 happens during working hours, its message is usually practical and outward. It favours visible action, decisions made in daylight and conversations held face to face."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 10:10 can mark a new level in a relationship: meeting the family, moving in, saying something important for the first time. For someone single, it may encourage making the first move instead of waiting to be noticed."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "This is one of the most career minded mirror hours. It favours launches, applications, promotions and new clients. If you have been polishing a project for too long, 10:10 suggests letting it go out into the world and improving it on the way."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 2, the number of cooperation. So even a bold start under 10:10 tends to succeed with allies. Look for one person who can support what you are about to begin."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often see 10:10 on the first day of a new job, during a meeting where a decision is made, or in a period when they finally feel ready after a long wait."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Petra had been rewriting her portfolio for two years. One morning she glanced at her laptop at exactly 10:10 and, half laughing, pressed send on an application she had saved as a draft. She got an interview the following week and the job a month later."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Pick the task you have been circling around and give it ten focused minutes right away. Ten minutes is short enough to start and often long enough to break the spell of delay."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "A green light is not a promise of success. 10:10 favours starting, but you still need preparation and honest feedback once you are moving."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What have I already prepared well enough to begin today?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A new cycle begins the moment you take the first visible step."
+    ]
+   }
+  ]
+ },
+ "11-11": {
+  "title": "11:11 mirror hour: the best known sign on the clock",
+  "lead": "11:11 is the most famous mirror hour. Four ones in a row form a gateway image, and for many people it is a cue to pause, make a wish or notice what they are thinking at that very moment.",
+  "sections": [
+   {
+    "title": "What 11:11 can mean",
+    "paras": [
+     "Eleven is a master number in numerology, linked with intuition, inspiration and spiritual insight. Doubled on the clock, it becomes a strong symbol of alignment: the feeling that inner thoughts and outer events are briefly in step. Many people say they see 11:11 when they are on the edge of an important realisation.",
+     "A popular custom is to make a wish at 11:11. A more grounded way to use it is to notice your thought at that moment. The clock becomes a mirror, showing what is on your mind more often than you realise."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 11:11 is linked with recognition and soul level connection. It may appear when you meet someone who feels familiar at once or when an old bond deepens. It also asks for honesty with yourself about what you really want from a partner."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 11:11 favours ideas, creative breakthroughs and work with meaning. It may appear when you are drawn to a field that matches your values. Write down the idea that comes with it and give it a practical next step before the excitement fades."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 4, the number of structure. This is a useful balance: 11:11 brings inspiration, and its sum reminds you that inspiration needs form to last."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People notice 11:11 during periods of change, spiritual curiosity or emotional openness. Once you start noticing it, you may see it more often, partly because the mind now looks for it."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Lea glanced at the clock at 11:11 the moment she decided to finally sign up for a course in music therapy, something she had dreamed of since school. She laughed and wrote the date in her diary. Three years later she works with children in a hospital and keeps that diary page framed."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Stop for a breath and notice the thought you were just having. If it is a fear, name it kindly. If it is a wish, write it down along with one step you can take toward it this week."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "11:11 is a symbol, not a guarantee. Seeing it often does not mean that a wish will come true by itself or that a person is meant for you. It works best as a moment of awareness."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What was I thinking when I looked at the clock, and is it something I want to grow?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Pay attention to the thought that meets you at the gate."
+    ]
+   }
+  ]
+ },
+ "12-12": {
+  "title": "12:12 mirror hour: harmony at the height of the day",
+  "lead": "12:12 arrives just after noon, when the sun is high. It combines the courage of one with the cooperation of two, and is often read as a sign that balance between your goals and your relationships is within reach.",
+  "sections": [
+   {
+    "title": "What 12:12 can mean",
+    "paras": [
+     "Twelve is a number of completion in many traditions: twelve months, twelve hours on the clock face, twelve signs of the zodiac. Seen twice, 12:12 can suggest that a phase is coming full circle and that you can now step forward with more wisdom.",
+     "The pair one and two inside it speaks of the self and the other. 12:12 often appears when you are learning to lead without dominating and to cooperate without losing yourself."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 12:12 favours mutual effort and fair exchange. It may appear when a relationship is finding a healthier rhythm, with both partners giving and receiving. For someone single, it can point to the value of friendships and social circles as a path to meeting someone."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 12:12 favours partnerships, mentoring and team projects. It may show up when it is time to share responsibility rather than carry everything alone. It is also a good moment to review the year so far and adjust your goals."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 6, the number of harmony, home and care. That makes 12:12 a warm mirror hour: success it points to tends to include the people around you."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often see 12:12 around lunch with friends or colleagues, near the end of the year in December, or after resolving a conflict that had long been hanging in the air."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Two colleagues, Nikola and Vesna, had competed for the same promotion for months. On the day it was finally announced that both would co lead a new team, they noticed the clock in the meeting room read 12:12. They now joke that the clock decided before the board did."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Think of one relationship where give and take feels uneven. Choose one small step to rebalance it: asking for help, offering it, or simply saying thank you."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Balance is a process, not a fixed state. 12:12 does not promise that everything will settle at once. It suggests a direction to move in."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "Where could I share a load I have been carrying alone, or carry part of someone else's?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "The clock has two hands, and so does every good partnership."
+    ]
+   }
+  ]
  }
 };
