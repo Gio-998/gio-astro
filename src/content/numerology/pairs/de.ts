@@ -1001,5 +1001,221 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-5": {
+  "title": "Lebenszahl 2 und 5: Anker und Wind",
+  "lead": "Die 2 sucht Nähe und Ruhe, die 5 Freiheit und Wandel. Im Rhythmus gegensätzlich, können die beiden viel voneinander lernen, wenn sie geduldig bleiben.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 5 weht oft mit Geschichten von weit her ins Leben der 2. Die 2 ist fasziniert, ein wenig geblendet, und die 5 staunt, wie gut es tut, so aufmerksam gehört zu werden. Die ersten Wochen sind aufregend und voller neuer Orte."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 5 öffnet die Welt der 2: Reisen, neues Essen, neue Freunde, neue Ideen. Die 2 gibt der 5 etwas Seltenes, einen Menschen, der sie tief wahrnimmt und einen weichen Ort zum Zurückkehren bietet. Jede Seite bringt in der anderen etwas hervor, das sich versteckt hatte."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 2 will regelmäßigen Kontakt und Bestätigung, die 5 hasst es, sich beobachtet oder gebunden zu fühlen. Eine späte Antwort, die der 5 nichts bedeutet, kann die 2 die ganze Nacht wachhalten. Die 5 empfindet die 2 als klammernd, die 2 die 5 als achtlos mit ihrem Herzen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist lebhaft, braucht aber klare Absprachen. Die 5 sollte beständige Zeichen der Bindung geben, einen Anruf, wenn versprochen, einen Plan für das nächste Treffen. Die 2 sollte der 5 echten Raum lassen und darauf vertrauen, dass die 5 zurückkommt, weil sie es will."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde zieht die 5 die 2 auf Abenteuer, und die 2 hört zu, wenn die 5 endlich langsamer wird. Bei der Arbeit verkauft, reist und vernetzt die 5, die 2 hält Kundschaft und Team zusammen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Jana, Lebenszahl 2, arbeitete an der Rezeption eines Hotels in ihrer Heimatstadt. Filip, Lebenszahl 5, Reisefotograf, checkte für eine Nacht ein und blieb einen Monat. Heute leben sie dort zusammen. Er reist vier Monate im Jahr, sie begleitet ihn einen davon, und beide sagen, das Heimkommen sei das Schönste."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht mit einem klaren, offen vereinbarten Rhythmus aus Zusammensein und Getrenntsein, sodass Freiheit und Nähe geplant statt erkämpft werden."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein halb gepackter Koffer im Flur und ein warmes Abendessen auf dem Tisch: Die 5 bricht immer auf, die 2 empfängt immer, und beide lernen, jeden Teil zu genießen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Aus den Augen, aus dem Sinn, sagt man, doch bei diesem Paar gilt das Gegenteil, wenn Vertrauen da ist. Die 5 will vermisst werden, und die 2 will wissen, dass auch sie vermisst wird."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Vereinbart vor jeder Reise oder vollen Phase einen festen Kontaktmoment am Tag. Haltet ihn ausnahmslos ein. Die 2 fühlt sich sicher, und die 5 fühlt sich in allen anderen Stunden frei."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Wurzeln und Flügel können zu einem Leben gehören, wenn jedes das andere ehrt."
+    ]
+   }
+  ]
+ },
+ "2-and-6": {
+  "title": "Lebenszahl 2 und 6: der Kreis der Fürsorge",
+  "lead": "Die 2 und die 6 sind beide geborene Fürsorgende. Zusammen schaffen sie ein warmes, liebevolles Zuhause, solange beide daran denken, auch zu empfangen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 2 und eine 6 begegnen sich oft, während sie jemand anderem helfen: im Krankenhaus, in der Schule, bei einem Familienfest, in einer Suppenküche. Jede Seite sieht in der anderen denselben Instinkt, sich um Menschen zu kümmern. Die Anziehung wächst aus Bewunderung und stiller Güte."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Werte: Familie, Treue, Schönheit und Verantwortung. Die 6 bietet der 2 Schutz und Hingabe, die 2 der 6 Feingefühl und diplomatische Hilfe. Euer Zuhause wird oft zum Treffpunkt, voller Essen, Freunde und Kinder."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide können zu viel geben und sich dann übersehen fühlen. Die 6 wird vielleicht bestimmend darin, wie Dinge zu tun sind, und die 2 stimmt äußerlich zu und grollt innerlich. Keiner mag Streit, also kann sich Spannung hinter einem Lächeln stauen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist hier zärtlich, romantisch und verbindlich. Ihr zeigt Fürsorge durch kleine tägliche Gesten. Die Beziehung vertieft sich, wenn jede Seite sagt, was sie braucht, statt zu warten, dass die andere es spürt, auch wenn ihr beide gut im Spüren seid."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr das Paar, an das sich in der Krise alle wenden. Beruflich passen Gesundheitswesen, Lehre, Beratung, Gastgewerbe und Familienbetriebe. Achtet darauf, dass jemand die schweren Entscheidungen übernimmt."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Milena, Lebenszahl 6, und Nikola, Lebenszahl 2, lernten sich als Freiwillige in einem Tierheim kennen. Heute nehmen sie Pflegehunde bei sich auf. Die Nachbarn scherzen, ihr Haus habe mehr Betten für Tiere als für Menschen. Letztes Jahr machten sie endlich Urlaub, den ersten seit acht Jahren, weil eine Freundin darauf bestand, die Hunde zu hüten."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Fürsorge in beide Richtungen fließt und beide Zeit für Ruhe und füreinander schützen, nicht nur für die Menschen, denen sie helfen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein großer Topf Suppe auf dem Herd, eine Liste, wer diese Woche krank ist, zwei Menschen, die sich um zehn Uhr abends endlich aufs Sofa setzen."
+    ]
+   },
+   {
+    "title": "Über das Gleichgewicht",
+    "paras": [
+     "Fürsorgliche Menschen fürchten oft, Ruhe sei egoistisch. Für ein Paar aus 2 und 6 ist Ruhe eine Form von Fürsorge: für die Beziehung und für alle, die auf euch zählen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Nennt einmal pro Woche jede Seite eine Sache, die ihr empfangen und nicht geben wollt. Die andere Seite macht es möglich, ohne darüber zu streiten, ob es verdient ist."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine Liebe, die für alle sorgt, braucht selbst Fürsorge."
+    ]
+   }
+  ]
+ },
+ "2-and-7": {
+  "title": "Lebenszahl 2 und 7: Herz und Verstand",
+  "lead": "Die 2 fühlt tief, die 7 denkt tief. Ein stilles, inniges Paar mit großem Potenzial für Verständnis, wenn beide lernen zu teilen, was sie im Inneren bewahren.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 2 und die 7 begegnen sich oft an ruhigen Orten: bei einem Vortrag, in einer Buchhandlung, auf einer Bergwanderung. Keiner mag Lärm oder Smalltalk. Ein kurzer Austausch kann zu einem langen, ernsten Gespräch werden, an das sich beide jahrelang erinnern."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 7 wird von der Sanftheit und Intuition der 2 angezogen, die es sicher machen, sich zu öffnen. Die 2 wird von der Tiefe und Weisheit der 7 angezogen. Beide schätzen Privatsphäre und Ruhe. Eure Beziehung kann sich anfühlen wie ein friedlicher Raum abseits der Welt."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 2 braucht emotionale Nähe, die 7 braucht Alleinsein. Wenn die 7 sich zum Nachdenken zurückzieht, fühlt sich die 2 vielleicht abgewiesen. Die 7 findet das Bedürfnis der 2 nach Bestätigung womöglich ermüdend. Beide können Schweigen zu Distanz werden lassen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe wächst hier langsam und tief. Die 7 zeigt Liebe durch Treue und durchdachte Einsicht, die 2 durch Zärtlichkeit. Sie blüht, wenn die 7 ihr Schweigen erklärt und die 2 darauf vertraut, dass Abstand keine Kälte bedeutet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde führt ihr Gespräche, die zählen. Bei der Arbeit forscht und analysiert die 7, während die 2 die Ergebnisse den Menschen vermittelt. Psychologie, Wissenschaft, Bibliotheken und Heilberufe passen zu diesem Paar."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Sonja, Lebenszahl 2, arbeitete als Schulberaterin. Aleksa, Lebenszahl 7, Philosophielehrer an derselben Schule, aß mittags allein. Eines Tages setzte sie sich zu ihm, um nach einem Schüler zu fragen. Sie redeten so lange, dass sie die Glocke verpassten. Heute sind sie verheiratet und essen noch immer gemeinsam zu Mittag, oft in angenehmer Stille."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Stille geteilt und nicht als Mauer benutzt wird und die 7 die 2 Stück für Stück in ihre innere Welt lässt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Menschen lesen im selben Raum, eine Seite Gedichte, die andere Physik, und lesen sich ab und zu eine Zeile laut vor."
+    ]
+   },
+   {
+    "title": "Über das Schweigen",
+    "paras": [
+     "Für die 7 ist Schweigen Erholung, für die 2 kann Schweigen wie eine Frage wirken. Das Schweigen zu benennen, ich denke nur nach, es ist nichts, kann diesem Paar viele schlaflose Nächte ersparen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Abend teilt die 7 einen Gedanken des Tages und die 2 ein Gefühl. Kurz, ehrlich und regelmäßig ist besser als lang und selten."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine stille Liebe ist trotzdem eine Liebe, die spricht; lasst sie genug sagen."
+    ]
+   }
+  ]
  }
 };

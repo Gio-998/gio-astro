@@ -989,5 +989,221 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "2-and-5": {
+  "title": "Life path 2 and 5: the anchor and the wind",
+  "lead": "The 2 seeks closeness and calm, the 5 seeks freedom and change. Opposites in rhythm, this pair can teach each other a great deal if both stay patient.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 5 often sweeps into the 2's life with stories from somewhere far away. The 2 is fascinated, a little dazzled, and the 5 is surprised by how good it feels to be heard so carefully. The first weeks are exciting and full of new places."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 5 opens the 2's world: travel, new food, new friends, new ideas. The 2 gives the 5 something rare, a person who notices them deeply and offers a soft place to return to. Each brings out a side of the other that was hiding."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 2 wants regular contact and reassurance; the 5 hates feeling watched or tied. A late reply that means nothing to the 5 can keep the 2 awake all night. The 5 may feel the 2 is clinging, while the 2 feels the 5 is careless with their heart."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is vivid but needs clear agreements. The 5 should offer steady signals of commitment, such as a call when promised and a plan for the next meeting. The 2 should give the 5 real space, trusting that the 5 comes back because they want to."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 5 drags the 2 on adventures and the 2 listens when the 5 finally slows down. At work the 5 sells, travels and networks, the 2 keeps the clients and the team connected."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Jana, life path 2, worked at a hotel reception in her home town. Filip, life path 5, a travel photographer, checked in for one night and stayed a month. They now live there together. He travels four months a year and she joins him for one, and both say the homecomings are the best part."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives with a clear rhythm of together and apart, agreed openly, so that freedom and closeness are both planned rather than fought for."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A suitcase half packed in the hallway and a warm dinner waiting on the table: the 5 always leaving, the 2 always welcoming, and both learning to enjoy each part."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Absence makes the heart grow fonder, they say, but only when it is trusted. The 5 needs to be missed and the 2 needs to know they will be missed too."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Before each trip or busy period, agree on one fixed moment of contact a day. Keep it without fail. The 2 feels safe, and the 5 feels free in every other hour."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Roots and wings can belong to one life when each honours the other."
+    ]
+   }
+  ]
+ },
+ "2-and-6": {
+  "title": "Life path 2 and 6: the circle of care",
+  "lead": "The 2 and the 6 are both natural caregivers. Together they create a warm, loving home, as long as both remember to receive as well as give.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 2 and a 6 often meet while helping someone else: in a hospital, a school, a family gathering, a volunteer kitchen. Each sees in the other the same instinct to look after people. Attraction grows from admiration and gentle kindness."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share values: family, loyalty, beauty and responsibility. The 6 offers the 2 protection and devotion; the 2 offers the 6 sensitivity and diplomatic help. Your home tends to be a gathering place, full of food, friends and children."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both can over give and then feel unseen. The 6 may become controlling about how things should be done; the 2 may agree outwardly and resent it inwardly. Neither likes conflict, so tension can build behind smiles."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here is affectionate, romantic and committed. You show care through small daily gestures. The relationship deepens when each of you says what you need instead of waiting for the other to sense it, even though you are both good at sensing."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are the pair everyone turns to in a crisis. At work you suit healthcare, teaching, counselling, hospitality and family businesses. Make sure someone owns the hard decisions."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Milena, life path 6, and Nikola, life path 2, met while volunteering at a shelter for animals. Now they take in rescue dogs at home. Neighbours joke that their house has more beds for animals than for people. Last year they finally took a holiday, the first in eight years, after a friend insisted on caring for the dogs."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when care flows in both directions and when both protect time for rest and for each other, not only for the people they help."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A big pot of soup on the stove, a list of who is sick this week, two people on the sofa finally sitting down at ten in the evening."
+    ]
+   },
+   {
+    "title": "A note on balance",
+    "paras": [
+     "Caring people often fear that resting is selfish. For a 2 and 6 couple, rest is a form of care: for the relationship and for everyone who depends on you."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, each of you names one thing you want to receive, not give. The other makes it happen without arguing about whether it is deserved."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Love that cares for everyone must also be cared for."
+    ]
+   }
+  ]
+ },
+ "2-and-7": {
+  "title": "Life path 2 and 7: the heart and the mind",
+  "lead": "The 2 feels deeply, the 7 thinks deeply. A quiet, intimate pairing with great potential for understanding, if both learn to share what they keep inside.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 2 and the 7 often meet in calm places: a lecture, a bookshop, a walk in the mountains. Neither enjoys noise or small talk. A short exchange can turn into a long, serious conversation that both remember for years."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 7 is drawn to the 2's gentleness and intuition, which make it safe to open up. The 2 is drawn to the 7's depth and wisdom. Both appreciate privacy and calm. Your relationship can feel like a peaceful room away from the world."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 2 needs emotional closeness, the 7 needs solitude. When the 7 withdraws to think, the 2 may feel rejected. The 7 may find the 2's need for reassurance tiring. Both can let silence become distance."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here grows slowly and deeply. The 7 shows love through loyalty and thoughtful insight; the 2 through tenderness. It flourishes when the 7 explains their silences and the 2 trusts that space does not mean coldness."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you have conversations that matter. At work the 7 researches and analyses while the 2 communicates findings to people. Psychology, science, libraries and healing work suit this pair."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Sonja, life path 2, worked as a school counsellor. Aleksa, life path 7, a philosophy teacher at the same school, used to eat lunch alone. She sat with him one day to ask about a student. They talked so long they missed the bell. Married now, they still eat lunch together, often in comfortable silence."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when quiet is shared rather than used as a wall, and when the 7 lets the 2 into their inner world bit by bit."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Two people reading in the same room, one with poetry and one with physics, occasionally reading a line aloud to the other."
+    ]
+   },
+   {
+    "title": "A note on silence",
+    "paras": [
+     "For the 7, silence is rest; for the 2, silence can feel like a question. Naming the silence, I am just thinking, not upset, can save this pair many sleepless nights."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each evening, the 7 shares one thought from the day and the 2 shares one feeling. Short, honest and regular is better than long and rare."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A quiet love is still a love that speaks; let it say enough."
+    ]
+   }
+  ]
  }
 };
