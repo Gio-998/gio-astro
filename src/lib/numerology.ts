@@ -161,7 +161,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
       prev: { href: lp(lang, `${N}personal-year/${prevN}/`), label: String(prevN) }, next: { href: lp(lang, `${N}personal-year/${nextN}/`), label: String(nextN) }, calc: "personal-year" };
   }
   if (sec === "birthday-number" && item && BDAY_DAYS.includes(Number(item))) {
-    const d = Number(item); const B = BIRTHDAYS[lang]?.[d] ?? BIRTHDAYS.en[d]; const r = rootOf(d); const i = BDAY_DAYS.indexOf(d);
+    const d = Number(item); const B = BIRTHDAYS[lang]?.[d] ?? BIRTHDAYS.en[d]; const r = reduce(d, true); const i = BDAY_DAYS.indexOf(d);
     const prevD = BDAY_DAYS[(i + BDAY_DAYS.length - 1) % BDAY_DAYS.length], nextD = BDAY_DAYS[(i + 1) % BDAY_DAYS.length];
     const hubLabel = C.explain["birthday-number"].title.split(":")[0];
     const rel: LinkItem[] = [{ href: lp(lang, `${N}life-path/${r}/`), label: U.lifePathShort(r), sub: C.chars[r].name, big: String(r) }];
@@ -177,7 +177,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const nums = LIFE as readonly number[];
     const extra: Block[] = sec === "birthday-number" ? [] : [{ id: "numbers", title: U.pickNumber, list: nums.map((n) => `${n}, ${C.chars[n].name}: ${line(n)}`) }];
     const calc: CalcMode | undefined = sec === "birthday-number" || sec === "maturity-number" ? "life-path" : "name";
-    return hubOf(sec, C.explain[sec].title.split(":")[0], sec === "birthday-number" ? BDAY_DAYS.map((d) => ({ href: lp(lang, `${N}birthday-number/${d}/`), label: (BIRTHDAYS[lang]?.[d] ?? BIRTHDAYS.en[d]).title, sub: C.chars[rootOf(d)].name, big: String(d) })) : lifeItems(), extra, calc, CORE.filter((c) => c !== sec).map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })));
+    return hubOf(sec, C.explain[sec].title.split(":")[0], sec === "birthday-number" ? BDAY_DAYS.map((d) => ({ href: lp(lang, `${N}birthday-number/${d}/`), label: (BIRTHDAYS[lang]?.[d] ?? BIRTHDAYS.en[d]).title, sub: C.chars[reduce(d, true)].name, big: String(d) })) : lifeItems(), extra, calc, CORE.filter((c) => c !== sec).map((c) => ({ href: lp(lang, `${N}${c}/`), label: C.explain[c].title.split(":")[0], sub: C.explain[c].sub })));
   }
   if (sec === "personal-day" && !item) return hubOf("personal-day", C.explain["personal-day"].title.split(":")[0], [], [{ id: "days", title: U.pickNumber, list: YEARS.map((n) => `${n}, ${C.chars[n].name}: ${C.days[n][0]}`) }], "personal-year", [{ href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }, { href: localizedPath(lang, "/horoscope/"), label: bankFor(lang).ui.hubTitle, sub: C.p3.dayTitle }]);
   if (sec === "karmic-debt" && !item) return hubOf("karmic-debt", U.karmicHub, karmicItems(), [], "life-path");
