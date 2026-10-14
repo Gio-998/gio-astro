@@ -3,7 +3,7 @@ import { numContent } from "@/content/numerology";
 import { getContent } from "@/content";
 import { localizedPath } from "./i18n-routes";
 import { bankFor } from "./horoscope";
-import { angelLong } from "@/content/numerology/long";
+import { angelLong, pageLong } from "@/content/numerology/long";
 import { reduce, rootOf } from "@/engine/numerology";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
@@ -36,7 +36,15 @@ export interface NumModel {
 const digitSum = (s: string) => s.split("").map(Number);
 const lp = (lang: string, p: string) => localizedPath(lang, p);
 
+/** Page model with any long guide sections for that page placed after its first block. */
 export function numModel(lang: string, path: string): NumModel | null {
+  const m = numModelBase(lang, path); if (!m) return m;
+  const key = path.split("/").filter(Boolean).slice(1).join("/") || "hub";
+  const extra = pageLong(lang, key).map((x, k) => ({ id: `guide-${k}`, title: x.title, paras: x.paras }));
+  if (extra.length) m.blocks = [m.blocks[0], ...extra, ...m.blocks.slice(1)];
+  return m;
+}
+function numModelBase(lang: string, path: string): NumModel | null {
   const C = numContent(lang); const U = C.ui; const brand = getContent(lang).site.brand;
   const home: [string, string] = [brand, `/${lang}/`]; const hub: [string, string] = [U.section, lp(lang, N)];
   const parts = path.split("/").filter(Boolean).slice(1); // after "numerology"

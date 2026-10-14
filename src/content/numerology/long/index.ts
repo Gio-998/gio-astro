@@ -35,3 +35,9 @@ import { deB6b } from "./de-b6b";
 const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b, ...enB5, ...enB5b, ...enB6, ...enB6b }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b, ...mkB5, ...mkB5b, ...mkB6, ...mkB6b }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b, ...deB5, ...deB5b, ...deB6, ...deB6b } };
 /** Long story sections for an angel number page, if that batch is written. */
 export function angelLong(lang: string, n: string) { return ALL[lang]?.[n] ?? []; }
+import { pagesEn } from "./pages-en";
+import { pagesMk } from "./pages-mk";
+import { pagesDe } from "./pages-de";
+const PAGES: Record<string, AngelLong> = { en: pagesEn, mk: pagesMk, de: pagesDe };
+/** Long guide sections for an explainer or number page, keyed by its path after the numerology root ("hub" for the root). */
+export function pageLong(lang: string, key: string) { return PAGES[lang]?.[key] ?? []; }
