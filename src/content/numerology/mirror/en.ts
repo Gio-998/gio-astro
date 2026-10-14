@@ -602,5 +602,206 @@ export const mirrorEn: MirrorSet = {
     ]
    }
   ]
+ },
+ "13-13": {
+  "title": "Mirror hour 13:13: turning an old fear into a fresh start",
+  "lead": "13:13 arrives in the early afternoon, when the energy of the morning starts to dip. Thirteen carries a heavy reputation in folklore, yet in numerology it speaks of hard work, renewal and the courage to rebuild something on better ground.",
+  "sections": [
+   {
+    "title": "What 13:13 can mean",
+    "paras": [
+     "Thirteen combines the initiative of one with the playful expression of three, and its digits reduce to four, the number of effort and foundations. Seen twice, 13:13 often points to a situation where change feels uncomfortable but useful. Something outdated is being cleared so that a sturdier version can take its place.",
+     "Many people feel uneasy when they notice this time because of old superstitions. A kinder reading is that 13:13 invites you to look at what you fear directly. Fears tend to shrink once they are named and measured."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 13:13 can show up when a relationship needs an honest reset. Old patterns, such as avoiding difficult talks or keeping score, are ready to be dropped. For someone single, it may encourage letting go of a past story that still colours every new meeting."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, this time favours restructuring, careful planning and the unglamorous tasks that make later success possible. It is a good signal for cleaning up finances, closing unused accounts and building a budget you can actually follow."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "Thirteen reduces to four, and the full time adds up to eight, the number of power and material results. Read together, they suggest that patient groundwork now can lead to tangible rewards later."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often report 13:13 during a move, after a breakup, while changing careers, or when a long project finally needs a hard look and a new plan."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Goran had avoided opening his bank statements for months. One afternoon at 13:13 he laughed at the unlucky number on his phone, made a coffee and sat down with every envelope. It took two evenings, but by the end he had a plan and slept better than he had all year."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Choose one thing you have been avoiding because it feels heavy. Break it into the smallest possible first task and do only that today. Progress, not perfection, is the theme of this hour."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "13:13 is not an omen of bad luck. Treat superstition with curiosity rather than dread, and remember that the time on a clock cannot decide what happens to you."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "Which fear, once looked at clearly, might turn out to be smaller than I thought?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "What you rebuild with patience tends to hold far longer than what you rush."
+    ]
+   }
+  ]
+ },
+ "14-14": {
+  "title": "Mirror hour 14:14: freedom with a steady hand",
+  "lead": "14:14 comes in the middle of the afternoon, when routines are in full swing. It pairs the drive of one with the solid structure of four, and its digits add up to ten, which again reduces to one. It often hints at change that works best with a plan.",
+  "sections": [
+   {
+    "title": "What 14:14 can mean",
+    "paras": [
+     "Fourteen reduces to five, the number of movement, curiosity and freedom. Doubled, 14:14 can suggest that you are craving variety or a break from a rigid schedule. The four inside it, however, reminds you that freedom is easier to enjoy when the basics are covered.",
+     "This mirror hour often appears when people feel restless. It asks for a balance between spontaneity and responsibility rather than a dramatic escape."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 14:14 may point to a need for more space, adventure or novelty within a relationship. Planning a trip together or trying a new hobby side by side can refresh a bond that feels stuck. For someone single, it may encourage saying yes to an unusual invitation."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 14:14 favours flexible arrangements, new skills and smart experiments. It can be a sign to test an idea on a small scale before committing fully. With money, it warns against impulse purchases made just to feel a quick thrill."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "Fourteen reduces to five, and the whole time adds up to ten, which becomes one. Change leads to a new beginning, but the steady four in the middle keeps that beginning grounded."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People notice 14:14 before holidays, when they are thinking about a new job, during a period of travel or simply on days when the routine feels too tight."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Mila had dreamed of working from the coast for a month. Her phone showed 14:14 when her manager agreed to a trial. She made a careful checklist first, and the month went so well that it became a yearly habit."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Add one small dose of novelty to your day: a different route home, a new recipe or a conversation with someone outside your usual circle. Notice how even small variety lifts your mood."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Restlessness can push people to quit things too quickly. 14:14 favours thoughtful change, so give yourself a short pause before making a big decision."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What freedom do I want, and which simple structure would let me enjoy it safely?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A good map makes every adventure lighter."
+    ]
+   }
+  ]
+ },
+ "15-15": {
+  "title": "Mirror hour 15:15: warmth, choice and the people you love",
+  "lead": "15:15 arrives in the late afternoon, as the working day begins to wind down. It joins the independence of one with the restless five, and its digits add up to twelve, which reduces to three. It often draws attention to choices about the heart and personal pleasure.",
+  "sections": [
+   {
+    "title": "What 15:15 can mean",
+    "paras": [
+     "Fifteen reduces to six, the number of love, home and responsibility. Seen twice, 15:15 can signal that a decision about relationships, family or comfort is close. It may ask whether your choices reflect what you value or only what feels good in the moment.",
+     "In some traditions fifteen is linked to attraction and desire. This mirror hour can highlight healthy pleasures and gently question habits that no longer serve you."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 15:15 is often read as a warm sign. It favours romance, affection and open talks about what both people need. It can also invite you to notice when attraction is pulling you toward someone who does not treat you well."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 15:15 favours roles that involve care, beauty or service, and it highlights the value of good relationships with colleagues. With money, it asks for a balance between treating yourself and keeping your long term security in view."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "Fifteen reduces to six, and the whole time adds up to twelve, which becomes three. Love and responsibility, combined with joy and expression, make this a sociable and heartfelt hour."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People often see 15:15 when planning a date, deciding whether to move in together, choosing a gift or reflecting on a habit they would like to change."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Toni was about to cancel dinner with his parents yet again because of work. He glanced at his screen and saw 15:15, closed the laptop instead and went. Years later he still remembers that evening as one of the warmest he spent with his father."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Send a kind message to someone you love, or plan a small pleasure that also nourishes you, such as a walk with a friend. Choose comfort that leaves you feeling better tomorrow too."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "15:15 can make temptation feel romantic. Enjoy pleasure, but check whether a habit is giving you joy or quietly taking something away."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "Which of my choices today show care for the people I love, including myself?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Love grows in the small moments you decide not to skip."
+    ]
+   }
+  ]
  }
 };

@@ -602,5 +602,206 @@ export const mirrorDe: MirrorSet = {
     ]
    }
   ]
+ },
+ "13-13": {
+  "title": "Spiegelzahl 13:13: aus einer alten Angst wird ein frischer Anfang",
+  "lead": "13:13 kommt am frühen Nachmittag, wenn die Energie des Vormittags nachlässt. Die Dreizehn hat im Volksglauben einen schweren Ruf, doch in der Numerologie spricht sie von harter Arbeit, Erneuerung und dem Mut, etwas auf besserem Grund neu aufzubauen.",
+  "sections": [
+   {
+    "title": "Was 13:13 bedeuten kann",
+    "paras": [
+     "Die Dreizehn verbindet die Initiative der Eins mit dem verspielten Ausdruck der Drei, und ihre Ziffern ergeben vier, die Zahl von Mühe und Fundament. Zweimal gesehen, deutet 13:13 oft auf eine Lage hin, in der Veränderung unbequem, aber nützlich ist. Etwas Veraltetes wird geräumt, damit eine stabilere Fassung entstehen kann.",
+     "Viele fühlen sich wegen alter Aberglauben unwohl, wenn sie diese Uhrzeit bemerken. Freundlicher gelesen lädt 13:13 dich ein, dem, wovor du dich fürchtest, direkt ins Gesicht zu sehen. Ängste schrumpfen meist, sobald sie benannt und vermessen sind."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe kann 13:13 auftauchen, wenn eine Beziehung einen ehrlichen Neustart braucht. Alte Muster, etwa schwierigen Gesprächen auszuweichen oder aufzurechnen, wer wie viel gegeben hat, dürfen gehen. Für Singles kann sie ermutigen, eine alte Geschichte loszulassen, die jede neue Begegnung noch färbt."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt diese Uhrzeit Umstrukturierung, sorgfältige Planung und die unscheinbaren Aufgaben, die späteren Erfolg erst möglich machen. Sie ist ein gutes Signal, die Finanzen zu ordnen, ungenutzte Konten zu schließen und ein Budget aufzustellen, an das du dich wirklich halten kannst."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Dreizehn ergibt vier, und die ganze Uhrzeit summiert sich zu acht, der Zahl von Macht und greifbaren Ergebnissen. Zusammen gelesen sagen sie, dass geduldige Vorarbeit jetzt später spürbare Früchte tragen kann."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen berichten von 13:13 bei einem Umzug, nach einer Trennung, beim Berufswechsel oder wenn ein langes Projekt endlich einen nüchternen Blick und einen neuen Plan braucht."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Goran hatte monatelang vermieden, seine Kontoauszüge zu öffnen. Eines Nachmittags um 13:13 lachte er über die angebliche Unglückszahl auf dem Handy, kochte Kaffee und setzte sich mit allen Umschlägen hin. Es dauerte zwei Abende, doch am Ende hatte er einen Plan und schlief besser als im ganzen Jahr zuvor."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Wähle eine Sache, die du meidest, weil sie schwer wirkt. Zerlege sie in die kleinste mögliche erste Aufgabe und erledige heute nur diese. Fortschritt statt Perfektion ist das Thema dieser Stunde."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "13:13 ist kein Unglücksbote. Begegne dem Aberglauben mit Neugier statt mit Furcht und denk daran, dass die Uhrzeit nicht entscheidet, was dir geschieht."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Welche Angst könnte sich, klar betrachtet, als kleiner erweisen, als ich dachte?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Was du mit Geduld neu baust, hält viel länger als alles Überstürzte."
+    ]
+   }
+  ]
+ },
+ "14-14": {
+  "title": "Spiegelzahl 14:14: Freiheit mit ruhiger Hand",
+  "lead": "14:14 kommt mitten am Nachmittag, wenn die Routinen in vollem Gang sind. Sie verbindet den Antrieb der Eins mit der festen Struktur der Vier, und ihre Ziffern ergeben zehn, was wiederum zur Eins wird. Oft deutet sie auf Veränderung hin, die mit einem Plan am besten gelingt.",
+  "sections": [
+   {
+    "title": "Was 14:14 bedeuten kann",
+    "paras": [
+     "Vierzehn ergibt fünf, die Zahl von Bewegung, Neugier und Freiheit. Verdoppelt kann 14:14 andeuten, dass du dich nach Abwechslung oder einer Pause vom starren Zeitplan sehnst. Die Vier darin erinnert jedoch daran, dass sich Freiheit leichter genießen lässt, wenn das Grundlegende gesichert ist.",
+     "Diese Spiegelzeit erscheint oft, wenn Menschen unruhig sind. Sie bittet um ein Gleichgewicht zwischen Spontaneität und Verantwortung statt um eine dramatische Flucht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe kann 14:14 auf den Wunsch nach mehr Raum, Abenteuer oder Neuem in der Beziehung hinweisen. Eine gemeinsame Reise oder ein neues Hobby Seite an Seite kann eine festgefahrene Bindung auffrischen. Für Singles kann sie ermutigen, zu einer ungewöhnlichen Einladung Ja zu sagen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt 14:14 flexible Absprachen, neue Fähigkeiten und kluge Versuche. Sie kann ein Zeichen sein, eine Idee zuerst im Kleinen zu testen. Beim Geld warnt sie vor Spontankäufen, die nur einen schnellen Kick bringen sollen."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Vierzehn ergibt fünf, und die ganze Uhrzeit summiert sich zu zehn, was zur Eins wird. Wandel führt zu einem Neuanfang, doch die beständige Vier in der Mitte hält diesen Anfang auf dem Boden."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen bemerken 14:14 vor dem Urlaub, wenn sie über eine neue Stelle nachdenken, in Reisezeiten oder einfach an Tagen, an denen die Routine zu eng wird."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Mila träumte davon, einen Monat lang vom Meer aus zu arbeiten. Ihr Handy zeigte 14:14, als ihre Chefin einer Probezeit zustimmte. Sie schrieb zuerst eine sorgfältige Liste, und der Monat lief so gut, dass daraus eine jährliche Gewohnheit wurde."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Gönn deinem Tag eine kleine Portion Neues: einen anderen Heimweg, ein neues Rezept oder ein Gespräch mit jemandem außerhalb deines üblichen Kreises. Achte darauf, wie schon kleine Abwechslung die Stimmung hebt."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Unruhe kann Menschen dazu bringen, zu schnell hinzuwerfen. 14:14 begünstigt durchdachten Wandel, also gönn dir eine kurze Pause vor einer großen Entscheidung."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Welche Freiheit will ich, und welche einfache Struktur ließe mich sie sicher genießen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Eine gute Karte macht jedes Abenteuer leichter."
+    ]
+   }
+  ]
+ },
+ "15-15": {
+  "title": "Spiegelzahl 15:15: Wärme, Wahl und die Menschen, die du liebst",
+  "lead": "15:15 kommt am späten Nachmittag, wenn der Arbeitstag ausklingt. Sie verbindet die Unabhängigkeit der Eins mit der rastlosen Fünf, und ihre Ziffern ergeben zwölf, was zur Drei wird. Oft lenkt sie den Blick auf Entscheidungen des Herzens und auf persönliche Freude.",
+  "sections": [
+   {
+    "title": "Was 15:15 bedeuten kann",
+    "paras": [
+     "Fünfzehn ergibt sechs, die Zahl von Liebe, Zuhause und Verantwortung. Zweimal gesehen, kann 15:15 signalisieren, dass eine Entscheidung über Beziehungen, Familie oder Bequemlichkeit naht. Sie fragt vielleicht, ob deine Wahl deine Werte widerspiegelt oder nur das, was sich im Moment gut anfühlt.",
+     "In manchen Traditionen steht die Fünfzehn für Anziehung und Begehren. Diese Spiegelzeit kann gesunde Freuden hervorheben und sanft Gewohnheiten hinterfragen, die dir nicht mehr guttun."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe gilt 15:15 oft als warmes Zeichen. Sie begünstigt Romantik, Zärtlichkeit und offene Gespräche darüber, was beide brauchen. Sie kann dich auch einladen zu bemerken, wenn Anziehung dich zu jemandem zieht, der dich nicht gut behandelt."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt 15:15 Aufgaben rund um Fürsorge, Schönheit oder Dienst und betont den Wert guter Beziehungen zu Kollegen. Beim Geld bittet sie um ein Gleichgewicht zwischen dem, was du dir gönnst, und deiner langfristigen Sicherheit."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Fünfzehn ergibt sechs, und die ganze Uhrzeit summiert sich zu zwölf, was zur Drei wird. Liebe und Verantwortung, verbunden mit Freude und Ausdruck, machen dies zu einer geselligen und herzlichen Stunde."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Menschen sehen 15:15 oft, wenn sie ein Treffen planen, überlegen zusammenzuziehen, ein Geschenk aussuchen oder über eine Gewohnheit nachdenken, die sie ändern möchten."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Toni wollte das Abendessen mit seinen Eltern wieder einmal wegen der Arbeit absagen. Er sah auf den Bildschirm, las 15:15, klappte den Laptop zu und fuhr hin. Jahre später erinnert er sich an diesen Abend als einen der wärmsten mit seinem Vater."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Schick einem geliebten Menschen eine liebe Nachricht oder plane eine kleine Freude, die dich auch nährt, etwa einen Spaziergang mit einer Freundin. Wähle Behaglichkeit, nach der du dich auch morgen noch gut fühlst."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "15:15 kann Versuchung romantisch wirken lassen. Genieße das Schöne, aber prüf, ob eine Gewohnheit dir Freude schenkt oder dir leise etwas nimmt."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Welche meiner heutigen Entscheidungen zeigen Fürsorge für die Menschen, die ich liebe, mich selbst eingeschlossen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Liebe wächst in den kleinen Momenten, die du nicht auslässt."
+    ]
+   }
+  ]
  }
 };
