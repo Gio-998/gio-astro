@@ -821,5 +821,221 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "13": {
+  "title": "Born on the 13th: the patient transformer",
+  "lead": "The 13th reduces to 4 and carries a karmic debt number: a gift for hard work and renewal, with a lesson about shortcuts.",
+  "sections": [
+   {
+    "title": "The gift of the 13th",
+    "paras": [
+     "Thirteen has a bad reputation it does not deserve. In numerology it is the number of transformation through effort. People born on this day often have extraordinary stamina once they commit, and a knack for rebuilding what others abandon. Their gift is the patience to turn rough material into something solid and lasting."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may notice that quick wins rarely last for you, while slow, steady work pays off beautifully. You might have restarted a project several times before it finally worked. You often see what needs fixing in a system, a house or a team, and you are willing to roll up your sleeves."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Determination, practical skill, honesty, endurance and a talent for renovation of every kind: buildings, businesses, habits, lives. The 13th is reliable in a crisis because they do not expect things to be easy."
+    ]
+   },
+   {
+    "title": "The karmic lesson",
+    "paras": [
+     "As a karmic debt day, the 13th is linked with an old pattern of avoiding effort. In practice this can appear as procrastination, frustration with routine or a wish for shortcuts. The lesson is simple and demanding: finish what you start, one step at a time, and the frustration turns into pride."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 13th loves steadily and shows it through practical care. They need a partner who values loyalty over excitement. Relationships deepen when they share not only tasks but feelings, and allow tenderness into the routine."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Construction, restoration, engineering, agriculture, medicine, research and any craft that rewards mastery over years. They also make excellent project managers in difficult turnarounds."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Bojan, born on 13 November, inherited a vineyard that had been neglected for a decade. He spent five years replanting row by row while working a second job. His wines now win regional prizes, and he still prunes every vine himself."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 3 or 5 life path, a 13th birthday adds staying power to a restless nature. On a 1 or 8 path it grounds ambition in craft. On a 4 path it doubles the builder energy, so rest becomes essential. On a 7 path it turns study into practical results."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A workbench with tools hung in order, a half restored chair waiting for its final coat, a calendar with small ticks for each day of practice: this is the quiet landscape of the 13th, where progress is measured in finished pieces."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Choose one unfinished task each week and complete it fully before starting anything new. Write the date on a list. The growing list becomes proof that the old pattern is changing."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Slow work done well is the fastest way to something that lasts."
+    ]
+   }
+  ]
+ },
+ "14": {
+  "title": "Born on the 14th: the balanced adventurer",
+  "lead": "The 14th reduces to 5 and carries a karmic debt number: love of freedom and change, with a lesson about moderation.",
+  "sections": [
+   {
+    "title": "The gift of the 14th",
+    "paras": [
+     "Fourteen combines the independence of 1 with the stability of 4, and the sum, 5, brings motion. People born on this day are curious, versatile and quick to adapt. Their gift is the ability to turn change into opportunity, and to make life feel like an adventure for everyone around them."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may get bored quickly and crave new places, people and experiences. Your senses are strong, so food, music and travel matter a great deal. You often juggle several projects. When life becomes too predictable, you feel an urge to shake it up."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Adaptability, communication, courage, charm and a talent for selling ideas. The 14th makes a natural traveller, journalist, marketer or entrepreneur, and thrives in situations where others feel lost."
+    ]
+   },
+   {
+    "title": "The karmic lesson",
+    "paras": [
+     "As a karmic debt day, the 14th is linked with an old pattern of misusing freedom. This can show as excess, impulsive decisions or running from commitment. The lesson is moderation: freedom feels best when it rests on a few chosen limits."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 14th needs space and shared adventures in love. Jealous partners make them restless. They grow when they stay through the quieter seasons of a relationship, where real intimacy is built."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Travel, media, sales, tourism, events, emergency work and freelance roles. A changing environment keeps them motivated, while rigid routines drain their spark."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Nina, born on 14 June, worked on cruise ships for six years and visited fifty countries. When she started overspending and sleeping badly, she set a simple rule: one adventure a month, planned in advance. Today she runs a small travel agency and says the rule saved her joy."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 4 or 6 life path, a 14th birthday adds lightness to duty. On a 7 path it sends the thinker out into the world. On a 5 path it doubles the love of freedom, so anchors matter. On an 8 path it brings flexibility to ambition."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A suitcase that never fully gets unpacked, a fridge covered in magnets from distant cities, a phone full of numbers from people met on trains: the home of a 14th tells stories. The best ones also have a calm corner to return to."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Before any impulsive purchase or decision, wait twenty four hours. If it still feels right, go ahead. This small pause keeps freedom on your side."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Freedom is sweetest when you choose your own limits, and adventure lasts longest when there is a home that waits for you."
+    ]
+   }
+  ]
+ },
+ "15": {
+  "title": "Born on the 15th: the generous magnet",
+  "lead": "The 15th reduces to 6 and joins the independence of 1 with the curiosity of 5: warmth, charisma and a talent for drawing people in.",
+  "sections": [
+   {
+    "title": "The gift of the 15th",
+    "paras": [
+     "People born on the 15th often have a magnetic warmth. Others feel welcome around them almost at once. The 6 at the root gives a strong sense of family and care, while the 1 and 5 add personality and adventure. Their gift is attraction in the best sense: they bring people, opportunities and resources together."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "Your home may be the place where friends gather. People ask you for help and you rarely say no. You enjoy beauty, good food and comfort, and you often have an artistic hobby. Money and support tend to come to you when you need them, especially when you are helping others."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Generosity, charisma, creativity, loyalty and a fine sense of beauty. The 15th makes a natural host, teacher, healer or community leader. They can turn a group of strangers into something like a family."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Tarot card fifteen is the Devil, a symbol of attachment. The 15th may hold on too tightly to people, possessions or habits, or give help that quietly binds others. Growth comes from loving freely, letting people go when it is time and enjoying pleasure without dependence."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love is central and often passionate. The 15th wants a committed partner and a beautiful home. They need to receive as much warmth as they give, and to let partners keep their own freedom."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Hospitality, teaching, health care, design, the arts, counselling and community work. They thrive where care and beauty meet, and where their warmth makes a visible difference."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Dragan, born on 15 April, runs a guesthouse in a lake town where returning guests are greeted like cousins. He paints in winter and sells the pictures in summer. When he learned to let his adult children make their own choices, he says, the house became even warmer."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On a 1 or 7 life path, a 15th birthday opens a reserved nature to warmth. On a 5 path it adds commitment to adventure. On a 6 path it doubles the instinct to care, so self care matters. On an 8 path it softens ambition with generosity."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A long table in the garden, mismatched chairs, a pot of something good on the stove and more guests than expected: this is the natural habitat of the 15th, who somehow always has enough for one more."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Once a month, give something away without expecting thanks, and once a month let someone give to you without returning the favour. Both habits keep love flowing freely."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "The warmth you share is strongest when you hold it with open hands."
+    ]
+   }
+  ]
  }
 };

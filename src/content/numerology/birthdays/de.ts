@@ -857,5 +857,221 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "13": {
+  "title": "Geboren am 13.: die geduldigen Verwandler",
+  "lead": "Die 13 reduziert sich auf 4 und ist eine karmische Schuldzahl: eine Gabe für Arbeit und Erneuerung, mit einer Lektion über Abkürzungen.",
+  "sections": [
+   {
+    "title": "Die Gabe des 13.",
+    "paras": [
+     "Die Dreizehn hat einen schlechten Ruf, den sie nicht verdient. In der Numerologie ist sie die Zahl der Verwandlung durch Mühe. Wer an diesem Tag geboren ist, hat oft außergewöhnliche Ausdauer, sobald eine Entscheidung gefallen ist, und ein Händchen dafür, wieder aufzubauen, was andere aufgegeben haben. Die Gabe ist die Geduld, aus rohem Material etwas Festes und Dauerhaftes zu machen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht merkst du, dass schnelle Erfolge bei dir selten halten, während langsame, stetige Arbeit sich wunderbar auszahlt. Vielleicht hast du ein Projekt mehrmals neu begonnen, bevor es endlich gelang. Du siehst oft, was in einem System, einem Haus oder einem Team repariert werden muss, und krempelst gern die Ärmel hoch."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Entschlossenheit, handwerkliches Können, Ehrlichkeit, Ausdauer und ein Talent für Erneuerung jeder Art: Gebäude, Unternehmen, Gewohnheiten, Lebenswege. Der 13. ist in Krisen verlässlich, weil er nicht erwartet, dass etwas leicht ist."
+    ]
+   },
+   {
+    "title": "Die karmische Lektion",
+    "paras": [
+     "Als karmischer Schuldtag ist der 13. mit einem alten Muster verbunden, Mühe zu meiden. Im Alltag zeigt sich das als Aufschieben, Frust über Routine oder Wunsch nach Abkürzungen. Die Lektion ist einfach und anspruchsvoll: Bring zu Ende, was du beginnst, Schritt für Schritt, und aus Frust wird Stolz."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du liebst beständig und zeigst es durch praktische Fürsorge. Du brauchst einen Menschen, der Treue mehr schätzt als Aufregung. Beziehungen vertiefen sich, wenn du nicht nur Aufgaben, sondern auch Gefühle teilst und Zärtlichkeit in den Alltag lässt."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Bau, Restaurierung, Ingenieurwesen, Landwirtschaft, Medizin, Forschung und jedes Handwerk, das Meisterschaft über Jahre belohnt. Auch als Projektleitung in schwierigen Sanierungen bist du stark."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Bojan, geboren am 13. November, erbte einen Weinberg, der zehn Jahre verwildert war. Fünf Jahre lang pflanzte er Reihe für Reihe neu, neben einem zweiten Job. Seine Weine gewinnen heute regionale Preise, und er schneidet jeden Rebstock immer noch selbst."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 3 oder 5 gibt ein Geburtstag am 13. einer rastlosen Natur Ausdauer. Auf der 1 oder 8 erdet er Ehrgeiz im Handwerk. Auf der 4 verdoppelt er die Baumeisterenergie, Ruhe wird unverzichtbar. Auf der 7 wird Wissen zu praktischen Ergebnissen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Werkbank mit ordentlich aufgehängtem Werkzeug, ein halb restaurierter Stuhl vor dem letzten Anstrich, ein Kalender mit kleinen Haken für jeden Übungstag: die stille Landschaft des 13., in der Fortschritt an fertigen Stücken gemessen wird."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Wähl jede Woche eine unerledigte Aufgabe und schließ sie ganz ab, bevor du etwas Neues beginnst. Schreib das Datum auf eine Liste. Die wachsende Liste beweist, dass sich das alte Muster ändert."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Langsame Arbeit, gut gemacht, ist der schnellste Weg zu etwas, das bleibt. Steter Tropfen höhlt den Stein."
+    ]
+   }
+  ]
+ },
+ "14": {
+  "title": "Geboren am 14.: die ausgewogenen Abenteurer",
+  "lead": "Die 14 reduziert sich auf 5 und ist eine karmische Schuldzahl: Liebe zu Freiheit und Wandel, mit einer Lektion über das Maß.",
+  "sections": [
+   {
+    "title": "Die Gabe des 14.",
+    "paras": [
+     "Vierzehn verbindet die Unabhängigkeit der 1 mit der Stabilität der 4, und die Summe 5 bringt Bewegung. Wer an diesem Tag geboren ist, ist neugierig, vielseitig und passt sich schnell an. Die Gabe ist, Wandel in Chancen zu verwandeln und das Leben für alle ringsum wie ein Abenteuer wirken zu lassen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht langweilst du dich schnell und sehnst dich nach neuen Orten, Menschen und Erfahrungen. Deine Sinne sind stark, Essen, Musik und Reisen bedeuten dir viel. Oft jonglierst du mehrere Projekte. Wird das Leben zu vorhersehbar, spürst du den Drang, es aufzumischen."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Anpassungsfähigkeit, Kommunikation, Mut, Charme und Talent, Ideen zu verkaufen. Der 14. ist ein natürlicher Reisender, eine Journalistin, ein Werber oder eine Unternehmerin und blüht dort auf, wo andere sich verloren fühlen."
+    ]
+   },
+   {
+    "title": "Die karmische Lektion",
+    "paras": [
+     "Als karmischer Schuldtag ist der 14. mit einem alten Muster verbunden, Freiheit zu missbrauchen. Das zeigt sich als Übermaß, impulsive Entscheidungen oder Flucht vor Bindung. Die Lektion ist Maß: Freiheit fühlt sich am besten an, wenn sie auf ein paar gewählten Grenzen ruht."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "In der Liebe brauchst du Raum und gemeinsame Abenteuer. Eifersüchtige Partner machen dich unruhig. Du wächst, wenn du auch durch die stilleren Zeiten einer Beziehung bleibst, in denen echte Nähe entsteht."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Reisen, Medien, Vertrieb, Tourismus, Veranstaltungen, Rettungsdienst und freie Arbeit. Eine wechselnde Umgebung motiviert dich, starre Routinen löschen deinen Funken."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Nina, geboren am 14. Juni, arbeitete sechs Jahre auf Kreuzfahrtschiffen und besuchte fünfzig Länder. Als sie zu viel ausgab und schlecht schlief, stellte sie eine einfache Regel auf: ein Abenteuer im Monat, im Voraus geplant. Heute führt sie ein kleines Reisebüro und sagt, die Regel habe ihre Freude gerettet."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 6 bringt ein Geburtstag am 14. Leichtigkeit in die Pflicht. Auf der 7 schickt er Denkende hinaus in die Welt. Auf der 5 verdoppelt er die Freiheitsliebe, Anker werden wichtig. Auf der 8 bringt er Beweglichkeit in den Ehrgeiz."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Koffer, der nie ganz ausgepackt wird, ein Kühlschrank voller Magnete aus fernen Städten, ein Handy voller Nummern von Menschen aus Zügen: Das Zuhause eines 14. erzählt Geschichten. Die schönsten haben auch eine ruhige Ecke zum Zurückkehren."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Warte vor jedem impulsiven Kauf und jeder spontanen Entscheidung vierundzwanzig Stunden. Fühlt es sich dann noch richtig an, mach es. Diese kleine Pause hält die Freiheit auf deiner Seite."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Freiheit schmeckt am süßesten, wenn du deine Grenzen selbst wählst, und Abenteuer halten am längsten, wenn ein Zuhause auf dich wartet."
+    ]
+   }
+  ]
+ },
+ "15": {
+  "title": "Geboren am 15.: die großzügigen Magnete",
+  "lead": "Die 15 reduziert sich auf 6 und verbindet die Unabhängigkeit der 1 mit der Neugier der 5: Wärme, Ausstrahlung und die Gabe, Menschen anzuziehen.",
+  "sections": [
+   {
+    "title": "Die Gabe des 15.",
+    "paras": [
+     "Wer am 15. geboren ist, hat oft eine magnetische Wärme. Andere fühlen sich fast sofort willkommen. Die 6 an der Wurzel gibt einen starken Sinn für Familie und Fürsorge, die 1 und die 5 fügen Persönlichkeit und Abenteuer hinzu. Die Gabe ist Anziehung im besten Sinn: Menschen, Chancen und Mittel zusammenbringen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht ist dein Zuhause der Ort, an dem sich Freunde treffen. Menschen bitten dich um Hilfe, und du sagst selten Nein. Du genießt Schönheit, gutes Essen und Behaglichkeit und hast oft ein künstlerisches Hobby. Geld und Unterstützung kommen meist, wenn du sie brauchst, besonders wenn du anderen hilfst."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Großzügigkeit, Ausstrahlung, Kreativität, Treue und ein feiner Sinn für Schönheit. Der 15. ist ein natürlicher Gastgeber, eine Lehrerin, ein Heiler oder eine Gemeinschaftsstifterin. Aus einer Gruppe Fremder wird bei dir etwas wie Familie."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Die fünfzehnte Tarotkarte ist der Teufel, ein Symbol der Anhaftung. Manchmal hältst du Menschen, Dinge oder Gewohnheiten zu fest oder hilfst auf eine Weise, die andere leise bindet. Wachstum kommt durch freie Liebe, durch Loslassen, wenn es Zeit ist, und durch Genuss ohne Abhängigkeit."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe steht im Mittelpunkt und ist oft leidenschaftlich. Du wünschst dir eine feste Partnerschaft und ein schönes Zuhause. Du brauchst so viel Wärme zurück, wie du gibst, und solltest deinem Gegenüber die eigene Freiheit lassen."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Gastgewerbe, Unterricht, Gesundheitswesen, Design, Kunst, Beratung und Gemeinschaftsarbeit. Du blühst dort auf, wo Fürsorge und Schönheit sich treffen und deine Wärme sichtbar etwas verändert."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Dragan, geboren am 15. April, führt eine Pension in einer Stadt am See, in der wiederkehrende Gäste wie Cousins empfangen werden. Im Winter malt er, im Sommer verkauft er die Bilder. Seit er gelernt hat, seine erwachsenen Kinder selbst entscheiden zu lassen, sagt er, sei das Haus noch wärmer geworden."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 1 oder 7 öffnet ein Geburtstag am 15. eine zurückhaltende Natur für Wärme. Auf der 5 fügt er dem Abenteuer Verbindlichkeit hinzu. Auf der 6 verdoppelt er den Fürsorgeinstinkt, Selbstfürsorge wird wichtig. Auf der 8 mildert er Ehrgeiz mit Großzügigkeit."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein langer Tisch im Garten, nicht zusammenpassende Stühle, ein Topf mit etwas Gutem auf dem Herd und mehr Gäste als erwartet: der natürliche Lebensraum des 15., bei dem es irgendwie immer für einen mehr reicht."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Verschenk einmal im Monat etwas, ohne Dank zu erwarten, und lass dir einmal im Monat etwas schenken, ohne dich zu revanchieren. Beides hält die Liebe im Fluss."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Wärme, die du teilst, ist am stärksten, wenn du sie mit offenen Händen hältst."
+    ]
+   }
+  ]
  }
 };
