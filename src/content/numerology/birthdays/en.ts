@@ -2207,5 +2207,83 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "31": {
+  "title": "Born on the 31st: the practical creator",
+  "lead": "The 31st reduces to 4 and pairs the imagination of 3 with the initiative of 1: creative ideas turned into solid, useful results.",
+  "sections": [
+   {
+    "title": "The gift of the 31st",
+    "paras": [
+     "Thirty one is the last day of the longest months, and it closes the calendar with a builder's number. The 3 brings imagination and the 1 brings drive, and together they settle into the steady 4. People born on this day often have creative minds and practical hands. Their gift is giving form to ideas: a workshop, a garden, a business, a method that others can follow."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may enjoy designing a plan as much as carrying it out. You like to see results you can touch. You are loyal to people and places and may stay in one town or one company for many years. When things become chaotic, you are the one who quietly starts making lists and fixing what is broken."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Discipline, craftsmanship, creativity within limits, reliability and loyalty. The 31st excels in engineering, design, carpentry, agriculture, accounting, editing and any work where imagination must meet reality."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Rigidity and a fear of loss are the risks. The 31st can cling to routines, people or possessions because change feels like danger. Growth comes from trusting that the skills they built will carry them through new chapters too."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 31st is a devoted, steady partner who shows love through practical care and shared plans. They need a partner who values stability and also brings a little surprise into the week."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Engineering, architecture, product design, craft trades, farming, finance, project management, editing and running a small, well organised business."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Bojan, born on the 31st of December, is a furniture maker who restores old village chests. He keeps every hand plane his grandfather used and has added his own tools beside them. Clients say his pieces feel both new and familiar, as if they had always belonged in the room."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 3 or 5, a 31st birthday adds focus and follow through to restless creativity. On 4 it doubles the builder, so flexibility becomes the lesson. On 7 it turns study into useful systems. On 9 it gives ideals a practical form."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Sawdust on the workbench, a seed calendar pinned to the kitchen wall, a weekend spent fixing a neighbour's fence: the 31st feels at peace when hands and imagination work together."
+    ]
+   },
+   {
+    "title": "A note on endings and beginnings",
+    "paras": [
+     "Born on the final day of a month, many of the 31st are good at closing a chapter properly: finishing the paperwork, thanking everyone, tidying up. That habit makes their new beginnings unusually clean."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Once a month, change one small routine on purpose: a different route, a new recipe, a new tool. Small chosen changes make the big unchosen ones easier to meet."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Your ideas deserve a home; build it carefully, and leave a window open for the new."
+    ]
+   }
+  ]
  }
 };

@@ -2243,5 +2243,83 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "31": {
+  "title": "Geboren am 31.: die praktischen Schöpfer",
+  "lead": "Der 31. reduziert sich auf 4 und verbindet die Fantasie der 3 mit der Initiative der 1: kreative Ideen, die zu soliden, nützlichen Ergebnissen werden.",
+  "sections": [
+   {
+    "title": "Die Gabe des 31.",
+    "paras": [
+     "Einunddreißig ist der letzte Tag der längsten Monate und schließt den Kalender mit einer Zahl der Bauenden. Die 3 bringt Fantasie, die 1 Antrieb, und gemeinsam kommen sie in der beständigen 4 zur Ruhe. Wer an diesem Tag geboren ist, hat oft einen kreativen Kopf und geschickte Hände. Die Gabe ist, Ideen Gestalt zu geben: eine Werkstatt, ein Garten, ein Betrieb, eine Methode, der andere folgen können."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht entwirfst du einen Plan genauso gern, wie du ihn umsetzt. Du magst Ergebnisse, die man anfassen kann. Du bist Menschen und Orten treu und bleibst vielleicht viele Jahre in einer Stadt oder einer Firma. Wenn es chaotisch wird, beginnst du still, Listen zu schreiben und zu reparieren, was kaputt ist."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Disziplin, Handwerk, Kreativität innerhalb von Grenzen, Verlässlichkeit und Treue. Der 31. glänzt in Ingenieurwesen, Gestaltung, Tischlerei, Landwirtschaft, Buchhaltung, Lektorat und jeder Arbeit, in der Fantasie auf Wirklichkeit trifft."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Starrheit und die Angst vor Verlust sind die Risiken. Du hältst vielleicht an Routinen, Menschen oder Dingen fest, weil Veränderung wie Gefahr wirkt. Wachstum kommt aus dem Vertrauen, dass die Fähigkeiten, die du aufgebaut hast, dich auch durch neue Kapitel tragen."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du bist ein hingebungsvoller, beständiger Mensch an der Seite eines anderen und zeigst Liebe durch praktische Fürsorge und gemeinsame Pläne. Du brauchst jemanden, der Stabilität schätzt und trotzdem ein wenig Überraschung in die Woche bringt."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Ingenieurwesen, Architektur, Produktdesign, Handwerk, Landwirtschaft, Finanzen, Projektmanagement, Lektorat und die Führung eines kleinen, gut organisierten Betriebs."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Bojan, geboren am 31. Dezember, ist Möbeltischler und restauriert alte Dorftruhen. Er bewahrt jeden Hobel seines Großvaters auf und hat seine eigenen Werkzeuge daneben gehängt. Kundinnen sagen, seine Stücke wirken neu und vertraut zugleich, als hätten sie schon immer in den Raum gehört."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 3 oder 5 bringt ein Geburtstag am 31. Fokus und Ausdauer in unruhige Kreativität. Auf der 4 verdoppelt sich das Bauen, Beweglichkeit wird zur Lektion. Auf der 7 wird Studium zu nützlichen Systemen. Auf der 9 bekommen Ideale eine praktische Form."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Sägespäne auf der Werkbank, ein Aussaatkalender an der Küchenwand, ein Wochenende, an dem der Zaun des Nachbarn repariert wird: Der 31. ist im Frieden, wenn Hände und Fantasie zusammenarbeiten."
+    ]
+   },
+   {
+    "title": "Über Enden und Anfänge",
+    "paras": [
+     "Am letzten Tag eines Monats geboren, können viele vom 31. ein Kapitel gut abschließen: die Papiere erledigen, allen danken, aufräumen. Diese Gewohnheit macht ihre Neuanfänge ungewöhnlich klar. Zu Silvester ist ihr Schreibtisch meist leer."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Ändere einmal im Monat bewusst eine kleine Gewohnheit: einen anderen Weg, ein neues Rezept, ein neues Werkzeug. Kleine gewählte Veränderungen machen die großen, ungewählten leichter."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Deine Ideen verdienen ein Zuhause; bau es sorgfältig und lass ein Fenster offen für das Neue."
+    ]
+   }
+  ]
  }
 };
