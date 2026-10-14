@@ -2910,6 +2910,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "7-and-11": {
+  "title": "Life path 7 and 11: the thinker and the seer",
+  "lead": "The 7 reaches truth through study, the 11 through sudden inner knowing. A rare, deeply spiritual pairing where two very different paths to wisdom can meet.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 7 and an 11 often meet where the unseen is taken seriously: a lecture on consciousness, a dream workshop, an old monastery, a late conversation about the stars. The 11 feels understood by the 7's depth. The 7 is intrigued by how often the 11's hunches turn out right."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you look beyond the surface and dislike small talk. The 7 brings reason, discipline and careful analysis. The 11 brings intuition, inspiration and emotional sensitivity. The 7 helps the 11 test its visions, and the 11 helps the 7 trust what cannot be proven yet."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 11 needs emotional reassurance, while the 7 may retreat into its thoughts. The 7 may doubt the 11's intuitions, which hurts. Both are nervous under pressure and can spiral together. Practical life may suffer while you discuss the meaning of everything."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is intimate, mysterious and intense. You can share things you have told no one else. Love lasts when the 7 offers warmth along with insight and the 11 gives the 7 time to come back from its silences."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you explore philosophy, faith and science together. At work you suit psychology, spiritual teaching, research, writing, music and alternative medicine."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Marina, life path 11, kept dreaming of a house by a lake she had never seen. Saško, life path 7, a geographer, listened to her descriptions and spent three weekends matching them to maps. They found the lake two hours north of their city. They now rent a cabin there every summer, and she writes while he measures the water levels."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when intuition and reason sit at the same table as equals, and when both of you keep a few simple routines to calm your nerves."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A dream journal next to a stack of science journals, a lamp left on late, and two people debating whether a coincidence means anything."
+    ]
+   },
+   {
+    "title": "A note on nerves",
+    "paras": [
+     "Both of you can overthink. A walk outside, before any serious conversation, lowers the tension and makes the talk kinder."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "The heart has reasons that reason does not know, Pascal wrote. The 11 lives in the first half of that sentence and the 7 in the second, and together you can read the whole line."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each week, the 11 shares one hunch and the 7 one question about it. Write both down and look back a month later to see what came true."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Knowing and understanding are two lamps lighting the same path."
+    ]
+   }
+  ]
+ },
+ "7-and-22": {
+  "title": "Life path 7 and 22: the analyst and the builder of worlds",
+  "lead": "The 22 turns grand visions into concrete reality; the 7 brings the knowledge that makes those visions sound. A serious, capable pair with a strong shared sense of purpose.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 7 and a 22 often meet over complex work: a research institute, an engineering firm, a long term public project, a scientific expedition. The 22 recognises the 7 as the expert it needs. The 7 respects the 22 as someone who actually finishes things."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both value competence, depth and long term thinking. The 7 brings analysis, specialist knowledge and integrity. The 22 brings organisation, leadership and the ability to make ideas real. The 22 gives the 7's insights a lasting form; the 7 keeps the 22's plans honest."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 22 may push for action while the 7 is still researching. The 7 may resent being treated as a resource rather than a partner. Both can become workaholics and emotionally distant. Disagreements can turn into cold silences."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is loyal, private and steady. You show love through shared work and absolute trust. It deepens when you protect personal time from the mission and when the 22 asks the 7 about its inner life, not only its expertise."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you exchange ideas and practical help. At work you suit engineering, architecture, scientific research, technology, policy and the management of large projects."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Gordana, life path 22, led a team building a water system for a group of mountain villages. Pavle, life path 7, a hydrologist, spent a year studying the springs before she laid a single pipe. She grumbled at the delay, then thanked him when the system worked through the first dry summer without a single failure. They married in one of those villages."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 7 has time to think and the 22 has room to build, and when both see the other as an equal partner."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Technical drawings on the table, a microscope on the windowsill, and a quiet weekend hike where neither of you talks about work for the first hour."
+    ]
+   },
+   {
+    "title": "A note on recognition",
+    "paras": [
+     "The 7 needs to feel its work is understood, the 22 that its effort is seen. Naming what the other contributed, out loud and often, prevents quiet resentment."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A well built house starts with a well studied ground, surveyors like to say. The 7 studies the ground and the 22 builds the house, and both deserve the credit."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, review one shared goal together. The 7 names one risk, the 22 one next step, and you agree on both before dinner."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Knowledge builds better, and building makes knowledge matter."
+    ]
+   }
+  ]
+ },
+ "7-and-33": {
+  "title": "Life path 7 and 33: wisdom and compassion",
+  "lead": "The 7 seeks truth, the 33 lives to heal and uplift. This pairing joins a clear mind and a loving heart, and can become a source of comfort and insight for many people.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 7 and a 33 often meet in places of learning and care: a hospice, a theological college, a counselling centre, a community library. The 33 is drawn to the 7's calm intelligence. The 7 is moved by the 33's tireless kindness and how naturally it comforts people."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you care about meaning and about doing good. The 7 brings understanding, discernment and quiet strength. The 33 brings empathy, warmth and a gift for teaching by example. The 7 helps the 33 give wisely, and the 33 helps the 7 open its heart."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 33 may feel the 7 is too detached or critical. The 7 may feel overwhelmed by the 33's emotions and constant service to others. The 33 can carry too many burdens, while the 7 withdraws rather than helping. Both may avoid conflict until it hurts."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is gentle, sincere and spiritual. Love grows through quiet presence and deep conversation. It deepens when the 7 shows affection openly and the 33 respects the 7's need for solitude without feeling rejected."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you give each other honest counsel and comfort. At work you suit counselling, palliative care, spiritual leadership, teaching, writing and research in the helping professions."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Nataša, life path 33, a hospice nurse, often sat with patients through the night. Hristijan, life path 7, a chaplain, noticed she never rested and began bringing her tea at three in the morning. They talked about death, faith and what people regret. Years later they wrote a small book together about listening to the dying."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 7's wisdom and the 33's compassion work together, and when both of you protect time to rest and recover."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A shelf of books on grief and hope, a vase of wildflowers, and two people sitting quietly on a bench after a long shift, saying little and needing less."
+    ]
+   },
+   {
+    "title": "A note on burden",
+    "paras": [
+     "The 33 tends to carry everyone, the 7 to carry thoughts alone. Sharing the weight, even only by naming it, makes both lighter."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Wisdom begins in wonder, Socrates is said to have taught. The 7 wonders about the world and the 33 wonders at people, and both kinds of wonder lead to wisdom."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, the 33 names one person it helped and the 7 one thing it learned. Then each of you names one way the other could rest."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A clear mind and an open heart can heal more than either alone."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",

@@ -2934,6 +2934,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "7-and-11": {
+  "title": "Lebenszahl 7 und 11: der Denker und die Seherin",
+  "lead": "Die 7 erreicht die Wahrheit durch Studium, die 11 durch plötzliches inneres Wissen. Eine seltene, zutiefst spirituelle Verbindung, in der sich zwei sehr verschiedene Wege zur Weisheit treffen können.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 7 und eine 11 begegnen sich oft dort, wo das Unsichtbare ernst genommen wird: bei einem Vortrag über Bewusstsein, einem Traumworkshop, in einem alten Kloster, bei einem späten Gespräch über die Sterne. Die 11 fühlt sich von der Tiefe der 7 verstanden. Die 7 ist fasziniert, wie oft die Ahnungen der 11 sich als richtig erweisen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr schaut beide hinter die Oberfläche und mögt kein leeres Gerede. Die 7 bringt Vernunft, Disziplin und sorgfältige Analyse. Die 11 bringt Intuition, Inspiration und emotionale Feinfühligkeit. Die 7 hilft der 11, ihre Visionen zu prüfen, und die 11 hilft der 7, dem zu trauen, was sich noch nicht beweisen lässt."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 11 braucht emotionale Bestätigung, während die 7 sich in ihre Gedanken zurückzieht. Die 7 zweifelt womöglich an den Eingebungen der 11, und das schmerzt. Beide werden unter Druck nervös und können sich gemeinsam hochschaukeln. Der praktische Alltag leidet, während ihr über den Sinn von allem diskutiert."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist innig, geheimnisvoll und intensiv. Ihr könnt Dinge teilen, die sonst noch niemand gehört hat. Die Liebe hält, wenn die 7 neben Einsicht auch Wärme schenkt und die 11 der 7 Zeit gibt, aus ihrem Schweigen zurückzukehren."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde erkundet ihr gemeinsam Philosophie, Glauben und Wissenschaft. Beruflich passt ihr zu Psychologie, spiritueller Lehre, Forschung, Schreiben, Musik und alternativer Medizin."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Marina, Lebenszahl 11, träumte immer wieder von einem Haus an einem See, den sie nie gesehen hatte. Saško, Lebenszahl 7, Geograf, hörte ihren Beschreibungen zu und verglich sie drei Wochenenden lang mit Karten. Sie fanden den See zwei Stunden nördlich ihrer Stadt. Heute mieten sie dort jeden Sommer eine Hütte, sie schreibt, und er misst den Wasserstand."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Intuition und Vernunft gleichberechtigt am selben Tisch sitzen und ihr beide ein paar einfache Gewohnheiten pflegt, die die Nerven beruhigen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Traumtagebuch neben einem Stapel Fachzeitschriften, eine Lampe, die lange brennt, und zwei Menschen, die darüber streiten, ob ein Zufall etwas bedeutet."
+    ]
+   },
+   {
+    "title": "Über die Nerven",
+    "paras": [
+     "Ihr grübelt beide leicht zu viel. Ein Spaziergang draußen vor jedem ernsten Gespräch senkt die Spannung und macht das Reden freundlicher."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Das Herz hat seine Gründe, die der Verstand nicht kennt, schrieb Pascal. Die 11 lebt in der ersten Hälfte dieses Satzes, die 7 in der zweiten, und zusammen könnt ihr die ganze Zeile lesen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jede Woche teilt die 11 eine Ahnung und die 7 eine Frage dazu. Schreibt beides auf und schaut einen Monat später nach, was eingetroffen ist."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Wissen und Verstehen sind zwei Lampen, die denselben Weg erhellen."
+    ]
+   }
+  ]
+ },
+ "7-and-22": {
+  "title": "Lebenszahl 7 und 22: der Analytiker und die Weltenbauerin",
+  "lead": "Die 22 verwandelt große Visionen in greifbare Wirklichkeit, die 7 bringt das Wissen, das diese Visionen tragfähig macht. Ein ernstes, fähiges Paar mit einem starken gemeinsamen Ziel.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 7 und eine 22 begegnen sich oft über komplexe Arbeit: in einem Forschungsinstitut, einem Ingenieurbüro, einem langfristigen öffentlichen Projekt, auf einer wissenschaftlichen Expedition. Die 22 erkennt in der 7 die Fachkraft, die sie braucht. Die 7 achtet die 22 als jemanden, der Dinge wirklich zu Ende bringt."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr schätzt beide Können, Tiefe und langfristiges Denken. Die 7 bringt Analyse, Fachwissen und Integrität. Die 22 bringt Organisation, Führung und die Fähigkeit, Ideen wirklich werden zu lassen. Die 22 gibt den Einsichten der 7 eine dauerhafte Form, die 7 hält die Pläne der 22 ehrlich."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 22 drängt vielleicht zum Handeln, während die 7 noch forscht. Die 7 ärgert sich womöglich, wenn sie als Ressource statt als Partnerin behandelt wird. Beide können zu Arbeitstieren werden und emotional auf Abstand gehen. Meinungsverschiedenheiten werden leicht zu kaltem Schweigen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist treu, privat und beständig. Ihr zeigt Liebe durch gemeinsame Arbeit und absolutes Vertrauen. Sie vertieft sich, wenn ihr persönliche Zeit vor der Mission schützt und die 22 die 7 nach ihrem Innenleben fragt, nicht nur nach ihrem Fachwissen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde tauscht ihr Ideen und praktische Hilfe. Beruflich passt ihr zu Ingenieurwesen, Architektur, Forschung, Technologie, Politikgestaltung und der Leitung großer Projekte."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Gordana, Lebenszahl 22, leitete ein Team, das eine Wasserversorgung für eine Gruppe von Bergdörfern baute. Pavle, Lebenszahl 7, Hydrologe, untersuchte ein Jahr lang die Quellen, bevor sie ein einziges Rohr verlegte. Sie murrte über die Verzögerung und dankte ihm dann, als das System den ersten trockenen Sommer ohne eine einzige Störung überstand. Sie heirateten in einem dieser Dörfer."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 7 Zeit zum Denken und die 22 Raum zum Bauen hat und beide einander als gleichwertig sehen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Technische Zeichnungen auf dem Tisch, ein Mikroskop auf dem Fensterbrett und eine stille Wochenendwanderung, bei der in der ersten Stunde niemand über Arbeit redet."
+    ]
+   },
+   {
+    "title": "Über Anerkennung",
+    "paras": [
+     "Die 7 muss spüren, dass ihre Arbeit verstanden wird, die 22, dass ihre Mühe gesehen wird. Wer laut und oft benennt, was der andere beigetragen hat, verhindert leisen Groll."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ein gut gebautes Haus beginnt mit gut untersuchtem Boden, sagen Vermesser gern. Die 7 untersucht den Boden und die 22 baut das Haus, und beiden gebührt das Verdienst."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Prüft einmal im Monat gemeinsam ein geteiltes Ziel. Die 7 nennt ein Risiko, die 22 einen nächsten Schritt, und ihr einigt euch vor dem Abendessen auf beides."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Wissen baut besser, und Bauen gibt dem Wissen Gewicht."
+    ]
+   }
+  ]
+ },
+ "7-and-33": {
+  "title": "Lebenszahl 7 und 33: Weisheit und Mitgefühl",
+  "lead": "Die 7 sucht die Wahrheit, die 33 lebt, um zu heilen und aufzurichten. Diese Verbindung vereint einen klaren Verstand und ein liebendes Herz und kann für viele Menschen zur Quelle von Trost und Einsicht werden.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 7 und eine 33 begegnen sich oft an Orten des Lernens und der Fürsorge: in einem Hospiz, einer theologischen Hochschule, einer Beratungsstelle, einer Stadtteilbibliothek. Die 33 zieht die ruhige Intelligenz der 7 an. Die 7 ist bewegt von der unermüdlichen Güte der 33 und davon, wie selbstverständlich sie Menschen tröstet."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Euch beiden liegen Sinn und gutes Tun am Herzen. Die 7 bringt Verständnis, Urteilskraft und stille Stärke. Die 33 bringt Empathie, Wärme und die Gabe, durch Vorbild zu lehren. Die 7 hilft der 33, klug zu geben, und die 33 hilft der 7, ihr Herz zu öffnen."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 33 findet die 7 vielleicht zu distanziert oder kritisch. Die 7 fühlt sich womöglich von den Gefühlen der 33 und ihrem ständigen Dienst an anderen überwältigt. Die 33 trägt leicht zu viele Lasten, während die 7 sich zurückzieht, statt zu helfen. Beide meiden Konflikte, bis es wehtut."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist sanft, aufrichtig und spirituell. Die Liebe wächst durch stille Gegenwart und tiefe Gespräche. Sie vertieft sich, wenn die 7 Zuneigung offen zeigt und die 33 das Bedürfnis der 7 nach Alleinsein achtet, ohne sich abgewiesen zu fühlen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde gebt ihr einander ehrlichen Rat und Trost. Beruflich passt ihr zu Beratung, Palliativpflege, geistlicher Leitung, Unterricht, Schreiben und Forschung in helfenden Berufen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Nataša, Lebenszahl 33, Pflegerin in einem Hospiz, saß oft die ganze Nacht bei den Kranken. Hristijan, Lebenszahl 7, Klinikseelsorger, bemerkte, dass sie nie ruhte, und brachte ihr um drei Uhr morgens Tee. Sie sprachen über den Tod, den Glauben und darüber, was Menschen bereuen. Jahre später schrieben sie gemeinsam ein kleines Buch darüber, wie man Menschen am Lebensende zuhört."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Weisheit der 7 und das Mitgefühl der 33 zusammenarbeiten und ihr beide Zeit zum Ausruhen und Erholen schützt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Regal mit Büchern über Trauer und Hoffnung, eine Vase mit Wiesenblumen und zwei Menschen, die nach einer langen Schicht still auf einer Bank sitzen, wenig sagen und noch weniger brauchen."
+    ]
+   },
+   {
+    "title": "Über Lasten",
+    "paras": [
+     "Die 33 trägt gern alle, die 7 trägt Gedanken lieber allein. Wer die Last teilt, und sei es nur, indem er sie benennt, macht beide leichter."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Die Weisheit beginnt mit dem Staunen, soll Sokrates gelehrt haben. Die 7 staunt über die Welt und die 33 über die Menschen, und beide Arten des Staunens führen zur Weisheit."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche nennt die 33 einen Menschen, dem sie geholfen hat, und die 7 eine Sache, die sie gelernt hat. Dann nennt jeder eine Möglichkeit, wie der andere ausruhen könnte."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein klarer Verstand und ein offenes Herz heilen mehr als jedes für sich."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
