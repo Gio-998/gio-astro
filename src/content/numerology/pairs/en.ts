@@ -3612,6 +3612,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "9-and-11": {
+  "title": "Life path 9 and 11: the idealist and the illuminator",
+  "lead": "The 9 wants to heal the world; the 11 wants to inspire it. Both are sensitive, visionary and driven by meaning, which makes this a deeply spiritual and emotional pair.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 9 and an 11 often meet where ideals gather: a peace conference, an art festival with a cause, a spiritual community, a campaign for human rights. They recognise each other's passion almost at once. Conversation goes straight to the big questions."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 11 brings intuition, inspiration and a sense of calling. The 9 brings compassion, wisdom and a gift for completing what matters. The 11 gives the 9 fresh vision, the 9 gives the 11 emotional maturity and perspective. Both are generous and idealistic."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both of you feel intensely, and your moods can feed each other. The 11 can become anxious, the 9 can become melancholy or distant. Practical matters may be forgotten while you discuss changing the world. Each may expect the other to understand without words."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is passionate, poetic and spiritual. You can feel like soulmates. Love lasts when you also handle daily life together and when you say clearly what you need instead of waiting to be understood."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you share dreams and protect each other's sensitivity. At work you suit the arts, humanitarian work, spiritual teaching, psychology and media with a message."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Sofija, life path 9, ran a small refugee aid group. Mitko, life path 11, a photographer, came to document their work and stayed as a volunteer. His photographs travelled around the world and brought in donations she could never have raised alone. They married in a tent at the camp, with fifty guests from twelve countries."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when inspiration is turned into action and when you take turns being the calm one."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "Photographs drying on a line, a pile of letters from strangers, and two people sitting on the floor deciding which cause to support next."
+    ]
+   },
+   {
+    "title": "A note on moods",
+    "paras": [
+     "When one of you sinks, the other may follow. Agree that on hard days one person stays steady, and switch roles next time."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A candle loses nothing by lighting another candle, the old saying goes. The 11 lights the flame and the 9 carries it to those who need it."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, write together one small, concrete step toward a shared ideal, and do it before the week ends."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Inspire the world together, and keep each other grounded along the way."
+    ]
+   }
+  ]
+ },
+ "9-and-22": {
+  "title": "Life path 9 and 22: the dreamer of good and the builder of it",
+  "lead": "The 9 dreams of a better world; the 22 has the method to build it. Together they can create projects of lasting humanitarian value, if they align heart and plan.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 9 and a 22 often meet over a large good cause: building a hospital in a poor region, restoring a historic town, setting up a school network. The 9 brings the passion that starts the project. The 22 brings the plan that finishes it, and each is grateful for the other."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you care about legacy and service. The 9 brings compassion, vision and the ability to inspire people. The 22 brings structure, discipline and the stamina for long projects. The 9 reminds the 22 why it builds; the 22 shows the 9 how ideals become walls and roofs."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 9 may find the 22 rigid or too focused on details. The 22 may find the 9 emotional or unrealistic. The 9 may give resources away faster than the 22 can secure them. Under stress the 22 controls and the 9 withdraws."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is warm and dedicated. You share a sense of purpose. Love deepens when the 22 shows tenderness outside of work and the 9 respects the 22's need for structure and planning."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you support each other's missions. At work you suit international development, architecture with a social aim, public health, foundations and education reform."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ljupčo, life path 22, an engineer, and Katarina, life path 9, a teacher, rebuilt an old school in their grandparents' village. She gathered the families and the stories; he planned every beam. When the school opened with twenty pupils, she cried and he checked the heating. They both agree it was the best day of their lives."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 9's heart sets the goal and the 22's plan sets the steps, and when you celebrate each completed step together."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A map of a village on the wall, a timeline beside it, and a box of drawings from children waiting for their new classroom."
+    ]
+   },
+   {
+    "title": "A note on generosity",
+    "paras": [
+     "The 9 gives freely, the 22 plans carefully. Agreeing on a giving budget lets the 9 be generous and the 22 sleep well."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Good intentions need good foundations, builders say with a smile. The 9 brings the intentions and the 22 the foundations, and together you build what lasts."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, the 9 names one dream for the world and the 22 sketches the first concrete step. Take that step together within the month."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A dream of good becomes real when someone draws the plan."
+    ]
+   }
+  ]
+ },
+ "9-and-33": {
+  "title": "Life path 9 and 33: two healers of the world",
+  "lead": "The 9 serves humanity, the 33 serves with unconditional love. This is one of the most compassionate pairings, and its greatest challenge is to keep some love for itself.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 9 and a 33 often meet in places of deep need: a hospital, a refugee centre, a home for the elderly, a school for children with no one else. They see each other giving without counting. A bond forms quickly, built on shared values."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You both feel others' pain and want to ease it. The 9 brings a wide view, wisdom and creativity. The 33 brings warmth, devotion and a gift for teaching love. Together you can create places of healing and a home that welcomes everyone."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both of you can give too much and burn out. Boundaries are hard, and others may take advantage. The 9 may withdraw when overwhelmed, the 33 may smother with care. Neither likes to ask for help or to admit being tired."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is tender, devoted and spiritual. You understand each other's calling. Love grows when you take time just for the two of you and allow each other to rest without guilt."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you are a source of comfort for many. At work you suit medicine, social work, spiritual leadership, the arts for healing and humanitarian organisations."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Jasna, life path 33, a paediatric nurse, and Ognen, life path 9, a musician, met at a children's hospital where he played on Saturdays. She asked him to play softer for one sleeping child. He wrote a lullaby for that child and later for every child on the ward. Today they run a music programme in five hospitals."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when you share the load with others and protect a quiet space at home where no one needs saving."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A guitar in the corner, a nurse's uniform on a chair, and a small garden where the two of you sit in silence after long days."
+    ]
+   },
+   {
+    "title": "A note on rest",
+    "paras": [
+     "You both give from deep wells. Filling them, through sleep, beauty and time alone together, is not selfish but necessary."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "You cannot pour from an empty cup, carers often remind each other. Fill each other's cups first, and there will be enough for everyone."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a week, each of you names one thing you need, and the other makes it happen. Then share one moment from the week that brought you joy."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Heal the world, and let each other be the place where you heal."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Life path 1 and 7: the doer and the thinker",
   "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",

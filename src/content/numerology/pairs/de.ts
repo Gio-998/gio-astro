@@ -3636,6 +3636,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "9-and-11": {
+  "title": "Lebenszahl 9 und 11: die Idealistin und der Erleuchter",
+  "lead": "Die 9 will die Welt heilen, die 11 will sie inspirieren. Beide sind feinfühlig, visionär und von Sinn getrieben, was dieses Paar zutiefst spirituell und gefühlvoll macht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 9 und eine 11 begegnen sich oft dort, wo Ideale zusammenkommen: auf einer Friedenskonferenz, einem Kunstfestival mit Anliegen, in einer spirituellen Gemeinschaft, bei einer Kampagne für Menschenrechte. Sie erkennen die Leidenschaft des anderen fast sofort. Das Gespräch geht direkt zu den großen Fragen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 11 bringt Intuition, Inspiration und ein Gefühl der Berufung. Die 9 bringt Mitgefühl, Weisheit und die Gabe, Wichtiges zu vollenden. Die 11 schenkt der 9 frischen Blick, die 9 schenkt der 11 emotionale Reife und Perspektive. Beide sind großzügig und idealistisch."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Ihr fühlt beide intensiv, und eure Stimmungen können sich gegenseitig nähren. Die 11 wird ängstlich, die 9 schwermütig oder abwesend. Praktisches gerät in Vergessenheit, während ihr darüber sprecht, wie man die Welt verändert. Jede erwartet womöglich, dass die andere ohne Worte versteht."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist leidenschaftlich, poetisch und spirituell. Ihr könnt euch wie Seelenverwandte fühlen. Die Liebe hält, wenn ihr auch den Alltag gemeinsam meistert und klar sagt, was ihr braucht, statt darauf zu warten, verstanden zu werden."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde teilt ihr Träume und schützt die Empfindsamkeit des anderen. Beruflich passt ihr zu Kunst, humanitärer Arbeit, spiritueller Lehre, Psychologie und Medien mit einer Botschaft."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Sofija, Lebenszahl 9, leitete eine kleine Hilfsgruppe für Geflüchtete. Mitko, Lebenszahl 11, Fotograf, kam, um ihre Arbeit zu dokumentieren, und blieb als Freiwilliger. Seine Bilder gingen um die Welt und brachten Spenden, die sie allein nie gesammelt hätte. Sie heirateten in einem Zelt im Lager, mit fünfzig Gästen aus zwölf Ländern."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn Inspiration zur Tat wird und ihr abwechselnd die ruhige Seite seid."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Fotos, die an einer Leine trocknen, ein Stapel Briefe von Fremden und zwei Menschen auf dem Boden, die entscheiden, welches Anliegen sie als Nächstes unterstützen."
+    ]
+   },
+   {
+    "title": "Über Stimmungen",
+    "paras": [
+     "Wenn einer von euch sinkt, folgt der andere leicht. Vereinbart, dass an schweren Tagen einer stabil bleibt, und tauscht beim nächsten Mal die Rollen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Eine Kerze verliert nichts, wenn sie eine andere entzündet, sagt ein altes Wort. Die 11 entzündet die Flamme, und die 9 trägt sie zu denen, die sie brauchen."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Schreibt einmal pro Woche gemeinsam einen kleinen, konkreten Schritt zu einem gemeinsamen Ideal auf und tut ihn, bevor die Woche endet."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Inspiriert gemeinsam die Welt, und haltet einander unterwegs auf dem Boden."
+    ]
+   }
+  ]
+ },
+ "9-and-22": {
+  "title": "Lebenszahl 9 und 22: der Traum vom Guten und sein Bau",
+  "lead": "Die 9 träumt von einer besseren Welt, die 22 hat die Methode, sie zu bauen. Zusammen können sie Vorhaben von bleibendem humanitärem Wert schaffen, wenn sie Herz und Plan aufeinander abstimmen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 9 und eine 22 begegnen sich oft bei einer großen guten Sache: dem Bau eines Krankenhauses in einer armen Region, der Restaurierung einer historischen Stadt, dem Aufbau eines Schulnetzes. Die 9 bringt die Leidenschaft, die das Projekt beginnt. Die 22 bringt den Plan, der es vollendet, und beide sind einander dankbar."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Euch beiden liegen Vermächtnis und Dienst am Herzen. Die 9 bringt Mitgefühl, Vision und die Fähigkeit, Menschen zu begeistern. Die 22 bringt Struktur, Disziplin und Ausdauer für lange Vorhaben. Die 9 erinnert die 22 daran, warum sie baut, und die 22 zeigt der 9, wie Ideale zu Mauern und Dächern werden."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 9 findet die 22 vielleicht starr oder zu detailversessen. Die 22 findet die 9 womöglich gefühlsbetont oder unrealistisch. Die 9 gibt Mittel schneller weg, als die 22 sie sichern kann. Unter Druck kontrolliert die 22, und die 9 zieht sich zurück."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist warm und hingebungsvoll. Ihr teilt ein Gefühl für Bestimmung. Die Liebe vertieft sich, wenn die 22 auch außerhalb der Arbeit Zärtlichkeit zeigt und die 9 das Bedürfnis der 22 nach Struktur und Planung achtet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde unterstützt ihr gegenseitig eure Aufgaben. Beruflich passt ihr zu internationaler Entwicklung, Architektur mit sozialem Ziel, öffentlicher Gesundheit, Stiftungen und Bildungsreform."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ljupčo, Lebenszahl 22, Ingenieur, und Katarina, Lebenszahl 9, Lehrerin, bauten im Dorf ihrer Großeltern eine alte Schule wieder auf. Sie sammelte die Familien und die Geschichten, er plante jeden Balken. Als die Schule mit zwanzig Kindern öffnete, weinte sie, und er prüfte die Heizung. Beide sind sich einig, dass es der schönste Tag ihres Lebens war."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn das Herz der 9 das Ziel setzt und der Plan der 22 die Schritte, und wenn ihr jeden geschafften Schritt gemeinsam feiert."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Dorfkarte an der Wand, daneben ein Zeitplan und eine Kiste mit Zeichnungen von Kindern, die auf ihr neues Klassenzimmer warten."
+    ]
+   },
+   {
+    "title": "Über Großzügigkeit",
+    "paras": [
+     "Die 9 gibt frei, die 22 plant sorgfältig. Ein vereinbartes Budget fürs Geben lässt die 9 großzügig sein und die 22 ruhig schlafen."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Gute Absichten brauchen gute Fundamente, sagen Bauleute mit einem Lächeln. Die 9 bringt die Absichten, die 22 die Fundamente, und zusammen baut ihr, was bleibt."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal im Monat nennt die 9 einen Traum für die Welt, und die 22 skizziert den ersten konkreten Schritt. Geht diesen Schritt gemeinsam innerhalb des Monats."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein Traum vom Guten wird wirklich, wenn jemand den Plan zeichnet."
+    ]
+   }
+  ]
+ },
+ "9-and-33": {
+  "title": "Lebenszahl 9 und 33: zwei Heiler der Welt",
+  "lead": "Die 9 dient der Menschheit, die 33 dient mit bedingungsloser Liebe. Eine der mitfühlendsten Verbindungen, deren größte Aufgabe es ist, etwas Liebe für sich selbst zu bewahren.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 9 und eine 33 begegnen sich oft an Orten großer Not: in einem Krankenhaus, einem Zentrum für Geflüchtete, einem Altenheim, einer Schule für Kinder, die sonst niemanden haben. Sie sehen einander geben, ohne zu zählen. Schnell entsteht eine Bindung, gebaut auf gemeinsamen Werten."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr spürt beide den Schmerz anderer und wollt ihn lindern. Die 9 bringt einen weiten Blick, Weisheit und Kreativität. Die 33 bringt Wärme, Hingabe und die Gabe, Liebe zu lehren. Zusammen könnt ihr Orte der Heilung schaffen und ein Zuhause, das alle willkommen heißt."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Ihr könnt beide zu viel geben und ausbrennen. Grenzen fallen schwer, und andere nutzen das womöglich aus. Die 9 zieht sich zurück, wenn es zu viel wird, die 33 erdrückt mit Fürsorge. Keine bittet gern um Hilfe oder gibt Müdigkeit zu."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zärtlich, hingebungsvoll und spirituell. Ihr versteht die Berufung des anderen. Die Liebe wächst, wenn ihr euch Zeit nur für euch zwei nehmt und einander Ruhe ohne Schuldgefühle gönnt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde seid ihr für viele eine Quelle des Trostes. Beruflich passt ihr zu Medizin, Sozialarbeit, geistlicher Leitung, Kunst zur Heilung und humanitären Organisationen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Jasna, Lebenszahl 33, Kinderkrankenpflegerin, und Ognen, Lebenszahl 9, Musiker, lernten sich in einem Kinderkrankenhaus kennen, in dem er samstags spielte. Sie bat ihn, für ein schlafendes Kind leiser zu spielen. Er schrieb ein Wiegenlied für dieses Kind und später für jedes Kind der Station. Heute leiten sie ein Musikprogramm in fünf Kliniken."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn ihr die Last mit anderen teilt und zu Hause einen stillen Raum schützt, in dem niemand gerettet werden muss."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Gitarre in der Ecke, ein Pflegekittel auf einem Stuhl und ein kleiner Garten, in dem ihr beide nach langen Tagen still sitzt."
+    ]
+   },
+   {
+    "title": "Über Erholung",
+    "paras": [
+     "Ihr gebt beide aus tiefen Brunnen. Sie wieder aufzufüllen, durch Schlaf, Schönheit und Zeit allein miteinander, ist nicht egoistisch, sondern nötig."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Aus einer leeren Tasse kann man nicht einschenken, erinnern sich Pflegende gegenseitig. Füllt zuerst einander die Tassen, dann reicht es für alle."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Einmal pro Woche nennt jeder ein Bedürfnis, und der andere sorgt dafür, dass es erfüllt wird. Teilt dann einen Moment der Woche, der euch Freude gebracht hat."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Heilt die Welt, und seid füreinander der Ort, an dem ihr selbst heilt."
+    ]
+   }
+  ]
+ },
  "1-and-7": {
   "title": "Lebenszahl 1 und 7: Tat und Tiefe",
   "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
