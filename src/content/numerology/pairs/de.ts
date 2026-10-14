@@ -2034,6 +2034,240 @@ export const pairDe: PairSet = {
    }
   ]
  },
+ "6-and-7": {
+  "title": "Lebenszahl 6 und 7: Herdfeuer und Klause",
+  "lead": "Die 6 lebt für Nähe und Familie, die 7 braucht Alleinsein und Tiefe. Ein ungewöhnliches Paar, das beide lehren kann, wie Liebe und Privatsphäre unter ein Dach passen.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 6 und eine 7 begegnen sich oft, wo Fürsorge und Studium sich kreuzen: an einer medizinischen Fakultät, in einem Bibliothekscafé, einer Therapiepraxis, einem stillen Rückzugsort, an dem die 6 kocht und die 7 liest. Die 6 spürt, dass die 7 etwas Unausgesprochenes trägt. Die 7 bemerkt, dass die 6 nichts verlangt und trotzdem Tee anbietet."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 6 bringt Wärme, Schönheit und das Talent, einen Raum bewohnt wirken zu lassen. Die 7 bringt Weisheit, Ruhe und einen Verstand, der unter die Oberfläche blickt. Die 6 mildert die Einsamkeit der 7, und die 7 schenkt der 6 ein tieferes Verständnis dafür, warum Menschen handeln, wie sie handeln."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 6 will Zweisamkeit und Gefühle teilen, die 7 braucht Zeit allein und behält Gefühle oft für sich. Die 6 fühlt sich ausgeschlossen, die 7 bedrängt. Kritik ist ein Risiko: Die 7 analysiert, die 6 nimmt es persönlich."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist sanft und entfaltet sich langsam. Die 6 zeigt Liebe offen, die 7 durch Treue und seltene, genaue Worte. Die Liebe wächst, wenn die 6 die geschlossene Tür der 7 achtet und die 7 sie bewusst und zu festen Zeiten öffnet."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde hält die 6 die 7 mit Menschen verbunden, und die 7 gibt der 6 einen ehrlichen Blick von außen. Beruflich passt ihr zu Medizin, Psychologie, Bildung, menschennaher Forschung und spiritueller oder heilender Arbeit."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Olivera, Lebenszahl 6, Krankenpflegerin, pflegte den Vater von Goce, Lebenszahl 7, einem Philosophen, der selten sein Arbeitszimmer verließ. Sie bemerkte, dass er das Essen vergaß, er bemerkte, dass sie sich die Geschichte jedes Patienten merkte. Als der Vater genesen war, schrieb Goce ihr einen neunseitigen Brief. Sie antwortete mit einem Topf Suppe. Seit elf Jahren sind sie verheiratet."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn das Zuhause eine warme Küche und ein stilles Zimmer hat und ihr beide wisst, welches davon der andere heute braucht."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine halb offene Tür zum Arbeitszimmer, eine Tasse Tee, leise auf den Schreibtisch gestellt, und später zwei Menschen auf dem Sofa, die erzählen, was sie an diesem Tag entdeckt haben."
+    ]
+   },
+   {
+    "title": "Über Privatsphäre",
+    "paras": [
+     "Für die 7 ist Privatsphäre Sauerstoff und kein Abstand. Für die 6 ist Teilen Sauerstoff und keine Einmischung. Wer diesen Unterschied laut ausspricht, nimmt viel Kränkung heraus."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Reden ist Silber, Schweigen ist Gold, sagt man, doch ein gutes Wort zur rechten Zeit ist ebenso kostbar. Dieses Paar braucht das Schweigen der 7 und die guten Worte der 6."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Vereinbart einen Abend pro Woche für ein langes Gespräch und einige feste Stunden für das Alleinsein der 7. Haltet beides so treu ein wie einen Termin."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Liebe kann zugleich ein erleuchtetes Fenster und ein geschlossenes Buch sein."
+    ]
+   }
+  ]
+ },
+ "6-and-8": {
+  "title": "Lebenszahl 6 und 8: Versorgung und Schutz",
+  "lead": "Die 8 baut Wohlstand und Ansehen auf, die 6 ein Zuhause und einen Kreis der Fürsorge. Beide fühlen sich für andere verantwortlich, was dieses Paar stark, großzügig und stabil machen kann.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 6 und eine 8 begegnen sich oft über Familienbetriebe, Ehrenämter in der Gemeinde oder den Vorstand einer Stiftung. Die 8 bemerkt die Anmut der 6 im Umgang mit Menschen. Die 6 bemerkt die Kompetenz der 8 und wie Probleme kleiner werden, sobald die 8 im Raum ist."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 8 bringt Ehrgeiz, Finanzsinn und Autorität. Die 6 bringt Wärme, Geschmack und die Gabe, Menschen zusammenzuhalten. Die 8 gibt der 6 materielle Sicherheit, die 6 gibt der 8 einen Grund, nach Hause zu kommen. Zusammen könnt ihr einen Haushalt und einen Ruf aufbauen, die Bestand haben."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 8 stellt vielleicht die Arbeit an erste Stelle, und die 6 fühlt sich einsam. Die 6 will womöglich allen helfen, während die 8 die Kosten rechnet. Beide lenken gern in verschiedenen Bereichen, die 8 beim Geld, die 6 im Haus, und Machtkämpfe wachsen leise."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist großzügig und beschützend. Die 8 versorgt, die 6 umsorgt. Die Liebe vertieft sich, wenn die 8 Weichheit und Aufmerksamkeit zeigt und nicht nur Geschenke, und die 6 den Antrieb der 8 achtet, ohne ihr Schuldgefühle zu machen."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde bewirtet und unterstützt ihr viele Menschen. Beruflich passt ihr zu Gastgewerbe, Immobilien, Familienbetrieben, Luxusgütern, Verwaltung im Gesundheitswesen und gemeinnützigen Stiftungen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Branko, Lebenszahl 8, besaß drei Hotels und wohnte in allen, also in keinem. Jasmina, Lebenszahl 6, Innenarchitektin, renovierte das älteste und bestand auf einer kleinen Wohnung im obersten Stock mit einer richtigen Küche. Er lachte und fing dann an, sonntags dort zu kochen. Ihre Kinder wuchsen in dieser Küche auf."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn der Erfolg der Familie dient und die Familie die Arbeit versteht, und wenn ihr Entscheidungen über Geld und Zuhause gemeinsam trefft."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Kassenbuch auf dem Schreibtisch, daneben eine Vase mit frischen Blumen und ein Familienessen, das die 8 selbst in der vollsten Saison nicht verpasst."
+    ]
+   },
+   {
+    "title": "Über das Geben",
+    "paras": [
+     "Die 6 gibt Zeit und Fürsorge, die 8 gibt Mittel. Beides ist Liebe. Wer sich für jede Art Geschenk bedankt, sorgt dafür, dass sich niemand unsichtbar fühlt."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Ein Haus wird aus Steinen gebaut, ein Heim aus Liebe, heißt es. Die 8 bringt die Steine und das Geld, die 6 die Liebe, die daraus ein Heim macht."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Setzt euch einmal im Monat eine Stunde zum Thema Geld und eine Stunde zum Thema Familie zusammen. Nehmt beide Gespräche gleich ernst."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Stärke versorgt, und Fürsorge macht das Versorgte erst wertvoll."
+    ]
+   }
+  ]
+ },
+ "6-and-9": {
+  "title": "Lebenszahl 6 und 9: Liebe für einen und Liebe für alle",
+  "lead": "Die 6 sorgt für Familie und enge Freunde, die 9 für die Menschheit als Ganzes. Beide sind mitfühlend und idealistisch, was diese Verbindung zu einer der freundlichsten der Numerologie macht.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 6 und eine 9 begegnen sich oft im Dienst an anderen: in einem Krankenhaus, einer Schule, einer Hilfsorganisation, einer Freiwilligenküche. Jede sieht die andere geben, ohne etwas zu verlangen. Die Anziehung wächst aus Bewunderung für das gute Herz des anderen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Mitgefühl, Sinn für Schönheit und den Wunsch, die Welt besser zu machen. Die 6 bringt Hingabe und die Fähigkeit, ein warmes Zuhause zu schaffen. Die 9 bringt Weisheit, Großzügigkeit und einen weiten Blick. Die 9 erweitert den Kreis der 6, und die 6 gibt der 9 einen Ort, an dem sie ausruhen kann."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 6 richtet sich auf die Familie aus, die 9 auf die Welt, und jede kann finden, dass die andere zu viel in die falsche Richtung gibt. Die 6 fühlt sich vernachlässigt, wenn die 9 Fremden dient. Die 9 fühlt sich gefangen, wenn die 6 alles nah halten will. Beide neigen zur Selbstaufopferung."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Romantik ist zärtlich, idealistisch und großzügig. Ihr schenkt euch gern kleine Aufmerksamkeiten und gute Taten. Die Liebe vertieft sich, wenn ihr abwechselnd empfangt und die 9 der 6 ihre verborgene Traurigkeit zeigt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde helft ihr gemeinsam vielen Menschen. Beruflich passt ihr zu humanitärer Arbeit, heilenden Berufen, Unterricht, Kunst und Sozialunternehmen."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Vera, Lebenszahl 9, arbeitete für eine Hilfsorganisation und war acht Monate im Jahr unterwegs. Mihail, Lebenszahl 6, Lehrer, hütete das Zuhause und nahm zwei Kinder auf, die eine Familie brauchten. Wenn sie zurückkam, war das Haus immer voll. Später gründete sie ein Kinderprojekt vor Ort, um nah am Zuhause zu helfen, und er wurde der erste Freiwillige."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die Liebe zur Familie und die Liebe zur Welt keine Rivalinnen sind, sondern zwei Zimmer im selben Haus."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Tisch mit mehr Gästen als Stühlen, eine Kiste mit Spenden an der Tür und zwei müde Menschen, die beim Abwasch lachen."
+    ]
+   },
+   {
+    "title": "Über das Gleichgewicht",
+    "paras": [
+     "Die 6 und die 9 vergessen beide gern das Empfangen. Ein Abend pro Woche, an dem keine von beiden jemandem etwas gibt, hält euren eigenen Becher voll."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Nächstenliebe beginnt zu Hause, sagt man, und die 9 ergänzt, dass sie dort nicht enden soll. Zusammen könnt ihr beide Hälften dieses Gedankens ehren."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Jeden Monat wählt die 6 eine Tat für die Familie und die 9 eine für die weitere Welt. Tut beides gemeinsam und sprecht darüber, wie es sich angefühlt hat."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein warmes Zuhause ist der beste Ort, um damit anzufangen, die Welt zu lieben."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Lebenszahl 1 und 4: Vision und Fundament",
   "lead": "Die 1 will anfangen, die 4 will ordentlich fertig werden. Wenn beide das Tempo des anderen respektieren, werden Ideen zu etwas, das bleibt.",

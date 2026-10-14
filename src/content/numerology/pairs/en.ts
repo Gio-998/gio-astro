@@ -2010,6 +2010,240 @@ export const pairEn: PairSet = {
    }
   ]
  },
+ "6-and-7": {
+  "title": "Life path 6 and 7: the hearth and the hermitage",
+  "lead": "The 6 lives for closeness and family; the 7 needs solitude and depth. An unusual pair that can teach both how love and privacy fit under one roof.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 6 and a 7 often meet where care and study cross: a medical school, a library café, a therapy practice, a quiet retreat where the 6 is cooking and the 7 is reading. The 6 senses that the 7 carries something unspoken. The 7 notices that the 6 asks nothing and still offers tea."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 6 brings warmth, beauty and a talent for making a space feel lived in. The 7 brings wisdom, calm and a mind that sees beneath appearances. The 6 softens the 7's isolation, and the 7 gives the 6 a deeper understanding of why people act as they do."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 6 wants togetherness and emotional sharing; the 7 needs time alone and may keep feelings private. The 6 can feel shut out, the 7 can feel crowded. Criticism is a risk: the 7 analyses, the 6 takes it personally."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is gentle and slow to unfold. The 6 shows love openly, the 7 shows it through loyalty and rare, precise words. Love grows when the 6 respects the 7's closed door and the 7 opens it on purpose, at regular times."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends the 6 keeps the 7 connected and the 7 gives the 6 honest perspective. At work you suit medicine, psychology, education, research with a human focus and spiritual or healing work."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Olivera, life path 6, a nurse, cared for the father of Goce, life path 7, a philosopher who rarely left his study. She noticed he forgot to eat; he noticed she remembered every patient's story. After his father recovered, Goce wrote her a letter of nine pages. She answered with a pot of soup. They have been married for eleven years."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when home has both a warm kitchen and a quiet room, and both of you know which one the other needs today."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A study door half open, a cup of tea left gently on the desk, and later two people on the sofa sharing what each discovered that day."
+    ]
+   },
+   {
+    "title": "A note on privacy",
+    "paras": [
+     "For the 7, privacy is oxygen, not distance. For the 6, sharing is oxygen, not intrusion. Naming this difference out loud removes much of the hurt."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Silence is golden, some say, while others say a kind word costs nothing. This pair needs both: the 7's silence and the 6's kind words."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Agree on one evening each week for long conversation and one block of hours for the 7's solitude. Keep both as faithfully as an appointment."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Love can be a lit window and a closed book at once."
+    ]
+   }
+  ]
+ },
+ "6-and-8": {
+  "title": "Life path 6 and 8: provider and protector",
+  "lead": "The 8 builds wealth and status, the 6 builds a home and a circle of care. Both feel responsible for others, which can make this a strong, generous and stable couple.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 6 and an 8 often meet through family business, community leadership or a charity board. The 8 notices the 6's grace with people. The 6 notices the 8's competence and the way problems seem to shrink when the 8 is in the room."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 8 brings ambition, financial sense and authority. The 6 brings warmth, taste and a gift for keeping people together. The 8 gives the 6 material security, the 6 gives the 8 a reason to come home. Together you can build a household and a reputation that lasts."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 8 may put work first and the 6 may feel lonely. The 6 may want to help everyone, while the 8 counts the cost. Both can be controlling in different areas, the 8 about money, the 6 about the home, and power struggles grow quietly."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is generous and protective. The 8 provides and the 6 nurtures. Love deepens when the 8 shows softness and attention, not only gifts, and the 6 respects the 8's drive without making it feel guilty."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you host and support many people. At work you suit hospitality, real estate, family business, luxury goods, health administration and charitable foundations."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Branko, life path 8, owned three hotels and lived in all of them, which meant in none. Jasmina, life path 6, an interior designer, refurbished the oldest one and insisted on a small apartment upstairs with a real kitchen. He laughed, then started cooking there on Sundays. Their children grew up in that kitchen."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when success serves the family and the family understands the work, and when both of you share decisions about money and home."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A ledger on the desk, a vase of fresh flowers beside it, and a family dinner that the 8 does not miss even during the busiest season."
+    ]
+   },
+   {
+    "title": "A note on giving",
+    "paras": [
+     "The 6 gives time and care, the 8 gives resources. Both are love. Saying thank you for each kind of gift keeps either from feeling invisible."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "A house is built with hands, but a home is built with hearts, the saying goes. The 8 brings the hands and the money; the 6 brings the heart that makes it home."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Once a month, sit down together for an hour about money and an hour about the family. Give both conversations the same seriousness."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Strength provides, and care makes the provision worth having."
+    ]
+   }
+  ]
+ },
+ "6-and-9": {
+  "title": "Life path 6 and 9: love for one and love for all",
+  "lead": "The 6 cares for family and close friends; the 9 cares for humanity as a whole. Both are compassionate and idealistic, making this one of the kindest pairings in numerology.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 6 and a 9 often meet through service: a hospital, a school, an aid organisation, a volunteer kitchen. Each sees the other giving without asking for anything. The attraction grows from admiration for the other's good heart."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share compassion, a sense of beauty and a wish to make the world better. The 6 brings devotion and the ability to create a warm home. The 9 brings wisdom, generosity and a wide view. The 9 widens the 6's circle, and the 6 gives the 9 a place where it can rest."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 6 focuses on the family, the 9 on the world, and each can feel the other gives too much in the wrong direction. The 6 may feel neglected when the 9 serves strangers. The 9 may feel trapped when the 6 wants everything kept close. Both can become self sacrificing."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Romance is tender, idealistic and generous. You love giving each other small gifts and acts of kindness. Love deepens when you take turns receiving and when the 9 lets the 6 see its private sadness."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you help many people together. At work you suit humanitarian work, healing professions, teaching, the arts and social enterprises."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Vera, life path 9, worked for an aid agency and was away eight months a year. Mihail, life path 6, a teacher, kept their home and took in two children who needed a family. When she came back, the house was always full. Later she started a local project for children so she could serve close to home, and he became its first volunteer."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when love for the family and love for the world are not rivals but two rooms of the same house."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A table with more guests than chairs, a box of donations by the door, and two tired people laughing over the dishes."
+    ]
+   },
+   {
+    "title": "A note on balance",
+    "paras": [
+     "The 6 and the 9 can both forget to receive. One evening a week where neither gives anything to anyone else keeps your own cup filled."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Charity begins at home, people say, and the 9 adds that it should not end there. Together you can honour both halves of that thought."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each month, the 6 chooses one family act and the 9 one act for the wider world. Do both together and talk about how each felt."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "A warm home is the best place to start loving the world."
+    ]
+   }
+  ]
+ },
  "1-and-4": {
   "title": "Life path 1 and 4: the visionary and the builder",
   "lead": "The 1 wants to start, the 4 wants to finish properly. When they respect each other's pace, ideas turn into things that last.",
