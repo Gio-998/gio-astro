@@ -389,5 +389,203 @@ export const pairEn: PairSet = {
     ]
    }
   ]
+ },
+ "1-and-7": {
+  "title": "Life path 1 and 7: the doer and the thinker",
+  "lead": "The 1 acts, the 7 reflects. This pair joins courage with depth, and works when each gives the other room to be different.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 1 is often intrigued by the 7's calm and mystery, the sense that this person knows something they are not saying. The 7 notices the 1's clarity and nerve. Early conversations can be surprisingly deep, with the 1 asking direct questions and the 7 giving answers that take a while to unfold."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "Both of you are independent and do not need constant company. You respect each other's minds. The 1 gives the 7 a reason to step out of the study and test ideas in the world; the 7 gives the 1 insight, research and a second look before the leap."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 1 wants decisions, the 7 wants more information. The 1 may see the 7 as distant or slow; the 7 may see the 1 as impatient or shallow. When stressed, the 1 pushes and the 7 withdraws, which only makes the 1 push harder."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love here grows quietly. The 7 needs space and trust; the 1 needs loyalty and some admiration. Romance comes through shared interests, a long walk, a book discussed late at night. The 1 should not take the 7's silences personally, and the 7 should say aloud what they feel at least sometimes."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you have long, honest conversations and rarely talk about trivia. At work the 7 is the analyst or specialist and the 1 is the one who takes the findings to market. Research teams, tech and consulting suit you."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Mila, life path 7, spent six years studying soil bacteria. Goran, life path 1, read one of her papers and called her to ask if it could save his vineyard. It could. They now run a small lab and a farm side by side, and she still answers his calls with a long pause before speaking."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair thrives when the 1 schedules quiet time for the 7 and the 7 commits to a decision deadline for the 1. Respecting rhythm is everything."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "One of you on the phone making plans, the other at the window with a notebook, both content in the same room without needing to talk: this is the 1 and 7 at peace."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Before any shared decision, the 7 gets one quiet day to think, and the 1 gets the final call if no clear answer has come after that. Both know the rule in advance."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Action without thought is a gamble, thought without action is a dream; together they become a plan."
+    ]
+   }
+  ]
+ },
+ "1-and-8": {
+  "title": "Life path 1 and 8: two forces of ambition",
+  "lead": "The 1 and the 8 both want to achieve, lead and build. This is a power couple pairing that needs care so that it does not become a rivalry.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "A 1 and an 8 often meet in a professional setting, at a conference, a negotiation or a competition. Respect comes first. Each recognises a serious player and feels drawn to someone who can keep up."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "You share drive, confidence and a taste for success. The 1 brings fresh ideas and courage; the 8 brings strategy, resources and staying power. Together you can build careers, companies or properties that neither could manage alone."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "Both want control. The 8 may try to manage the 1, and the 1 resists being managed. Money and status can become battlegrounds. If work takes over, there may be little room left for tenderness or rest."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love between a 1 and an 8 can be intense and loyal. You admire each other's strength. The relationship deepens when you make space for vulnerability and play, and when each treats the other as a partner, not a project or a competitor."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you motivate each other and celebrate wins loudly. At work the 1 is the innovator and the 8 the executive. Clear agreements about roles and money protect both the business and the friendship."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Petra, life path 8, ran a property firm. Dario, life path 1, came to her with a plan to turn old factories into studios for young designers. She doubted him for a week, then funded the first building herself. Ten years later they are married and own six of them, and still keep separate bank accounts on purpose."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair shines when ambition serves shared values, when success is measured not only in money but in what you build for others and for each other."
+    ]
+   },
+   {
+    "title": "An old saying",
+    "paras": [
+     "Two captains sink the ship, they say. You avoid that by agreeing who steers which part of the voyage, and by remembering that you are on the same boat."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Hold a monthly meeting with no work on the agenda: only what each of you needs from the other as a person. Write it down and check it next month."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Power shared becomes partnership; power contested becomes distance."
+    ]
+   }
+  ]
+ },
+ "1-and-9": {
+  "title": "Life path 1 and 9: the beginning and the completion",
+  "lead": "The 1 is the first number, the 9 the last. Together they hold the whole cycle: new starts and wise endings, personal drive and care for the wider world.",
+  "sections": [
+   {
+    "title": "How the pair meets",
+    "paras": [
+     "The 9 often sees potential in the 1 that the 1 has not yet recognised. The 1 is inspired by the 9's generosity and broad view. They frequently meet through a cause, a volunteer project, art or travel, where both feel useful."
+    ]
+   },
+   {
+    "title": "What draws you together",
+    "paras": [
+     "The 1 brings energy and decisiveness; the 9 brings compassion, experience and a sense of meaning. The 1 helps the 9 act on ideals, and the 9 helps the 1 see beyond personal ambition. Each feels the other makes them a bigger person."
+    ]
+   },
+   {
+    "title": "Where you clash",
+    "paras": [
+     "The 1 can be self focused, which disappoints the idealistic 9. The 9 may give their time to everyone else, leaving the 1 feeling second. The 9 sometimes lives in the past or in big dreams, while the 1 wants the next concrete step."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "Love is warm and expansive. The 9 loves broadly, the 1 loves fiercely. It works when the 1 shares the 9's causes and the 9 makes the 1 feel uniquely chosen. Romantic gestures that combine adventure and meaning, a trip to help somewhere or a project you build together, bind you."
+    ]
+   },
+   {
+    "title": "As friends and at work",
+    "paras": [
+     "As friends you dream big and act on it. At work the 1 launches and the 9 gives purpose and reach: nonprofits, arts, education, international work."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Nina, life path 9, taught refugee children in a city school. Jovan, life path 1, ran a small software firm and offered laptops. Within a year they had started a coding club together. She keeps the children coming back; he keeps finding new partners to fund it."
+    ]
+   },
+   {
+    "title": "When it works best",
+    "paras": [
+     "This pair works best when the 1 learns to finish things with grace and the 9 learns to begin things with focus. Each teaches the other the half of the cycle they find hardest."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A packed car heading somewhere useful, one of you driving fast toward the goal, the other looking out the window and noticing who needs help along the way."
+    ]
+   },
+   {
+    "title": "A small practice for the two of you",
+    "paras": [
+     "Each season, choose one personal goal for the 1 and one cause for the 9, and support both together. Review them on the first day of the next season."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Every ending prepares a beginning; walk both together and the circle stays whole."
+    ]
+   }
+  ]
  }
 };

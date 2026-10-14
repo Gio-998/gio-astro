@@ -389,5 +389,209 @@ export const pairDe: PairSet = {
     ]
    }
   ]
+ },
+ "1-and-7": {
+  "title": "Lebenszahl 1 und 7: Tat und Tiefe",
+  "lead": "Die 1 handelt, die 7 denkt nach. Dieses Paar verbindet Mut mit Tiefe und gelingt, wenn jede Seite der anderen Raum lässt, anders zu sein.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 1 ist oft fasziniert von der Ruhe und dem Geheimnis der 7, dem Gefühl, dass dieser Mensch etwas weiß, das er nicht ausspricht. Die 7 bemerkt die Klarheit und den Mut der 1. Die ersten Gespräche können erstaunlich tief sein: die 1 stellt direkte Fragen, die 7 gibt Antworten, die sich erst langsam entfalten."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr seid beide unabhängig und braucht keine ständige Gesellschaft. Ihr respektiert den Verstand des anderen. Die 1 gibt der 7 einen Grund, das Arbeitszimmer zu verlassen und Ideen in der Welt zu prüfen, die 7 gibt der 1 Einsicht, Recherche und einen zweiten Blick vor dem Sprung."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 1 will Entscheidungen, die 7 will mehr Informationen. Die 1 erlebt die 7 vielleicht als distanziert oder langsam, die 7 die 1 als ungeduldig oder oberflächlich. Unter Druck drängt die 1 und die 7 zieht sich zurück, was die 1 nur noch stärker drängen lässt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe wächst hier leise. Die 7 braucht Raum und Vertrauen, die 1 Treue und etwas Bewunderung. Romantik entsteht durch gemeinsame Interessen, einen langen Spaziergang, ein Buch, über das man bis spät in die Nacht spricht. Die 1 sollte das Schweigen der 7 nicht persönlich nehmen, und die 7 sollte zumindest manchmal laut sagen, was sie fühlt."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde führt ihr lange, ehrliche Gespräche und redet selten über Belangloses. Bei der Arbeit ist die 7 die Analyse oder das Fachwissen, und die 1 bringt die Ergebnisse auf den Markt. Forschungsteams, Technik und Beratung passen zu euch."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Mila, Lebenszahl 7, erforschte sechs Jahre lang Bodenbakterien. Goran, Lebenszahl 1, las einen ihrer Aufsätze und rief sie an, um zu fragen, ob das seinen Weinberg retten könne. Es konnte. Heute führen sie ein kleines Labor und einen Hof nebeneinander, und sie beantwortet seine Anrufe noch immer mit einer langen Pause, bevor sie spricht."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar blüht, wenn die 1 der 7 bewusst stille Zeit einplant und die 7 der 1 eine Frist für Entscheidungen zusagt. Den Rhythmus zu respektieren ist alles."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Eine Seite am Telefon beim Planen, die andere mit einem Notizbuch am Fenster, beide zufrieden im selben Raum, ohne reden zu müssen: So sehen 1 und 7 im Frieden aus."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Vor jeder gemeinsamen Entscheidung bekommt die 7 einen stillen Tag zum Nachdenken, und die 1 hat das letzte Wort, wenn danach keine klare Antwort gekommen ist. Ihr beide kennt die Regel im Voraus."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Tat ohne Gedanken ist ein Glücksspiel, Gedanken ohne Tat sind ein Traum; zusammen werden sie zum Plan."
+    ]
+   }
+  ]
+ },
+ "1-and-8": {
+  "title": "Lebenszahl 1 und 8: zwei Kräfte des Ehrgeizes",
+  "lead": "Die 1 und die 8 wollen beide leisten, führen und aufbauen. Ein Powerpaar, das Pflege braucht, damit keine Rivalität daraus wird.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Eine 1 und eine 8 begegnen sich oft beruflich, auf einer Konferenz, bei Verhandlungen oder in einem Wettbewerb. Zuerst kommt der Respekt. Jede Seite erkennt eine ernstzunehmende Kraft und fühlt sich zu jemandem hingezogen, der mithalten kann."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Ihr teilt Antrieb, Selbstvertrauen und Lust auf Erfolg. Die 1 bringt frische Ideen und Mut, die 8 Strategie, Mittel und Ausdauer. Gemeinsam könnt ihr Karrieren, Firmen oder Immobilien aufbauen, die keiner allein schaffen würde."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Beide wollen Kontrolle. Die 8 versucht vielleicht, die 1 zu managen, und die 1 wehrt sich dagegen. Geld und Status können zum Schlachtfeld werden. Wenn die Arbeit alles einnimmt, bleibt wenig Raum für Zärtlichkeit oder Ruhe."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Liebe zwischen einer 1 und einer 8 kann intensiv und treu sein. Ihr bewundert die Stärke des anderen. Die Beziehung vertieft sich, wenn ihr Raum für Verletzlichkeit und Spiel schafft und jede Seite die andere als Partner sieht, nicht als Projekt oder Konkurrenz."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde motiviert ihr euch und feiert Erfolge laut. Bei der Arbeit ist die 1 die Erneuerung und die 8 die Geschäftsführung. Klare Absprachen über Rollen und Geld schützen Geschäft und Freundschaft."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Petra, Lebenszahl 8, leitete eine Immobilienfirma. Dario, Lebenszahl 1, kam mit dem Plan zu ihr, alte Fabriken in Ateliers für junge Designer umzubauen. Eine Woche zweifelte sie, dann finanzierte sie das erste Gebäude selbst. Zehn Jahre später sind sie verheiratet, besitzen sechs solcher Häuser und führen bewusst getrennte Konten."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar strahlt, wenn der Ehrgeiz gemeinsamen Werten dient, wenn Erfolg nicht nur in Geld gemessen wird, sondern in dem, was ihr für andere und füreinander aufbaut."
+    ]
+   },
+   {
+    "title": "Ein Sprichwort dazu",
+    "paras": [
+     "Viele Köche verderben den Brei, heißt es, und schon zwei können es, wenn beide am selben Topf rühren. Ihr vermeidet das, indem ihr klärt, wer welchen Teil verantwortet."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Zwei Terminkalender auf dem Frühstückstisch, zwei Telefone, die gleichzeitig klingeln, und ein Abend pro Woche, an dem beide ausgeschaltet in der Schublade liegen: So sieht ein gesundes Zuhause von 1 und 8 aus."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Haltet einmal im Monat ein Treffen ohne Arbeit auf der Tagesordnung: nur das, was jede Seite von der anderen als Mensch braucht. Schreibt es auf und prüft es im nächsten Monat."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Geteilte Macht wird Partnerschaft, umkämpfte Macht wird Distanz."
+    ]
+   }
+  ]
+ },
+ "1-and-9": {
+  "title": "Lebenszahl 1 und 9: Anfang und Vollendung",
+  "lead": "Die 1 ist die erste Zahl, die 9 die letzte. Zusammen halten sie den ganzen Kreis: neue Anfänge und weise Abschlüsse, persönlichen Antrieb und Sorge um die Welt.",
+  "sections": [
+   {
+    "title": "Wie das Paar sich begegnet",
+    "paras": [
+     "Die 9 sieht in der 1 oft ein Potenzial, das die 1 selbst noch nicht erkannt hat. Die 1 ist begeistert von der Großzügigkeit und dem weiten Blick der 9. Oft treffen sie sich über eine gute Sache, ein Ehrenamt, Kunst oder Reisen, wo beide sich nützlich fühlen."
+    ]
+   },
+   {
+    "title": "Was euch verbindet",
+    "paras": [
+     "Die 1 bringt Energie und Entschlossenheit, die 9 Mitgefühl, Erfahrung und Sinn. Die 1 hilft der 9, nach ihren Idealen zu handeln, die 9 hilft der 1, über den eigenen Ehrgeiz hinauszusehen. Jede Seite spürt, dass die andere sie zu einem größeren Menschen macht."
+    ]
+   },
+   {
+    "title": "Wo ihr aneinandergeratet",
+    "paras": [
+     "Die 1 kann selbstbezogen sein, was die idealistische 9 enttäuscht. Die 9 schenkt ihre Zeit vielleicht allen anderen, und die 1 fühlt sich an zweiter Stelle. Die 9 lebt manchmal in der Vergangenheit oder in großen Träumen, während die 1 den nächsten konkreten Schritt will."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "Die Liebe ist warm und weit. Die 9 liebt breit, die 1 liebt heftig. Es gelingt, wenn die 1 die Anliegen der 9 teilt und die 9 der 1 das Gefühl gibt, einzigartig gewählt zu sein. Romantische Gesten, die Abenteuer und Sinn verbinden, eine Reise, um irgendwo zu helfen, oder ein gemeinsames Projekt, verbinden euch."
+    ]
+   },
+   {
+    "title": "Als Freunde und bei der Arbeit",
+    "paras": [
+     "Als Freunde träumt ihr groß und handelt danach. Bei der Arbeit startet die 1 und die 9 gibt Sinn und Reichweite: gemeinnützige Arbeit, Kunst, Bildung, internationale Projekte."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Nina, Lebenszahl 9, unterrichtete geflüchtete Kinder an einer Stadtschule. Jovan, Lebenszahl 1, führte eine kleine Softwarefirma und bot Laptops an. Innerhalb eines Jahres gründeten sie zusammen einen Programmierclub. Sie sorgt dafür, dass die Kinder wiederkommen, er findet immer neue Partner für die Finanzierung."
+    ]
+   },
+   {
+    "title": "Wann es am besten gelingt",
+    "paras": [
+     "Dieses Paar gelingt am besten, wenn die 1 lernt, Dinge mit Anmut abzuschließen, und die 9 lernt, Dinge mit Fokus zu beginnen. Jede Seite lehrt die andere die Hälfte des Kreises, die ihr am schwersten fällt."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein vollgepacktes Auto auf dem Weg zu einem sinnvollen Ort, eine Seite fährt zügig aufs Ziel zu, die andere schaut aus dem Fenster und bemerkt, wer unterwegs Hilfe braucht."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung für euch beide",
+    "paras": [
+     "Wählt jede Jahreszeit ein persönliches Ziel für die 1 und ein Anliegen für die 9 und unterstützt beide gemeinsam. Schaut am ersten Tag der nächsten Jahreszeit darauf zurück."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Jedes Ende bereitet einen Anfang vor; geht beide Wege zusammen, und der Kreis bleibt ganz."
+    ]
+   }
+  ]
  }
 };
