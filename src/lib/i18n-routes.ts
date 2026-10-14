@@ -38,6 +38,7 @@ export const NUM_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
   compatibility: { mk: "kompatibilnost", de: "kompatibilitaet" },
   calculator: { mk: "kalkulator", de: "rechner" },
   "mirror-hours": { mk: "ogledalni-casovi", de: "spiegelzahlen" },
+  "personal-year-2027": { mk: "licna-godina-2027", de: "persoenliches-jahr-2027" },
   name: { mk: "ime", de: "name" },
 };
 const PAIR_JOIN: Record<RouteLocale, string> = { en: "and", mk: "i", de: "und" };
