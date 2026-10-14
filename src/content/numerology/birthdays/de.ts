@@ -1775,5 +1775,239 @@ export const bdayDe: BdaySet = {
     ]
    }
   ]
+ },
+ "25": {
+  "title": "Geboren am 25.: die stillen Forschenden",
+  "lead": "Der 25. reduziert sich auf 7 und verbindet die Partnerschaft der 2 mit der Freiheit der 5: ein fragender Geist, der durch Erfahrung und Nachdenken lernt.",
+  "sections": [
+   {
+    "title": "Die Gabe des 25.",
+    "paras": [
+     "Fünfundzwanzig ist fünf mal fünf, ein Quadrat der Erfahrung, und kommt in der nachdenklichen 7 zur Ruhe. Wer an diesem Tag geboren ist, handelt oft zuerst und versteht danach. Ideen werden am Leben selbst geprüft. Die Gabe ist eine Weisheit, die verdient und nicht geliehen ist, und ein Gespür für die Frage hinter der Frage."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht misstraust du einfachen Antworten und prüfst lieber selbst. Nach außen wirkst du ruhig, während dein Kopf im Hintergrund analysiert. Viele vom 25. haben starke Ahnungen über Menschen und finden später die Belege dafür. Nach vollen Tagen brauchst du Zeit allein, so wie andere Schlaf brauchen."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Analyse, Intuition, Geduld mit komplexen Problemen, eigenständiges Denken und ein trockener, beobachtender Humor. Der 25. kommt gut zurecht in Forschung, Ermittlung, Psychologie, Datenwissenschaft und jedem Feld, das genaues Hinsehen belohnt."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Rückzug und Misstrauen sind die Risiken. Du grübelst vielleicht zu viel, schließt Gefühle weg oder zweifelst an Menschen, die es gut meinen. Wachstum kommt, wenn du halbfertige Gedanken mit wenigen Vertrauten teilst und das Herz an der Untersuchung teilnehmen lässt."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Vertrauen wächst beim 25. langsam, aber einmal geschenkt, geht es tief. Du brauchst einen Menschen, der Stille respektiert, echte Gespräche mag und eine geschlossene Tür nicht persönlich nimmt."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Forschung, Forensik, Psychologie, Analytik, investigativer Journalismus, Philosophie, Softwaretests, Archivarbeit und spezialisierte Medizin."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Stefan, geboren am 25. November, war Automechaniker, bevor er sich zum Ermittler für Versicherungsbetrug umschulen ließ. Kollegen sagen, er sieht den Kratzer an der Stoßstange, der nicht zur Geschichte passt. Zu Hause zieht er seltene Tomatensorten und führt ein Heft über jeden Samen, der nicht aufging, und warum."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 3 oder 6 bringt ein Geburtstag am 25. Tiefe und ein Bedürfnis nach Rückzug in gesellige Gaben. Auf der 7 verdoppelt sich das Suchen, Verbindung muss bewusst gewählt werden. Auf der 1 wird Ehrgeiz zu sorgfältiger Strategie. Auf der 5 wird Erfahrung zu Wissen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein früher Spaziergang im Nebel, ein Notizbuch mit drei unterstrichenen Fragen, ein Abend, an dem ein altes Radio zerlegt wird, nur um zu sehen, wie es funktioniert: Der 25. ist am glücklichsten, wenn er etwas löst."
+    ]
+   },
+   {
+    "title": "Über die Intuition",
+    "paras": [
+     "Viele vom 25. tun ihre Ahnungen als unwissenschaftlich ab, dabei ist das Bauchgefühl oft eine schnelle Summe unzähliger kleiner Beobachtungen. Die Ahnung aufzuschreiben und später zu prüfen, stärkt das Vertrauen in Verstand und Instinkt zugleich."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Erzähl einmal pro Woche einem Menschen etwas, das du noch herausfindest, bevor du die ganze Antwort hast. Unfertige Gedanken, behutsam geteilt, schaffen Nähe. Gut Ding will Weile haben, auch beim Vertrauen."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Such die Wahrheit und lass ein paar gute Menschen die Suche mit dir gehen."
+    ]
+   }
+  ]
+ },
+ "26": {
+  "title": "Geboren am 26.: die großzügigen Verwaltenden",
+  "lead": "Der 26. reduziert sich auf 8 und verbindet die Diplomatie der 2 mit der Fürsorge der 6: praktische Kraft, die eingesetzt wird, um Menschen und Mittel zu schützen.",
+  "sections": [
+   {
+    "title": "Die Gabe des 26.",
+    "paras": [
+     "Sechsundzwanzig verbindet das Taktgefühl der 2 mit dem Familienherz der 6 und kommt in der 8 von Leistung und Verwaltung an. Wer an diesem Tag geboren ist, hat oft ein Talent für Geschäft und Organisation, das zum Schutz anderer dient. Die Gabe ist, Dinge zum Laufen zu bringen, damit sich die Menschen ringsum sicher fühlen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht verwaltest du das Familienbudget, buchst den Urlaub und ordnest nach einer Krise die Papiere. Du magst Qualität und erkennst ein gutes Geschäft. Du fühlst dich für die Menschen unter deinem Dach verantwortlich und wirst unruhig, wenn deine Mühe nicht bemerkt wird."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Organisation, Finanzgespür, Treue, Diplomatie und die Fähigkeit, Menschen mit Wärme zu führen. Der 26. glänzt in Management, Bankwesen, Immobilien, Recht, Gastgewerbe und Familienbetrieb."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Kontrolle und Geldsorgen sind die Risiken. Liebe wird vielleicht in Opfern gemessen, oder alte Kränkungen und alte Dinge werden festgehalten. Wachstum kommt, wenn du anderen Verantwortung anvertraust und dich erinnerst, dass Sicherheit auch etwas Seelisches ist."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Liebe zeigt sich beim 26. oft durch Versorgung: ein sicheres Zuhause, ein voller Kühlschrank, ein Plan für die Zukunft. Du brauchst einen Menschen, der auch die zärtlichen Worte sagt und dich zur Ruhe einlädt."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Geschäftsführung, Finanzen, Immobilien, Recht, Hotel und Restaurantleitung, öffentliche Verwaltung, Coaching und die Führung eines Familienunternehmens."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Ana, geboren am 26. April, übernahm die kleine Bäckerei ihres Vaters, als er krank wurde, und machte daraus vier Filialen. Bis heute kennt sie die Kinder jeder Angestellten beim Namen. Nach ihrem Geheimnis gefragt, sagt sie, die Bücher müssen stimmen, und die Herzen auch."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 2 oder 7 bringt ein Geburtstag am 26. Sicherheit im Umgang mit Geld und Struktur. Auf der 8 verdoppelt sich der Erfolgswille, Ausgleich wird wichtig. Auf der 3 bekommt Kreativität Geschäftssinn. Auf der 9 wird Großzügigkeit zu wirksamem Geben."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Kalender voller Termine anderer Leute, ein Ordner mit Belegen nach Jahren sortiert, ein Sonntagsessen, von dem niemand hungrig aufsteht: Der 26. lässt Ordnung und Fülle zusammen wohnen."
+    ]
+   },
+   {
+    "title": "Über die Vergangenheit",
+    "paras": [
+     "Viele vom 26. bewahren Dinge auf: Briefe, Rezepte, altes Werkzeug. Die Vergangenheit zu ehren ist eine Stärke, doch eine Schublade pro Jahreszeit auszuräumen hält die Gegenwart leicht."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Gib jeden Monat eine Aufgabe an jemand anderen ab und schau eine Woche lang nicht nach. Das Vertrauen wächst, und deine freie Zeit auch."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Wahrer Reichtum ist das, was du teilst, und wahre Stärke schließt Loslassen ein."
+    ]
+   }
+  ]
+ },
+ "27": {
+  "title": "Geboren am 27.: die mitfühlenden Wegweiser",
+  "lead": "Der 27. reduziert sich auf 9 und verbindet die Feinfühligkeit der 2 mit der Weisheit der 7: ein weites Herz, tiefe Intuition und ein humanitärer Zug.",
+  "sections": [
+   {
+    "title": "Die Gabe des 27.",
+    "paras": [
+     "Siebenundzwanzig ist drei mal neun, und die Ziffern 2 und 7 bringen Feingefühl und spirituelle Einsicht in die 9 von Vollendung und Mitgefühl. Wer an diesem Tag geboren ist, wirkt oft wie eine alte Seele, tolerant und weise über die eigenen Jahre hinaus. Die Gabe ist, den Menschen hinter jeder Rolle zu sehen und anderen beim Wachsen zu helfen."
+    ]
+   },
+   {
+    "title": "So zeigt es sich",
+    "paras": [
+     "Vielleicht merkst du, dass Fremde dir ihre Lebensgeschichte erzählen. Du spürst den Schmerz der Welt stark und willst etwas tun. Du kannst idealistisch sein und ungeduldig mit Kleingeist. Viele vom 27. zieht es zu Philosophie, Spiritualität oder Kunst, die große Fragen berührt."
+    ]
+   },
+   {
+    "title": "Stärken",
+    "paras": [
+     "Mitgefühl, Toleranz, Intuition, mitreißende Rede und ein weiter Blick auf das Leben. Der 27. glänzt in Lehre, Heilberufen, Kunst, humanitärer Arbeit und jeder Rolle, die einer größeren Sache dient."
+    ]
+   },
+   {
+    "title": "Die Wachstumskante",
+    "paras": [
+     "Gefühlsextreme und Ungeduld sind die Risiken. Du pendelst vielleicht zwischen selbstlosem Geben und plötzlichem Rückzug oder bist enttäuscht, wenn Menschen deinen Idealen nicht gerecht werden. Wachstum kommt durch das Annehmen von Unvollkommenheit, bei anderen und bei dir."
+    ]
+   },
+   {
+    "title": "Liebe",
+    "paras": [
+     "Du liebst großzügig und brauchst einen Menschen, der deine Werte teilt. Besitzergreifende oder enge Beziehungen fallen dir schwer. Liebe blüht, wenn beide eine Sache haben, die größer ist als das Paar."
+    ]
+   },
+   {
+    "title": "Passende Arbeit",
+    "paras": [
+     "Lehre, Beratung, Medizin, gemeinnützige Arbeit, Kunst und Musik, Schreiben, spirituelle Begleitung, internationale Hilfe und Führungsrollen mit einer Mission."
+    ]
+   },
+   {
+    "title": "Ein kurzes Porträt",
+    "paras": [
+     "Goran, geboren am 27. Juli, unterrichtete dreißig Jahre lang Literatur an einer Dorfschule. Ehemalige Schüler, heute Ärztinnen und Bauern, besuchen ihn noch immer. Nach der Pensionierung gründete er Leseclubs für Geflüchtete und sagt, eine gute Geschichte sei das erste gemeinsame Zuhause."
+    ]
+   },
+   {
+    "title": "Mit deiner Lebenszahl",
+    "paras": [
+     "Auf der Lebenszahl 4 oder 8 weitet ein Geburtstag am 27. praktische Arbeit um Sinn. Auf der 9 verdoppelt sich der Idealismus, Ruhe und Grenzen werden wichtig. Auf der 1 bekommt Führung ein Herz. Auf der 5 wird Reisen zu Verstehen."
+    ]
+   },
+   {
+    "title": "Ein Bild aus dem Alltag",
+    "paras": [
+     "Ein Regal mit abgegriffenen Büchern, ein Wasserkocher, der immer warm ist, ein Brief an jemanden in der Ferne, ein stiller Moment am Fenster mit Blick auf die Straße: Der 27. nimmt die Welt auf und gibt sie freundlich zurück."
+    ]
+   },
+   {
+    "title": "Über Abschiede",
+    "paras": [
+     "Neun ist die Zahl der Vollendung, und viele vom 27. erleben große Kapitel, die sich schließen: Umzüge, Abschiede, berufliche Wechsel. Jedes Ende, mit Anmut getragen, wird Teil ihrer Weisheit."
+    ]
+   },
+   {
+    "title": "Eine kleine Übung",
+    "paras": [
+     "Wenn dich jemand enttäuscht, schreib drei Dinge auf, die dieser Mensch gut gemacht hat. Das entschuldigt keinen Schaden, hält aber das Herz weit und das Urteil fair."
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Sieh das Beste in den Menschen und schenk dir dieselbe Güte, die du der Welt schenkst."
+    ]
+   }
+  ]
  }
 };

@@ -1739,5 +1739,239 @@ export const bdayEn: BdaySet = {
     ]
    }
   ]
+ },
+ "25": {
+  "title": "Born on the 25th: the quiet investigator",
+  "lead": "The 25th reduces to 7 and joins the partnership of 2 with the freedom of 5: an inquiring mind that learns through experience and reflection.",
+  "sections": [
+   {
+    "title": "The gift of the 25th",
+    "paras": [
+     "Twenty five is five times five, a square of experience, and it settles into the reflective 7. People born on this day often learn by doing first and understanding afterwards. They test ideas against life itself. Their gift is wisdom that is earned rather than borrowed, and an instinct for the question behind the question."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may distrust easy answers and prefer to check for yourself. You can seem calm on the surface while your mind runs analysis in the background. Many of the 25th have strong hunches about people and later find the evidence to support them. You need time alone after busy days, the way others need sleep."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Analysis, intuition, patience with complex problems, independence of thought and a dry, observant humour. The 25th does well in research, detective work, psychology, data science and any field that rewards careful observation."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Withdrawal and suspicion are the risks. The 25th can overthink, keep feelings locked away or doubt people who mean well. Growth comes from sharing half finished thoughts with a trusted few and letting the heart join the investigation."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Trust builds slowly with the 25th, but once given it runs deep. They need a partner who respects silence, enjoys real conversation and does not take a closed door personally."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Research, forensics, psychology, analytics, investigative journalism, philosophy, software testing, archival work and specialised medicine."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Stefan, born on the 25th of November, worked as a mechanic before retraining as an insurance fraud investigator. Colleagues say he notices the scratch on a bumper that does not match the story. At home he grows rare tomatoes and keeps a notebook of every seed that failed and why."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 3 or 6, a 25th birthday adds depth and a need for privacy to sociable gifts. On 7 it doubles the seeker, so connection must be chosen consciously. On 1 it turns ambition into careful strategy. On 5 experience becomes knowledge."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "An early walk in the fog, a pocket notebook with three questions underlined, an evening spent taking apart a broken radio just to see how it works: the 25th is happiest when solving something."
+    ]
+   },
+   {
+    "title": "A note on intuition",
+    "paras": [
+     "Many of the 25th dismiss their hunches as unscientific, yet their gut is often a fast summary of countless small observations. Writing the hunch down and checking it later builds trust in both mind and instinct."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Once a week, tell one person something you are still figuring out, before you have the full answer. Unfinished thoughts shared with care create closeness."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Seek the truth, and let a few good people walk the search with you."
+    ]
+   }
+  ]
+ },
+ "26": {
+  "title": "Born on the 26th: the generous manager",
+  "lead": "The 26th reduces to 8 and blends the diplomacy of 2 with the care of 6: practical power used to look after people and resources.",
+  "sections": [
+   {
+    "title": "The gift of the 26th",
+    "paras": [
+     "Twenty six combines the tact of 2 with the family heart of 6, and settles into the 8 of achievement and stewardship. People born on this day often have a talent for business and organisation that they use to protect others. Their gift is making things work so that the people around them feel secure."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may be the one who handles the family budget, books the holiday and sorts the paperwork after a crisis. You like quality and can spot a good deal. You feel responsible for the people under your roof, and you can become restless when your efforts go unnoticed."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Organisation, financial sense, loyalty, diplomacy and the ability to manage people with warmth. The 26th excels in management, banking, real estate, law, hospitality and family business."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Control and worry about money are the risks. The 26th can measure love in sacrifice, or hold on to old hurts and old possessions. Growth comes from trusting others with responsibility and remembering that security is also emotional."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "Love for the 26th is often expressed through provision: a safe home, a full fridge, a plan for the future. They need a partner who also says the soft words and invites them to rest."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "General management, finance, property, law, hotel and restaurant management, public administration, coaching and running a family firm."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Ana, born on the 26th of April, took over her father's small bakery when he fell ill and turned it into four shops. She still knows every employee's children by name. When asked about her secret, she says the books must balance, and so must the hearts."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 2 or 7, a 26th birthday adds confidence with money and structure. On 8 it doubles the drive for success, so balance matters. On 3 it gives creativity a business sense. On 9 it turns generosity into effective giving."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A calendar full of other people's appointments, a folder of receipts sorted by year, a Sunday lunch where nobody leaves hungry: the 26th makes order and abundance live together."
+    ]
+   },
+   {
+    "title": "A note on the past",
+    "paras": [
+     "Many of the 26th keep things: letters, recipes, old tools. Honouring the past is a strength, but clearing one drawer a season keeps the present light."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "Each month, hand one responsibility to someone else and do not check on it for a week. Trust grows, and so does your free time."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Real wealth is what you share, and real strength includes letting go."
+    ]
+   }
+  ]
+ },
+ "27": {
+  "title": "Born on the 27th: the compassionate guide",
+  "lead": "The 27th reduces to 9 and links the sensitivity of 2 with the wisdom of 7: a wide hearted teacher with deep intuition and a humanitarian streak.",
+  "sections": [
+   {
+    "title": "The gift of the 27th",
+    "paras": [
+     "Twenty seven is three times nine, and its digits 2 and 7 bring sensitivity and spiritual insight to the 9 of completion and compassion. People born on this day are often old souls, tolerant and wise beyond their years. Their gift is seeing the human being behind every role and helping people grow."
+    ]
+   },
+   {
+    "title": "How it shows",
+    "paras": [
+     "You may find that strangers tell you their life stories. You feel the pain of the world strongly and want to do something about it. You can be idealistic and impatient with small mindedness. Many of the 27th are drawn to philosophy, spirituality or art that touches big questions."
+    ]
+   },
+   {
+    "title": "Strengths",
+    "paras": [
+     "Compassion, tolerance, intuition, inspirational speech and a broad view of life. The 27th shines in teaching, healing, the arts, humanitarian work and any role that serves a larger cause."
+    ]
+   },
+   {
+    "title": "The growth edge",
+    "paras": [
+     "Emotional extremes and impatience are the risks. The 27th can swing between selfless giving and sudden withdrawal, or feel let down when people do not live up to their ideals. Growth comes from accepting imperfection, in others and in themselves."
+    ]
+   },
+   {
+    "title": "Love",
+    "paras": [
+     "The 27th loves generously and needs a partner who shares their values. They may struggle with possessive or narrow relationships. Love flourishes when both have a cause bigger than the couple."
+    ]
+   },
+   {
+    "title": "Work that fits",
+    "paras": [
+     "Teaching, counselling, medicine, nonprofit work, art and music, writing, spiritual guidance, international aid and leadership roles with a mission."
+    ]
+   },
+   {
+    "title": "A short portrait",
+    "paras": [
+     "Goran, born on the 27th of July, taught literature in a village school for thirty years. Former students, now doctors and farmers, still visit him. After retiring he started reading clubs for refugees, saying a good story is the first shared home."
+    ]
+   },
+   {
+    "title": "With your life path",
+    "paras": [
+     "On life path 4 or 8, a 27th birthday widens practical work with meaning. On 9 it doubles the idealist, so rest and limits matter. On 1 it gives leadership a heart. On 5 it turns travel into understanding."
+    ]
+   },
+   {
+    "title": "A picture from daily life",
+    "paras": [
+     "A shelf of worn books, a kettle always warm, a letter written to someone far away, a quiet moment at the window watching the street: the 27th takes in the world and gives it back with kindness."
+    ]
+   },
+   {
+    "title": "A note on endings",
+    "paras": [
+     "Nine is the number of completion, and many of the 27th live through big chapters closing: moves, farewells, career changes. Each ending, handled with grace, becomes part of their wisdom."
+    ]
+   },
+   {
+    "title": "A small practice",
+    "paras": [
+     "When you feel let down by someone, write down three things they did well. It does not excuse harm, but it keeps the heart wide and the judgment fair."
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "See the best in people, and give yourself the same kindness you give the world."
+    ]
+   }
+  ]
  }
 };
