@@ -25,7 +25,9 @@ export function SignCarousel() {
           {SIGNS.map((sg) => (
             <button key={sg} onClick={() => setSel(sg)} aria-pressed={sel === sg}
               className={`group relative w-[190px] shrink-0 snap-start overflow-hidden rounded-[28px] border p-4 text-center transition duration-500 ${sel === sg ? "-translate-y-2 border-gold/70 bg-white/[0.12] shadow-[0_25px_60px_-20px_rgba(246,207,122,.55)]" : "border-white/12 bg-white/[0.05] hover:-translate-y-1 hover:border-gold/40"}`}>
-              <SignArt sign={sg} className="mx-auto h-36 w-36 transition duration-700 group-hover:scale-110" />
+              {/* The twelve cards use the cached sign files (40 KB less HTML); the open card below stays live and animated. */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={`/art/sign/${sg}.svg`} alt="" width={144} height={144} loading="lazy" decoding="async" className="mx-auto h-36 w-36 transition duration-700 group-hover:scale-110" />
               <p className="h-display mt-1 text-2xl">{A.signs[sg].name}</p>
               <p className="text-xs text-dim">{SIGN_DATES[sg][0]} → {SIGN_DATES[sg][1]}</p>
               <p className="mt-1 text-[11px] uppercase tracking-widest text-gold/80">{A.elements[SIGN_ELEMENT[sg]].name}</p>

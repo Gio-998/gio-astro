@@ -11,6 +11,7 @@ import { useContent, useHref } from "@/lib/content-context";
 import { ZodiacWheel } from "./art/ZodiacWheel";
 import { LOCALES } from "@/content";
 import { playFor } from "./play/content";
+import { siteLinks } from "@/lib/site-links";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
@@ -94,7 +95,7 @@ export function Header() {
       <header className={bar} data-testid="header-guest">
         <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-3">
           {logo}
-          <div className="hidden lg:block"><DesktopNav keys={["tests", "discover"]} showToday={false} /></div>
+          <div className="hidden lg:block"><DesktopNav keys={["astrology", "tests", "discover"]} showToday={false} /></div>
           <nav aria-label={N.aria.utility} className="flex items-center gap-1.5 text-sm">
             <LangSwitch className="lg:ml-2" />
             <Link href={h("/account/")} className="ml-1 hidden whitespace-nowrap rounded-full px-3 py-1.5 text-mist hover:text-gold lg:inline" data-testid="nav-login">{B.login}</Link>
@@ -111,7 +112,7 @@ export function Header() {
         <Link href={h("/account/")} className="btn-ghost !py-2.5 text-center text-sm" data-testid="bar-login">{B.login}</Link>
         <a href={joinHref} className="btn-primary !py-2.5 text-center text-sm" data-testid="bar-join">{B.joinBeta} ✦</a>
       </nav>
-      <MoreSheet open={guestMenu} onClose={closeGuest} keys={["tests", "discover"]} />
+      <MoreSheet open={guestMenu} onClose={closeGuest} keys={["astrology", "tests", "discover"]} />
     </>
   );
   return (
@@ -119,7 +120,7 @@ export function Header() {
       <header className={bar}>
         <div className="relative mx-auto flex max-w-6xl min-w-0 items-center justify-between gap-2 px-4 py-3">
           {logo}
-          <div className="hidden lg:block"><DesktopNav keys={["me", "bonds", "tests", "discover"]} /></div>
+          <div className="hidden lg:block"><DesktopNav keys={["astrology", "me", "bonds", "tests", "discover"]} /></div>
           <div className="flex min-w-0 shrink items-center gap-1 min-[420px]:gap-1.5 sm:gap-2">
             <LangSwitch />
             <AccountChip />
@@ -135,6 +136,7 @@ export function Header() {
 export function Footer() {
   const { c, locale } = useContent(); const h = useHref(); const F = c.site.footerCols; const locked = useBetaLocked(); const toTop = useToTop();
   const cols = [
+    { t: F.astro, l: siteLinks(locale).map((x) => [x.href, x.title]) },
     ...(locked ? [{ t: F.discover, l: [["/quizzes/", F.quizzes], ["/learn/", c.site.nav.learn]] }] : [
     { t: F.discover, l: [["/start/", F.chart], ["/me/", F.me], ["/you/", c.you.title], ["/today/", F.today], ["/quizzes/", F.quizzes], ["/play/", playFor(locale).brand]] },
     { t: F.rel, l: [["/match/", F.match], ["/bond/", F.bond], ["/people/", F.people]] }]),
@@ -143,7 +145,7 @@ export function Footer() {
   return (
     <footer className="relative mt-20 overflow-hidden border-t border-white/10 bg-gradient-to-b from-transparent to-ink/80">
       <ZodiacWheel className="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] animate-spin-slow opacity-[0.12]" />
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 pb-32 pt-14 md:grid-cols-[1.4fr_1fr_1fr_1fr] lg:pb-14">
+      <div className={`relative mx-auto grid max-w-6xl gap-10 px-4 pb-32 pt-14 sm:grid-cols-2 lg:pb-14 ${cols.length > 3 ? "lg:grid-cols-[1.4fr_1fr_1fr_1fr_1fr]" : "md:grid-cols-[1.4fr_1fr_1fr_1fr]"}`}>
         <div>
           <Link href={h("/")} onClick={toTop} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
           <p className="mb-4 max-w-xs text-sm text-dim">{c.site.tagline}. {F.blurb}</p>

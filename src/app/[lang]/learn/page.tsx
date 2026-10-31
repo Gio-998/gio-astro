@@ -1,5 +1,6 @@
 import { pageMeta } from "@/lib/page-meta";
 import { PageHero } from "@/components/ui";
+import { SectionLinks } from "@/components/nav/SectionLinks";
 export const generateMetadata = pageMeta("learn");
 function PageEn() {
   return (
@@ -94,5 +95,5 @@ function PageDe() {
 }
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
+  return <>{lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />}<SectionLinks lang={lang} className="mt-12" /></>;
 }

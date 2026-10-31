@@ -8,6 +8,7 @@
  *  - Moon phases: US Naval Observatory phases of the Moon, 2024 (aa.usno.navy.mil).
  */
 import { describe, it, expect } from "vitest";
+import { Settings } from "luxon";
 import horizons from "./fixtures/horizons.json";
 import { computeChart, longitude, Planet, Point } from "../src/engine/astro";
 import { resolveBirthTime } from "../src/engine/time";
@@ -96,6 +97,16 @@ describe("time-zone history", () => {
     const t = resolveBirthTime({ date: "2021-10-31", time: "02:30", place: warsaw });
     expect(t.tzNote).toBe("ambiguous");
     expect(t.offsetMinutes).toBe(120);
+  });
+  it("reads a repeated clock time the same way in every season the code runs in", () => {
+    const real = Settings.now;
+    try {
+      for (const when of ["2026-07-01T12:00:00Z", "2026-12-01T12:00:00Z"]) {
+        Settings.now = () => Date.parse(when);
+        expect(resolveBirthTime({ date: "2021-10-31", time: "02:30", place: warsaw }).offsetMinutes, when).toBe(120);
+        expect(resolveBirthTime({ date: "2021-11-07", time: "01:30", place: { name: "New York", lat: 40.71, lon: -74.01, tz: "America/New_York" } }).offsetMinutes, when).toBe(-240);
+      }
+    } finally { Settings.now = real; }
   });
   it("normal times carry no note", () => expect(resolveBirthTime({ date: "2021-07-01", time: "12:00", place: warsaw }).tzNote).toBeNull());
   it("Poland 1977 had summer time from April (UTC+2)", () => expect(resolveBirthTime({ date: "1977-06-01", time: "12:00", place: warsaw }).offsetMinutes).toBe(120));

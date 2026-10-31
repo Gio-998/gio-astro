@@ -62,12 +62,15 @@ export function resolveBirthTime(input: BirthInput, fallbackTime = "12:00"): Res
     return { utc: naive, offsetMinutes: 0, offsetSource: "assumed-utc", timeKnown };
   }
   const dt = DateTime.fromObject({ year: y, month: m, day: d, hour: hh, minute: mm || 0 }, { zone: input.place.tz });
-  let off = dt.isValid ? dt.offset : 0;
+  // Luxon picks between the two readings of a repeated clock time by guessing from the zone's offset today, so the
+  // same birth would change with the season the code runs in. The first occurrence always has the larger offset.
+  const readings = dt.isValid ? dt.getPossibleOffsets() : [];
+  let off = !dt.isValid ? 0 : readings.length > 1 ? Math.max(...readings.map((r) => r.offset)) : dt.offset;
   let source: ResolvedTime["offsetSource"] = "tzdb";
   let tzNote: ResolvedTime["tzNote"] = null;
   if (dt.isValid && timeKnown) {
     if (dt.hour !== hh || dt.minute !== (mm || 0)) tzNote = "gap";
-    else if (dt.getPossibleOffsets().length > 1) tzNote = "ambiguous";
+    else if (readings.length > 1) tzNote = "ambiguous";
   }
   // While a zone is still on local mean time (LMT), the tz database only knows the LMT of its reference city
   // (Berlin for all of Germany, Moscow for most of western Russia). Use the birthplace's own mean time instead.

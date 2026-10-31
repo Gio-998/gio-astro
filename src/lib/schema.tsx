@@ -2,6 +2,7 @@
 import { SITE_URL } from "./site-url";
 
 export const ORG_REF = { "@id": `${SITE_URL}/#organization` };
+export const CONTACT_EMAIL = "contact@horoscop.si";
 export const abs = (p: string) => (p.startsWith("http") ? p : `${SITE_URL}${p}`);
 /** BreadcrumbList from [name, path] pairs (first = home). */
 export function breadcrumb(items: [string, string][]) {

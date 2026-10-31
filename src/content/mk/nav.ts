@@ -14,6 +14,22 @@ export const nav: Nav = {
   horoscope: { label: "Дневен хороскоп", desc: "Сите 12 знаци, секој ден ново" },
   pricing: { label: "Цени", desc: "Планови, извештаи и што е бесплатно" },
   groups: {
+    astrology: {
+      label: "Астрологија", linksTitle: "Хороскопи, знаци и калкулатори",
+      feature: { title: "Твоето небо, објаснето", text: "Знаци, компатибилност, календари и калкулатори на едно место.", cta: "Кон хороскопските знаци" },
+      items: [
+        { href: "/weekly-horoscope/", icon: "sun", title: "Неделен хороскоп", desc: "Твоите следни седум дена, знак по знак" },
+        { href: "/monthly-horoscope/", icon: "moon", title: "Месечен хороскоп", desc: "Месецот пред тебе за сите 12 знаци" },
+        { href: "/horoscope-2027/", icon: "eye", title: "Хороскоп 2027", desc: "Големите теми на годината по знаци" },
+        { href: "/zodiac/", icon: "explorer", title: "Хороскопски знаци", desc: "Датуми, особини, љубов и работа" },
+        { href: "/sign-compatibility/", icon: "bond", title: "Компатибилност на знаци", desc: "Како се сложуваат два знака" },
+        { href: "/birth-chart/", icon: "chart", title: "Калкулатор за натална карта", desc: "Планети и куќи од твоите податоци за раѓање" },
+        { href: "/rising-sign/", icon: "yinyang", title: "Калкулатор за асцендент", desc: "Твојот подзнак од времето и местото на раѓање" },
+        { href: "/moon-sign/", icon: "moon", title: "Калкулатор за месечев знак", desc: "Каде била Месечината при твоето раѓање" },
+        { href: "/moon-calendar/", icon: "moon", title: "Месечев календар", desc: "Млада и полна месечина и сите мени" },
+        { href: "/mercury-retrograde/", icon: "vedic", title: "Ретрограден Меркур", desc: "Датумите и што значат" },
+      ],
+    },
     me: {
       label: "Јас", feature: { title: "Сè за тебе, на едно место", text: "Знаци, бројки, аура и резултати.", cta: "Отвори го профилот" },
       items: [

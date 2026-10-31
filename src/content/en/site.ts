@@ -10,7 +10,7 @@ export const site = {
   carousel: { prev: "Previous signs", next: "Next signs", gifts: "Gifts:", edge: "Growth edge:", more: "Your Sun sign is just one of 18 lenses. Your Moon, rising sign, Chinese animal and numbers often tell a very different story.", cta: "See my full sky ✦" },
   pickCard: { prompt: "Take a breath, think of a question, and pick one card.", today: "Today:", again: "Shuffle again" },
   skyNow: { title: "The sky right now", note: "Calculated live in your browser from real planetary positions.", cta: "See what today means for your chart →" },
-  footerCols: { discover: "Discover", rel: "Relationships", trust: "Trust", chart: "Free birth chart", me: "My profile", today: "Today's guidance", quizzes: "All quizzes", match: "Compatibility", bond: "Bond Check for two", people: "Saved people", extras: "Extras", blurb: "Every lens, honestly labelled. Full results free, data on your device." },
+  footerCols: { astro: "Astrology", discover: "Discover", rel: "Relationships", trust: "Trust", chart: "Free birth chart", me: "My profile", today: "Today's guidance", quizzes: "All quizzes", match: "Compatibility", bond: "Bond Check for two", people: "Saved people", extras: "Extras", blurb: "Every lens, honestly labelled. Full results free, data on your device." },
   tagline: "An honest mirror for you and your relationships",
   description: "Free birth chart, daily horoscope, personality quizzes and compatibility for partners, friends and family. Every full result is free.",
   nav: { today: "Today", me: "My profile", match: "Compatibility", people: "People", bond: "Bond Check", quizzes: "Quizzes", learn: "How it works" },
