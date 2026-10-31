@@ -13,6 +13,22 @@ export const nav: Nav = {
   horoscope: { label: "Tageshoroskop", desc: "Alle 12 Zeichen, jeden Tag neu" },
   pricing: { label: "Preise", desc: "Pläne, Reports und was gratis bleibt" },
   groups: {
+    astrology: {
+      label: "Astrologie", linksTitle: "Horoskope, Sternzeichen und Rechner",
+      feature: { title: "Dein Himmel, verständlich erklärt", text: "Sternzeichen, Partnerhoroskop, Mondkalender und Rechner an einem Ort.", cta: "Zu den Sternzeichen" },
+      items: [
+        { href: "/weekly-horoscope/", icon: "sun", title: "Wochenhoroskop", desc: "Deine nächsten sieben Tage, Zeichen für Zeichen" },
+        { href: "/monthly-horoscope/", icon: "moon", title: "Monatshoroskop", desc: "Der kommende Monat für alle 12 Zeichen" },
+        { href: "/horoscope-2027/", icon: "eye", title: "Jahreshoroskop 2027", desc: "Die großen Themen des Jahres je Sternzeichen" },
+        { href: "/zodiac/", icon: "explorer", title: "Sternzeichen", desc: "Daten, Eigenschaften, Liebe und Beruf" },
+        { href: "/sign-compatibility/", icon: "bond", title: "Partnerhoroskop", desc: "Wie gut zwei Sternzeichen zusammenpassen" },
+        { href: "/birth-chart/", icon: "chart", title: "Geburtshoroskop berechnen", desc: "Planeten und Häuser aus deinen Geburtsdaten" },
+        { href: "/rising-sign/", icon: "yinyang", title: "Aszendent berechnen", desc: "Aus Geburtszeit und Geburtsort" },
+        { href: "/moon-sign/", icon: "moon", title: "Mondzeichen berechnen", desc: "Wo der Mond bei deiner Geburt stand" },
+        { href: "/moon-calendar/", icon: "moon", title: "Mondkalender", desc: "Neumond, Vollmond und alle Mondphasen" },
+        { href: "/mercury-retrograde/", icon: "vedic", title: "Merkur rückläufig", desc: "Die Termine und was sie bedeuten" },
+      ],
+    },
     me: {
       label: "Ich", feature: { title: "Dein ganzes Ich auf einer Seite", text: "Zeichen, Zahlen, Aura und alle Testergebnisse auf einen Blick.", cta: "Mein Profil öffnen" },
       items: [

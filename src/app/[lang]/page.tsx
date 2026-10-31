@@ -6,6 +6,8 @@ import { QUIZ_ART } from "@/components/art/quizArt";
 import { Hero } from "@/components/landing/Hero";
 import { BetaInvite, StartOrJoin } from "@/components/auth/Beta";
 import { SignCarousel } from "@/components/landing/SignCarousel";
+import { MarqueeLoop } from "@/components/landing/MarqueeLoop";
+import { SectionLinks } from "@/components/nav/SectionLinks";
 import { PickACard } from "@/components/landing/PickACard";
 import { SkyNow } from "@/components/landing/SkyNow";
 import { Faq } from "@/components/landing/Faq";
@@ -19,6 +21,7 @@ import { ZodiacWheel } from "@/components/art/ZodiacWheel";
 import { ScrollFx } from "@/components/landing/ScrollFx";
 import { SignsToday } from "@/components/horoscope/SignsToday";
 import { NumbersHome } from "@/components/numerology/NumbersHome";
+import { abs, ORG_REF } from "@/lib/schema";
 
 const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha", play: "explorer" };
 
@@ -28,7 +31,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const defs = quizDefs(c);
   const tiers = (["research", "popular", "traditional"] as const).map((e) => ({ e, lenses: (Object.keys(LENS_EVIDENCE) as LensId[]).filter((l) => LENS_EVIDENCE[l] === e) }));
   const tierStyle = { research: "from-sage/25 to-transparent border-sage/30", popular: "from-violet/25 to-transparent border-violet/30", traditional: "from-gold/20 to-transparent border-gold/30" };
-  const jsonLd = { "@context": "https://schema.org", "@type": "WebApplication", name: c.site.brand, applicationCategory: "LifestyleApplication", operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" }, description: c.site.description };
+  const jsonLd = { "@context": "https://schema.org", "@type": "WebApplication", name: c.site.brand, url: abs(`/${lang}/`), inLanguage: lang, applicationCategory: "LifestyleApplication", operatingSystem: "Any", offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" }, description: c.site.description, publisher: ORG_REF };
   const L = c.landing;
   const T = (t: string[]) => <>{t[0]}{t[1] && <span className="italic text-aurora">{t[1]}</span>}{t[2]}</>;
   const discover: { img: Cosmos; t: string; d: string; href: string; e: EmblemId }[] = (["orion", "helix", "twinjet", "cliffs"] as Cosmos[]).map((img, i) => ({ img, ...L.discover[i], href: ["/start/", "/quizzes/", "/match/", "/today/"][i], e: (["chart", "eye", "bond", "moon"] as EmblemId[])[i] }));
@@ -42,17 +45,16 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       {/* Lens marquee */}
       <div className="bleed relative overflow-hidden border-y border-white/[0.07] bg-white/[0.025] py-3 sm:py-4 [mask-image:linear-gradient(90deg,transparent,#000_14%,#000_86%,transparent)]" aria-label={L.lensesIncluded}>
-        <div className="flex w-max animate-marquee whitespace-nowrap motion-reduce:animate-none">
-          {[0, 1].map((k) => (
-            <div key={k} className="flex shrink-0 gap-7 pr-7 sm:gap-10 sm:pr-10" aria-hidden={k === 1}>
-              {(Object.keys(LENS_ICON) as LensId[]).map((l) => <span key={l} className="flex items-center gap-2 font-display text-[15px] text-mist/75 sm:text-xl"><Emblem id={LENS_ICON[l]} className="h-4 w-4 opacity-80 sm:h-6 sm:w-6" />{c.compat.lenses[l].name}</span>)}
-            </div>
-          ))}
-        </div>
+        <MarqueeLoop className="flex w-max animate-marquee whitespace-nowrap motion-reduce:animate-none">
+          <div className="flex shrink-0 gap-7 pr-7 sm:gap-10 sm:pr-10">
+            {(Object.keys(LENS_ICON) as LensId[]).map((l) => <span key={l} className="flex items-center gap-2 font-display text-[15px] text-mist/75 sm:text-xl"><Emblem id={LENS_ICON[l]} className="h-4 w-4 opacity-80 sm:h-6 sm:w-6" />{c.compat.lenses[l].name}</span>)}
+          </div>
+        </MarqueeLoop>
       </div>
 
       <SignsToday lang={lang} />
       <NumbersHome lang={lang} />
+      <SectionLinks lang={lang} className="pt-6 sm:pt-8" />
 
       {/* What you'll discover */}
       <section id="discover" className="scroll-mt-20 py-24">
@@ -233,15 +235,15 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <SectionHead light eyebrow={L.s9.eyebrow} title={T(L.s9.title)} sub={L.s9.sub} />
         </div>
         <div className="relative">
-          <div className="flex w-max animate-marquee gap-5 hover:[animation-play-state:paused]">
-            {[...examples, ...examples].map(([who, q], i) => (
-              <figure key={i} aria-hidden={i >= examples.length} className="w-[320px] shrink-0 rounded-[28px] border border-[#2a2350]/10 bg-white/80 p-6 shadow-[0_20px_50px_-30px_rgba(42,35,80,.5)]">
+          <MarqueeLoop className="flex w-max animate-marquee gap-5 hover:[animation-play-state:paused]">
+            {examples.map(([who, q], i) => (
+              <figure key={i} className="w-[320px] shrink-0 rounded-[28px] border border-[#2a2350]/10 bg-white/80 p-6 shadow-[0_20px_50px_-30px_rgba(42,35,80,.5)]">
                 <span className="mb-3 inline-block rounded-full bg-[#2a2350]/10 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-[#5f5590]">{L.example}</span>
                 <blockquote className="h-display mb-3 text-xl leading-snug text-plum">{q}</blockquote>
                 <figcaption className="text-xs text-[#5f5590]">{who}</figcaption>
               </figure>
             ))}
-          </div>
+          </MarqueeLoop>
         </div>
       </section>
 

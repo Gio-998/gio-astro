@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 // Copy checker: keeps user-facing English text free of dashes-as-punctuation and common AI-sounding phrases.
 // Scans string literals, template text and JSX text in src/**/*.ts(x). Skips Macedonian (src/content/mk and any
 // string containing Cyrillic), code comments, imports, object keys and className/href-style attributes.

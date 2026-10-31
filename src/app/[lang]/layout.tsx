@@ -11,6 +11,7 @@ import { ContentProvider } from "@/lib/content-context";
 import { Header, Footer } from "@/components/Chrome";
 import { RouteScrollTop } from "@/components/RouteScrollTop";
 import { SITE_URL } from "@/lib/site-url";
+import { CONTACT_EMAIL } from "@/lib/schema";
 import { localizedMeta } from "@/lib/seo";
 import { PersonalTheme } from "@/components/PersonalTheme";
 import { AccountBoot } from "@/components/auth/Auth";
@@ -43,12 +44,13 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
   const site = getContent(lang).site;
-  // Site-level schema on every page: who publishes the site (Organization) and the site itself (WebSite).
+  // Site-level schema on every page: who publishes the site (Organization) and the site itself (WebSite). No sameAs until real profiles exist.
+  // One site, one identity: the same @id on every language, so WebSite names the domain and all its languages, not one locale folder.
   const siteLd = {
     "@context": "https://schema.org",
     "@graph": [
-      { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: site.brand, url: SITE_URL, logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 } },
-      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: site.brand, url: `${SITE_URL}/${lang}/`, inLanguage: lang, description: site.description, publisher: { "@id": `${SITE_URL}/#organization` } },
+      { "@type": "Organization", "@id": `${SITE_URL}/#organization`, name: site.brand, url: `${SITE_URL}/`, logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 }, email: CONTACT_EMAIL, contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: CONTACT_EMAIL, availableLanguage: [...LOCALES] } },
+      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: site.brand, alternateName: new URL(SITE_URL).hostname, url: `${SITE_URL}/`, inLanguage: [...LOCALES], description: site.description, publisher: { "@id": `${SITE_URL}/#organization` } },
     ],
   };
   return (

@@ -17,6 +17,7 @@ type Item = { href: string; icon: EmblemId; title: string; desc: string };
 type Group = { key: NavGroupKey; label: string; items: Item[]; feature: { title: string; text: string; cta: string; href: string; icon: EmblemId; glow: string } };
 
 const FEATURE: Record<NavGroupKey, { href: string; icon: EmblemId; glow: string }> = {
+  astrology: { href: "/zodiac/", icon: "explorer", glow: "from-indigo/50 via-violet/40 to-rose/25" },
   me: { href: "/me/", icon: "chart", glow: "from-violet/50 via-indigo/40 to-gold/25" },
   bonds: { href: "/match/", icon: "bond", glow: "from-rose/45 via-violet/35 to-gold/20" },
   tests: { href: "/quizzes/", icon: "big-five", glow: "from-gold/35 via-violet/40 to-sage/25" },
@@ -135,6 +136,9 @@ function PricingLink() {
 export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose: () => void; keys: NavGroupKey[]; top?: React.ReactNode }) {
   const groups = useGroups(keys); const N = useNav(); const path = usePathname() || ""; const h = useHref(); const { locale } = useContent();
   const ref = useRef<HTMLDivElement>(null);
+  // Built on first open: the desktop menu already puts every link in the HTML, so a second copy here would only add weight.
+  const [opened, setOpened] = useState(open);
+  if (open && !opened) setOpened(true);
   const close = useCallback(() => onClose(), [onClose]);
   useEffect(() => { close(); }, [path, close]);
   useEffect(() => {
@@ -149,6 +153,7 @@ export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose
       <div className={`absolute inset-0 bg-night/70 backdrop-blur-sm transition-opacity duration-300 ${open ? "opacity-100" : "opacity-0"}`} onClick={close} />
       <div ref={ref} role="dialog" aria-modal="true" aria-label={N.menu} data-testid="more-sheet"
         className={`absolute inset-x-0 bottom-0 max-h-[86vh] overflow-y-auto overscroll-contain rounded-t-[30px] border-t border-white/15 bg-ink/95 px-4 pb-[calc(6rem+env(safe-area-inset-bottom))] pt-3 shadow-[0_-30px_80px_-20px_rgba(139,108,240,.6)] backdrop-blur-2xl transition-transform duration-500 ease-[cubic-bezier(.16,1,.3,1)] ${open ? "translate-y-0" : "translate-y-full"}`}>
+        {opened && <>
         <div className="sticky top-0 z-10 -mx-4 mb-2 flex items-center justify-between bg-ink/95 px-4 pb-2 pt-1">
           <div className="mx-auto h-1 w-10 rounded-full bg-white/25" />
         </div>
@@ -170,6 +175,7 @@ export function MoreSheet({ open, onClose, keys, top }: { open: boolean; onClose
             <div className="grid grid-cols-1 gap-1 min-[420px]:grid-cols-2">{g.items.map((it) => <ItemLink key={it.href} it={it} compact />)}</div>
           </section>
         ))}
+        </>}
       </div>
     </div>
   );
@@ -198,7 +204,7 @@ export function TabBar() {
           <span className={`grid h-6 w-6 place-items-center transition ${more ? "rotate-45" : ""}`} aria-hidden><svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round"><path d="M12 5v14M5 12h14" /></svg></span>{N.more}
         </button>
       </nav>
-      <MoreSheet open={more} onClose={close} keys={["me", "bonds", "tests", "discover"]} />
+      <MoreSheet open={more} onClose={close} keys={["astrology", "me", "bonds", "tests", "discover"]} />
     </>
   );
 }

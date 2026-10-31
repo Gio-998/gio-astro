@@ -7,7 +7,7 @@ import { numModel, numPaths, type NumModel, type LinkItem } from "@/lib/numerolo
 import { localizedPath, parsePath, routeAlternates, sectionSlug } from "@/lib/i18n-routes";
 import { LOCALE_META } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
-import { breadcrumb, faqPage, LdJson, abs } from "@/lib/schema";
+import { breadcrumb, faqPage, LdJson, abs, ORG_REF } from "@/lib/schema";
 import { Calculator, type CalcLabels } from "./Calculator";
 import { DuoCalc, NameReport } from "./Personal";
 import { SectionWidget } from "@/components/sections/Widget";
@@ -72,7 +72,7 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
   const words = [m.lead, ...m.blocks.flatMap((b) => [...(b.paras ?? []), ...(b.list ?? []), b.quote ?? ""]), ...m.faq.flat()].join(" ").split(/\s+/).filter(Boolean).length;
   const ld: object[] = [breadcrumb(m.crumbs)];
   if (m.faq.length) ld.push(faqPage(m.faq));
-  if (m.kind === "article") ld.push({ "@context": "https://schema.org", "@type": "Article", headline: m.title, description: m.description, url, mainEntityOfPage: url, inLanguage: lang, wordCount: words, articleSection: m.sectionName ?? U.section, datePublished: m.published ?? SITE_LAUNCH, dateModified: m.modified ?? CONTENT_DATES.numerology, author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` }, image: [`${SITE_URL}/og/default/${lang}.jpg`] });
+  if (m.kind === "article") ld.push({ "@context": "https://schema.org", "@type": "Article", headline: m.title, description: m.description, url, mainEntityOfPage: url, inLanguage: lang, wordCount: words, articleSection: m.sectionName ?? U.section, datePublished: m.published ?? SITE_LAUNCH, dateModified: m.modified ?? CONTENT_DATES.numerology, author: { "@type": "Organization", "@id": ORG_REF["@id"], name: c.site.brand, url: `${SITE_URL}/` }, publisher: ORG_REF, image: [`${SITE_URL}/og/default/${lang}.jpg`], isPartOf: { "@id": `${SITE_URL}/#website` } });
   if (m.kind === "hub" && m.items) ld.push({ "@context": "https://schema.org", "@type": "ItemList", name: m.title, itemListElement: m.items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.label, url: abs(it.href) })) });
   if (m.kind === "calc") ld.push({ "@context": "https://schema.org", "@type": "WebApplication", name: m.title, url, applicationCategory: "LifestyleApplication", operatingSystem: "Any", inLanguage: lang, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } });
 

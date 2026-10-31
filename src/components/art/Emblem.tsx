@@ -1,10 +1,18 @@
-/** Original line-art emblems (gold) for quizzes, lenses and steps. */
+/**
+ * Original line-art emblems (gold) for quizzes, lenses and steps. Every drawing lives once in the page sprite (SvgDefs);
+ * each <Emblem> is a small <use> reference, so a page with a hundred emblems does not carry a hundred copies of each shape
+ * in its HTML and again in the RSC payload.
+ */
 export type EmblemId = "big-five" | "attachment" | "nine" | "care" | "shadow" | "dosha" | "explorer" | "bond" | "chart" | "sun" | "moon" | "tarot" | "number" | "yinyang" | "chinese" | "vedic" | "palette" | "animal" | "temperament" | "fourletter" | "eye";
+/** Written as a keyed object so a new EmblemId that is missing from the sprite fails the type check. */
+const SPRITE: Record<EmblemId, true> = { "big-five": true, attachment: true, nine: true, care: true, shadow: true, dosha: true, explorer: true, bond: true, chart: true, sun: true, moon: true, tarot: true, number: true, yinyang: true, chinese: true, vedic: true, palette: true, animal: true, temperament: true, fourletter: true, eye: true };
+export const EMBLEM_IDS = Object.keys(SPRITE) as EmblemId[];
 
 const poly = (n: number, r: number, rot = -90, cx = 50, cy = 50) => Array.from({ length: n }, (_, i) => { const a = ((rot + (i * 360) / n) * Math.PI) / 180; return [Math.round((cx + Math.cos(a) * r) * 100) / 100, Math.round((cy + Math.sin(a) * r) * 100) / 100]; });
 const pts = (p: number[][]) => p.map((q) => q.join(",")).join(" ");
 
-export function Emblem({ id, className = "" }: { id: EmblemId; className?: string }) {
+/** The drawing itself, rendered once per id into the sprite. */
+export function emblemBody(id: EmblemId): React.ReactNode {
   const S = { fill: "none", stroke: "url(#em-g)", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
   let body: React.ReactNode;
   switch (id) {
@@ -30,9 +38,9 @@ export function Emblem({ id, className = "" }: { id: EmblemId; className?: strin
     case "fourletter": body = <>{[[30, 30], [70, 30], [30, 70], [70, 70]].map(([x, y], k) => <rect key={k} x={x - 13} y={y - 13} width="26" height="26" rx="6" {...S} />)}<circle cx="50" cy="50" r="4" fill="#f6cf7a" /></>; break;
     case "eye": body = <><path d="M14 50 Q50 14 86 50 Q50 86 14 50 Z" {...S} /><circle cx="50" cy="50" r="12" {...S} /><circle cx="50" cy="50" r="4" fill="#f6cf7a" />{poly(9, 44, -90).slice(0, 5).map((q, k) => { const r = poly(9, 36, -90)[k]; return <line key={k} x1={r[0]} y1={r[1]} x2={q[0]} y2={q[1]} {...S} strokeOpacity=".5" />; })}</>; break;
   }
-  return (
-    <svg viewBox="0 0 100 100" className={className} aria-hidden>
-      {body}
-    </svg>
-  );
+  return body;
+}
+
+export function Emblem({ id, className = "" }: { id: EmblemId; className?: string }) {
+  return <svg viewBox="0 0 100 100" className={className} aria-hidden><use href={`#emb-${id}`} /></svg>;
 }

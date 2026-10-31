@@ -2,6 +2,7 @@
 import { numContent } from "@/content/numerology";
 import { getContent } from "@/content";
 import { localizedPath } from "./i18n-routes";
+import { siteLinks } from "./site-links";
 import { bankFor } from "./horoscope";
 import { angelLong, pageLong } from "@/content/numerology/long";
 import { reduce, rootOf } from "@/engine/numerology";
@@ -63,6 +64,14 @@ export function numModel(lang: string, path: string): NumModel | null {
   const key = path.split("/").filter(Boolean).slice(1).join("/") || "hub";
   const extra = pageLong(lang, key).map((x, k) => ({ id: `guide-${k}`, title: x.title, paras: x.paras }));
   if (extra.length) m.blocks = [m.blocks[0], ...extra, ...m.blocks.slice(1)];
+  // The pair family has no other way in: its hub is only linked from its own pages.
+  const H = PAIR_HUB[lang] ?? PAIR_HUB.en; const pairHub: LinkItem[] = PAIR_KEYS.length ? [{ href: lp(lang, `${N}compatibility/`), label: H.title.split(":")[0], sub: H.sub }] : [];
+  if (path === N) {
+    const day = numContent(lang).explain["personal-day"];
+    m.items = [...(m.items ?? []), ...pairHub, { href: lp(lang, `${N}personal-day/`), label: day.title.split(":")[0], sub: day.sub }];
+    m.related = [...siteLinks(lang).filter((l) => l.href !== N).map((l) => ({ href: lp(lang, l.href), label: l.title, sub: l.desc })), ...(m.related ?? [])];
+  }
+  if (/^\/numerology\/(life-path\/(\d+\/)?|calculator\/compatibility\/)$/.test(path)) m.related = [...(m.related ?? []), ...pairHub];
   return m;
 }
 function numModelBase(lang: string, path: string): NumModel | null {

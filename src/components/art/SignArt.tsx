@@ -1,12 +1,17 @@
+"use client";
 import { CONSTELLATIONS, ELEMENT_COLORS } from "./constellations";
 import { SIGN_ELEMENT, SIGN_GLYPH, Sign } from "@/engine/zodiac";
 
-/** Original illustrated sign: element-coloured orb, halo rings, self-drawing constellation and a gilded glyph. */
+/**
+ * Original illustrated sign: element-coloured orb, halo rings, self-drawing constellation and a gilded glyph.
+ * Decorative (the sign's name is always in the text beside it). A client component so server pages reference it instead of
+ * repeating every star in the RSC payload.
+ */
 export function SignArt({ sign, className = "", animate = true, showGlyph = true }: { sign: Sign; className?: string; animate?: boolean; showGlyph?: boolean }) {
   const k = CONSTELLATIONS[sign]; const el = ELEMENT_COLORS[SIGN_ELEMENT[sign]]; const id = `sa-${sign}`;
   const pts = k.s.map(([x, y]) => [Math.round((30 + x * 1.4) * 100) / 100, Math.round((34 + y * 1.4) * 100) / 100]);
   return (
-    <svg viewBox="0 0 200 200" className={className} role="img" aria-label={`${sign} constellation`}>
+    <svg viewBox="0 0 200 200" className={className} aria-hidden>
       <defs>
         <radialGradient id={`${id}-orb`} cx="40%" cy="35%" r="70%">
           <stop offset="0" stopColor={el.b} stopOpacity=".55" />

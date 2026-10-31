@@ -37,9 +37,9 @@ const cssFont = (v: string, fb: string) => { const f = typeof window !== "undefi
 async function svgImage(markup: string, size: number): Promise<HTMLImageElement | null> {
   try {
     let s = markup.includes("xmlns=") ? markup : markup.replace("<svg", '<svg xmlns="http://www.w3.org/2000/svg"');
-    // line-art uses the page's shared gradients (components/art/SvgDefs): inline them so the standalone image paints
+    // line-art uses the page's shared gradients and sprite (components/art/SvgDefs): inline them so the standalone image paints
     const defs = document.querySelector("svg[aria-hidden] > defs #em-g")?.parentElement?.outerHTML;
-    if (defs && s.includes("url(#")) s = s.replace(/(<svg[^>]*>)/, `$1${defs}`);
+    if (defs && /url\(#|<use\b/.test(s)) s = s.replace(/(<svg[^>]*>)/, `$1${defs}`);
     s = s.replace(/<svg([^>]*?)\sclass="[^"]*"/, "<svg$1").replace("<svg", `<svg width="${size}" height="${size}"`);
     const img = new Image(); img.decoding = "async";
     img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(s);

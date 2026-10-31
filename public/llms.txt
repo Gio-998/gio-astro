@@ -1,0 +1,43 @@
+# Horoscop
+
+> Horoscop (horoscop.si) is a free astrology and numerology site in English, Macedonian and German. It publishes daily horoscopes computed from the real sky, reference guides and calculators. Astrology and numerology are treated as mirrors for reflection, not predictions, and pages never promise outcomes, health results or money.
+
+Every public page exists in three languages. URLs start with /en/, /mk/ or /de/, and each language has its own native slugs, for example /en/horoscope/aries/, /mk/dneven-horoskop/oven/ and /de/tageshoroskop/widder/. Pages link to their other language versions with hreflang.
+
+Astronomical facts on the site (planet positions, Moon phases, sign changes, retrogrades) are computed from an astronomy engine, not copied from tables. The site explains its methods and labels what is research-backed and what is traditional.
+
+## Horoscopes
+
+- [Daily horoscope](https://horoscop.si/en/horoscope/): a reading for each of the twelve signs, every day
+- [Weekly horoscope](https://horoscop.si/en/weekly-horoscope/): the week ahead by sign
+- [Monthly horoscope](https://horoscop.si/en/monthly-horoscope/): the month ahead by sign
+- [Horoscope 2027](https://horoscop.si/en/horoscope-2027/): the themes of the year by sign
+
+## Astrology guides and calculators
+
+- [Zodiac signs](https://horoscop.si/en/zodiac-signs/): dates and traits of the twelve signs
+- [Zodiac compatibility](https://horoscop.si/en/zodiac-compatibility/): how each pair of signs gets along
+- [Birth chart calculator](https://horoscop.si/en/birth-chart-calculator/): planets and houses from birth data
+- [Rising sign calculator](https://horoscop.si/en/rising-sign-calculator/): the ascendant from birth time and place
+- [Moon sign calculator](https://horoscop.si/en/moon-sign-calculator/): the sign of the Moon at birth
+- [Moon calendar](https://horoscop.si/en/moon-calendar/): new moons, full moons and phases
+- [Mercury retrograde](https://horoscop.si/en/mercury-retrograde/): the dates and what they mean
+
+## Numerology
+
+- [Numerology](https://horoscop.si/en/numerology/): overview of the section
+- [Angel numbers](https://horoscop.si/en/numerology/angel-numbers/): meanings of repeating numbers
+- [Life path numbers](https://horoscop.si/en/numerology/life-path/): what each life path describes
+- [Numerology calculators](https://horoscop.si/en/numerology/calculator/): life path, name, personal year and compatibility
+
+## About
+
+- [How it works](https://horoscop.si/en/how-it-works/): how the readings and scores are made
+- [Methodology](https://horoscop.si/en/learn/): sources, calculations and what the evidence says
+- [Our promise](https://horoscop.si/en/promise/): what stays free and how the site treats readers
+- [Blog](https://horoscop.si/en/blog/): articles on signs, love and the inner life
+
+## Other languages
+
+- [Macedonian home page](https://horoscop.si/mk/)
+- [German home page](https://horoscop.si/de/)

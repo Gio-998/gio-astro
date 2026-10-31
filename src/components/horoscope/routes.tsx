@@ -6,6 +6,8 @@ import { SIGNS, SIGN_GLYPH } from "@/engine/zodiac";
 import { publishedDates, todayIso, isValidIso } from "@/engine/skyday";
 import { reading, horoPath, horoAlternates, bankFor, signFromSlug, ogPath, ogImage, absolute, type HoroLocale } from "@/lib/horoscope";
 import { LOCALE_META } from "@/lib/seo";
+import { breadcrumb, LdJson } from "@/lib/schema";
+import { SectionLinks } from "@/components/nav/SectionLinks";
 import { DailyHoroscope } from "./DailyHoroscope";
 
 /** Each locale owns its own slug folder (/en/horoscope, /mk/dneven-horoskop); other locales 404 there. */
@@ -43,6 +45,7 @@ export function HubPage({ lang }: { lang: string }) {
   const U = bankFor(lang).ui; const c = getContent(lang); const iso = todayIso();
   return (
     <div className="mx-auto max-w-5xl">
+      <LdJson data={breadcrumb([[c.site.brand, `/${lang}/`], [U.hubTitle, horoPath(lang)]])} />
       <h1 className="h-display text-[2.2rem] leading-tight sm:text-[2.8rem]">{U.hubTitle}</h1>
       <p className="mb-6 max-w-2xl text-[14px] text-mist/70 sm:text-[15px]">{U.hubSub}</p>
       <ul className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,6 +61,7 @@ export function HubPage({ lang }: { lang: string }) {
             </Link>
           </li>); })}
       </ul>
+      <SectionLinks lang={lang} skip="/horoscope/" className="mt-10" />
     </div>
   );
 }

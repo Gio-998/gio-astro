@@ -13,6 +13,22 @@ export const nav = {
   horoscope: { label: "Daily horoscope", desc: "All twelve signs, fresh from today's sky" },
   pricing: { label: "Pricing", desc: "Plans, reports and what stays free" },
   groups: {
+    astrology: {
+      label: "Astrology", linksTitle: "Horoscopes, zodiac signs and calculators",
+      feature: { title: "Your sky, explained", text: "Signs, compatibility, calendars and calculators, all in one place.", cta: "See the zodiac signs" },
+      items: [
+        { href: "/weekly-horoscope/", icon: "sun", title: "Weekly horoscope", desc: "Your next seven days, sign by sign" },
+        { href: "/monthly-horoscope/", icon: "moon", title: "Monthly horoscope", desc: "The month ahead for all twelve signs" },
+        { href: "/horoscope-2027/", icon: "eye", title: "Horoscope 2027", desc: "The big themes of the year, by sign" },
+        { href: "/zodiac/", icon: "explorer", title: "Zodiac signs", desc: "Dates, traits, love and work for each sign" },
+        { href: "/sign-compatibility/", icon: "bond", title: "Zodiac compatibility", desc: "How any two signs get along" },
+        { href: "/birth-chart/", icon: "chart", title: "Birth chart calculator", desc: "Planets and houses from your birth data" },
+        { href: "/rising-sign/", icon: "yinyang", title: "Rising sign calculator", desc: "Find your ascendant from time and place" },
+        { href: "/moon-sign/", icon: "moon", title: "Moon sign calculator", desc: "Where the Moon stood when you were born" },
+        { href: "/moon-calendar/", icon: "moon", title: "Moon calendar", desc: "New moons, full moons and every phase" },
+        { href: "/mercury-retrograde/", icon: "vedic", title: "Mercury retrograde", desc: "The dates and what they mean" },
+      ],
+    },
     me: {
       label: "Me", feature: { title: "Your whole self, one page", text: "Signs, numbers, aura and every test result, read in a glance.", cta: "Open my profile" },
       items: [
