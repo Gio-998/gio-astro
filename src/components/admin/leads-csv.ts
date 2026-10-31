@@ -30,4 +30,4 @@ export const matchesLead = (r: LeadRow, q: string) => {
 };
 
 export type MarketingState = "ok" | "unconfirmed" | "unsubscribed" | "none";
-export const marketingState = (r: LeadRow): MarketingState => r.unsubscribed_at && !r.marketing_consent ? "unsubscribed" : r.marketing_ok ? "ok" : r.marketing_consent ? "unconfirmed" : "none";
+export const marketingState = (r: LeadRow): MarketingState => r.unsubscribed_at ? "unsubscribed" : r.marketing_ok ? "ok" : r.marketing_consent ? "unconfirmed" : "none";

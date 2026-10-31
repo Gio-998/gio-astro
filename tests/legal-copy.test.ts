@@ -36,6 +36,14 @@ describe("privacy page", () => {
     const said = { en: ["24 months", "24 hours", "14 months", "30 days"], mk: ["24 месеци", "24 часа", "14 месеци", "30 дена"], de: ["24 Monate", "24 Stunden", "14 Monate", "30 Tage"] };
     for (const l of LANGS) for (const s of said[l]) expect(privacy[l], `${l} ${s}`).toContain(s);
   });
+  it("says the email depends on the bot check and never goes to an unsubscribed address", () => {
+    expect(privacy.en).toContain("only when the bot check below is passed");
+    expect(privacy.en).toContain("never to an address that has unsubscribed");
+    expect(privacy.mk).toContain("само ако е помината проверката за ботови");
+    expect(privacy.mk).toContain("никогаш на адреса што се одјавила");
+    expect(privacy.de).toContain("nur raus, wenn die Bot-Prüfung");
+    expect(privacy.de).toContain("nie an eine Adresse, die sich abgemeldet hat");
+  });
   it("explains double opt-in, which only counts once the link is clicked", () => {
     expect(privacy.en).toContain("only that click counts as consent");
     expect(privacy.mk).toContain("само тој клик се смета за согласност");
@@ -68,6 +76,27 @@ describe("the server keeps its promises in the source", () => {
       expect(src).toContain('Deno.env.get("SUPABASE_SECRET_KEYS")');
       expect(src).not.toMatch(/SERVICE_ROLE_KEY|ANON_KEY/);
     }
+  });
+  it("keeps the database key away from the IP hash", () => {
+    const index = readFileSync("supabase/functions/submit-lead/index.ts", "utf8");
+    expect(index).not.toContain("hashKey");
+    expect(handler).toContain('deps.env("LEAD_IP_HASH_KEY")');
+    expect(handler).not.toContain("SUPABASE_SECRET_KEYS");
+  });
+  it("calls sendWelcome only after Turnstile passed", () => {
+    expect([...handler.matchAll(/[^ ]\s*sendWelcome\(deps, lead/g)]).toHaveLength(1);
+    expect(handler).not.toContain("defer(sendWelcome");
+    const body = handler.slice(handler.indexOf("async function welcomeIfHuman"));
+    expect(body.indexOf('if (verdict !== "passed")')).toBeLessThan(body.indexOf("await sendWelcome("));
+  });
+  it("gives the deploy notes every secret and the IP header test", () => {
+    const readme = readFileSync("supabase/README.md", "utf8");
+    const steps = readme.slice(readme.indexOf("## Deploy"), readme.indexOf("### Secrets"));
+    for (const s of ["LEAD_IP_HASH_KEY", "CAPTCHA_SECRET_KEY", "RESEND_API_KEY", "functions deploy submit-lead", "functions deploy confirm-lead"]) expect(steps, s).toContain(s);
+    expect(readme).toContain("IP header test");
+    expect(readme).toContain("CF-Connecting-IP: 198.51.100.7");
+    expect(readme).toContain("supabase functions delete ip-header-check");
+    expect(readme).toContain("17 * * * *");
   });
   it("lets Deno resolve every relative import", () => {
     for (const f of ["submit-lead/index.ts", "submit-lead/handler.ts", "confirm-lead/index.ts", "confirm-lead/handler.ts", "_shared/lead-rules.ts", "_shared/lead-email.ts", "_shared/lead-crypto.ts"]) {

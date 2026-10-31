@@ -157,8 +157,8 @@ export const lead = {
   privacyLink: "Datenschutzerklärung",
   marketing: "Ja, Horoscop darf mir gelegentlich Neuigkeiten zu neuen Tests per E-Mail schicken.",
   marketingHint: "Freiwillig. Dein Ergebnis öffnet sich so oder so. Wir bitten dich, das per E-Mail zu bestätigen, und du kannst jederzeit aufhören.",
-  sent: "Ein Link zurück zu diesem Ergebnis ist auf dem Weg in dein Postfach.",
-  sentConfirm: "Ein Link zurück zu diesem Ergebnis ist auf dem Weg in dein Postfach. Wenn du Neuigkeiten möchtest, bestätige das bitte in dieser E-Mail.",
+  sent: "Ein Link zurück zu diesem Ergebnis sollte bald in deinem Postfach sein. Dein Ergebnis bleibt so oder so hier.",
+  sentConfirm: "Ein Link zurück zu diesem Ergebnis sollte bald in deinem Postfach sein. Wenn du Neuigkeiten möchtest, bestätige das bitte in dieser E-Mail.",
   haveAccount: "Du hast schon ein Konto?", login: "Anmelden",
   errors: { invalid_name: "Bitte gib deinen Vor- und Nachnamen ein.", invalid_email: "Bitte gib eine gültige E-Mail-Adresse ein." },
   page: {

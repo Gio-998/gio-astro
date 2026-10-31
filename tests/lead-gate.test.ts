@@ -73,9 +73,9 @@ describe("submitLead", () => {
     vi.useRealTimers();
     expect(store.get(PENDING)).toBeDefined();
   });
-  it("keeps the lead for a server error, a rate limit or a captcha problem", async () => {
+  it("keeps the lead for a server error, a rate limit or a refused origin", async () => {
     const { submitLead } = await import("@/lib/lead");
-    for (const [status, error] of [[500, "server_error"], [429, "rate_limited"], [503, "captcha_unavailable"], [400, "captcha_failed"], [403, "origin"]] as const) {
+    for (const [status, error] of [[500, "server_error"], [429, "rate_limited"], [403, "origin"]] as const) {
       store.clear();
       vi.stubGlobal("fetch", vi.fn(() => Promise.resolve(Response.json({ error }, { status }))));
       expect(await submitLead(input), error).toBe("kept");
@@ -177,6 +177,54 @@ describe("parseEmailHash", () => {
   it("ignores anything else", async () => {
     const { parseEmailHash } = await import("@/lib/lead");
     for (const h of ["", "#", "#a=delete&t=x", `#a=confirm`, "#a=confirm&t=short", "#foo=bar"]) expect(parseEmailHash(h), h).toBeNull();
+  });
+});
+
+describe("finding 3: the bot check on the form", () => {
+  it("runs whatever the sign-in switch says, because the form asks it to", async () => {
+    const { captchaActive } = await import("@/components/auth/Captcha");
+    expect(captchaActive(true, false, true)).toBe(true);
+    expect(captchaActive(true, true, true)).toBe(true);
+    expect(readFileSync("src/components/lead/LeadGate.tsx", "utf8")).toContain("useCaptcha(locale, touched, true)");
+  });
+  it("leaves sign-in following the switch", async () => {
+    const { captchaActive } = await import("@/components/auth/Captcha");
+    expect(captchaActive(true, false, false)).toBe(false);
+    expect(captchaActive(true, true, false)).toBe(true);
+    for (const f of ["src/components/auth/Auth.tsx", "src/components/auth/Beta.tsx"]) expect(readFileSync(f, "utf8"), f).not.toMatch(/useCaptcha\([^)]*,[^)]*,/);
+  });
+  it("still waits for the visitor to start on the form", async () => {
+    const { captchaActive } = await import("@/components/auth/Captcha");
+    expect(captchaActive(false, true, true)).toBe(false);
+  });
+  it("asks once, then lets a stuck visitor through to the result", async () => {
+    const { waitForCheck } = await import("@/components/lead/LeadGate");
+    expect(waitForCheck({ enabled: true, token: "", nudged: false })).toBe(true);
+    expect(waitForCheck({ enabled: true, token: "", nudged: true })).toBe(false);
+  });
+  it("doesn't hold anyone up with a token, or on a build with no site key", async () => {
+    const { waitForCheck } = await import("@/components/lead/LeadGate");
+    expect(waitForCheck({ enabled: true, token: "tok", nudged: false })).toBe(false);
+    expect(waitForCheck({ enabled: false, token: "", nudged: false })).toBe(false);
+  });
+  it("sends the token with the form, and never with a queued retry", async () => {
+    const f = vi.fn((..._: unknown[]) => Promise.reject(new Error("offline"))); vi.stubGlobal("fetch", f);
+    const { submitLead, retryPendingLead } = await import("@/lib/lead");
+    await submitLead({ ...input, captchaToken: "tok" });
+    expect(lastBody(f).captchaToken).toBe("tok");
+    expect(store.get(PENDING)).not.toContain("tok");
+    await retryPendingLead();
+    expect(f).toHaveBeenCalledTimes(2);
+    expect(lastBody(f).captchaToken).toBeUndefined();
+  });
+  it("promises an email only when a token went along and the lead arrived", async () => {
+    const { promisesEmail } = await import("@/components/lead/LeadGate");
+    expect(promisesEmail({ outcome: "delivered", marketing: false, checked: true })).toBe(true);
+    expect(promisesEmail({ outcome: "delivered", marketing: true, checked: false })).toBe(false);
+    expect(promisesEmail({ outcome: "kept", marketing: false, checked: true })).toBe(false);
+  });
+  it("has hedged copy, because the server may still decide not to send", () => {
+    for (const l of ["en", "mk", "de"] as const) for (const s of [contents[l].ui.lead.sent, contents[l].ui.lead.sentConfirm]) expect(s, l).not.toMatch(/on its way|е на пат|auf dem Weg/);
   });
 });
 

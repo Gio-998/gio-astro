@@ -7,8 +7,15 @@ import { useAccount } from "@/lib/sync";
 import { hasLead, subscribeLead, submitLead, type LeadOutcome } from "@/lib/lead";
 import { useContent, useHref } from "@/lib/content-context";
 import { LIMITS } from "../../../supabase/functions/_shared/lead-rules";
-import { useCaptcha } from "../auth/Captcha";
+import { captchaEnabled, useCaptcha } from "../auth/Captcha";
 import { Check } from "../controls";
+
+/** What the form hands back. `checked` means a Turnstile token went along, the only way an email can follow. */
+type Done = { outcome: LeadOutcome; marketing: boolean; checked: boolean };
+/** Say a link is coming only when one can be. A queued lead or a form sent without a token gets no email. */
+export const promisesEmail = (d: Done) => d.outcome === "delivered" && d.checked;
+/** Ask once for the bot check. If it cannot finish (a blocker, a bad network) the second press goes through: the visitor still gets the result, just no email. */
+export const waitForCheck = (s: { enabled: boolean; token: string; nudged: boolean }) => s.enabled && !s.token && !s.nudged;
 
 export type GateView = "wait" | "form" | "open";
 /** "wait" holds the form back until we know nobody is signed in, so a signed-in reader never sees it flash. */
@@ -21,7 +28,7 @@ export function gateView(s: { backend: boolean; ready: boolean; signedIn: boolea
 export function LeadGate({ source, preview, children }: { source: string; preview?: ReactNode; children: ReactNode }) {
   const a = useAccount(); const { c } = useContent();
   const stored = useSyncExternalStore(subscribeLead, hasLead, () => false);
-  const [done, setDone] = useState<{ outcome: LeadOutcome; marketing: boolean } | null>(null);
+  const [done, setDone] = useState<Done | null>(null);
   const [timedOut, setTimedOut] = useState(false);
   const top = useRef<HTMLDivElement>(null);
   useEffect(() => { if (a.ready) return; const t = setTimeout(() => setTimedOut(true), 2500); return () => clearTimeout(t); }, [a.ready]);
@@ -34,29 +41,29 @@ export function LeadGate({ source, preview, children }: { source: string; previe
   const L = c.ui.lead;
   return (
     <div ref={top} tabIndex={-1} className="scroll-mt-24 outline-none">
-      {done.outcome === "delivered" && <p role="status" data-testid="lead-sent" className="mx-auto mb-4 max-w-xl rounded-2xl border border-gold/40 bg-gold/10 px-4 py-3 text-sm">{done.marketing ? L.sentConfirm : L.sent}</p>}
+      {promisesEmail(done) && <p role="status" data-testid="lead-sent" className="mx-auto mb-4 max-w-xl rounded-2xl border border-gold/40 bg-gold/10 px-4 py-3 text-sm">{done.marketing ? L.sentConfirm : L.sent}</p>}
       {children}
     </div>
   );
 }
 
-function LeadForm({ source, onDone }: { source: string; onDone: (d: { outcome: LeadOutcome; marketing: boolean }) => void }) {
+function LeadForm({ source, onDone }: { source: string; onDone: (d: Done) => void }) {
   const { c, locale } = useContent(); const L = c.ui.lead; const h = useHref(); const path = usePathname() || "/";
   const [name, setName] = useState(""); const [email, setEmail] = useState(""); const [marketing, setMarketing] = useState(false); const [website, setWebsite] = useState("");
   const [busy, setBusy] = useState(false); const [err, setErr] = useState("");
-  // Turnstile loads only once someone starts typing, so people who read the teaser and leave don't pay for the script.
-  const [touched, setTouched] = useState(false); const cap = useCaptcha(locale, touched);
+  // Turnstile loads only once someone starts on the form, so people who read the teaser and leave don't pay for the script.
+  // It runs whenever a site key is set, whatever the admin switch says: that switch belongs to sign-in, and here a pass decides whether an email goes out.
+  const [touched, setTouched] = useState(false); const cap = useCaptcha(locale, touched, true);
   const [nudged, setNudged] = useState(false);
 
   const submit = async (e: FormEvent) => {
     e.preventDefault(); setErr("");
-    // Ask once. If the check cannot finish (a blocker, a bad network) the second press goes through: the server does not need a token.
-    if (cap.needed && !nudged) { setTouched(true); setNudged(true); return setErr(c.ui.auth.captchaNeeded); }
+    if (waitForCheck({ enabled: captchaEnabled, token: cap.token, nudged })) { setTouched(true); setNudged(true); return setErr(c.ui.auth.captchaNeeded); }
     setBusy(true);
     const outcome = await submitLead({ name, email, marketing, source, locale, marketingText: `${L.marketing} ${L.marketingHint}`, captchaToken: cap.token || undefined, website });
     setBusy(false);
     if (outcome === "invalid_name" || outcome === "invalid_email") return setErr(L.errors[outcome]);
-    onDone({ outcome, marketing });
+    onDone({ outcome, marketing, checked: !!cap.token });
   };
 
   return (
@@ -66,9 +73,9 @@ function LeadForm({ source, onDone }: { source: string; onDone: (d: { outcome: L
       <p className="mb-5 text-center text-sm leading-relaxed text-mist/85">{L.text}</p>
       <form onSubmit={submit} noValidate className="relative space-y-4">
         <label className="block text-sm"><span className="mb-1 block text-dim">{L.nameLabel}</span>
-          <input className="input" type="text" name="name" required autoComplete="name" autoCapitalize="words" maxLength={LIMITS.name} value={name} onChange={(e) => setName(e.target.value)} onFocus={() => setTouched(true)} data-testid="lead-name" /></label>
+          <input className="input" type="text" name="name" required autoComplete="name" autoCapitalize="words" maxLength={LIMITS.name} value={name} onChange={(e) => { setName(e.target.value); setTouched(true); }} onFocus={() => setTouched(true)} data-testid="lead-name" /></label>
         <label className="block text-sm"><span className="mb-1 block text-dim">{L.emailLabel}</span>
-          <input className="input" type="email" name="email" required inputMode="email" autoComplete="email" autoCapitalize="none" spellCheck={false} maxLength={LIMITS.email} placeholder={L.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} onFocus={() => setTouched(true)} data-testid="lead-email" /></label>
+          <input className="input" type="email" name="email" required inputMode="email" autoComplete="email" autoCapitalize="none" spellCheck={false} maxLength={LIMITS.email} placeholder={L.emailPh} value={email} onChange={(e) => { setEmail(e.target.value); setTouched(true); }} onFocus={() => setTouched(true)} data-testid="lead-email" /></label>
         <div aria-hidden className="absolute -left-[9999px] h-px w-px overflow-hidden">
           <label>Website<input type="text" name="website" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} data-testid="lead-website" /></label>
         </div>

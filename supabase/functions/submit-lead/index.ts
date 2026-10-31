@@ -11,7 +11,6 @@ Deno.serve(createHandler({
   rpc: (fn, args) => db.rpc(fn, args),
   fetch,
   env: (name) => Deno.env.get(name),
-  hashKey: secretKey,
   defer: (work) => EdgeRuntime.waitUntil(work),
   log: (event) => console.log(`submit-lead: ${event}`),
 }));

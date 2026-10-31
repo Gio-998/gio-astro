@@ -12,7 +12,7 @@ function PageEn() {
       <h2>Age</h2>
       <p>You must be 16 or older to use the app.</p>
       <h2>Full test results</h2>
-      <p>A test shows a short part of its result straight away. The full result opens once you leave your name and email, one time per device, and costs no money. Please use your own name and an address that is yours. We then send you one email with a link back. The <Link href="/en/privacy/">privacy page</Link> explains what we keep and how to have it deleted. News by email is a separate choice, and no result depends on it.</p>
+      <p>A test shows a short part of its result straight away. The full result opens once you leave your name and email, one time per device, and costs no money. Please use your own name and an address that is yours. We may then send you one email with a link back. The <Link href="/en/privacy/">privacy page</Link> explains what we keep and how to have it deleted. News by email is a separate choice, and no result depends on it.</p>
       <h2>Other people's data</h2>
       <p>When you add someone else, only enter details they would be comfortable sharing with you, ideally with their permission. Don't use the app to harass, pressure or make decisions about others.</p>
       <h2>Wellbeing</h2>
@@ -37,7 +37,7 @@ function PageMk() {
       <h2>Возраст</h2>
       <p>Мораш да имаш 16 или повеќе години за да ја користиш апликацијата.</p>
       <h2>Цели резултати од тестовите</h2>
-      <p>Тестот веднаш покажува краток дел од резултатот. Целиот резултат се отвора откако ќе оставиш име и е-пошта, еднаш по уред, и не чини пари. Те молиме користи го своето име и адреса што е твоја. Потоа ти праќаме една порака со линк назад. На <Link href="/mk/privacy/">страницата за приватност</Link> пишува што чуваме и како да се избрише. Новостите на е-пошта се посебен избор и ниту еден резултат не зависи од нив.</p>
+      <p>Тестот веднаш покажува краток дел од резултатот. Целиот резултат се отвора откако ќе оставиш име и е-пошта, еднаш по уред, и не чини пари. Те молиме користи го своето име и адреса што е твоја. Потоа може да ти пратиме една порака со линк назад. На <Link href="/mk/privacy/">страницата за приватност</Link> пишува што чуваме и како да се избрише. Новостите на е-пошта се посебен избор и ниту еден резултат не зависи од нив.</p>
       <h2>Податоци за други луѓе</h2>
       <p>Кога додаваш некого друг, внеси само податоци што тој човек е согласен да ги сподели со тебе, идеално со нивна дозвола. Не ја користи апликацијата за вознемирување, притисок или донесување одлуки за други.</p>
       <h2>Добросостојба</h2>
@@ -61,7 +61,7 @@ function PageDe() {
       <h2>Alter</h2>
       <p>Du musst mindestens 16 Jahre alt sein, um die App zu nutzen.</p>
       <h2>Ganze Testergebnisse</h2>
-      <p>Ein Test zeigt sofort einen kurzen Teil seines Ergebnisses. Das ganze Ergebnis öffnet sich, sobald du Name und E-Mail hinterlässt, einmal pro Gerät, und es kostet kein Geld. Bitte nutze deinen eigenen Namen und eine Adresse, die dir gehört. Danach schicken wir dir eine E-Mail mit einem Link zurück. Auf der <Link href="/de/privacy/">Datenschutzseite</Link> steht, was wir speichern und wie du es löschen lässt. Neuigkeiten per E-Mail sind eine eigene Entscheidung, und kein Ergebnis hängt davon ab.</p>
+      <p>Ein Test zeigt sofort einen kurzen Teil seines Ergebnisses. Das ganze Ergebnis öffnet sich, sobald du Name und E-Mail hinterlässt, einmal pro Gerät, und es kostet kein Geld. Bitte nutze deinen eigenen Namen und eine Adresse, die dir gehört. Danach können wir dir eine E-Mail mit einem Link zurück schicken. Auf der <Link href="/de/privacy/">Datenschutzseite</Link> steht, was wir speichern und wie du es löschen lässt. Neuigkeiten per E-Mail sind eine eigene Entscheidung, und kein Ergebnis hängt davon ab.</p>
       <h2>Daten anderer Menschen</h2>
       <p>Wenn du jemanden hinzufügst, gib nur Angaben ein, die diese Person dir gern geben würde, am besten mit ihrer Erlaubnis. Nutze die App nicht, um andere zu belästigen, unter Druck zu setzen oder über sie zu entscheiden.</p>
       <h2>Wohlbefinden</h2>
