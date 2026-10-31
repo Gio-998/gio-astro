@@ -176,7 +176,7 @@ export const cEn: SignPairSet = {
     ],
     faq: [
       ["Are Virgo and Pisces meant to be together?", "No chart decides that, but opposite signs often feel a strong pull because each shows the other what is missing. Virgo and Pisces can build something gentle and lasting if neither one turns into the other's carer."],
-      ["Why are Virgo and Pisces so attracted to each other?", "Each has what the other lacks. Virgo offers order and steadiness, and Pisces offers softness and imagination. Their shared mutable mode also helps, since both are willing to bend."],
+      ["Why are Virgo and Pisces so attracted to each other?", "They are opposite signs, so each fills a gap in the other. Virgo offers order and steadiness, and Pisces offers softness and imagination. Their shared mutable mode also helps, since both are willing to bend."],
       ["How do Virgo and Pisces handle arguments?", "Badly at first. Virgo tends to criticise and Pisces tends to vanish. Agree on a rule: Virgo names one issue at a time, and Pisces stays until the end of the talk, even if the talk is short."],
     ],
   },
