@@ -1,0 +1,116 @@
+import type { Sign, Element, Modality } from "@/engine/zodiac";
+import type { Point, AspectType } from "@/engine/astro";
+import type { SignText } from "../en/astro";
+
+export const signs: Record<Sign, SignText> = {
+  aries: { name: "Ovan", essence: "iskra koja sve pokreće",
+    sun: "Oživiš kad možeš da deluješ prvi, a pitaš posle. Hrabrost, iskrenost i nov početak su ti gorivo.",
+    moon: "Osećanja ti stižu brzo i brzo odlaze. Smiruješ se kretanjem, radom ili kad nešto kažeš otvoreno.",
+    rising: "Ljudi te doživljavaju kao direktnu, brzu i toplokrvnu osobu. Neko ko uđe već napola odlučen.",
+    gifts: "hrabrost, inicijativa, iskrenost", edge: "strpljenje i završavanje započetog" },
+  taurus: { name: "Bik", essence: "postojana bašta",
+    sun: "Gradiš život koji je prijatan na dodir: pouzdan, lep, bez žurbe. Ljubav pokazuješ odanošću.",
+    moon: "Sigurnost nalaziš u rutini, udobnosti i telu: dobra hrana, poznata ruka, dovoljno sna.",
+    rising: "Deluješ smireno, prizemljeno i prijatno za društvo. Ljudi se pored tebe opuste.",
+    gifts: "odanost, strpljenje, čulnost", edge: "fleksibilnost kad se planovi promene" },
+  gemini: { name: "Blizanci", essence: "radoznali glasnik",
+    sun: "Misliš dok pričaš i učiš tako što probaš pomalo od svega. Raznovrsnost ti drži svetlo upaljeno.",
+    moon: "Osećanja obrađuješ tako što ih imenuješ. Dobar razgovor može da te umiri više od zagrljaja.",
+    rising: "Svet te upoznaje kao bistru, brzu i pričljivu osobu: onu koja postavi i drugo pitanje.",
+    gifts: "radoznalost, duhovitost, prilagodljivost", edge: "ostati uz jedno osećanje dovoljno dugo da ga upoznaš" },
+  cancer: { name: "Rak", essence: "oklop koji štiti i plima u njemu",
+    sun: "Vodiš brigom. Dom, porodica i ljudi koje si izabrao centar su tvog sveta.",
+    moon: "Emocije su ti duboke i pamte sve. Treba ti osećaj da si nekome potreban i da neko brine i o tebi.",
+    rising: "Ljudi prvo osete mekoću i pažnju; ti primetiš kome je hladno ili ko je gladan pre svih.",
+    gifts: "briga, pamćenje, odanost", edge: "reći šta ti treba umesto da se nadaš da će neko pogoditi" },
+  leo: { name: "Lav", essence: "toplo sunce u centru prostorije",
+    sun: "Tu si da zasijaš i da drugi zasijaju u tvojoj toplini. Pokreću te velikodušnost i stvaralački ponos.",
+    moon: "Osećaš se voljeno kad te vide i cene. Iskren kompliment ide pravo u srce.",
+    rising: "Stižeš sa prisustvom. Ljudi primete tvoju toplinu, stil ili smeh pre nego što išta kažeš.",
+    gifts: "velikodušnost, hrabrost, razigranost", edge: "pustiti druge u centar pažnje a da se ne osetiš nevidljivo" },
+  virgo: { name: "Devica", essence: "pažljivi iscelitelj",
+    sun: "Poboljšavaš sve što dotakneš. Voliš tako što si koristan, precizan i dobar na praktičan način.",
+    moon: "Osećanja smiruješ tako što ih sređuješ: spiskovi, rutine, popravka neke sitnice.",
+    rising: "Deluješ promišljeno, skromno i sposobno: osoba koja tiho ima plan.",
+    gifts: "veština, posvećenost, rasuđivanje", edge: "biti prema sebi blag koliko si prema drugima" },
+  libra: { name: "Vaga", essence: "terazije koje traže sklad",
+    sun: "Privlače te lepota, pravednost i partnerstvo. Vidiš obe strane i želiš da se svi osećaju uključeno.",
+    moon: "Sukob te uzdrma; mir, ljubaznost i lep prostor te vrate u sebe.",
+    rising: "Ljudi te upoznaju kao uglađenu, šarmantnu osobu sa kojom je lako pričati.",
+    gifts: "diplomatija, ukus, pravednost", edge: "izabrati čak i kad neko može da bude razočaran" },
+  scorpio: { name: "Škorpija", essence: "duboka voda koja menja",
+    sun: "Želiš ono što je stvarno: ispod površine, sve ili ništa. Intenzitet i odanost vode tvoj život.",
+    moon: "Osećaš sve, a pokazuješ malo dok ne stekneš poverenje. Izdaja seče duboko; prava bliskost leči još dublje.",
+    rising: "Deluješ magnetično, povučeno i pronicljivo. Ljudi osećaju da ih vidiš.",
+    gifts: "dubina, odanost, otpornost", edge: "pustiti i verovati bez testiranja" },
+  sagittarius: { name: "Strelac", essence: "strelac koji nišani u horizont",
+    sun: "Tragač si: za smislom, putovanjima, istinom i dobrim smehom. Sloboda ti je kiseonik.",
+    moon: "Raspoloženje ti vraćaju kretanje, optimizam i širok pogled. Kad te ograde, hvata te nemir.",
+    rising: "Ljudi te upoznaju kao otvorenu, duhovitu osobu željnu avanture: onu koja kaže „zašto da ne?“",
+    gifts: "optimizam, iskrenost, vizija", edge: "posvećenost malim, svakodnevnim stvarima" },
+  capricorn: { name: "Jarac", essence: "planinar",
+    sun: "Gradiš ono što traje. Odgovornost, ambicija i tihi humor nose te daleko.",
+    moon: "Osećanja držiš uredno i privatno; najsigurnije ti je kad je život pod kontrolom i kad ti veruju.",
+    rising: "Deluješ pribrano, sposobno i malo rezervisano: ulivaš poverenje na prvi pogled.",
+    gifts: "disciplina, pouzdanost, dalekovidost", edge: "odmarati se i primati bez zasluživanja" },
+  aquarius: { name: "Vodolija", essence: "slobodni mislilac koji svima toči vodu",
+    sun: "Originalan si i okrenut budućnosti, odan idejama i prijateljima. Treba ti prostor da budeš svoj.",
+    moon: "Osećanja obrađuješ sa malo distance: prvo ih razumeš, pa ih pustiš unutra.",
+    rising: "Ljudi te upoznaju kao prijateljsku, neobičnu osobu koju je teško predvideti, i to u dobrom smislu.",
+    gifts: "originalnost, pravednost, prijateljstvo", edge: "ostati prisutan uz emocije, a ne samo uz ideje" },
+  pisces: { name: "Ribe", essence: "okean koji drži svaki san",
+    sun: "Svet osećaš bez granica: saosećanje, mašta i intuicija su ti kompas.",
+    moon: "Tuđa raspoloženja upijaš kao sunđer. Muzika, voda, umetnost i tišina pomažu ti da ih iscediš.",
+    rising: "Deluješ blago, sanjivo i dobronamerno. Ljudi ti poveravaju tajne.",
+    gifts: "saosećanje, mašta, intuicija", edge: "zdrave granice" },
+};
+
+export const elements: Record<Element, { name: string; text: string }> = {
+  fire: { name: "Vatra", text: "Energija, oduševljenje i akcija. Vatra greje i inspiriše; treba joj prostora i vazduha da diše." },
+  earth: { name: "Zemlja", text: "Praktičnost, strpljenje i telo. Zemlja gradi, smiruje i čini stvari stvarnim." },
+  air: { name: "Vazduh", text: "Ideje, reči i povezivanje. Vazduh prenosi informacije i drži stvari lakim i pravednim." },
+  water: { name: "Voda", text: "Osećanja, intuicija i vezivanje. Voda oseća neizgovoreno i drži ljude blizu." },
+};
+export const modalities: Record<Modality, { name: string; text: string }> = {
+  cardinal: { name: "Kardinalni", text: "pokreće stvari" },
+  fixed: { name: "Fiksni", text: "održava stvari" },
+  mutable: { name: "Promenljivi", text: "prilagođava se i povezuje" },
+};
+
+/** `governs` is written as clauses, so it reads the same after any verb a template puts in front of it. */
+export const points: Record<Point, { name: string; glyph: string; governs: string }> = {
+  sun: { name: "Sunce", glyph: "☉", governs: "ko si u srži, odakle ti dolazi životna snaga i šta te čini najviše tobom" },
+  moon: { name: "Mesec", glyph: "☽", governs: "šta ti emotivno treba i od čega se osećaš sigurno" },
+  mercury: { name: "Merkur", glyph: "☿", governs: "kako misliš, pričaš i učiš" },
+  venus: { name: "Venera", glyph: "♀", governs: "kako voliš, šta ti je lepo i šta ceniš" },
+  mars: { name: "Mars", glyph: "♂", governs: "kako ideš za onim što želiš, šta te pokreće i kako se ljutiš" },
+  jupiter: { name: "Jupiter", glyph: "♃", governs: "gde rasteš, veruješ životu i nalaziš sreću" },
+  saturn: { name: "Saturn", glyph: "♄", governs: "gde preuzimaš odgovornost, postavljaš granice i sazrevaš" },
+  uranus: { name: "Uran", glyph: "♅", governs: "gde ti treba sloboda i gde radiš po svome (planeta generacije)" },
+  neptune: { name: "Neptun", glyph: "♆", governs: "o čemu sanjaš, šta su ti ideali i gde se granice tope (planeta generacije)" },
+  pluto: { name: "Pluton", glyph: "♇", governs: "gde se dešavaju duboke promene, gde je moć i gde se ponovo rađaš (planeta generacije)" },
+  node: { name: "Severni čvor", glyph: "☊", governs: "u kom pravcu rasteš, čak i kad ti to deluje nepoznato, a ipak se isplati" },
+  asc: { name: "Podznak", glyph: "AC", governs: "kakav prvi utisak ostavljaš, kakav ti je stil i kako prilaziš novim stvarima" },
+  mc: { name: "Sredina neba", glyph: "MC", governs: "kojim putem ideš u javnosti, šta ti je poziv i kakav ti je ugled" },
+};
+
+export const houses: string[] = [
+  "ti, telo i prvi utisak", "novac, imovina i samovrednovanje", "komunikacija, braća i sestre i svakodnevno učenje",
+  "dom, koreni i porodica", "kreativnost, romansa, igra i deca", "radne navike, zdravlje i služenje drugima",
+  "partnerstva i bliske veze u četiri oka", "intimnost, zajednička sredstva i preobražaj", "putovanja, uverenja i visoko obrazovanje",
+  "karijera, poziv i javni život", "prijatelji, zajednica i nade", "odmor, unutrašnji svet i završeci",
+];
+
+/** `tone` is a bare verb that takes the accusative: planet names keep their nominative form after it (Venera is the one exception). */
+export const aspects: Record<AspectType, { name: string; symbol: string; natal: string; pair: string; tone: string }> = {
+  conjunction: { name: "konjunkcija", symbol: "☌", natal: "ova dva dela tebe rade kao jedan: snažno, stopljeno, ponekad ih je teško razlikovati",
+    pair: "srećete se na istom mestu: snažan, trenutan osećaj „znam te odavno“ koji pojačava sve što dotakne", tone: "dodiruje" },
+  sextile: { name: "sekstil", symbol: "⚹", natal: "ovi delovi tebe lako sarađuju kad uložiš trud",
+    pair: "laka, prijateljska veza koja raste kad je oboje koristite: dobra za timski rad i razgovor", tone: "podržava" },
+  square: { name: "kvadrat", symbol: "□", natal: "ovi delovi tebe guraju jedan protiv drugog, i iz toga nastaju pokretačka snaga i rast",
+    pair: "trenje koje pravi iskru: izazivate jedno drugo, a ako to dobro podnesete, zajedno rastete brže", tone: "izaziva" },
+  trine: { name: "trigon", symbol: "△", natal: "ovi delovi tebe prirodno teku zajedno: urođen talenat",
+    pair: "prirodan tok i lakoća: ovaj deo jedno kod drugog razumete bez mnogo objašnjavanja", tone: "prati" },
+  opposition: { name: "opozicija", symbol: "☍", natal: "ovi delovi tebe vuku na suprotne strane dok ne naučiš da ih uravnotežiš",
+    pair: "magnetne suprotnosti: u drugome vidiš ono što ti nedostaje, a to privlači i traži ravnotežu", tone: "odražava" },
+};
