@@ -107,6 +107,7 @@ export const de: HoroBank = {
     motivationLink: (s) => `Tagesimpuls ${s}: eine kleine Übung für heute`,
     description: (s, d, h) => `Horoskop ${s} für den ${d}. ${h} Liebe, Job, Wohlbefinden und Glückszahl aus dem echten Himmel.`,
     hubTitle: "Tageshoroskop", homeEyebrow: "Tageshoroskop", homeTitle: "Dein Zeichen heute", homeAll: "Alle Zeichen", hubSub: "Wähl dein Zeichen. Jeden Tag neu, berechnet aus dem echten Himmel.",
+    hubSeoTitle: "Tageshoroskop für alle Sternzeichen", hubMeta: "Dein Horoskop für heute, für alle 12 Sternzeichen: Liebe, Job, Wohlbefinden, Glückszahl und beste Zeit. Jeden Tag neu aus dem echten Himmel berechnet.",
     love: "Liebe", work: "Job", well: "Wohlbefinden", lucky: "Glück heute", color: "Farbe", number: "Zahl", window: "Beste Zeit",
     skyTitle: "Der Himmel heute", moodTitle: "Wie fühlst du dich heute?", moodSub: "Ein Tipp, und deine Heute-Seite merkt es sich.",
     moods: ["Super", "Ruhig", "Okay", "Angespannt", "Schlapp"],

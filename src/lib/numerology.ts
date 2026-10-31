@@ -4,6 +4,7 @@ import { getContent } from "@/content";
 import { localizedPath } from "./i18n-routes";
 import { bankFor } from "./horoscope";
 import { angelLong, pageLong } from "@/content/numerology/long";
+import { pageSnippet } from "@/content/numerology/snippets";
 import { reduce, rootOf } from "@/engine/numerology";
 import { BIRTHDAYS } from "@/content/numerology/birthdays";
 import { PAIRS, PAIR_HUB } from "@/content/numerology/pairs";
@@ -57,12 +58,13 @@ export interface NumModel {
 const digitSum = (s: string) => s.split("").map(Number);
 const lp = (lang: string, p: string) => localizedPath(lang, p);
 
-/** Page model with any long guide sections for that page placed after its first block. */
+/** Page model with any long guide sections for that page placed after its first block, and that page's own search snippet. */
 export function numModel(lang: string, path: string): NumModel | null {
   const m = numModelBase(lang, path); if (!m) return m;
   const key = path.split("/").filter(Boolean).slice(1).join("/") || "hub";
   const extra = pageLong(lang, key).map((x, k) => ({ id: `guide-${k}`, title: x.title, paras: x.paras }));
   if (extra.length) m.blocks = [m.blocks[0], ...extra, ...m.blocks.slice(1)];
+  const s = pageSnippet(lang, key); if (s) { m.title = s.title; m.description = s.description; }
   return m;
 }
 function numModelBase(lang: string, path: string): NumModel | null {

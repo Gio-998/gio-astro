@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getContent } from "@/content";
+import { HOME_META } from "@/content/home-meta";
+import { localizedMeta } from "@/lib/seo";
 import { LENS_EVIDENCE, LensId } from "@/engine/compat";
 import { quizDefs, QUIZ_IDS } from "@/lib/quiz-defs";
 import { QUIZ_ART } from "@/components/art/quizArt";
@@ -21,6 +24,11 @@ import { SignsToday } from "@/components/horoscope/SignsToday";
 import { NumbersHome } from "@/components/numerology/NumbersHome";
 
 const LENS_ICON: Record<LensId, EmblemId> = { western: "chart", vedic: "vedic", chinese: "chinese", numerology: "number", tarot: "tarot", yinyang: "yinyang", bigfive: "big-five", attachment: "attachment", care: "care", temperament: "temperament", nine: "nine", fourletter: "fourletter", shadow: "shadow", dosha: "dosha", play: "explorer" };
+
+export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
+  const { lang } = await params; const H = HOME_META[lang];
+  return H ? { title: { absolute: H.title }, description: H.description, ...localizedMeta(lang, "/", { ...H, siteName: getContent(lang).site.brand }) } : {};
+}
 
 export default async function Home({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
