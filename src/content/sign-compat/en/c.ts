@@ -356,7 +356,7 @@ export const cEn: SignPairSet = {
       ] },
     ],
     faq: [
-      ["Are Libra and Aquarius a good match?", "Yes, this is one of the more natural pairings. As fellow Air signs in a trine they share ideas, humour and a sense of fairness. Their main task is agreeing how much time belongs to the couple and how much to everyone else."],
+      ["Are Libra and Aquarius a good match?", "Yes, it tends to come easily. As fellow Air signs in a trine they share ideas, humour and a sense of fairness. Their main task is agreeing how much time belongs to the couple and how much to everyone else."],
       ["Does Aquarius fall in love with Libra?", "Often, and usually through conversation. Aquarius tends to fall for a mind and for someone who doesn't try to confine them. Libra's charm and fairness fit that well, though Aquarius may show love in less romantic ways than Libra hopes."],
       ["What is the biggest problem between Libra and Aquarius?", "Emotional distance dressed up as reasonableness. Both can analyse a feeling without sharing it. Regular time alone, and more plain words about missing each other, makes a real difference."],
     ],
