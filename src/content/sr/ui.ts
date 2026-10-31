@@ -294,7 +294,6 @@ export const chart: typeof En.chart = {
 };
 
 export const quiz: typeof En.quiz = {
-  birthFirst: "Prvo nam reci datum rođenja. Traje 30 sekundi. Zatim se vrati na ovaj test.",
   unlocked: "Rezultat je spreman",
   seeProfile: "Pogledaj ceo profil",
   nextQuiz: "Sledeći test",
@@ -389,7 +388,7 @@ export const pageMeta: typeof En.pageMeta = {
   account: { title: "Tvoj nalog" },
   verify: { title: "Unesi kod" },
   email: { title: "Podešavanja mejlova" },
-  bond: { title: "Provera veze: test od 3 minuta za dvoje", description: "Oboje odgovarate na deset pitanja o vašem odnosu i vidite snage, razlike u viđenju i vežbe. Besplatno, oko tri minuta po osobi." },
+  bond: { title: "Provera veze: test od 3 minuta za dvoje", description: "Oboje odgovarate na deset pitanja o vašem odnosu, a zatim vidite svoje snage, gde se razlikujete i šta da probate sledeće." },
   book: { title: "Knjiga o tebi" },
   chart: { title: "Natalna karta" },
   learn: { title: "Metode i izvori: kako računamo, iskreno", description: "Kako računamo natalne karte, vedsko slaganje, kineski horoskop, numerologiju i rezultate ličnosti, i šta nauka kaže, a šta ne kaže." },
