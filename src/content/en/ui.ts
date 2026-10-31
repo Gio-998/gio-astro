@@ -239,7 +239,7 @@ export const quizHub = {
 export const quickStart = {
   steps: ["Finding the sky over your birthplace…", "Placing the Sun, Moon and planets…", "Reading your Chinese year and element…", "Counting your numbers…", "Drawing your cards…", "Mixing your colour palette…"],
   eyebrowEdit: "Your birth details",
-  eyebrowNew: "Free · 30 seconds · no sign-up",
+  eyebrowNew: "Free · 30 seconds · no account needed",
   editA: "Edit your ",
   editB: "birth details",
   newA: "Your birth profile ",
@@ -287,7 +287,6 @@ export const chart = {
 };
 
 export const quiz = {
-  birthFirst: "First, tell us your birth date. It takes 30 seconds. Then come back to this test.",
   unlocked: "Result ready",
   seeProfile: "See full profile",
   nextQuiz: "Next test",
@@ -382,7 +381,7 @@ export const pageMeta = {
   account: { title: "Your account" },
   verify: { title: "Enter your code" },
   email: { title: "Your email settings" },
-  bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer ten questions about your relationship and see strengths, perception gaps and practices." },
+  bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer ten questions about your relationship, then see your strengths, where you differ and what to try next." },
   book: { title: "The Book of You" },
   chart: { title: "Birth chart" },
   learn: { title: "Methods and sources: how we calculate, and honesty", description: "How we calculate birth charts, Vedic matching, Chinese zodiac, numerology and personality scores, and what the science does and doesn't say." },
@@ -498,8 +497,8 @@ export const lead = {
   privacyLink: "Privacy policy",
   marketing: "Yes, Horoscop may email me occasional news about new tests.",
   marketingHint: "Optional. Your result opens either way. We ask you to confirm by email, and you can stop any time.",
-  sent: "A link back to this result is on its way to your inbox.",
-  sentConfirm: "A link back to this result is on its way to your inbox. To get the news, press the confirm button in that email.",
+  sent: "A link back to this result should reach your inbox soon. Your result stays here either way.",
+  sentConfirm: "A link back to this result should reach your inbox soon. To get the news, press the confirm button in that email.",
   haveAccount: "Already have an account?", login: "Log in",
   errors: { invalid_name: "Please enter your name and surname.", invalid_email: "Please enter a valid email address." },
   page: {

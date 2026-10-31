@@ -1,4 +1,4 @@
-/** Pricing page copy, EN + MK + DE + SR. Planned prices live in src/lib/pricing.ts. Nothing here is on sale: keep it true to PAYWALL_LIVE. */
+/** Pricing page copy, EN + MK + DE + SR.Planned prices live in src/lib/pricing.ts. Nothing here is on sale: keep it true to PAYWALL_LIVE. */
 import type { ReportId } from "@/lib/pricing";
 
 export interface PricingText {
@@ -90,27 +90,27 @@ export const de: PricingText = {
 };
 
 export const sr: PricingText = {
-  meta: { title: "Cene: za sada je sve besplatno", description: "Svi testovi, horoskopi, natalne karte i kompatibilnost na Horoscopu sada su besplatni. Bez kartice i probe. Evo šta bi kasnije moglo da se plaća." },
+  meta: { title: "Cene: za sada je sve besplatno", description: "Svaki test, horoskop, natalna karta i izveštaj o kompatibilnosti na sajtu Horoscop sada su besplatni. Bez kartice. Evo šta bi kasnije moglo da košta." },
   eyebrow: "Cene", title: ["Za sada je sve ", "besplatno"], sub: "Danas nema šta da se kupi i nema kartice za unos.",
   free: { name: "Besplatno", line: "Sve na sajtu, već danas",
-    features: ["Svi testovi sa punim rezultatima", "Dubinsko čitanje i mini igre", "Natalna karta, kineski horoskop i numerologija", "Dnevni, nedeljni i mesečni horoskopi", "Kompatibilnost za bilo koje dve osobe", "Provera veze u dvoje", "Knjiga o tebi", "Izvoz u PDF"],
-    note: "Testovi odmah pokazuju kratak pregled. Ime i imejl otvaraju ceo rezultat, jednom po uređaju." },
-  later: { eyebrow: "Možda kasnije", title: "Šta bi kasnije moglo da se plaća", sub: "Planiramo neobavezne plaćene dodatke, a datuma još nema. Ovo su cene koje imamo na umu. Mogu da se promene, i ništa od ovoga se danas ne prodaje.", planned: "Planirano",
+    features: ["Svi testovi sa celim rezultatima", "Dubinsko čitanje i Igre ogledala", "Natalna karta, kineski horoskop i numerologija", "Dnevni, nedeljni i mesečni horoskopi", "Kompatibilnost za bilo koje dve osobe", "Provera veze za dvoje", "Knjiga o tebi", "Izvoz u PDF"],
+    note: "Testovi odmah prikazuju kratak pregled. Ime i mejl otvaraju ceo rezultat, jednom po uređaju." },
+  later: { eyebrow: "Možda kasnije", title: "Šta bi kasnije moglo da košta", sub: "Planiramo opcione plaćene dodatke, a datuma još nema. Ovo su cene koje imamo na umu. Mogu da se promene, i ništa od ovoga se danas ne prodaje.", planned: "U planu",
     perMonth: "/ mesec", orYear: (p) => `ili ${p} godišnje`, once: "jednokratno",
     plus: { name: "Plus", line: "Lična čitanja, svakog dana" },
     items: {
       match: { name: "Kompatibilnost PDF", line: "Vaše slaganje, spremno za štampu" },
       year: { name: "Godina pred tobom 2027", line: "Mesec po mesec, za tebe" },
-      deep: { name: "Izveštaj dubinskog čitanja", line: "Tvoj ceo unutrašnji portret" },
+      deep: { name: "Izveštaj Dubinskog čitanja", line: "Tvoj ceo unutrašnji portret" },
     } },
-  cta: "Započni test",
+  cta: "Počni test",
   faq: { eyebrow: "Pitanja", title: "Dobro je da znaš", items: [
-    ["Da li mi treba kartica ili pretplata?", "Ne. Trenutno nema šta da se plati i na sajtu nema obrasca za karticu, pa ništa ne može da se obnovi niti naplati."],
-    ["Šta ostaje besplatno?", "Svaki test sa punim rezultatom, tvoja osnovna karta, osnovni rezultat kompatibilnosti i dnevni horoskop za tvoj znak."],
-    ["Kada počinju plaćeni dodaci?", "Nemamo datum. Pre nego što bilo šta počne da se plaća, cena će prvo stajati na ovoj stranici."],
-    ["Da li ostaje ono što već imam?", "Da. Tvoj profil i rezultati ostaju tvoji, šta god kasnije dodali."],
-    ["Na kojim jezicima je sajt?", "Sajt je na srpskom, engleskom, makedonskom i nemačkom. Jezik menjaš kad god hoćeš, preko zastavice gore."],
-    ["Da li će cene uključivati PDV?", "Da. Kada plaćeni dodaci krenu, cena koju vidiš biće cena koju plaćaš, u evrima."],
+    ["Da li mi treba kartica ili pretplata?", "Ne. Trenutno nema šta da se plati i na sajtu nema obrasca za karticu, pa ništa ne može da se obnovi ili naplati."],
+    ["Šta ostaje besplatno?", "Svaki test sa celim rezultatom, tvoja osnovna karta, osnovni rezultat kompatibilnosti i dnevni horoskop za tvoj znak."],
+    ["Kada počinju plaćeni dodaci?", "Nemamo datum. Pre nego što bilo šta bude koštalo, cena će prvo stajati na ovoj stranici."],
+    ["Da li ću zadržati ono što imam?", "Da. Tvoj profil i rezultati ostaju tvoji, šta god kasnije dodali."],
+    ["Na kojim jezicima?", "Sajt je na srpskom, engleskom, makedonskom i nemačkom. Jezik menjaš kad god želiš, preko zastave na vrhu."],
+    ["Da li će cene uključivati PDV?", "Da. Kad plaćeni dodaci krenu, cena koju vidiš biće cena koju plaćaš, u evrima."],
   ] },
   bottom: { title: "Počni testom", sub: "Besplatno je, traje nekoliko minuta i ne treba ti nalog." },
 };

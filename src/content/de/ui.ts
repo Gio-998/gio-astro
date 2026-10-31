@@ -4,7 +4,7 @@ export const pageMeta = {
   account: { title: "Dein Konto" },
   verify: { title: "Code eingeben" },
   email: { title: "Deine E-Mail-Einstellungen" },
-  bond: { title: "Beziehungscheck: 3 Minuten zu zweit", description: "Ihr beantwortet beide zehn Fragen zu eurer Beziehung und seht Stärken, unterschiedliche Sichtweisen und Übungen." },
+  bond: { title: "Beziehungscheck: 3 Minuten zu zweit", description: "Ihr beantwortet beide zehn Fragen zu eurer Beziehung und seht danach eure Stärken, wo ihr verschieden tickt und was ihr ausprobieren könnt." },
   book: { title: "Das Buch über dich" },
   chart: { title: "Geburtshoroskop" },
   learn: { title: "Methoden und Quellen: wie wir rechnen, und Ehrlichkeit", description: "Wie wir Geburtshoroskope, vedisches Matching, chinesischen Tierkreis, Numerologie und Persönlichkeitswerte berechnen, und was die Wissenschaft dazu sagt und was nicht." },
@@ -37,7 +37,7 @@ export const quizHub = {
 export const quickStart = {
   steps: ["Der Himmel über deinem Geburtsort wird gesucht…", "Sonne, Mond und Planeten werden platziert…", "Dein chinesisches Jahr und Element werden gelesen…", "Deine Zahlen werden gezählt…", "Deine Karten werden gezogen…", "Deine Farbpalette wird gemischt…"],
   eyebrowEdit: "Deine Geburtsdaten",
-  eyebrowNew: "Gratis · 30 Sekunden · ohne Anmeldung",
+  eyebrowNew: "Gratis · 30 Sekunden · kein Konto nötig",
   editA: "Bearbeite deine ",
   editB: "Geburtsdaten",
   newA: "Dein Geburtsprofil ",
@@ -157,8 +157,8 @@ export const lead = {
   privacyLink: "Datenschutzerklärung",
   marketing: "Ja, Horoscop darf mir gelegentlich Neuigkeiten zu neuen Tests per E-Mail schicken.",
   marketingHint: "Freiwillig. Dein Ergebnis öffnet sich so oder so. Wir bitten dich, das per E-Mail zu bestätigen, und du kannst jederzeit aufhören.",
-  sent: "Ein Link zurück zu diesem Ergebnis ist auf dem Weg in dein Postfach.",
-  sentConfirm: "Ein Link zurück zu diesem Ergebnis ist auf dem Weg in dein Postfach. Wenn du Neuigkeiten möchtest, bestätige das bitte in dieser E-Mail.",
+  sent: "Ein Link zurück zu diesem Ergebnis sollte bald in deinem Postfach sein. Dein Ergebnis bleibt so oder so hier.",
+  sentConfirm: "Ein Link zurück zu diesem Ergebnis sollte bald in deinem Postfach sein. Wenn du Neuigkeiten möchtest, bestätige das bitte in dieser E-Mail.",
   haveAccount: "Du hast schon ein Konto?", login: "Anmelden",
   errors: { invalid_name: "Bitte gib deinen Vor- und Nachnamen ein.", invalid_email: "Bitte gib eine gültige E-Mail-Adresse ein." },
   page: {
@@ -425,7 +425,6 @@ export const chart = {
 };
 
 export const quiz = {
-  birthFirst: "Sag uns zuerst dein Geburtsdatum. Dauert 30 Sekunden. Dann komm zu diesem Test zurück.",
   unlocked: "Ergebnis ist da",
   seeProfile: "Ganzes Profil ansehen",
   nextQuiz: "Nächster Test",
@@ -435,6 +434,7 @@ export const quiz = {
   answeringA: "Du antwortest als ",
   answeringB: ". Gib ihr oder ihm das Handy, denn die Antworten sollen von ihnen sein.",
   unlocks: (u: string) => `Du bekommst: ${u}. Eine kurze Vorschau siehst du sofort, das ganze Ergebnis ist gratis.`,
+  metaTitle: (t: string) => `${t}: Test mit Ergebnis gratis`,
   begin: "Los geht's ✦",
   qOf: (i: number, n: number) => `Frage ${i} von ${n}`,
   whichMore: "Was würde dir mehr bedeuten?",

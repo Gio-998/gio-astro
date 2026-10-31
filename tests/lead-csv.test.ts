@@ -66,7 +66,7 @@ describe("list helpers", () => {
     expect(marketingState(row)).toBe("ok");
     expect(marketingState({ ...row, marketing_ok: false, marketing_confirmed_at: null })).toBe("unconfirmed");
     expect(marketingState({ ...row, marketing_ok: false, marketing_consent: false, unsubscribed_at: "2026-10-31T09:00:00Z" })).toBe("unsubscribed");
-    expect(marketingState({ ...row, marketing_ok: false, marketing_consent: true, unsubscribed_at: "2026-10-31T09:00:00Z", marketing_confirmed_at: null })).toBe("unconfirmed");
+    expect(marketingState({ ...row, marketing_ok: false, marketing_consent: true, unsubscribed_at: "2026-10-31T09:00:00Z", marketing_confirmed_at: null }), "a new tick can't undo an unsubscribe").toBe("unsubscribed");
     expect(marketingState({ ...row, marketing_ok: false, marketing_consent: false, marketing_confirmed_at: null })).toBe("none");
   });
 });

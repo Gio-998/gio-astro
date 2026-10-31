@@ -32,6 +32,15 @@ export function cleanEmail(raw: unknown): string | null {
   return local.length > LIMITS.emailLocal || local.startsWith(".") || local.endsWith(".") ? null : email;
 }
 
+const GMAIL = new Set(["gmail.com", "googlemail.com"]);
+/** The inbox an address really reaches: a+tag@x and a@x are one mailbox, and Gmail also ignores dots. Takes a clean address. */
+export function normalizeMailbox(email: string): string {
+  const at = email.lastIndexOf("@");
+  const domain = email.slice(at + 1).toLowerCase();
+  const local = email.slice(0, at).toLowerCase().split("+")[0] || email.slice(0, at).toLowerCase();
+  return GMAIL.has(domain) ? `${local.replace(/\./g, "")}@gmail.com` : `${local}@${domain}`;
+}
+
 /** A timestamp the visitor's device claims. Queued leads arrive late, so it is kept when plausible and dropped when not. */
 function cleanAt(raw: unknown, now: number): string | null {
   if (typeof raw !== "string" || raw.length > 40) return null;

@@ -1,2 +1,42 @@
-/** Stub until the Serbian copy lands. The real file with this name replaces it, nothing else has to change. Its reader needs a full object, so until then this is the English one. */
-export { admin } from "../en/admin";
+import { plural } from "@/content/horoscope/sr-cases";
+import type { Admin } from "../en/admin";
+
+export const admin: Admin = {
+  title: "Kontrolna tabla", sub: "Testeri, pozivnice, prekidači, brojke i utisci na jednom mestu.",
+  tabs: { testers: "Testeri", invites: "Pozivnice", leads: "Kontakti", switches: "Prekidači", stats: "Statistika", feedback: "Utisci" },
+  leads: {
+    count: (shown: number, total: number) => `${shown} od ${total}`,
+    search: "Traži ime, mejl, jezik ili test", csv: "Izvezi CSV", more: (n: number) => `Prikazano je prvih ${n}. Pretraži da suziš izbor ili izvezi celu listu.`,
+    note: "Marketinške mejlove smeju da dobijaju samo kontakti označeni kao „Potvrđeno“. Izvoz sadrži datume potvrde i odjave.",
+    marketing: { ok: "Potvrđeno", unconfirmed: "Označeno, nepotvrđeno", unsubscribed: "Odjavljeno", none: "Bez marketinga" },
+  },
+  refresh: "Osveži", loading: "Učitava se…", empty: "Ovde još nema ničega.", error: "Učitavanje nije uspelo. Probaj Osveži.",
+  joined: "Nalog od", lastVisit: "Poslednja poseta", never: "još ne", profile: "Profil", quizzes: "Testovi", people: "Ljudi",
+  you: "ti", adminBadge: "admin",
+  profileOf: (n: number, t: number) => `${n}/${t}`,
+  testersCount: (n: number) => `${n} ${plural(n, "nalog", "naloga", "naloga")}`,
+  addTitle: "Pozovi ljude", addHint: "Jedan mejl u redu, ili nalepi listu.", add: "Dodaj na listu pozivnica",
+  added: (n: number) => `Dodato na listu pozivnica: ${n}.`,
+  invited: "Pozvani", waitlist: "Lista čekanja", joinedOn: (d: string) => `nalog od ${d}`, notJoined: "još nema nalog",
+  invite: "Pozovi", inviteSend: "Pozovi + mejl", email: "Mejl", gmail: "Gmail", copy: "Kopiraj poruku", copied: "Kopirano ✓",
+  uninvite: "Povuci pozivnicu", remove: "Ukloni", confirmUninvite: (e: string) => `Da uklonimo ${e} sa liste pozivnica? Ako već ima nalog, on ostaje; samo ne može ponovo da se registruje ovom pozivnicom.`,
+  confirmRemove: (e: string) => `Da uklonimo ${e} sa liste čekanja?`,
+  emailHint: "„Mejl“ otvara tvoju aplikaciju za poštu sa gotovom porukom. „Gmail“ je otvara u Gmailu na vebu. Ništa se ne šalje dok ne pritisneš pošalji.",
+  fromWaitlist: (d: string) => `na listi čekanja od ${d}`,
+  switches: {
+    private_beta: { name: "Privatna beta", on: "Uključeno: stranice aplikacije traže prijavu. Početna strana, pregled testova i pravne stranice ostaju javni.", off: "Isključeno: svako može da koristi aplikaciju bez naloga (podaci ostaju na uređaju)." },
+    signups_open: { name: "Otvorena registracija", on: "Uključeno: svako može da napravi nalog, pozivnica nije potrebna.", off: "Isključeno: nalog mogu da naprave samo mejlovi sa liste pozivnica." },
+    captcha: { name: "Captcha (provera za botove)", on: "Uključeno: aplikacija prikazuje Turnstile proveru pri prijavi i na listi čekanja.", off: "Isključeno: nema provere za botove u aplikaciji." },
+  },
+  captchaWarn: "Drži ovo usklađeno sa zaštitom od botova u sistemu za prijavu. Ako sistem traži captcha proveru, a ovo je isključeno, prijave neće raditi.",
+  saved: "Sačuvano", changedBy: (d: string) => `promenjeno ${d}`,
+  range: (d: number) => `Poslednjih ${d} dana`,
+  stat: { visits: "Posete", visits_7d: "Posete, poslednjih 7 dana", visits_today: "Posete danas", signed_in_visitors: "Prijavljeni posetioci", quizzes_done: "Završeni testovi", quizzes_saved: "Rezultati sačuvani na nalozima", compat_reports: "Izveštaji o kompatibilnosti", bond_checks: "Provere veze", shared_cards: "Podeljene kartice", testers: "Nalozi", invites: "Pozivnice", invites_used: "Iskorišćene pozivnice", waitlist: "Na listi čekanja", feedback_open: "Otvoreni utisci", friend_invites_sent: "Poslate pozivnice prijateljima", friend_invites_accepted: "Prihvaćene pozivnice prijatelja" },
+  byQuiz: "Završeno po testu",
+  statsNote: "Posete se broje jednom po sesiji kartice u pregledaču, bez kolačića i bez praćenja kroz druge sajtove.",
+  open: "Otvoreno", resolved: "Rešeno", all: "Sve", markResolved: "Označi kao rešeno", reopen: "Ponovo otvori", del: "Obriši", confirmDelete: "Da obrišemo ovaj utisak?",
+  page: "Stranica", from: "Od",
+  fbButton: "Utisci", fbTitle: "Reci nam šta misliš", fbHint: "Šta ti se sviđa, šta ne deluje kako treba, šta nedostaje? Čitamo svaku poruku.",
+  fbPh: "Piši ovde…", fbSend: "Pošalji", fbThanks: "Hvala ti! Stiglo je. 💫", fbClose: "Zatvori", fbPage: (p: string) => `Šalje se sa stranicom na kojoj si: ${p}`,
+  fbError: "Nije uspelo. Probaj ponovo.",
+};

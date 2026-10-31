@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { cleanEmail, cleanName, firstName, validateLead, LIMITS } from "../supabase/functions/_shared/lead-rules";
+import { cleanEmail, cleanName, firstName, normalizeMailbox, validateLead, LIMITS } from "../supabase/functions/_shared/lead-rules";
 
 const good = { name: "Ana Petrovska", email: "ana@example.com", locale: "mk", source: "big-five", marketing: false, privacyVersion: "2026-10-31" };
 const NOW = Date.parse("2026-10-31T12:00:00Z");
@@ -69,6 +69,20 @@ describe("validateLead", () => {
     expect(at("2020-01-01T00:00:00Z")).toBeNull();
     expect(at("soon")).toBeNull();
   });
+});
+
+describe("normalizeMailbox", () => {
+  it.each([
+    ["ana@example.com", "ana@example.com"],
+    ["ANA@Example.COM", "ana@example.com"],
+    ["ana+news@example.com", "ana@example.com"],
+    ["ana+a+b@example.com", "ana@example.com"],
+    ["a.na@example.com", "a.na@example.com"],
+    ["a.n.a@gmail.com", "ana@gmail.com"],
+    ["A.N.A+tag@GMail.com", "ana@gmail.com"],
+    ["a.na@googlemail.com", "ana@gmail.com"],
+    ["+tag@example.com", "+tag@example.com"],
+  ])("reads %s as %s", (email, mailbox) => { expect(normalizeMailbox(email)).toBe(mailbox); });
 });
 
 describe("firstName", () => {

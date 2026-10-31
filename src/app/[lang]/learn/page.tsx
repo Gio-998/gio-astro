@@ -93,7 +93,37 @@ function PageDe() {
     </article>
   );
 }
+function PageSr() {
+  return (
+    <article className="prose-soft" lang="sr">
+      <PageHero emblem="chart" img="orion" title={<>Metode i izvori</>} />
+      <p className="text-sm text-dim">Horoscop je za samospoznaju i zabavu. Nije psihološki, medicinski ni finansijski savet.</p>
+      <p><b>Naša filozofija:</b> zvezde postavljaju scenu, psihologija objašnjava obrazac, a način na koji se ponašate jedno prema drugom piše priču. Sve ovde je ogledalo za razmišljanje, nikad proročanstvo ni presuda.</p>
+      <h2>Šta kažu dokazi</h2>
+      <p>Kontrolisane studije nisu našle prediktivnu moć astrologije ni za ličnost ni za to ko se s kim venčava (npr. Carlson, <i>Nature</i> 1985; Voasova analiza ~10 miliona brakova u Velikoj Britaniji, 2007/2008). Ni numerologija, ni tarot, ni slični sistemi nemaju empirijsku potporu. Uključujemo ih jer su to bogati, drevni jezici za razmišljanje, i označavamo ih sa ✨ Tradicija i simbolika.</p>
+      <p>Osobine ličnosti iz modela Velikih pet dobro su istražene. Kod parova, zadovoljstvo predviđaju emocionalna stabilnost, toplina i pouzdanost svakog partnera ponaosob; to koliko se međusobno poklapate veoma malo znači (Malouff i sar., 2010; Dyrenforth i sar., 2010). Najjači prediktori kvaliteta veze su osećanja partnera prema <i>ovoj</i> vezi: uvažavanje, posvećenost, poverenje, popravljanje odnosa, zabava (Joel i sar., 2020, PNAS). Zato smo napravili Proveru veze. Ova sočiva nose oznaku 🔬. 🧭 Sočiva iz popularne psihologije (temperamenti, tip od četiri slova, devet motivacija, stilovi brige, Senka i svetlo) daju koristan jezik uz ograničene dokaze.</p>
+      <h2>Proračuni</h2>
+      <ul>
+        <li><b>Planete:</b> računaju se na tvom uređaju iz preciznih astronomskih podataka. Proveravamo ih prema referentnim podacima visoke preciznosti: svaka planeta odstupa najviše 30 lučnih sekundi, a cele natalne karte poklapaju se sa profesionalnim referentnim kartama do na par lučnih minuta. Tropski zodijak, geocentrični prividni položaji, srednji lunarni čvor. Ascendent i sredina neba iz sideričnog vremena i tvog mesta rođenja. Kuće celih znakova.</li>
+        <li><b>Vremenske zone:</b> istorijska odstupanja, ratno vreme i letnje računanje vremena iz potpune istorijske evidencije pravila o vremenskim zonama. Dok je neka oblast još koristila lokalno srednje vreme, uzimamo geografsku dužinu tvog mesta rođenja. Ako je tvoje vreme rođenja palo u skok letnjeg računanja vremena (vreme koje nije postojalo ili koje se desilo dvaput), kažemo ti to. Odstupanje možeš da promeniš ručno.</li>
+        <li><b>Mesta rođenja:</b> gradovi sa više od 15.000 stanovnika.</li>
+        <li><b>Nepoznato vreme rođenja:</b> uzimamo podne, izostavljamo podznak i prikazujemo oba mesečeva znaka ako je Mesec tog dana promenio znak.</li>
+        <li><b>Vedska astrologija:</b> Lahiri ajanamša prema definiciji indijskog Komiteta za reformu kalendara (standardna profesionalna definicija, tačna do oko jedne lučne sekunde), 27 nakšatri i tradicionalni Guna Milan (Ashtakoota) od 36 poena sa potpunim klasičnim tabelama, uključujući tabelu Yoni 14 × 14 i grupe Vashya koje dele Strelca i Jarca na 15°. Klasične tabele se čitaju u jednom smeru (mlada i mladoženja), pa uzimamo prosek oba smera i rezultat važi za svaki par. Doše prikazujemo sa tradicionalnim poništenjima, nikad kao upozorenja.</li>
+        <li><b>Kineski horoskop:</b> precizan lunarni kalendar računat na tvom uređaju. Tvoja životinja se menja na <b>Lunarnu Novu godinu</b> (narodno pravilo). Kad se razlikuje, prikazujemo i životinju po Li Chun (početak proleća), koju koristi astrologija četiri stuba. Gospodar dana i ravnoteža pet elemenata dolaze iz četiri stuba: stubovi godine i meseca menjaju se u tačnom trenutku solarnog termina, a stubovi dana i sata koriste pravo Sunčevo vreme u tvom mestu rođenja, kao u klasičnoj praksi četiri stuba.</li>
+        <li><b>Numerologija:</b> pitagorejske vrednosti slova; životni put svodi mesec, dan i godinu posebno i zadržava master brojeve 11, 22 i 33. Dijakritički znaci se uklanjaju (ł→l, ö→o).</li>
+        <li><b>Tarot karte rođenja:</b> mesec + dan + godina, svedeno na 22 ili manje (metod koji je popularizovala Mary K. Greer).</li>
+        <li><b>Velikih pet:</b> Mini-IPIP sa 20 stavki (Donnellan i sar., 2006) ili duži IPIP Big-Five Factor Markers sa 50 stavki (Goldberg, 1992), oba iz javno dostupnog International Personality Item Pool. Kad uradiš dugu verziju, koristimo nju. Percentili se oslanjaju na približne objavljene proseke. Četiri temperamenta proizlaze iz kombinacije ekstraverzija × emocionalna osetljivost (Eysenck). Tip od četiri slova dolazi iz našeg testa preferencija sa 28 pitanja, koji se boduje po paru slova uz ocenu jasnoće; dok ga ne uradiš, procenjujemo ga iz tvojih rezultata na testu Velikih pet (McCrae i Costa, 1989). Uvek možeš da kažeš da ti rezultat ne odgovara i da izabereš onaj koji ti odgovara: čuvamo oba i pokazujemo koji je koji. To nije zvanični test tipa i nismo povezani ni sa jednim izdavačem testova tipa.</li>
+        <li><b>Naši upitnici:</b> stil vezivanja (dimenzije anksioznost i izbegavanje), devet motivacija, stilovi brige, Senka i svetlo, tip tela i energije (po uzoru na ajurvedu) i Autopilot ili istraživač + društveni stav (inspirisano neurokognitivnim i bihejvioralnim pristupom koji je razvio dr Jacques Fradin, nije zvanična procena).</li>
+      </ul>
+      <h2>Kako se računa kompatibilnost</h2>
+      <p>Svako sočivo daje dva broja: <b>Harmonija</b> (lakoća i tok) i <b>Iskra</b> (energija, izazov, rast). Trenje se računa u Iskru, ne protiv tebe. Svako sočivo smo pustili na desetine hiljada slučajnih parova, a tvoj sirovi rezultat pretvaramo u percentil među tim parovima i prikazujemo ga kao 45 + 55 × percentil, pa skala ide od 45 do 100, a tipičan par ima oko 72. Svaki par ima nešto da ponudi, pa skala počinje od 45.</p>
+      <p>Sočiva se spajaju u <b>Rezonancu</b> sa težinama koje zavise od vrste odnosa (romantični, prijateljski, porodični, kolegijalni) i od pouzdanosti (na primer, nepoznato vreme rođenja smanjuje težinu astrologije). Prekidač <b>samo potkrepljeno istraživanjima</b> prikazuje rezultat isključivo iz sočiva Velikih pet i stil vezivanja. Ne postoji kategorija „nekompatibilni“: Srodni tok, Prirodni saveznici, Komplementarni put, Veza katalizator i Veza dubokog učitelja. Svaka tačka rasta dolazi sa vežbama.</p>
+      <h2>Štitimo te</h2>
+      <p>Ono što se zna o senkama i nezdravim obrascima koristimo da ti pomognemo da ih <i>primetiš</i>, nikad da bismo etiketirali drugu osobu i nikad protiv tebe (bez prodaje zasnovane na strahu, bez lažne hitnosti). Ako se u vezi ne osećaš bezbedno, molimo te da se obratiš lokalnim hitnim službama ili liniji za pomoć žrtvama nasilja u porodici.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return <>{lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <div lang="en"><PageEn /></div>}<SectionLinks lang={lang} className="mt-12" /></>;
+  return <>{lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : lang === "sr" ? <PageSr /> : <PageEn />}<SectionLinks lang={lang} className="mt-12" /></>;
 }

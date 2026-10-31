@@ -12,7 +12,7 @@ function PageEn() {
       <h2>Age</h2>
       <p>You must be 16 or older to use the app.</p>
       <h2>Full test results</h2>
-      <p>A test shows a short part of its result straight away. The full result opens once you leave your name and email, one time per device, and costs no money. Please use your own name and an address that is yours. We then send you one email with a link back. The <Link href="/en/privacy/">privacy page</Link> explains what we keep and how to have it deleted. News by email is a separate choice, and no result depends on it.</p>
+      <p>A test shows a short part of its result straight away. The full result opens once you leave your name and email, one time per device, and costs no money. Please use your own name and an address that is yours. We may then send you one email with a link back. The <Link href="/en/privacy/">privacy page</Link> explains what we keep and how to have it deleted. News by email is a separate choice, and no result depends on it.</p>
       <h2>Other people's data</h2>
       <p>When you add someone else, only enter details they would be comfortable sharing with you, ideally with their permission. Don't use the app to harass, pressure or make decisions about others.</p>
       <h2>Wellbeing</h2>
@@ -37,7 +37,7 @@ function PageMk() {
       <h2>Возраст</h2>
       <p>Мораш да имаш 16 или повеќе години за да ја користиш апликацијата.</p>
       <h2>Цели резултати од тестовите</h2>
-      <p>Тестот веднаш покажува краток дел од резултатот. Целиот резултат се отвора откако ќе оставиш име и е-пошта, еднаш по уред, и не чини пари. Те молиме користи го своето име и адреса што е твоја. Потоа ти праќаме една порака со линк назад. На <Link href="/mk/privacy/">страницата за приватност</Link> пишува што чуваме и како да се избрише. Новостите на е-пошта се посебен избор и ниту еден резултат не зависи од нив.</p>
+      <p>Тестот веднаш покажува краток дел од резултатот. Целиот резултат се отвора откако ќе оставиш име и е-пошта, еднаш по уред, и не чини пари. Те молиме користи го своето име и адреса што е твоја. Потоа може да ти пратиме една порака со линк назад. На <Link href="/mk/privacy/">страницата за приватност</Link> пишува што чуваме и како да се избрише. Новостите на е-пошта се посебен избор и ниту еден резултат не зависи од нив.</p>
       <h2>Податоци за други луѓе</h2>
       <p>Кога додаваш некого друг, внеси само податоци што тој човек е согласен да ги сподели со тебе, идеално со нивна дозвола. Не ја користи апликацијата за вознемирување, притисок или донесување одлуки за други.</p>
       <h2>Добросостојба</h2>
@@ -61,7 +61,7 @@ function PageDe() {
       <h2>Alter</h2>
       <p>Du musst mindestens 16 Jahre alt sein, um die App zu nutzen.</p>
       <h2>Ganze Testergebnisse</h2>
-      <p>Ein Test zeigt sofort einen kurzen Teil seines Ergebnisses. Das ganze Ergebnis öffnet sich, sobald du Name und E-Mail hinterlässt, einmal pro Gerät, und es kostet kein Geld. Bitte nutze deinen eigenen Namen und eine Adresse, die dir gehört. Danach schicken wir dir eine E-Mail mit einem Link zurück. Auf der <Link href="/de/privacy/">Datenschutzseite</Link> steht, was wir speichern und wie du es löschen lässt. Neuigkeiten per E-Mail sind eine eigene Entscheidung, und kein Ergebnis hängt davon ab.</p>
+      <p>Ein Test zeigt sofort einen kurzen Teil seines Ergebnisses. Das ganze Ergebnis öffnet sich, sobald du Name und E-Mail hinterlässt, einmal pro Gerät, und es kostet kein Geld. Bitte nutze deinen eigenen Namen und eine Adresse, die dir gehört. Danach können wir dir eine E-Mail mit einem Link zurück schicken. Auf der <Link href="/de/privacy/">Datenschutzseite</Link> steht, was wir speichern und wie du es löschen lässt. Neuigkeiten per E-Mail sind eine eigene Entscheidung, und kein Ergebnis hängt davon ab.</p>
       <h2>Daten anderer Menschen</h2>
       <p>Wenn du jemanden hinzufügst, gib nur Angaben ein, die diese Person dir gern geben würde, am besten mit ihrer Erlaubnis. Nutze die App nicht, um andere zu belästigen, unter Druck zu setzen oder über sie zu entscheiden.</p>
       <h2>Wohlbefinden</h2>
@@ -75,7 +75,31 @@ function PageDe() {
     </article>
   );
 }
+function PageSr() {
+  return (
+    <article className="prose-soft" lang="sr">
+      <PageHero emblem="tarot" img="milkyway" title={<>Uslovi korišćenja</>} />
+      <p className="text-sm text-dim">Nacrt v0.2: pravnik još treba da pregleda ovaj tekst.</p>
+      <h2>Šta je ovo</h2>
+      <p>Ova aplikacija nudi astrologiju, numerologiju, tarot, tradicionalne sisteme i upitnike o ličnosti <b>za razmišljanje o sebi i zabavu</b>. Ovo nije psihološki, medicinski, pravni ili finansijski savet i ne može da predvidi budućnost niti da li će neka veza uspeti. Nemoj da donosiš važne odluke samo na osnovu nje.</p>
+      <h2>Uzrast</h2>
+      <p>Za korišćenje aplikacije moraš da imaš 16 ili više godina.</p>
+      <h2>Celi rezultati testova</h2>
+      <p>Test odmah prikazuje kratak deo svog rezultata. Ceo rezultat se otvara kad ostaviš ime i mejl, jednom po uređaju, i ne košta ništa. Koristi svoje ime i adresu koja je tvoja. Zatim možemo da ti pošaljemo jedan mejl sa linkom nazad. <Link href="/sr/privacy/">Stranica o privatnosti</Link> objašnjava šta čuvamo i kako da to obrišeš. Novosti mejlom su poseban izbor i nijedan rezultat ne zavisi od njih.</p>
+      <h2>Podaci drugih ljudi</h2>
+      <p>Kad dodaš nekog drugog, unesi samo podatke koje bi ta osoba rado podelila sa tobom, najbolje uz njenu dozvolu. Nemoj da koristiš aplikaciju da uznemiravaš druge, pritiskaš ih ili donosiš odluke o njima.</p>
+      <h2>Dobrobit</h2>
+      <p>Upitnik o telu i energiji inspirisan je tradicijom i daje samo opšte ideje za dobrobit. Ako imaš zdravstvene tegobe, obrati se lekaru. Ako se ne osećaš bezbedno u odnosu, obrati se lokalnim hitnim službama ili liniji za pomoć.</p>
+      <h2>Besplatna usluga i plaćeni dodaci</h2>
+      <p>Osnovna usluga je besplatna i pruža se „takva kakva jeste“. Svi budući plaćeni dodaci jasno će prikazati cenu pre kupovine, moći će da se otkažu jednim klikom i pokriveni su tvojim zakonskim potrošačkim pravima u EU.</p>
+      <h2>Sadržaj</h2>
+      <p>Tekstovi tumačenja su naši. Stavke o ličnosti iz International Personality Item Pool su javno dobro. Podaci o gradovima © GeoNames (CC BY 4.0). Ne koristimo žigove trećih strana i nismo povezani ni sa jednim izdavačem testova.</p>
+      <h2>Kontakt</h2>
+      <p>Pitanja ili zahtevi u vezi sa tvojim podacima? Piši na <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <div lang="en"><PageEn /></div>;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : lang === "sr" ? <PageSr /> : <PageEn />;
 }
