@@ -25,7 +25,7 @@ import { mk as mkPartial } from "./mk";
 import { mkExtra } from "./mk/extra";
 import { systems as mkSystems } from "./mk/systems";
 
-type DeepPartial<T> = T extends (...a: never[]) => unknown ? T : T extends readonly unknown[] ? T : T extends object ? { [K in keyof T]?: DeepPartial<T[K]> } : T;
+export type DeepPartial<T> = T extends (...a: never[]) => unknown ? T : T extends readonly unknown[] ? T : T extends object ? { [K in keyof T]?: DeepPartial<T[K]> } : T;
 /** Override objects key-by-key; functions, arrays and primitives replace. Untranslated keys keep the English text. */
 function deepMerge<T>(base: T, over: DeepPartial<T> | undefined): T {
   if (over === undefined) return base;
@@ -41,9 +41,14 @@ const mk: Content = deepMerge<Content>(en, { ...mkPartial, ...mkExtra, systems: 
 /** Add a locale by creating src/content/<code>/* (any subset) and registering it here. */
 import { you as deYou, partners as dePartners } from "./de/you";
 const de: Content = deepMerge<Content>(en, { ...dePartial, systems: deSystems, you: deYou, partners: dePartners } as DeepPartial<Content>);
-export const LOCALES = ["en", "mk", "de"] as const;
+import { sr as srPartial } from "./sr";
+import { srExtra } from "./sr/extra";
+import { systems as srSystems } from "./sr/systems";
+import { you as srYou, partners as srPartners } from "./sr/you";
+const sr: Content = deepMerge<Content>(en, { ...srPartial, ...srExtra, systems: srSystems, you: srYou, partners: srPartners } as DeepPartial<Content>);
+export const LOCALES = ["en", "mk", "de", "sr"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
-export const contents: Record<Locale, Content> = { en, mk, de };
+export const contents: Record<Locale, Content> = { en, mk, de, sr };
 export const isLocale = (s: string): s is Locale => (LOCALES as readonly string[]).includes(s);
 export const getContent = (l: string): Content => contents[isLocale(l) ? l : DEFAULT_LOCALE];

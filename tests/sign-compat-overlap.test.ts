@@ -3,7 +3,7 @@ import { SIGN_PAIRS } from "../src/content/sign-compat";
 import { SIGN_PAIR_KEYS, ALL_SIGN_PAIRS, signCompatibility } from "../src/lib/sections/sign-compatibility";
 
 /** Zodiac pair pages are a large family: each must stand on its own before it joins the sitemap. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 450;
 const MAX_JACCARD = 0.1; // share of 5 word shingles two pages may have in common
 const MAX_SHARED_SENTENCES = 1;

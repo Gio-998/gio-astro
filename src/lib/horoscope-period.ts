@@ -8,6 +8,7 @@ import { getContent } from "@/content";
 import { de } from "@/content/horoscope-period/de";
 import { en } from "@/content/horoscope-period/en";
 import { mk } from "@/content/horoscope-period/mk";
+import { sr } from "@/content/horoscope-period/sr";
 import type { PeriodBank, PeriodKind, Placed, Three } from "@/content/horoscope-period/types";
 import { hash } from "@/engine/daily";
 import { SKY_ZONE, addDays, houseFrom, todayIso, type Body } from "@/engine/skyday";
@@ -18,7 +19,7 @@ import { HORO_LOCALES, bankFor, dayNumber, type HoroLocale } from "./horoscope";
 import { localizedPath } from "./i18n-routes";
 import type { Block, LinkItem, NumModel } from "./numerology";
 
-export const PERIOD_BANKS: Record<HoroLocale, PeriodBank> = { en, mk, de };
+export const PERIOD_BANKS: Record<HoroLocale, PeriodBank> = { en, mk, de, sr };
 export const periodBank = (lang: string): PeriodBank => PERIOD_BANKS[lang as HoroLocale] ?? en;
 
 /** The first dated monthly pages. Every month from here on stays online. */

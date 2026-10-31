@@ -8,10 +8,10 @@ const base = { firstName: "Ana", source: "big-five", unsubscribeToken: "U".repea
 const plain = (s: string) => s.replace(/https?:\/\/\S+/g, "");
 
 describe("the welcome email", () => {
-  for (const locale of ["en", "mk", "de"]) {
+  for (const locale of ["en", "mk", "de", "sr"]) {
     it(`${locale}: says results stay on the device, in html and text`, () => {
       const m = renderWelcome({ ...base, locale });
-      const line = { en: "Your results stay on this device.", mk: "Твоите резултати остануваат на овој уред.", de: "Deine Ergebnisse bleiben auf diesem Gerät." }[locale]!;
+      const line = { en: "Your results stay on this device.", mk: "Твоите резултати остануваат на овој уред.", de: "Deine Ergebnisse bleiben auf diesem Gerät.", sr: "Tvoji rezultati ostaju na ovom uređaju." }[locale]!;
       expect(m.html).toContain(esc(line));
       expect(m.text).toContain(line);
       expect(m.html).toContain(`<html lang="${locale}">`);
@@ -54,7 +54,7 @@ describe("the welcome email", () => {
     expect(renderWelcome({ ...base, locale: "de" }).text.startsWith("Hallo Ana,")).toBe(true);
   });
   it("never puts a name in the subject", () => {
-    for (const locale of ["en", "mk", "de"]) expect(renderWelcome({ ...base, locale, firstName: "Ana" }).subject).not.toContain("Ana");
+    for (const locale of ["en", "mk", "de", "sr"]) expect(renderWelcome({ ...base, locale, firstName: "Ana" }).subject).not.toContain("Ana");
   });
   it("sends an unknown source to the tests page", () => {
     const m = renderWelcome({ ...base, locale: "en", source: "something-new" });
@@ -62,10 +62,15 @@ describe("the welcome email", () => {
     expect(m.text).not.toContain("/quiz/");
   });
   it("falls back to English for a language it doesn't have yet", () => {
-    expect(emailLocale("sr")).toBe("en");
+    expect(emailLocale("fr")).toBe("en");
     expect(emailLocale("constructor")).toBe("en");
-    expect(renderWelcome({ ...base, locale: "sr" }).subject).toBe(renderWelcome({ ...base, locale: "en" }).subject);
-    expect(actionUrl("sr", "confirm", "x")).toContain("/en/email/");
+    expect(renderWelcome({ ...base, locale: "fr" }).subject).toBe(renderWelcome({ ...base, locale: "en" }).subject);
+    expect(actionUrl("fr", "confirm", "x")).toContain("/en/email/");
+  });
+  it("keeps a Serbian reader on Serbian pages", () => {
+    expect(emailLocale("sr")).toBe("sr");
+    expect(actionUrl("sr", "confirm", "x")).toContain("/sr/email/");
+    for (const id of Object.keys(TESTS)) expect(TESTS[id].sr, id).toBeTruthy();
   });
 });
 

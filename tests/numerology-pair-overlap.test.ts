@@ -3,7 +3,7 @@ import { PAIRS } from "../src/content/numerology/pairs";
 import { PAIR_KEYS, ALL_PAIRS, numPaths } from "../src/lib/numerology";
 
 /** Compatibility pair pages (78 life path pairs) are a generated family: each must stand on its own before it joins the sitemap. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 400;
 const MAX_JACCARD = 0.12; // share of 5 word shingles two pages may have in common
 const MAX_SHARED_SENTENCES = 1;

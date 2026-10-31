@@ -6,7 +6,7 @@ import { getContent } from "../src/content";
 import { localizedPath } from "../src/lib/i18n-routes";
 
 /** Twelve sign profiles in three languages are an easy place to fall into a template: each page must stand on its own. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 1500;
 const MAX_JACCARD = 0.1; // share of 5 word shingles two pages may have in common
 const DAILY_MIN = 150, DAILY_MAX = 200;
@@ -30,6 +30,7 @@ describe("zodiac profiles: every sign in every language", () => {
     expect(localizedPath("en", "/zodiac/capricorn/")).toBe("/en/zodiac-signs/capricorn/");
     expect(localizedPath("de", "/zodiac/capricorn/")).toBe("/de/sternzeichen/steinbock/");
     expect(localizedPath("mk", "/zodiac/capricorn/")).toBe("/mk/horoskopski-znaci/jarec/");
+    expect(localizedPath("sr", "/zodiac/capricorn/")).toBe("/sr/horoskopski-znakovi/jarac/");
   });
   it("match lists follow the zodiac: two of the same element, one sextile, two squares", () => {
     for (const s of SIGNS) {

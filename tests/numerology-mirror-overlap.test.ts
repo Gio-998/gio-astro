@@ -4,7 +4,7 @@ import { MIRROR_ALL, MIRROR_KEYS, numPaths } from "../src/lib/numerology";
 import { PAIRS } from "../src/content/numerology/pairs";
 
 /** Mirror hour pages (00:00 to 23:23) are a family of near neighbours: each must stand on its own before it joins the sitemap. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 400;
 const MAX_JACCARD = 0.12;
 

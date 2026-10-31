@@ -9,9 +9,10 @@ import { useAccount } from "@/lib/sync";
 import { nav as en, type NavGroupKey } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
 import { nav as de } from "@/content/de/nav";
+import { nav as sr } from "@/content/sr/nav";
 import { Emblem, type EmblemId } from "../art/Emblem";
 
-export const useNav = () => ({ en, mk, de })[useContent().locale] ?? en;
+export const useNav = () => ({ en, mk, de, sr })[useContent().locale] ?? en;
 /** Someone who has been here before: a saved profile on this device, or a signed-in account. */
 export function useReturning() { const s = useStore(); const a = useAccount(); return !!s?.me || !!a.user; }
 

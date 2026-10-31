@@ -5,7 +5,7 @@ import { PAIRS } from "../src/content/numerology/pairs";
 import { MIRRORS } from "../src/content/numerology/mirror";
 
 /** Personal year 2027 pages (1 to 9) are a family of near neighbours: each must stand on its own before it joins the sitemap. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 400;
 const MAX_JACCARD = 0.12;
 

@@ -1,5 +1,6 @@
-/** Copy for the "Your sky today" share card and friend invites (kept self-contained: EN + native MK + DE). */
+/** Copy for the "Your sky today" share card and friend invites (kept self-contained: EN + native MK + DE + SR). */
 import type { Locale } from "@/content";
+import { sLoc } from "@/content/horoscope/sr-cases";
 
 const en = {
   card: {
@@ -133,4 +134,48 @@ const de: InviteCopy = {
   },
 };
 
-export const inviteCopy = (l: Locale): InviteCopy => ({ en, mk, de })[l] ?? en;
+const sr: InviteCopy = {
+  card: {
+    eyebrow: "Tvoje nebo danas",
+    title: "Tvoja kartica neba",
+    desc: "Današnje nebo, samo za tebe.",
+    story: "Priča", square: "Kvadrat",
+    share: "Podeli", making: "Pravi se…", saved: "Sačuvano u slikama", done: "Podeljeno",
+    sun: (s: string) => `Sunce u ${sLoc(s)}`, moon: (s: string) => `Mesec u ${sLoc(s)}`,
+    day: (n: number) => `Dan ${n}`, lit: (n: number) => `${n}% osvetljen`,
+    scan: "Skeniraj i vidi svoje nebo",
+  },
+  invite: {
+    title: "Pozovi prijatelja",
+    desc: "Oboje vidite koliko se slažete kad otvori link.",
+    share: "Podeli moj link", copy: "Kopiraj", copied: "Kopirano",
+    shareText: (n: string) => `${n} želi da vidi koliko se slažete. Traje minut:`,
+    shareTitle: "Koliko se slažemo?",
+    joined: "Pridružili su se preko tvog linka",
+    seeMatch: "Vidi slaganje",
+    noneYet: "Još niko. Pošalji ga nekome ko te zanima.",
+    // landing
+    loading: "Otvaram tvoju pozivnicu…",
+    notFound: "Ovaj link za poziv više ne radi. Zatraži novi.",
+    home: "Nazad na početnu",
+    eyebrow: "Lična pozivnica",
+    headA: (n: string) => `${n} želi da vidi `, headB: "koliko se slažete",
+    sub: "Dodaj datum rođenja i Horoscop će uporediti vaše dve karte.",
+    their: (s: string) => `Sunce u ${sLoc(s)}`,
+    asMe: (n: string) => `Vidi naše slaganje kao ${n}`,
+    formTitle: "Tvoji podaci o rođenju",
+    submit: "Prikaži naše slaganje",
+    privacy: (n: string) => `Tvoje ime i podatke o rođenju videće i ${n}, da biste oboje imali isto slaganje pred sobom.`,
+    working: "Čitam obe karte…",
+    resultEyebrow: "Vaše slaganje",
+    resultTitle: (a: string, b: string) => `${a} i ${b}`,
+    resultSent: (n: string) => `To može da vidi i ${n}.`,
+    resonance: "Sklad", spark: "Iskra",
+    full: "Pročitaj celu priču o vezi",
+    join: "Napravi nalog",
+    self: "Ovo je tvoj link. Podeli ga sa prijateljem.",
+    error: "Nešto nije u redu. Pokušaj ponovo.",
+  },
+};
+
+export const inviteCopy = (l: Locale): InviteCopy => ({ en, mk, de, sr })[l] ?? en;

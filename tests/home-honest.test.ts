@@ -12,6 +12,7 @@ const OLD_WORDS: Record<string, RegExp> = {
   en: /quiz|\blens|\blayers?\b|codex|waitlist|\binvit|no sign-up|no email|\bbeta\b/i,
   de: /quiz|perspektive|\bebenen?\b|codex|warteliste|einladung|ohne anmeldung|keine e-mail|\bbeta\b/i,
   mk: /квиз|гледишт|\bслој|кодекс|листа на чекање|покан|без регистрација|без е-пошта|\bбета/i,
+  sr: /kviz|sočiv|\bsloj|kodeks|list\p{L}* čekanja|pozivnic|bez registracij|bez imejla|\bbeta/iu,
 };
 const FACES = (lang: string) => {
   const c = getContent(lang); const B = c.ui.beta;
@@ -35,7 +36,7 @@ describe("first screens", () => {
   });
   it("gives the real number of Bond Check questions", () => {
     expect(BOND_DIMS.length + 2).toBe(10); // BondPage asks every dimension plus how each person gives and receives care
-    const words: Record<string, RegExp> = { en: /\bten\b/i, de: /\bzehn\b/i, mk: /десет/i };
+    const words: Record<string, RegExp> = { en: /\bten\b/i, de: /\bzehn\b/i, mk: /десет/i, sr: /\bdeset\b|\bten\b/i }; // sr: "ten" only until src/content/sr lands
     for (const lang of LOCALES) {
       expect(navFor(lang).groups.bonds.items.find((i) => i.href === "/bond/")!.desc).toMatch(words[lang]);
       expect(getContent(lang).landing.pairs.cards[2].d).toMatch(words[lang]);
@@ -57,7 +58,7 @@ describe("first screens", () => {
 describe("pricing page", () => {
   it("tells the truth while nothing is on sale", () => {
     expect(PAYWALL_LIVE).toBe(false); // when this changes, rewrite src/components/pricing/text.ts first
-    const free: Record<string, RegExp> = { en: /free/i, de: /gratis/i, mk: /бесплатно/i };
+    const free: Record<string, RegExp> = { en: /free/i, de: /gratis/i, mk: /бесплатно/i, sr: /besplatno/i };
     for (const lang of LOCALES) {
       const T = pricingText(lang); const all = JSON.stringify(T);
       expect(T.title.join("")).toMatch(free[lang]);

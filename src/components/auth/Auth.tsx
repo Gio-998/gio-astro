@@ -1,4 +1,6 @@
 "use client";
+import { isLocalPath } from "@/lib/i18n-routes";
+import { intlLocale } from "@/engine/intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -65,7 +67,7 @@ export function AccountPage() {
 
 function SignInForm() {
   const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const router = useRouter(); const s = useStore();
-  const nextParam = useSearchParams().get("next"); const dest = nextParam && /^\/(en|mk|de)\/[\w\-/]*$/.test(nextParam) ? nextParam : h("/me");
+  const nextParam = useSearchParams().get("next"); const dest = nextParam && isLocalPath(nextParam) ? nextParam : h("/me");
   const [tab, setTab] = useState<"signup" | "login" | "otp">("signup"); const creating = tab === "signup";
   const [sent, setSent] = useState<"" | "signup" | "otp">("");
   const [email, setEmail] = useState(""); const [pw, setPw] = useState(""); const [cons, setCons] = useState({ terms: false, data: false, mkt: false });
@@ -216,7 +218,7 @@ export function VerifyPage() {
 function SignedIn() {
   const a = useAccount(); const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const fmt = useDate(); const router = useRouter();
   const [cons, setCons] = useState({ terms: false, data: false, mkt: false }); const [msg, setMsg] = useState("");
-  const time = (iso: string) => new Date(iso).toLocaleTimeString(locale === "mk" ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB", { hour: "2-digit", minute: "2-digit" });
+  const time = (iso: string) => new Date(iso).toLocaleTimeString(intlLocale(locale), { hour: "2-digit", minute: "2-digit" });
   return (
     <div className="space-y-4">
       <div className="card space-y-3">

@@ -19,17 +19,17 @@ export const KARMIC = [13, 14, 16, 19] as const;
 export const CALCS = ["life-path", "name", "personal-year", "compatibility"] as const;
 export const CORE = ["expression-number", "soul-urge-number", "personality-number", "birthday-number", "maturity-number"] as const;
 /** Birthday day pages that exist in every language (gated by tests/numerology-birthday-overlap.test.ts). */
-export const BDAY_DAYS: number[] = Object.keys(BIRTHDAYS.en).map(Number).filter((d) => BIRTHDAYS.mk[d] && BIRTHDAYS.de[d]).sort((a, b) => a - b);
+export const BDAY_DAYS: number[] = Object.keys(BIRTHDAYS.en).map(Number).filter((d) => BIRTHDAYS.mk[d] && BIRTHDAYS.de[d] && BIRTHDAYS.sr[d]).sort((a, b) => a - b);
 /** Every unordered life path pair (78), keyed "a-and-b" in LIFE order. */
 export const ALL_PAIRS: string[] = LIFE.flatMap((a, i) => LIFE.slice(i).map((b) => `${a}-and-${b}`));
 /** Compatibility pair pages that exist in every language (gated by tests/numerology-pair-overlap.test.ts). */
-export const PAIR_KEYS: string[] = ALL_PAIRS.filter((k) => PAIRS.en[k] && PAIRS.mk[k] && PAIRS.de[k]);
+export const PAIR_KEYS: string[] = ALL_PAIRS.filter((k) => PAIRS.en[k] && PAIRS.mk[k] && PAIRS.de[k] && PAIRS.sr[k]);
 /** Personal year 2027 pages that exist in every language (gated by tests/numerology-year2027-overlap.test.ts). */
-export const Y27_KEYS: string[] = YEARS.map(String).filter((k) => YEAR2027.en[k] && YEAR2027.mk[k] && YEAR2027.de[k]);
+export const Y27_KEYS: string[] = YEARS.map(String).filter((k) => YEAR2027.en[k] && YEAR2027.mk[k] && YEAR2027.de[k] && YEAR2027.sr[k]);
 /** Mirror hours we write pages for, keyed "hh-mm". */
 export const MIRROR_ALL = ["00-00", "01-01", "02-02", "03-03", "04-04", "05-05", "06-06", "07-07", "08-08", "09-09", "10-10", "11-11", "12-12", "13-13", "14-14", "15-15", "16-16", "17-17", "18-18", "19-19", "20-20", "21-21", "22-22", "23-23"] as const;
 /** Mirror hour pages that exist in every language (gated by tests/numerology-mirror-overlap.test.ts). */
-export const MIRROR_KEYS: string[] = MIRROR_ALL.filter((k) => MIRRORS.en[k] && MIRRORS.mk[k] && MIRRORS.de[k]);
+export const MIRROR_KEYS: string[] = MIRROR_ALL.filter((k) => MIRRORS.en[k] && MIRRORS.mk[k] && MIRRORS.de[k] && MIRRORS.sr[k]);
 export type CalcMode = (typeof CALCS)[number];
 
 const N = "/numerology/";

@@ -4,6 +4,7 @@
  * when signed in, every local change is queued in an outbox and mirrored to Supabase. On sign-in we pull the
  * server copy and merge it with what is on this device (see sync-map.ts for the rules).
  */
+import { parsePath } from "./i18n-routes";
 import { useSyncExternalStore } from "react";
 import type { Session, User } from "@supabase/supabase-js";
 import { sb } from "./supabase";
@@ -52,7 +53,7 @@ async function hasDataConsent(): Promise<boolean> {
   return latest.get("birth_data") === true && latest.get("sensitive_quiz_data") === true;
 }
 
-const locale = () => (typeof location !== "undefined" && location.pathname.startsWith("/mk") ? "mk" : location.pathname.startsWith("/de") ? "de" : "en");
+const locale = () => (typeof location !== "undefined" && parsePath(location.pathname)?.[0]) || "en";
 
 // ——— push one change ———
 async function push(ch: Change, uid: string) {

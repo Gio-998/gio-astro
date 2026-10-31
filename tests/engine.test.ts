@@ -135,6 +135,30 @@ describe("daily guidance", () => {
   });
 });
 
+describe("Serbian names read the same in both scripts", () => {
+  const PAIRS = [["Miloš", "Милош", 5], ["Đorđe", "Ђорђе", 1], ["Žarko", "Жарко", 8], ["Čedomir", "Чедомир"], ["Ćirić", "Ћирић"], ["Džavid", "Џавид"], ["Ljubica", "Љубица"], ["Njegoš", "Његош"], ["Jovana Šćepanović", "Јована Шћепановић"], ["Hadži Đurić", "Хаџи Ђурић"]] as const;
+  it.each(PAIRS)("%s and %s", (latin, cyrillic, n?: number) => {
+    expect(nameNumbers(cyrillic, "sr")).toEqual(nameNumbers(latin, "sr"));
+    expect(nameNumbers(latin, "sr")).toEqual(nameNumbers(latin));
+    if (n) expect(nameNumbers(cyrillic, "sr")!.expression).toBe(n);
+  });
+  it("lets a letter only Serbian has settle it on any page", () => {
+    expect(nameNumbers("Ђорђе")).toEqual(nameNumbers("Đorđe")); expect(nameNumbers("Ђорђе", "en")).toEqual(nameNumbers("Đorđe")); expect(nameNumbers("Ћирић", "de")).toEqual(nameNumbers("Ćirić"));
+  });
+  it("leaves Macedonian and Latin results as they were", async () => {
+    const { normalizeName } = await import("@/engine/numerology");
+    for (const [name, want] of [["Милош", "MILOSH"], ["Жарко", "ZHARKO"], ["Ѓорѓи Џамбаз", "GJORGJI DZHAMBAZ"], ["Чедомир", "CHEDOMIR"]]) { expect(normalizeName(name), name).toBe(want); expect(normalizeName(name, "mk"), name).toBe(want); expect(normalizeName(name, "en"), name).toBe(want); }
+    expect(nameNumbers("Милош", "mk")!.expression).toBe(4); expect(nameNumbers("Жарко", "mk")!.expression).toBe(7);
+    expect(normalizeName("Ѓорѓи Жарко", "sr")).toBe("GJORGJI ZHARKO"); // a Macedonian letter keeps a Macedonian name whole, even on a Serbian page
+    for (const name of ["Ana Petrović", "Miloš", "Müller", "Łucja Żółć"]) expect(normalizeName(name, "sr")).toBe(normalizeName(name));
+  });
+  it("makes the profile follow the page language", () => {
+    const base = { date: "1990-05-05", time: null, place: null };
+    expect(buildProfile({ ...base, name: "Милош", locale: "sr" }).numbers.name).toEqual(nameNumbers("Miloš"));
+    expect(buildProfile({ ...base, name: "Милош" }).numbers.name).toEqual(nameNumbers("Милош"));
+  });
+});
+
 describe("Cyrillic names and cities", () => {
   it("numerology reads Macedonian Cyrillic names like their Latin spelling", async () => {
     const { normalizeName } = await import("@/engine/numerology");

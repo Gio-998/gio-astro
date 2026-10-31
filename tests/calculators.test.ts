@@ -152,6 +152,6 @@ describe("worked examples in the copy", () => {
     expect(lifePath("0085-07-23").value).toBe(7); // the shortened year in the mistakes section
     expect(lifePath("1985-07-23").sum).toBe("7 → 7, 23 → 5, 1985 → 5: 7 + 5 + 5 = 17 → 8");
     expect(lifePath("2000-09-11").sum).toBe("9 → 9, 11 → 11, 2000 → 2: 9 + 11 + 2 = 22");
-    for (const l of ["en", "mk", "de"]) expect(pageLong(l, "calculator/life-path").length).toBeGreaterThanOrEqual(4);
+    for (const l of ["en", "mk", "de", "sr"]) expect(pageLong(l, "calculator/life-path").length).toBeGreaterThanOrEqual(4);
   });
 });

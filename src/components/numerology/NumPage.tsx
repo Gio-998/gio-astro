@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { getContent } from "@/content";
 import { numContent } from "@/content/numerology";
 import { numModel, numPaths, type NumModel, type LinkItem, type BlockTable, type TableCell } from "@/lib/numerology";
-import { localizedPath, parsePath, routeAlternates, sectionSlug } from "@/lib/i18n-routes";
+import { localizedPath, parsePath, routeAlternates, sectionSlug, servesFolder } from "@/lib/i18n-routes";
 import { LOCALE_META } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
 import { breadcrumb, faqPage, LdJson, abs, ORG_REF } from "@/lib/schema";
@@ -16,7 +16,7 @@ import { moonPath } from "@/components/horoscope/art";
 
 /** Static params for one locale's slug folder (other locales get the "_" placeholder that renders a 404). */
 export function numParams(lang: string, owner: string) {
-  if (lang !== owner) return [{ slug: ["_"] }];
+  if (!servesFolder(lang, "numerology", owner)) return [{ slug: ["_"] }];
   return numPaths().filter((p) => p !== "/numerology/").map((p) => ({ slug: localizedPath(lang, p).split("/").filter(Boolean).slice(2) }));
 }
 const internal = (lang: string, slug: string[] = []) => parsePath(`/${lang}/${sectionSlug(lang, "numerology")}/${slug.map(decodeURIComponent).join("/")}${slug.length ? "/" : ""}`)?.[1] ?? "";

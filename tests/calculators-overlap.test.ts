@@ -7,7 +7,7 @@ import { localizedPath } from "../src/lib/i18n-routes";
 import { SIGNS } from "../src/engine/zodiac";
 
 /** The three calculators sit close together in subject, so each one must carry its own weight. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 1200;
 const MAX_JACCARD = 0.1;
 
@@ -71,8 +71,8 @@ describe("calculator pages: overlap and depth", () => {
     }
   });
   it("public URLs match the plan", () => {
-    expect(["en", "de", "mk"].map((l) => localizedPath(l, "/rising-sign/"))).toEqual(["/en/rising-sign-calculator/", "/de/aszendent-berechnen/", "/mk/ascendent-kalkulator/"]);
-    expect(["en", "de", "mk"].map((l) => localizedPath(l, "/moon-sign/"))).toEqual(["/en/moon-sign-calculator/", "/de/mondzeichen-berechnen/", "/mk/mesecev-znak-kalkulator/"]);
-    expect(["en", "de", "mk"].map((l) => localizedPath(l, "/birth-chart/"))).toEqual(["/en/birth-chart-calculator/", "/de/geburtshoroskop-berechnen/", "/mk/natalna-karta-kalkulator/"]);
+    expect(["en", "de", "mk", "sr"].map((l) => localizedPath(l, "/rising-sign/"))).toEqual(["/en/rising-sign-calculator/", "/de/aszendent-berechnen/", "/mk/ascendent-kalkulator/", "/sr/podznak-kalkulator/"]);
+    expect(["en", "de", "mk", "sr"].map((l) => localizedPath(l, "/moon-sign/"))).toEqual(["/en/moon-sign-calculator/", "/de/mondzeichen-berechnen/", "/mk/mesecev-znak-kalkulator/", "/sr/mesecev-znak-kalkulator/"]);
+    expect(["en", "de", "mk", "sr"].map((l) => localizedPath(l, "/birth-chart/"))).toEqual(["/en/birth-chart-calculator/", "/de/geburtshoroskop-berechnen/", "/mk/natalna-karta-kalkulator/", "/sr/natalna-karta-kalkulator/"]);
   });
 });

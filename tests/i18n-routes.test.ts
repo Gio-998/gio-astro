@@ -1,8 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { existsSync, readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { LOCALES } from "@/content";
-import { ROUTE_LOCALES, SECTION_SLUGS, localizedPath, parsePath, routeAlternates, switchLocale, wrongLocaleRedirects } from "@/lib/i18n-routes";
-import { languageAlternates } from "@/lib/seo";
+import { NUM_SLUGS, ROUTE_LOCALES, SECTION_SLUGS, SIGN_SLUGS, hasPage, isLocalPath, localizedPath, parsePath, routeAlternates, servesFolder, switchLocale, wrongLocaleRedirects } from "@/lib/i18n-routes";
+import { languageAlternates, localizedMeta } from "@/lib/seo";
+import sitemap from "@/app/sitemap";
 import { SECTIONS } from "@/lib/sections";
 import { ALL_SIGN_PAIRS } from "@/lib/sections/sign-compatibility";
 import { modelMeta } from "@/components/numerology/NumPage";
@@ -29,7 +33,7 @@ describe("i18n route map", () => {
     expect(localizedPath("de", "/horoscope/leo/2026-10-13/")).toBe("/de/tageshoroskop/loewe/2026-10-13/");
     expect(localizedPath("de", "/blog/x/")).toBe("/de/blog/x/");
   });
-  it("builds hreflang with x-default", () => expect(routeAlternates("/pricing/")).toEqual({ en: "/en/pricing/", mk: "/mk/ceni/", de: "/de/preise/", "x-default": "/en/pricing/" }));
+  it("builds hreflang with x-default", () => expect(routeAlternates("/pricing/")).toEqual({ en: "/en/pricing/", mk: "/mk/ceni/", de: "/de/preise/", sr: "/sr/cene/", "x-default": "/en/pricing/" }));
   it("switches language to German", () => expect(switchLocale("/mk/dneven-horoskop/oven/", "de")).toBe("/de/tageshoroskop/widder/"));
   it("geo/cookie redirect only touches the bare root, cookie first, temporary status", () => {
     const cfg = JSON.parse(readFileSync("vercel.json", "utf8")) as { routes: { src?: string; status?: number; has?: { type: string; key: string; value: string }[]; headers?: Record<string, string> }[] };
@@ -41,9 +45,28 @@ describe("i18n route map", () => {
     expect(lastCookie).toBeLessThan(firstGeo);
     const to = (country: string) => root.find((r) => r.has?.[0]?.key === "x-vercel-ip-country" && r.has[0].value === country)?.headers?.Location;
     expect(to("MK")).toBe("/mk/"); for (const c of ["DE", "AT", "CH", "LI"]) expect(to(c)).toBe("/de/");
+    for (const c of ["RS", "BA", "ME", "HR"]) expect(to(c)).toBe("/sr/");
+    expect(root.find((r) => r.has?.[0]?.key === "lang" && r.has[0].value === "sr")?.headers?.Location).toBe("/sr/");
     expect(root.at(-1)).toMatchObject({ headers: { Location: "/en/" } }); expect(root.at(-1)!.has).toBeUndefined();
     // No rule redirects an already-prefixed URL by country or cookie.
     expect(cfg.routes.filter((r) => r.has && r.src !== "/")).toEqual([]);
+  });
+  it("redirects no real page: a slug shared by two locales stays put in both", () => {
+    const cfg = JSON.parse(readFileSync("vercel.json", "utf8")) as { routes: { src?: string; status?: number; handle?: string }[] };
+    const before = cfg.routes.slice(0, cfg.routes.findIndex((r) => r.handle === "filesystem")).filter((r) => r.status === 308);
+    const rules = before.map((r) => new RegExp(`^${r.src}$`));
+    const hit = sitemap().map((e) => new URL(e.url).pathname).filter((p) => rules.some((rx) => rx.test(p)));
+    expect(hit).toEqual([]);
+    for (const p of ["/mk/numerologija/", "/sr/numerologija/", "/mk/horoskop-2027/oven/", "/sr/horoskop-2027/ovan/", "/mk/mesecev-kalendar/", "/sr/mesecev-kalendar/", "/mk/mesecev-znak-kalkulator/", "/sr/mesecev-znak-kalkulator/", "/mk/natalna-karta-kalkulator/", "/sr/natalna-karta-kalkulator/"]) expect(rules.some((rx) => rx.test(p)), p).toBe(false);
+  });
+  it("sends every other locale away from a shared folder", () => {
+    const cfg = JSON.parse(readFileSync("vercel.json", "utf8")) as { routes: { src: string; status?: number; headers?: { Location: string } }[] };
+    const to = (p: string) => cfg.routes.find((r) => r.status === 308 && new RegExp(`^${r.src}$`).test(p))?.headers?.Location;
+    expect(to("/de/numerologija/")).toBe("/de/numerologie/"); expect(to("/en/horoskop-2027/ovan/")).toBe("/en/horoscope-2027/");
+    expect(to("/sr/numerology/")).toBe("/sr/numerologija/"); expect(to("/sr/ceni/")).toBe("/sr/cene/"); expect(to("/mk/cene/")).toBe("/mk/ceni/");
+    expect(to("/sr/dneven-horoskop/oven/")).toBe("/sr/dnevni-horoskop/ovan/"); expect(to("/sr/horoscope/pisces/2026-10-13/")).toBe("/sr/dnevni-horoskop/ribe/");
+    expect(to("/mk/dnevni-horoskop/ovan/")).toBe("/mk/dneven-horoskop/oven/"); expect(to("/sr/premium/")).toBe("/sr/cene/");
+    expect(to("/sr/dnevni-horoskop/ovan/2026-10-13/")).toBe("/sr/dnevni-horoskop/$1/"); // the dated rule, after the filesystem
   });
   it("switches language on localized pages", () => expect(switchLocale("/mk/dneven-horoskop/oven/", "en")).toBe("/en/horoscope/aries/"));
   it("vercel.json 308s every wrong-locale slug", () => {
@@ -53,6 +76,59 @@ describe("i18n route map", () => {
       expect(rule, r.source).toBeTruthy();
       expect(rule!.headers!.Location.startsWith(r.destination), r.source).toBe(true);
     }
+  });
+});
+
+describe("Serbian", () => {
+  it("has the slugs from the brief", () => {
+    expect(localizedPath("sr", "/pricing/")).toBe("/sr/cene/");
+    expect(localizedPath("sr", "/horoscope/capricorn/2026-10-13/")).toBe("/sr/dnevni-horoskop/jarac/2026-10-13/");
+    expect(localizedPath("sr", "/numerology/angel-numbers/111/")).toBe("/sr/numerologija/andjeoski-brojevi/111/");
+    expect(localizedPath("sr", "/numerology/calculator/name/")).toBe("/sr/numerologija/kalkulator/ime/");
+    expect(localizedPath("sr", "/numerology/compatibility/1-and-22/")).toBe("/sr/numerologija/kompatibilnost/1-i-22/");
+    expect(localizedPath("sr", "/numerology/mirror-hours/11-11/")).toBe("/sr/numerologija/ogledalni-sati/11-11/");
+    expect(localizedPath("sr", "/sign-compatibility/sagittarius-and-pisces/")).toBe("/sr/kompatibilnost-znakova/strelac-i-ribe/");
+    expect(localizedPath("sr", "/mercury-retrograde/2027/")).toBe("/sr/retrogradni-merkur/2027/");
+    expect(Object.values(NUM_SLUGS).every((row) => row.sr)).toBe(true);
+    expect(Object.values(SECTION_SLUGS).every((row) => row.sr)).toBe(true);
+    expect(Object.values(SIGN_SLUGS.sr)).toEqual(["ovan", "bik", "blizanci", "rak", "lav", "devica", "vaga", "skorpija", "strelac", "jarac", "vodolija", "ribe"]);
+  });
+  it("switches between Macedonian and Serbian on a shared slug", () => {
+    expect(switchLocale("/mk/numerologija/angelski-broevi/111/", "sr")).toBe("/sr/numerologija/andjeoski-brojevi/111/");
+    expect(switchLocale("/sr/horoskop-2027/ovan/", "mk")).toBe("/mk/horoskop-2027/oven/");
+  });
+  it("gives a shared folder to both locales and nobody else", () => {
+    for (const [section, owner] of [["numerology", "mk"], ["horoscope-2027", "mk"], ["moon-calendar", "mk"], ["moon-sign", "mk"], ["birth-chart", "mk"]]) {
+      expect(servesFolder("mk", section, owner), section).toBe(true); expect(servesFolder("sr", section, owner), section).toBe(true);
+      expect(servesFolder("en", section, owner), section).toBe(false); expect(servesFolder("de", section, owner), section).toBe(false);
+    }
+    expect(servesFolder("sr", "pricing", "mk")).toBe(false); expect(servesFolder("sr", "pricing", "sr")).toBe(true); expect(servesFolder("mk", "zodiac", "sr")).toBe(false);
+  });
+  it("names no owner in a shared folder, so neither locale can 404 there", () => {
+    for (const f of ["numerologija/page.tsx", "numerologija/[...slug]/page.tsx", "horoskop-2027/page.tsx", "horoskop-2027/[...slug]/page.tsx", "mesecev-kalendar/page.tsx", "mesecev-kalendar/[...slug]/page.tsx", "mesecev-znak-kalkulator/page.tsx", "natalna-karta-kalkulator/page.tsx"]) {
+      expect(readFileSync(`src/app/[lang]/${f}`, "utf8"), f).not.toMatch(/lang [!=]== "mk"/);
+    }
+  });
+  it("keeps a shared folder in the export for both locales", () => {
+    const dir = mkdtempSync(path.join(tmpdir(), "prune-"));
+    for (const d of ["sr/numerologija", "mk/numerologija", "de/numerologija", "en/numerologija", "sr/ceni", "mk/cene", "sr/cene"]) mkdirSync(path.join(dir, "out", d), { recursive: true });
+    execFileSync(process.execPath, [path.resolve("scripts/prune-locale-shells.mjs")], { cwd: dir });
+    const has = (d: string) => existsSync(path.join(dir, "out", d));
+    expect([has("sr/numerologija"), has("mk/numerologija"), has("sr/cene")]).toEqual([true, true, true]);
+    expect([has("de/numerologija"), has("en/numerologija"), has("sr/ceni"), has("mk/cene")]).toEqual([false, false, false, false]);
+    rmSync(dir, { recursive: true, force: true });
+  });
+  it("lists sr only where the page is written, and such a page stays out of the index", () => {
+    expect(routeAlternates("/privacy/")).toEqual({ en: "/en/privacy/", mk: "/mk/privacy/", de: "/de/privacy/", "x-default": "/en/privacy/" });
+    expect(Object.keys(languageAlternates("/terms/")).sort()).toEqual(["de", "en", "mk", "x-default"]);
+    expect(hasPage("sr", "/privacy/")).toBe(false); expect(hasPage("sr", "/quiz/big-five/")).toBe(true); expect(hasPage("mk", "/privacy/")).toBe(true);
+    expect(localizedMeta("sr", "/privacy/", { siteName: "x" }).robots).toEqual({ index: false, follow: true });
+    expect(localizedMeta("mk", "/privacy/", { siteName: "x" }).robots).toEqual({ index: true, follow: true });
+    expect(languageAlternates("/deep/").sr).toBe("/sr/deep/");
+  });
+  it("accepts a return path in every locale, and nothing off the site", () => {
+    for (const l of ROUTE_LOCALES) expect(isLocalPath(`/${l}/me/`), l).toBe(true);
+    for (const p of ["/fr/me/", "//evil.example/", "https://evil.example/", "/sr/../x?y=1"]) expect(isLocalPath(p), p).toBe(false);
   });
 });
 
@@ -91,7 +167,7 @@ describe("new URL families", () => {
   it("builds hreflang for all locales plus x-default on English", () => {
     for (const p of PAGES) {
       const a = languageAlternates(p);
-      expect(Object.keys(a).sort()).toEqual(["de", "en", "mk", "x-default"]);
+      expect(Object.keys(a).sort()).toEqual(["de", "en", "mk", "sr", "x-default"]);
       expect(a["x-default"]).toBe(a.en);
       for (const l of ROUTE_LOCALES) expect(a[l]).toBe(localizedPath(l, p));
     }

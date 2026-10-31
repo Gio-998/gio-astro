@@ -4,7 +4,7 @@ import { SITE_URL } from "@/lib/site-url";
 export const dynamic = "force-static";
 import { ALL_QUIZ_IDS } from "@/lib/quiz-defs";
 import { languageAlternates, isIndexable } from "@/lib/seo";
-import { localizedPath } from "@/lib/i18n-routes";
+import { hasPage, localizedPath } from "@/lib/i18n-routes";
 import { SIGNS } from "@/engine/zodiac";
 import { BLOG_SLUGS, postFor } from "@/content/blog";
 import { publishedDates } from "@/engine/skyday";
@@ -34,7 +34,7 @@ function entries(): Entry[] {
   ];
 }
 export default function sitemap(): MetadataRoute.Sitemap {
-  // One <url> per locale, each listing every language version (xhtml:link hreflang) + x-default.
+  // One <url> per locale that has the page, each listing every language version (xhtml:link hreflang) + x-default.
   const abs = (o: Record<string, string>) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, `${SITE_URL}${v}`]));
-  return entries().flatMap((e) => LOCALES.map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: e.lastModified(l), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
+  return entries().flatMap((e) => LOCALES.filter((l) => hasPage(l, e.path)).map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: e.lastModified(l), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
 }

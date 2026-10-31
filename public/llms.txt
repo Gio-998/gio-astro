@@ -1,8 +1,8 @@
 # Horoscop
 
-> Horoscop (horoscop.si) is a free astrology and numerology site in English, Macedonian and German. It publishes daily horoscopes computed from the real sky, reference guides and calculators. Astrology and numerology are treated as mirrors for reflection, not predictions, and pages never promise outcomes, health results or money.
+> Horoscop (horoscop.si) is a free astrology and numerology site in English, Macedonian, German and Serbian. It publishes daily horoscopes computed from the real sky, reference guides and calculators. Astrology and numerology are treated as mirrors for reflection, not predictions, and pages never promise outcomes, health results or money.
 
-Every public page exists in three languages. URLs start with /en/, /mk/ or /de/, and each language has its own native slugs, for example /en/horoscope/aries/, /mk/dneven-horoskop/oven/ and /de/tageshoroskop/widder/. Pages link to their other language versions with hreflang.
+Every public page exists in English, Macedonian and German, and nearly every one in Serbian too. URLs start with /en/, /mk/, /de/ or /sr/, and each language has its own native slugs, for example /en/horoscope/aries/, /mk/dneven-horoskop/oven/, /de/tageshoroskop/widder/ and /sr/dnevni-horoskop/ovan/. Pages link to their other language versions with hreflang.
 
 Astronomical facts on the site (planet positions, Moon phases, sign changes, retrogrades) are computed from an astronomy engine, not copied from tables. The site explains its methods and labels what is research-backed and what is traditional.
 
@@ -41,3 +41,4 @@ Astronomical facts on the site (planet positions, Moon phases, sign changes, ret
 
 - [Macedonian home page](https://horoscop.si/mk/)
 - [German home page](https://horoscop.si/de/)
+- [Serbian home page](https://horoscop.si/sr/)

@@ -1,11 +1,12 @@
 import { premium as en } from "@/content/en/premium";
 import { premium as mk } from "@/content/mk/premium";
 import { premium as de } from "@/content/de/premium";
+import { premium as sr } from "@/content/sr/premium";
 import type { ProductId } from "@/lib/payments";
 import type { EmblemId } from "../art/Emblem";
 import type { Cosmos } from "../art/ArtCard";
 
-export const premiumText = (l: string) => (l === "mk" ? mk : l === "de" ? de : en);
+export const premiumText = (l: string) => (l === "mk" ? mk : l === "de" ? de : l === "sr" ? sr : en);
 
 /** Cover art for each product card / page. */
 export const LOOK: Record<ProductId, { emblem: EmblemId; img: Cosmos; tint: "violet" | "rose" | "gold" | "aqua"; glyph: string }> = {

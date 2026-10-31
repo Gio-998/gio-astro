@@ -1,3 +1,4 @@
+import { calcUiSr } from "./ui-sr";
 import type { CalcKey } from "./types";
 
 /** Labels of the calculator tools. Small on purpose: this file is the only calculator copy that reaches the browser. */
@@ -85,4 +86,4 @@ const mk: CalcUi = {
   startTitle: "Сакаш поцелосно читање?", startText: "Личното читање ја поврзува твојата карта со остатокот од твојот профил.", startCta: "Почни лично читање",
 };
 
-export const CALC_UI: Record<string, CalcUi> = { en, de, mk };
+export const CALC_UI: Record<string, CalcUi> = { en, de, mk, sr: calcUiSr };

@@ -1,4 +1,4 @@
-import { translit } from "./translit";
+import { translitName } from "./translit";
 export const LIFE_PATHS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
 export type LifePath = (typeof LIFE_PATHS)[number];
 const MASTER = new Set([11, 22, 33]);
@@ -24,9 +24,9 @@ const LETTER: Record<string, number> = {};
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach((c, i) => (LETTER[c] = (i % 9) + 1));
 const VOWELS = new Set(["A", "E", "I", "O", "U"]);
 
-/** Normalize a name: strip diacritics (ł→l, ö→o, ß→ss…) and keep A–Z letters. */
-export function normalizeName(name: string): string {
-  name = translit(name);
+/** Normalize a name: strip diacritics (ł→l, ö→o, ß→ss…) and keep A–Z letters. The locale only matters for Cyrillic, see translitName. */
+export function normalizeName(name: string, locale?: string): string {
+  name = translitName(name, locale);
   return name
     .replace(/ł/g, "l").replace(/Ł/g, "L").replace(/ß/g, "ss").replace(/æ/gi, "ae").replace(/ø/gi, "o").replace(/đ/gi, "d")
     .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
@@ -46,8 +46,8 @@ function isVowelAt(s: string, i: number): boolean {
 
 export interface NameNumbers { expression: number; soulUrge: number; personality: number }
 
-export function nameNumbers(fullName: string): NameNumbers | null {
-  const words = normalizeName(fullName).split(/\s+/).filter(Boolean);
+export function nameNumbers(fullName: string, locale?: string): NameNumbers | null {
+  const words = normalizeName(fullName, locale).split(/\s+/).filter(Boolean);
   if (!words.length) return null;
   let all = 0, vowels = 0, cons = 0;
   // Reduce per name part, then add (traditional), keeping masters.

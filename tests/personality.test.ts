@@ -99,7 +99,7 @@ describe("self-identified overrides and priority", () => {
 });
 
 describe("precision quiz content", () => {
-  for (const lang of ["en", "mk", "de"]) {
+  for (const lang of ["en", "mk", "de", "sr"]) {
     it(`${lang}: every item has wording`, () => {
       const defs = quizDefs(getContent(lang));
       for (const id of PRECISION_QUIZ_IDS) {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { lifePath, nameNumbers, personalYear, reduce, numberHarmony } from "@/engine/numerology";
 import { useStore } from "@/lib/store";
+import { useContent } from "@/lib/content-context";
 import { PremiumGate } from "../premium/Gate";
 import type { CharEntry, KarmicEntry } from "@/content/numerology/types";
 
@@ -50,9 +51,9 @@ export function DayNumber({ iso, L, days, names, href }: { iso: string; L: DayLa
 export type ReportLabels = { title: string; sub: string; birth: string; name: string; namePh: string; go: string; expression: string; soul: string; personality: string; maturity: string; karmic: string; noKarmic: string; together: string; sameTpl: string; mixTpl: string };
 /** Plus: the full name report. Free calculator gives the numbers; this reads them as one narrative (gated like other Premium chapters). */
 export function NameReport({ L, chars, karmic, lines }: { L: ReportLabels; chars: Record<number, CharEntry>; karmic: Record<number, KarmicEntry>; lines: { expression: Record<number, string>; soul: Record<number, string> } }) {
-  const s = useStore(); const [birth, setBirth] = useBirth(); const [name, setName] = useState(""); const [go, setGo] = useState(false);
+  const s = useStore(); const { locale } = useContent(); const [birth, setBirth] = useBirth(); const [name, setName] = useState(""); const [go, setGo] = useState(false);
   useEffect(() => { if (s?.me?.birthName) setName((n) => n || s.me!.birthName!); }, [s]);
-  const nn = go ? nameNumbers(name) : null; const lp = go && okDate(birth) ? lifePath(birth).value : null;
+  const nn = go ? nameNumbers(name, locale) : null; const lp = go && okDate(birth) ? lifePath(birth).value : null;
   const mat = nn && lp ? reduce(lp + nn.expression) : null; const kd = okDate(birth) ? [13, 14, 16, 19].find((k) => Number(birth.slice(8, 10)) === k) : undefined;
   const Sec = ({ t, n, ps }: { t: string; n: number; ps: string[] }) => (
     <section className="border-t border-white/10 pt-3 lg:pt-5"><h3 className={`${label} flex items-center gap-2`}><span className="h-display text-[1.6rem] normal-case tracking-normal text-gold">{n}</span>{t}</h3>{ps.map((p, i) => <p key={i} className="mt-1.5 text-pretty text-[15px] leading-snug text-mist/85 lg:text-[17px] lg:leading-[1.65]">{p}</p>)}</section>
@@ -85,9 +86,9 @@ export function NameReport({ L, chars, karmic, lines }: { L: ReportLabels; chars
 export type DuoLabels = { a: string; b: string; nameA: string; nameB: string; go: string; life: string; deep: string; expr: string; soul: string; cycle: string; cycleTpl: string; same: string; needNames: string; read: string };
 /** Free life path match for two dates; Duo deep reading (names, cycles) behind the Premium gate. */
 export function DuoCalc({ L, names, kinds, deepKinds, lpHref }: { L: DuoLabels; names: Record<number, string>; kinds: Record<string, string>; deepKinds: Record<string, string>; lpHref: Record<number, string> }) {
-  const [a, setA] = useState(""); const [b, setB] = useState(""); const [na, setNa] = useState(""); const [nb, setNb] = useState(""); const [go, setGo] = useState(false);
+  const { locale } = useContent(); const [a, setA] = useState(""); const [b, setB] = useState(""); const [na, setNa] = useState(""); const [nb, setNb] = useState(""); const [go, setGo] = useState(false);
   const ok = go && okDate(a) && okDate(b); const la = ok ? lifePath(a).value : 0, lb = ok ? lifePath(b).value : 0; const h = ok ? numberHarmony(la, lb) : null;
-  const ea = ok && na ? nameNumbers(na) : null, eb = ok && nb ? nameNumbers(nb) : null; const y = new Date().getFullYear();
+  const ea = ok && na ? nameNumbers(na, locale) : null, eb = ok && nb ? nameNumbers(nb, locale) : null; const y = new Date().getFullYear();
   const Row = ({ t, x, z }: { t: string; x: number; z: number }) => { const k = numberHarmony(x, z).kind; return <section className="border-t border-white/10 pt-3"><h3 className={label}>{t}: {x} + {z}</h3><p className="mt-1.5 text-[15px] leading-snug text-mist/85">{kinds[k]}</p></section>; };
   return (
     <div className="rounded-2xl border border-gold/25 bg-[linear-gradient(150deg,rgba(233,199,138,.10),rgba(139,108,240,.10))] p-4 lg:rounded-3xl lg:p-6" data-testid="duo-calc">

@@ -4,12 +4,13 @@ import { getContent } from "@/content";
 import { LOCALE_META, defaultOgImage } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
 import { pricingAlternates, pricingPath, type PricingLocale } from "@/lib/pricing";
+import { ROUTE_LOCALES } from "@/lib/i18n-routes";
 import { pricingText } from "./text";
 import { PricingPage } from "./PricingPage";
 import { LdJson, breadcrumb, faqPage, ORG_REF } from "@/lib/schema";
 
 export function pricingMeta(lang: string): Metadata {
-  const T = pricingText(lang); const brand = getContent(lang).site.brand; const l = (["en", "mk", "de"].includes(lang) ? lang : "en") as PricingLocale;
+  const T = pricingText(lang); const brand = getContent(lang).site.brand; const l = ((ROUTE_LOCALES as readonly string[]).includes(lang) ? lang : "en") as PricingLocale;
   const canonical = `/${l}${pricingPath(l)}`; const title = `${T.meta.title} · ${brand}`;
   return {
     title: T.meta.title, description: T.meta.description, robots: { index: true, follow: true },

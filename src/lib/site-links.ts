@@ -2,8 +2,9 @@
 import { nav as en } from "@/content/en/nav";
 import { nav as mk } from "@/content/mk/nav";
 import { nav as de } from "@/content/de/nav";
+import { nav as sr } from "@/content/sr/nav";
 
-export const navFor = (lang: string) => ({ en, mk, de })[lang as "en"] ?? en;
+export const navFor = (lang: string) => ({ en, mk, de, sr })[lang as "en"] ?? en;
 export type SiteLink = { href: string; title: string; desc: string };
 
 /** Internal paths with their labels, daily horoscope first. Turn a href into a URL with localizedPath. */

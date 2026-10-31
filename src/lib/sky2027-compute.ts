@@ -75,7 +75,7 @@ export function eclipsesOf(from: Date, to: Date): SkyEclipse[] {
   return out.sort((a, b) => a.date.localeCompare(b.date));
 }
 
-const PLACES: [string, number, number][] = [["Skopje", 41.9981, 21.4254], ["Berlin", 52.52, 13.405], ["Munich", 48.137, 11.575], ["Vienna", 48.2082, 16.3738], ["Zurich", 47.3769, 8.5417], ["London", 51.5074, -0.1278]];
+const PLACES: [string, number, number][] = [["Skopje", 41.9981, 21.4254], ["Belgrade", 44.8176, 20.4633], ["Berlin", 52.52, 13.405], ["Munich", 48.137, 11.575], ["Vienna", 48.2082, 16.3738], ["Zurich", 47.3769, 8.5417], ["London", 51.5074, -0.1278]];
 /** How the eclipses look from the cities our readers live in: Moon or Sun height at peak, and the share of the Sun's disc covered. */
 export function eclipseViewsOf(eclipses: SkyEclipse[], from: Date, to: Date): SkyEclipseView[] {
   const out: SkyEclipseView[] = [];

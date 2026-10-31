@@ -35,6 +35,7 @@ import { Element, SIGN_ELEMENT, Sign, isYangSign } from "./zodiac";
 
 export interface PersonInput extends BirthInput {
   name?: string; // full birth name, for numerology
+  locale?: string; // page language: the same Cyrillic name counts differently in Serbian and Macedonian
   quiz?: QuizResults;
 }
 
@@ -106,7 +107,7 @@ export function buildProfile(rawInput: PersonInput): Profile {
   const chinese = chineseProfile(input.date, input.time, chart.time.timeKnown && chart.time.offsetSource !== "assumed-utc"
     ? { utc: chart.time.utc, lon: input.place?.lon ?? undefined, lat: input.place?.lat ?? undefined } : {});
   const lp = lifePath(input.date);
-  const name = input.name ? nameNumbers(input.name) : null;
+  const name = input.name ? nameNumbers(input.name, input.locale) : null;
   const thisYear = new Date().getFullYear();
 
   // Yin–yang balance point: blend of Western polarity, Chinese year/day polarity and (if known) Extraversion.

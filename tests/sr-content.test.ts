@@ -20,7 +20,7 @@ import { dGen, dGenMid, dNom, houseAcc, mLoc, ordAcc, ordLoc, plural, sAcc, sGen
 import { en as periodEn } from "../src/content/horoscope-period/en";
 import { sr as periodSr } from "../src/content/horoscope-period/sr";
 
-/** Runs before the locale is wired in, so it reads the Serbian files directly. The family tests take over once sr is in the locale lists. */
+/** Reads the Serbian files directly. The family tests cover their shape through the locale lists; this file covers what only Serbian has, such as case forms. */
 const SIGN_NAMES = ["Ovan", "Bik", "Blizanci", "Rak", "Lav", "Devica", "Vaga", "Škorpija", "Strelac", "Jarac", "Vodolija", "Ribe"];
 
 function sameShape(a: unknown, b: unknown, path: string, out: string[]) {

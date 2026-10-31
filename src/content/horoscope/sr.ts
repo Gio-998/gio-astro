@@ -1,3 +1,4 @@
+import { HORO_SLUGS } from "@/lib/horo-slugs";
 import type { HoroBank } from "./types";
 import { srMore } from "./sr-more";
 import { TOPIC_NAMES, dNom, sAcc, sLoc, tc } from "./sr-cases";
@@ -26,7 +27,7 @@ const DAY_CLOSE: Record<string, string> = {
 
 export const sr: HoroBank = {
   more: srMore,
-  slug: "dnevni-horoskop", signSlug: { aries: "ovan", taurus: "bik", gemini: "blizanci", cancer: "rak", leo: "lav", virgo: "devica", libra: "vaga", scorpio: "skorpija", sagittarius: "strelac", capricorn: "jarac", aquarius: "vodolija", pisces: "ribe" },
+  slug: HORO_SLUGS.sr.section, signSlug: HORO_SLUGS.sr.signs,
   bodies: { sun: "Sunce", mercury: "Merkur", venus: "Venera", mars: "Mars", jupiter: "Jupiter", saturn: "Saturn", uranus: "Uran", neptune: "Neptun", pluto: "Pluton" },
   phases: { new: "mladi Mesec", "waxing-crescent": "rastući srp", "first-quarter": "prva četvrt", "waxing-gibbous": "rastući Mesec", full: "pun Mesec", "waning-gibbous": "opadajući Mesec", "last-quarter": "poslednja četvrt", "waning-crescent": "opadajući srp" },
   topics: TOPIC_NAMES,

@@ -5,9 +5,11 @@ import { LOCALES, getContent, type Content } from "@/content";
 import { glance as en } from "@/content/en/glance";
 import { glance as mk } from "@/content/mk/glance";
 import { glance as de } from "@/content/de/glance";
+import { glance as sr } from "@/content/sr/glance";
 import { adaptive as aEn } from "@/content/en/adaptive";
 import { adaptive as aMk } from "@/content/mk/adaptive";
 import { adaptive as aDe } from "@/content/de/adaptive";
+import { adaptive as aSr } from "@/content/sr/adaptive";
 import { buildProfile, quizLayer, type QuizResults } from "@/engine/profile";
 import { nextItem, scoreAdaptive, type AAnswer } from "@/engine/adaptive";
 import { ALL_QUIZ_IDS, PRECISION_QUIZ_IDS, QUIZ_IDS, quizDefs } from "@/lib/quiz-defs";
@@ -28,7 +30,7 @@ vi.mock("@/components/lead/LeadGate", () => ({
 }));
 const render = (el: ReactNode) => renderToStaticMarkup(createElement(ContentProvider, { locale: "en", children: el }));
 
-const G = { en, mk, de }; const A = { en: aEn, mk: aMk, de: aDe };
+const G = { en, mk, de, sr }; const A = { en: aEn, mk: aMk, de: aDe, sr: aSr };
 function everyResult(c: Content): QuizResults {
   const defs = quizDefs(c); let q: QuizResults = {};
   for (const id of ALL_QUIZ_IDS) q = { ...q, ...defs[id].score(Object.fromEntries(defs[id].items.map((it, i) => [it.id, it.kind === "choice" ? i % 2 : (i % 4) + 1]))) };

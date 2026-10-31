@@ -18,7 +18,7 @@ export function Calculator({ lang, mode, L, names, pages, compact = false }: { l
   function run(e: React.FormEvent) {
     e.preventDefault(); setErr("");
     if (mode === "name") {
-      const r = nameNumbers(name); if (!r || !r.expression) { setErr(L.nameInvalid); setRes(null); return; }
+      const r = nameNumbers(name, lang); if (!r || !r.expression) { setErr(L.nameInvalid); setRes(null); return; }
       setRes([{ label: L.expression, n: r.expression, href: page("expression-number", r.expression) }, { label: L.soul, n: r.soulUrge, href: page("soul-urge-number", r.soulUrge) }, { label: L.personality, n: r.personality, href: page("personality-number", r.personality) }]);
       return;
     }

@@ -1,4 +1,4 @@
-/** Pricing page copy, EN + MK + DE. Planned prices live in src/lib/pricing.ts. Nothing here is on sale: keep it true to PAYWALL_LIVE. */
+/** Pricing page copy, EN + MK + DE + SR. Planned prices live in src/lib/pricing.ts. Nothing here is on sale: keep it true to PAYWALL_LIVE. */
 import type { ReportId } from "@/lib/pricing";
 
 export interface PricingText {
@@ -31,7 +31,7 @@ export const en: PricingText = {
     ["What stays free?", "Every test and its full result, your basic chart, the basic compatibility score and the daily horoscope for your sign."],
     ["When do paid extras start?", "We have no date. Before anything costs money, its price will be on this page first."],
     ["Will I keep what I have?", "Yes. Your profile and results stay yours, whatever we add later."],
-    ["Which languages?", "The site is in English, Macedonian and German. You can switch at any time with the flag at the top."],
+    ["Which languages?", "The site is in English, Macedonian, German and Serbian. You can switch at any time with the flag at the top."],
     ["Will prices include VAT?", "Yes. When paid extras open, the price you see will be the price you pay, in euro."],
   ] },
   bottom: { title: "Start with a test", sub: "It's free, it takes a few minutes, and you don't need an account." },
@@ -57,7 +57,7 @@ export const mk: PricingText = {
     ["Што останува бесплатно?", "Секој тест со целосен резултат, основната карта, основниот резултат за компатибилност и дневниот хороскоп за твојот знак."],
     ["Кога почнуваат платените додатоци?", "Немаме датум. Пред нешто да чини пари, цената прво ќе стои на оваа страница."],
     ["Дали ќе го задржам она што го имам?", "Да. Твојот профил и резултатите остануваат твои, што и да додадеме подоцна."],
-    ["На кои јазици?", "Страницата е на македонски, англиски и германски. Јазикот го менуваш кога сакаш со знамето горе."],
+    ["На кои јазици?", "Страницата е на македонски, англиски, германски и српски. Јазикот го менуваш кога сакаш со знамето горе."],
     ["Дали цените ќе го вклучуваат ДДВ?", "Да. Кога ќе се отворат платените додатоци, цената што ја гледаш ќе биде цената што ја плаќаш, во евра."],
   ] },
   bottom: { title: "Започни со тест", sub: "Бесплатно е, трае неколку минути и не ти треба сметка." },
@@ -83,10 +83,36 @@ export const de: PricingText = {
     ["Was bleibt gratis?", "Jeder Test mit vollem Ergebnis, dein Basis-Horoskop, der einfache Kompatibilitätswert und das Tageshoroskop für dein Zeichen."],
     ["Wann starten bezahlte Extras?", "Wir haben kein Datum. Bevor etwas Geld kostet, steht der Preis zuerst auf dieser Seite."],
     ["Behalte ich, was ich schon habe?", "Ja. Dein Profil und deine Ergebnisse bleiben deine, egal was später dazukommt."],
-    ["Welche Sprachen?", "Die Seite gibt es auf Deutsch, Englisch und Mazedonisch. Du kannst jederzeit oben über die Flagge wechseln."],
+    ["Welche Sprachen?", "Die Seite gibt es auf Deutsch, Englisch, Mazedonisch und Serbisch. Du kannst jederzeit oben über die Flagge wechseln."],
     ["Werden Preise die MwSt. enthalten?", "Ja. Wenn bezahlte Extras starten, ist der Preis, den du siehst, der Preis, den du zahlst, in Euro."],
   ] },
   bottom: { title: "Fang mit einem Test an", sub: "Er ist gratis, dauert ein paar Minuten, und du brauchst kein Konto." },
 };
 
-export const pricingText = (lang: string) => ({ en, mk, de } as Record<string, PricingText>)[lang] ?? en;
+export const sr: PricingText = {
+  meta: { title: "Cene: za sada je sve besplatno", description: "Svi testovi, horoskopi, natalne karte i kompatibilnost na Horoscopu sada su besplatni. Bez kartice i probe. Evo šta bi kasnije moglo da se plaća." },
+  eyebrow: "Cene", title: ["Za sada je sve ", "besplatno"], sub: "Danas nema šta da se kupi i nema kartice za unos.",
+  free: { name: "Besplatno", line: "Sve na sajtu, već danas",
+    features: ["Svi testovi sa punim rezultatima", "Dubinsko čitanje i mini igre", "Natalna karta, kineski horoskop i numerologija", "Dnevni, nedeljni i mesečni horoskopi", "Kompatibilnost za bilo koje dve osobe", "Provera veze u dvoje", "Knjiga o tebi", "Izvoz u PDF"],
+    note: "Testovi odmah pokazuju kratak pregled. Ime i imejl otvaraju ceo rezultat, jednom po uređaju." },
+  later: { eyebrow: "Možda kasnije", title: "Šta bi kasnije moglo da se plaća", sub: "Planiramo neobavezne plaćene dodatke, a datuma još nema. Ovo su cene koje imamo na umu. Mogu da se promene, i ništa od ovoga se danas ne prodaje.", planned: "Planirano",
+    perMonth: "/ mesec", orYear: (p) => `ili ${p} godišnje`, once: "jednokratno",
+    plus: { name: "Plus", line: "Lična čitanja, svakog dana" },
+    items: {
+      match: { name: "Kompatibilnost PDF", line: "Vaše slaganje, spremno za štampu" },
+      year: { name: "Godina pred tobom 2027", line: "Mesec po mesec, za tebe" },
+      deep: { name: "Izveštaj dubinskog čitanja", line: "Tvoj ceo unutrašnji portret" },
+    } },
+  cta: "Započni test",
+  faq: { eyebrow: "Pitanja", title: "Dobro je da znaš", items: [
+    ["Da li mi treba kartica ili pretplata?", "Ne. Trenutno nema šta da se plati i na sajtu nema obrasca za karticu, pa ništa ne može da se obnovi niti naplati."],
+    ["Šta ostaje besplatno?", "Svaki test sa punim rezultatom, tvoja osnovna karta, osnovni rezultat kompatibilnosti i dnevni horoskop za tvoj znak."],
+    ["Kada počinju plaćeni dodaci?", "Nemamo datum. Pre nego što bilo šta počne da se plaća, cena će prvo stajati na ovoj stranici."],
+    ["Da li ostaje ono što već imam?", "Da. Tvoj profil i rezultati ostaju tvoji, šta god kasnije dodali."],
+    ["Na kojim jezicima je sajt?", "Sajt je na srpskom, engleskom, makedonskom i nemačkom. Jezik menjaš kad god hoćeš, preko zastavice gore."],
+    ["Da li će cene uključivati PDV?", "Da. Kada plaćeni dodaci krenu, cena koju vidiš biće cena koju plaćaš, u evrima."],
+  ] },
+  bottom: { title: "Počni testom", sub: "Besplatno je, traje nekoliko minuta i ne treba ti nalog." },
+};
+
+export const pricingText = (lang: string) => ({ en, mk, de, sr } as Record<string, PricingText>)[lang] ?? en;

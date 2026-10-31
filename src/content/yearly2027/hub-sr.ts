@@ -1,6 +1,6 @@
 import type { YearlyHub } from "./types";
 
-/** Serbian hub copy. It sits apart from hub.ts so that file stays untouched until the locale is wired in. */
+/** Serbian hub copy. */
 export const hubSr: YearlyHub = {
   crumb: "Horoskop 2027",
   h1: "Horoskop 2027: pravo nebo ove godine, znak po znak",
@@ -14,7 +14,7 @@ export const hubSr: YearlyHub = {
       "Spora pozadina je mirna. Saturn i Neptun su cele godine u Ovnu, Uran u Blizancima, Pluton u Vodoliji. Raspoloženje menja Jupiter: prvu polovinu godine provodi u Lavu, 13. aprila postaje direktan, a 26. jula ulazi u Devicu. Prosto rečeno, pitanje se pomera sa „ko me vidi“ na „šta zaista funkcioniše“.",
       "Dva puta, 3. aprila i 12. jula, Jupiter i Saturn stoje u tačnom trigonu, lakom uglu između planete koja širi stvari i planete koja im daje trajnost. Jupiter zatim 10. septembra pravi kvadrat sa Uranom, nemirniji ugao koji ume da protrese planove pravljene na brzinu.",
       "Mars daje godini spor početak. Postaje retrogradan 10. januara u Devici, 21. februara se vraća u Lava, a 1. aprila ponovo postaje direktan. Merkur je retrogradan tri puta: od 9. februara do 3. marta, od 10. juna do 4. jula i od 7. oktobra do 28. oktobra. Venera u 2027. godini uopšte ne postaje retrogradna.",
-      "Godinu obeležava pet pomračenja. Prstenasto pomračenje Sunca 6. februara u Vodoliji ne vidi se iz Evrope. Potpuno pomračenje Sunca 2. avgusta, na 9° Lava, kod nas se vidi kao delimično: na vrhuncu Mesec pokriva oko 66% Sunca gledano iz Skoplja i oko 47% gledano iz Beča, a Srbija je između te dve vrednosti, sa većim delom pokrivenim na jugu nego na severu. Tri pomračenja Meseca, 21. februara, 18. jula i 17. avgusta, polusenčna su i toliko bleda da ih većina ljudi i ne primeti.",
+      "Godinu obeležava pet pomračenja. Prstenasto pomračenje Sunca 6. februara u Vodoliji ne vidi se iz Evrope. Potpuno pomračenje Sunca 2. avgusta, na 9° Lava, kod nas se vidi kao delimično: na vrhuncu Mesec pokriva oko 56% Sunca gledano iz Beograda, oko 66% gledano iz Skoplja i oko 47% gledano iz Beča, pa je pokriveni deo veći što si južnije. Tri pomračenja Meseca, 21. februara, 18. jula i 17. avgusta, polusenčna su i toliko bleda da ih većina ljudi i ne primeti.",
     ],
   },
   datesTitle: "Glavni datumi u 2027",

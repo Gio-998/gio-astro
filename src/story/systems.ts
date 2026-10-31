@@ -1,4 +1,5 @@
 /** Cards + detail blocks for the extra "systems" lenses, built from a Profile and its computed Systems. Pure. */
+import { intlLocale } from "@/engine/intl";
 import type { Content } from "@/content";
 import type { Profile } from "@/engine/profile";
 import type { Systems, SystemKey } from "@/engine/systems";
@@ -54,7 +55,7 @@ export function buildSystemCards(p: Profile, sys: Systems, c: Content, ctx: SysC
   try {
     const sr = thisSolarReturn(p, today);
     const themeSign = sr.asc ?? sr.moon;
-    const when = sr.utc.toLocaleDateString(ctx.locale === "mk" ? "mk-MK" : ctx.locale === "de" ? "de-DE" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
+    const when = sr.utc.toLocaleDateString(intlLocale(ctx.locale), { day: "numeric", month: "long", year: "numeric" });
     solarreturn = { key: "solarreturn", glyph: "☉", name: M.solarreturn.name, value: String(sr.year), line: T.solarYear[themeSign], evidence: M.solarreturn.evidence, provenance: prov(sr.place ? U.fromBirthTimeIn(sr.place) : U.fromBirthDate), premium: true,
       blocks: [{ t: "lead", text: U.srWhen(when) }, { t: "p", text: T.solarYear[themeSign] }, { t: "facets", items: [...(sr.asc ? [{ label: U.srAsc(S(sr.asc)), text: T.solarYear[sr.asc] }] : []), { label: U.srMoon(S(sr.moon)), text: T.solarYear[sr.moon] }] }, ...(sr.place ? [{ t: "callout" as const, tone: "note" as const, text: U.srUses(sr.place) }] : noTime)] };
   } catch { solarreturn = null; }
@@ -66,7 +67,7 @@ export function buildSystemCards(p: Profile, sys: Systems, c: Content, ctx: SysC
     bio: { physical: b.physical, emotional: b.emotional, intellectual: b.intellectual, critical: b.critical }, blocks: cyc.map((k) => ({ t: "p" as const, text: `${B[k].name}: ${bioText(k)}` })) };
 
   const nd = sys.nameDay;
-  const ndDate = nd ? new Date(nd.year, nd.date.m - 1, nd.date.d).toLocaleDateString(ctx.locale === "mk" ? "mk-MK" : ctx.locale === "de" ? "de-DE" : "en-GB", { day: "numeric", month: "long" }) : "";
+  const ndDate = nd ? new Date(nd.year, nd.date.m - 1, nd.date.d).toLocaleDateString(intlLocale(ctx.locale), { day: "numeric", month: "long" }) : "";
   const nameday: SysCard = nd
     ? { key: "nameday", glyph: "🕯", name: M.nameday.name, value: ndDate, line: `${T.feasts[nd.feast].name} · ${U.nameDayIn(nd.daysUntil)}`, evidence: M.nameday.evidence, provenance: prov(U.fromName(ctx.firstName ?? p.input.name ?? "")),
         blocks: [{ t: "lead", text: U.nameDayOn(ndDate) }, { t: "p", text: `${T.feasts[nd.feast].name}. ${T.feasts[nd.feast].custom}` }, { t: "callout", tone: "agree", text: U.nameDayIn(nd.daysUntil) }] }

@@ -1,12 +1,13 @@
-/** Human dates everywhere: "12 October 1995" (en) / "12 октомври 1995" (mk). Month names come from content. */
+/** Human dates everywhere: "12 October 1995" (en) / "12 октомври 1995" (mk) / "12. oktobar 1995." (sr). Month names come from content. */
 export function formatDate(iso: string | null | undefined, months: string[], opts: { year?: boolean; weekday?: string[] } = {}): string {
   if (!iso) return "";
   const m = iso.match(/^(\d{4})-(\d{2})-(\d{2})/);
   if (!m) return iso;
   const [y, mo, d] = [Number(m[1]), Number(m[2]), Number(m[3])];
   const wd = opts.weekday ? `${opts.weekday[new Date(Date.UTC(y, mo - 1, d)).getUTCDay()]}, ` : "";
-  // German writes "13. Oktober"; detected from the month list so every caller stays unchanged.
-  return `${wd}${d}${months[2] === "März" ? "." : ""} ${months[mo - 1]}${opts.year === false ? "" : ` ${y}`}`;
+  // German writes "13. Oktober" and Serbian "13. oktobar 2026.", with a closing dot after a year. Detected from the month list so every caller stays unchanged.
+  const sr = months[2] === "mart"; const ordinal = sr || months[2] === "März";
+  return `${wd}${d}${ordinal ? "." : ""} ${months[mo - 1]}${opts.year === false ? "" : ` ${y}${sr ? "." : ""}`}`;
 }
 export const daysInMonth = (y: number, m: number) => new Date(Date.UTC(y, m, 0)).getUTCDate();
 export const isoOf = (y: number, m: number, d: number) => `${String(y).padStart(4, "0")}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;

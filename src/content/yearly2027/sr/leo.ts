@@ -43,7 +43,7 @@ export const leo: YearlyPage = {
       role: "periods",
       title: "Od 2. avgusta do 17. avgusta: dve nedelje pomračenja",
       paras: [
-        "Potpuno pomračenje Sunca 2. avgusta dostiže vrhunac u 12:06 po istom vremenu koje važi u Beogradu, Skoplju, Beču i Berlinu. Iz Evrope je delimično, a ipak je pravi događaj: na vrhuncu Mesec pokriva 66% Sunca gledano iz Skoplja, 55% iz Ciriha, 50% iz Minhena, 47% iz Beča, 42% iz Londona i 34% iz Berlina, a Srbija je negde između Skoplja i Beča. Ako gledaš, koristi prave naočare za pomračenje. Sunce je tvoja planeta, pa je ovo dan kad tvoje svetlo vidljivo bude pokriveno, u tvom znaku, nedelju dana pošto ga je Jupiter napustio.",
+        "Potpuno pomračenje Sunca 2. avgusta dostiže vrhunac u 12:06 po istom vremenu koje važi u Beogradu, Skoplju, Beču i Berlinu. Iz Evrope je delimično, a ipak je pravi događaj: na vrhuncu Mesec pokriva 56% Sunca gledano iz Beograda, 66% iz Skoplja, 55% iz Ciriha, 50% iz Minhena, 47% iz Beča, 42% iz Londona i 34% iz Berlina. Ako gledaš, koristi prave naočare za pomračenje. Sunce je tvoja planeta, pa je ovo dan kad tvoje svetlo vidljivo bude pokriveno, u tvom znaku, nedelju dana pošto ga je Jupiter napustio.",
         "Ono označava promenu pravca i ne traži od tebe ništa dramatično. Merkur istog dana ulazi u Lava i odlazi 17. avgusta, pa su baš te dve nedelje dobre za razmišljanje i razgovor o tome šta sledi. Drugo pomračenje zatvara prozor: pomračenje Meseca 17. avgusta pada u tvoju 7. kuću, bledo je i u Evropi ispod horizonta. Dva mala zadatka mogu da pomognu. Na dan pomračenja Sunca napiši jedan red o tome šta želiš da započneš za sebe. Kod pomračenja Meseca pitaj šta bi taj red koštao osobu pored tebe. Velike odluke ostavi za posle ove dve nedelje.",
       ],
     },

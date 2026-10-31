@@ -5,7 +5,7 @@ import { HOME_META } from "../src/content/home-meta";
 import { bankFor } from "../src/lib/horoscope";
 
 /** What a page shows in search results. Pages ranked well and drew no clicks while one template wrote every snippet, so these rules guard against that coming back. */
-const LANGS = ["en", "de"] as const;
+const LANGS = ["en", "de", "sr"] as const;
 const TITLE_MAX = 55; const DESC_MIN = 110; const DESC_MAX = 158;
 const keyOf = (p: string) => p.split("/").filter(Boolean).slice(1).join("/") || "hub";
 const pages = (l: string) => numPaths().map((p) => ({ p, m: numModel(l, p)! }));
@@ -37,9 +37,9 @@ describe("numerology search snippets", () => {
       expect(Object.keys(SNIPPETS[l]).filter((k) => !keys.includes(k))).toEqual([]);
     });
     it(`${l}: angel number and mirror hour titles use the words people type`, () => {
-      const word = l === "de" ? "Bedeutung" : "meaning";
+      const word = l === "de" ? /Bedeutung/ : l === "sr" ? /značenje/i : /meaning/;
       const bad = [...ANGEL.map((a) => [`/numerology/angel-numbers/${a}/`, a]), ...MIRROR_KEYS.map((k) => [`/numerology/mirror-hours/${k}/`, k.replace("-", ":")])]
-        .map(([p, n]) => [p, n, numModel(l, p)!.title]).filter(([, n, t]) => !t.includes(n) || !t.includes(word));
+        .map(([p, n]) => [p, n, numModel(l, p)!.title]).filter(([, n, t]) => !t.includes(n) || !word.test(t));
       expect(bad).toEqual([]);
     });
     it(`${l}: the number leads each of its pages' descriptions or names it`, () => {
@@ -47,7 +47,7 @@ describe("numerology search snippets", () => {
       expect(need.filter(([p, n]) => !numModel(l, p)!.description.includes(n)).map(([p]) => p)).toEqual([]);
     });
     it(`${l}: calculator pages say what they calculate`, () => {
-      for (const c of CALCS) expect(numModel(l, `/numerology/calculator/${c}/`)!.title.toLowerCase()).toMatch(l === "de" ? /berechnen/ : /calculator/);
+      for (const c of CALCS) expect(numModel(l, `/numerology/calculator/${c}/`)!.title.toLowerCase()).toMatch(l === "de" ? /berechnen/ : l === "sr" ? /kalkulator/ : /calculator/);
     });
   }
 });
@@ -60,7 +60,7 @@ describe("home and daily horoscope hub snippets", () => {
       expect(HOME_META[l].description.length).toBeLessThanOrEqual(DESC_MAX);
     });
     it(`${l}: horoscope hub fits on the longest date and is more than the on page line`, () => {
-      const U = bankFor(l).ui; const longest = l === "de" ? "30. September 2026" : "30 September 2026";
+      const U = bankFor(l).ui; const longest = l === "de" ? "30. September 2026" : l === "sr" ? "30. septembar 2026." : "30 September 2026";
       expect(`${U.hubSeoTitle}, ${longest}`.length).toBeLessThanOrEqual(TITLE_MAX);
       expect(U.hubMeta!.length).toBeGreaterThanOrEqual(DESC_MIN);
       expect(U.hubMeta!.length).toBeLessThanOrEqual(DESC_MAX);

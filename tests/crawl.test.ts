@@ -70,7 +70,9 @@ describe("site-wide section links", () => {
   });
   it("writes each language natively, in its own words", () => {
     const en = siteLinks("en");
-    for (const lang of ["mk", "de"]) for (const [i, l] of siteLinks(lang).entries()) expect(l.desc, l.href).not.toBe(en[i].desc);
+    // Serbian joins by itself as soon as src/content/sr/nav.ts stops being the English stub.
+    const written = siteLinks("sr")[0].desc !== en[0].desc;
+    for (const lang of ["mk", "de", ...(written ? ["sr"] : [])]) for (const [i, l] of siteLinks(lang).entries()) expect(l.desc, l.href).not.toBe(en[i].desc);
     expect(siteLinks("mk").every((l) => /\p{Script=Cyrillic}/u.test(l.title))).toBe(true);
     expect(siteLinks("de").find((l) => l.href === "/sign-compatibility/")!.title).toBe("Partnerhoroskop");
     expect(siteLinks("de").find((l) => l.href === "/rising-sign/")!.title).toBe("Aszendent berechnen");

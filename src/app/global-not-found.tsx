@@ -12,10 +12,11 @@ const T = {
   en: { eye: "Error 404", h: ["This page is not ", "in our sky"], p: "The link may be old or mistyped. Everything else is where you left it.", home: "Back to home", today: "See today's sky" },
   mk: { eye: "Грешка 404", h: ["Оваа страница ја нема ", "на нашето небо"], p: "Врската можеби е стара или погрешно напишана. Сè друго е таму каде што беше.", home: "Кон почетна", today: "Небото денес" },
   de: { eye: "Fehler 404", h: ["Diese Seite steht nicht ", "an unserem Himmel"], p: "Der Link ist vielleicht alt oder vertippt. Alles andere ist da, wo du es gelassen hast.", home: "Zur Startseite", today: "Der Himmel heute" },
+  sr: { eye: "Greška 404", h: ["Ove stranice nema ", "na našem nebu"], p: "Link je možda star ili pogrešno otkucan. Sve ostalo je na svom mestu.", home: "Na početnu", today: "Nebo danas" },
 } as const;
-const pick = `try{var m=location.pathname.match(/^\\/(en|mk|de)(\\/|$)/),s=localStorage.getItem("mirrorstar:lang"),l=m?m[1]:(s==="mk"||s==="de"?s:"en");document.documentElement.lang=l;document.documentElement.dataset.nf=l}catch(e){}`;
+const pick = `try{var m=location.pathname.match(/^\\/(en|mk|de|sr)(\\/|$)/),s=localStorage.getItem("mirrorstar:lang"),l=m?m[1]:(s==="mk"||s==="de"||s==="sr"?s:"en");document.documentElement.lang=l;document.documentElement.dataset.nf=l}catch(e){}`;
 
-function Block({ l }: { l: "en" | "mk" | "de" }) {
+function Block({ l }: { l: keyof typeof T }) {
   const t = T[l];
   return (
     <section data-nf-lang={l} lang={l} className="nf-block mx-auto max-w-lg text-center">
@@ -37,7 +38,7 @@ export default function GlobalNotFound() {
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: pick }} />
-        <style>{`html[data-nf] .nf-block{display:none}html[data-nf=en] .nf-block[data-nf-lang=en],html[data-nf=mk] .nf-block[data-nf-lang=mk],html[data-nf=de] .nf-block[data-nf-lang=de]{display:block}html:not([data-nf]) .nf-block:not([data-nf-lang=en]){display:none}`}</style>
+        <style>{`html[data-nf] .nf-block{display:none}html[data-nf=en] .nf-block[data-nf-lang=en],html[data-nf=mk] .nf-block[data-nf-lang=mk],html[data-nf=de] .nf-block[data-nf-lang=de],html[data-nf=sr] .nf-block[data-nf-lang=sr]{display:block}html:not([data-nf]) .nf-block:not([data-nf-lang=en]){display:none}`}</style>
       </head>
       <body className="font-sans antialiased" style={{ minHeight: "100vh", background: "radial-gradient(120% 80% at 50% 0%, #3a2a7a 0%, #1a1440 45%, #0e0b26 100%)" }}>
         <header className="mx-auto flex max-w-4xl items-center px-4 py-4">
@@ -56,6 +57,7 @@ export default function GlobalNotFound() {
           <Block l="en" />
           <Block l="mk" />
           <Block l="de" />
+          <Block l="sr" />
         </main>
       </body>
     </html>

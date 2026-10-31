@@ -1,0 +1,10 @@
+import { notFound } from "next/navigation";
+import { SectionPage, sectionMeta, sectionParams } from "@/components/sections/SectionRoute";
+
+export const dynamicParams = false;
+export async function generateStaticParams({ params }: { params: { lang: string } }) { return sectionParams("weekly-horoscope", params.lang, "sr"); }
+export async function generateMetadata({ params }: { params: Promise<{ lang: string; slug: string[] }> }) { const { lang, slug } = await params; return lang === "sr" ? sectionMeta("weekly-horoscope", lang, slug) : {}; }
+export default async function Page({ params }: { params: Promise<{ lang: string; slug: string[] }> }) {
+  const { lang, slug } = await params; if (lang !== "sr") notFound();
+  return <SectionPage section="weekly-horoscope" lang={lang} slug={slug} />;
+}

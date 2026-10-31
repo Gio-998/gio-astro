@@ -1,0 +1,26 @@
+/** Serbian (Latin) content, in the same shape as ../mk. Anything not written yet falls back to English through deepMerge in ../index.ts, so a file can fill in one key at a time. */
+import * as astro from "./astro";
+import * as quizzes from "./quizzes";
+import * as psych from "./psych";
+import * as chinese from "./chinese";
+import * as vedic from "./vedic";
+import * as nums from "./numbers";
+import * as compat from "./compat";
+import * as daily from "./daily";
+import * as ui from "./ui";
+import { bondUi } from "./deep";
+import { aries, taurus, gemini, cancer } from "./deep/signs-a";
+import { leo, virgo, libra, scorpio } from "./deep/signs-b";
+import { sagittarius, capricorn, aquarius, pisces } from "./deep/signs-c";
+import * as synth from "./deep/synthesis";
+import * as bondSr from "./deep/bond";
+import { bigFiveDeep, attachDeep } from "./deep/psych-a";
+import * as psychB from "./deep/psych-b";
+import * as chineseDeep from "./deep/chinese";
+import * as numbersDeep from "./deep/numbers";
+import { site } from "./site";
+import { landing } from "./landing";
+import { book } from "./book";
+import { lensInfo, lensUi } from "./lens";
+import { sky } from "./sky";
+export const sr = { astro, quizzes, psych, chinese, vedic, nums, compat, daily, ui, deep: { ...synth, ...bondSr, bigFiveDeep, attachDeep, ...psychB, ...chineseDeep, ...numbersDeep, bondUi, signDeep: { aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius, pisces } }, site, landing, book, lensInfo, lensUi, sky };

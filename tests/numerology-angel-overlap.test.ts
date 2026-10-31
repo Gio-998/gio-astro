@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { ANGEL, numModel } from "../src/lib/numerology";
 
 /** Angel numbers added from Search Console demand must match the depth of the family and read as their own page against every other angel page. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const NEW = ["1331", "1551", "1616", "1818", "6666"];
 const MIN_WORDS = 1400;
 const MAX_JACCARD = 0.12;

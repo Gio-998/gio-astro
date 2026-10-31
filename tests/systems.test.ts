@@ -128,7 +128,7 @@ describe("Pair extras, voice layer and cards", () => {
   const a = P("1998-05-06", "10:30", "Gjorgji Delev"), b = P("1997-11-20", null, "Ana Petrova");
   const sa = computeSystems(a, { firstName: "Goce" }), sb = computeSystems(b, { firstName: "Ana" });
   it("pair extras are bounded and deterministic", () => { const x = pairExtras(a, sa, b, sb); expect(x.harmony).toBeGreaterThanOrEqual(20); expect(x.spark).toBeLessThanOrEqual(95); expect(pairExtras(a, sa, b, sb)).toEqual(x); });
-  for (const loc of ["en", "mk", "de"] as const) {
+  for (const loc of ["en", "mk", "de", "sr"] as const) {
     const c = contents[loc];
     it(`[${loc}] every voice line carries at least one why`, () => {
       const lines = [...profileSummary({ c, p: a, sys: sa, name: "Goce", placeName: "Skopje" }), ...Object.values(bookOpeners({ c, p: a, sys: sa, name: "Goce" }, "x")), ...Object.values(bondOpeners({ c, p: a, sys: sa, name: "Goce" }, { c, p: b, sys: sb, name: "Ana" })),

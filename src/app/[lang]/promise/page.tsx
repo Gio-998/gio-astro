@@ -64,5 +64,5 @@ function PageDe() {
 }
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <div lang="en"><PageEn /></div>;
 }

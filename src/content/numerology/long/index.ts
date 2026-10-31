@@ -35,13 +35,27 @@ import { deB6b } from "./de-b6b";
 import { enB7 } from "./en-b7";
 import { mkB7 } from "./mk-b7";
 import { deB7 } from "./de-b7";
-const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b, ...enB5, ...enB5b, ...enB6, ...enB6b, ...enB7 }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b, ...mkB5, ...mkB5b, ...mkB6, ...mkB6b, ...mkB7 }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b, ...deB5, ...deB5b, ...deB6, ...deB6b, ...deB7 } };
+import { srB1 } from "./sr-b1";
+import { srB2 } from "./sr-b2";
+import { srB2b } from "./sr-b2b";
+import { srB3 } from "./sr-b3";
+import { srB3b } from "./sr-b3b";
+import { srB4 } from "./sr-b4";
+import { srB4b } from "./sr-b4b";
+import { srB5 } from "./sr-b5";
+import { srB5b } from "./sr-b5b";
+import { srB6 } from "./sr-b6";
+import { srB6b } from "./sr-b6b";
+import { srB7 } from "./sr-b7";
+const ALL: Record<string, AngelLong> = { en: { ...enB1, ...enB2, ...enB2b, ...enB3, ...enB3b, ...enB4, ...enB4b, ...enB5, ...enB5b, ...enB6, ...enB6b, ...enB7 }, mk: { ...mkB1, ...mkB2, ...mkB2b, ...mkB3, ...mkB3b, ...mkB4, ...mkB4b, ...mkB5, ...mkB5b, ...mkB6, ...mkB6b, ...mkB7 }, de: { ...deB1, ...deB2, ...deB2b, ...deB3, ...deB3b, ...deB4, ...deB4b, ...deB5, ...deB5b, ...deB6, ...deB6b, ...deB7 }, sr: { ...srB1, ...srB2, ...srB2b, ...srB3, ...srB3b, ...srB4, ...srB4b, ...srB5, ...srB5b, ...srB6, ...srB6b, ...srB7 } };
 /** Long story sections for an angel number page, if that batch is written. */
 export function angelLong(lang: string, n: string) { return ALL[lang]?.[n] ?? []; }
 import { pagesEn } from "./pages-en";
 import { pagesMk } from "./pages-mk";
 import { pagesDe } from "./pages-de";
+import { pagesSr } from "./pages-sr";
 import { pagesCalc } from "./pages-calc";
-const PAGES: Record<string, AngelLong> = { en: { ...pagesEn, ...pagesCalc.en }, mk: { ...pagesMk, ...pagesCalc.mk }, de: { ...pagesDe, ...pagesCalc.de } };
+import { pagesCalcSr } from "./pages-calc-sr";
+const PAGES: Record<string, AngelLong> = { en: { ...pagesEn, ...pagesCalc.en }, mk: { ...pagesMk, ...pagesCalc.mk }, de: { ...pagesDe, ...pagesCalc.de }, sr: { ...pagesSr, ...pagesCalcSr } };
 /** Long guide sections for an explainer or number page, keyed by its path after the numerology root ("hub" for the root). */
 export function pageLong(lang: string, key: string) { return PAGES[lang]?.[key] ?? []; }

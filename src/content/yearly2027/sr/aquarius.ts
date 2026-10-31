@@ -27,7 +27,7 @@ export const aquarius: YearlyPage = {
       title: "Letnji niz pomračenja, od 18. jula do 17. avgusta",
       paras: [
         "Ovo je središte tvoje godine. Pomračenje Meseca 18. jula pada u tvoju 12. kuću odmora i privatnog života, sa Mesecom ispod horizonta u Evropi, i može da prođe kao samo jedna nemirna nedelja. Jupiter prelazi u tvoju 8. kuću 26. jula, deo života gde se sreću novac i tajne dvoje ljudi, a Venera stiže do tvojih najbližih 27. jula.",
-        "Zatim dolazi potpuno pomračenje Sunca 2. avgusta u kući partnera, sa vrhuncem u 12:06 po našem vremenu. Na vrhuncu Mesec pokriva 66% Sunca gledano iz Skoplja, 55% iz Ciriha, 50% iz Minhena, 47% iz Beča, 42% iz Londona i 34% iz Berlina, a Srbija je između Skoplja i Beča, pa vredi izaći napolje sa pravim naočarima za pomračenje. Kod tebe pada među najbliže ljude. Veza može da promeni oblik, dogovor može da se završi ili počne, ili ćeš prosto primetiti da već dugo odgovaraš za dvoje.",
+        "Zatim dolazi potpuno pomračenje Sunca 2. avgusta u kući partnera, sa vrhuncem u 12:06 po našem vremenu. Na vrhuncu Mesec pokriva 56% Sunca gledano iz Beograda, 66% iz Skoplja, 55% iz Ciriha, 50% iz Minhena, 47% iz Beča, 42% iz Londona i 34% iz Berlina, pa vredi izaći napolje sa pravim naočarima za pomračenje. Kod tebe pada među najbliže ljude. Veza može da promeni oblik, dogovor može da se završi ili počne, ili ćeš prosto primetiti da već dugo odgovaraš za dvoje.",
         "Pomračenje Meseca 17. avgusta zatvara niz u tvom znaku, opet ispod horizonta u Evropi. Dobar je dan da se pitaš šta sada želiš za sebe, s obzirom na ono što se promenilo između vas dvoje.",
       ],
     },

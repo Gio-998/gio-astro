@@ -1,15 +1,17 @@
 import { buildProfile, quizLayer, Profile, QuizLayer } from "@/engine/profile";
 import type { StoredPerson } from "./store";
+import { parsePath } from "./i18n-routes";
 
 const memo = new Map<string, Profile>();
 /** Build (and memoise) the computed profile for a stored person. Throws without a birth date: see quizViewOf for tests. */
 export function profileOf(p: StoredPerson): Profile {
   if (!p.date) throw new Error("A profile needs a birth date");
   const name = p.birthName || (p.noName ? undefined : p.name);
-  const key = JSON.stringify([p.date, p.time, p.place, p.utcOffsetOverride, name, p.quiz]);
+  const locale = typeof location === "undefined" ? undefined : parsePath(location.pathname)?.[0];
+  const key = JSON.stringify([p.date, p.time, p.place, p.utcOffsetOverride, name, p.quiz, locale]);
   let out = memo.get(key);
   if (!out) {
-    out = buildProfile({ date: p.date, time: p.time, place: p.place, utcOffsetOverride: p.utcOffsetOverride, name, quiz: p.quiz });
+    out = buildProfile({ date: p.date, time: p.time, place: p.place, utcOffsetOverride: p.utcOffsetOverride, name, quiz: p.quiz, locale });
     memo.set(key, out);
   }
   return out;

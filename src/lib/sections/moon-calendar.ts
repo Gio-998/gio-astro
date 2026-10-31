@@ -53,7 +53,7 @@ function dayRow(x: Ctx, d: MoonDay, lang: string): TableCell[] {
   const iso = d.iso; const n = Number(iso.slice(8)); const wd = x.C.dayShort[new Date(`${iso}T12:00:00Z`).getUTCDay()];
   const signCell = d.moves ? `${x.name(d.sign)} → ${x.name(d.moves.to)} ${d.moves.time}` : x.name(d.sign);
   const href = x.lp(published().has(iso) ? `/horoscope/${d.noon}/${iso}/` : `/horoscope/${d.noon}/`);
-  return [`${wd} ${n}${lang === "de" ? "." : ""}`, { text: d.lunation ? `${x.C.quarter[d.lunation.quarter]} ${d.lunation.time}` : x.C.pct(d.illumination), moon: d.angle }, signCell, { text: x.sign(d.noon), href }];
+  return [`${wd} ${n}${lang === "de" || lang === "sr" ? "." : ""}`, { text: d.lunation ? `${x.C.quarter[d.lunation.quarter]} ${d.lunation.time}` : x.C.pct(d.illumination), moon: d.angle }, signCell, { text: x.sign(d.noon), href }];
 }
 
 function monthModel(lang: string, path: string, ym: string): SectionModel {

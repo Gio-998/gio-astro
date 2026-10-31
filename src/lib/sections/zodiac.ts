@@ -12,7 +12,7 @@ const ELEMENTS: Element[] = ["fire", "earth", "air", "water"];
 const MODALITIES: Modality[] = ["cardinal", "fixed", "mutable"];
 
 /** Signs written in every language (gated by tests/zodiac-overlap.test.ts). */
-export const ZODIAC_SIGNS: Sign[] = SIGNS.filter((s) => ZODIAC.en.signs[s] && ZODIAC.mk.signs[s] && ZODIAC.de.signs[s]);
+export const ZODIAC_SIGNS: Sign[] = SIGNS.filter((s) => ZODIAC.en.signs[s] && ZODIAC.mk.signs[s] && ZODIAC.de.signs[s] && ZODIAC.sr.signs[s]);
 
 const langOf = (lang: string): ZodiacLang => ZODIAC[lang] ?? ZODIAC.en;
 const day = (s: string, months: string[]) => { const [m, d] = s.split(" "); return formatDate(isoOf(2001, MONTHS.indexOf(m) + 1, Number(d)), months, { year: false }); };

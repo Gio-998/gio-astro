@@ -7,7 +7,7 @@ import type { Section, SectionModel } from "./types";
 
 const S = "/horoscope-2027/";
 /** Signs written in every language (gated by tests/yearly2027-overlap.test.ts). */
-export const YEARLY_SIGNS: Sign[] = SIGNS.filter((s) => YEARLY.en[s] && YEARLY.mk[s] && YEARLY.de[s]);
+export const YEARLY_SIGNS: Sign[] = SIGNS.filter((s) => YEARLY.en[s] && YEARLY.mk[s] && YEARLY.de[s] && YEARLY.sr[s]);
 
 const fill = (t: string, v: Record<string, string>) => t.replace(/\{(\w+)\}/g, (_, k: string) => v[k]);
 /** A sky date in the reader's language, with the year only when it is not 2027. */

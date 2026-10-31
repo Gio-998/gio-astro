@@ -4,6 +4,7 @@
  * a random id lives in sessionStorage only (gone when the tab closes), so we count sessions, not people.
  * Signed-in users' events carry their user id (RLS: you can only insert events for yourself).
  */
+import { parsePath } from "./i18n-routes";
 import { sb } from "./supabase";
 import { getAccount } from "./sync";
 
@@ -16,7 +17,7 @@ const sid = () => {
     return s;
   } catch { return null; }
 };
-const loc = () => (location.pathname.startsWith("/mk") ? "mk" : location.pathname.startsWith("/de") ? "de" : "en");
+const loc = () => parsePath(location.pathname)?.[0] ?? "en";
 const recent = new Map<string, number>();
 
 export function track(kind: EventKind, meta: Record<string, string | number | boolean> = {}) {

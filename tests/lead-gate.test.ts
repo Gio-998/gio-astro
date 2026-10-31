@@ -213,7 +213,7 @@ async function render(locale: Locale, ready = true) {
 }
 
 describe("LeadGate, rendered", () => {
-  for (const locale of ["en", "mk", "de"] as const) {
+  for (const locale of ["en", "mk", "de", "sr"] as const) {
     it(`${locale}: shows teaser and form, hides the result, in the visitor's language`, async () => {
       const html = await render(locale); const L = contents[locale].ui.lead;
       expect(html).toContain("TEASER");
@@ -249,13 +249,13 @@ describe("LeadGate, rendered", () => {
 describe("copy for the gate", () => {
   it("is a full set in every language, with an error per code", () => {
     const shape = (o: unknown): unknown => (typeof o === "object" && o ? Object.fromEntries(Object.entries(o).map(([k, v]) => [k, shape(v)])) : typeof o);
-    for (const l of ["mk", "de"] as const) expect(shape(contents[l].ui.lead), l).toEqual(shape(contents.en.ui.lead));
-    for (const l of ["en", "mk", "de"] as const) expect(new Set(Object.values(contents[l].ui.lead.errors)).size).toBe(2);
+    for (const l of ["mk", "de", "sr"] as const) expect(shape(contents[l].ui.lead), l).toEqual(shape(contents.en.ui.lead));
+    for (const l of ["en", "mk", "de", "sr"] as const) expect(new Set(Object.values(contents[l].ui.lead.errors)).size).toBe(2);
     expect(contents.de.ui.lead.submit).not.toBe(contents.en.ui.lead.submit);
     expect(contents.mk.ui.lead.submit).not.toBe(contents.en.ui.lead.submit);
   });
   it("uses the reader word test, and promises no results by email", () => {
-    for (const l of ["en", "mk", "de"] as const) {
+    for (const l of ["en", "mk", "de", "sr"] as const) {
       const s = JSON.stringify(contents[l].ui.lead);
       expect(s, l).not.toMatch(/quiz|квиз|codex|кодекс/i);
     }
@@ -265,13 +265,13 @@ describe("copy for the gate", () => {
     const sql = readFileSync("supabase/migrations/20261031_leads.sql", "utf8");
     const statuses = [...sql.matchAll(/select '(\w+)'::text/g)].map((m) => m[1]);
     expect(new Set(statuses)).toEqual(new Set(["invalid", "unsubscribed", "used", "expired", "confirmed"]));
-    for (const l of ["en", "mk", "de"] as const) for (const s of [...statuses, "error"]) expect(contents[l].ui.lead.page.status, `${l} ${s}`).toHaveProperty(s);
+    for (const l of ["en", "mk", "de", "sr"] as const) for (const s of [...statuses, "error"]) expect(contents[l].ui.lead.page.status, `${l} ${s}`).toHaveProperty(s);
   });
 });
 
 describe("the email page", () => {
   it("stays open during the private beta, because links in an email reach everyone", () => {
-    for (const l of ["en", "mk", "de"]) expect(isPublicRoute(`/${l}/email/`), l).toBe(true);
+    for (const l of ["en", "mk", "de", "sr"]) expect(isPublicRoute(`/${l}/email/`), l).toBe(true);
   });
   it("is kept out of search", () => { expect(readFileSync("src/app/[lang]/email/page.tsx", "utf8")).toContain("index: false"); });
 });

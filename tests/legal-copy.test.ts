@@ -9,6 +9,7 @@ function byLang(page: string) {
   return { en: part("PageEn", "function PageMk"), mk: part("PageMk", "function PageDe"), de: part("PageDe", "export default") };
 }
 const privacy = byLang("privacy");
+/** Serbian is left out on purpose: these pages have no Serbian text yet, see NOT_WRITTEN in src/lib/i18n-routes.ts. */
 const LANGS = ["en", "mk", "de"] as const;
 
 describe("privacy page", () => {

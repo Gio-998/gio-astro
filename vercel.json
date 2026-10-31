@@ -52,6 +52,22 @@
       "src": "/",
       "has": [
         {
+          "type": "cookie",
+          "key": "lang",
+          "value": "sr"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/sr/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
           "type": "header",
           "key": "x-vercel-ip-country",
           "value": "MK"
@@ -130,6 +146,70 @@
     },
     {
       "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "RS"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/sr/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "BA"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/sr/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "ME"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/sr/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "HR"
+        }
+      ],
+      "status": 307,
+      "headers": {
+        "Location": "/sr/",
+        "Cache-Control": "private, no-store",
+        "Vary": "Cookie, X-Vercel-IP-Country"
+      }
+    },
+    {
+      "src": "/",
       "status": 307,
       "headers": {
         "Location": "/en/",
@@ -159,297 +239,402 @@
       }
     },
     {
-      "src": "/en/(ceni|preise)/?",
+      "src": "/sr/(premium|upgrade)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/cene/"
+      }
+    },
+    {
+      "src": "/en/(ceni|preise|cene)/?",
       "status": 308,
       "headers": {
         "Location": "/en/pricing/"
       }
     },
     {
-      "src": "/mk/(pricing|preise)/?",
+      "src": "/mk/(pricing|preise|cene)/?",
       "status": 308,
       "headers": {
         "Location": "/mk/ceni/"
       }
     },
     {
-      "src": "/de/(pricing|ceni)/?",
+      "src": "/de/(pricing|ceni|cene)/?",
       "status": 308,
       "headers": {
         "Location": "/de/preise/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(aries|oven|widder)(?:/.*)?",
+      "src": "/sr/(pricing|ceni|preise)/?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/cene/"
+      }
+    },
+    {
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(aries|oven|widder|ovan)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/aries/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(taurus|bik|stier)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(taurus|bik|stier)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/taurus/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/gemini/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(cancer|rak|krebs)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(cancer|rak|krebs)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/cancer/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(leo|lav|loewe)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(leo|lav|loewe)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/leo/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(virgo|devica|jungfrau)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/virgo/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(libra|vaga|waage)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(libra|vaga|waage)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/libra/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/scorpio/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(sagittarius|strelec|schuetze)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(sagittarius|strelec|schuetze|strelac)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/sagittarius/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(capricorn|jarec|steinbock)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(capricorn|jarec|steinbock|jarac)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/capricorn/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/aquarius/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)/(pisces|ribi|fische)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)/(pisces|ribi|fische|ribe)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/pisces/"
       }
     },
     {
-      "src": "/en/(dneven-horoskop|tageshoroskop)(?:/.*)?",
+      "src": "/en/(dneven-horoskop|tageshoroskop|dnevni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/horoscope/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(aries|oven|widder)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(aries|oven|widder|ovan)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/oven/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(taurus|bik|stier)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(taurus|bik|stier)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/bik/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/blizanci/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(cancer|rak|krebs)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(cancer|rak|krebs)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/rak/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(leo|lav|loewe)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(leo|lav|loewe)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/lav/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(virgo|devica|jungfrau)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/devica/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(libra|vaga|waage)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(libra|vaga|waage)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/vaga/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/skorpija/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(sagittarius|strelec|schuetze)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(sagittarius|strelec|schuetze|strelac)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/strelec/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(capricorn|jarec|steinbock)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(capricorn|jarec|steinbock|jarac)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/jarec/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/vodolija/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)/(pisces|ribi|fische)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)/(pisces|ribi|fische|ribe)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/ribi/"
       }
     },
     {
-      "src": "/mk/(horoscope|tageshoroskop)(?:/.*)?",
+      "src": "/mk/(horoscope|tageshoroskop|dnevni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/dneven-horoskop/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(aries|oven|widder)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(aries|oven|widder|ovan)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/widder/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(taurus|bik|stier)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(taurus|bik|stier)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/stier/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/zwillinge/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(cancer|rak|krebs)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(cancer|rak|krebs)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/krebs/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(leo|lav|loewe)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(leo|lav|loewe)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/loewe/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(virgo|devica|jungfrau)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/jungfrau/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(libra|vaga|waage)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(libra|vaga|waage)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/waage/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/skorpion/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(sagittarius|strelec|schuetze)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(sagittarius|strelec|schuetze|strelac)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/schuetze/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(capricorn|jarec|steinbock)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(capricorn|jarec|steinbock|jarac)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/steinbock/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/wassermann/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)/(pisces|ribi|fische)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)/(pisces|ribi|fische|ribe)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/fische/"
       }
     },
     {
-      "src": "/de/(horoscope|dneven-horoskop)(?:/.*)?",
+      "src": "/de/(horoscope|dneven-horoskop|dnevni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(aries|oven|widder|ovan)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/ovan/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(taurus|bik|stier)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/bik/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(gemini|blizanci|zwillinge)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/blizanci/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(cancer|rak|krebs)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/rak/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(leo|lav|loewe)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/lav/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(virgo|devica|jungfrau)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/devica/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(libra|vaga|waage)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/vaga/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(scorpio|skorpija|skorpion)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/skorpija/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(sagittarius|strelec|schuetze|strelac)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/strelac/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(capricorn|jarec|steinbock|jarac)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/jarac/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(aquarius|vodolija|wassermann)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/vodolija/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)/(pisces|ribi|fische|ribe)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/ribe/"
+      }
+    },
+    {
+      "src": "/sr/(horoscope|dneven-horoskop|tageshoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/"
       }
     },
     {
@@ -474,66 +659,94 @@
       }
     },
     {
-      "src": "/en/(horoskopski-znaci|sternzeichen)(?:/.*)?",
+      "src": "/sr/(numerology|numerologie)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/numerologija/"
+      }
+    },
+    {
+      "src": "/en/(horoskopski-znaci|sternzeichen|horoskopski-znakovi)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/zodiac-signs/"
       }
     },
     {
-      "src": "/mk/(zodiac-signs|sternzeichen)(?:/.*)?",
+      "src": "/mk/(zodiac-signs|sternzeichen|horoskopski-znakovi)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/horoskopski-znaci/"
       }
     },
     {
-      "src": "/de/(zodiac-signs|horoskopski-znaci)(?:/.*)?",
+      "src": "/de/(zodiac-signs|horoskopski-znaci|horoskopski-znakovi)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/sternzeichen/"
       }
     },
     {
-      "src": "/en/(nedelen-horoskop|wochenhoroskop)(?:/.*)?",
+      "src": "/sr/(zodiac-signs|horoskopski-znaci|sternzeichen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/horoskopski-znakovi/"
+      }
+    },
+    {
+      "src": "/en/(nedelen-horoskop|wochenhoroskop|nedeljni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/weekly-horoscope/"
       }
     },
     {
-      "src": "/mk/(weekly-horoscope|wochenhoroskop)(?:/.*)?",
+      "src": "/mk/(weekly-horoscope|wochenhoroskop|nedeljni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/nedelen-horoskop/"
       }
     },
     {
-      "src": "/de/(weekly-horoscope|nedelen-horoskop)(?:/.*)?",
+      "src": "/de/(weekly-horoscope|nedelen-horoskop|nedeljni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/wochenhoroskop/"
       }
     },
     {
-      "src": "/en/(mesecen-horoskop|monatshoroskop)(?:/.*)?",
+      "src": "/sr/(weekly-horoscope|nedelen-horoskop|wochenhoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/nedeljni-horoskop/"
+      }
+    },
+    {
+      "src": "/en/(mesecen-horoskop|monatshoroskop|mesecni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/monthly-horoscope/"
       }
     },
     {
-      "src": "/mk/(monthly-horoscope|monatshoroskop)(?:/.*)?",
+      "src": "/mk/(monthly-horoscope|monatshoroskop|mesecni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/mesecen-horoskop/"
       }
     },
     {
-      "src": "/de/(monthly-horoscope|mesecen-horoskop)(?:/.*)?",
+      "src": "/de/(monthly-horoscope|mesecen-horoskop|mesecni-horoskop)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/monatshoroskop/"
+      }
+    },
+    {
+      "src": "/sr/(monthly-horoscope|mesecen-horoskop|monatshoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/mesecni-horoskop/"
       }
     },
     {
@@ -558,45 +771,66 @@
       }
     },
     {
-      "src": "/en/(kompatibilnost-na-znaci|partnerhoroskop)(?:/.*)?",
+      "src": "/sr/(horoscope-2027|jahreshoroskop-2027)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/horoskop-2027/"
+      }
+    },
+    {
+      "src": "/en/(kompatibilnost-na-znaci|partnerhoroskop|kompatibilnost-znakova)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/zodiac-compatibility/"
       }
     },
     {
-      "src": "/mk/(zodiac-compatibility|partnerhoroskop)(?:/.*)?",
+      "src": "/mk/(zodiac-compatibility|partnerhoroskop|kompatibilnost-znakova)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/kompatibilnost-na-znaci/"
       }
     },
     {
-      "src": "/de/(zodiac-compatibility|kompatibilnost-na-znaci)(?:/.*)?",
+      "src": "/de/(zodiac-compatibility|kompatibilnost-na-znaci|kompatibilnost-znakova)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/partnerhoroskop/"
       }
     },
     {
-      "src": "/en/(ascendent-kalkulator|aszendent-berechnen)(?:/.*)?",
+      "src": "/sr/(zodiac-compatibility|kompatibilnost-na-znaci|partnerhoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/kompatibilnost-znakova/"
+      }
+    },
+    {
+      "src": "/en/(ascendent-kalkulator|aszendent-berechnen|podznak-kalkulator)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/rising-sign-calculator/"
       }
     },
     {
-      "src": "/mk/(rising-sign-calculator|aszendent-berechnen)(?:/.*)?",
+      "src": "/mk/(rising-sign-calculator|aszendent-berechnen|podznak-kalkulator)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/ascendent-kalkulator/"
       }
     },
     {
-      "src": "/de/(rising-sign-calculator|ascendent-kalkulator)(?:/.*)?",
+      "src": "/de/(rising-sign-calculator|ascendent-kalkulator|podznak-kalkulator)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/aszendent-berechnen/"
+      }
+    },
+    {
+      "src": "/sr/(rising-sign-calculator|ascendent-kalkulator|aszendent-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/podznak-kalkulator/"
       }
     },
     {
@@ -621,6 +855,13 @@
       }
     },
     {
+      "src": "/sr/(moon-sign-calculator|mondzeichen-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/mesecev-znak-kalkulator/"
+      }
+    },
+    {
       "src": "/en/(natalna-karta-kalkulator|geburtshoroskop-berechnen)(?:/.*)?",
       "status": 308,
       "headers": {
@@ -639,6 +880,13 @@
       "status": 308,
       "headers": {
         "Location": "/de/geburtshoroskop-berechnen/"
+      }
+    },
+    {
+      "src": "/sr/(birth-chart-calculator|geburtshoroskop-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/natalna-karta-kalkulator/"
       }
     },
     {
@@ -663,24 +911,38 @@
       }
     },
     {
-      "src": "/en/(retrograden-merkur|merkur-ruecklaeufig)(?:/.*)?",
+      "src": "/sr/(moon-calendar|mondkalender)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/mesecev-kalendar/"
+      }
+    },
+    {
+      "src": "/en/(retrograden-merkur|merkur-ruecklaeufig|retrogradni-merkur)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/en/mercury-retrograde/"
       }
     },
     {
-      "src": "/mk/(mercury-retrograde|merkur-ruecklaeufig)(?:/.*)?",
+      "src": "/mk/(mercury-retrograde|merkur-ruecklaeufig|retrogradni-merkur)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/mk/retrograden-merkur/"
       }
     },
     {
-      "src": "/de/(mercury-retrograde|retrograden-merkur)(?:/.*)?",
+      "src": "/de/(mercury-retrograde|retrograden-merkur|retrogradni-merkur)(?:/.*)?",
       "status": 308,
       "headers": {
         "Location": "/de/merkur-ruecklaeufig/"
+      }
+    },
+    {
+      "src": "/sr/(mercury-retrograde|retrograden-merkur|merkur-ruecklaeufig)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/retrogradni-merkur/"
       }
     },
     {
@@ -691,7 +953,7 @@
       "dest": "/en/invite/"
     },
     {
-      "src": "/(en|mk|de)/invite/[a-zA-Z0-9]{8}/?",
+      "src": "/(en|mk|de|sr)/invite/[a-zA-Z0-9]{8}/?",
       "dest": "/$1/invite/"
     },
     {
@@ -713,6 +975,13 @@
       "status": 308,
       "headers": {
         "Location": "/de/tageshoroskop/$1/"
+      }
+    },
+    {
+      "src": "/sr/dnevni-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
+      "status": 308,
+      "headers": {
+        "Location": "/sr/dnevni-horoskop/$1/"
       }
     }
   ]

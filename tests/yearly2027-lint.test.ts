@@ -11,6 +11,8 @@ describe("yearly 2027 lint catches what it claims to", () => {
     expect(splitSentences("Am 26. Juli zieht Jupiter weiter. Das 9. Haus öffnet sich.")).toEqual(["Am 26. Juli zieht Jupiter weiter.", "Das 9. Haus öffnet sich."]);
     expect(datesIn("de", "Am 26. Juli und am 13. Dezember 2026.")).toEqual(["2027-07-26", "2026-12-13"]);
     expect(datesIn("mk", "на 26 јули и 13 декември 2026")).toEqual(["2027-07-26", "2026-12-13"]);
+    expect(datesIn("sr", "Od 26. jula do 13. decembra 2026.")).toEqual(["2027-07-26", "2026-12-13"]);
+    expect(datesIn("sr", "26. jul")).toEqual(["2027-07-26"]);
     expect(datesIn("en", "on July 26 and December 13, 2026")).toEqual(["2027-07-26", "2026-12-13"]);
   });
   for (const [lang, fake, wrongPlanet, wrongHouse, loose] of [

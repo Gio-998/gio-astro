@@ -7,7 +7,7 @@ import { MERCURY_YEARS, mercuryRetrograde, periodKey } from "../src/lib/sections
 import type { SectionModel } from "../src/lib/sections/types";
 
 /** Calendar pages are near neighbours that share a data shape: each must stand on its own before it joins the sitemap. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_MONTH_WORDS = 280;
 const MIN_YEAR_WORDS = 150;
 const MIN_MERCURY_WORDS = 450;

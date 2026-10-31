@@ -4,6 +4,7 @@
  * over 1940-2019 birthdays), Tzolk'in day (1/260) and four-letter style (published population shares, only
  * when the person took a test). Treated as independent, which they are close to (different cycles).
  */
+import { intlLocale } from "./intl";
 import type { Profile } from "./profile";
 import { lifePath } from "./numerology";
 
@@ -41,11 +42,19 @@ export function rarity(p: Profile): Rarity {
   const level = (oneIn >= 5e9 ? 5 : oneIn >= 5e8 ? 4 : oneIn >= 5e7 ? 3 : oneIn >= 5e6 ? 2 : 1) as Rarity["level"];
   return { factors: f.sort((a, b) => b.oneIn - a.oneIn), oneIn, sharers, rarest, level };
 }
+const SR_UNITS: Record<number, [string, string, string]> = { 1e12: ["bilion", "biliona", "biliona"], 1e9: ["milijarda", "milijarde", "milijardi"], 1e6: ["milion", "miliona", "miliona"] };
+/** Serbian picks the form by the number shown: 1 milijarda, 2,5 milijarde, 34 milijarde, 12 milijardi. */
+function srUnit(x: number, v: number): string {
+  const [one, few, many] = SR_UNITS[v]; const r = x < 10 ? Math.round(x * 10) / 10 : Math.round(x);
+  if (!Number.isInteger(r)) return few;
+  const t = r % 100; const u = r % 10;
+  return t >= 11 && t <= 14 ? many : u === 1 ? one : u >= 2 && u <= 4 ? few : many;
+}
 /** Short human number: 1.2 million, 34 billion. */
 export function bigNumber(n: number, locale: string): string {
-  const mk = locale === "mk";
+  const mk = locale === "mk"; const sr = locale === "sr"; const tag = intlLocale(locale);
   const units: [number, string, string][] = [[1e12, "trillion", "трилиони"], [1e9, "billion", "милијарди"], [1e6, "million", "милиони"]];
   const deU: Record<number, string> = { 1e12: "Billionen", 1e9: "Milliarden", 1e6: "Millionen" };
-  for (const [v, en, m] of units) if (n >= v) return `${(n / v).toLocaleString(mk ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB", { maximumFractionDigits: n / v < 10 ? 1 : 0 })} ${mk ? m : locale === "de" ? deU[v] : en}`;
-  return Math.round(n).toLocaleString(mk ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB");
+  for (const [v, en, m] of units) if (n >= v) return `${(n / v).toLocaleString(tag, { maximumFractionDigits: n / v < 10 ? 1 : 0 })} ${mk ? m : sr ? srUnit(n / v, v) : locale === "de" ? deU[v] : en}`;
+  return Math.round(n).toLocaleString(tag);
 }

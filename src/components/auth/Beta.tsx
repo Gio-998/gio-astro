@@ -1,4 +1,5 @@
 "use client";
+import { intlLocale } from "@/engine/intl";
 import { parsePath } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -131,7 +132,7 @@ export function BetaAdmin() {
     const { error } = await sb()!.from("beta_invites").upsert(rows, { onConflict: "email", ignoreDuplicates: true });
     setMsg(error ? error.message : B.added(rows.length)); setText(""); void load();
   };
-  const fmt = (iso: string) => new Date(iso).toLocaleDateString(locale === "mk" ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB", { day: "numeric", month: "long", year: "numeric" });
+  const fmt = (iso: string) => new Date(iso).toLocaleDateString(intlLocale(locale), { day: "numeric", month: "long", year: "numeric" });
   if (!a.ready) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!a.user) return <div className="card"><Link className="text-gold" href={h("/account")}>{B.haveInvite}</Link></div>;
   if (!isAdmin) return <div className="card text-dim" data-testid="not-admin">{B.notAdmin}</div>;

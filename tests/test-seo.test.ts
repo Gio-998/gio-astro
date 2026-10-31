@@ -7,10 +7,11 @@ import { isIndexable } from "@/lib/seo";
 import { adaptive as aEn } from "@/content/en/adaptive";
 import { adaptive as aMk } from "@/content/mk/adaptive";
 import { adaptive as aDe } from "@/content/de/adaptive";
+import { adaptive as aSr } from "@/content/sr/adaptive";
 import sitemap from "@/app/sitemap";
 
 const urls = new Set(sitemap().map((e) => e.url));
-const A = { en: aEn, mk: aMk, de: aDe };
+const A = { en: aEn, mk: aMk, de: aDe, sr: aSr };
 const inSitemap = (l: string, p: string) => urls.has(`${SITE_URL}${localizedPath(l, p)}`);
 
 describe("the open tools in search", () => {

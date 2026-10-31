@@ -3,7 +3,7 @@ import { BIRTHDAYS } from "../src/content/numerology/birthdays";
 import { BDAY_DAYS } from "../src/lib/numerology";
 
 /** Birthday pages (1 to 31) are a generated family: each page must stand on its own before it joins the sitemap. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 const MIN_WORDS = 450;
 const MAX_JACCARD = 0.12; // share of 5 word shingles two pages may have in common
 const MAX_SHARED_SENTENCES = 1;

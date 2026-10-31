@@ -1,4 +1,5 @@
 "use client";
+import { intlLocale } from "@/engine/intl";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { sb } from "@/lib/supabase";
@@ -43,7 +44,7 @@ export function AdminPanel() {
   const loadFbCount = useCallback(async () => { const { count } = await sb()!.from("feedback").select("id", { count: "exact", head: true }).eq("status", "open"); setOpenFb(count ?? 0); }, []);
   // eslint-disable-next-line react-hooks/set-state-in-effect -- fetch on mount
   useEffect(() => { if (admin) { void loadTesters(); void loadFbCount(); } }, [admin, loadTesters, loadFbCount]);
-  const fmt = useCallback((iso: string | null, time = false) => iso ? new Date(iso).toLocaleString(locale === "mk" ? "mk-MK" : locale === "de" ? "de-DE" : "en-GB", { day: "numeric", month: "short", ...(time ? { hour: "2-digit", minute: "2-digit" } : { year: "numeric" }) }) : "", [locale]);
+  const fmt = useCallback((iso: string | null, time = false) => iso ? new Date(iso).toLocaleString(intlLocale(locale), { day: "numeric", month: "short", ...(time ? { hour: "2-digit", minute: "2-digit" } : { year: "numeric" }) }) : "", [locale]);
   if (!ready) return <p className="py-10 text-center text-dim">{c.site.common.loading}</p>;
   if (!a.user) return <div className="card"><Link className="text-gold" href={h("/account/?next=/admin/")}>{B.haveInvite}</Link></div>;
   if (!admin) return <div className="card text-dim" data-testid="not-admin">{B.notAdmin}</div>;

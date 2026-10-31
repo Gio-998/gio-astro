@@ -8,7 +8,7 @@ const S = "/sign-compatibility/";
 /** Every unordered sign pair (78), keyed "a-and-b" in zodiac order. */
 export const ALL_SIGN_PAIRS: string[] = SIGNS.flatMap((a, i) => SIGNS.slice(i).map((b) => `${a}-and-${b}`));
 /** Pairs written in every language (gated by tests/sign-compat-overlap.test.ts). */
-export const SIGN_PAIR_KEYS: string[] = ALL_SIGN_PAIRS.filter((k) => SIGN_PAIRS.en[k] && SIGN_PAIRS.mk[k] && SIGN_PAIRS.de[k]);
+export const SIGN_PAIR_KEYS: string[] = ALL_SIGN_PAIRS.filter((k) => SIGN_PAIRS.en[k] && SIGN_PAIRS.mk[k] && SIGN_PAIRS.de[k] && SIGN_PAIRS.sr[k]);
 
 const pairSigns = (k: string) => k.split("-and-") as [Sign, Sign];
 function model(lang: string, path: string): SectionModel | null {

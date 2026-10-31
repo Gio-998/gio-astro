@@ -5,7 +5,7 @@ export const site: typeof En = {
   themeOn: "Meine Farben: an", themeOff: "Meine Farben: aus", themeHint: "Färbe die ganze Seite in der Palette deines Elements oder wechsle zurück zum Standard.",
   datePicker: { day: "Tag", month: "Monat", year: "Jahr", done: "Fertig", placeholder: "Datum wählen", title: "Dein Datum", timePh: "Uhrzeit wählen", hour: "Stunde", minute: "Minute" },
   brand: "Horoscop",
-  language: "Sprache", languages: { en: "English", mk: "Македонски", de: "Deutsch" },
+  language: "Sprache", languages: { en: "English", mk: "Македонски", de: "Deutsch", sr: "Srpski" },
   hero: { title: ["Sieh dich und die Menschen um dich ", "in neuen Farben."], sub: "Tageshoroskope, kurze Persönlichkeitstests und Numerologie an einem ehrlichen Ort.", daily: "Tageshoroskop lesen", perks: ["Gratis", "Kein Konto nötig", "Tests starten sofort"] },
   footerCols: { astro: "Astrologie", discover: "Tests und Werkzeuge", trust: "Über uns", chart: "Profil erstellen", quizzes: "Alle Tests", match: "Zwei Menschen vergleichen", bond: "Beziehungscheck zu zweit", notes: "Tagesimpuls nach Sternzeichen", blurb: "Gratis nutzbar, kein Konto nötig, und immer klar, was Forschung ist und was Tradition." },
   tagline: "Ein ehrlicher Spiegel für dich und deine Beziehungen",

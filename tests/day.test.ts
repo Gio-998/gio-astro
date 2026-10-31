@@ -12,7 +12,7 @@ const people = [
 const names = (lang: string) => { const c = getContent(lang); return { point: (k: string) => c.day.ui.yourPoint(c.astro.points[k as "sun"].name), planet: (k: string) => c.astro.points[k as "sun"].name, sign: (s: string) => c.astro.signs[s as "aries"].name, weekday: (d: Date) => d.toLocaleDateString(lang, { weekday: "long" }) }; };
 
 describe("Your day", () => {
-  for (const lang of ["en", "mk", "de"]) {
+  for (const lang of ["en", "mk", "de", "sr"]) {
     it(`${lang}: 150-300 words, no unfilled placeholders, every day of a year`, () => {
       const c = getContent(lang); const N = names(lang); let lo = 999, hi = 0;
       for (const p of people) for (let i = 0; i < 365; i += 1) {
@@ -50,7 +50,7 @@ describe("Your day", () => {
     expect(w.days.every((d) => d.personalDay >= 1 && d.personalDay <= 9)).toBe(true);
   });
   it("sign day exists for every sign in both languages", () => {
-    for (const lang of ["en", "mk", "de"]) for (const s of SIGNS) {
+    for (const lang of ["en", "mk", "de", "sr"]) for (const s of SIGNS) {
       const r = signDay(s, new Date(2026, 9, 12), getContent(lang).day, names(lang));
       expect(r.paragraphs.length).toBeGreaterThanOrEqual(3);
       expect(JSON.stringify(r)).not.toMatch(/\{\w+\}|undefined/);

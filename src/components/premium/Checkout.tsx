@@ -1,4 +1,5 @@
 "use client";
+import { isLocalPath } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
@@ -16,13 +17,14 @@ const COUNTRY_LABEL: Record<string, Record<(typeof COUNTRIES)[number], string>> 
   en: { MK: "North Macedonia", SI: "Slovenia", EU: "Another EU country", XX: "Outside the EU" },
   mk: { MK: "Северна Македонија", SI: "Словенија", EU: "Друга земја од ЕУ", XX: "Надвор од ЕУ" },
   de: { MK: "Nordmazedonien", SI: "Slowenien", EU: "Anderes EU-Land", XX: "Außerhalb der EU" },
+  sr: { MK: "Severna Makedonija", SI: "Slovenija", EU: "Druga zemlja EU", XX: "Van EU" },
 };
 
 export function CheckoutPage() {
   const T = usePremiumText(); const C = T.checkout; const acc = useAccess(); const { c, locale } = useContent(); const h = useHref();
   const params = useSearchParams(); const a = useAccount(); const s = useStore();
   const initial: Sku = isSku(params.get("sku")) ? (params.get("sku") as Sku) : "premium-yearly";
-  const ret = params.get("return"); const safeReturn = ret && /^\/(en|mk|de)\/[\w\-/]*$/.test(ret) ? ret : null;
+  const ret = params.get("return"); const safeReturn = ret && isLocalPath(ret) ? ret : null;
   const [sku, setSku] = useState<Sku>(initial);
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<Record<string, string>>({});
@@ -91,7 +93,7 @@ export function CheckoutPage() {
         </>}
         {product === "session" && <>
           <label className="block"><span className="label">{C.session.topic}</span><textarea className="input h-24" value={form.topic ?? ""} onChange={set("topic")} /></label>
-          <label className="block"><span className="label">{C.session.times}</span><input className="input" value={form.times ?? ""} onChange={set("times")} placeholder={locale === "mk" ? "пр. вт или чет навечер" : locale === "de" ? "z. B. Di oder Do abends" : "e.g. Tue or Thu evening"} /></label>
+          <label className="block"><span className="label">{C.session.times}</span><input className="input" value={form.times ?? ""} onChange={set("times")} placeholder={locale === "mk" ? "пр. вт или чет навечер" : locale === "de" ? "z. B. Di oder Do abends" : locale === "sr" ? "npr. uto ili čet uveče" : "e.g. Tue or Thu evening"} /></label>
           <div><span className="label">{C.session.lang}</span><SheetSelect title={C.session.lang} value={(form.lang as "en" | "mk") ?? locale} onChange={(v) => setForm({ ...form, lang: v })} options={[{ value: "en", label: "English" }, { value: "mk", label: "Македонски" }]} /></div>
         </>}
         {product === "hardcover" && <label className="block"><span className="label">{C.shipping}</span><textarea className="input h-24" value={form.address ?? ""} onChange={set("address")} autoComplete="street-address" /></label>}
