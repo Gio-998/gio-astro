@@ -10,6 +10,7 @@ import { SITE_URL } from "@/lib/site-url";
 import { numContent } from "@/content/numerology";
 import { DayNumber } from "../numerology/Personal";
 import { localizedPath } from "@/lib/i18n-routes";
+import { ZODIAC } from "@/content/zodiac";
 
 const pill = "inline-flex h-9 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/12 bg-white/[0.05] px-3.5 text-[13px] text-mist/90 hover:border-gold/45";
 /** Phone: compact glass card. Desktop: flowing magazine prose with a hairline divider, no box. */
@@ -31,11 +32,13 @@ const nbsp = (d: string) => d.replace(/^(\d+) (\S+) (\d+)$/, "$1\u00A0$2\u00A0$3
 /** Public daily horoscope for one sign + date. `isToday` = rendered on the per-sign today index. */
 export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: string; sign: Sign; iso: string; isToday?: boolean }) {
   const r = reading(lang, sign, iso); const B = bankFor(lang); const U = B.ui; const M = B.more.ui; const c = getContent(lang); const angle = r.sky.moon.angle;
-  const url = absolute(isToday ? horoPath(lang, sign) : horoPath(lang, sign, iso));
+  // The today page is the one that ranks, so it alone carries evergreen text about the sign. Dated pages stay about their day.
+  const Z = ZODIAC[lang] ?? ZODIAC.en; const evergreen = isToday ? Z.signs[sign]?.daily : undefined;
+  const url =absolute(isToday ? horoPath(lang, sign) : horoPath(lang, sign, iso));
   const ld = {
     "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: `${iso}T00:00:00+02:00`, dateModified: `${iso}T00:00:00+02:00`,
     inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogImage(lang, sign, iso))], about: { "@type": "Thing", name: r.signName },
-    articleSection: B.ui.hubTitle, wordCount: wordCount(r),
+    articleSection: B.ui.hubTitle, wordCount: wordCount(r) + (evergreen ? evergreen.paras.join(" ").split(/\s+/).length : 0),
     author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` },
   };
   const crumbs = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [[c.site.brand, `/${lang}/`], [U.hubTitle, horoPath(lang)], [r.signName, horoPath(lang, sign)], ...(isToday ? [] : [[r.dateLabel, horoPath(lang, sign, iso)]])].map(([name, p], i) => ({ "@type": "ListItem", position: i + 1, name, item: absolute(p) })) };
@@ -95,6 +98,16 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
           {r.week.length > 0 && (
             <Sec icon="→" title={M.week}>
               <ul className="space-y-1.5 lg:space-y-3">{r.week.map((w) => <li key={w.date} className="text-[15px] leading-snug text-mist/85 lg:text-[18px] lg:leading-[1.6]"><span className="font-semibold text-gold">{w.date}. </span>{w.text}</li>)}</ul>
+            </Sec>
+          )}
+
+          {evergreen && (
+            <Sec icon={SIGN_GLYPH[sign]} title={evergreen.title}>
+              <Ps lines={evergreen.paras} />
+              <p className={`${p2} font-medium`}><Link className="text-gold underline-offset-4 hover:underline" href={localizedPath(lang, `/zodiac/${sign}/`)} data-testid="zodiac-profile-link">{Z.labels.profileLink(r.signName)} →</Link></p>
+              <div className="mt-3 flex flex-wrap gap-1.5 lg:mt-4 lg:gap-2">
+                {([["weekly-horoscope", Z.labels.weekly], ["monthly-horoscope", Z.labels.monthly], ["horoscope-2027", Z.labels.yearly]] as const).map(([family, text]) => <Link key={family} className={pill} href={localizedPath(lang, `/${family}/${sign}/`)}>{text(r.signName)}</Link>)}
+              </div>
             </Sec>
           )}
 
