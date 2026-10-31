@@ -12,6 +12,7 @@ const T = {
   en: { eye: "Error 404", h: ["This page is not ", "in our sky"], p: "The link may be old or mistyped. Everything else is where you left it.", home: "Back to home", today: "See today's sky" },
   mk: { eye: "Грешка 404", h: ["Оваа страница ја нема ", "на нашето небо"], p: "Врската можеби е стара или погрешно напишана. Сè друго е таму каде што беше.", home: "Кон почетна", today: "Небото денес" },
   de: { eye: "Fehler 404", h: ["Diese Seite steht nicht ", "an unserem Himmel"], p: "Der Link ist vielleicht alt oder vertippt. Alles andere ist da, wo du es gelassen hast.", home: "Zur Startseite", today: "Der Himmel heute" },
+  sr: { eye: "Greška 404", h: ["Ove stranice nema ", "na našem nebu"], p: "Link je možda star ili pogrešno ukucan. Sve ostalo je na svom mestu.", home: "Nazad na početnu", today: "Današnje nebo" },
 } as const;
 const pick = `try{var m=location.pathname.match(/^\\/(en|mk|de)(\\/|$)/),s=localStorage.getItem("mirrorstar:lang"),l=m?m[1]:(s==="mk"||s==="de"?s:"en");document.documentElement.lang=l;document.documentElement.dataset.nf=l}catch(e){}`;
 

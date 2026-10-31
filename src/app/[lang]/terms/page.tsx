@@ -75,7 +75,31 @@ function PageDe() {
     </article>
   );
 }
+function PageSr() {
+  return (
+    <article className="prose-soft" lang="sr">
+      <PageHero emblem="tarot" img="milkyway" title={<>Uslovi korišćenja</>} />
+      <p className="text-sm text-dim">Nacrt v0.2: pravnik još treba da pregleda ovaj tekst.</p>
+      <h2>Šta je ovo</h2>
+      <p>Ova aplikacija nudi astrologiju, numerologiju, tarot, tradicionalne sisteme i upitnike o ličnosti <b>za razmišljanje o sebi i zabavu</b>. Ovo nije psihološki, medicinski, pravni ili finansijski savet i ne može da predvidi budućnost niti da li će neka veza uspeti. Nemoj da donosiš važne odluke samo na osnovu nje.</p>
+      <h2>Uzrast</h2>
+      <p>Za korišćenje aplikacije moraš da imaš 16 ili više godina.</p>
+      <h2>Celi rezultati testova</h2>
+      <p>Test odmah prikazuje kratak deo svog rezultata. Ceo rezultat se otvara kad ostaviš ime i mejl, jednom po uređaju, i ne košta ništa. Koristi svoje ime i adresu koja je tvoja. Zatim ti šaljemo jedan mejl sa linkom nazad. <Link href="/sr/privacy/">Stranica o privatnosti</Link> objašnjava šta čuvamo i kako da to obrišeš. Novosti mejlom su poseban izbor i nijedan rezultat ne zavisi od njih.</p>
+      <h2>Podaci drugih ljudi</h2>
+      <p>Kad dodaš nekog drugog, unesi samo podatke koje bi ta osoba rado podelila sa tobom, najbolje uz njenu dozvolu. Nemoj da koristiš aplikaciju da uznemiravaš druge, pritiskaš ih ili donosiš odluke o njima.</p>
+      <h2>Dobrobit</h2>
+      <p>Upitnik o telu i energiji inspirisan je tradicijom i daje samo opšte ideje za dobrobit. Ako imaš zdravstvene tegobe, obrati se lekaru. Ako se ne osećaš bezbedno u odnosu, obrati se lokalnim hitnim službama ili liniji za pomoć.</p>
+      <h2>Besplatna usluga i plaćeni dodaci</h2>
+      <p>Osnovna usluga je besplatna i pruža se „takva kakva jeste“. Svi budući plaćeni dodaci jasno će prikazati cenu pre kupovine, moći će da se otkažu jednim klikom i pokriveni su tvojim zakonskim potrošačkim pravima u EU.</p>
+      <h2>Sadržaj</h2>
+      <p>Tekstovi tumačenja su naši. Stavke o ličnosti iz International Personality Item Pool su javno dobro. Podaci o gradovima © GeoNames (CC BY 4.0). Ne koristimo žigove trećih strana i nismo povezani ni sa jednim izdavačem testova.</p>
+      <h2>Kontakt</h2>
+      <p>Pitanja ili zahtevi u vezi sa tvojim podacima? Piši na <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : lang === "sr" ? <PageSr /> : <PageEn />;
 }

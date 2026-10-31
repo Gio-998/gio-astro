@@ -16,6 +16,7 @@ const COUNTRY_LABEL: Record<string, Record<(typeof COUNTRIES)[number], string>> 
   en: { MK: "North Macedonia", SI: "Slovenia", EU: "Another EU country", XX: "Outside the EU" },
   mk: { MK: "Северна Македонија", SI: "Словенија", EU: "Друга земја од ЕУ", XX: "Надвор од ЕУ" },
   de: { MK: "Nordmazedonien", SI: "Slowenien", EU: "Anderes EU-Land", XX: "Außerhalb der EU" },
+  sr: { MK: "Severna Makedonija", SI: "Slovenija", EU: "Druga zemlja EU", XX: "Van EU" },
 };
 
 export function CheckoutPage() {

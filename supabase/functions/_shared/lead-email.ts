@@ -11,15 +11,15 @@ export const REPLY_TO = "contact@horoscop.si";
 type Names = Record<string, string> & { en: string };
 /** Test ids that may appear in an email or a link. Keep in step with ALL_QUIZ_IDS (tests/lead-email.test.ts checks it). */
 export const TESTS: Record<string, Names> = {
-  "big-five": { en: "Big Five", mk: "Големите пет", de: "Big Five" },
-  "big-five-long": { en: "Big Five, full version", mk: "Големите пет, цела верзија", de: "Big Five, ausführlich" },
-  attachment: { en: "Attachment style", mk: "Приврзаност", de: "Bindungsstil" },
-  nine: { en: "Nine motivations", mk: "Девет мотивации", de: "Neun Motive" },
-  care: { en: "Care styles", mk: "Начини на грижа", de: "Zuwendungsstile" },
-  shadow: { en: "Shadow and light", mk: "Сенка и светлина", de: "Schatten und Licht" },
-  dosha: { en: "Body type", mk: "Тип на тело", de: "Körpertyp" },
-  explorer: { en: "Autopilot or explorer", mk: "Автопилот или истражувач", de: "Autopilot oder Entdecker" },
-  "four-letter": { en: "Four-letter type", mk: "Тип од четири букви", de: "Vier-Buchstaben-Typ" },
+  "big-five": { en: "Big Five", mk: "Големите пет", de: "Big Five", sr: "Velikih pet" },
+  "big-five-long": { en: "Big Five, full version", mk: "Големите пет, цела верзија", de: "Big Five, ausführlich", sr: "Velikih pet, puna verzija" },
+  attachment: { en: "Attachment style", mk: "Приврзаност", de: "Bindungsstil", sr: "Stil vezivanja" },
+  nine: { en: "Nine motivations", mk: "Девет мотивации", de: "Neun Motive", sr: "Devet motivacija" },
+  care: { en: "Care styles", mk: "Начини на грижа", de: "Zuwendungsstile", sr: "Stilovi brige" },
+  shadow: { en: "Shadow and light", mk: "Сенка и светлина", de: "Schatten und Licht", sr: "Senka i svetlo" },
+  dosha: { en: "Body type", mk: "Тип на тело", de: "Körpertyp", sr: "Tip tela" },
+  explorer: { en: "Autopilot or explorer", mk: "Автопилот или истражувач", de: "Autopilot oder Entdecker", sr: "Autopilot ili istraživač" },
+  "four-letter": { en: "Four-letter type", mk: "Тип од четири букви", de: "Vier-Buchstaben-Typ", sr: "Tip od četiri slova" },
 };
 
 const TEXT = {
@@ -70,6 +70,22 @@ const TEXT = {
     notYou: "Du hast das nicht angefordert? Dann hat jemand deine Adresse versehentlich eingetippt. Du kannst diese E-Mail ignorieren.",
     footer: "Du bekommst diese E-Mail, weil diese Adresse auf horoscop.si eingegeben wurde.",
     unsubscribe: "Abmelden", privacy: "Datenschutz",
+  },
+  sr: {
+    subject: "Tvoj put nazad do sajta Horoscop",
+    pre: "Tvoji rezultati ostaju na ovom uređaju. Evo kako da im se vratiš.",
+    hello: (n: string | null) => (n ? `Zdravo, ${n}!` : "Zdravo!"),
+    lead: "Hvala što isprobavaš Horoscop.",
+    leadTest: (t: string) => `Hvala za test „${t}“ na sajtu Horoscop.`,
+    device: "Tvoji rezultati ostaju na ovom uređaju. Nisu u ovom mejlu, a tvoje odgovore nikad ne vidimo.",
+    openHint: "Otvori link u istom pregledaču u kom je rađen test.",
+    open: "Otvori moje rezultate", test: "Nazad na test", tests: "Pogledaj sve testove",
+    confirmTitle: "Jedan klik za novosti",
+    confirmText: "Polje za povremene novosti sa sajta Horoscop je označeno. Potvrdi da je to tvoj izbor. Bez ovog klika ne šaljemo ti novosti, a tvoji rezultati ni u jednom slučaju ne zavise od toga. Link važi 30 dana.",
+    confirm: "Da, šaljite mi novosti",
+    notYou: "Ovo nije od tebe? Onda je neko greškom upisao tvoju adresu. Možeš da ignorišeš ovaj mejl.",
+    footer: "Ovaj mejl dobijaš zato što je ova adresa uneta na sajtu horoscop.si.",
+    unsubscribe: "Odjavi se", privacy: "Privatnost",
   },
 };
 type Lang = keyof typeof TEXT;

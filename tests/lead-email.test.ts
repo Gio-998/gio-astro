@@ -62,10 +62,10 @@ describe("the welcome email", () => {
     expect(m.text).not.toContain("/quiz/");
   });
   it("falls back to English for a language it doesn't have yet", () => {
-    expect(emailLocale("sr")).toBe("en");
+    expect(emailLocale("fr")).toBe("en");
     expect(emailLocale("constructor")).toBe("en");
-    expect(renderWelcome({ ...base, locale: "sr" }).subject).toBe(renderWelcome({ ...base, locale: "en" }).subject);
-    expect(actionUrl("sr", "confirm", "x")).toContain("/en/email/");
+    expect(renderWelcome({ ...base, locale: "fr" }).subject).toBe(renderWelcome({ ...base, locale: "en" }).subject);
+    expect(actionUrl("fr", "confirm", "x")).toContain("/en/email/");
   });
 });
 

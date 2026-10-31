@@ -62,7 +62,27 @@ function PageDe() {
     </article>
   );
 }
+function PageSr() {
+  return (
+    <article className="prose-soft" lang="sr">
+      <PageHero emblem="eye" img="helix" title={<>Naše obećanje</>} />
+      <p>Ova oblast je poznata po probnim periodima od 1 dolara koji se tiho pretvore u 40 dolara mesečno, lavirintima za otkazivanje i prodaji na strah. Mislimo da to nije u redu. Evo šta obećavamo, jednostavnim rečima:</p>
+      <ul>
+        <li><b>Celi rezultati bez naplate.</b> Svaki test prikazuje kratak deo rezultata čim ga završiš. Za ostatak jednom tražimo ime i mejl, a zatim svaki rezultat na tvom uređaju ostaje otvoren. Nema naplate na kraju, a pristanak na naše novosti nikad nije cena rezultata.</li>
+        <li><b>Osnova ostaje besplatna.</b> Natalna karta, profil, testovi, kompatibilnost i dnevne smernice nas skoro ništa ne koštaju, pa ostaju besplatni.</li>
+        <li><b>Objavljene cene.</b> Ako dodamo plaćene dodatke (kao što je detaljan izveštaj za štampu), cena stoji na dugmetu pre nego što klikneš.</li>
+        <li><b>Bez probnih perioda koji postaju pretplata.</b> Nema „1 € sada, 40 € kasnije“.</li>
+        <li><b>Otkazivanje jednim klikom.</b> Svako članstvo moći će da se otkaže jednim klikom, uz podsetnik pre svakog obnavljanja.</li>
+        <li><b>Povraćaj u novcu, a ne u kreditima.</b></li>
+        <li><b>Bez straha i lažne hitnosti.</b> Nema tajmera sa odbrojavanjem, nema „opasnosti u tvojoj karti“, nema „vidovnjak kuca“.</li>
+        <li><b>Bez crnih proročanstava.</b> Nikad ne kažemo da dve osobe „nisu kompatibilne“. Pokazujemo snage, tačke rasta i vežbe.</li>
+        <li><b>Tvoji podaci su tvoji.</b> Tvoji odgovori i rezultati ostaju u tvom pregledaču, osim ako napraviš nalog. Stranica o privatnosti navodi šta napušta tvoj uređaj i kako da to obrišeš.</li>
+      </ul>
+      <p>Ako ikad prekršimo ovo obećanje, reci nam i ispravićemo to.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : lang === "sr" ? <PageSr /> : <PageEn />;
 }

@@ -10,6 +10,7 @@ const T: Record<string, { btn: string; pick: string; name: string }> = {
   en: { btn: "Export PDF", pick: "PDF language", name: "English" },
   mk: { btn: "Извези PDF", pick: "Јазик на PDF", name: "Македонски" },
   de: { btn: "PDF exportieren", pick: "Sprache der PDF", name: "Deutsch" },
+  sr: { btn: "Izvezi PDF", pick: "Jezik PDF-a", name: "Srpski" },
 };
 const t = (l: string) => T[l] ?? T.en;
 

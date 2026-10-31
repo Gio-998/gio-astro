@@ -197,7 +197,71 @@ function PageDe() {
     </article>
   );
 }
+function PageSr() {
+  return (
+    <article className="prose-soft" lang="sr">
+      <PageHero emblem="moon" img="milkyway" title={<>Privatnost</>} />
+      <p className="text-sm text-dim">Nacrt, verzija {PRIVACY_VERSION}: pravnik još treba da pregleda ovaj tekst.</p>
+      <h2>Ukratko</h2>
+      <p>Tvoji podaci o rođenju, odgovori na testove, rezultati, ljudi koje dodaš i tvoj dnevnik ostaju <b>u tvom pregledaču</b> na ovom uređaju, a i proračuni se izvršavaju ovde. <b>Nalog nije obavezan.</b> Neke stvari ipak napuštaju tvoj uređaj i ova stranica navodi svaku od njih: pre svega ime i mejl koje nam daješ da otvoriš ceo rezultat testa. Tvoji odgovori i rezultati nikad ne idu uz njih. Podatke nikad ne prodajemo.</p>
+      <h2>Ko je odgovoran</h2>
+      <p>horoscop.si je odgovoran za podatke opisane ovde. Za sve u vezi sa ovom stranicom piši na <Mail />.</p>
+      <h2>Šta ostaje na tvom uređaju</h2>
+      <p>Podaci o rođenju, odgovori na testove i rezultati, ljudi koje dodaš i zapisi u dnevniku nalaze se u lokalnoj memoriji tvog pregledača. Tu je i beleška da su tvoji podaci već ostavljeni, da te obrazac ne bi pitao dvaput. Ako slanje tog obrasca nije uspelo, tvoje ime i mejl tu čekaju do sledeće posete, a zatim se šalju i uklanjaju sa uređaja.</p>
+      <h2>Šta napušta tvoj uređaj i zašto</h2>
+      <ul>
+        <li><b>Tvoje ime i mejl, kad otvaraš ceo rezultat testa.</b> Čuvamo i tvoj jezik, koje testove imaš urađene, tvoje izbore o saglasnosti, verziju ove stranice i datume. Koristimo ih da ti otvorimo rezultate, da ti pošaljemo mejl opisan ispod i da ti odgovorimo ako nam pišeš. Davanje ovih podataka je uslov za ceo rezultat, koji ne košta ništa. Pravni osnov: čl. 6(1)(b) GDPR, jer od nas tražiš taj rezultat. Tvoji odgovori i rezultati se nikad ne šalju.</li>
+        <li><b>Jedan mejl posle tog obrasca.</b> Vodi nazad na test i na tvoje rezultate na ovom uređaju, a sam ne sadrži rezultate. Dobijaš najviše jedan po adresi za svaki test. Šalje se preko servisa Resend. Isti pravni osnov.</li>
+        <li><b>Tvoja IP adresa, na trenutak, kad šalješ taj obrazac.</b> Pretvaramo je u heš sa ključem koji se menja svakog dana i po njemu brojimo zahteve, da bismo sprečili zloupotrebu. Samu adresu nikad ne čuvamo. Pravni osnov: čl. 6(1)(f) GDPR, naš interes da usluga ostane bezbedna.</li>
+        <li><b>Novosti mejlom, samo ako ih zatražiš dvaput.</b> Polje nije obavezno i nije unapred označeno, a tvoj rezultat nikad ne zavisi od njega. Ako ga označiš, mejl iznad sadrži dugme za potvrdu i samo taj klik se računa kao saglasnost. Kao dokaz čuvamo tekst pored polja i vreme kada je označeno i potvrđeno. Još ne šaljemo bilten. Pravni osnov: tvoja saglasnost, čl. 6(1)(a) GDPR.</li>
+        <li><b>Brojanje korišćenja.</b> Kad se stranica otvori ili test završi, beležimo šta se desilo, stranicu, jezik i, za test, koji je to test, uz nasumičan broj sesije koji živi u kartici tvog pregledača i nestaje kad je zatvoriš. Za ovo nema kolačića. Uz aktivnu prijavu, zapis nosi i oznaku tvog naloga. Pravni osnov: čl. 6(1)(f) GDPR, naš interes da znamo koji se delovi sajta koriste.</li>
+        <li><b>Provera protiv botova.</b> Kad je uključena, obrasci za prijavu, listu čekanja i testove učitavaju Cloudflare Turnstile, koji čita tvoju IP adresu i tehničke podatke o pregledaču da bi razlikovao ljude od botova. Pravni osnov: čl. 6(1)(f) GDPR, zaštita obrazaca od zloupotrebe.</li>
+        <li><b>Pretraga mesta.</b> Mesta se traže u listi na ovom sajtu. Ako nema poklapanja, ono što ukucaš ide servisu za pretragu Open-Meteo, zajedno sa tvojom IP adresom. Pravni osnov: čl. 6(1)(f) GDPR, pronalaženje malih mesta.</li>
+        <li><b>Lista čekanja.</b> Ako joj se pridružiš, čuvamo tvoj mejl, jezik i mesto prijave, da bismo ti poslali pozivnicu. Pravni osnov: čl. 6(1)(b) GDPR.</li>
+        <li><b>Nalog, samo ako ga napraviš.</b> Tvoj mejl, profil, odgovori na testove i rezultati, dodati ljudi, rezultati Provere veze, zapisi u dnevniku i izbori o saglasnosti čuvaju se kod našeg dobavljača baze podataka u EU (Švedska), zaštićeni tako da ih može čitati samo tvoj prijavljeni nalog. Poruke koje šalješ dugmetom za utiske čuvaju se uz stranicu i tip pregledača. Mejlovi za prijavu idu preko servisa Resend. Pravni osnov: čl. 6(1)(b) GDPR, a za osetljive odgovore tvoja izričita saglasnost, čl. 9(2)(a) GDPR.</li>
+        <li><b>Učitavanje sajta.</b> Naš dobavljač hostinga i naš dobavljač baze podataka vide standardne tehničke podatke, kao što je tvoja IP adresa, kad tvoj pregledač komunicira sa njima, i čuvaju ih u svojim evidencijama. Pravni osnov: čl. 6(1)(f) GDPR, rad sajta.</li>
+      </ul>
+      <p>Bez analitičkih kolačića, bez reklamnih pratilaca.</p>
+      <h2>Koliko dugo čuvamo</h2>
+      <ul>
+        <li>Ime i mejl iz obrasca na testu: 24 meseca posle tvog poslednjeg slanja, a zatim se automatski brišu.</li>
+        <li>Uz potvrđeno da za novosti: dok se ne odjaviš. Posle toga zapis čuvamo 24 meseca da ti ne bismo ponovo pisali, a zatim se briše.</li>
+        <li>Heširane IP adrese: 24 sata. Linkovi za potvrdu prestaju da rade posle 30 dana.</li>
+        <li>Zapisi na listi čekanja: 24 meseca. Brojanje korišćenja: 14 meseci.</li>
+        <li>Podaci naloga: dok ne obrišeš nalog.</li>
+        <li>Evidencije hostinga i baze podataka: koliko ih ti dobavljači čuvaju.</li>
+      </ul>
+      <h2>Ko nam pomaže</h2>
+      <ul>
+        <li><b>Supabase:</b> baza podataka, prijava i serverske funkcije, u EU (Švedska).</li>
+        <li><b>Vercel:</b> hosting sajta i njegove evidencije.</li>
+        <li><b>Resend:</b> slanje mejlova.</li>
+        <li><b>Cloudflare:</b> provera protiv botova Turnstile.</li>
+        <li><b>Open-Meteo:</b> pretraga mesta kojih nema u našoj listi.</li>
+      </ul>
+      <p>Neke od ovih kompanija su iz Sjedinjenih Američkih Država, pa tvoji podaci mogu da stignu do servera tamo.</p>
+      <h2>Tvoja prava</h2>
+      <p>Možeš da zatražiš kopiju svojih podataka, kao i njihovu ispravku, brisanje, ograničenje ili prenos. Možeš da uložiš prigovor na sve što radimo na osnovu sopstvenog interesa. Saglasnost možeš da povučeš u bilo kom trenutku, što ne utiče na ono što se već desilo. Možeš da podneseš i pritužbu organu za zaštitu podataka u mestu u kom živiš.</p>
+      <h2>Kako da zaustaviš ili obrišeš</h2>
+      <ul>
+        <li><b>Novosti:</b> koristi link za odjavu u bilo kom našem mejlu ili piši na <Mail />.</li>
+        <li><b>Tvoje ime i mejl:</b> piši na <Mail /> i obrisaćemo ih. Brisanje na ovom uređaju ih ne uklanja iz naše liste.</li>
+        <li><b>Ovaj uređaj:</b> koristi kontrole ispod.</li>
+      </ul>
+      <h2>Osetljivi odgovori</h2>
+      <p>Odgovori na testove o odnosima, osećanjima i tvom telu mogu da budu lični. Bez naloga ostaju na tvom uređaju. Sa nalogom se čuvaju samo uz tvoju izričitu saglasnost, koju možeš da povučeš brisanjem naloga. Kodovi profila koje odlučiš da podeliš sadrže tvoje podatke o rođenju i rezultate, zato ih deli samo sa ljudima kojima veruješ.</p>
+      <h2>Drugi ljudi</h2>
+      <p>Ako dodaš nekog drugog, podaci te osobe ostaju na tvom uređaju, i u tvom nalogu ako ga imaš. Dodaj ljude samo uz njihovo znanje. Oni (ili ti) mogu da ih obrišu u bilo kom trenutku.</p>
+      <h2>Brisanje naloga</h2>
+      <p>Na stranici Nalog, „Obriši moj nalog“ odmah i trajno uklanja tvoj nalog i sve što je u njemu sačuvano. Možeš i da se odjaviš i da zadržiš ili ukloniš kopiju na ovom uređaju. Ime i mejl iz obrasca na testu čuvaju se odvojeno: piši nam da uklonimo i njih.</p>
+      <h2>Tvoje kontrole</h2>
+      <PrivacyControls />
+      <h2>Kontakt</h2>
+      <p>Pitanja ili zahtevi u vezi sa tvojim podacima? Piši na <Mail />.</p>
+    </article>
+  );
+}
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
-  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : <PageEn />;
+  return lang === "mk" ? <PageMk /> : lang === "de" ? <PageDe /> : lang === "sr" ? <PageSr /> : <PageEn />;
 }
