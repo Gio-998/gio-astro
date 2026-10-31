@@ -1,0 +1,30 @@
+import type { Explainer } from "./types";
+import type { p3 as En } from "./en-p3";
+const x = (title: string, sub: string, intro: string[], how: string[], faq: [string, string][]): Explainer => ({ title, sub, intro, how, faq });
+/** Lični dan 1 do 9: po tri varijante, rotiraju se po datumu da isti broj ne glasi isto svakog dana. */
+export const days: Record<number, string[]> = {
+  1: ["Dan za početak. Pošalji prvu poruku, otvori novi dokument, napravi prvi korak pre nego što stignu sumnje.", "Energija danas ide na ruku inicijativi. Donesi jednu odluku bez ičijeg odobrenja i stani iza nje.", "Danas je teren čist. Nešto malo što sada započneš ima više zamaha nego inače."],
+  2: ["Dan za slušanje. Najbolji rezultat stiže preko nekog drugog, pa pitaj pre nego što kreneš.", "Polako danas. Strpljenje i jedna lepa reč pomere više od pritiska.", "Danas pobeđuje saradnja. Podeli zadatak, podeli i zasluge."],
+  3: ["Dan za priču i stvaranje. Reci toplu reč, objavi ideju, napravi nešto samo iz zabave.", "Lakoća danas pomaže. Razgovor ili šala otvore vrata koja trud nije mogao.", "Danas te ljudi čuju. Upotrebi glas za nešto što ti je stvarno važno."],
+  4: ["Dan za red. Završi jedan spisak, popravi jednu stvar i oseti kako tlo postaje čvršće.", "Stalan rad se danas isplati. Dosadnom zadatku daj tačan sat i završi ga.", "Gradi danas. Mala rutina koju sada održiš poštedi te teške nedelje kasnije."],
+  5: ["Dan promena. Planovi mogu da se pomere, zato ih drži labavo i reci da jednom iznenađenju.", "Pokreni se danas. Šetnja, novi put ili nova ideja stresu osećaj da stojiš u mestu.", "Radoznalost danas vodi. Probaj nešto potpuno novo."],
+  6: ["Dan za ljude i dom. Neko računa na tebe, a i tebi treba malo pažnje.", "Briga je tema dana. Sredi jednu sobu, pozovi porodicu, skuvaj nešto dobro.", "Ljubav je danas praktična. Pokaži je kroz jedno konkretno delo."],
+  7: ["Dan za povlačenje u sebe. Sačuvaj jedan sat tišine, tamo te čeka odgovor.", "Danas prvo razmisli, pa kreni. Čitaj, promisli i veruj onome što osećaš.", "Danas je dubina važnija od brzine. Jedan iskren razgovor vredi više od deset brzih."],
+  8: ["Dan za odluke. Pogledaj cifru, traži koliko vrediš, drži granicu.", "Autoritet ti je danas jak. Vodi sastanak, zaključi dogovor, plati račun.", "Danas su važni rezultati. Usmeri trud tamo gde se isplati."],
+  9: ["Dan za završavanje. Zatvori jednu temu, pokloni nešto, oprosti jednu sitnicu.", "Danas pusti ono što ti ne treba. Raščišćavanje pravi mesto za ono što sledi.", "Danas budi široke ruke. Pomozi bez računanja, pa odmori."],
+};
+export const p3: typeof En = {
+  dayTitle: "Tvoj broj dana", dayIntro: "Iz datuma rođenja i današnjeg datuma.", dayNeed: "Unesi datum rođenja da vidiš svoj lični broj za danas.", dayLink: "Šta znači lični dan", dayYear: (n) => `Lična godina ${n}`, dayMonth: (n) => `mesec ${n}`,
+  report: { title: "Pun izveštaj o tvom imenu", sub: "Broj izraza, duše, ličnosti, zrelosti i karmički dug, pročitani zajedno.", birth: "Datum rođenja", expression: "Broj izraza: talenti", soul: "Broj duše: šta ti srce traži", personality: "Broj ličnosti: kakav utisak ostavljaš", maturity: "Broj zrelosti: ko postaješ s godinama", karmic: "Karmički dug", noKarmic: "U danu rođenja nema broja karmičkog duga. Tvoje čitanje ide bez njega.", together: "Kako rade zajedno", same: (a) => `Dva tvoja broja su ista, ${a}. Ta tema se kroz život provlači dvostruko jače.`, mix: (a, b) => `Talenti ti govore kao ${a}, a srce želi ${b}. Veliki deo rasta dešava se tamo gde se to dvoje sretne.` },
+  duo: { title: "Kompatibilnost brojeva za dvoje", a: "Prva osoba", b: "Druga osoba", nameA: "Ime (nije obavezno)", nameB: "Ime (nije obavezno)", life: "Životni putevi", deep: "Dubinsko čitanje", expr: "Brojevi izraza", soul: "Brojevi duše", cycle: "Vaše godine zajedno", cycleLine: (y, a, b) => `${y}: lična godina ${a} i ${b}`, same: "Imate istu ličnu godinu: isti period života u isto vreme.", needNames: "Unesi oba imena da uporediš brojeve izraza i duše." },
+};
+export const explain3: Record<string, Explainer> = {
+  "personal-day": x("Lični dan: tema današnjeg dana", "Kako se datum rođenja i današnji datum spoje u broj od 1 do 9 i šta svaki od njih traži.",
+    ["Broj ličnog dana dolazi iz lične godine i meseca, spojenih sa današnjim datumom. Menja se svakog dana i daje mu malu temu, podsticaj da počneš, sačekaš, stvaraš ili završiš.", "To je najprolazniji broj u numerologiji, pa ga čitaj lako: kao podsticaj za dan, a ne kao pravilo."],
+    ["Saberi ličnu godinu i tekući mesec i svedi: to je lični mesec. Dodaj današnji dan u mesecu i ponovo svedi: to je lični dan.", "Ako je datum rođenja sačuvan na ovom uređaju, dnevni horoskop sam pokazuje tvoj broj."],
+    [["Da li svi iz mog znaka imaju isti lični dan?", "Nemaju. Lični dan zavisi od datuma rođenja, a ne od znaka, pa dvoje ljudi istog znaka često imaju različite brojeve."], ["Postoje li master lični dani?", "Ne, lični dan uvek svodimo na jednu cifru."], ["Gde mogu da ga vidim?", "Na svakoj strani dnevnog horoskopa, čim sačuvaš datum rođenja na ovom uređaju."]]),
+  "calc-compatibility": x("Kalkulator kompatibilnosti brojeva za dvoje", "Dva datuma rođenja, dva životna puta: pogledaj kako idu zajedno.",
+    ["Numerologija dvoje ljudi poredi uglavnom preko životnog puta: isti broj, brojevi iz iste porodice, po tradiciji prijateljski parovi ili oni suprotni. Svaka vrsta nosi svoj ritam.", "Dodaj oba imena za dublje slojeve: parove brojeva izraza i duše i način na koji se poklapaju vaše lične godine."],
+    ["Unesi oba datuma rođenja. Osnovni rezultat je besplatan. Dubinsko čitanje je deo Premium paketa.", "Ništa se ne pamti, sve se računa kod tebe na uređaju."],
+    [["Da li je suprotan par loš?", "Nije. Suprotni brojevi često donose najviše rasta i najjaču iskru."], ["Da li su nam potrebna oba imena?", "Samo za dubinsko čitanje. Za životni put dovoljni su datumi."], ["Da li je ovo isto kao astrološka kompatibilnost?", "Nije. Ovo je poseban ugao. Naša strana za poređenje dvoje ljudi spaja više uglova."]]),
+};
