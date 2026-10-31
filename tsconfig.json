@@ -38,7 +38,7 @@
     ".next-dev/types/**/*.ts",
     ".next-dev/dev/types/**/*.ts"
   ],
-  "exclude": [
+  "exclude": ["supabase", 
     "node_modules"
   ]
 }
