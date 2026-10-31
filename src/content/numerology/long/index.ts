@@ -38,6 +38,7 @@ export function angelLong(lang: string, n: string) { return ALL[lang]?.[n] ?? []
 import { pagesEn } from "./pages-en";
 import { pagesMk } from "./pages-mk";
 import { pagesDe } from "./pages-de";
-const PAGES: Record<string, AngelLong> = { en: pagesEn, mk: pagesMk, de: pagesDe };
+import { pagesCalc } from "./pages-calc";
+const PAGES: Record<string, AngelLong> = { en: { ...pagesEn, ...pagesCalc.en }, mk: { ...pagesMk, ...pagesCalc.mk }, de: { ...pagesDe, ...pagesCalc.de } };
 /** Long guide sections for an explainer or number page, keyed by its path after the numerology root ("hub" for the root). */
 export function pageLong(lang: string, key: string) { return PAGES[lang]?.[key] ?? []; }

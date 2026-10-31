@@ -5,8 +5,8 @@ import type { Place } from "@/lib/store";
 import { useContent } from "@/lib/content-context";
 import { SheetSelect } from "./controls";
 
-/** Place search: bundled atlas first (fast, offline), then Open-Meteo online, then manual coordinates. */
-export function CityPicker({ value, onChange }: { value: Place | null; onChange: (p: Place | null) => void }) {
+/** Place search: bundled atlas first (fast, offline), then Open-Meteo online unless `online` is off, then manual coordinates. */
+export function CityPicker({ value, onChange, online = true }: { value: Place | null; onChange: (p: Place | null) => void; online?: boolean }) {
   const { c, locale } = useContent(); const U = c.ui.privacyControls;
   const [q, setQ] = useState(value?.name ?? "");
   const [open, setOpen] = useState(false);
@@ -19,13 +19,13 @@ export function CityPicker({ value, onChange }: { value: Place | null; onChange:
     const t = setTimeout(async () => {
       const local = await searchCities(term, locale);
       if (!alive) return;
-      setRes({ q: term, hits: local, online: false, done: local.length > 0 });
-      if (local.length) return;
+      setRes({ q: term, hits: local, online: false, done: local.length > 0 || !online });
+      if (local.length || !online) return;
       const web = await searchOnline(term, locale);
       if (alive) setRes({ q: term, hits: web, online: true, done: true });
     }, 180);
     return () => { alive = false; clearTimeout(t); };
-  }, [term, open, locale]);
+  }, [term, open, locale, online]);
   const fresh = res && res.q === term;
   const pick = (p: Place, label: string) => { onChange(p); setQ(label); setOpen(false); setManual(false); };
   return (

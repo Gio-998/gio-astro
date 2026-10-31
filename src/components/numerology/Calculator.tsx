@@ -12,7 +12,7 @@ const btn = "inline-flex h-11 shrink-0 items-center justify-center whitespace-no
 /** Inline numerology calculator. Runs fully on the device; links each result to its meaning page if one exists. */
 export function Calculator({ lang, mode, L, names, pages, compact = false }: { lang: string; mode: CalcMode; L: CalcLabels; names: Record<number, string>; pages: string[]; compact?: boolean }) {
   const [birth, setBirth] = useState(""); const [name, setName] = useState(""); const [err, setErr] = useState("");
-  const [res, setRes] = useState<{ label: string; n: number; href?: string }[] | null>(null);
+  const [res, setRes] = useState<{ label: string; n: number; href?: string; sum?: string }[] | null>(null);
   const page = (sec: string, n: number) => { const p = `/numerology/${sec}/${n}/`; const h = `/numerology/${sec}/`; return pages.includes(p) ? localizedPath(lang, p) : pages.includes(h) ? localizedPath(lang, h) : undefined; };
   const year = new Date().getFullYear();
   function run(e: React.FormEvent) {
@@ -24,7 +24,7 @@ export function Calculator({ lang, mode, L, names, pages, compact = false }: { l
     }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(birth)) { setErr(L.invalid); setRes(null); return; }
     if (mode === "personal-year") { const n = personalYear(birth, year); setRes([{ label: L.personalYearTpl.replace("{y}", String(year)), n, href: page("personal-year", n) }]); return; }
-    const r = lifePath(birth); setRes([{ label: L.lifePath, n: r.value, href: page("life-path", r.value) }]);
+    const r = lifePath(birth); setRes([{ label: L.lifePath, n: r.value, href: page("life-path", r.value), sum: r.sum }]);
   }
   return (
     <div className={compact ? "" : "rounded-2xl border border-gold/25 bg-[linear-gradient(150deg,rgba(233,199,138,.10),rgba(139,108,240,.10))] p-4 lg:rounded-3xl lg:p-6"} data-testid="num-calc">
@@ -39,7 +39,7 @@ export function Calculator({ lang, mode, L, names, pages, compact = false }: { l
         <ul className="mt-3 space-y-2" aria-live="polite">
           {res.map((r) => (
             <li key={r.label} className="flex items-center justify-between gap-3 border-t border-white/10 pt-2">
-              <span className="min-w-0"><span className="block text-[12px] uppercase tracking-[.12em] text-gold/85">{r.label}</span><span className="block text-[14px] text-mist/85">{names[r.n] ?? ""}</span></span>
+              <span className="min-w-0"><span className="block text-[12px] uppercase tracking-[.12em] text-gold/85">{r.label}</span><span className="block text-[14px] text-mist/85">{names[r.n] ?? ""}</span>{r.sum && <span className="mt-0.5 block text-[12px] tabular-nums text-mist/60" data-testid="calc-sum">{r.sum}</span>}</span>
               <span className="flex shrink-0 items-center gap-3"><span className="h-display text-[2.2rem] leading-none text-gold">{r.n}</span>{r.href && <Link href={r.href} className="whitespace-nowrap text-[13px] text-gold underline-offset-4 hover:underline">{L.read} →</Link>}</span>
             </li>
           ))}

@@ -12,12 +12,12 @@ export function reduce(n: number, keepMasters = true): number {
 }
 
 /** Life Path: reduce month, day and year separately, then add and reduce (keeps masters). */
-export function lifePath(date: string): { value: number; steps: string } {
+export function lifePath(date: string): { value: number; steps: string; sum: string } {
   const [y, m, d] = date.split("-").map(Number);
   const rm = reduce(m), rd = reduce(d), ry = reduce(y);
   const total = rm + rd + ry;
   const value = reduce(total);
-  return { value, steps: `month ${m}→${rm}, day ${d}→${rd}, year ${y}→${ry}; ${rm}+${rd}+${ry}=${total}→${value}` };
+  return { value, steps: `month ${m}→${rm}, day ${d}→${rd}, year ${y}→${ry}; ${rm}+${rd}+${ry}=${total}→${value}`, sum: `${m} → ${rm}, ${d} → ${rd}, ${y} → ${ry}: ${rm} + ${rd} + ${ry} = ${total}${total === value ? "" : ` → ${value}`}` };
 }
 
 const LETTER: Record<string, number> = {};
