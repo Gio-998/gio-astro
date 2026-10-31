@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getContent } from "@/content";
 import { numContent } from "@/content/numerology";
-import { numModel, numPaths, type NumModel, type LinkItem } from "@/lib/numerology";
+import { numModel, numPaths, type NumModel, type LinkItem, type BlockTable, type TableCell } from "@/lib/numerology";
 import { localizedPath, parsePath, routeAlternates, sectionSlug } from "@/lib/i18n-routes";
 import { LOCALE_META } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
@@ -12,6 +12,7 @@ import { Calculator, type CalcLabels } from "./Calculator";
 import { DuoCalc, NameReport } from "./Personal";
 import { SectionWidget } from "@/components/sections/Widget";
 import { CONTENT_DATES, SITE_LAUNCH } from "@/lib/content-dates";
+import { moonPath } from "@/components/horoscope/art";
 
 /** Static params for one locale's slug folder (other locales get the "_" placeholder that renders a 404). */
 export function numParams(lang: string, owner: string) {
@@ -55,6 +56,24 @@ function Items({ items, cols = "sm:grid-cols-2 lg:grid-cols-3" }: { items: LinkI
         </li>
       ))}
     </ul>
+  );
+}
+
+function Cell({ c }: { c: TableCell }) {
+  if (typeof c === "string") return c;
+  const disc = c.moon !== undefined && <svg viewBox="0 0 32 32" className="mr-1.5 inline-block h-[18px] w-[18px] align-[-4px]" aria-hidden><circle cx="16" cy="16" r="14" fill="#1b1640" stroke="#e9c78a" strokeOpacity=".5" /><path d={moonPath(c.moon, 16, 16, 12)} fill="#f6ecd2" /></svg>;
+  return c.href ? <Link href={c.href} className="text-gold underline decoration-gold/30 underline-offset-2 hover:decoration-gold">{disc}{c.text}</Link> : <>{disc}{c.text}</>;
+}
+function DataTable({ t }: { t: BlockTable }) {
+  const td = "py-2 pr-3 align-top last:pr-0";
+  return (
+    <div className="mt-2 overflow-x-auto lg:mt-4">
+      <table className="w-full border-collapse text-left text-[13.5px] leading-snug text-mist/85 lg:text-[16px]">
+        {t.caption && <caption className="caption-bottom pt-2 text-left text-[12.5px] leading-snug text-mist/55 lg:text-[13.5px]">{t.caption}</caption>}
+        <thead><tr className="border-b border-gold/25">{t.head.map((h) => <th key={h} scope="col" className={`${label} py-1.5 pr-3 last:pr-0`}>{h}</th>)}</tr></thead>
+        <tbody>{t.rows.map((r, i) => <tr key={i} className="border-b border-white/10">{r.map((c, k) => k ? <td key={k} className={td}><Cell c={c} /></td> : <th key={k} scope="row" className={`${td} font-medium text-mist`}><Cell c={c} /></th>)}</tr>)}</tbody>
+      </table>
+    </div>
   );
 }
 
@@ -117,6 +136,7 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
                 <h2 className={h2}>{noOrphan(b.title)}</h2>
                 {b.paras?.map((p, k) => <p key={k} className={k ? p2 : p1}>{p}</p>)}
                 {b.list && <ul className="mt-1 space-y-1.5 lg:space-y-3">{b.list.map((q) => <li key={q} className="flex gap-2.5 text-pretty text-[15px] leading-snug text-mist/85 lg:text-[18px] lg:leading-[1.6]"><span aria-hidden className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-gold/80 lg:mt-[12px]" />{q}</li>)}</ul>}
+                {b.table && <DataTable t={b.table} />}
               </section>)}
           {m.faq.length > 0 && (
             <section className={block} aria-labelledby="faq-h">

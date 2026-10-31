@@ -43,7 +43,10 @@ export function numPaths(): string[] {
 /** Pages that may be listed in the sitemap (generated families join only after their overlap test passes). */
 export const numIndexable = (p: string) => numPaths().includes(p);
 
-export type Block = { id: string; title: string; paras?: string[]; list?: string[]; quote?: string };
+/** A table cell: plain text, or text with a link and/or a Moon disc drawn at that phase angle. */
+export type TableCell = string | { text: string; href?: string; moon?: number };
+export type BlockTable = { head: string[]; rows: TableCell[][]; caption?: string };
+export type Block = { id: string; title: string; paras?: string[]; list?: string[]; quote?: string; table?: BlockTable };
 export type LinkItem = { href: string; label: string; sub?: string; big?: string };
 export interface NumModel {
   path: string; kind: "article" | "hub" | "calc";
