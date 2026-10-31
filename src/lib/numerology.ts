@@ -11,7 +11,7 @@ import { PAIRS, PAIR_HUB } from "@/content/numerology/pairs";
 import { MIRRORS, MIRROR_HUB } from "@/content/numerology/mirror";
 import { YEAR2027, YEAR2027_HUB } from "@/content/numerology/year2027";
 
-export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "0000", "1010", "1212", "1221", "1234", "1313", "1414", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
+export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "6666", "0000", "1010", "1212", "1221", "1234", "1313", "1331", "1414", "1551", "1616", "1818", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
 export const LIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
 export const YEARS = [1, 2, 3, 4, 5, 6, 7, 8, 9] as const;
 export const KARMIC = [13, 14, 16, 19] as const;
@@ -26,7 +26,7 @@ export const PAIR_KEYS: string[] = ALL_PAIRS.filter((k) => PAIRS.en[k] && PAIRS.
 /** Personal year 2027 pages that exist in every language (gated by tests/numerology-year2027-overlap.test.ts). */
 export const Y27_KEYS: string[] = YEARS.map(String).filter((k) => YEAR2027.en[k] && YEAR2027.mk[k] && YEAR2027.de[k]);
 /** Mirror hours we write pages for, keyed "hh-mm". */
-export const MIRROR_ALL = ["00-00", "01-01", "02-02", "03-03", "04-04", "05-05", "10-10", "11-11", "12-12", "13-13", "14-14", "15-15", "20-20", "21-21", "22-22"] as const;
+export const MIRROR_ALL = ["00-00", "01-01", "02-02", "03-03", "04-04", "05-05", "06-06", "07-07", "08-08", "09-09", "10-10", "11-11", "12-12", "13-13", "14-14", "15-15", "16-16", "17-17", "18-18", "19-19", "20-20", "21-21", "22-22", "23-23"] as const;
 /** Mirror hour pages that exist in every language (gated by tests/numerology-mirror-overlap.test.ts). */
 export const MIRROR_KEYS: string[] = MIRROR_ALL.filter((k) => MIRRORS.en[k] && MIRRORS.mk[k] && MIRRORS.de[k]);
 export type CalcMode = (typeof CALCS)[number];
