@@ -37,7 +37,7 @@ export function DayPage({ lang, slug, date }: { lang: string; slug: string; date
 
 export async function hubMeta(lang: string): Promise<Metadata> {
   const U = bankFor(lang).ui; const iso = todayIso(); const d = reading(lang, "aries", iso).dateLabel;
-  return meta(lang, `${U.hubTitle}, ${d}`, U.hubSub, horoPath(lang), horoAlternates(), [absolute(ogPath(lang, "aries", iso, "wide"))]);
+  return meta(lang, `${U.hubSeoTitle ?? U.hubTitle}, ${d}`, U.hubMeta ?? U.hubSub, horoPath(lang), horoAlternates(), [absolute(ogPath(lang, "aries", iso, "wide"))]);
 }
 export function HubPage({ lang }: { lang: string }) {
   const U = bankFor(lang).ui; const c = getContent(lang); const iso = todayIso();

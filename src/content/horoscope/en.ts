@@ -106,6 +106,7 @@ export const en: HoroBank = {
     motivationLink: (s) => `${s} daily motivation: one small practice for today`,
     description: (s, d, h) => `${s} horoscope for ${d}. ${h} Love, work, wellbeing and lucky number from the real sky.`,
     hubTitle: "Daily horoscope", homeEyebrow: "Daily horoscope", homeTitle: "Your sign today", homeAll: "All signs", hubSub: "Pick your sign. Fresh every day, worked out from the real sky.",
+    hubSeoTitle: "Daily horoscope for all 12 signs", hubMeta: "Today's horoscope for all 12 zodiac signs: love, work, wellbeing, your lucky number and best hours. Written fresh each day from the real sky.",
     love: "Love", work: "Work", well: "Wellbeing", lucky: "Lucky today", color: "Color", number: "Number", window: "Best hours",
     skyTitle: "The sky today", moodTitle: "How do you feel today?", moodSub: "One tap, and your Today page tracks it.",
     moods: ["Great", "Calm", "Okay", "Tense", "Low"],

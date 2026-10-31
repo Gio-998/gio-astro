@@ -26,7 +26,7 @@ export interface HoroBank {
   };
   ui: {
     title: (sign: string, date: string) => string; shortTitle: (sign: string) => string; signHubMeta: (sign: string) => string; signHubIntro: (sign: string) => string; recentDays: string; motivationLink: (sign: string) => string; description: (sign: string, date: string, headline: string) => string;
-    hubTitle: string; hubSub: string; homeEyebrow: string; homeTitle: string; homeAll: string; love: string; work: string; well: string; lucky: string; color: string; number: string; window: string;
+    hubTitle: string; hubSub: string; /** Search title (the date is added) and description for the hub. Without them the hub uses hubTitle and hubSub. */ hubSeoTitle?: string; hubMeta?: string; homeEyebrow: string; homeTitle: string; homeAll: string; love: string; work: string; well: string; lucky: string; color: string; number: string; window: string;
     skyTitle: string; moodTitle: string; moodSub: string; moods: [string, string, string, string, string];
     ctaTitle: string; ctaSub: string; ctaBtn: string; yesterday: string; tomorrow: string; others: string; todayLink: string; moonLabel: string; read: string;
   };
