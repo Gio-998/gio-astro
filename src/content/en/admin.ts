@@ -1,7 +1,14 @@
 /** Admin control panel + feedback button strings. */
 export const admin = {
   title: "Control panel", sub: "Testers, invites, switches, numbers and feedback in one place.",
-  tabs: { testers: "Testers", invites: "Invites", switches: "Switches", stats: "Stats", feedback: "Feedback" } as Record<string, string>,
+  tabs: { testers: "Testers", invites: "Invites", leads: "Leads", switches: "Switches", stats: "Stats", feedback: "Feedback" } as Record<string, string>,
+  // Leads
+  leads: {
+    count: (shown: number, total: number) => `${shown} of ${total}`,
+    search: "Search name, email, language or test", csv: "Export CSV", more: (n: number) => `Showing the first ${n}. Search to narrow it down, or export the full list.`,
+    note: "Only leads marked “Confirmed” may get marketing email. Export includes the confirmation and unsubscribe dates.",
+    marketing: { ok: "Confirmed", unconfirmed: "Ticked, not confirmed", unsubscribed: "Unsubscribed", none: "No marketing" },
+  },
   refresh: "Refresh", loading: "Loading…", empty: "Nothing here yet.", error: "Couldn't load this. Try Refresh.",
   // Testers
   joined: "Joined", lastVisit: "Last visit", never: "not yet", profile: "Profile", quizzes: "Quizzes", people: "People",

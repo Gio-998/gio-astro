@@ -326,6 +326,7 @@ export const pageMeta = {
   credits: { title: "Image and data credits", description: "Credits for the space photography and place data used on Horoscop, with the licences that apply to each." },
   account: { title: "Your account" },
   verify: { title: "Enter your code" },
+  email: { title: "Your email settings" },
   bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer eight questions about your relationship and see strengths, perception gaps and practices." },
   book: { title: "The Book of You" },
   chart: { title: "Birth chart" },
@@ -431,6 +432,34 @@ export const ritual = {
   step: (i: number, n: number) => `Step ${i} of ${n}`,
   auraTitle: "Your aura", auraNote: "A symbolic picture of your reading and how you felt when you attuned. Not a measurement.", reattune: "Re-attune ✦",
   bondAura: "Your two fields, merging", auraLabel: (n: string) => `Symbolic aura of ${n}`,
+};
+
+/** The name and email form before a full result, and the page that links in the lead email land on. */
+export const lead = {
+  eyebrow: "Your full result", title: "One step to your full result",
+  text: "Leave your name and email and it opens right here. You only do this once on this device.",
+  nameLabel: "Name and surname", emailLabel: "Email", emailPh: "you@example.com", submit: "Show my full result",
+  notice: "Your answers and results stay on this device. We keep your name and email to open your results and to send you one email with a link back here.",
+  privacyLink: "Privacy policy",
+  marketing: "Yes, Horoscop may email me occasional news about new tests.",
+  marketingHint: "Optional. Your result opens either way. We ask you to confirm by email, and you can stop any time.",
+  sent: "A link back to this result is on its way to your inbox.",
+  sentConfirm: "A link back to this result is on its way to your inbox. To get the news, press the confirm button in that email.",
+  haveAccount: "Already have an account?", login: "Log in",
+  errors: { invalid_name: "Please enter your name and surname.", invalid_email: "Please enter a valid email address." },
+  page: {
+    home: "Back to Horoscop",
+    confirm: { title: "Confirm your email", text: "Press the button and Horoscop may send you occasional news about new tests. You can stop any time.", button: "Yes, send me news" },
+    unsubscribe: { title: "Stop our emails", text: "Press the button and we stop writing to this address.", button: "Unsubscribe" },
+    status: {
+      confirmed: { title: "Thanks, you're confirmed", text: "You'll get occasional news from us. Every email has a link to stop." },
+      unsubscribed: { title: "You're unsubscribed", text: "We won't write to this address again. Your results on your device aren't affected." },
+      used: { title: "Already done", text: "This link has been used, so there's nothing more to do." },
+      expired: { title: "This link has expired", text: "Confirm links work for 30 days. Nothing changed, and we won't send you news." },
+      invalid: { title: "This link doesn't work", text: "Nothing changed. Open the link from the email again, or write to contact@horoscop.si." },
+      error: { title: "That didn't go through", text: "Nothing changed. Please try the link again in a moment." },
+    },
+  },
 };
 
 export const beta = {

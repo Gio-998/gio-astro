@@ -8,9 +8,10 @@ import { refreshFlags, setFlagLocal, type FlagKey } from "@/lib/flags";
 import { SITE_URL } from "@/lib/site-url";
 import { inviteMessage } from "@/content/en/admin";
 import { useAdminText } from "./text";
+import { Leads } from "./Leads";
 
-type Tab = "testers" | "invites" | "switches" | "stats" | "feedback";
-const TABS: Tab[] = ["testers", "invites", "switches", "stats", "feedback"];
+type Tab = "testers" | "invites" | "leads" | "switches" | "stats" | "feedback";
+const TABS: Tab[] = ["testers", "invites", "leads", "switches", "stats", "feedback"];
 type Tester = { user_id: string; email: string; display_name: string | null; role: string | null; joined_at: string; last_sign_in_at: string | null; last_seen_at: string | null; profile_fields: number; profile_total: number; quizzes_done: number; people_saved: number; feedback_count: number };
 type Invite = { email: string; note: string | null; used_at: string | null; created_at: string };
 type Wait = { id: string; email: string; locale: string | null; source: string | null; created_at: string };
@@ -64,6 +65,7 @@ export function AdminPanel() {
       </div>
       {tab === "testers" && <Testers testers={testers} me={a.user.id} fmt={fmt} reload={loadTesters} />}
       {tab === "invites" && <Invites fmt={fmt} testers={testers} />}
+      {tab === "leads" && <Leads fmt={fmt} />}
       {tab === "switches" && <Switches fmt={fmt} />}
       {tab === "stats" && <Stats />}
       {tab === "feedback" && <FeedbackInbox fmt={fmt} testers={testers} onChange={loadFbCount} />}

@@ -1,30 +1,70 @@
 import { pageMeta } from "@/lib/page-meta";
 import { PageHero } from "@/components/ui";
 import { PrivacyControls } from "@/components/PrivacyControls";
+import { PRIVACY_VERSION } from "@/lib/lead";
 export const generateMetadata = pageMeta("privacy");
+const Mail = () => <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>;
 function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="moon" img="milkyway" title={<>Privacy</>} />
-      <p className="text-sm text-dim">Draft v0.2 (October 2026): to be reviewed by a lawyer before payments are added.</p>
+      <p className="text-sm text-dim">Draft, version {PRIVACY_VERSION}: a lawyer still has to review this text.</p>
       <h2>Short version</h2>
-      <p>Everything you enter (birth details, quiz answers, people you add, journal entries) is stored <b>in your browser</b> (localStorage) on this device, and all calculations run on your device. <b>Accounts are optional.</b> Without one, nothing is uploaded. If you create an account, we store a copy in our database so it syncs between your devices, but only after you tick the consent boxes.</p>
-      <h2>What leaves your device</h2>
+      <p>Your birth details, test answers, results, the people you add and your journal stay <b>in your browser</b> on this device, and the calculations run here too. <b>Accounts are optional.</b> A few things do leave your device, and this page lists every one: above all the name and email you give us to open a full test result. Your answers and results never travel with them. We never sell data.</p>
+      <h2>Who is responsible</h2>
+      <p>horoscop.si is responsible for the data described here. Write to <Mail /> about anything on this page.</p>
+      <h2>What stays on your device</h2>
+      <p>Birth details, test answers and results, people you add and journal entries sit in your browser's local storage. So does a note that you already left your details, so the form doesn't ask twice. If sending that form failed, your name and email wait there too until the next visit, then they are sent and removed from the device.</p>
+      <h2>What leaves your device, and why</h2>
       <ul>
-        <li>Loading the site and the city list from our static host (standard web server logs such as IP address, kept by the host).</li>
-        <li>Only if you have an account: your email, profile, quiz results and answers, the people you added, Bond Check results, journal entries and your consent choices. These are stored with our database hosting provider in the EU (Sweden), protected so only your signed-in account can read them. Sign-in emails are sent through our email delivery provider.</li>
-        <li>Nothing else. No analytics cookies, no advertising trackers. We never sell data.</li>
+        <li><b>Your name and email, when you open a full test result.</b> We also keep your language, which tests you took, your consent choices, the version of this page and the dates. We use them to open your results, to send you the email below and to answer you if you write. Giving them is the condition for the full result, which costs no money. Legal basis: Art. 6(1)(b) GDPR, because you ask us for that result. Your answers and results are never sent.</li>
+        <li><b>One email after that form.</b> It links back to the test and to your results on this device, and it contains no results. You get at most one per address per test. It goes out through Resend. Same legal basis.</li>
+        <li><b>Your IP address, for a moment, when you send that form.</b> We turn it into a keyed hash that changes every day and count requests against it, to stop abuse. We never store the address itself. Legal basis: Art. 6(1)(f) GDPR, our interest in keeping the service safe.</li>
+        <li><b>News by email, only if you ask for it twice.</b> The box is optional and unticked, and your result never depends on it. If you tick it, the email above contains a confirm button, and only that click counts as consent. We keep the words next to the box and the times you ticked and confirmed, as proof. We send no newsletter yet. Legal basis: your consent, Art. 6(1)(a) GDPR.</li>
+        <li><b>Usage counts.</b> When a page opens or a test is finished, we record what happened, the page, the language and, for a test, which one, with a random session number that lives in your browser tab and disappears when you close it. There are no cookies for this. If you are signed in, the record also carries your account id. Legal basis: Art. 6(1)(f) GDPR, our interest in knowing which parts of the site are used.</li>
+        <li><b>Bot check.</b> When it is switched on, the sign-in, waitlist and test forms load Cloudflare Turnstile, which reads your IP address and technical details of your browser to tell people from bots. Legal basis: Art. 6(1)(f) GDPR, keeping the forms free of abuse.</li>
+        <li><b>Place search.</b> Places are looked up in a list on this site. If nothing matches, what you typed goes to Open-Meteo's search service, along with your IP address. Legal basis: Art. 6(1)(f) GDPR, finding small places.</li>
+        <li><b>The waitlist.</b> If you join it, we keep your email, language and where you joined, to send you an invite. Legal basis: Art. 6(1)(b) GDPR.</li>
+        <li><b>An account, only if you create one.</b> Your email, profile, test answers and results, the people you added, Bond Check results, journal entries and consent choices are stored with our database provider in the EU (Sweden), protected so only your signed-in account can read them. Messages you send with the feedback button are kept with the page and browser type. Sign-in emails go out through Resend. Legal basis: Art. 6(1)(b) GDPR, and for sensitive answers your explicit consent, Art. 9(2)(a) GDPR.</li>
+        <li><b>Loading the site.</b> Our hosting provider and our database provider see standard technical data such as your IP address when your browser talks to them, and keep it in their logs. Legal basis: Art. 6(1)(f) GDPR, running the site.</li>
+      </ul>
+      <p>No analytics cookies, no advertising trackers.</p>
+      <h2>How long we keep it</h2>
+      <ul>
+        <li>Name and email from the test form: 24 months after your last submission, then they are deleted automatically.</li>
+        <li>With a confirmed yes to news: until you unsubscribe. After that we keep the entry for 24 months so we don't write to you again, then it is deleted.</li>
+        <li>Hashed IP addresses: 24 hours. Confirm links stop working after 30 days.</li>
+        <li>Waitlist entries: 24 months. Usage counts: 14 months.</li>
+        <li>Account data: until you delete your account.</li>
+        <li>Hosting and database logs: as long as those providers keep them.</li>
+      </ul>
+      <h2>Who helps us</h2>
+      <ul>
+        <li><b>Supabase:</b> database, sign-in and server functions, in the EU (Sweden).</li>
+        <li><b>Vercel:</b> hosting of the website and its logs.</li>
+        <li><b>Resend:</b> sending email.</li>
+        <li><b>Cloudflare:</b> the Turnstile bot check.</li>
+        <li><b>Open-Meteo:</b> search for places that are not in our own list.</li>
+      </ul>
+      <p>Some of these companies are based in the United States, so your data can reach servers there.</p>
+      <h2>Your rights</h2>
+      <p>You can ask us for a copy of your data, and to correct, delete, limit or transfer it. You can object to anything we do on the basis of our own interest. You can withdraw a consent at any time, which doesn't affect what happened before. You can also complain to the data protection authority where you live.</p>
+      <h2>How to stop or delete</h2>
+      <ul>
+        <li><b>News:</b> use the unsubscribe link in any of our emails, or write to <Mail />.</li>
+        <li><b>Your name and email:</b> write to <Mail /> and we delete them. Clearing this device doesn't remove them from our list.</li>
+        <li><b>This device:</b> use the controls below.</li>
       </ul>
       <h2>Sensitive answers</h2>
-      <p>Quiz answers about relationships, feelings and your body can be personal. Without an account they stay on your device. With an account they are stored only after you give explicit consent, and you can withdraw it by deleting your account. Profile codes you choose to share contain your birth data and results, only share them with people you trust.</p>
+      <p>Test answers about relationships, feelings and your body can be personal. Without an account they stay on your device. With an account they are stored only after you give explicit consent, and you can withdraw it by deleting your account. Profile codes you choose to share contain your birth data and results, only share them with people you trust.</p>
       <h2>Other people</h2>
       <p>If you add someone else, their data stays on your device, and in your account if you have one. Please add people with their knowledge. They (or you) can delete them any time.</p>
       <h2>Deleting your account</h2>
-      <p>On the Account page, “Delete my account” permanently removes your account and every row stored in it straight away. You can also sign out and keep or remove the copy on this device.</p>
+      <p>On the Account page, “Delete my account” permanently removes your account and every row stored in it straight away. You can also sign out and keep or remove the copy on this device. A name and email from the test form are kept separately: write to us to remove those too.</p>
       <h2>Your controls</h2>
       <PrivacyControls />
       <h2>Contact</h2>
-      <p>Questions or requests about your data? Write to <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+      <p>Questions or requests about your data? Write to <Mail />.</p>
     </article>
   );
 }
@@ -33,25 +73,63 @@ function PageMk() {
   return (
     <article className="prose-soft">
       <PageHero emblem="moon" img="milkyway" title={<>Приватност</>} />
-      <p className="text-sm text-dim">Нацрт v0.2 (октомври 2026). Правник ќе го прегледа пред да се додадат плаќања.</p>
+      <p className="text-sm text-dim">Нацрт, верзија {PRIVACY_VERSION}: правник допрва треба да го прегледа овој текст.</p>
       <h2>Кратко</h2>
-      <p>Сè што внесуваш (податоци за раѓање, одговори на квизови, луѓе што ги додаваш, записи во дневникот) се чува <b>во твојот прелистувач</b> (localStorage) на овој уред, и сите пресметки се извршуваат на твојот уред. <b>Сметката е незадолжителна.</b> Без неа ништо не се испраќа. Ако создадеш сметка, чуваме копија во нашата база за да се синхронизира меѓу твоите уреди, но само откако ќе ги штиклираш полињата за согласност.</p>
-      <h2>Што го напушта твојот уред</h2>
+      <p>Твоите податоци за раѓање, одговорите на тестовите, резултатите, луѓето што ги додаваш и дневникот остануваат <b>во твојот прелистувач</b> на овој уред, а и пресметките се извршуваат тука. <b>Сметката е незадолжителна.</b> Некои работи сепак го напуштаат уредот и оваа страница ги наведува сите: пред сè името и е-поштата што ни ги даваш за да го отвориш целиот резултат од тест. Одговорите и резултатите никогаш не патуваат со нив. Никогаш не продаваме податоци.</p>
+      <h2>Кој е одговорен</h2>
+      <p>horoscop.si е одговорен за податоците опишани овде. За сè на оваа страница пиши на <Mail />.</p>
+      <h2>Што останува на твојот уред</h2>
+      <p>Податоците за раѓање, одговорите и резултатите од тестовите, додадените луѓе и записите во дневникот се во локалната меморија на твојот прелистувач. Таму е и белешка дека веќе ги остави своите податоци, за формуларот да не те прашува двапати. Ако испраќањето на формуларот не успеало, името и е-поштата чекаат таму до следната посета, а потоа се испраќаат и се бришат од уредот.</p>
+      <h2>Што го напушта твојот уред и зошто</h2>
       <ul>
-        <li>Вчитувањето на страницата и листата на градови од нашиот статичен хостинг (стандардни дневници на веб-серверот, како IP-адреса, што ги чува хостингот).</li>
-        <li>Само ако имаш сметка: твојата е-пошта, профилот, резултатите и одговорите од квизовите, додадените луѓе, резултатите од Проверката на врската, записите во дневникот и твоите согласности. Се чуваат кај нашиот добавувач на хостинг за база на податоци во ЕУ (Шведска), заштитени така што може да ги чита само твојата најавена сметка. Е-пораките за најава се испраќаат преку нашиот добавувач за испорака на е-пошта.</li>
-        <li>Ништо друго. Без аналитички колачиња, без рекламни следачи. Никогаш не продаваме податоци.</li>
+        <li><b>Твоето име и е-пошта, кога го отвораш целиот резултат од тест.</b> Чуваме и јазик, кои тестови си ги направил/а, твоите согласности, верзијата на оваа страница и датумите. Ги користиме за да ти ги отвориме резултатите, да ти ја пратиме пораката подолу и да ти одговориме ако ни пишеш. Давањето на овие податоци е услов за целиот резултат, кој не чини пари. Правна основа: чл. 6(1)(b) од GDPR, бидејќи ти го бараш тој резултат. Твоите одговори и резултати никогаш не се испраќаат.</li>
+        <li><b>Една порака по тој формулар.</b> Содржи линк назад до тестот и до твоите резултати на овој уред, а не содржи резултати. Добиваш најмногу една порака по адреса за секој тест. Се праќа преку Resend. Истата правна основа.</li>
+        <li><b>Твојата IP-адреса, за миг, кога го праќаш формуларот.</b> Ја претвораме во хеш со таен клуч што се менува секој ден и по него ги броиме барањата, за да спречиме злоупотреба. Самата адреса никогаш не ја чуваме. Правна основа: чл. 6(1)(f) од GDPR, нашиот интерес услугата да остане безбедна.</li>
+        <li><b>Новости на е-пошта, само ако ги побараш двапати.</b> Полето е незадолжително и не е штиклирано, а резултатот никогаш не зависи од него. Ако го штиклираш, пораката погоре содржи копче за потврда, и само тој клик се смета за согласност. Како доказ ги чуваме зборовите до полето и времето кога штиклираше и потврди. Сè уште не праќаме билтен. Правна основа: твоја согласност, чл. 6(1)(a) од GDPR.</li>
+        <li><b>Бројки за користење.</b> Кога ќе се отвори страница или ќе се заврши тест, запишуваме што се случило, страницата, јазикот и, за тест, кој тест, заедно со случаен број на сесија што живее во јазичето на прелистувачот и исчезнува кога ќе го затвориш. За ова нема колачиња. Ако си најавен/а, записот ја носи и ознаката на твојата сметка. Правна основа: чл. 6(1)(f) од GDPR, нашиот интерес да знаеме кои делови од страницата се користат.</li>
+        <li><b>Проверка за ботови.</b> Кога е вклучена, формуларите за најава, листата на чекање и тестовите го вчитуваат Cloudflare Turnstile, кој ја чита твојата IP-адреса и технички податоци за прелистувачот за да разликува луѓе од ботови. Правна основа: чл. 6(1)(f) од GDPR, формуларите да останат без злоупотреба.</li>
+        <li><b>Пребарување места.</b> Местата се бараат во листа на оваа страница. Ако нема совпаѓање, она што си го внел/а оди до услугата за пребарување на Open-Meteo, заедно со твојата IP-адреса. Правна основа: чл. 6(1)(f) од GDPR, наоѓање мали места.</li>
+        <li><b>Листата на чекање.</b> Ако се пријавиш, ја чуваме е-поштата, јазикот и местото од каде се пријави, за да ти пратиме покана. Правна основа: чл. 6(1)(b) од GDPR.</li>
+        <li><b>Сметка, само ако создадеш.</b> Твојата е-пошта, профилот, одговорите и резултатите од тестовите, додадените луѓе, резултатите од Проверката на врската, записите во дневникот и согласностите се чуваат кај нашиот добавувач за база на податоци во ЕУ (Шведска), заштитени така што може да ги чита само твојата најавена сметка. Пораките што ги праќаш со копчето за мислење се чуваат со страницата и типот на прелистувач. Е-пораките за најава се праќаат преку Resend. Правна основа: чл. 6(1)(b) од GDPR, а за чувствителни одговори твоја изречна согласност, чл. 9(2)(a) од GDPR.</li>
+        <li><b>Вчитување на страницата.</b> Нашиот хостинг и добавувачот за база гледаат стандардни технички податоци како IP-адресата кога твојот прелистувач зборува со нив и ги чуваат во своите дневници. Правна основа: чл. 6(1)(f) од GDPR, работа на страницата.</li>
+      </ul>
+      <p>Без аналитички колачиња, без рекламни следачи.</p>
+      <h2>Колку долго чуваме</h2>
+      <ul>
+        <li>Име и е-пошта од формуларот на тестот: 24 месеци по твоето последно внесување, а потоа автоматски се бришат.</li>
+        <li>Со потврдено да за новости: додека не се одјавиш. Потоа записот го чуваме 24 месеци за да не ти пишеме повторно, а потоа се брише.</li>
+        <li>Хешираните IP-адреси: 24 часа. Линковите за потврда престануваат да работат по 30 дена.</li>
+        <li>Записите на листата на чекање: 24 месеци. Бројките за користење: 14 месеци.</li>
+        <li>Податоците од сметката: додека не ја избришеш сметката.</li>
+        <li>Дневниците на хостингот и базата: колку што ги чуваат тие добавувачи.</li>
+      </ul>
+      <h2>Кој ни помага</h2>
+      <ul>
+        <li><b>Supabase:</b> база на податоци, најава и серверски функции, во ЕУ (Шведска).</li>
+        <li><b>Vercel:</b> хостинг на страницата и нејзините дневници.</li>
+        <li><b>Resend:</b> праќање е-пошта.</li>
+        <li><b>Cloudflare:</b> проверката за ботови Turnstile.</li>
+        <li><b>Open-Meteo:</b> пребарување места што ги нема во нашата листа.</li>
+      </ul>
+      <p>Некои од овие компании се од Соединетите Американски Држави, па твоите податоци може да стигнат до сервери таму.</p>
+      <h2>Твоите права</h2>
+      <p>Можеш да побараш копија од твоите податоци, како и да ги поправиме, избришеме, ограничиме или пренесеме. Можеш да приговориш на сè што правиме врз основа на наш интерес. Согласноста можеш да ја повлечеш во секое време, што не влијае на она што веќе се случило. Можеш да поднесеш и жалба до органот за заштита на податоци каде што живееш.</p>
+      <h2>Како да запреш или избришеш</h2>
+      <ul>
+        <li><b>Новости:</b> користи го линкот за одјава во која било наша порака или пиши на <Mail />.</li>
+        <li><b>Твоето име и е-пошта:</b> пиши на <Mail /> и ќе ги избришеме. Бришењето на овој уред не ги отстранува од нашата листа.</li>
+        <li><b>Овој уред:</b> користи ги контролите подолу.</li>
       </ul>
       <h2>Чувствителни одговори</h2>
-      <p>Одговорите за врски, чувства и твоето тело можат да бидат лични. Без сметка остануваат на твојот уред. Со сметка се чуваат само по твоја изречна согласност, која можеш да ја повлечеш со бришење на сметката. Шифрите на профил што ќе одлучиш да ги споделиш содржат твои податоци за раѓање и резултати, споделувај ги само со луѓе на кои им веруваш.</p>
+      <p>Одговорите на тестовите за врски, чувства и твоето тело можат да бидат лични. Без сметка остануваат на твојот уред. Со сметка се чуваат само по твоја изречна согласност, која можеш да ја повлечеш со бришење на сметката. Шифрите на профил што ќе одлучиш да ги споделиш содржат твои податоци за раѓање и резултати, споделувај ги само со луѓе на кои им веруваш.</p>
       <h2>Други луѓе</h2>
       <p>Ако додадеш некого друг, неговите податоци остануваат на твојот уред, и во твојата сметка ако имаш. Те молиме додавај луѓе со нивно знаење. Тие (или ти) можат да ги избришат во секое време.</p>
       <h2>Бришење на сметката</h2>
-      <p>На страницата Сметка, „Избриши ја мојата сметка“ веднаш и трајно ја отстранува сметката и сè што е зачувано во неа. Можеш и да се одјавиш и да ја задржиш или отстраниш копијата на овој уред.</p>
+      <p>На страницата Сметка, „Избриши ја мојата сметка“ веднаш и трајно ја отстранува сметката и сè што е зачувано во неа. Можеш и да се одјавиш и да ја задржиш или отстраниш копијата на овој уред. Името и е-поштата од формуларот на тестот се чуваат одделно: пиши ни за да ги отстраниме и нив.</p>
       <h2>Твоите контроли</h2>
       <PrivacyControls />
       <h2>Контакт</h2>
-      <p>Прашања или барања за твоите податоци? Пиши ни на <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+      <p>Прашања или барања за твоите податоци? Пиши ни на <Mail />.</p>
     </article>
   );
 }
@@ -59,25 +137,63 @@ function PageDe() {
   return (
     <article className="prose-soft" lang="de">
       <PageHero emblem="moon" img="milkyway" title={<>Datenschutz</>} />
-      <p className="text-sm text-dim">Entwurf v0.2 (Oktober 2026): wird vor der Einführung von Zahlungen anwaltlich geprüft.</p>
+      <p className="text-sm text-dim">Entwurf, Version {PRIVACY_VERSION}: Dieser Text muss noch anwaltlich geprüft werden.</p>
       <h2>Kurz gesagt</h2>
-      <p>Alles, was du eingibst (Geburtsdaten, Quizantworten, hinzugefügte Personen, Tagebucheinträge), wird <b>in deinem Browser</b> (localStorage) auf diesem Gerät gespeichert, und alle Berechnungen laufen auf deinem Gerät. <b>Ein Konto ist freiwillig.</b> Ohne Konto wird nichts hochgeladen. Wenn du ein Konto anlegst, speichern wir eine Kopie in unserer Datenbank, damit deine Geräte synchron bleiben, aber erst, nachdem du die Einwilligungen angehakt hast.</p>
-      <h2>Was dein Gerät verlässt</h2>
+      <p>Deine Geburtsdaten, Testantworten, Ergebnisse, hinzugefügten Personen und dein Tagebuch bleiben <b>in deinem Browser</b> auf diesem Gerät, und auch die Berechnungen laufen hier. <b>Ein Konto ist freiwillig.</b> Ein paar Dinge verlassen dein Gerät trotzdem, und diese Seite nennt sie alle: vor allem Name und E-Mail, die du uns gibst, um ein ganzes Testergebnis zu öffnen. Deine Antworten und Ergebnisse gehen dabei nie mit. Wir verkaufen niemals Daten.</p>
+      <h2>Wer verantwortlich ist</h2>
+      <p>Verantwortlich für die hier beschriebenen Daten ist horoscop.si. Schreib uns zu allem auf dieser Seite an <Mail />.</p>
+      <h2>Was auf deinem Gerät bleibt</h2>
+      <p>Geburtsdaten, Testantworten und Ergebnisse, hinzugefügte Personen und Tagebucheinträge liegen im lokalen Speicher deines Browsers. Dort liegt auch ein Vermerk, dass du deine Angaben schon gemacht hast, damit das Formular nicht zweimal fragt. Hat das Senden nicht geklappt, warten dein Name und deine E-Mail dort bis zum nächsten Besuch, dann werden sie gesendet und vom Gerät entfernt.</p>
+      <h2>Was dein Gerät verlässt und warum</h2>
       <ul>
-        <li>Das Laden der Seite und der Städteliste von unserem statischen Hosting (übliche Server-Logs wie die IP-Adresse, gespeichert vom Hoster).</li>
-        <li>Nur mit Konto: deine E-Mail, dein Profil, Quizergebnisse und Antworten, hinzugefügte Personen, Ergebnisse des Beziehungschecks, Tagebucheinträge und deine Einwilligungen. Sie liegen bei unserem Datenbank-Hoster in der EU (Schweden) und sind so geschützt, dass nur dein angemeldetes Konto sie lesen kann. Anmelde-E-Mails verschicken wir über unseren E-Mail-Dienstleister.</li>
-        <li>Sonst nichts. Keine Analyse-Cookies, keine Werbetracker. Wir verkaufen niemals Daten.</li>
+        <li><b>Dein Name und deine E-Mail, wenn du ein ganzes Testergebnis öffnest.</b> Außerdem speichern wir deine Sprache, welche Tests du gemacht hast, deine Einwilligungen, die Version dieser Seite und die Daten dazu. Damit öffnen wir deine Ergebnisse, schicken dir die unten genannte E-Mail und antworten dir, wenn du uns schreibst. Diese Angaben sind die Bedingung für das ganze Ergebnis, das kein Geld kostet. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, weil du dieses Ergebnis von uns möchtest. Deine Antworten und Ergebnisse werden nie gesendet.</li>
+        <li><b>Eine E-Mail nach diesem Formular.</b> Sie führt zurück zum Test und zu deinen Ergebnissen auf diesem Gerät und enthält selbst keine Ergebnisse. Du bekommst höchstens eine pro Adresse und Test. Der Versand läuft über Resend. Rechtsgrundlage wie oben.</li>
+        <li><b>Deine IP-Adresse, für einen Moment, wenn du das Formular sendest.</b> Wir machen daraus einen täglich wechselnden Hash mit geheimem Schlüssel und zählen damit Anfragen, um Missbrauch zu stoppen. Die Adresse selbst speichern wir nie. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO, unser Interesse an einem sicheren Dienst.</li>
+        <li><b>Neuigkeiten per E-Mail, nur wenn du zweimal Ja sagst.</b> Das Feld ist freiwillig und nicht angehakt, und dein Ergebnis hängt nie davon ab. Hakst du es an, enthält die E-Mail oben einen Bestätigungslink (Double-Opt-in), und erst dieser Klick zählt als Einwilligung. Als Nachweis speichern wir den Text neben dem Feld und die Zeitpunkte von Haken und Bestätigung. Einen Newsletter verschicken wir noch nicht. Rechtsgrundlage: deine Einwilligung, Art. 6 Abs. 1 lit. a DSGVO.</li>
+        <li><b>Nutzungszahlen.</b> Wenn eine Seite öffnet oder ein Test fertig ist, halten wir fest, was passiert ist, die Seite, die Sprache und bei einem Test welcher, dazu eine zufällige Sitzungsnummer, die in deinem Browser-Tab liegt und verschwindet, wenn du ihn schließt. Dafür gibt es keine Cookies. Bist du angemeldet, trägt der Eintrag auch deine Konto-ID. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO, unser Interesse zu wissen, welche Teile der Seite genutzt werden.</li>
+        <li><b>Bot-Prüfung.</b> Wenn sie eingeschaltet ist, laden die Formulare für Anmeldung, Warteliste und Tests Cloudflare Turnstile. Der Dienst liest deine IP-Adresse und technische Angaben zu deinem Browser, um Menschen von Bots zu unterscheiden. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO, Schutz der Formulare vor Missbrauch.</li>
+        <li><b>Ortssuche.</b> Orte suchen wir in einer Liste auf dieser Seite. Gibt es keinen Treffer, geht deine Eingabe zusammen mit deiner IP-Adresse an den Suchdienst von Open-Meteo. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO, damit auch kleine Orte auffindbar sind.</li>
+        <li><b>Die Warteliste.</b> Wenn du dich einträgst, speichern wir deine E-Mail, deine Sprache und wo du dich eingetragen hast, um dir eine Einladung zu schicken. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO.</li>
+        <li><b>Ein Konto, nur wenn du eines anlegst.</b> Deine E-Mail, dein Profil, Testantworten und Ergebnisse, hinzugefügte Personen, Ergebnisse des Beziehungschecks, Tagebucheinträge und Einwilligungen liegen bei unserem Datenbank-Anbieter in der EU (Schweden) und sind so geschützt, dass nur dein angemeldetes Konto sie lesen kann. Nachrichten über den Feedback-Knopf speichern wir mit der Seite und dem Browsertyp. Anmelde-E-Mails laufen über Resend. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO, für sensible Antworten deine ausdrückliche Einwilligung, Art. 9 Abs. 2 lit. a DSGVO.</li>
+        <li><b>Das Laden der Seite.</b> Unser Hoster und unser Datenbank-Anbieter sehen übliche technische Daten wie deine IP-Adresse, wenn dein Browser mit ihnen spricht, und speichern sie in ihren Logs. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO, der Betrieb der Seite.</li>
+      </ul>
+      <p>Keine Analyse-Cookies, keine Werbetracker.</p>
+      <h2>Wie lange wir speichern</h2>
+      <ul>
+        <li>Name und E-Mail aus dem Testformular: 24 Monate nach deiner letzten Eingabe, danach werden sie automatisch gelöscht.</li>
+        <li>Mit bestätigtem Ja zu Neuigkeiten: bis du dich abmeldest. Danach bleibt der Eintrag 24 Monate, damit wir dir nicht wieder schreiben, und wird dann gelöscht.</li>
+        <li>Gehashte IP-Adressen: 24 Stunden. Bestätigungslinks funktionieren 30 Tage.</li>
+        <li>Einträge auf der Warteliste: 24 Monate. Nutzungszahlen: 14 Monate.</li>
+        <li>Kontodaten: bis du dein Konto löschst.</li>
+        <li>Logs von Hoster und Datenbank: so lange, wie diese Anbieter sie aufbewahren.</li>
+      </ul>
+      <h2>Wer uns hilft</h2>
+      <ul>
+        <li><b>Supabase:</b> Datenbank, Anmeldung und Serverfunktionen, in der EU (Schweden).</li>
+        <li><b>Vercel:</b> Hosting der Website und ihre Logs.</li>
+        <li><b>Resend:</b> E-Mail-Versand.</li>
+        <li><b>Cloudflare:</b> die Bot-Prüfung Turnstile.</li>
+        <li><b>Open-Meteo:</b> Suche nach Orten, die nicht in unserer Liste stehen.</li>
+      </ul>
+      <p>Einige dieser Unternehmen sitzen in den USA, deine Daten können also auf Server dort gelangen.</p>
+      <h2>Deine Rechte</h2>
+      <p>Du kannst Auskunft über deine Daten verlangen, außerdem Berichtigung, Löschung, Einschränkung und Übertragung. Du kannst allem widersprechen, was wir auf unser eigenes Interesse stützen. Eine Einwilligung kannst du jederzeit widerrufen, das ändert nichts an dem, was vorher geschehen ist. Du kannst dich auch bei der Datenschutzbehörde an deinem Wohnort beschweren.</p>
+      <h2>So stoppst oder löschst du</h2>
+      <ul>
+        <li><b>Neuigkeiten:</b> Nutze den Abmeldelink in jeder unserer E-Mails oder schreib an <Mail />.</li>
+        <li><b>Dein Name und deine E-Mail:</b> Schreib an <Mail />, dann löschen wir sie. Das Löschen auf diesem Gerät entfernt sie nicht aus unserer Liste.</li>
+        <li><b>Dieses Gerät:</b> Nutze die Einstellungen unten.</li>
       </ul>
       <h2>Sensible Antworten</h2>
-      <p>Quizantworten zu Beziehungen, Gefühlen und deinem Körper können persönlich sein. Ohne Konto bleiben sie auf deinem Gerät. Mit Konto werden sie nur nach deiner ausdrücklichen Einwilligung gespeichert, und du kannst sie widerrufen, indem du dein Konto löschst. Profilcodes, die du teilst, enthalten deine Geburtsdaten und Ergebnisse, teile sie also nur mit Menschen, denen du vertraust.</p>
+      <p>Testantworten zu Beziehungen, Gefühlen und deinem Körper können persönlich sein. Ohne Konto bleiben sie auf deinem Gerät. Mit Konto werden sie nur nach deiner ausdrücklichen Einwilligung gespeichert, und du kannst sie widerrufen, indem du dein Konto löschst. Profilcodes, die du teilst, enthalten deine Geburtsdaten und Ergebnisse, teile sie also nur mit Menschen, denen du vertraust.</p>
       <h2>Andere Menschen</h2>
       <p>Wenn du jemanden hinzufügst, bleiben dessen Daten auf deinem Gerät und, falls vorhanden, in deinem Konto. Bitte füg Menschen nur mit ihrem Wissen hinzu. Sie (oder du) können sie jederzeit löschen.</p>
       <h2>Konto löschen</h2>
-      <p>Auf der Kontoseite entfernt „Mein Konto löschen“ dein Konto und alle darin gespeicherten Daten sofort und endgültig. Du kannst dich auch abmelden und die Kopie auf diesem Gerät behalten oder entfernen.</p>
+      <p>Auf der Kontoseite entfernt „Mein Konto löschen“ dein Konto und alle darin gespeicherten Daten sofort und endgültig. Du kannst dich auch abmelden und die Kopie auf diesem Gerät behalten oder entfernen. Name und E-Mail aus dem Testformular liegen getrennt davon: Schreib uns, dann entfernen wir auch sie.</p>
       <h2>Deine Einstellungen</h2>
       <PrivacyControls />
       <h2>Kontakt</h2>
-      <p>Fragen oder Anliegen zu deinen Daten? Schreib an <a href="mailto:contact@horoscop.si">contact@horoscop.si</a>.</p>
+      <p>Fragen oder Anliegen zu deinen Daten? Schreib an <Mail />.</p>
     </article>
   );
 }

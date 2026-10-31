@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { pageMeta } from "@/lib/page-meta";
 import { PageHero } from "@/components/ui";
 export const generateMetadata = pageMeta("terms");
@@ -5,11 +6,13 @@ function PageEn() {
   return (
     <article className="prose-soft">
       <PageHero emblem="tarot" img="milkyway" title={<>Terms of use</>} />
-      <p className="text-sm text-dim">Draft v0.1: to be reviewed by a lawyer before taking payments.</p>
+      <p className="text-sm text-dim">Draft v0.2: a lawyer still has to review this text.</p>
       <h2>What this is</h2>
       <p>This app offers astrology, numerology, tarot, traditional systems and personality questionnaires <b>for self-reflection and entertainment</b>. It is not psychological, medical, legal or financial advice, and it cannot predict the future or whether a relationship will succeed. Don't make important decisions based only on it.</p>
       <h2>Age</h2>
-      <p>You must be 16 or older to use the app (the age of digital consent in Poland).</p>
+      <p>You must be 16 or older to use the app.</p>
+      <h2>Full test results</h2>
+      <p>A test shows a short part of its result straight away. The full result opens once you leave your name and email, one time per device, and costs no money. Please use your own name and an address that is yours. We then send you one email with a link back. The <Link href="/en/privacy/">privacy page</Link> explains what we keep and how to have it deleted. News by email is a separate choice, and no result depends on it.</p>
       <h2>Other people's data</h2>
       <p>When you add someone else, only enter details they would be comfortable sharing with you, ideally with their permission. Don't use the app to harass, pressure or make decisions about others.</p>
       <h2>Wellbeing</h2>
@@ -28,11 +31,13 @@ function PageMk() {
   return (
     <article className="prose-soft">
       <PageHero emblem="tarot" img="milkyway" title={<>Услови за користење</>} />
-      <p className="text-sm text-dim">Нацрт v0.1. Треба да го прегледа правник пред да се примаат плаќања.</p>
+      <p className="text-sm text-dim">Нацрт v0.2: правник допрва треба да го прегледа овој текст.</p>
       <h2>Што е ова</h2>
       <p>Оваа апликација нуди астрологија, нумерологија, тарот, традиционални системи и прашалници за личност <b>за саморефлексија и забава</b>. Не е психолошки, медицински, правен или финансиски совет и не може да ја предвиди иднината ниту дали врската ќе успее. Не носи важни одлуки само врз основа на неа.</p>
       <h2>Возраст</h2>
       <p>Мораш да имаш 16 или повеќе години за да ја користиш апликацијата.</p>
+      <h2>Цели резултати од тестовите</h2>
+      <p>Тестот веднаш покажува краток дел од резултатот. Целиот резултат се отвора откако ќе оставиш име и е-пошта, еднаш по уред, и не чини пари. Те молиме користи го своето име и адреса што е твоја. Потоа ти праќаме една порака со линк назад. На <Link href="/mk/privacy/">страницата за приватност</Link> пишува што чуваме и како да се избрише. Новостите на е-пошта се посебен избор и ниту еден резултат не зависи од нив.</p>
       <h2>Податоци за други луѓе</h2>
       <p>Кога додаваш некого друг, внеси само податоци што тој човек е согласен да ги сподели со тебе, идеално со нивна дозвола. Не ја користи апликацијата за вознемирување, притисок или донесување одлуки за други.</p>
       <h2>Добросостојба</h2>
@@ -50,11 +55,13 @@ function PageDe() {
   return (
     <article className="prose-soft" lang="de">
       <PageHero emblem="tarot" img="milkyway" title={<>Nutzungsbedingungen</>} />
-      <p className="text-sm text-dim">Entwurf v0.1: wird vor der Annahme von Zahlungen anwaltlich geprüft.</p>
+      <p className="text-sm text-dim">Entwurf v0.2: Dieser Text muss noch anwaltlich geprüft werden.</p>
       <h2>Was das ist</h2>
       <p>Diese App bietet Astrologie, Numerologie, Tarot, traditionelle Systeme und Persönlichkeitsfragebögen <b>zur Selbstreflexion und Unterhaltung</b>. Sie ist keine psychologische, medizinische, rechtliche oder finanzielle Beratung und kann weder die Zukunft vorhersagen noch, ob eine Beziehung gelingt. Triff wichtige Entscheidungen nicht allein auf ihrer Grundlage.</p>
       <h2>Alter</h2>
-      <p>Du musst mindestens 16 Jahre alt sein, um die App zu nutzen (das Alter der digitalen Einwilligung in Polen).</p>
+      <p>Du musst mindestens 16 Jahre alt sein, um die App zu nutzen.</p>
+      <h2>Ganze Testergebnisse</h2>
+      <p>Ein Test zeigt sofort einen kurzen Teil seines Ergebnisses. Das ganze Ergebnis öffnet sich, sobald du Name und E-Mail hinterlässt, einmal pro Gerät, und es kostet kein Geld. Bitte nutze deinen eigenen Namen und eine Adresse, die dir gehört. Danach schicken wir dir eine E-Mail mit einem Link zurück. Auf der <Link href="/de/privacy/">Datenschutzseite</Link> steht, was wir speichern und wie du es löschen lässt. Neuigkeiten per E-Mail sind eine eigene Entscheidung, und kein Ergebnis hängt davon ab.</p>
       <h2>Daten anderer Menschen</h2>
       <p>Wenn du jemanden hinzufügst, gib nur Angaben ein, die diese Person dir gern geben würde, am besten mit ihrer Erlaubnis. Nutze die App nicht, um andere zu belästigen, unter Druck zu setzen oder über sie zu entscheiden.</p>
       <h2>Wohlbefinden</h2>
