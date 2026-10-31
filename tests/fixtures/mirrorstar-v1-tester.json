@@ -1,0 +1,335 @@
+{
+ "version": 2,
+ "me": {
+  "id": "me",
+  "name": "Ana",
+  "birthName": "Ana Petrova",
+  "date": "1995-10-12",
+  "time": "14:30",
+  "place": {
+   "name": "Skopje",
+   "lat": 42,
+   "lon": 21.43,
+   "tz": "Europe/Skopje"
+  },
+  "utcOffsetOverride": null,
+  "quiz": {
+   "bigFive": {
+    "O": 1,
+    "C": 40,
+    "E": 53,
+    "A": 14,
+    "N": 53
+   },
+   "timing": {
+    "big-five": {
+     "v": 1,
+     "at": "2026-10-14T10:00:00.000Z",
+     "n": 20,
+     "medianMs": 1800,
+     "instant": [],
+     "slow": [],
+     "changed": [],
+     "certainty": 7.2,
+     "careless": false,
+     "items": {}
+    },
+    "attachment": {
+     "v": 1,
+     "at": "2026-10-14T10:00:00.000Z",
+     "n": 9,
+     "medianMs": 1800,
+     "instant": [],
+     "slow": [],
+     "changed": [],
+     "certainty": 7.2,
+     "careless": false,
+     "items": {}
+    },
+    "nine": {
+     "v": 1,
+     "at": "2026-10-14T10:00:00.000Z",
+     "n": 18,
+     "medianMs": 1800,
+     "instant": [],
+     "slow": [],
+     "changed": [],
+     "certainty": 7.2,
+     "careless": false,
+     "items": {}
+    },
+    "care": {
+     "v": 1,
+     "at": "2026-10-14T10:00:00.000Z",
+     "n": 11,
+     "medianMs": 1800,
+     "instant": [],
+     "slow": [],
+     "changed": [],
+     "certainty": 7.2,
+     "careless": false,
+     "items": {}
+    }
+   },
+   "attachment": {
+    "anxiety": 60,
+    "avoidance": 25,
+    "style": "anxious"
+   },
+   "nine": {
+    "type": 6,
+    "wing": 5,
+    "scores": [
+     6,
+     7,
+     6,
+     5,
+     3,
+     9,
+     3,
+     7,
+     5
+    ],
+    "growth": 9,
+    "stress": 3
+   },
+   "care": {
+    "receive": {
+     "words": 3,
+     "time": 1,
+     "gifts": 2,
+     "help": 2,
+     "touch": 2
+    },
+    "topReceive": [
+     "words",
+     "gifts"
+    ],
+    "give": "words"
+   },
+   "adaptive": {
+    "v": 1,
+    "pct": {
+     "O": 17,
+     "C": 39,
+     "E": 17,
+     "A": 81,
+     "N": 68
+    },
+    "conf": {
+     "O": 0.44,
+     "C": 0.65,
+     "E": 0.44,
+     "A": 0.4,
+     "N": 0.6
+    },
+    "consistency": 0.33,
+    "twins": 3,
+    "gutMs": 2100,
+    "timeouts": 0,
+    "code": "ISFP",
+    "items": 15,
+    "flags": [
+     "mixed"
+    ]
+   },
+   "selfId": {
+    "confirmed": [
+     "nine"
+    ]
+   }
+  },
+  "createdAt": "2026-10-12T09:00:00.000Z",
+  "updatedAt": "2026-10-31T19:33:34.854Z",
+  "quizAt": {
+   "bigFive": "2026-10-31T19:33:34.761Z",
+   "timing": "2026-10-31T19:33:34.763Z",
+   "attachment": "2026-10-31T19:33:34.762Z",
+   "nine": "2026-10-31T19:33:34.762Z",
+   "care": "2026-10-31T19:33:34.763Z",
+   "adaptive": "2026-10-31T19:33:34.853Z",
+   "selfId": "2026-10-31T19:33:34.854Z"
+  },
+  "answers": {
+   "big-five": {
+    "e1": 1,
+    "a1": 2,
+    "c1": 3,
+    "n1": 4,
+    "o1": 5,
+    "e2": 1,
+    "a2": 2,
+    "c2": 3,
+    "n2": 4,
+    "o2": 5,
+    "e3": 1,
+    "a3": 2,
+    "c3": 3,
+    "n3": 4,
+    "o3": 5,
+    "e4": 1,
+    "a4": 2,
+    "c4": 3,
+    "n4": 4,
+    "o4": 5
+   },
+   "attachment": {
+    "ax1": 1,
+    "av1": 2,
+    "ax2": 3,
+    "av2": 4,
+    "ax3": 5,
+    "av3": 1,
+    "ax4": 2,
+    "av4": 3,
+    "ax5": 4
+   },
+   "nine": {
+    "t1": 1,
+    "t5": 2,
+    "t9": 3,
+    "t2": 4,
+    "t6": 5,
+    "t3": 1,
+    "t7": 2,
+    "t4": 3,
+    "t8": 4,
+    "t1b": 5,
+    "t5b": 1,
+    "t9b": 2,
+    "t2b": 3,
+    "t6b": 4,
+    "t3b": 5,
+    "t7b": 1,
+    "t4b": 2,
+    "t8b": 3
+   },
+   "care": {
+    "p0": 0,
+    "p7": 1,
+    "p3": 0,
+    "p4": 1,
+    "p9": 0,
+    "p1": 1,
+    "p5": 0,
+    "p8": 1,
+    "p2": 0,
+    "p6": 1,
+    "give": 0
+   },
+   "adaptive": {
+    "o1": 2,
+    "o1_ms": 2100,
+    "o1_i": 0,
+    "c1": 1,
+    "c1_ms": 2100,
+    "c1_i": 1,
+    "e1": 2,
+    "e1_ms": 2100,
+    "e1_i": 2,
+    "ga1": 1,
+    "ga1_ms": 2100,
+    "ga1_i": 3,
+    "n1": 2,
+    "n1_ms": 2100,
+    "n1_i": 4,
+    "a1": 1,
+    "a1_ms": 2100,
+    "a1_i": 5,
+    "o1t": 2,
+    "o1t_ms": 2100,
+    "o1t_i": 6,
+    "gc1": 1,
+    "gc1_ms": 2100,
+    "gc1_i": 7,
+    "e2": 2,
+    "e2_ms": 2100,
+    "e2_i": 8,
+    "n2": 1,
+    "n2_ms": 2100,
+    "n2_i": 9,
+    "c1t": 2,
+    "c1t_ms": 2100,
+    "c1t_i": 10,
+    "gn1": 1,
+    "gn1_ms": 2100,
+    "gn1_i": 11,
+    "c2": 2,
+    "c2_ms": 2100,
+    "c2_i": 12,
+    "n1t": 1,
+    "n1t_ms": 2100,
+    "n1t_i": 13,
+    "c3": 2,
+    "c3_ms": 2100,
+    "c3_i": 14
+   }
+  }
+ },
+ "people": [
+  {
+   "id": "k3j9x2ab",
+   "name": "Mila",
+   "date": "1993-02-01",
+   "time": null,
+   "place": null,
+   "utcOffsetOverride": null,
+   "quiz": {
+    "attachment": {
+     "anxiety": 60,
+     "avoidance": 25,
+     "style": "anxious"
+    }
+   },
+   "relType": "romantic",
+   "createdAt": "2026-10-13T09:00:00.000Z",
+   "updatedAt": "2026-10-31T19:33:34.860Z",
+   "quizAt": {
+    "attachment": "2026-10-31T19:33:34.860Z"
+   },
+   "answers": {
+    "attachment": {
+     "ax1": 1,
+     "av1": 2,
+     "ax2": 3,
+     "av2": 4,
+     "ax3": 5,
+     "av3": 1,
+     "ax4": 2,
+     "av4": 3,
+     "ax5": 4
+    }
+   }
+  }
+ ],
+ "journal": {
+  "2026-10-20": {
+   "date": "2026-10-20",
+   "prompt": "What surprised you today?",
+   "text": "The rain.",
+   "updatedAt": "2026-10-31T19:33:34.862Z"
+  }
+ },
+ "bondChecks": [
+  {
+   "id": "b1",
+   "personId": null,
+   "otherId": "k3j9x2ab",
+   "relType": "romantic",
+   "answers": {
+    "a": {
+     "q1": 3
+    }
+   },
+   "results": {
+    "score": 71
+   },
+   "createdAt": "2026-10-21T18:00:00.000Z"
+  }
+ ],
+ "settings": {
+  "theme": "default",
+  "readTheme": "paper"
+ },
+ "updatedAt": "2026-10-31T19:33:34.866Z"
+}

@@ -7,11 +7,15 @@
 import { useSyncExternalStore } from "react";
 import type { QuizResults } from "@/engine/profile";
 import type { RelType } from "@/engine/compat";
+import type { ItemTiming } from "@/engine/play/timing";
+import type { AAnswer } from "@/engine/adaptive";
 
 export interface Place { name: string; lat: number; lon: number; tz: string }
 export interface StoredPerson {
   id: string; // "me" for the user
   name: string; // display name
+  /** The visitor gave no name, so `name` is only a placeholder: it never reaches numerology or an account. */
+  noName?: boolean;
   birthName?: string; // full birth name for numerology
   date: string;
   time: string | null;
@@ -38,7 +42,14 @@ export interface BondCheckRecord { id: string; personId: string | null; otherId:
 export interface Settings { theme: "personal" | "default"; readTheme?: "paper" | "night" }
 /** Raw quiz answers per quiz id (so retakes can be prefilled and accounts can sync them later). */
 export type QuizAnswers = Record<string, Record<string, number>>;
-export interface State { version: 2; me: StoredPerson | null; people: StoredPerson[]; journal: Record<string, JournalEntry>; bondChecks: BondCheckRecord[]; settings: Settings; updatedAt?: string }
+/**
+ * Test results of someone with no birth date yet. They sit beside `me`, never inside it: `me` always has a date and every
+ * astrology view relies on that. When a profile appears (saved here or pulled from an account) they fold into it.
+ */
+export interface GuestResults { quiz: QuizResults; quizAt?: Record<string, string>; answers?: QuizAnswers; createdAt: string; updatedAt?: string }
+/** A test someone has not finished. Saved after every answer, on this device only: it is never synced or sent anywhere. */
+export interface TestProgress { personId: string; testId: string; values?: Record<string, number>; seq?: AAnswer[]; timing?: Record<string, ItemTiming>; at: string }
+export interface State { version: 2; me: StoredPerson | null; guest: GuestResults | null; progress: Record<string, TestProgress>; people: StoredPerson[]; journal: Record<string, JournalEntry>; bondChecks: BondCheckRecord[]; settings: Settings; updatedAt?: string }
 
 export interface PeopleRepository {
   getState(): State;
@@ -49,6 +60,8 @@ export interface PeopleRepository {
   saveJournal(e: JournalEntry): void;
   saveBondCheck(b: BondCheckRecord): void;
   saveSettings(patch: Partial<Settings>): void;
+  saveProgress(p: Omit<TestProgress, "at">): void;
+  clearProgress(personId: string, testId: string): void;
   exportAll(): string;
   /** Replace all local data with an export produced by exportAll(). Returns false if the JSON is invalid. */
   importAll(json: string): boolean;
@@ -58,21 +71,55 @@ export interface PeopleRepository {
 // Storage key kept stable across schema versions so nobody loses data; the payload carries `version`.
 const KEY = "mirrorstar:v1";
 const BACKUP_KEY = "mirrorstar:backup";
-const EMPTY: State = { version: 2, me: null, people: [], journal: {}, bondChecks: [], settings: { theme: "personal" } };
+const EMPTY: State = { version: 2, me: null, guest: null, progress: {}, people: [], journal: {}, bondChecks: [], settings: { theme: "personal" } };
+
+export const progressKey = (personId: string, testId: string) => `${personId}/${testId}`;
+/** Result key to the test id its raw answers are saved under. Play games use their result key for both. */
+const ANSWER_ID: Record<string, string> = { bigFive: "big-five", bigFiveLong: "big-five-long", fourLetter: "four-letter" };
+export const answerIdOf = (key: string) => ANSWER_ID[key] ?? key;
+
+const stamp = (iso?: string) => Date.parse(iso ?? "") || 0;
+/** Fold guest results into a profile, newest result per test. `keys` lists what moved, for the sync layer. */
+export function foldGuest(me: StoredPerson, g: GuestResults): { me: StoredPerson; keys: string[] } {
+  const mine = me.quiz as Record<string, unknown>; const theirs = g.quiz as Record<string, unknown>;
+  const quiz: Record<string, unknown> = { ...mine }; const quizAt = { ...(me.quizAt ?? {}) }; const answers = { ...(me.answers ?? {}) }; const keys: string[] = [];
+  for (const k of Object.keys(theirs)) {
+    if (theirs[k] == null || (mine[k] != null && stamp(g.quizAt?.[k]) <= stamp(me.quizAt?.[k]))) continue;
+    quiz[k] = k === "timing" ? { ...(mine[k] as object), ...(theirs[k] as object) } : theirs[k]; // timing holds one entry per test
+    if (g.quizAt?.[k]) quizAt[k] = g.quizAt[k];
+    const a = g.answers?.[answerIdOf(k)]; if (a) answers[answerIdOf(k)] = a;
+    keys.push(k);
+  }
+  return keys.length ? { me: { ...me, quiz: quiz as QuizResults, quizAt, answers }, keys } : { me, keys };
+}
+/** Guest results never sit beside a profile: as soon as both exist, they fold. */
+const settleGuest = (s: State): State => (s.me && s.guest ? { ...s, me: foldGuest(s.me, s.guest).me, guest: null } : s);
+
+const fixGuest = (g: unknown): GuestResults | null => {
+  const o = g as GuestResults | null | undefined;
+  return o && typeof o === "object" && o.quiz && typeof o.quiz === "object" && Object.keys(o.quiz).length ? o : null;
+};
+const fixProgress = (raw: unknown): Record<string, TestProgress> => {
+  if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+  const ok = (p: TestProgress) => !!p && typeof p.personId === "string" && typeof p.testId === "string" && (!!p.values || Array.isArray(p.seq));
+  return Object.fromEntries(Object.entries(raw as Record<string, TestProgress>).filter(([, p]) => ok(p)));
+};
 
 /** Upgrade any older payload to the current schema (never throws). */
 export function migrate(raw: unknown): State {
   const o = (raw && typeof raw === "object" ? raw : {}) as Partial<State> & { version?: number };
   const fixP = (p: StoredPerson | null | undefined): StoredPerson | null => (p && typeof p.date === "string" ? { ...p, quiz: p.quiz ?? {} } : null);
-  return {
+  return settleGuest({
     version: 2,
     me: fixP(o.me),
+    guest: fixGuest(o.guest),
+    progress: fixProgress(o.progress),
     people: Array.isArray(o.people) ? (o.people.map(fixP).filter(Boolean) as StoredPerson[]) : [],
     journal: o.journal && typeof o.journal === "object" ? o.journal : {},
     bondChecks: Array.isArray(o.bondChecks) ? o.bondChecks : [],
     settings: { ...EMPTY.settings, ...(o.settings ?? {}) },
     updatedAt: o.updatedAt,
-  };
+  });
 }
 let cache: State | null = null;
 const listeners = new Set<() => void>();
@@ -100,7 +147,7 @@ const emit = (c: Change) => hooks.forEach((h) => { try { h(c); } catch { /* neve
 const now = () => new Date().toISOString();
 
 function write(next: State) {
-  cache = { ...next, version: 2, updatedAt: new Date().toISOString() };
+  cache = { ...settleGuest(next), version: 2, updatedAt: new Date().toISOString() };
   try {
     const prev = localStorage.getItem(KEY);
     if (prev) localStorage.setItem(BACKUP_KEY, prev); // one-step undo / corruption safety net
@@ -110,22 +157,32 @@ function write(next: State) {
   listeners.forEach((l) => l());
 }
 
+const dropProgress = (all: State["progress"], personId: string, testId: string) => {
+  const key = progressKey(personId, testId);
+  return Object.fromEntries(Object.entries(all).filter(([k]) => k !== key));
+};
+
 /** Raw local storage operations — no change events. The sync layer uses these to apply server data. */
 export const localRepo: PeopleRepository = {
   getState: load,
   saveMe: (p) => write({ ...load(), me: { ...p, id: "me" } }),
   savePerson: (p) => { const s = load(); write({ ...s, people: [...s.people.filter((x) => x.id !== p.id), p] }); },
-  deletePerson: (id) => { const s = load(); write({ ...s, people: s.people.filter((x) => x.id !== id), bondChecks: s.bondChecks.filter((b) => b.personId !== id && b.otherId !== id) }); },
+  deletePerson: (id) => { const s = load(); write({ ...s, people: s.people.filter((x) => x.id !== id), bondChecks: s.bondChecks.filter((b) => b.personId !== id && b.otherId !== id), progress: Object.fromEntries(Object.entries(s.progress).filter(([, p]) => p.personId !== id)) }); },
   saveQuiz: (id, patch, answers) => {
     const s = load(); const t = now();
-    const up = (p: StoredPerson): StoredPerson => ({
+    const up = <P extends StoredPerson | GuestResults>(p: P): P => ({
       ...p, quiz: { ...p.quiz, ...patch }, updatedAt: t,
       quizAt: { ...(p.quizAt ?? {}), ...Object.fromEntries(Object.keys(patch).map((k) => [k, t])) },
       answers: answers ? { ...(p.answers ?? {}), [answers.quizId]: answers.values } : p.answers,
     });
-    if (id === "me" && s.me) write({ ...s, me: up(s.me) });
-    else write({ ...s, people: s.people.map((p) => (p.id === id ? up(p) : p)) });
+    // The result and the end of the unfinished test land in one write, so a crash cannot leave both.
+    const progress = answers ? dropProgress(s.progress, id, answers.quizId) : s.progress;
+    if (id !== "me") write({ ...s, progress, people: s.people.map((p) => (p.id === id ? up(p) : p)) });
+    else if (s.me) write({ ...s, progress, me: up(s.me) });
+    else write({ ...s, progress, guest: up(s.guest ?? { quiz: {}, createdAt: t }) });
   },
+  saveProgress: (p) => { const s = load(); write({ ...s, progress: { ...s.progress, [progressKey(p.personId, p.testId)]: { ...p, at: now() } } }); },
+  clearProgress: (personId, testId) => { const s = load(); write({ ...s, progress: dropProgress(s.progress, personId, testId) }); },
   saveSettings: (patch) => { const s = load(); write({ ...s, settings: { ...s.settings, ...patch } }); },
   importAll: (json) => { try { const o = JSON.parse(json); if (!o || typeof o !== "object" || !("people" in o)) return false; write(migrate(o)); return true; } catch { return false; } },
   saveJournal: (e) => { const s = load(); write({ ...s, journal: { ...s.journal, [e.date]: e } }); },
@@ -137,7 +194,11 @@ export const localRepo: PeopleRepository = {
 /** What the UI uses: local writes (instant) + a change event the account sync layer mirrors to the server. */
 export const repo: PeopleRepository = {
   ...localRepo,
-  saveMe: (p) => { localRepo.saveMe({ ...p, updatedAt: now() }); emit({ kind: "me" }); },
+  saveMe: (p) => {
+    const g = load().guest; const keys = g ? foldGuest(p, g).keys : [];
+    localRepo.saveMe({ ...p, updatedAt: now() }); emit({ kind: "me" });
+    if (keys.length) emit({ kind: "quiz", personId: "me", keys });
+  },
   savePerson: (p) => { localRepo.savePerson({ ...p, updatedAt: now() }); emit({ kind: "person", id: p.id }); },
   deletePerson: (id) => { localRepo.deletePerson(id); emit({ kind: "deletePerson", id }); },
   saveQuiz: (id, patch, answers) => { localRepo.saveQuiz(id, patch, answers); emit(id === "me" ? { kind: "quiz", personId: id, keys: Object.keys(patch), answers } : { kind: "person", id }); },
@@ -162,6 +223,14 @@ export function useStore(): State | null {
 export function findPerson(s: State | null, id: string | null | undefined): StoredPerson | null {
   if (!s || !id) return null;
   return id === "me" ? s.me : s.people.find((p) => p.id === id) ?? null;
+}
+/** Who a test belongs to. "me" is the profile, or the guest slot before there is one: that person has an empty `date`, so use it for tests only. */
+export function subjectOf(s: State | null, id: string | null | undefined = "me"): StoredPerson | null {
+  if (!s) return null;
+  if (id && id !== "me") return findPerson(s, id);
+  if (s.me) return s.me;
+  const g = s.guest;
+  return { id: "me", name: "", date: "", time: null, place: null, quiz: g?.quiz ?? {}, quizAt: g?.quizAt, answers: g?.answers, createdAt: g?.createdAt ?? "" };
 }
 export const newId = () => Math.random().toString(36).slice(2, 10);
 

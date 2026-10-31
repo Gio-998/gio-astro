@@ -16,13 +16,15 @@ export interface BirthFormProps {
   compact?: boolean;
   /** Public calculators: no name, no "saved" note and no online place lookup, because nothing is kept or sent. */
   anonymous?: boolean;
+  /** The first run works with a birth date alone. */
+  nameOptional?: boolean;
   /** The result is useless without a time, so drop the "unknown time" switch. */
   timeRequired?: boolean;
   /** Extra check before submit; return a message to show it instead of submitting. */
   check?: (p: StoredPerson) => string | null;
 }
 
-export function BirthForm({ initial, submitLabel, askRelType, onSubmit, anonymous, timeRequired, check }: BirthFormProps) {
+export function BirthForm({ initial, submitLabel, askRelType, onSubmit, anonymous, nameOptional, timeRequired, check }: BirthFormProps) {
   const { c } = useContent(); const U = c.ui.birthForm;
   const [name, setName] = useState(initial?.name ?? "");
   const [birthName, setBirthName] = useState(initial?.birthName ?? "");
@@ -37,7 +39,7 @@ export function BirthForm({ initial, submitLabel, askRelType, onSubmit, anonymou
 
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!anonymous && !name.trim()) return setErr(U.errName);
+    if (!anonymous && !nameOptional && !name.trim()) return setErr(U.errName);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return setErr(U.errDate);
     const y = Number(date.slice(0, 4));
     if (y < 1800 || y > 2100) return setErr(U.errYear);
@@ -54,7 +56,7 @@ export function BirthForm({ initial, submitLabel, askRelType, onSubmit, anonymou
   return (
     <form onSubmit={submit} className="space-y-4">
       {!anonymous && <div>
-        <label className="label">{U.name}</label>
+        <label className="label">{U.name}{nameOptional && <> <span className="opacity-60">({c.site.common.optional})</span></>}</label>
         <input className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder={U.namePh} autoComplete="given-name" />
       </div>}
       <div className="grid gap-3 sm:grid-cols-[1.6fr_1fr]">

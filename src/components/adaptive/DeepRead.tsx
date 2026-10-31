@@ -6,13 +6,16 @@ import { AnimatePresence, motion } from "motion/react";
 import { TRAITS, type Trait } from "@/engine/bigfive";
 import { GUT_LIMIT_MS, MAX_ITEMS, flattenAnswers, nextItem, scoreAdaptive, type AAnswer, type AItem, type AdaptiveResult } from "@/engine/adaptive";
 import { useContent, useHref } from "@/lib/content-context";
-import { findPerson, repo, useStore, type StoredPerson } from "@/lib/store";
+import { progressKey, repo, subjectOf, useStore, type StoredPerson, type TestProgress } from "@/lib/store";
+import { cleanSeq, nextTest, testPath } from "@/lib/test-run";
 import { track } from "@/lib/track";
 import { PageHero } from "../ui";
 import { Celebration } from "../art/Celebration";
 import { haptic, HAPTIC, now, useReduce } from "../play/fx";
 import { useAdaptive } from "./text";
 import { UnifiedGlance } from "./UnifiedGlance";
+import { ResultGate } from "../tests/ResultGate";
+import type { FlowProps } from "../QuizRunner";
 
 /** Deterministic left/right swap so the "high" option isn't always first. */
 const flip = (id: string) => [...id].reduce((s, ch) => s + ch.charCodeAt(0), 0) % 2 === 1;
@@ -71,15 +74,13 @@ export function TraitSlider({ t, r, i }: { t: Trait; r: AdaptiveResult; i: numbe
   );
 }
 
-function Result({ r, person, again }: { r: AdaptiveResult; person: StoredPerson; again: () => void }) {
-  const A = useAdaptive(); const h = useHref(); const reduce = useReduce(); const R = A.result;
+/** The result itself, also used in the take-all summary. */
+export function DeepResultBody({ r }: { r: AdaptiveResult }) {
+  const A = useAdaptive(); const R = A.result;
   const same = Math.round(r.consistency * r.twins);
   return (
-    <div className="mx-auto max-w-xl" data-testid="deep-result">
-      {!reduce && <Celebration count={18} />}
+    <>
       <div className="mb-6 text-center">
-        <p className="eyebrow mb-1">{R.eyebrow}</p>
-        <h1 className="h-display text-4xl"><span className="text-aurora">{R.title}</span></h1>
         <p className="mt-3 text-sm text-dim">{R.code}</p>
         <p className="h-display mt-1 text-5xl tracking-[.2em] text-gold" data-testid="deep-code">{r.code}</p>
       </div>
@@ -89,11 +90,32 @@ function Result({ r, person, again }: { r: AdaptiveResult; person: StoredPerson;
         {r.gutMs > 0 && <p>✦ {r.gutMs <= 1800 ? R.gutFast : R.gutSlow}</p>}
         {r.flags.map((f) => <p key={f} className="text-xs text-dim">◦ {R.flags[f]}</p>)}
       </div>
-      <div className="mt-8"><UnifiedGlance person={person} isMe={person.id === "me"} /></div>
+    </>
+  );
+}
+
+function Result({ r, person, fresh, retake, resume, panel, onNext }: { r: AdaptiveResult; person: StoredPerson; fresh: boolean; retake: () => void; resume?: () => void; panel: boolean; onNext?: FlowProps["onNext"] }) {
+  const A = useAdaptive(); const { c } = useContent(); const h = useHref(); const reduce = useReduce(); const R = A.result; const T = c.ui.tests;
+  const next = nextTest(person.quiz, "adaptive"); const Title = panel ? "h2" : "h1";
+  return (
+    <div className="mx-auto max-w-xl" data-testid="deep-result">
+      {fresh && !reduce && <Celebration count={18} />}
+      <div className="mb-6 text-center">
+        <p className="eyebrow mb-1">{R.eyebrow}</p>
+        <Title className="h-display text-4xl"><span className="text-aurora">{R.title}</span></Title>
+      </div>
+      <ResultGate id="adaptive" person={person}>
+        <DeepResultBody r={r} />
+        <div className="mt-8"><UnifiedGlance person={person} isMe={person.id === "me"} /></div>
+      </ResultGate>
       <div className="mt-6 grid gap-2">
-        <Link className="btn-primary py-3 text-center" href={h(person.id === "me" ? "/play/" : `/play/?for=${person.id}`)}>{R.play} ✦</Link>
-        <Link className="btn-ghost py-3 text-center" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>{R.toAll}</Link>
-        <button type="button" className="py-2 text-sm text-dim underline decoration-dotted underline-offset-4" onClick={again}>{A.again}</button>
+        {next && (panel && onNext
+          ? <button type="button" className="btn-primary py-3 text-center" onClick={() => onNext(next)} data-testid="quiz-next">{c.ui.quiz.nextQuiz} →</button>
+          : <Link className="btn-primary py-3 text-center" href={h(`${testPath(next)}${person.id === "me" ? "" : `?for=${person.id}`}`)} data-testid="quiz-next">{c.ui.quiz.nextQuiz} →</Link>)}
+        <Link className={`${next ? "btn-ghost" : "btn-primary"} py-3 text-center`} href={h(person.id === "me" ? "/play/" : `/play/?for=${person.id}`)}>{R.play} ✦</Link>
+        {!panel && <Link className="btn-ghost py-3 text-center" href={h(person.id === "me" ? "/me/" : `/person/?id=${person.id}`)}>{R.toAll}</Link>}
+        {resume && <button type="button" className="py-2 text-sm text-gold underline decoration-dotted underline-offset-4" onClick={resume} data-testid="deep-retake-resume">{T.result.retakeResume}</button>}
+        <button type="button" className="py-2 text-sm text-dim underline decoration-dotted underline-offset-4" onClick={retake} data-testid="deep-retake">{T.result.retake}</button>
       </div>
       <p className="mt-6 text-center text-xs text-dim">{R.honest}</p>
     </div>
@@ -101,26 +123,44 @@ function Result({ r, person, again }: { r: AdaptiveResult; person: StoredPerson;
 }
 
 export function DeepRead() {
-  const A = useAdaptive(); const { c } = useContent(); const h = useHref(); const s = useStore(); const reduce = useReduce();
-  const forId = useSearchParams().get("for") ?? "me"; const person = findPerson(s, forId);
-  const [phase, setPhase] = useState<"intro" | "run" | "done">("intro");
-  const [ans, setAns] = useState<AAnswer[]>([]); const [res, setRes] = useState<AdaptiveResult | null>(null);
+  const forId = useSearchParams().get("for") ?? "me";
+  return <DeepFlow personId={forId} />;
+}
+
+export function DeepFlow({ personId = "me", embed, onFinish, onNext }: FlowProps) {
+  const A = useAdaptive(); const { c } = useContent(); const h = useHref(); const s = useStore(); const reduce = useReduce(); const T = c.ui.tests;
+  const person = subjectOf(s, personId); const key = progressKey(personId, "adaptive"); const saved = s?.progress[key];
+  // In a run the questions start at once, from wherever this test was left.
+  const [phase, setPhase] = useState<"intro" | "run" | "done">(embed === "run" ? "run" : "intro");
+  const [ans, setAns] = useState<AAnswer[]>(() => (embed === "run" ? cleanSeq(repo.getState().progress[key]?.seq) : []));
+  const [res, setRes] = useState<AdaptiveResult | null>(null);
   const shown = useRef(0); const [note, setNote] = useState<string | null>(null);
+  const root = useRef<HTMLDivElement>(null);
   const item = useMemo(() => (phase === "run" ? nextItem(ans) : null), [phase, ans]);
   useEffect(() => { shown.current = now(); }, [item?.id]);
+  const toTop = () => { if (embed) root.current?.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" }); else window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); };
 
   const finish = (all: AAnswer[]) => {
     if (!person) return;
     const r = scoreAdaptive(all);
     repo.saveQuiz(person.id, { adaptive: r }, { quizId: "adaptive", values: flattenAnswers(all) });
     track("quiz_done", { quiz: "adaptive", self: person.id === "me" });
-    haptic(HAPTIC.win, reduce); setRes(r); setPhase("done"); window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    haptic(HAPTIC.win, reduce);
+    if (onFinish) { onFinish(); return; }
+    setRes(r); setPhase("done"); toTop();
   };
+  const begin = (p?: TestProgress) => {
+    const seq = cleanSeq(p?.seq);
+    if (seq.length && !nextItem(seq)) { finish(seq); return; }
+    setAns(seq); setRes(null); setPhase("run"); toTop();
+  };
+  const startOver = () => { repo.clearProgress(personId, "adaptive"); begin(); };
   const answer = (v: 0 | 1 | 2, ms?: number) => {
     if (!item) return;
     const next = [...ans, { id: item.id, v, ms: ms ?? Math.round(now() - shown.current) }];
     if (v === 0) { setNote(A.ui.timeout); setTimeout(() => setNote(null), 1400); }
     if (!nextItem(next)) { finish(next); return; }
+    repo.saveProgress({ personId, testId: "adaptive", seq: next });
     setAns(next);
   };
   // Stable callback for the gut timer.
@@ -128,14 +168,16 @@ export function DeepRead() {
   const gutAnswer = useMemo(() => (v: 0 | 1 | 2, ms: number) => answerRef.current(v, ms), []);
 
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
-  if (phase === "done" && res && person) return <Result r={res} person={person} again={() => { setAns([]); setRes(null); setPhase("run"); }} />;
+  if (!person) return <p className="card mx-auto max-w-lg text-center text-dim">{c.ui.me.notFound}<Link className="underline" href={h("/people/")}>{c.ui.me.back}</Link></p>;
+  const result = phase === "done" ? res : phase === "intro" ? person.quiz.adaptive : null;
+  if (result) return <div className="scroll-mt-24" ref={root}><Result r={result} person={person} fresh={phase === "done"} retake={startOver} resume={saved ? () => begin(saved) : undefined} panel={embed === "panel"} onNext={onNext} /></div>;
 
-  if (phase === "run" && item && person) {
+  if (phase === "run" && item) {
     const k = ans.length; const progress = Math.min(0.97, k / (MAX_ITEMS - 2));
     const D = item.kind === "dilemma" ? A.dilemmas[item.id] : null; const swap = flip(item.id);
     const opts = D ? (swap ? [["b", D.b], ["a", D.a]] : [["a", D.a], ["b", D.b]]) as [string, [string, string]][] : [];
     return (
-      <div className="mx-auto max-w-md pt-2" data-testid="deep-run">
+      <div className="mx-auto max-w-md scroll-mt-24 pt-2" ref={root} data-testid="deep-run">
         <div className="relative overflow-hidden rounded-[30px] border border-white/15 bg-gradient-to-b from-ink/90 via-night/95 to-ink/90 p-5 shadow-[0_30px_80px_-40px_rgba(139,108,240,.9)]">
           <div className="pointer-events-none absolute -left-20 -top-24 h-64 w-64 rounded-full bg-violet/25 blur-3xl" />
           <div className="relative mb-4">
@@ -160,16 +202,29 @@ export function DeepRead() {
     );
   }
 
-  const done = person?.quiz.adaptive;
+  const start = saved ? (
+    <>
+      <p className="mb-3 text-sm text-mist/90" data-testid="deep-resume-note">{T.intro.stoppedDeep(cleanSeq(saved.seq).length)}</p>
+      <button type="button" className="btn-primary px-6 py-3.5 text-base" data-testid="deep-resume" onClick={() => { haptic(HAPTIC.tap, reduce); begin(saved); }}>{T.all.resume}</button>
+      <button type="button" className="ml-3 text-sm text-dim underline decoration-dotted underline-offset-4" data-testid="deep-over" onClick={startOver}>{T.intro.over}</button>
+    </>
+  ) : (
+    <>
+      <button type="button" className="btn-primary px-6 py-3.5 text-base" data-testid="deep-begin" onClick={() => { haptic(HAPTIC.tap, reduce); begin(); }}>{A.begin} ✦</button>
+      <span className="ml-3 text-sm text-dim">{A.minutes}</span>
+    </>
+  );
   return (
-    <div data-testid="deep-intro">
-      <PageHero eyebrow={A.hero.eyebrow} emblem="big-five" img="orion" title={<>{A.hero.titleA}<span className="italic text-aurora">{A.hero.titleB}</span></>} sub={A.hero.sub}>
-        {person ? <button type="button" className="btn-primary px-6 py-3.5 text-base" data-testid="deep-begin" onClick={() => { haptic(HAPTIC.tap, reduce); setAns([]); setPhase("run"); }}>{done ? A.again : A.begin} ✦</button>
-          : <Link className="btn-primary" href={h("/start/")}>{c.site.common.start}</Link>}
-        <span className="ml-3 text-sm text-dim">{A.minutes}</span>
-      </PageHero>
+    <div className="scroll-mt-24" ref={root} data-testid="deep-intro">
+      {embed ? (
+        <div className="card mb-4">
+          <h2 className="h-display mb-2 text-3xl"><span className="text-aurora">{A.hub.title}</span></h2>
+          <p className="mb-4 text-sm text-mist/85">{A.hero.sub}</p>
+          {start}
+        </div>
+      ) : <PageHero eyebrow={A.hero.eyebrow} emblem="big-five" img="orion" title={<>{A.hero.titleA}<span className="italic text-aurora">{A.hero.titleB}</span></>} sub={A.hero.sub}>{start}</PageHero>}
       <ul className="mx-auto mb-8 grid max-w-xl gap-2">{A.how.map((x) => <li key={x} className="flex gap-2 rounded-2xl bg-white/[0.04] px-4 py-3 text-sm"><span className="text-gold">✦</span>{x}</li>)}</ul>
-      {person && <div className="mx-auto max-w-xl"><UnifiedGlance person={person} isMe={person.id === "me"} /></div>}
+      {!embed && <div className="mx-auto max-w-xl"><UnifiedGlance person={person} isMe={person.id === "me"} /></div>}
     </div>
   );
 }

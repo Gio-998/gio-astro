@@ -13,14 +13,14 @@ export const LOCALE_META: Record<(typeof LOCALES)[number], { hreflang: string; o
   mk: { hreflang: "mk", og: "mk_MK", name: "Македонски" },
   de: { hreflang: "de", og: "de_DE", name: "Deutsch" },
 };
-/** Private beta flag (accounts are invite-only while on). */
-export const betaOn = process.env.NEXT_PUBLIC_BETA !== "0";
-/** Pages anyone can read during the beta: indexable now. Gated app pages become indexable when the beta ends. */
+/** True only on a build made with NEXT_PUBLIC_BETA=1. The private beta is over, so normal builds index the app's open tools. */
+export const betaOn = process.env.NEXT_PUBLIC_BETA === "1";
+/** Pages open to everyone on every build. */
 export const PUBLIC_PATHS = ["/", "/learn/", "/how-it-works/", "/quizzes/", "/promise/", "/privacy/", "/terms/", "/credits/", "/blog/"];
 /** Public content sections (blog articles): always indexable. /daily/ is a visitor feature that overlaps the horoscope pages, so it stays out of the index. */
 export const PUBLIC_PREFIXES = ["/blog/"];
-/** Gated during beta, public tools afterwards. */
-export const TOOL_PATHS = ["/start/", "/match/", "/bond/"];
+/** Tools anyone can use with no account. Pages that show data from the device (/me/, /today/, /people/) are not listed and stay noindex. */
+export const TOOL_PATHS = ["/start/", "/match/", "/bond/", "/deep/"];
 /** Indexable routes right now (used by the sitemap and robots meta). */
 export function isIndexable(path: string): boolean {
   if (PUBLIC_PATHS.includes(path) || PUBLIC_PREFIXES.some((p) => path.startsWith(p))) return true;

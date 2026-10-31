@@ -10,8 +10,9 @@ import { useContent, useHref } from "@/lib/content-context";
 import { Aura } from "../aura/Aura";
 import { useCaptcha } from "./Captcha";
 
-// Routes anyone can open during the beta: landing, how it works, quizzes overview, lens explainers, legal, sign-in steps.
-// Everything else (profile, start, quizzes and results, match, bond, people, today, book, chart) needs an invited account.
+// The private beta is over: on a normal build nothing here gates anyone. This code only runs on a build made with NEXT_PUBLIC_BETA=1.
+// Routes anyone can open on such a build: landing, how it works, tests overview, explainers, legal, sign-in steps.
+// Everything else (profile, start, tests and results, match, bond, people, today, book, chart) then needs an invited account.
 const PUBLIC = ["", "reset", "privacy", "terms", "promise", "pricing", "learn", "credits", "partners", "how-it-works", "quizzes", "lens", "account", "account/verify", "auth/callback", "admin", "admin/emails"];
 // Localized slugs (/mk/ceni/, /de/preise/, /de/tageshoroskop/…) map back to internal route names via the shared slug map.
 const routeOf = (path: string) => { const p = parsePath(path.endsWith("/") ? path : `${path}/`); return (p ? p[1] : path).replace(/^\/|\/$/g, ""); };
@@ -19,6 +20,9 @@ const routeOf = (path: string) => { const p = parsePath(path.endsWith("/") ? pat
 const PUBLIC_SECTIONS = ["play", "daily", "invite", "blog", "how-it-works", "challenge", "horoscope", "numerology", "zodiac", "weekly-horoscope", "monthly-horoscope", "horoscope-2027", "sign-compatibility", "rising-sign", "moon-sign", "birth-chart", "moon-calendar", "mercury-retrograde"];
 const inSection = (r: string) => PUBLIC_SECTIONS.some((s) => r === s || r.startsWith(`${s}/`));
 export const isPublicRoute = (path: string) => { const r = routeOf(path); return PUBLIC.includes(r) || inSection(r) || r === "upgrade" || r === "premium" || (r.startsWith("premium/") && r !== "premium/checkout"); };
+
+/** Is this route closed to a signed-out visitor? Never, unless the private beta is on. */
+export const routeGated = (path: string, privateBeta: boolean) => privateBeta && !isPublicRoute(path);
 
 /** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
 export function useBetaLocked(): boolean {
@@ -29,7 +33,7 @@ export function useBetaLocked(): boolean {
 /** In private beta, app pages show a compact invite gate to logged-out visitors, inside the normal layout. */
 export function BetaGate({ children }: { children: React.ReactNode }) {
   const path = usePathname() || "/"; const a = useAccount(); const { c } = useContent(); const f = useFlags();
-  if (!f.private_beta || !accountsEnabled || isPublicRoute(path)) return <>{children}</>;
+  if (!accountsEnabled || !routeGated(path, f.private_beta)) return <>{children}</>;
   if (!a.ready) return <p className="py-20 text-center text-dim">{c.site.common.loading}</p>;
   if (a.user) return <>{children}</>;
   return <BetaLockedCard />;

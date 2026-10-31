@@ -80,7 +80,7 @@ const axes: Record<Axis, { name: string; poles: Pair }> = {
 const sources: Record<SourceId, string> = { chart: "Birth chart", bigFive: "Big Five", bigFiveLong: "Big Five (long)", fourLetter: "Four-letter test", adaptive: "Deep Read", play: "Play Mirror" };
 
 export const adaptive = {
-  meta: { title: "Deep Read", description: "An adaptive personality test: real dilemmas where every choice costs something, quick gut reactions and a test that follows your answers." },
+  meta: { title: "Deep Read: adaptive personality test", description: "An adaptive personality test: real dilemmas where every choice costs something, quick gut reactions and a test that follows your answers." },
   hero: { eyebrow: "Deep Read", titleA: "No easy ", titleB: "answers", sub: "Real dilemmas where every option costs you something. The next question depends on your last one, a few are timed, and some come back in disguise to check you meant it. About four minutes." },
   how: ["Pick the option you'd really choose, cost and all", "Gold timer? Answer with your gut", "It stops when it knows you well enough"],
   begin: "Start Deep Read", again: "Take it again", minutes: "about 4 min",

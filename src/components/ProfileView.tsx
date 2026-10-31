@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import type { Profile } from "@/engine/profile";
+import type { QuizView } from "@/lib/profile";
 import { useContent, useHref, useDate } from "@/lib/content-context";
 import { Bar, Dial, EvidenceBadge, Locked, Palette, Section } from "./ui";
 import { SIGN_GLYPH, formatDegree, SIGN_ELEMENT } from "@/engine/zodiac";
@@ -30,6 +31,7 @@ import { FitCheck, BigFiveSourceNote } from "./FitCheck";
 import { PrecisionSection } from "./PrecisionResult";
 import { VoiceSummary } from "./systems/VoiceSummary";
 import { SystemsSection } from "./systems/SystemsSection";
+import { ResultsGate } from "./tests/ResultGate";
 
 const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
 function MoreLink({ k }: { k: string; pid?: string }) {
@@ -80,7 +82,7 @@ function DoshaRing({ pct }: { pct: Record<"vata" | "pitta" | "kapha", number> })
   );
 }
 
-export function QuizResultView({ id, profile, pid = "me" }: { id: QuizId; profile: Profile; pid?: string }) {
+export function QuizResultView({ id, profile, pid = "me" }: { id: QuizId; profile: QuizView; pid?: string }) {
   const { c } = useContent(); const G = useGlance();
   const q = profile.quiz; const P = c.psych; const U = c.ui.profile;
   if (id === "big-five" && q.bigFive && profile.psych) {
@@ -422,6 +424,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         </div>
       </Section>
 
+      <ResultsGate source="profile" person={person}>
       {QUIZ_IDS.map((id) => (
         <Section key={id} title={defs[id].title} aside={<EvidenceBadge e={defs[id].evidence} />}>
           {profile.quiz[defs[id].resultKey]
@@ -430,6 +433,7 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
         </Section>
       ))}
       <PrecisionSection person={person} profile={profile} />
+      </ResultsGate>
       <SystemsSection person={person} profile={profile} isMe={isMe} />
       <LensSheet k={sheet} profile={profile} personId={isMe ? undefined : person.id} personName={person.name} onClose={closeSheet} />
     </div>

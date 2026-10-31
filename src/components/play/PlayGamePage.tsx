@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { GAME_DIMS, PLAY_GAMES, playKey, type PlayGameId, type PlayGameResult, type PlayResults } from "@/engine/play";
 import { useContent, useHref } from "@/lib/content-context";
-import { findPerson, repo, useStore } from "@/lib/store";
+import { repo, subjectOf, useStore } from "@/lib/store";
 import { track } from "@/lib/track";
 import { Celebration } from "../art/Celebration";
 import { usePlay } from "./text";
@@ -23,7 +23,7 @@ const GAMES: Record<PlayGameId, (p: { onDone: (r: PlayGameResult) => void }) => 
 
 export function PlayGamePage({ game }: { game: PlayGameId }) {
   const P = usePlay(); const { c } = useContent(); const h = useHref(); const s = useStore(); const reduce = useReduce();
-  const forId = useSearchParams().get("for") ?? "me"; const person = findPerson(s, forId);
+  const forId = useSearchParams().get("for") ?? "me"; const person = subjectOf(s, forId);
   const [phase, setPhase] = useState<"intro" | "play" | "done">("intro"); const [res, setRes] = useState<PlayGameResult | null>(null);
   const [open, setOpen] = useState<string | null>(GAME_DIMS[game][0]); const [run, setRun] = useState(0);
   const G = P.games[game]; const Game = GAMES[game];

@@ -2,7 +2,8 @@
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { BirthForm } from "../BirthForm";
-import { repo, useStore } from "@/lib/store";
+import { DatePicker } from "../DatePicker";
+import { repo, useStore, type StoredPerson } from "@/lib/store";
 import { useHref, useContent } from "@/lib/content-context";
 import { PageHero } from "../ui";
 import { ZodiacWheel } from "../art/ZodiacWheel";
@@ -33,29 +34,69 @@ function Casting({ onDone }: { onDone: () => void }) {
   );
 }
 
-export function QuickStart() {
-  const s = useStore(); const router = useRouter(); const h = useHref(); const U = useContent().c.ui.quickStart;
-  const sp = useSearchParams(); const preDate = sp.get("date");
-  const [casting, setCasting] = useState(false);
-  const [quick, setQuick] = useState(sp.get("quick") === "1");
-  const [leaving, setLeaving] = useState(false);
-  const attune = leaving || (s !== null && !quick && (!s.me || sp.get("attune") === "1"));
-  if (attune) return (
-    <Ritual initial={s!.me ?? (preDate && /^\d{4}-\d{2}-\d{2}$/.test(preDate) ? { date: preDate } : undefined)}
-      onDone={(p) => { setLeaving(true); repo.saveMe(p); router.push(h("/me/")); }} onQuick={() => setQuick(true)} onClose={() => router.push(h(s!.me ? "/me/" : "/"))} />
+/** The default first run: name if you like, birth date, go. */
+function QuickForm({ preDate, onGo }: { preDate: string | null; onGo: (p: StoredPerson) => void }) {
+  const { c } = useContent(); const U = c.ui.birthForm; const Q = c.ui.tests.quick;
+  const [name, setName] = useState(""); const [date, setDate] = useState(preDate ?? ""); const [err, setErr] = useState("");
+  const go = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return setErr(U.errDate);
+    const y = Number(date.slice(0, 4)); if (y < 1800 || y > 2100) return setErr(U.errYear);
+    onGo({ id: "me", name: name.trim(), date, time: null, place: null, utcOffsetOverride: null, quiz: {}, createdAt: new Date().toISOString() });
+  };
+  return (
+    <form onSubmit={go} className="space-y-4" data-testid="quick-form">
+      <div>
+        <label className="label" htmlFor="quick-name">{Q.name} <span className="opacity-60">({c.site.common.optional})</span></label>
+        <input id="quick-name" className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder={U.namePh} autoComplete="given-name" data-testid="quick-name" />
+      </div>
+      <div>
+        <label className="label">{U.date}</label>
+        <DatePicker value={date} onChange={setDate} minYear={1900} />
+      </div>
+      {err && <p role="alert" className="text-sm text-rose">{err}</p>}
+      <button className="btn-primary w-full py-3.5 text-base" type="submit" data-testid="quick-go">{c.ui.quickStart.reveal}</button>
+    </form>
   );
+}
+
+export function QuickStart() {
+  const s = useStore(); const router = useRouter(); const h = useHref(); const { c } = useContent(); const U = c.ui.quickStart; const Q = c.ui.tests.quick;
+  const sp = useSearchParams(); const raw = sp.get("date"); const preDate = raw && /^\d{4}-\d{2}-\d{2}$/.test(raw) ? raw : null;
+  const [casting, setCasting] = useState(false);
+  // The quick path is the default. The attunement stays one tap away, and /start/?attune=1 still opens it straight.
+  const [ritual, setRitual] = useState(sp.get("attune") === "1");
+  const [full, setFull] = useState(false);
+  const [leaving, setLeaving] = useState(false);
+  const attune = leaving || (s !== null && ritual);
+  if (attune) return (
+    <Ritual initial={s!.me ?? (preDate ? { date: preDate } : undefined)}
+      onDone={(p) => { setLeaving(true); repo.saveMe(p); router.push(h("/me/")); }} onQuick={() => setRitual(false)} onClose={() => router.push(h(s!.me ? "/me/" : "/"))} />
+  );
+  const me = s?.me ?? null;
+  const save = (p: StoredPerson) => {
+    const nameless = !p.name.trim();
+    // Keeps what the form does not know about: raw answers, test dates and the aura.
+    repo.saveMe({ ...(me ?? {}), ...p, id: "me", name: nameless ? Q.noName : p.name, noName: nameless || undefined });
+    if (me) router.push(h("/me/")); else setCasting(true);
+  };
   return (
     <div>
       {casting && <Casting onDone={() => router.push(h("/me/"))} />}
-      <PageHero eyebrow={s?.me ? U.eyebrowEdit : U.eyebrowNew} emblem="chart" img="cliffs"
-        title={s?.me ? <>{U.editA}<span className="italic text-aurora">{U.editB}</span></> : <>{U.newA}<span className="italic text-aurora">{U.newB}</span></>}
-        sub={U.sub} />
+      <PageHero eyebrow={me ? U.eyebrowEdit : U.eyebrowNew} emblem="chart" img="cliffs"
+        title={me ? <>{U.editA}<span className="italic text-aurora">{U.editB}</span></> : <>{U.newA}<span className="italic text-aurora">{U.newB}</span></>}
+        sub={me ? undefined : U.sub} />
       <div className="card mx-auto max-w-2xl">
-        {s === null ? null : (
-          <BirthForm key={s.me?.id ?? "new"} initial={s.me ?? (preDate && /^\d{4}-\d{2}-\d{2}$/.test(preDate) ? { date: preDate, time: "" } : undefined)} submitLabel={s.me ? U.save : U.reveal}
-            onSubmit={(p) => { const first = !s.me; repo.saveMe({ ...p, id: "me" }); if (first) setCasting(true); else router.push(h("/me/")); }} />
-        )}
+        {s === null ? null : me || full ? (
+          <BirthForm key={me?.id ?? "new"} nameOptional initial={me ? { ...me, name: me.noName ? "" : me.name } : preDate ? { date: preDate, time: "" } : undefined} submitLabel={me ? U.save : U.reveal} onSubmit={save} />
+        ) : <QuickForm preDate={preDate} onGo={save} />}
       </div>
+      {s !== null && !me && (
+        <div className="mx-auto mt-4 flex max-w-2xl flex-col items-center gap-2 text-sm">
+          <button type="button" className="text-gold underline decoration-dotted underline-offset-4" onClick={() => setFull(!full)} data-testid="quick-full">{full ? Q.simple : Q.full}</button>
+          <button type="button" className="text-dim underline decoration-dotted underline-offset-4" onClick={() => setRitual(true)} data-testid="quick-ritual">{Q.ritual}</button>
+        </div>
+      )}
       <div className="mx-auto mt-6 grid max-w-2xl grid-cols-3 gap-3 text-center text-xs text-dim">
         <p>{U.f1}</p><p>{U.f2}</p><p>{U.f3}</p>
       </div>

@@ -1,7 +1,7 @@
 import type { AdaptiveContent } from "../en/adaptive";
 
 export const adaptive: AdaptiveContent = {
-  meta: { title: "Tiefenlesung", description: "Ein anpassungsfähiger Persönlichkeitstest: echte Dilemmas, bei denen jede Wahl etwas kostet, schnelle Bauchreaktionen und ein Test, der deinen Antworten folgt." },
+  meta: { title: "Tiefenlesung: adaptiver Persönlichkeitstest", description: "Ein Test, der sich anpasst: echte Dilemmas, bei denen jede Wahl etwas kostet, schnelle Bauchreaktionen und Fragen, die deinen Antworten folgen." },
   hero: { eyebrow: "Tiefenlesung", titleA: "Keine leichten ", titleB: "Antworten", sub: "Echte Dilemmas, bei denen dich jede Option etwas kostet. Die nächste Frage hängt von deiner letzten ab, ein paar laufen auf Zeit, und manche kommen verkleidet zurück, um zu prüfen, ob du es so gemeint hast. Etwa vier Minuten." },
   how: ["Wähl die Option, die du wirklich nehmen würdest, mit allen Kosten", "Goldener Timer? Antworte aus dem Bauch", "Er hört auf, wenn er dich gut genug kennt"],
   begin: "Tiefenlesung starten", again: "Nochmal machen", minutes: "etwa 4 Min.",
