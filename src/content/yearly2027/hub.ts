@@ -1,0 +1,133 @@
+import type { YearlyHub } from "./types";
+
+export const HUB: Record<string, YearlyHub> = {
+  en: {
+    crumb: "Horoscope 2027",
+    h1: "Horoscope 2027: the real sky of the year, sign by sign",
+    metaTitle: "Horoscope 2027: all 12 signs, love, career, money",
+    description: "Horoscope 2027 for all 12 signs, from the real sky: Saturn in Aries, Jupiter into Virgo on July 26, a total solar eclipse on August 2. Find your year.",
+    lead: "Saturn holds Aries all year, Jupiter moves from Leo to Virgo on July 26, and a total solar eclipse falls on August 2. Pick your sign to see what that touches.",
+    bigPicture: {
+      title: "The big picture of 2027",
+      paras: [
+        "Most yearly horoscopes could be reprinted for any year. These could not. We computed where the planets really stand in 2027, then worked out which part of life each move touches for each sign, so a date on the Leo page means something different from the same date on the Pisces page.",
+        "The slow backdrop is steady. Saturn and Neptune stay in Aries all year, Uranus stays in Gemini and Pluto stays in Aquarius. Jupiter is the one that changes the mood: it spends the first half of the year in Leo, turning direct on April 13, and enters Virgo on July 26. Think of that as a shift from wanting to be seen to wanting things to work.",
+        "Twice, on April 3 and July 12, Jupiter and Saturn meet in an exact trine, an easy angle between the planet that widens things and the planet that makes them last. Jupiter then squares Uranus on September 10, a livelier angle that tends to shake up plans made in a hurry.",
+        "Mars gives the year a slow start. It turns retrograde on January 10 in Virgo, backs into Leo on February 21, and turns direct on April 1. Mercury turns retrograde three times: from February 9 to March 3, from June 10 to July 4, and from October 7 to October 28. Venus does not turn retrograde at all in 2027.",
+        "Five eclipses mark the year. The annular solar eclipse of February 6 in Aquarius cannot be seen from Europe. The total solar eclipse of August 2 at 9 degrees Leo can, as a partial one: at its peak the Moon covers about 66% of the Sun from Skopje, 55% from Zurich, 50% from Munich, 47% from Vienna and 34% from Berlin. The three lunar eclipses, on February 21, July 18 and August 17, are all penumbral, so faint that most people would not notice them.",
+      ],
+    },
+    datesTitle: "The main dates of 2027",
+    datesIntro: "Computed for Central European time. Each sign page translates these into the part of life they touch for you.",
+    howTo: {
+      title: "How to read your 2027 horoscope",
+      paras: [
+        "Each page counts houses from your Sun sign, one sign to a house. If Jupiter stands in Virgo, that is the 1st house for Virgo, the 10th for Sagittarius and the 7th for Pisces. So the same planet can mean a fresh start for one reader, a career question for another and a relationship matter for a third.",
+        "If you know your rising sign, read that page as well. It often fits daily events better, while your Sun sign page speaks to the bigger direction of the year.",
+        "Read all of it as a mirror, not a forecast. A sky pattern describes a theme you may want to think about. It cannot tell you what is going to happen, and what you do with the theme is yours.",
+      ],
+    },
+    signsLabel: "The 12 signs in 2027",
+    method: { title: "How these dates were worked out", para: "Every date on this page comes from our sky engine, which computes the planets for 2027 rather than copying a table. Dates use Central European time, the clock in Skopje, Berlin and Vienna, so elsewhere an event can fall a day earlier or later. Houses are counted from your Sun sign, one sign to a house. Treat all of this as a mirror for reflection, not a forecast." },
+    faq: [
+      ["When is Mercury retrograde in 2027?", "Mercury turns retrograde three times: from February 9 to March 3, from June 10 to July 4, and from October 7 to October 28. Each one starts in a water sign and backs into an air sign, which suits rereading, rewriting and second conversations."],
+      ["Is Venus retrograde in 2027?", "No. Venus turned direct on November 14, 2026 and has no station at all during 2027. It moves steadily through the signs, so it makes a useful calendar for love and money questions."],
+      ["When are the eclipses in 2027?", "There are five: an annular solar eclipse on February 6, penumbral lunar eclipses on February 21, July 18 and August 17, and a total solar eclipse on August 2. Only the August 2 eclipse is easy to see from Europe, as a partial eclipse in the late morning."],
+      ["What is the biggest astrological change in 2027?", "Jupiter entering Virgo on July 26. The year's other slow planets stay in one sign throughout, so Jupiter's move is the clearest turning point, and it lands a week before the total solar eclipse of August 2."],
+      ["Are these predictions?", "No. They describe the real positions of the planets and the themes astrologers link with them. They are prompts for reflection, and nothing here can promise an outcome in love, money or health."],
+    ],
+    links: { zodiac: "sign profile", daily: "daily horoscope", weekly: "weekly horoscope", monthly: "monthly horoscope", personalYear: "Personal year 2027", personalYearSub: "Your number for the year", mercury: "Mercury retrograde", mercurySub: "All dates and what they mean", rising: "Rising sign calculator", risingSub: "Read a second page for 2027" },
+    sky: {
+      bodies: { mars: "Mars", mercury: "Mercury", jupiter: "Jupiter", saturn: "Saturn" },
+      signsIn: { aries: "Aries", taurus: "Taurus", gemini: "Gemini", cancer: "Cancer", leo: "Leo", virgo: "Virgo", libra: "Libra", scorpio: "Scorpio", sagittarius: "Sagittarius", capricorn: "Capricorn", aquarius: "Aquarius", pisces: "Pisces" },
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], date: "{m} {d}",
+      enters: "{a} enters {s}", retro: "{a} turns retrograde at {p}", direct: "{a} turns direct at {p}", eclipses: { "annular-solar": "Annular solar eclipse at {p}", "total-solar": "Total solar eclipse at {p}", "penumbral-lunar": "Penumbral lunar eclipse at {p}" }, trine: "Jupiter trine Saturn at {p}", square: "Jupiter square Uranus at {p}",
+    },
+  },
+  de: {
+    crumb: "Jahreshoroskop 2027",
+    h1: "Jahreshoroskop 2027: der echte Himmel, Sternzeichen für Sternzeichen",
+    metaTitle: "Jahreshoroskop 2027: alle Sternzeichen im Überblick",
+    description: "Jahreshoroskop 2027 für alle 12 Sternzeichen, berechnet aus dem echten Himmel: Saturn im Widder, Jupiter ab 26. Juli in der Jungfrau. Finde dein Jahr.",
+    lead: "Saturn bleibt das ganze Jahr im Widder, Jupiter wechselt am 26. Juli in die Jungfrau, und am 2. August verdeckt der Mond die Sonne. Wähle dein Sternzeichen und sieh, was das für dich berührt.",
+    bigPicture: {
+      title: "Das große Bild für 2027",
+      paras: [
+        "Die meisten Jahreshoroskope ließen sich für jedes beliebige Jahr nachdrucken. Unsere nicht. Wir haben berechnet, wo die Planeten 2027 tatsächlich stehen, und dann für jedes Sternzeichen ermittelt, welchen Lebensbereich jede Bewegung berührt. Deshalb bedeutet dasselbe Datum auf der Löwe-Seite etwas anderes als auf der Fische-Seite.",
+        "Der langsame Hintergrund bleibt ruhig. Saturn und Neptun stehen das ganze Jahr im Widder, Uranus in den Zwillingen, Pluto im Wassermann. Für den Stimmungswechsel sorgt Jupiter: Er verbringt die erste Jahreshälfte im Löwen, wird am 13. April direktläufig und zieht am 26. Juli in die Jungfrau weiter. Grob gesagt verschiebt sich die Frage von „Wer sieht mich?“ zu „Was funktioniert wirklich?“.",
+        "Zweimal, am 3. April und am 12. Juli, stehen Jupiter und Saturn in einem exakten Trigon, einem entspannten Winkel zwischen dem Planeten, der Dinge weitet, und dem, der sie haltbar macht. Am 10. September folgt das Quadrat von Jupiter zu Uranus, ein unruhigerer Winkel, der hastig gefasste Pläne gern noch einmal durcheinanderbringt.",
+        "Mars lässt das Jahr gemächlich anlaufen. Am 10. Januar wird er in der Jungfrau rückläufig, am 21. Februar weicht er in den Löwen zurück, am 1. April läuft er wieder direkt. Merkur ist dreimal rückläufig: vom 9. Februar bis zum 3. März, vom 10. Juni bis zum 4. Juli und vom 7. Oktober bis zum 28. Oktober. Die Venus dagegen bleibt 2027 durchgehend direktläufig.",
+        "Fünf Finsternisse setzen Akzente. Die ringförmige Sonnenfinsternis vom 6. Februar im Wassermann ist von Europa aus nicht zu sehen. Die totale Sonnenfinsternis vom 2. August bei 9 Grad Löwe erscheint bei uns als partielle: Auf ihrem Höhepunkt verdeckt der Mond rund 55 % der Sonne über Zürich, 50 % über München, 47 % über Wien und 34 % über Berlin. Die drei Mondfinsternisse vom 21. Februar, 18. Juli und 17. August sind Halbschatten-Finsternisse, so blass, dass sie den meisten Menschen gar nicht auffallen.",
+      ],
+    },
+    datesTitle: "Die wichtigsten Termine 2027",
+    datesIntro: "Berechnet für mitteleuropäische Zeit. Jede Sternzeichen-Seite übersetzt diese Termine in den Lebensbereich, den sie für dich berühren.",
+    howTo: {
+      title: "So liest du dein Jahreshoroskop 2027",
+      paras: [
+        "Jede Seite zählt die Häuser von deinem Sonnenzeichen aus, ein Zeichen pro Haus. Steht Jupiter in der Jungfrau, ist das für die Jungfrau das 1. Haus, für den Schützen das 10. und für die Fische das 7. Derselbe Planet kann also für die eine einen Neuanfang bedeuten, für den anderen eine Berufsfrage und für die dritte ein Beziehungsthema.",
+        "Wenn du deinen Aszendenten kennst, lies auch diese Seite. Sie passt oft besser zum Alltag, während dein Sonnenzeichen eher die große Richtung des Jahres beschreibt.",
+        "Nimm alles als Spiegel, nicht als Vorhersage. Eine Himmelskonstellation beschreibt ein Thema, über das du nachdenken kannst. Was geschieht, sagt sie nicht, und was du daraus machst, bleibt deine Sache.",
+      ],
+    },
+    signsLabel: "Die 12 Sternzeichen 2027",
+    method: { title: "So entstehen diese Termine", para: "Jeder Termin auf dieser Seite stammt aus unserer Himmelsberechnung, die die Planeten für 2027 tatsächlich errechnet, statt eine Tabelle abzuschreiben. Alle Angaben gelten für mitteleuropäische Zeit, also für Deutschland, Österreich und die Schweiz. Die Häuser zählen wir von deinem Sonnenzeichen aus, ein Zeichen pro Haus. Lies das alles als Spiegel zum Nachdenken, nicht als Vorhersage." },
+    faq: [
+      ["Wann ist Merkur 2027 rückläufig?", "Merkur ist dreimal rückläufig: vom 9. Februar bis zum 3. März, vom 10. Juni bis zum 4. Juli und vom 7. Oktober bis zum 28. Oktober. Jede dieser Phasen beginnt in einem Wasserzeichen und endet in einem Luftzeichen. Das passt gut zu allem, was sich noch einmal lesen, überarbeiten oder nachbesprechen lässt."],
+      ["Ist die Venus 2027 rückläufig?", "Nein. Die Venus wurde am 14. November 2026 direktläufig und hat 2027 keinen einzigen Stillstand. Sie zieht gleichmäßig durch die Zeichen und taugt deshalb gut als Kalender für Fragen rund um Liebe und Geld."],
+      ["Wann sind 2027 Sonnen- und Mondfinsternisse?", "Es gibt fünf: eine ringförmige Sonnenfinsternis am 6. Februar, Halbschatten-Mondfinsternisse am 21. Februar, 18. Juli und 17. August sowie eine totale Sonnenfinsternis am 2. August. Gut zu sehen ist bei uns nur die vom 2. August, als partielle Finsternis am späten Vormittag."],
+      ["Was ist 2027 astrologisch die größte Veränderung?", "Jupiters Wechsel in die Jungfrau am 26. Juli. Die anderen langsamen Planeten bleiben das ganze Jahr im selben Zeichen, deshalb ist das der deutlichste Wendepunkt, und er liegt nur eine Woche vor der totalen Sonnenfinsternis vom 2. August."],
+      ["Sind das Vorhersagen?", "Nein. Die Seiten beschreiben die echten Planetenstände und die Themen, die man in der Astrologie mit ihnen verbindet. Sie sind Anstöße zum Nachdenken, und nichts davon kann dir in Liebe, Geld oder Gesundheit ein Ergebnis versprechen."],
+    ],
+    links: { zodiac: "Sternzeichen-Profil", daily: "Tageshoroskop", weekly: "Wochenhoroskop", monthly: "Monatshoroskop", personalYear: "Persönliches Jahr 2027", personalYearSub: "Deine Zahl für das Jahr", mercury: "Merkur rückläufig", mercurySub: "Alle Termine und ihre Bedeutung", rising: "Aszendent berechnen", risingSub: "Eine zweite Seite für 2027" },
+    sky: {
+      bodies: { mars: "Mars", mercury: "Merkur", jupiter: "Jupiter", saturn: "Saturn" },
+      signsIn: { aries: "Widder", taurus: "Stier", gemini: "Zwillinge", cancer: "Krebs", leo: "Löwe", virgo: "Jungfrau", libra: "Waage", scorpio: "Skorpion", sagittarius: "Schütze", capricorn: "Steinbock", aquarius: "Wassermann", pisces: "Fische" },
+      months: ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"], date: "{d}. {m}",
+      enters: "{a} wechselt ins Zeichen {s}", retro: "{a} wird rückläufig bei {p}", direct: "{a} wird direktläufig bei {p}", eclipses: { "annular-solar": "Ringförmige Sonnenfinsternis bei {p}", "total-solar": "Totale Sonnenfinsternis bei {p}", "penumbral-lunar": "Halbschatten-Mondfinsternis bei {p}" }, trine: "Jupiter im Trigon zu Saturn bei {p}", square: "Jupiter im Quadrat zu Uranus bei {p}",
+    },
+  },
+  mk: {
+    crumb: "Хороскоп 2027",
+    h1: "Хороскоп 2027: вистинското небо на годината, знак по знак",
+    metaTitle: "Хороскоп 2027: сите 12 знаци, љубов, кариера, пари",
+    description: "Хороскоп 2027 за сите 12 знаци, од вистинското небо: Сатурн во Овен, Јупитер во Девица од 26 јули, затемнување на 2 август. Најди ја својата година.",
+    lead: "Сатурн цела година останува во Овен, Јупитер на 26 јули преминува од Лав во Девица, а на 2 август има тотално затемнување на Сонцето. Избери го својот знак и види што значи тоа за тебе.",
+    bigPicture: {
+      title: "Големата слика на 2027",
+      paras: [
+        "Повеќето годишни хороскопи може да се препечатат за која било година. Овие не можат. Пресметавме каде навистина стојат планетите во 2027, а потоа за секој знак видовме кој дел од животот го допира секое движење. Затоа истиот датум значи едно на страницата за Лав, а сосема друго на страницата за Риби.",
+        "Бавната позадина е мирна. Сатурн и Нептун цела година се во Овен, Уран во Близнаци, Плутон во Водолија. Расположението го менува Јупитер: првата половина од годината е во Лав, на 13 април станува директен, а на 26 јули влегува во Девица. Кажано едноставно, прашањето се поместува од „кој ме гледа“ кон „што навистина функционира“.",
+        "Двапати, на 3 април и на 12 јули, Јупитер и Сатурн се во точен трин, лесен агол меѓу планетата што ги шири работите и планетата што им дава трајност. На 10 септември доаѓа квадрат меѓу Јупитер и Уран, понемирен агол што знае да ги протресе плановите правени на брзина.",
+        "Марс ѝ дава на годината бавен почеток. На 10 јануари станува ретрограден во Девица, на 21 февруари се враќа во Лав, а на 1 април повторно станува директен. Меркур е ретрограден трипати: од 9 февруари до 3 март, од 10 јуни до 4 јули и од 7 октомври до 28 октомври. Венера пак во 2027 воопшто не станува ретроградна.",
+        "Годината ја обележуваат пет затемнувања. Прстенестото затемнување на Сонцето на 6 февруари во Водолија не се гледа од Европа. Тоталното затемнување на Сонцето на 2 август, на 9 степени во Лав, кај нас се гледа како делумно: на врвот Месечината покрива околу 66% од Сонцето гледано од Скопје. Трите затемнувања на Месечината, на 21 февруари, 18 јули и 17 август, се во полусенка и толку се бледи што повеќето луѓе не ги ни забележуваат.",
+      ],
+    },
+    datesTitle: "Главните датуми во 2027",
+    datesIntro: "Пресметано по средноевропско време. Секоја страница за знак ги преведува овие датуми во делот од животот што го допираат кај тебе.",
+    howTo: {
+      title: "Како да го читаш својот хороскоп за 2027",
+      paras: [
+        "Секоја страница ги брои домовите од твојот сончев знак, по еден знак за дом. Ако Јупитер е во Девица, тоа за Девица е 1-виот дом, за Стрелец 10-тиот, а за Риби 7-миот. Значи истата планета на еден може да му значи нов почеток, на друг прашање за кариерата, а на трет тема во врската.",
+        "Ако го знаеш својот асцендент, прочитај ја и таа страница. Таа често подобро се вклопува во секојдневието, а сончевиот знак повеќе ја опишува големата насока на годината.",
+        "Читај го сето ова како огледало, а не како прогноза. Распоредот на небото опишува тема за размислување. Не може да ти каже што ќе се случи, а што ќе направиш со темата останува твое.",
+      ],
+    },
+    signsLabel: "12-те знаци во 2027",
+    method: { title: "Како се пресметани овие датуми", para: "Секој датум на оваа страница доаѓа од нашата пресметка на небото, која навистина ги пресметува планетите за 2027, наместо да препишува табела. Датумите се по средноевропско време, како во Скопје, па на други места настанот може да падне ден порано или подоцна. Домовите се бројат од твојот сончев знак, по еден знак за дом. Сето ова читај го како огледало за размислување, а не како прогноза." },
+    faq: [
+      ["Кога е Меркур ретрограден во 2027?", "Меркур е ретрограден трипати: од 9 февруари до 3 март, од 10 јуни до 4 јули и од 7 октомври до 28 октомври. Секој од овие периоди почнува во воден знак и завршува во воздушен, што добро им одговара на повторното читање, преправањето и вторите разговори."],
+      ["Дали Венера е ретроградна во 2027?", "Не. Венера стана директна на 14 ноември 2026 и во текот на 2027 нема ниту една станица. Рамномерно минува низ знаците, па е корисен календар за прашања за љубовта и парите."],
+      ["Кога се затемнувањата во 2027?", "Има пет: прстенесто затемнување на Сонцето на 6 февруари, затемнувања на Месечината во полусенка на 21 февруари, 18 јули и 17 август, и тотално затемнување на Сонцето на 2 август. Од Европа лесно се гледа само она на 2 август, како делумно затемнување кон пладне."],
+      ["Која е најголемата астролошка промена во 2027?", "Влегувањето на Јупитер во Девица на 26 јули. Другите бавни планети цела година остануваат во еден знак, па ова е најјасната пресвртница, а паѓа само недела пред тоталното затемнување на Сонцето на 2 август."],
+      ["Дали ова се предвидувања?", "Не. Страниците ги опишуваат вистинските положби на планетите и темите што астрологијата ги поврзува со нив. Тоа се поттици за размислување, и ништо овде не може да ти вети исход во љубовта, парите или здравјето."],
+    ],
+    links: { zodiac: "профил на знакот", daily: "дневен хороскоп", weekly: "неделен хороскоп", monthly: "месечен хороскоп", personalYear: "Лична година 2027", personalYearSub: "Твојот број за годината", mercury: "Ретрограден Меркур", mercurySub: "Сите датуми и што значат", rising: "Калкулатор за асцендент", risingSub: "Прочитај и втора страница за 2027" },
+    sky: {
+      bodies: { mars: "Марс", mercury: "Меркур", jupiter: "Јупитер", saturn: "Сатурн" },
+      signsIn: { aries: "Овен", taurus: "Бик", gemini: "Близнаци", cancer: "Рак", leo: "Лав", virgo: "Девица", libra: "Вага", scorpio: "Скорпија", sagittarius: "Стрелец", capricorn: "Јарец", aquarius: "Водолија", pisces: "Риби" },
+      months: ["јануари", "февруари", "март", "април", "мај", "јуни", "јули", "август", "септември", "октомври", "ноември", "декември"], date: "{d} {m}",
+      enters: "{a} влегува во {s}", retro: "{a} станува ретрограден на {p}", direct: "{a} станува директен на {p}", eclipses: { "annular-solar": "Прстенесто затемнување на Сонцето на {p}", "total-solar": "Тотално затемнување на Сонцето на {p}", "penumbral-lunar": "Затемнување на Месечината во полусенка на {p}" }, trine: "Јупитер во трин со Сатурн на {p}", square: "Јупитер во квадрат со Уран на {p}",
+    },
+  },
+};
