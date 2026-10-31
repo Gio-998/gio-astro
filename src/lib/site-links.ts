@@ -9,5 +9,6 @@ export type SiteLink = { href: string; title: string; desc: string };
 /** Internal paths with their labels, daily horoscope first. Turn a href into a URL with localizedPath. */
 export function siteLinks(lang: string): SiteLink[] {
   const N = navFor(lang);
-  return [{ href: "/horoscope/", title: N.horoscope.label, desc: N.horoscope.desc }, ...N.groups.astrology.items, ...N.groups.discover.items.filter((i) => i.href === "/numerology/")].map(({ href, title, desc }) => ({ href, title, desc }));
+  const hubs = ["/sign-compatibility/", "/numerology/"];
+  return [{ href: "/horoscope/", title: N.horoscope.label, desc: N.horoscope.desc }, ...N.groups.astrology.items, ...[...N.groups.bonds.items, ...N.groups.numerology.items].filter((i) => hubs.includes(i.href))].map(({ href, title, desc }) => ({ href, title, desc }));
 }

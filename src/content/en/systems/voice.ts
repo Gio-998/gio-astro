@@ -35,7 +35,7 @@ export const voice = {
   // Why-chips
   w: {
     sun: (s: string, deg: string) => `Sun ${deg} ${s}`, moon: (s: string, deg: string) => `Moon ${deg} ${s}`, chiron: (s: string, deg: string) => `Chiron ${deg} ${s}`,
-    node: (s: string) => `North Node in ${s}`, attach: (name: string, ax: number, av: number) => `Attachment quiz: ${name} (worry ${ax}, distance ${av})`,
+    node: (s: string) => `North Node in ${s}`, attach: (name: string, ax: number, av: number) => `Attachment test: ${name} (worry ${ax}, distance ${av})`,
     item: (quiz: string, ans: string) => `${quiz}: you answered "${ans}"`, aura: "Your aura check-in", trait: (t: string, v: number) => `Big Five ${t}: ${v}/100`,
     birth: (place: string) => `Birth time and place: ${place}`, noTime: "Birth time unknown (noon used)", bio: (p: number, e: number, i: number) => `Biorhythm today: body ${p}, feelings ${e}, mind ${i}`,
     feast: (f: string) => `Church and folk calendar: ${f}`, transit: (t: string) => `Sky today: ${t}`, care: (n: string, c: string) => `${n}'s care style: ${c}`,

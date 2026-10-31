@@ -111,7 +111,7 @@ export const flags = {
   careMismatch: (a: string, b: string, ga: string, gb: string) => `Care-style mismatch: ${a} gives ${ga} but most needs something else, and ${b} gives ${gb}. You may each be loving in ways the other doesn't register. Tell each other exactly what works.`,
   sameShadow: (s: string) => `You share the same main shadow (${s}). You'll understand it in each other, and may amplify it. Name it kindly when it shows.`,
   clash: "Chinese 'clash' pair: you may push each other's buttons in predictable ways. Pause before reacting.",
-  none: "No strong warning signs across your lenses. Keep the basics: kindness, honesty and repair after conflict.",
+  none: "No strong warning signs across your readings. Keep the basics: kindness, honesty and repair after conflict.",
 };
 export const bondUi = {
   eyebrow: "Your bond story",
@@ -140,8 +140,8 @@ export const bondUi = {
   traitsTitle: "Your personalities side by side",
   superTitle: "Your superpowers together",
   edgeTitle: "Your growth edges",
-  scores: (h: number, s: number) => `Across all your lenses, your Harmony is ${h} and your Spark is ${s}.`,
-  needQuiz: "Take more quizzes (both of you) to deepen this chapter.",
+  scores: (h: number, s: number) => `Across all your readings, your Harmony is ${h} and your Spark is ${s}.`,
+  needQuiz: "Take more tests (both of you) to deepen this chapter.",
   vedicLine: (n: number) => `Traditional Vedic matching gives you ${n} of 36 points.`,
   cardLine: (n: string, t: string) => `Your shared tarot card is ${n}: ${t}`,
 };

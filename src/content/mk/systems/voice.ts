@@ -34,7 +34,7 @@ export const voice: Partial<V> = {
   lvl: { low: "ниско", mid: "средно", high: "високо" },
   w: {
     sun: (s: string, deg: string) => `Сонце ${deg} ${s}`, moon: (s: string, deg: string) => `Месечина ${deg} ${s}`, chiron: (s: string, deg: string) => `Хирон ${deg} ${s}`,
-    node: (s: string) => `Северен јазол во ${s}`, attach: (name: string, ax: number, av: number) => `Квиз за приврзаност: ${name} (грижа ${ax}, дистанца ${av})`,
+    node: (s: string) => `Северен јазол во ${s}`, attach: (name: string, ax: number, av: number) => `Тест за приврзаност: ${name} (грижа ${ax}, дистанца ${av})`,
     item: (quiz: string, ans: string) => `${quiz}: одговори „${ans}“`, aura: "Твојата проверка на аурата", trait: (t: string, v: number) => `Big Five ${t}: ${v}/100`,
     birth: (place: string) => `Време и место на раѓање: ${place}`, noTime: "Непознато време на раѓање (земено пладне)", bio: (p: number, e: number, i: number) => `Биоритам денес: тело ${p}, чувства ${e}, ум ${i}`,
     feast: (f: string) => `Црковен и народен календар: ${f}`, transit: (t: string) => `Небото денес: ${t}`, care: (n: string, c: string) => `Стил на грижа на ${n}: ${c}`,

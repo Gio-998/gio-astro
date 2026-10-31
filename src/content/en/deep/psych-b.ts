@@ -75,7 +75,7 @@ export const temperamentDeep: Record<Temperament, { title: string; story: string
 };
 
 export const explorerDeep = {
-  what: "This lens is inspired by a French neurocognitive approach which describes two modes of the mind: an 'autopilot' mode that runs on habits, certainty and what worked before, and an 'explorer' mode that adapts, tolerates nuance and reasons afresh. Both are useful; the art is switching at the right time.",
+  what: "This test is inspired by a French neurocognitive approach which describes two modes of the mind: an 'autopilot' mode that runs on habits, certainty and what worked before, and an 'explorer' mode that adapts, tolerates nuance and reasons afresh. Both are useful; the art is switching at the right time.",
   low: "You lean toward autopilot mode: efficient, decisive and grounded in experience. You get things done quickly and don't waste energy reinventing wheels. Your growth edge is noticing when a situation is genuinely new, and letting curiosity take over before stress does.",
   mid: "You move between autopilot and explorer depending on the situation. You can rely on habits and also step back to rethink. Your growth edge is noticing which mode you are in under stress.",
   high: "You lean toward explorer mode: curious, flexible, comfortable with nuance and open to changing your mind. You handle novelty well. Your growth edge is trusting good habits and decisions, so you don't exhaust yourself re-examining everything.",
