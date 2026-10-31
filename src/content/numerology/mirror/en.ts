@@ -402,6 +402,274 @@ export const mirrorEn: MirrorSet = {
    }
   ]
  },
+ "06-06": {
+  "title": "Mirror hour 06:06: the quiet before the day claims you",
+  "lead": "06:06 comes before the day has made any demands. It doubles the number of care and home, and asks who you are before anybody needs you.",
+  "sections": [
+   {
+    "title": "What 06:06 can mean",
+    "paras": [
+     "Six is the number of home, care and responsibility. Here it appears twice, each time behind a zero, as if it had not quite stepped onto the stage. At 06:06 the household is still asleep, the inbox is quiet and nobody has asked you for anything. For a few minutes the person who looks after everyone is nobody's carer, and this mirror hour points at that gap.",
+     "It often speaks to people who give their day away in advance. The question is small and useful: before you turn towards everyone else, what do you want for yourself today? Even one sentence of an answer changes how the next hours feel."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 06:06 looks at the ordinary care that keeps two people going: who makes the coffee, who remembers the dentist, who says good morning and means it. It can be a prompt to do one small thing for your partner before they wake, or to notice what they already do for you. If you are single, it asks how kindly you treat yourself on a morning when nobody is watching."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work this time belongs to the early shift: bakers, nurses, drivers, cleaners, the people who have a city running before the offices open. If that is you, it may be a nudge to ask whether your hours are still sustainable. If you get up early by choice, give this slot to the task that matters most and keep the inbox for later. With money, it favours a quick look at household costs before the day gets noisy."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits 0, 6, 0 and 6 add up to 12, which reduces to 3, the number of expression and lightness. So a heavy, dutiful number ends in something playful. There is a pleasant bit of arithmetic too: 06:06 is exactly 366 minutes after midnight, the number of days in a leap year."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People mention 06:06 on days of early trains and shift work, in the months after a baby arrives, and when worry wakes them just before the alarm. In the weeks around a move or a family illness it may show up more often, simply because you are awake for it."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a nurse at the end of a night shift, walking to the car park as the clock on the ward turns 06:06. She has spent eleven hours on other people's needs. She sits in the car for a minute before starting the engine and asks herself what she would like for breakfast. It is a tiny question, and she realises that nobody else will ask it."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Before you pick up your phone, stand at a window for one minute and drink a glass of water. Then name one thing today that is for you. It can be as small as walking home the long way. Write it down if you are likely to forget it by nine."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Waking at this hour night after night can simply mean poor sleep, stress or too much coffee. If it goes on for weeks, that is a matter for your doctor and no number can settle it."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "If nobody needed anything from me this morning, how would I start the day?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Fill your own cup while the house is quiet."
+    ]
+   }
+  ]
+ },
+ "07-07": {
+  "title": "Mirror hour 07:07: out of the door with a clear head",
+  "lead": "07:07 catches you between the bed and the door. Twin sevens ask for a moment of thought in the rush, and their sum points to movement.",
+  "sections": [
+   {
+    "title": "What 07:07 can mean",
+    "paras": [
+     "Seven is the number of thought, study and the inner life. It likes to ask why. At 07:07 it lands in the least thoughtful part of the day, among keys, lunch boxes and a bus you may miss. That contrast is the message: one clear thought now can do more than an hour of worry later.",
+     "The zeros in front give each seven some space. You could read this as two short pauses in a busy sequence. A breath at the door, a second breath on the way, and you may notice what you are actually walking towards today."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, this mirror hour favours the small honest word said before you leave, when there is no time for a long debate. A real goodbye at the door counts for more than it looks. If you are single, 07:07 may ask what you are looking for and why, so that you stop repeating a choice out of habit."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work it suits learning, research and any job that requires you to think before you act. It is a good moment to decide on the one priority of the day, before other people decide it for you. With money, it favours reading the small print before you sign, even when you are in a hurry."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 14, and 1 plus 4 gives 5, the number of movement and change. That fits the hour. There is a small fact about seven here too: roll two dice and 7 is the most likely total, because six of the 36 possible throws give it. Opposite faces of a standard die also add up to 7. It is the number that chance keeps landing on."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People see 07:07 on the commute, at the school gate, on the car dashboard or on a phone they have just picked up. It tends to stand out in weeks of routine, when one morning looks like the next and you begin to wonder where the months went."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a man on a platform at 07:07, waiting for the same train he has caught for nine years. He has been meaning to sign up for an evening course for most of that time. He opens his phone, finds the page and fills in the form before the train arrives. It takes four minutes. Whatever comes of it, he did it on a Tuesday with a coffee in his hand."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Check what you are carrying today, in your bag and in your head. Take out one thing you do not need. Then choose a single question to hold during the day, and look at it again in the evening."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Overthinking is the shadow side of seven. If 07:07 finds you running through the same worry on every commute, give that worry a time slot in the evening and let the morning go."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What is the one thing I want to understand better by the end of today?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "One clear thought at the door is worth a day of worry."
+    ]
+   }
+  ]
+ },
+ "08-08": {
+  "title": "Mirror hour 08:08: give the day your attention first",
+  "lead": "08:08 arrives as the working day begins. Two eights stand for effort and reward, and the hour asks how you share out your time and energy.",
+  "sections": [
+   {
+    "title": "What 08:08 can mean",
+    "paras": [
+     "Eight is the number of power, effort and results. It is about what you do with what you have: time, money, energy, influence. At 08:08 those questions are practical. The day has just opened, and the first hour tends to set the tone for the rest.",
+     "Laid on its side, an 8 becomes the sign for infinity, a loop that returns to where it began. Many people read this as a reminder that what you put out tends to come back, in the form of trust, habits or reputation. That is plain cause and effect, and you can work with it today."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 08:08 looks at balance. Who gives time, who gives money, who gives attention? The two sides need not be equal each week, but both of you should feel that the loop closes. If you are single, it may ask whether you are treating dating as one more project to manage."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "This is a strong hour for work, as long as you use it. The 8 favours planning, clear agreements and naming your price. The first thing you do at your desk is worth choosing on purpose. With money, it suits a check of what came in and what went out, without drama and without promises to yourself."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 16 and then to 7, so ambition meets reflection. An old slogan fits as well: in 1817 the reformer Robert Owen called for eight hours' labour, eight hours' recreation and eight hours' rest. In China, 8 sounds close to the word for prosperity, which is why the Beijing Olympics opened at 8:08 in the evening on 8 August 2008."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People notice 08:08 when logging in, on the school run or over the first coffee at the desk. It tends to return around salary talks, new contracts and weeks when you feel you are working hard without getting anywhere."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a bookkeeper who opens her laptop at 08:08 and sees forty unread messages. Today she leaves them for half an hour and writes her own list first: three items, in order. Nothing dramatic happens. At noon, though, she notices that the day still feels like hers."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Divide the day in your head into Owen's three parts: work, rest and time that is your own. Which one is getting squeezed this week? Move half an hour back to it, and put that half hour in your calendar so that it is real."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "The 8 can turn everything into a scoreboard. If the figures in your account or your to-do list decide your mood, this hour may be asking you to measure something else for a while."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What am I giving my best hours to, and would I choose it again?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "How you spend the first hour is how you vote for the day."
+    ]
+   }
+  ]
+ },
+ "09-09": {
+  "title": "Mirror hour 09:09: finish one thing before ten",
+  "lead": "09:09 comes just before the clock rolls over to ten. Nine is the last single digit, so this hour asks what you can finish, hand over or let go.",
+  "sections": [
+   {
+    "title": "What 09:09 can mean",
+    "paras": [
+     "Nine stands at the end of the line of single digits. After it the count starts again with a one and a zero. That gives it a flavour of completion, generosity and looking back, and at 09:09 it sits in the last stretch before ten o'clock, as if the morning were being asked to tidy up before moving on.",
+     "Often this mirror hour points to something small and unfinished: a reply you owe, a drawer, a thank-you, an apology. Nine also has a wider side. It is linked to compassion and service, to doing a thing because it helps, with no invoice attached."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 09:09 favours closing old accounts. It might mean forgiving something you have brought up too many times, or finally having the talk that lets a relationship move on, in whatever direction. If you are single, it asks whether an old love still takes up a chair at your table."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work it suits finishing, handing over and clearing up. It is a good time to end a project well, write the notes your successor will need and stop carrying tasks that are no longer yours. With money, it favours paying off a small debt or settling a bill you keep moving down the list."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 18, and 1 plus 8 brings you back to 9. Nine does that. Multiply any positive whole number by 9, keep adding the digits of the answer, and you land on 9 every time: 7 times 9 is 63, and 6 plus 3 is 9. However far you go, it returns to itself, a fair picture of an ending that stays with you. Cats, in English, are said to have nine lives, which suggests that finishing is rarely final."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People see 09:09 during the first break of the morning, in waiting rooms and on the way into a meeting they would rather have over with. It tends to stand out near the end of something: the last week of a job, the last box of a move, a child's last term at a school."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a teacher clearing a classroom cupboard in her final week before retirement. At 09:09 she finds a drawing a pupil gave her thirty years ago. She is about to throw it out, then stops and looks up the former pupil's name. Whether she writes or not, the morning feels finished in a way the cupboard alone could not manage."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Choose one small unfinished thing and finish it before ten o'clock. If that is not possible, decide that it will never be finished and drop it on purpose. Both count. Notice how much lighter the next hour feels."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Endings can be tempting when you are tired. 09:09 does not mean that you should quit a job or a relationship. It only asks what is really over and what simply needs a rest."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What have I been carrying that is already finished?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Nine is the deep breath before the count begins again."
+    ]
+   }
+  ]
+ },
  "10-10": {
   "title": "10:10 mirror hour: a fresh cycle in full daylight",
   "lead": "10:10 shows up in the middle of the morning, when the day is already in motion. It joins the drive of the number one with the open potential of zero, and many read it as a green light for a new phase.",
@@ -804,6 +1072,274 @@ export const mirrorEn: MirrorSet = {
    }
   ]
  },
+ "16-16": {
+  "title": "Mirror hour 16:16: the afternoon check on your energy",
+  "lead": "16:16 lands when the afternoon starts to fade. It asks what is left in your tank, and what can honestly wait until tomorrow.",
+  "sections": [
+   {
+    "title": "What 16:16 can mean",
+    "paras": [
+     "By late afternoon most people have spent the best of their attention. At 16:16 the coffee has worn off and the list is usually longer than the hours left. This mirror hour is a stocktake: look honestly at what remains, in the day and in you, and plan the last stretch around that.",
+     "Sixteen also carries a particular note in numerology, where it is one of the karmic numbers, linked with pride and the things we keep up for appearance. So 16:16 can point to a plan that was built to impress and now needs changing. Late afternoon is a good time for this, since you are too tired to pretend."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, this time often finds people at their least patient, just before they meet again at home. A short message at 16:16 can change the evening: what kind of day you have had, and what you need when you get in. If you are single, it may ask whether you keep up a front on dates that you could put down."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, 16:16 favours sorting over starting. Leave big decisions for the morning and use what is left for replies, tidying and tomorrow's list. With money, avoid the tired purchase: the afternoon slump is when a small treat can turn into an order you did not need."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 14, then to 5, the number of change. There is a bit of everyday arithmetic too. If you sleep eight hours, you are awake for 16, so a sixteen sits inside every ordinary day, and by this hour you have usually used well over half of it."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People mention 16:16 at the school gate, at the end of a long meeting and in the last hours of a shift. It tends to stand out in tired periods, and in the dark months, when the light starts to go at about this time in much of Europe."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a project lead at 16:16 with a set of slides that is still not right. He could stay until eight. He looks at the list, sees that only one item really matters for tomorrow, and moves the rest to Monday with a short note. On the way home he rings his sister, which he has been meaning to do for a month."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Stop for two minutes. Write down the one thing that must happen before you finish today, and cross out or move something else. Drink some water and, if you can, step outside while there is still light."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "A late afternoon slump is ordinary, so do not read a bad mood at this hour as a verdict on your life. Most things look smaller after a meal and a night's sleep."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What am I still keeping up today that nobody has asked me to?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "The day does not need all of you to end well."
+    ]
+   }
+  ]
+ },
+ "17-17": {
+  "title": "Mirror hour 17:17: you may already know enough",
+  "lead": "17:17 comes as the working day closes. Seventeen is the fewest clues a sudoku can have, so this hour asks if you really need more information.",
+  "sections": [
+   {
+    "title": "What 17:17 can mean",
+    "paras": [
+     "Seventeen is a prime number, divisible by nothing but itself and one, and it has an independent feel. At 17:17 the office day is ending and the evening has not yet begun. You may be walking out of a building or standing in a queue, with the day's thoughts still running. This mirror hour tends to speak to people who are waiting to be sure before they act.",
+     "Its best image comes from sudoku. A computer-assisted proof from 2012 showed that a standard puzzle needs at least 17 given numbers to have one single solution, and puzzles with exactly 17 exist. With so few clues, the whole grid is already decided. You may hold more of the answer than you think."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 17:17 can ask how many more signs you are waiting for. If you know how you feel, more evidence will not help you much. You can say it kindly and see what happens. If you are single, it may be time to stop reading a stranger's messages for clues and ask the simple question."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work it favours a decision based on what you know by the end of the day, in place of another meeting. Research is useful up to a point, and after that it becomes a place to hide. With money, it asks you to compare two or three options and then choose, since the perfect offer is rarely out there."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 16 and then to 7, the number of reflection. Seventeen has a mixed reputation. In Italy it counts as unlucky, because the Roman numeral XVII can be rearranged into VIXI, Latin for I have lived. Meanwhile the young Gauss proved in 1796 that a regular 17-sided figure can be drawn with ruler and compass alone, and a monument to him in Braunschweig carries a 17-pointed star. A Japanese haiku holds 17 sounds. One number, many moods."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People notice 17:17 on the way to the car or the tram, while picking up children and on a last glance at the screen before shutting down. It often returns when a decision has been lying on the desk for too long."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a woman on a bench outside her office at 17:17, her phone showing yet another flat listing. She has seen thirty in two months and liked the third one best. She knows this. She rings the agent before she stands up and asks whether it is still available. Whatever the answer, the search has changed shape."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Write down what you already know about the question on your mind, in no more than 17 words. If that settles it, act on it tomorrow morning. If it does not, name the single fact that is missing and find out that one."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Deciding on less information is different from deciding in a hurry. For big medical, legal or financial choices, get proper advice, then stop collecting opinions."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What do I already know that I keep pretending I need to find out?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Seventeen clues can solve the whole grid."
+    ]
+   }
+  ]
+ },
+ "18-18": {
+  "title": "Mirror hour 18:18: the day hands back the keys",
+  "lead": "18:18 falls at the turn from day to evening. It asks you to put the day down and to go home as a person and not as your job.",
+  "sections": [
+   {
+    "title": "What 18:18 can mean",
+    "paras": [
+     "Around 18:18 the day changes hands. Work is ending for many, dinner is on somebody's mind and the light outside is shifting. This mirror hour repeats 18, a number of maturity and of taking charge, at the very moment you are allowed to stop being in charge. That makes it a good time to notice how you cross the line between your working self and your private one.",
+     "On a clock, the 18 reads like a handover. Whatever you were responsible for until now can go on tomorrow's list. Whoever is at home, even if that is only you, deserves the person and not the leftovers."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 18:18 is often the hour of the first sentence after a long day, and that first sentence carries a lot of weight. Try a question before the complaint. If you live alone, the same applies to how you speak to yourself as you come through the door."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, this is a good time to stop, and a poor time to start anything new. Write the next step down for the morning so that your head can let go. With money, avoid settling arguments about spending now: they go better after dinner or on a weekend morning."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 18, then to 9, the number that finishes a cycle, so this is an hour of closing. In golf a round has 18 holes, and the last one brings you back to the clubhouse. In tarot, card XVIII is the Moon, the card of twilight. Both fit a time of day when the outline of things begins to soften."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People see 18:18 in traffic, at the supermarket on the way home, on the oven clock and during the first minutes at the kitchen table. It tends to stand out in weeks when work has followed you home."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a man sitting in his parked car outside the house at 18:18, still finishing a call. His daughter is at the window. He ends the call, puts the phone in the glove box and leaves it there until she has gone to bed. It is one evening, nothing more, and that is how habits begin."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Give the end of your day a small marker: change your shirt, wash your hands slowly, walk round the block. Write one line for tomorrow and close the list. Then ask someone how their day was, and listen to the whole answer."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Dusk can make things feel heavier than they are. If a dark mood arrives at this time each day, treat it kindly and mention it to someone. Regular low moods are worth talking over with a professional."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What do I need to put down before I walk through my own door?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Leave the day at the door; it will still be there tomorrow."
+    ]
+   }
+  ]
+ },
+ "19-19": {
+  "title": "Mirror hour 19:19: who is coming back into your life?",
+  "lead": "19:19 comes in the calm of the evening. Its sum of 2 points to other people, and 19 years is the Moon's long return, a fit for reunions.",
+  "sections": [
+   {
+    "title": "What 19:19 can mean",
+    "paras": [
+     "Nineteen is the last of the teens, and it has the feeling of a long road coming round to somewhere familiar. At 19:19 dinner is usually over and the evening lies open. It is a natural hour for a phone call, an old photograph or a name you have not said in a while.",
+     "In numerology 19 reduces to 1 and is one of the karmic numbers, linked with independence that needs to learn how to accept help. So this time can point to a person you have been too proud, or too busy, to contact. It often asks you to make the first move."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 19:19 favours repair and return. That might be an honest word after a cold week, or a look at an old love with calmer eyes, which may or may not mean contact. You are under no duty to reopen every door. If you are single, let friends help: it is an hour for saying yes to an invitation."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work this time suits long-term relationships: a former colleague, a client you have not spoken to for a while, a mentor you meant to thank. One short message can restart a useful conversation. With money, it favours honest talks about shared costs, in a calm moment."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 20 and reduce to 2, the number of partnership. Nineteen also has a real place in the sky. About every 19 years the phases of the Moon fall on nearly the same calendar dates, because 235 lunar months almost exactly match 19 solar years. This is the Metonic cycle, and it still feeds into the calculation of Easter. In tarot, card XIX is the Sun, the brightest card in the deck."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People see 19:19 while clearing the table, on the sofa or when scrolling through old pictures. It tends to return around anniversaries, reunions and the time of year when someone died or left."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a woman who finds a birthday note from a school friend while sorting papers at 19:19. They have not spoken since their twenties. She spends ten minutes looking for the number and then writes three plain lines, with no explanation and no apology. She does not know if a reply will come, and she feels better for having sent it."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Think of one person who came to mind this week for no reason. Send a short message tonight that asks for nothing. If there is no one to write to, light a candle for someone you miss, or tell another person about them."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Not every return is good for you. If someone has hurt you, 19:19 gives you no duty to get back in touch. Coming back to yourself counts as well."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "Whose name keeps coming back to me, and what would I like to say?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Some things come round again if you leave the door ajar."
+    ]
+   }
+  ]
+ },
  "20-20": {
   "title": "Mirror hour 20:20: patience, listening and quiet support",
   "lead": "20:20 appears in the evening, when most people are home and the pace slows. It doubles the gentle two and the open zero, and it often speaks of partnership, patience and the strength that grows when you stop pushing.",
@@ -1001,6 +1537,73 @@ export const mirrorEn: MirrorSet = {
     "title": "Words to keep",
     "paras": [
      "Great things are built from ordinary days repeated with intention."
+    ]
+   }
+  ]
+ },
+ "23-23": {
+  "title": "Mirror hour 23:23: the last coincidence of the day",
+  "lead": "23:23 is the last mirror hour of the day. It asks what you inherited and what you choose, and shows why coincidences are commoner than they feel.",
+  "sections": [
+   {
+    "title": "What 23:23 can mean",
+    "paras": [
+     "23:23 is the final doubled time before midnight, so it carries a feeling of last call. Twenty three is also a number about where you come from: a human being normally has 23 chromosomes from one parent and 23 from the other. Read the clock that way and it shows the two halves you are made of, side by side, in the last hour of the day.",
+     "That makes it a good time for a private sort of question. Which of your habits did you choose, and which came with the family? You do not have to keep everything you were handed, and you do not have to throw it all away either."
+    ]
+   },
+   {
+    "title": "In love",
+    "paras": [
+     "In love, 23:23 can bring up patterns from the homes we grew up in: how people argued, how they made up, what stayed unsaid. Talking about that with a partner beats repeating it. Save it for tomorrow, though, as late evening is a poor time for hard talks. If you are single, ask which picture of love you inherited and whether it still fits."
+    ]
+   },
+   {
+    "title": "At work and with money",
+    "paras": [
+     "At work, this is a time to close the laptop. The ideas that arrive at 23:23 may be good, so write them down and look at them in the morning. With money, avoid late-night purchases and any message you would not send at noon."
+    ]
+   },
+   {
+    "title": "Its numbers",
+    "paras": [
+     "The digits add up to 10 and reduce to 1, the number of new starts, which suits a time so close to midnight. And 23 has a famous trick. In a group of just 23 people, the chance that two of them share a birthday is a little above 50 percent. Most people guess far too low, since we think about ourselves and forget how many pairs a group contains. Coincidences are more common than they feel, which is a useful thing to know on a page about clocks."
+    ]
+   },
+   {
+    "title": "When it tends to appear",
+    "paras": [
+     "People report 23:23 while brushing their teeth, when reaching for the phone in bed or when they cannot sleep. It tends to return when you are staying up too late, a habit that makes you more likely to see it."
+    ]
+   },
+   {
+    "title": "A short story",
+    "paras": [
+     "Picture a young father putting a sleeping child down at 23:23. He hears himself humming a tune he has not thought about in twenty years, the one his own father hummed. He stands there a moment. Some things we pass on without deciding to, and tonight he finds he does not mind this one."
+    ]
+   },
+   {
+    "title": "What to do when you see it",
+    "paras": [
+     "Put the phone out of reach and write one line about today. Name one thing you got from your family that you want to keep, and one that can stop with you. Then go to bed."
+    ]
+   },
+   {
+    "title": "A note of caution",
+    "paras": [
+     "Mirror hours seen late at night can feel very meaningful because you are tired. If a thought looks huge at 23:23, check whether it still looks huge after breakfast."
+    ]
+   },
+   {
+    "title": "A question to ask yourself",
+    "paras": [
+     "What did I inherit that I want to keep, and what can end with me?"
+    ]
+   },
+   {
+    "title": "Words to keep",
+    "paras": [
+     "Half of you was handed down; what you do with it is yours."
     ]
    }
   ]

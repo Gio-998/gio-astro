@@ -402,6 +402,274 @@ export const mirrorDe: MirrorSet = {
    }
   ]
  },
+ "06-06": {
+  "title": "Spiegelzahl 06:06: die stille Stunde vor dem Tag",
+  "lead": "06:06 kommt, bevor der Tag etwas von dir will. Die doppelte Sechs steht für Fürsorge und fragt, wer du bist, solange dich noch niemand braucht.",
+  "sections": [
+   {
+    "title": "Was 06:06 bedeuten kann",
+    "paras": [
+     "Die Sechs ist die Zahl von Zuhause, Fürsorge und Verantwortung. Hier taucht sie zweimal auf, jedes Mal hinter einer Null, als stünde sie noch nicht ganz auf der Bühne. Um 06:06 schläft die Wohnung noch, das Postfach ist ruhig, und niemand hat dich um irgendetwas gebeten. Für ein paar Minuten ist der Mensch, der sich um alle kümmert, für niemanden zuständig. Auf diese Lücke zeigt die Spiegelzahl.",
+     "Oft spricht sie Menschen an, die ihren Tag schon im Voraus verschenkt haben. Die Frage ist klein und nützlich: Was möchtest du heute für dich, bevor du dich allen anderen zuwendest? Schon ein Satz als Antwort verändert, wie sich die nächsten Stunden anfühlen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe schaut 06:06 auf die alltägliche Fürsorge, von der zwei Menschen leben: Wer macht den Kaffee, wer denkt an den Zahnarzt, wer sagt guten Morgen und meint es auch? Vielleicht ist sie ein Anstoß, eine Kleinigkeit für deinen Partner oder deine Partnerin zu tun, bevor er oder sie aufwacht, oder zu bemerken, was längst für dich getan wird. Bist du Single, fragt sie, wie freundlich du mit dir umgehst, wenn dich morgens niemand sieht."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich gehört diese Uhrzeit der Frühschicht: Bäckerinnen, Pflegekräfte, Busfahrer, Reinigungskräfte, all denen, die eine Stadt am Laufen halten, bevor die Büros öffnen. Gehörst du dazu, frag dich ruhig, ob deine Arbeitszeiten auf Dauer noch tragbar sind. Stehst du freiwillig so früh auf, gib diese Zeit der Aufgabe, die am meisten zählt, und heb dir das Postfach für später auf. Beim Geld passt ein kurzer Blick auf die Haushaltskosten, bevor der Tag laut wird."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern 0, 6, 0 und 6 ergeben 12, und das führt zur 3, der Zahl von Ausdruck und Leichtigkeit. Aus einer schweren, pflichtbewussten Zahl wird am Ende also etwas Verspieltes. Auch rechnerisch hat sie etwas Hübsches: 06:06 liegt genau 366 Minuten nach Mitternacht, und so viele Tage hat ein Schaltjahr."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Viele bemerken 06:06 an Tagen mit frühem Zug oder Schichtdienst, in den Monaten nach einer Geburt und wenn sie die Sorgen kurz vor dem Wecker aus dem Schlaf holen. In den Wochen rund um einen Umzug oder eine Krankheit in der Familie begegnet sie dir vielleicht öfter, einfach weil du dann wach bist."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir eine Krankenpflegerin am Ende der Nachtschicht vor. Sie geht zum Parkplatz, während die Uhr auf der Station auf 06:06 springt. Elf Stunden lang ging es um die Bedürfnisse anderer. Im Auto bleibt sie eine Minute sitzen, bevor sie den Motor startet, und fragt sich, was sie eigentlich gern zum Frühstück hätte. Eine winzige Frage, und ihr wird klar, dass sie ihr sonst niemand stellt."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Stell dich eine Minute ans Fenster und trink ein Glas Wasser, bevor du zum Handy greifst. Dann nenn eine Sache, die heute nur für dich ist. Sie darf so klein sein wie der längere Heimweg. Schreib sie auf, falls du sie bis neun Uhr sonst vergisst."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Wenn du Nacht für Nacht um diese Zeit aufwachst, kann das schlicht an schlechtem Schlaf, Stress oder zu viel Kaffee liegen. Hält das über Wochen an, gehört es zum Arzt, und keine Zahl kann es klären."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Wie würde ich den Tag beginnen, wenn heute Morgen niemand etwas von mir bräuchte?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Füll deine eigene Tasse, solange es im Haus noch still ist."
+    ]
+   }
+  ]
+ },
+ "07-07": {
+  "title": "Spiegelzahl 07:07: deine sieben Sachen für den Tag",
+  "lead": "07:07 erwischt dich zwischen Bett und Haustür. Die doppelte Sieben bittet mitten in der Eile um einen klaren Gedanken, ihre Summe deutet auf Bewegung.",
+  "sections": [
+   {
+    "title": "Was 07:07 bedeuten kann",
+    "paras": [
+     "Die Sieben ist die Zahl von Nachdenken, Lernen und Innenleben. Sie fragt gern nach dem Warum. Um 07:07 landet sie im gedankenlosesten Teil des Tages, zwischen Schlüssel, Brotdose und dem Bus, den du vielleicht verpasst. Genau dieser Gegensatz ist die Botschaft: Ein klarer Gedanke jetzt bringt mehr als eine Stunde Grübeln später.",
+     "Seine sieben Sachen packen, sagt man, wenn jemand aufbricht. Das passt zu dieser Uhrzeit. Was nimmst du heute wirklich mit, und was schleppst du nur aus Gewohnheit herum? Die Nullen davor geben jeder Sieben etwas Luft: ein Atemzug an der Tür, ein zweiter auf dem Weg."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe zählt um 07:07 das kleine ehrliche Wort vor dem Gehen, wenn keine Zeit für lange Debatten bleibt. Ein echter Abschied an der Tür wiegt mehr, als er aussieht. Bist du Single, fragt sie vielleicht, was du suchst und warum, damit du nicht aus Gewohnheit immer wieder gleich wählst."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich passt sie zu Lernen, Recherche und allem, was erst Denken und dann Handeln verlangt. Ein guter Moment, die eine Priorität des Tages festzulegen, bevor andere das für dich tun. Beim Geld spricht sie dafür, das Kleingedruckte zu lesen, bevor du unterschreibst, auch wenn du es eilig hast."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 14, und 1 plus 4 führt zur 5, der Zahl von Bewegung und Wandel. Das passt zur Stunde. Auch der Würfel hat etwas zur Sieben zu sagen: Mit zwei Würfeln ist 7 die häufigste Summe, denn sechs der 36 möglichen Würfe ergeben sie. Und die gegenüberliegenden Seiten eines normalen Würfels ergeben zusammen immer 7. Der Zufall landet auffällig oft bei ihr."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Man sieht 07:07 auf dem Weg zur Arbeit, am Schultor, auf dem Armaturenbrett oder auf dem Handy, das gerade in die Hand genommen wurde. Sie fällt vor allem in Wochen voller Routine auf, wenn ein Morgen dem anderen gleicht und du dich fragst, wo die Monate geblieben sind."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir einen Mann am Bahnsteig vor, 07:07, derselbe Zug wie seit neun Jahren. Fast genauso lange will er sich schon für einen Abendkurs anmelden. Er zieht das Handy heraus, sucht die Seite und füllt das Formular aus, bevor der Zug einfährt. Das dauert vier Minuten. Was auch daraus wird: Er hat es getan, an einem Dienstag, den Kaffee in der Hand."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Prüf, was du heute bei dir trägst, in der Tasche und im Kopf. Nimm eine Sache heraus, die du nicht brauchst. Dann such dir eine einzige Frage für den Tag aus und schau sie dir am Abend wieder an."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Zerdenken ist die Schattenseite der Sieben. Wenn dich 07:07 auf jeder Fahrt bei derselben Sorge erwischt, gib dieser Sorge einen festen Termin am Abend und lass den Morgen frei."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was möchte ich bis heute Abend ein Stück besser verstehen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Ein klarer Gedanke an der Haustür ist mehr wert als ein Tag voller Sorgen."
+    ]
+   }
+  ]
+ },
+ "08-08": {
+  "title": "Spiegelzahl 08:08: gib Acht, wofür dein Tag draufgeht",
+  "lead": "08:08 fällt auf den Beginn des Arbeitstags. Die doppelte Acht steht für Einsatz und Ertrag und fragt, wie du deine Zeit und Kraft verteilst.",
+  "sections": [
+   {
+    "title": "Was 08:08 bedeuten kann",
+    "paras": [
+     "Die Acht ist die Zahl von Kraft, Einsatz und Ergebnissen. Es geht darum, was du aus dem machst, was du hast: Zeit, Geld, Energie, Einfluss. Um 08:08 sind das sehr praktische Fragen. Der Tag hat gerade begonnen, und die erste Stunde gibt oft den Ton für den Rest an.",
+     "Das Deutsche liefert eine hübsche Doppeldeutigkeit: Acht ist eine Zahl, und Acht ist die Aufmerksamkeit, die du jemandem gibst, wenn du Acht gibst oder dich in Acht nimmst. Die beiden Wörter haben nur zufällig dieselbe Form, zusammen ergeben sie aber einen guten Satz für diese Uhrzeit: Gib Acht, wohin deine Stunden gehen. Auf die Seite gelegt wird die 8 zum Zeichen für die Unendlichkeit, einer Schleife, die zum Anfang zurückkehrt. Was du hineingibst, kommt oft als Vertrauen, Gewohnheit oder Ruf zurück."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe schaut 08:08 auf das Gleichgewicht. Wer gibt Zeit, wer Geld, wer Aufmerksamkeit? Das muss nicht jede Woche aufgehen, aber beide sollten spüren, dass sich die Schleife schließt. Bist du Single, fragt sie vielleicht, ob du Dating wie ein weiteres Projekt abarbeitest."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Für die Arbeit ist das eine starke Stunde, wenn du sie nutzt. Die Acht begünstigt Planung, klare Absprachen und den Mut, deinen Preis zu nennen. Das Erste, was du am Schreibtisch tust, darf ruhig eine bewusste Wahl sein. Beim Geld passt ein nüchterner Blick darauf, was rein- und was rausging, ohne Drama und ohne Versprechen an dich selbst."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 16 und dann 7, Ehrgeiz trifft also auf Nachdenken. Ein alter Slogan passt ebenfalls: 1817 forderte der Sozialreformer Robert Owen acht Stunden Arbeit, acht Stunden Erholung und acht Stunden Ruhe. Im Chinesischen klingt die 8 ähnlich wie das Wort für Wohlstand, weshalb die Olympischen Spiele in Peking am 8. August 2008 um 20:08 Uhr eröffnet wurden."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Viele bemerken 08:08 beim Einloggen, auf dem Weg zur Schule oder beim ersten Kaffee am Schreibtisch. Sie kehrt oft wieder rund um Gehaltsgespräche, neue Verträge und in Wochen, in denen du viel arbeitest und trotzdem nicht vorankommst."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir eine Buchhalterin vor, die um 08:08 den Laptop aufklappt und vierzig ungelesene Nachrichten sieht. Heute lässt sie sie eine halbe Stunde liegen und schreibt zuerst ihre eigene Liste: drei Punkte, in dieser Reihenfolge. Nichts Spektakuläres passiert. Mittags merkt sie aber, dass sich der Tag immer noch nach ihrem Tag anfühlt."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Teil den Tag im Kopf in Owens drei Teile: Arbeit, Ruhe und Zeit, die dir gehört. Welcher kommt diese Woche zu kurz? Gib ihm eine halbe Stunde zurück und trag sie in den Kalender ein, damit sie echt wird."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Die Acht kann aus allem eine Punktetafel machen. Wenn Kontostand oder To-do-Liste über deine Laune bestimmen, bittet dich diese Stunde vielleicht, eine Weile etwas anderes zu messen."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Wem gebe ich meine besten Stunden, und würde ich mich wieder so entscheiden?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Mit der ersten Stunde stimmst du über den ganzen Tag ab."
+    ]
+   }
+  ]
+ },
+ "09-09": {
+  "title": "Spiegelzahl 09:09: alle Neune vor zehn Uhr",
+  "lead": "09:09 kommt kurz bevor die Uhr auf zehn springt. Die Neun ist die letzte einstellige Zahl, also fragt die Stunde, was du abschließen kannst.",
+  "sections": [
+   {
+    "title": "Was 09:09 bedeuten kann",
+    "paras": [
+     "Die Neun steht am Ende der einstelligen Zahlen. Danach beginnt die Zählung neu, mit einer Eins und einer Null. Das gibt ihr etwas von Abschluss, Großzügigkeit und Rückblick, und um 09:09 sitzt sie im letzten Stück vor zehn Uhr, als sollte der Morgen noch kurz aufräumen, bevor es weitergeht.",
+     "Meist zeigt diese Spiegelzahl auf etwas Kleines, Unerledigtes: eine fällige Antwort, eine Schublade, ein Dankeschön, eine Entschuldigung. Die Neun hat auch eine weitere Seite. Sie steht für Mitgefühl und Dienst am anderen, dafür, etwas zu tun, weil es hilft, ohne dass eine Rechnung beiliegt."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe spricht 09:09 dafür, alte Konten zu schließen. Das kann heißen, etwas zu verzeihen, das du schon zu oft aufgewärmt hast, oder endlich das Gespräch zu führen, durch das eine Beziehung weiterkommt, in welche Richtung auch immer. Bist du Single, fragt sie, ob eine alte Liebe noch einen Stuhl an deinem Tisch besetzt."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich passt sie zu Abschließen, Übergeben und Aufräumen. Eine gute Zeit, ein Projekt sauber zu beenden, die Notizen für deine Nachfolge zu schreiben und Aufgaben abzugeben, die nicht mehr deine sind. Beim Geld spricht sie dafür, eine kleine Schuld zu tilgen oder die Rechnung zu bezahlen, die du immer weiter nach unten schiebst."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 18, und 1 plus 8 führt zurück zur 9. Das macht die Neun immer so. Multiplizierst du eine positive ganze Zahl mit 9 und bildest die Quersumme so lange weiter, bis eine Ziffer bleibt, landest du jedes Mal bei 9: 7 mal 9 ist 63, und 6 plus 3 ist 9. Beim Kegeln heißt es „alle Neune“, wenn mit einem Wurf sämtliche Kegel fallen, und auch deshalb klingt die Zahl auf Deutsch nach Vollständigkeit. Woher „Ach du grüne Neune“ kommt, weiß dagegen niemand so genau."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Man sieht 09:09 in der ersten Pause des Vormittags, in Wartezimmern und auf dem Weg in eine Besprechung, die man lieber hinter sich hätte. Sie fällt oft kurz vor dem Ende von etwas auf: letzte Woche im Job, letzter Karton beim Umzug, letztes Halbjahr eines Kindes an einer Schule."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir eine Lehrerin vor, die in ihrer letzten Woche vor der Rente den Klassenschrank ausräumt. Um 09:09 findet sie eine Zeichnung, die ihr ein Schüler vor dreißig Jahren geschenkt hat. Fast landet sie im Papierkorb, dann hält die Lehrerin inne und sucht nach seinem Namen. Ob sie schreibt oder nicht: Der Vormittag fühlt sich auf eine Art abgeschlossen an, die der Schrank allein nicht geschafft hätte."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Such dir etwas Kleines, Unerledigtes aus und bring es vor zehn Uhr zu Ende. Geht das nicht, beschließ, dass es nie fertig wird, und lass es bewusst fallen. Beides zählt. Achte darauf, wie viel leichter sich die nächste Stunde anfühlt."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Wer müde ist, findet Enden verlockend. 09:09 heißt nicht, dass du einen Job oder eine Beziehung aufgeben solltest. Sie fragt nur, was wirklich vorbei ist und was einfach eine Pause braucht."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was trage ich noch mit mir herum, das längst erledigt ist?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Neun ist das tiefe Einatmen, bevor die Zählung von vorn beginnt."
+    ]
+   }
+  ]
+ },
  "10-10": {
   "title": "Spiegelzahl 10:10: ein neuer Zyklus bei vollem Tageslicht",
   "lead": "10:10 erscheint mitten am Vormittag, wenn der Tag schon in Bewegung ist. Sie verbindet den Antrieb der Eins mit dem offenen Potenzial der Null, und viele lesen sie als grünes Licht für eine neue Phase.",
@@ -804,6 +1072,274 @@ export const mirrorDe: MirrorSet = {
    }
   ]
  },
+ "16-16": {
+  "title": "Spiegelzahl 16:16: was vom Nachmittag noch übrig ist",
+  "lead": "16:16 kommt, wenn der Nachmittag nachlässt. Die Uhrzeit fragt, wie viel Kraft noch da ist und was ehrlich bis morgen warten kann.",
+  "sections": [
+   {
+    "title": "Was 16:16 bedeuten kann",
+    "paras": [
+     "Am späten Nachmittag haben die meisten ihre beste Aufmerksamkeit verbraucht. Um 16:16 lässt der Kaffee nach, Kuchen hilft auch nur kurz, und die Liste ist meist länger als die restlichen Stunden. Diese Spiegelzahl ist eine Bestandsaufnahme: Schau ehrlich, was noch da ist, im Tag und in dir, und plan das letzte Stück danach.",
+     "Die 16 hat in der Numerologie außerdem einen besonderen Klang. Sie gehört zu den karmischen Zahlen und steht für Stolz und für das, was wir nur des Eindrucks wegen aufrechterhalten. 16:16 kann also auf einen Plan zeigen, der beeindrucken sollte und jetzt geändert werden muss. Dafür ist der späte Nachmittag ideal, denn du bist zu müde, um dir etwas vorzumachen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe erwischt diese Uhrzeit viele in ihrem ungeduldigsten Moment, kurz bevor man sich zu Hause wiedersieht. Eine kurze Nachricht um 16:16 kann den Abend verändern: wie dein Tag war und was du brauchst, wenn du heimkommst. Bist du Single, fragt sie vielleicht, ob du bei Dates eine Fassade aufrechterhältst, die du ablegen könntest."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich geht bei 16:16 Sortieren vor Anfangen. Heb dir große Entscheidungen für den Morgen auf und nutz den Rest für Antworten, Aufräumen und die Liste für morgen. Beim Geld gilt: Vorsicht vor dem müden Einkauf. Im Nachmittagstief wird aus einer kleinen Belohnung schnell eine Bestellung, die du nicht brauchst."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 14, dann 5, die Zahl des Wandels. Dazu kommt eine kleine Alltagsrechnung. Wer acht Stunden schläft, ist 16 Stunden wach, in jedem normalen Tag steckt also eine Sechzehn. Zu dieser Stunde hast du davon meist schon deutlich mehr als die Hälfte verbraucht."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Viele erwähnen 16:16 am Schultor, am Ende einer langen Besprechung und in den letzten Stunden einer Schicht. Besonders auf fällt sie in müden Phasen und in den dunklen Monaten, wenn es in Mitteleuropa ungefähr um diese Zeit zu dämmern beginnt."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir einen Projektleiter um 16:16 vor, seine Präsentation stimmt immer noch nicht. Er könnte bis acht bleiben. Er schaut auf die Liste, sieht, dass für morgen nur ein Punkt wirklich zählt, und schiebt den Rest mit einer kurzen Notiz auf Montag. Auf dem Heimweg ruft er seine Schwester an, was er seit einem Monat vorhat."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Halt zwei Minuten an. Schreib die eine Sache auf, die heute noch passieren muss, und streich oder verschieb etwas anderes. Trink Wasser und geh, wenn es geht, kurz nach draußen, solange es noch hell ist."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Ein Tief am späten Nachmittag ist normal, lies schlechte Laune um diese Zeit also nicht als Urteil über dein Leben. Nach einer Mahlzeit und einer Nacht Schlaf schrumpft das meiste wieder."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was halte ich heute noch aufrecht, obwohl niemand darum gebeten hat?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Für ein gutes Tagesende muss nicht alles von dir übrig sein."
+    ]
+   }
+  ]
+ },
+ "17-17": {
+  "title": "Spiegelzahl 17:17: vielleicht weißt du schon genug",
+  "lead": "17:17 kommt mit dem Feierabend. 17 ist die kleinste Zahl an Vorgaben, die ein Sudoku braucht, also fragt sie, ob dir wirklich noch etwas fehlt.",
+  "sections": [
+   {
+    "title": "Was 17:17 bedeuten kann",
+    "paras": [
+     "Die 17 ist eine Primzahl, nur durch sich selbst und durch eins teilbar, und sie hat etwas Eigenständiges. Um 17:17 endet für viele der Bürotag, und der Abend hat noch nicht angefangen. Du gehst vielleicht gerade aus dem Gebäude oder stehst an der Kasse, die Gedanken des Tages laufen noch weiter. Diese Spiegelzahl spricht oft Menschen an, die auf Gewissheit warten, bevor sie handeln.",
+     "Ihr bestes Bild stammt aus dem Sudoku. Ein computergestützter Beweis von 2012 zeigte, dass ein normales Sudoku mindestens 17 vorgegebene Zahlen braucht, um genau eine Lösung zu haben, und solche Rätsel gibt es. Mit so wenigen Hinweisen ist das ganze Feld schon entschieden. Vielleicht hältst du mehr von der Antwort in der Hand, als du denkst."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe kann 17:17 fragen, auf wie viele Zeichen du eigentlich noch wartest. Weißt du, was du fühlst, helfen dir weitere Beweise kaum. Du kannst es freundlich sagen und schauen, was passiert. Bist du Single, ist es vielleicht Zeit, die Nachrichten eines Fremden nicht länger nach Hinweisen abzusuchen und die einfache Frage zu stellen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich begünstigt sie eine Entscheidung nach dem Stand von heute Abend, statt einer weiteren Besprechung. Recherche hilft bis zu einem gewissen Punkt, danach wird sie zum Versteck. Beim Geld bittet sie dich, zwei oder drei Angebote zu vergleichen und dann zu wählen, denn das perfekte gibt es selten."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 16 und dann 7, die Zahl des Nachdenkens. Die 17 hat einen gemischten Ruf. In Italien gilt sie als Unglückszahl, weil sich die römische XVII zu VIXI umstellen lässt, lateinisch für ich habe gelebt. Der junge Carl Friedrich Gauß dagegen bewies 1796, dass sich ein regelmäßiges Siebzehneck allein mit Zirkel und Lineal konstruieren lässt, und sein Denkmal in Braunschweig trägt einen 17-zackigen Stern. Ein japanisches Haiku hat 17 Silben. Eine Zahl, viele Stimmungen."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Viele bemerken 17:17 auf dem Weg zum Auto oder zur Straßenbahn, beim Abholen der Kinder und beim letzten Blick auf den Bildschirm vor dem Herunterfahren. Oft kehrt sie wieder, wenn eine Entscheidung zu lange auf dem Schreibtisch liegt."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir eine Frau auf einer Bank vor dem Büro vor, 17:17, auf dem Handy die nächste Wohnungsanzeige. Dreißig hat sie in zwei Monaten gesehen, die dritte gefiel ihr am besten. Das weiß sie. Noch bevor sie aufsteht, ruft sie die Maklerin an und fragt, ob die Wohnung noch zu haben ist. Wie die Antwort auch ausfällt: Die Suche hat eine andere Form bekommen."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Schreib in höchstens 17 Wörtern auf, was du über die Frage, die dich beschäftigt, schon weißt. Reicht das, handle morgen früh danach. Reicht es nicht, nenn die eine fehlende Tatsache und finde genau diese heraus."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Mit weniger Informationen zu entscheiden heißt nicht, überstürzt zu entscheiden. Hol dir bei großen medizinischen, rechtlichen oder finanziellen Fragen ordentlichen Rat und hör danach auf, Meinungen zu sammeln."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was weiß ich längst, obwohl ich so tue, als müsste ich es erst herausfinden?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Siebzehn Hinweise können das ganze Rätsel lösen."
+    ]
+   }
+  ]
+ },
+ "18-18": {
+  "title": "Spiegelzahl 18:18: Feierabend für den Kopf",
+  "lead": "18:18 liegt am Übergang vom Tag zum Abend. Die Uhrzeit bittet dich, den Tag abzulegen und als Mensch nach Hause zu kommen, nicht als dein Job.",
+  "sections": [
+   {
+    "title": "Was 18:18 bedeuten kann",
+    "paras": [
+     "Gegen 18:18 wechselt der Tag die Hände. Für viele endet die Arbeit, irgendjemand denkt ans Abendbrot, und draußen verändert sich das Licht. Die Spiegelzahl wiederholt die 18, eine Zahl der Reife und der Verantwortung, genau in dem Moment, in dem du keine mehr tragen musst. Ein guter Zeitpunkt, um zu bemerken, wie du die Grenze zwischen deinem Arbeits-Ich und deinem privaten Ich überquerst.",
+     "Auf der Uhr liest sich die 18 wie eine Übergabe. Wofür du bis jetzt zuständig warst, darf auf die Liste für morgen. Wer auch immer zu Hause ist, und sei es nur du selbst, hat den Menschen verdient und nicht die Reste."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe ist 18:18 oft die Stunde des ersten Satzes nach einem langen Tag, und dieser erste Satz wiegt viel. Versuch es mit einer Frage vor der Beschwerde. Wohnst du allein, gilt das Gleiche dafür, wie du mit dir selbst redest, wenn du zur Tür hereinkommst."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich ist das eine gute Zeit zum Aufhören und eine schlechte zum Anfangen. Schreib den nächsten Schritt für morgen auf, damit dein Kopf loslassen kann. Beim Geld gilt: Klär Streit ums Ausgeben jetzt lieber nicht, das geht nach dem Essen oder am Wochenende besser."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 18, dann 9, die Zahl, die einen Zyklus beendet. Diese Stunde schließt also ab. Eine Golfrunde hat 18 Löcher, das letzte bringt dich zurück zum Clubhaus. Im Tarot ist Karte XVIII der Mond, die Karte der Dämmerung. Beides passt zu einer Tageszeit, in der die Umrisse der Dinge weicher werden."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Man sieht 18:18 im Stau, im Supermarkt auf dem Heimweg, auf der Backofenuhr und in den ersten Minuten am Küchentisch. Sie fällt besonders in Wochen auf, in denen dir die Arbeit bis nach Hause gefolgt ist."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir einen Mann vor, der um 18:18 im geparkten Auto vor dem Haus sitzt und noch ein Telefonat beendet. Seine Tochter steht am Fenster. Er legt auf, legt das Handy ins Handschuhfach und lässt es dort, bis sie im Bett ist. Das ist ein einziger Abend, mehr nicht, und genau so fangen Gewohnheiten an."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Gib dem Ende deines Tages ein kleines Zeichen: Hemd wechseln, langsam die Hände waschen, eine Runde um den Block. Schreib eine Zeile für morgen und mach die Liste zu. Dann frag jemanden, wie der Tag war, und hör dir die ganze Antwort an."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "In der Dämmerung wirkt vieles schwerer, als es ist. Kommt jeden Tag um diese Zeit eine dunkle Stimmung, geh freundlich damit um und erzähl jemandem davon. Regelmäßige Niedergeschlagenheit ist ein guter Grund für ein Gespräch mit einer Fachperson."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was muss ich ablegen, bevor ich durch meine eigene Tür gehe?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Lass den Tag vor der Tür, er ist morgen auch noch da."
+    ]
+   }
+  ]
+ },
+ "19-19": {
+  "title": "Spiegelzahl 19:19: wer kehrt in dein Leben zurück?",
+  "lead": "19:19 kommt in der Ruhe des Abends. Ihre Summe 2 weist auf andere Menschen, und in 19 Jahren kehrt der Mond zurück: eine Zahl für Wiedersehen.",
+  "sections": [
+   {
+    "title": "Was 19:19 bedeuten kann",
+    "paras": [
+     "Die 19 ist die letzte Zahl vor der Zwanzig und hat etwas von einem langen Weg, der wieder an einen vertrauten Ort führt. Um 19:19 ist das Essen meist vorbei, der Abend liegt offen da. Eine natürliche Stunde für ein Telefonat, ein altes Foto oder einen Namen, den du lange nicht ausgesprochen hast.",
+     "In der Numerologie führt die 19 zur 1 und zählt zu den karmischen Zahlen. Sie steht für eine Unabhängigkeit, die noch lernen muss, Hilfe anzunehmen. Diese Uhrzeit kann also auf jemanden zeigen, bei dem du dich aus Stolz oder Zeitnot nicht gemeldet hast. Oft bittet sie dich, den ersten Schritt zu machen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe spricht 19:19 für Reparatur und Rückkehr. Das kann ein ehrliches Wort nach einer kühlen Woche sein oder ein ruhigerer Blick auf eine alte Liebe, der nicht unbedingt zu einem Treffen führen muss. Niemand verpflichtet dich, jede Tür wieder aufzumachen. Bist du Single, lass dir von Freunden helfen: Das ist eine Stunde, um zu einer Einladung Ja zu sagen."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich passt die Uhrzeit zu langjährigen Beziehungen: eine frühere Kollegin, ein Kunde, von dem du lange nichts gehört hast, eine Mentorin, der du danken wolltest. Eine kurze Nachricht kann ein nützliches Gespräch neu beginnen. Beim Geld begünstigt sie ein ehrliches Gespräch über gemeinsame Kosten, in einem ruhigen Moment."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 20 und führen zur 2, der Zahl der Partnerschaft. Die 19 hat auch einen echten Platz am Himmel. Etwa alle 19 Jahre fallen die Mondphasen wieder auf fast dieselben Kalendertage, weil 235 Mondmonate beinahe genau 19 Sonnenjahre ergeben. Das ist der Meton-Zyklus, und er fließt bis heute in die Berechnung des Osterdatums ein. Im Tarot ist Karte XIX die Sonne, die hellste Karte im Spiel."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Man sieht 19:19 beim Tischabräumen, auf dem Sofa oder beim Durchblättern alter Bilder. Oft kehrt sie um Jahrestage, Klassentreffen und jene Jahreszeit wieder, in der jemand gestorben oder gegangen ist."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir eine Frau vor, die um 19:19 beim Sortieren von Papieren eine Geburtstagskarte ihrer Schulfreundin findet. Seit den Zwanzigern haben die beiden nicht mehr miteinander gesprochen. Zehn Minuten sucht sie nach der Nummer, dann schreibt sie drei schlichte Zeilen, ohne Erklärung und ohne Entschuldigung. Ob eine Antwort kommt, weiß sie nicht. Ihr geht es trotzdem besser, seit die Nachricht unterwegs ist."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Denk an einen Menschen, der dir diese Woche grundlos in den Sinn gekommen ist. Schick ihm heute Abend eine kurze Nachricht, die nichts verlangt. Gibt es niemanden, dem du schreiben kannst, zünd eine Kerze für jemanden an, den du vermisst, oder erzähl einem anderen von ihm."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Nicht jede Rückkehr tut dir gut. Hat dich jemand verletzt, verpflichtet dich 19:19 zu nichts. Zu dir selbst zurückzukommen zählt genauso."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Wessen Name fällt mir immer wieder ein, und was möchte ich ihm sagen?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Manches kommt zurück, wenn du die Tür einen Spalt offen lässt."
+    ]
+   }
+  ]
+ },
  "20-20": {
   "title": "Spiegelzahl 20:20: Geduld, Zuhören und stille Unterstützung",
   "lead": "20:20 erscheint am Abend, wenn die meisten zu Hause sind und das Tempo sinkt. Sie verdoppelt die sanfte Zwei und die offene Null und spricht oft von Partnerschaft, Geduld und der Kraft, die wächst, wenn du aufhörst zu drängen.",
@@ -1001,6 +1537,73 @@ export const mirrorDe: MirrorSet = {
     "title": "Worte zum Merken",
     "paras": [
      "Große Dinge entstehen aus gewöhnlichen Tagen, die mit Absicht wiederholt werden."
+    ]
+   }
+  ]
+ },
+ "23-23": {
+  "title": "Spiegelzahl 23:23: der letzte Zufall des Tages",
+  "lead": "23:23 ist die letzte Spiegelzahl des Tages. Sie fragt, was du geerbt hast und was du wählst, und zeigt, warum Zufälle häufiger sind, als sie wirken.",
+  "sections": [
+   {
+    "title": "Was 23:23 bedeuten kann",
+    "paras": [
+     "23:23 ist die letzte doppelte Uhrzeit vor Mitternacht und hat etwas von letzter Runde. Die 23 sagt auch etwas darüber, woher du kommst: Ein Mensch hat normalerweise 23 Chromosomen von einem Elternteil und 23 vom anderen. So gelesen zeigt die Uhr die beiden Hälften, aus denen du gemacht bist, Seite an Seite, in der letzten Stunde des Tages.",
+     "Das macht sie zu einer guten Zeit für eine sehr private Frage. Welche deiner Gewohnheiten hast du selbst gewählt, und welche kamen mit der Familie? Du musst nicht alles behalten, was man dir mitgegeben hat, und du musst auch nicht alles wegwerfen."
+    ]
+   },
+   {
+    "title": "In der Liebe",
+    "paras": [
+     "In der Liebe kann 23:23 Muster aus deinem Elternhaus hochholen: wie gestritten wurde, wie man sich versöhnte, was unausgesprochen blieb. Darüber zu reden ist besser, als es zu wiederholen. Heb dir das allerdings für morgen auf, spätabends gehen schwere Gespräche selten gut aus. Bist du Single, frag dich, welches Bild von Liebe du geerbt hast und ob es noch passt."
+    ]
+   },
+   {
+    "title": "Bei der Arbeit und mit Geld",
+    "paras": [
+     "Beruflich heißt die Uhrzeit: Laptop zu. Die Ideen, die um 23:23 kommen, können gut sein, also schreib sie auf und schau sie dir morgen an. Beim Geld gilt: keine nächtlichen Einkäufe und keine Nachricht, die du mittags nicht schicken würdest."
+    ]
+   },
+   {
+    "title": "Ihre Zahlen",
+    "paras": [
+     "Die Ziffern ergeben 10 und führen zur 1, der Zahl des Neuanfangs, was gut zu einer Uhrzeit so nah an Mitternacht passt. Und die 23 hat einen berühmten Trick auf Lager: das Geburtstagsparadoxon. In einer Gruppe von nur 23 Menschen liegt die Chance, dass zwei am selben Tag Geburtstag haben, knapp über 50 Prozent. Die meisten schätzen viel zu niedrig, weil sie an sich selbst denken und vergessen, wie viele Paare in einer Gruppe stecken. Zufälle sind häufiger, als sie sich anfühlen, und das ist auf einer Seite über Uhrzeiten nützlich zu wissen."
+    ]
+   },
+   {
+    "title": "Wann sie oft erscheint",
+    "paras": [
+     "Viele sehen 23:23 beim Zähneputzen, beim Griff zum Handy im Bett oder wenn sie nicht einschlafen können. Sie kehrt oft wieder, wenn du zu lange aufbleibst, und diese Gewohnheit macht es auch wahrscheinlicher, sie zu sehen."
+    ]
+   },
+   {
+    "title": "Eine kurze Geschichte",
+    "paras": [
+     "Stell dir einen jungen Vater vor, der um 23:23 sein schlafendes Kind ins Bett legt. Er hört sich eine Melodie summen, an die er seit zwanzig Jahren nicht gedacht hat, die, die sein eigener Vater immer gesummt hat. Einen Moment bleibt er stehen. Manches geben wir weiter, ohne uns dafür zu entscheiden, und heute Abend hat er nichts dagegen."
+    ]
+   },
+   {
+    "title": "Was du tun kannst, wenn du sie siehst",
+    "paras": [
+     "Leg das Handy außer Reichweite und schreib eine Zeile über heute. Nenn eine Sache aus deiner Familie, die du behalten willst, und eine, die mit dir aufhören darf. Dann geh schlafen."
+    ]
+   },
+   {
+    "title": "Ein Wort der Vorsicht",
+    "paras": [
+     "Spät am Abend wirken Spiegelzahlen besonders bedeutungsvoll, weil du müde bist. Sieht ein Gedanke um 23:23 riesig aus, prüf, ob er nach dem Frühstück immer noch so groß ist."
+    ]
+   },
+   {
+    "title": "Eine Frage an dich",
+    "paras": [
+     "Was habe ich geerbt, das ich behalten will, und was darf mit mir enden?"
+    ]
+   },
+   {
+    "title": "Worte zum Merken",
+    "paras": [
+     "Die Hälfte von dir wurde dir mitgegeben, was du daraus machst, gehört dir."
     ]
    }
   ]
