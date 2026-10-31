@@ -10,6 +10,9 @@ export function moonPath(angle: number, cx: number, cy: number, r: number): stri
   return `M ${cx} ${cy - r} A ${r} ${r} 0 0 ${waxing ? 1 : 0} ${cx} ${cy + r} A ${rx} ${r} 0 0 ${termSweep} ${cx} ${cy - r} Z`;
 }
 
+/** The Moon badge of the hero art, in the same 200 unit box. On the dated page it sits over the cached /art/sign/<sign>.svg file. */
+export const heroMoonSvg = (moonAngle: number) => `<g transform="translate(150 22)"><circle cx="16" cy="16" r="15" fill="#1b1640" stroke="#e9c78a" stroke-opacity=".5" stroke-width=".8"/><path d="${moonPath(moonAngle, 16, 16, 13)}" fill="#f6ecd2"/></g>`;
+
 export function signHeroSvg(sign: Sign, moonAngle: number, opts: { moon?: boolean } = {}): string {
   const k = CONSTELLATIONS[sign]; const el = ELEMENT_COLORS[SIGN_ELEMENT[sign]]; const id = `hz-${sign}`;
   const pts = k.s.map(([x, y]) => [r2(40 + x * 1.2), r2(40 + y * 1.2)]);
@@ -17,7 +20,7 @@ export function signHeroSvg(sign: Sign, moonAngle: number, opts: { moon?: boolea
   const dust = Array.from({ length: 26 }, (_, i) => { const a = i * 2.39996; const rr = 30 + ((i * 37) % 60); return `<circle cx="${r2(100 + Math.cos(a) * rr)}" cy="${r2(100 + Math.sin(a) * rr)}" r="${i % 5 === 0 ? 0.9 : 0.5}" fill="#fff" fill-opacity="${i % 3 === 0 ? 0.7 : 0.35}"/>`; }).join("");
   const lines = k.l.map(([a, b]) => `<line x1="${pts[a][0]}" y1="${pts[a][1]}" x2="${pts[b][0]}" y2="${pts[b][1]}" stroke="url(#${id}-g)" stroke-width="1.3" stroke-linecap="round" stroke-opacity=".9"/>`).join("");
   const stars = k.s.map(([, , m], i) => `<circle cx="${pts[i][0]}" cy="${pts[i][1]}" r="${m === 1 ? 3.6 : m === 2 ? 2.6 : 1.8}" fill="#fff8e6" filter="url(#${id}-glow)"/>`).join("");
-  const moon = opts.moon === false ? "" : `<g transform="translate(150 22)"><circle cx="16" cy="16" r="15" fill="#1b1640" stroke="#e9c78a" stroke-opacity=".5" stroke-width=".8"/><path d="${moonPath(moonAngle, 16, 16, 13)}" fill="#f6ecd2"/></g>`;
+  const moon = opts.moon === false ? "" : heroMoonSvg(moonAngle);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200"><defs>`
     + `<radialGradient id="${id}-o" cx="42%" cy="36%" r="68%"><stop offset="0" stop-color="${el.b}" stop-opacity=".6"/><stop offset=".55" stop-color="${el.a}" stop-opacity=".22"/><stop offset="1" stop-color="#120f2e" stop-opacity="0"/></radialGradient>`
     + `<linearGradient id="${id}-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe7b0"/><stop offset="1" stop-color="#e9b44c"/></linearGradient>`

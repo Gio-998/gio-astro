@@ -5,7 +5,7 @@ import { localizedMeta } from "@/lib/seo";
 import { BLOG_SLUGS, postFor } from "@/content/blog";
 import { formatDate } from "@/lib/dates";
 import { SITE_URL } from "@/lib/site-url";
-import { breadcrumb, ORG_REF } from "@/lib/schema";
+import { breadcrumb, orgAuthor, ORG_REF } from "@/lib/schema";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return LOCALES.flatMap((lang) => BLOG_SLUGS.map((slug) => ({ lang, slug }))); }
@@ -21,7 +21,7 @@ export default async function Page({ params }: PageProps<"/[lang]/blog/[slug]">)
   const { lang, slug } = await params; const c = getContent(lang); const p = postFor(lang, slug); const B = c.blog;
   if (!p) notFound();
   const url = `${SITE_URL}/${lang}/blog/${slug}/`;
-  const ld = [{ "@context": "https://schema.org", "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.updated ?? p.date, inLanguage: lang, keywords: p.tags.join(", "), mainEntityOfPage: url, url, image: `${SITE_URL}/og/default/${lang}.jpg`, author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: ORG_REF },
+  const ld = [{ "@context": "https://schema.org", "@type": "BlogPosting", headline: p.title, description: p.description, datePublished: p.date, dateModified: p.updated ?? p.date, inLanguage: lang, keywords: p.tags.join(", "), mainEntityOfPage: url, url, image: `${SITE_URL}/og/default/${lang}.jpg`, author: orgAuthor(c.site.brand), publisher: ORG_REF },
     breadcrumb([[c.site.brand, `/${lang}/`], [B.title, `/${lang}/blog/`], [p.title, `/${lang}/blog/${slug}/`]])];
   return (
     <article className="prose-soft mx-auto max-w-2xl" data-testid="blog-post">

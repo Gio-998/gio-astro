@@ -2,13 +2,14 @@ import { formatDate } from "@/lib/dates";
 import Link from "next/link";
 import { publishedDates, dayStart } from "@/engine/skyday";
 import { RetroMark } from "../RetroMark";
+import { DayLink } from "../DayLink";
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { getContent } from "@/content";
 import { reading, horoPath, bankFor, absolute, ogPath, ogImage, type Reading } from "@/lib/horoscope";
-import { signHeroSvg, moonPath } from "./art";
-import { SITE_URL } from "@/lib/site-url";
+import { heroMoonSvg, moonPath } from "./art";
+import { orgAuthor, ORG_REF } from "@/lib/schema";
 import { numContent } from "@/content/numerology";
-import { DayNumber } from "../numerology/Personal";
+import { DayNumber } from "../numerology/DayNumber";
 import { localizedPath } from "@/lib/i18n-routes";
 import { ZODIAC } from "@/content/zodiac";
 
@@ -39,23 +40,27 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
     "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: dayStart(iso), dateModified: dayStart(iso),
     inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogImage(lang, sign, iso))], about: { "@type": "Thing", name: r.signName },
     articleSection: B.ui.hubTitle, wordCount: wordCount(r) + (evergreen ? evergreen.paras.join(" ").split(/\s+/).length : 0),
-    author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` },
+    author: orgAuthor(c.site.brand), publisher: ORG_REF,
   };
   const crumbs = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [[c.site.brand, `/${lang}/`], [U.hubTitle, horoPath(lang)], [r.signName, horoPath(lang, sign)], ...(isToday ? [] : [[r.dateLabel, horoPath(lang, sign, iso)]])].map(([name, p], i) => ({ "@type": "ListItem", position: i + 1, name, item: absolute(p) })) };
   // Only link to dates this build publishes, so the edges of the window never point at a 404.
   const pub = new Set(publishedDates());
   const dayNav = (
     <nav className="flex items-center justify-between gap-2" aria-label={U.others}>
-      {pub.has(r.prev) ? <Link className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</Link> : <span />}
+      {pub.has(r.prev) ? <DayLink className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</DayLink> : <span />}
       {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLink}</Link>}
-      {pub.has(r.next) ? <Link className={pill} href={horoPath(lang, sign, r.next)} rel="next">{U.tomorrow} →</Link> : <span />}
+      {pub.has(r.next) ? <DayLink className={pill} href={horoPath(lang, sign, r.next)} rel="next">{U.tomorrow} →</DayLink> : <span />}
     </nav>
   );
   return (
     <article className="mx-auto max-w-xl space-y-3 lg:relative lg:left-1/2 lg:w-[min(1120px,calc(100vw-4rem))] lg:max-w-none lg:-translate-x-1/2 lg:space-y-0" data-testid="daily-horoscope">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([ld, crumbs]) }} />
       <header className="relative overflow-hidden rounded-[28px] border border-gold/20 bg-[radial-gradient(120%_90%_at_80%_0%,rgba(139,108,240,.45),transparent_60%),linear-gradient(170deg,#1d1748,#0e0b26)] px-5 pb-5 pt-5 shadow-[0_30px_80px_-40px_rgba(139,108,240,.9)] lg:rounded-[36px] lg:px-14 lg:py-14">
-        <div aria-hidden className="pointer-events-none absolute -right-16 -top-14 h-44 w-44 opacity-40 sm:-right-10 sm:-top-6 sm:h-56 sm:w-56 sm:opacity-75 lg:right-10 lg:top-1/2 lg:h-[400px] lg:w-[400px] lg:-translate-y-1/2 lg:opacity-100 [&>svg]:h-full [&>svg]:w-full" dangerouslySetInnerHTML={{ __html: signHeroSvg(sign, angle) }} />
+        <div aria-hidden className="pointer-events-none absolute -right-16 -top-14 h-44 w-44 opacity-40 sm:-right-10 sm:-top-6 sm:h-56 sm:w-56 sm:opacity-75 lg:right-10 lg:top-1/2 lg:h-[400px] lg:w-[400px] lg:-translate-y-1/2 lg:opacity-100">
+          {/* eslint-disable-next-line @next/next/no-img-element -- static SVG, shared by every date of the sign */}
+          <img src={`/art/sign/${sign}.svg`} alt="" width={200} height={200} className="h-full w-full" />
+          <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full" dangerouslySetInnerHTML={{ __html: heroMoonSvg(angle) }} />
+        </div>
         <div className="relative lg:max-w-[600px]">
           <p className="eyebrow mb-2 whitespace-nowrap text-[11px] tracking-[.14em] sm:tracking-[.2em] lg:mb-4 lg:text-[13px]" data-testid="horo-eyebrow">{SIGN_GLYPH[sign]} {r.signName} · {r.weekday}</p>
           <h1 className="h-display max-w-[15ch] pr-2 text-[2rem] font-medium leading-[1.05] lg:max-w-none lg:text-[3.3rem]!">{r.title.replace(r.dateLabel, nbsp(r.dateLabel))}</h1>
@@ -156,7 +161,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
           <nav aria-label={U.others}>
             <h2 className={`${label} mb-2 mt-2`}>{U.others}</h2>
             <div className="grid grid-cols-4 gap-1.5 lg:grid-cols-6">
-              {SIGNS.filter((x) => x !== sign).map((x) => <Link key={x} href={isToday ? horoPath(lang, x) : horoPath(lang, x, iso)} title={c.astro.signs[x].name} className="flex h-12 flex-col items-center justify-center gap-0.5 rounded-xl border border-white/10 bg-white/[0.04] px-0.5 text-[11px] leading-none hover:border-gold/40 sm:h-10 sm:flex-row sm:gap-1 sm:px-1 sm:text-[12px] lg:h-11 lg:rounded-full" data-testid="other-sign"><span aria-hidden className="text-[13px] leading-none text-gold sm:text-[12px] lg:text-lg">{SIGN_GLYPH[x]}</span><span className="whitespace-nowrap lg:sr-only">{c.astro.signs[x].name}</span></Link>)}
+              {SIGNS.filter((x) => x !== sign).map((x) => <DayLink key={x} href={isToday ? horoPath(lang, x) : horoPath(lang, x, iso)} title={c.astro.signs[x].name} className="flex h-12 flex-col items-center justify-center gap-0.5 rounded-xl border border-white/10 bg-white/[0.04] px-0.5 text-[11px] leading-none hover:border-gold/40 sm:h-10 sm:flex-row sm:gap-1 sm:px-1 sm:text-[12px] lg:h-11 lg:rounded-full" data-testid="other-sign"><span aria-hidden className="text-[13px] leading-none text-gold sm:text-[12px] lg:text-lg">{SIGN_GLYPH[x]}</span><span className="whitespace-nowrap lg:sr-only">{c.astro.signs[x].name}</span></DayLink>)}
             </div>
           </nav>
           <p className="mt-2 text-[13px]"><Link className="text-gold underline-offset-4 hover:underline" href={`/${lang}/daily/${sign}/`} data-testid="motivation-link">{U.motivationLink(r.signName)} →</Link></p>
@@ -165,7 +170,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
               <h2 className={`${label} mb-1 mt-2`}>{U.recentDays}</h2>
               <p className="mb-2 text-[12.5px] leading-snug text-mist/65">{U.signHubIntro(r.signName)}</p>
               <ul className="flex flex-wrap gap-1.5">
-                {[...pub].filter((d) => d < iso).reverse().slice(0, 31).map((d) => <li key={d}><Link className="inline-block rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[12px] hover:border-gold/40" href={horoPath(lang, sign, d)}>{formatDate(d, c.site.months)}</Link></li>)}
+                {[...pub].filter((d) => d < iso).reverse().slice(0, 31).map((d) => <li key={d}><DayLink className="inline-block rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[12px] hover:border-gold/40" href={horoPath(lang, sign, d)}>{formatDate(d, c.site.months)}</DayLink></li>)}
               </ul>
             </nav>
           )}

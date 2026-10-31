@@ -11,9 +11,10 @@
     "test": "vitest run",
     "check:copy": "node scripts/check-copy.mjs",
     "check:site": "node scripts/check-site.mjs",
+    "check:schema": "node scripts/check-schema.mjs",
     "calibrate": "N_PEOPLE=3000 N_PAIRS=40000 tsx scripts/calibrate.ts",
     "cities": "node scripts/build-cities.mjs",
-    "postbuild": "node scripts/prune-locale-shells.mjs"
+    "postbuild": "node scripts/prune-locale-shells.mjs && node scripts/trim-export.mjs && node scripts/split-sitemap.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.117.3",

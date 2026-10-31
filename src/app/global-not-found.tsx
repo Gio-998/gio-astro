@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 
-const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["500", "600"], style: ["normal", "italic"], variable: "--font-cormorant" });
-const sans = Inter({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-inter" });
+const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["500", "600"], style: ["normal", "italic"], variable: "--font-cormorant", preload: false });
+const sans = Inter({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-inter", preload: false });
 
 export const metadata: Metadata = { title: "404 · Horoscop", robots: { index: false, follow: true } };
 
