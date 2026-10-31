@@ -1,7 +1,157 @@
-import type { Content, DeepPartial } from "../..";
+import type { SignDeep } from "../../en/deep/types";
 
-/** Stub until the Serbian copy lands. The real file with this name replaces it, nothing else has to change. */
-export const leo: DeepPartial<Content["deep"]["signDeep"]["leo"]> = {};
-export const virgo: DeepPartial<Content["deep"]["signDeep"]["virgo"]> = {};
-export const libra: DeepPartial<Content["deep"]["signDeep"]["libra"]> = {};
-export const scorpio: DeepPartial<Content["deep"]["signDeep"]["scorpio"]> = {};
+export const leo: SignDeep = {
+  title: "Srce Sunca",
+  quote: "Kad sijaš i ne izvinjavaš se zbog toga, svima ostalima daješ dozvolu da urade isto.",
+  myth: "Lav je lav sa visokog letnjeg neba, u grčkom mitu vezan za nemejskog lava kog je junak savladao, a zatim nosio kao ogrtač: snaga pretvorena u zaštitu. Vlada mu samo Sunce, pa je ovo znak kralja i kraljice, izvođača i deteta zanesenog igrom: topla sredina oko koje sve ostalo kruži kao planete.",
+  sun: {
+    story: [
+      "Nešto u tebi je od rođenja znalo kako da trenutak pozlati. Primećuješ svetlo u ljudima i osećaš jaku, gotovo telesnu potrebu da izraziš svetlo u sebi: kroz stvaranje, ljubav, stil, smeh, vođenje ili običnu velikodušnost. Sunce u Lavu živi u srcu: toplom, ponosnom, vernom i dovoljno velikom da u njega stane ceo krug ljudi.",
+      "Ispod sjaja stoji nežno pitanje koje nosiš svuda: „Vidiš li me?“ Kad je odgovor da, zračiš i daješ bez mere. Kad je odgovor ne (kad te ignorišu, grubo kritikuju ili uzimaju zdravo za gotovo), ponos može da se stvrdne u masku, a toplina da se priguši tako da iznenadi čak i tebe. Tvoja osetljivost nema veze sa sujetom. To je cena koju plaćaš kad živiš sa ovako otvorenim srcem.",
+      "Na tvom putu glavno je da se izraziš bez glume. Rasteš kad stvaraš iz radosti stvaranja, a ne zbog aplauza, i kad otkriješ da je najveće dostojanstvo u tome da te vole zbog onoga što jesi, a ne zbog toga koliko blistavo nastupaš.",
+    ],
+    love: "Voliš romantično, velikodušno i celim srcem. Dopadaju ti se veliki gestovi, verna predanost i partner pored kog sa ponosom stojiš. Brigu pokazuješ toplinom, pažnjom i slavljem, pa se i obična godišnjica kod tebe pretvori u događaj. Treba da osećaš da te neko ceni i bira, a procvetaš uz osobu koja te pušta i da se igraš, glupiraš i raznežiš, a ne da stalno blistaš.",
+    friends: "Ti organizuješ rođendan, držiš zdravicu i činiš da se svi za stolom osećaju kao počasni gosti, od kuma do komšinice. Vernost ti je žestoka, pa čast prijatelja braniš glasno i bez razmišljanja. Trebaju ti prijatelji koji i tebe slave.",
+    work: "Napreduješ u vidljivim, kreativnim ili rukovodećim ulogama: scenske umetnosti, nastava, menadžment, marketing, dizajn, zabava, rad sa decom. Trebaju ti priznanje i pohvala koja nešto znači. Tim povlačiš svojim žarom, pa i ponedeljkom ujutru. Izazov ti je da deliš zasluge i primiš kritiku, a da se ne osećaš umanjeno.",
+    family: "Kod kuće si često topla sredina: okupljaš ljude, pokrećeš igre i činiš da praznici stvarno liče na praznike. Možda nosiš posebnu ulogu porodičnog ponosa ili osećaš pritisak da blistaš zbog drugih, pa i kad ti se ne blista.",
+    daily: [
+      "Zasijaš kad neko primeti trud koji ulažeš u to kako izgledaš, kuvaš ili stvaraš.",
+      "Usputna primedba, koju bi drugi otresli sa ramena, izduva te na nekoliko sati.",
+      "Običnu večeru u utorak pretvoriš u malo slavlje, uz sveću i lepe tanjire.",
+      "Reaguješ pre svih kad treba odbraniti nekoga kome se rugaju.",
+    ],
+    strengths: ["Toplina od koje se ljudi osećaju posebno", "Kreativnost i razigrano izražavanje", "Velikodušna vernost", "Prirodno vođenje i hrabrost", "Veliko srce koje se oporavi i oprosti"],
+    shadows: ["Bez tuđeg divljenja ti nije dobro", "Ponos koji ne da izvinjenju da izađe", "Otimaš reflektor tišim ljudima", "Drama kad se osećaš nevidljivo"],
+    growth: "Na mestu za rast te čeka prepoznavanje sebe: da se vidiš i ceniš toliko potpuno da aplauz postane zadovoljstvo, a ne potreba.",
+    practices: ["Svake nedelje napravi nešto samo iz radosti. Bez publike, bez objave na mrežama.", "Svakog dana uputi jedan konkretan, iskren kompliment nekome koga retko primećuju.", "Kad te kritikuju, reci „Hvala, razmisliću o tome“ i vrati se na to tek sutradan, sa mirnom glavom."],
+    journal: ["Kad sam najviše ja, i gleda li me tada iko?", "Čije priznanje još uvek čekam?", "Kako ove nedelje mogu da pustim nekog drugog da zasija?"],
+  },
+  moon: {
+    story: "Mesec u Lavu traži da te vide i paze, i tek tada se osećaš bezbedno. Osećanja su ti topla, dramatična i darežljiva, i kad voliš, to zna ceo kraj. Iskren kompliment ili nežan gest ide pravo u srce, a ignorisanje te pogodi kao da je neko ugasio sunce. Oporavljaš se kroz igru, stvaranje i potvrdu da i dalje nešto značiš ljudima do kojih ti je stalo.",
+    needs: "Hraniš se uvažavanjem, nežnošću i razigranošću, a treba ti i prostor da osećanja izraziš hrabro, a da ti niko ne kaže da je to „previše“.",
+    heals: "Stvaranje, slavlje u tvoju čast, smeh sa prijateljima, sunčeva svetlost, lepo oblačenje i draga osoba koja ti tačno kaže čemu se kod tebe divi.",
+    daily: "Kad nešto zaboli, pred svetom staviš najbolje lice, a onda se tiho raspadneš pred jednom osobom od poverenja.",
+  },
+  rising: "Podznak Lav znači da te ljudi primete čim uđeš, bilo na slavu, bilo na sastanak. Zapažaju toplinu, kosu, stil ili smeh i često očekuju da povedeš. Imaš prirodan osećaj za svečan trenutak i možeš da osetiš pritisak da uvek sijaš kao da si na sceni. Najbolji prvi utisak ostavljaš kad je toplina stvarna, a ne odglumljena.",
+  venus: "Venera u Lavu voli sa dramom i vernošću. Vuku te samouvereni, izražajni ljudi i uživaš kad ti se udvaraju. Partnera zasipaš velikodušnošću i pohvalama, pa se pored tebe oseća kao član kraljevske porodice. Treba ti divljenje, ali i da te vole zbog tvoje meke strane.",
+  mars: "Marsa u Lavu pokreću ponos i srce. Ciljeve juriš sa stilom i hrabrošću, naročito kad neko gleda. Bes ti ume da bude pozorišan, sa velikim ulaskom i još većim izlaskom, ali retko je okrutan. Najbolje radiš kad je srce u igri.",
+  mercury: "Merkur u Lavu govori toplo i sa autoritetom. Dobro pričaš priče, ubeđuješ žarom uverenja i misliš u velikim slikama. Neslaganje umeš da primiš lično. A kad treba, rečima podižeš ljude sa stolice.",
+  node: "Tvoj Severni čvor je u Lavu, pa traži da se izraziš, i to srcem. Rast dolazi kad izađeš iz gomile, rizikuješ u stvaranju i pustiš ljude da te vide kao pojedinca, umesto da se kriješ u grupi, gde niko ne pita šta ti misliš.",
+};
+
+export const virgo: SignDeep = {
+  title: "Pažljivi iscelitelj",
+  quote: "Svet popravljaš detalj po detalj, precizno i sa ljubavlju.",
+  myth: "Devica je žetvena devojka, često prikazana sa snopom pšenice: boginja žita koja je znala tačan trenutak kad treba sakupiti ono što je sazrelo. Vezuje se i za Astreju, zvezdanu devojku pravde i čistote, poslednju od besmrtnih koja je napustila zemlju. Merkur, vladar Device, ovde je pre iscelitelj i zanatlija nego lukavi prevarant.",
+  sun: {
+    story: [
+      "Vidiš ono što drugima promakne: kriv red, zaboravljen korak, tihu osobu kojoj treba pomoć, a neće da je zatraži. Sunce u Devici ti daje ruke iscelitelja i zanatlije: voliš kroz pažnju i popravljanje. Gde drugi vide haos, ti vidiš sistem koji čeka da ga neko pronađe. Gde drugi vide problem, ti vidiš prvu sitnicu koja može da se uradi još danas.",
+      "Tvoja predanost ide dublje nego što ljudi shvataju. Možda ne daješ velike izjave, ali primećuješ, pamtiš i tiho popravljaš. Senka ovog dara je kritičar koji živi u tvojoj glavi i retko spava. Umeš sebi da postaviš meru koju nijedno ljudsko biće ne bi dostiglo i da se uznemiriš kad život odbija da bude uredan. Veliki deo tvog rasta je da naučiš da „dovoljno dobro“ nije neuspeh i da zaslužuješ ljubav pre nego što bilo šta korisno uradiš.",
+      "Tvoj put se zove predana služba: posao urađen sa pažnjom, telo prema kome se ponašaš sa poštovanjem, um u službi nečeg dobrog. Kad sebi dozvoliš nesavršenost, veština postaje čist dar.",
+    ],
+    love: "U ljubavi predanost dokazuješ delima: popravljen bicikl, spakovan sendvič za posao, podsetnik za zubara. Probiraš i možda ti treba vreme da izabereš, ali kad izabereš, to je za stalno. Dobro ti čini partner koji ceni tvoju brigu, poštuje tvoju potrebu za redom i nežno pomaže da unutrašnji kritičar olabavi.",
+    friends: "Od tebe prijatelji dobiju najbolji praktičan savet, broj pravog doktora i primedbu da nešto slabo jedu. Možda ti je draže nekoliko bliskih, pouzdanih prijateljstava nego veliki društveni vrtlog.",
+    work: "Izdvajaš se u poslu koji traži preciznost i pažnju: zdravstvo, istraživanje, uređivanje tekstova, analiza, zanat, operativni poslovi, ishrana, programiranje, računovodstvo. Grešku uhvatiš pre nego što firmu košta novca. Čuvaj se izgaranja, koje dolazi kad pokušaš da lično popraviš sve.",
+    family: "U kući često sve prolazi kroz tvoje ruke: zakazivanje kod lekara, papiri za opštinu, bakini lekovi složeni po danima u nedelji. Postaraj se da se ta pomoć primeti i da neko pomogne i tebi.",
+    daily: [
+      "Sređuješ fioku kad te muči nešto što sa tom fiokom nema baš nikakve veze.",
+      "Za nekoliko sekundi uočiš slovnu grešku u jelovniku.",
+      "Najlepše ti je uz jasan spisak, čist sto i jutro u kom se nešto stvarno uradi.",
+      "Ne možeš da zaspiš jer ti se vrti jedna rečenica koja ti je pogrešno izletela.",
+    ],
+    strengths: ["Preciznost i zanatska umešnost", "Praktična pomoć", "Analitička jasnoća", "Skromna, pouzdana predanost", "Osećaj za zdravlje i telo"],
+    shadows: ["Stroga samokritika", "Briga i preterana analiza", "Kritikuješ druge kad te uhvati nemir", "Osećaj da vrediš samo dok si nekome od koristi"],
+    growth: "Samilost prema sebi je tvoje mesto za rast: obraćaj se sebi sa istom blagošću koju imaš za uplašenog prijatelja.",
+    practices: ["Svako veče nabroj tri stvari koje su ti tog dana pošle za rukom, ma koliko bile male.", "Vežbaj hobi koji je namerno nesavršen: loše slikanje, glasno pevanje.", "Kad uhvatiš unutrašnjeg kritičara, pitaj se: „Može li ovo da se kaže nekome koga volim?“"],
+    journal: ["Ko me je naučio da se ljubav zarađuje savršenstvom?", "Šta bi se promenilo da mi je jasno da je „dovoljno dobro“ stvarno dovoljno?", "Koje malo delo pomoći mi je ovog meseca donelo najviše radosti?"],
+  },
+  moon: {
+    story: "Mesec u Devici smiruje osećanja tako što ih razvrstava. Kad ti svega bude preko glave, organizuješ, planiraš, čistiš ili popravljaš neku sitnicu, jer red napolju vraća red i unutra. Ljubav osećaš kroz praktičnu brigu, a emocionalni haos i nejasna obećanja teško podnosiš. Tvoja briga je često oblik ljubavi: glava pokušava da sve zaštiti unapred.",
+    needs: "Trebaju ti red, osećaj da si od koristi, zdrave navike i utisak da se tvoj trud primećuje i ceni.",
+    heals: "Čist prostor, šetnja, izvršen spisak obaveza, hranljiva hrana i neko ko ti kaže da je danas dosta urađeno.",
+    daily: "Ako te nešto izjeda, prvo ga analiziraš sa svih strana, pa tek onda dozvoliš sebi da ga osetiš.",
+  },
+  rising: "Devica na podznaku ostavlja utisak promišljenosti, skromnosti i sposobnosti: ti si osoba koja tiho ima plan. Detalje o ljudima uočavaš odmah, a dok se ne opustiš, možeš da deluješ povučeno. Stil ti teži urednom i nenametljivom: ništa viška, sve ispeglano. Ljudi ti rano poveravaju i zadatke i tajne.",
+  venus: "Venera u Devici voli kroz predanost i pomoć. Očarava te umešnost, dobrota i ljudi koji su stvarno dobri. Ljubav ti se vidi u tome što partneru praktično olakšavaš život, od poreske prijave do kućnih popravki. Treba da znaš da si od koristi, a još više da te neko voli samo zato što postojiš.",
+  mars: "Mars u Devici radi precizno. Ciljeve ostvaruješ metodično, deo po deo, i što uradiš, uradiš kako treba. Bes ti može da izađe kao kritika, sitna i tačna. Cvetaš uz jasne planove, a snage ti ima više kad brineš o telu.",
+  mercury: "Merkuru je u Devici dobro kao kod kuće: um ti je precizan, analitičan i praktičan. Uočavaš greške, voliš sisteme i objašnjavaš korak po korak. Čuvaj se preteranog premišljanja. Tvoj um je skalpel, ne čekić.",
+  node: "Severni čvor u Devici vodi ka konkretnoj pomoći i prizemljenim navikama. Rast vidiš kad snove pretvaraš u dnevne rutine, brineš o telu i pomažeš na opipljiv način, umesto da plutaš ili spasavaš druge.",
+};
+
+export const libra: SignDeep = {
+  title: "Čuvar terazija",
+  quote: "Tu si da stvari budu lepe i pravedne, pa i način na koji se ponašaš prema sebi.",
+  myth: "Vaga je jedini znak čiji je simbol predmet: terazije pravde, koje u mnogim mitovima drži boginja pravičnosti. Pada u vreme jesenje ravnodnevice, kad dan i noć stoje u savršenoj ravnoteži. Pod vlašću Venere, Vaga spaja lepotu i pravdu: zamisao da je sklad ispravan, a ne tek prijatan.",
+  sun: {
+    story: [
+      "Neravnotežu osećaš kao što neki ljudi osećaju hladnoću. Nepravedna primedba, nakrivljena prostorija, prijateljstvo u kome uvek daje ista osoba. Nešto u tebi hoće to da ispravi. Sunce u Vagi traži sklad, lepotu i partnerstvo. Diplomatija i estetika ti idu prirodno: vidiš svaku stranu priče, a ljudi se pored tebe osećaju prihvaćeno i nekako otmenije.",
+      "Pošto vidiš sve strane, izbor ume da bude težak. Odluka može da ti visi u vazduhu dok meriš i premeravaš, u strahu da nekoga ne razočaraš. Sukobe ponekad tako dobro peglaš da se tvoje potrebe izgube ispod tuđe udobnosti. Najvažniji posao ti je da otkriješ da pravi sklad uključuje i tebe, i da je ponekad najpravednije i najlepše da kažeš „ne“ ili „ovo je ono što ja hoću“.",
+      "Sve na tvom putu svodi se na odnos, u svakom smislu: sa partnerima, sa lepotom, sa pravdom i sa sobom. Kad osećaj za pravičnost okreneš i ka sebi, postaješ moćna, mirna sila.",
+    ],
+    love: "U ljubavi se ponašaš romantično, pažljivo i otmeno. Hoćeš pravo partnerstvo jednakih, sa učtivošću, lepotom i zajedničkim ritualima. Pažnju pokazuješ promišljenim gestovima i time što partner oseća da o njemu vodiš računa. Treba ti sklad, ali i hrabrost da se ne složiš, jer ljubav koja se nikad ne usudi na sukob nikad i ne dobije dubinu.",
+    friends: "Znaš šta ko voli da jede i pije, smiruješ napetosti u društvu i biraš odlične restorane, pa rezervacija obično pada na tebe. Verovatno imaš širok krug ljudi i ne voliš da staješ ni na čiju stranu.",
+    work: "Snalaziš se u poslovima sa ljudima, estetikom ili pravdom: dizajn, pravo, medijacija, ljudski resursi, diplomatija, moda, umetnost, odnosi sa klijentima. Najviše daješ u lepom okruženju, u saradnji sa drugima. Izazov su ti nepopularne odluke, one posle kojih neko u kancelariji prestane da ti se javlja.",
+    family: "Mir u porodici često čuvaš ti: posreduješ kad se posvađaju braća, sestre ili roditelji i činiš da ručkovi i okupljanja prođu prijatno. Pazi da tuđe sukobe ne nosiš na svojim ramenima.",
+    daily: [
+      "Dvadeset minuta stojiš u radnji i biraš poklon, jer mora da bude baš pravi.",
+      "Pristaneš na plan koji ti se nije dopao, pa se posle tiho ljutiš.",
+      "Premeštaš nameštaj dok ne „osetiš“ da je soba u ravnoteži.",
+      "U svađi tako jasno vidiš šta druga strana hoće da kaže da ti sopstveni stav ispari iz glave.",
+    ],
+    strengths: ["Diplomatija i takt", "Profinjen ukus i estetski osećaj", "Pravičnost i jak osećaj za pravdu", "Šarm koji olakšava društvene situacije", "Iskrena zainteresovanost za partnerstvo"],
+    shadows: ["Povlađivanje svima", "Neodlučnost", "Izbegavanje sukoba dok ne eksplodira", "Gubljenje sebe u vezama"],
+    growth: "Mesto za rast zove se odlučnost: biraš i kad neko može da se razočara, sa verom da prava ljubav preživljava iskreno neslaganje.",
+    practices: ["Donesi tri male odluke dnevno, svaku za deset sekundi: restoran, film, kojim putem ideš.", "Pre nego što kažeš da, stani i pitaj se: „Hoću li ja ovo zapravo?“", "Svake nedelje odvoji vreme samo za sebe i radi nešto što voliš, bez ičijeg mešanja."],
+    journal: ["Šta želim kad ničije mišljenje nije u sobi?", "Gde čuvam mir po cenu sopstvene istine?", "Kako izgleda pravičnost prema sebi?"],
+  },
+  moon: {
+    story: "Mesec u Vagi čini da te sukobi potresu više nego što pokazuješ. Bezbedno se osećaš kad su ljudi oko tebe u miru, a prostor u kom si lep i tih. Osećanja obrađuješ kroz odnos: tek u razgovoru sa partnerom ili bliskom drugaricom shvatiš šta u stvari osećaš. Bes umeš da potisneš zarad sklada, a posle od toga ostaje tiha iscrpljenost.",
+    needs: "Prija ti sklad, a treba ti i društvo, lepota, pravičnost i blag način razgovora.",
+    heals: "Umetnost, muzika, lep prostor, ljubazan razgovor, lepa odeća i neko ko sluša bez navijanja za bilo koju stranu.",
+    daily: "Posle neprijatne reči prvo se pitaš da li je tvoja reakcija pravična, a tek onda sebi dozvoljavaš da te zaboli.",
+  },
+  rising: "Uz Vagu na podznaku ljudi te upoznaju kao ljubaznu, šarmantnu osobu sa kojom je lako razgovarati. Imaš oko za stil i prirodnu lakoću u društvu. Pažljivo čitaš atmosferu i prilagođavaš se da sve ostane prijatno. Prvi utisak je obično divan, a tvoja prava mišljenja stižu kasnije, kad se kafa već popije.",
+  venus: "Venera vlada Vagom i tu se oseća kao u svojoj sobi: voliš otmeno i pravično. Osvajaju te lepota, dobrota i pametan razgovor. Učtivost, romantika i promišljena pažnja način su na koji kažeš „volim te“. Treba ti ravnopravno partnerstvo u kom se stvarno računate oboje.",
+  mars: "Mars u Vagi deluje kroz saradnju i ubeđivanje. Radije pridobijaš ljude nego što se boriš protiv njih, a najžešće se boriš za pravičnost. Bes može da se krije iza učtivosti. Snaga ti raste kad kreneš za svojim željama, a ne samo za tuđim.",
+  mercury: "Merkur u Vagi misli poređenjima i odmeravanjem. Vidiš obe strane svake rasprave i govoriš diplomatski, pazeći na svaku reč. Teško ti je da staneš iza jednog stava i tu ostaneš. Najbolje ti idu posredovanje i otmeno izražavanje.",
+  node: "Severni čvor u Vagi gleda ka partnerstvu i saradnji. Učiš da deliš, da popuštaš i da stvarno uzmeš u obzir druge: da žestoko oslanjanje na sopstvene snage omekša u zajednički rad.",
+};
+
+export const scorpio: SignDeep = {
+  title: "Duboka voda",
+  quote: "Tama te ne plaši. Ti si ona osoba koja u nju unosi svetlo.",
+  myth: "Drevni simbol Škorpije je škorpija koja je, u grčkom mitu, poslata da ponizi hvalisavog lovca Oriona. Ali Škorpija ima i više oblike: orla koji se diže iznad svega i feniksa koji izgori i ponovo se rodi iz sopstvenog pepela. Tradicionalno joj vlada Mars, a u modernoj astrologiji Pluton, gospodar podzemlja, pa je ovo znak smrti i ponovnog rođenja, tajni i duboko zakopanog blaga.",
+  sun: {
+    story: [
+      "Za istinu imaš oči kao rendgen, i to od rođenja. Priče o vremenu i parkingu su kaput koji oblačiš zbog drugih, a ti u stvari hoćeš da znaš šta je ispod: pravi motiv, skrivena rana, tajni san. Tvoje Sunce u Škorpiji ide u dubinu, u žestinu i preobražaj. Voliš do kraja ili nikako, i radije ćeš da pogledaš tešku istinu u oči nego da živiš u prijatnoj laži.",
+      "Osećaš više nego što pokazuješ. Privatnost ti je zaštitni zid koji je iskustvo podiglo, a poverenje se kod tebe zarađuje polako. Kad neko uđe u tvoj krug, vernost je potpuna, a zaštita žestoka. Ali izdaja te seče dublje nego većinu ljudi, pa stare povrede umeš da nosiš godinama ili da proveravaš ljude, da vidiš hoće li otići, pre nego što se osloniš na njih.",
+      "Preobražaj je reč koja opisuje tvoj put: da pustiš ono što je umrlo, kako bi izraslo nešto istinitije, i da naučiš da prava moć ne dolazi iz kontrole, nego iz prepuštanja promeni. Ti si feniks, i svaki kraj koji preživiš dodaje ti mudrost.",
+    ],
+    love: "U ljubavi hoćeš bliskost do kostiju: emocionalnu, telesnu i psihičku. Voliš strasno, verno i pronicljivo, a uz tebe može samo partner koji podnosi dubinu i iskrenost. Površna romansa ti je dosadna. Sebe daješ potpuno ili nikako. Lekcija ti je poverenje: pusti da se partner dokaže vremenom, a ne testovima.",
+    friends: "Imaš nekoliko prijateljstava dubljih od mnogih brakova. Baš tebi ljudi poveravaju tajne uz kafu, jer znaju da ih nikad nećeš ponoviti nikome. Za one koje voliš spremno ideš u rat.",
+    work: "Dobro ti ide posao koji zadire duboko: psihologija, istraživanje, istrage, medicina, finansije, rad u krizama, projekti velikih promena, sve što uključuje skrivene podatke ili visok ulog. Možeš da se usredsrediš kao laser. Pazi na borbe za moć sa onima iznad tebe.",
+    family: "Možda baš ti u porodici vidiš skrivene odnose i izgovaraš ono što se za slavskim stolom ne izgovara, ili nosiš porodične tajne. Često imaš udela u lečenju obrazaca koji se prenose sa kolena na koleno.",
+    daily: [
+      "Pravo raspoloženje čitaš iz sitnog pokreta lica za koji osoba i ne zna da ga je napravila.",
+      "Stalno hoćeš da znaš „zašto“ iza svega, pa i iza sopstvenih reakcija.",
+      "I posle mnogo godina tačno znaš ko te je izneverio, a ko nije.",
+      "Na okupljanjima gde se priča ni o čemu gledaš na sat, a oživiš u jednom pravom razgovoru na terasi.",
+    ],
+    strengths: ["Emocionalna dubina i hrabrost", "Vernost koja se ne koleba", "Oko za skrivene istine", "Otpornost i moć obnove", "Usredsređenost i odlučnost"],
+    shadows: ["Ljubomora i sumnjičavost", "Dugo pamćenje uvreda", "Kontrola kao odbrana od ranjivosti", "Testiraš ljude umesto da im veruješ"],
+    growth: "Na tvom mestu za rast stoji otpuštanje: pusti kontrolu, ogorčenost i potrebu da sve znaš, pa će se nešto u tebi obnoviti.",
+    practices: ["Napiši pismo nekome ko te je povredio, nemoj ga nikad poslati, a zatim ga spali ili pocepaj.", "Vežbaj da svake nedelje jednoj osobi od poverenja kažeš nešto ranjivo, pre nego što se osetiš „spremno“.", "Provodi vreme pored vode (plivanje, kupka, more, šetnja kejom) da žestina omekša."],
+    journal: ["Šta još uvek držim, a spremno je da umre?", "Gde kontrolišem zato što me je strah da verujem?", "Čemu me je naučio svaki kraj u mom životu?"],
+  },
+  moon: {
+    story: "Sa Mesecom u Škorpiji sve osećaš žestoko, a malo pokazuješ dok nekome ne poveruješ. Tvoj unutrašnji svet je kao duboko jezero: miran po površini, beskrajan ispod nje. Iznad svega ti trebaju emocionalna iskrenost i vernost, a izdaju teško opraštaš. Leči te prava bliskost. Prazne priče i učtive utehe do tebe i ne stignu.",
+    needs: "Čuvaš privatnost i vernost, a tražiš emocionalnu iskrenost i vezu u koju može da stane cela tvoja žestina.",
+    heals: "Dubok razgovor, samoća, voda, bol pretvoren u umetnost ili uvid i neko ko ostaje uz tebe i kad mu pokažeš svoju tamu.",
+    daily: "Kad te povrede, možda se sasvim umiriš i utihneš dok odlučuješ hoćeš li da oprostiš.",
+  },
+  rising: "Podznak u Škorpiji daje ti magnetizam, zatvorenost i žestinu. Ljudi osete tvoju dubinu, a tvoj pogled ih istovremeno privlači i pomalo uznemirava. Otkrivaš se polako, a primećuješ sve. Tvoje prisustvo često promeni emocionalnu temperaturu u prostoriji.",
+  venus: "Venera u Škorpiji voli potpuno i žestoko. Mame te dubina, tajna i emocionalna iskrenost. Daješ sve što imaš i isto očekuješ zauzvrat. Ljubomora ti može da bude senka, a poverenje je ono što te leči.",
+  mars: "Marsa u Škorpiji pokreću dubina, strategija i izdržljivost. Ciljeve juriš tiho i bez popuštanja i retko odustaješ. Bes može da ode pod zemlju i da se vrati mnogo kasnije. Tvoja moć menja stvari nabolje kad je koristiš da lečiš, a ne da kontrolišeš.",
+  mercury: "Merkur u Škorpiji misli kao detektiv. Vidiš kroz laži, postavljaš pitanja koja se zabadaju i voliš da istražuješ. Svoje misli umeš da zadržiš samo za sebe. A kad progovoriš, reči idu pravo u srž.",
+  node: "Kad je Severni čvor u Škorpiji, vuče te ka dubini i preobražaju. Treba da prestaneš da tražiš sigurnost u udobnosti i imetku i da u život pustiš bliskost, zajedničku ranjivost i promenu.",
+};

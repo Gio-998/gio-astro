@@ -1,7 +1,57 @@
-import type { Content, DeepPartial } from "../..";
-
-/** Stub until the Serbian copy lands. The real file with this name replaces it, nothing else has to change. */
-export const metaExtra: DeepPartial<Content["systems"]["meta"]> = {};
-export const uiExtra: DeepPartial<Content["systems"]["ui"]> = {};
-export const fortune: DeepPartial<Content["systems"]["fortune"]> = {};
-export const spirit: DeepPartial<Content["systems"]["spirit"]> = {};
+import type * as En from "../../en/systems/lots";
+/** Part of Fortune / Spirit and numerology extras: lens info, labels and one-line readings. */
+export const metaExtra: typeof En.metaExtra = {
+  arabic: { name: "Deo sreće", short: "Delovi", evidence: "astronomy",
+    what: "Delovi su tačke koje nastaju iz tri dela tvoje karte. Prvi su ih koristili helenistički astrolozi, a dalje su ih razvijali persijski i arapski astrolozi, pa se zato zovu arapski delovi. Sreća se čita kao mesto gde ti život deluje lako i gde ti ništa ne fali, a Duh kao ono za čim biraš da kreneš.",
+    inputs: "Datum, tačno vreme i mesto rođenja (za podznak).",
+    method: "Dnevno rođenje (Sunce iznad horizonta): Sreća = podznak + Mesec − Sunce, Duh = podznak + Sunce − Mesec. Kod noćnog rođenja formule zamene mesta, kao kod Vetija Valensa (Vettius Valens) i Pavla Aleksandrijskog (Paulus Alexandrinus). Sunce, Mesec i podznak računaju se iz preciznih astronomskih podataka za trenutak tvog rođenja.",
+    sources: [] },
+  numextra: { name: "Brojevi ovog meseca", short: "Još brojeva", evidence: "popular",
+    what: "Još tri broja iz pitagorejske numerologije: broj zrelosti (ono što postaješ negde posle četrdesete), lični mesec i lični dan. Rođendan 13, 14, 16. ili 19. u mesecu zove se dan karmičkog duga i čita se kao lekcija koja se vraća dok je ne naučiš.",
+    inputs: "Datum rođenja, puno ime iz rođenja i današnji datum.",
+    method: "Zrelost = životni put + broj izraza, svedeno (11, 22 i 33 ostaju). Lični mesec = lična godina + kalendarski mesec, svedeno. Lični dan = lični mesec + dan u mesecu, svedeno. Sve se računa uživo, iz današnjeg datuma.",
+    sources: [] },
+};
+export const uiExtra: typeof En.uiExtra = {
+  fortune: "Deo sreće",
+  spirit: "Deo duha",
+  dayBirth: "Dnevno rođenje: Sunce je bilo iznad horizonta",
+  nightBirth: "Noćno rođenje: Sunce je bilo ispod horizonta",
+  lotsNeedTime: "Dodaj tačno vreme i mesto rođenja da vidiš svoje delove.",
+  lotsNeedTimeValue: "Treba vreme rođenja",
+  maturity: "Broj zrelosti",
+  maturityNoName: "Dodaj puno ime iz rođenja da vidiš broj zrelosti.",
+  personalMonth: "Lični mesec",
+  personalDay: "Lični dan",
+  karmicDebt: (n: number) => `Dan karmičkog duga ${n}`,
+  karmicDebtText: { 13: "Težak rad se isplati tek kad prestaneš da tražiš prečicu.", 14: "Sloboda najbolje funkcioniše uz nekoliko čvrstih navika.", 16: "Gordost se lomi da bi izraslo nešto iskrenije.", 19: "Lekcija je u tome što sve nosiš bez ičije pomoći; izlaz je da pomoć zatražiš." },
+  fromBirthNameDate: "tvog datuma rođenja, imena i današnjeg datuma",
+};
+export const fortune: typeof En.fortune = {
+  aries: "Lako ti ide kad stvari pokreneš ti i povučeš prvi potez.",
+  taurus: "Lakoća dolazi kroz postojanu udobnost, dobru hranu i stvari koje možeš da dodirneš.",
+  gemini: "Ide ti lako kroz priču, kratka putovanja i učenje u hodu.",
+  cancer: "Lakoća dolazi od doma, porodice i ljudi koji su ti kao rod.",
+  leo: "Lako ti ide kad te vide, kad nešto stvaraš i kad se zabavljaš.",
+  virgo: "Lakoća dolazi od korisnog, dobro obavljenog posla i mirne svakodnevice.",
+  libra: "Ide ti lako sa partnerima, poštenim dogovorima i na lepim mestima.",
+  scorpio: "Lakoća dolazi iz dubine: zajednički novac, poverenje i prava bliskost.",
+  sagittarius: "Lako ti ide uz putovanja, učenje i veliku sliku u koju veruješ.",
+  capricorn: "Lakoća dolazi od dugih ciljeva, strukture i zasluženog poštovanja.",
+  aquarius: "Ide ti lako kroz prijatelje, grupe i ideje ispred svog vremena.",
+  pisces: "Lakoća dolazi u tišini, u umetnosti i u pomaganju bez računice.",
+};
+export const spirit: typeof En.spirit = {
+  aries: "Biraš hrabrost i želiš da budeš ispred svih.",
+  taurus: "Biraš da izgradiš nešto što traje.",
+  gemini: "Biraš radoznalost i mnogo otvorenih vrata.",
+  cancer: "Biraš da brineš o svojima i da ih štitiš.",
+  leo: "Biraš da vodiš i da sve to zasija.",
+  virgo: "Biraš da stvari poboljšavaš, detalj po detalj.",
+  libra: "Biraš ravnotežu i pravog partnera.",
+  scorpio: "Biraš istinu, čak i kad košta.",
+  sagittarius: "Biraš smisao i široke horizonte.",
+  capricorn: "Biraš majstorstvo i ime koje zaslužiš.",
+  aquarius: "Biraš promenu i svoj put.",
+  pisces: "Biraš veru, dobrotu i maštu.",
+};

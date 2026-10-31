@@ -1,7 +1,157 @@
-import type { Content, DeepPartial } from "../..";
+import type { SignDeep } from "../../en/deep/types";
 
-/** Stub until the Serbian copy lands. The real file with this name replaces it, nothing else has to change. */
-export const sagittarius: DeepPartial<Content["deep"]["signDeep"]["sagittarius"]> = {};
-export const capricorn: DeepPartial<Content["deep"]["signDeep"]["capricorn"]> = {};
-export const aquarius: DeepPartial<Content["deep"]["signDeep"]["aquarius"]> = {};
-export const pisces: DeepPartial<Content["deep"]["signDeep"]["pisces"]> = {};
+export const sagittarius: SignDeep = {
+  title: "Strelac horizonta",
+  quote: "Tvoj nemir je kompas, i uvek pokazuje tamo gde ima više smisla.",
+  myth: "Strelac je kentaur sa lukom (pola čovek, pola konj), često povezan sa Hironom, mudrim kentaurom koji je junake učio medicini, muzici i zvezdama. Vlada mu Jupiter, kralj bogova i planeta širenja, pa je ovo znak hodočasnika, filozofa i pripovedača neverovatnih priča pored vatre.",
+  sun: {
+    story: [
+      "Uvek te neki horizont doziva. Zemlja koju još ne poznaješ, knjiga koja bi mogla sve da promeni, istina odmah iza sledećeg brda. Sunce u Strelcu je tragalac u tebi: vedar, iskren, spreman za avanturu i gladan smisla. Najbolje ti je kad život liči na veliko putovanje kolima, sa mapom na kolenima, a najteže kad počne da liči na kavez.",
+      "Od tvoje iskrenosti ume da zastane dah: ponekad leči, ponekad je dovoljno gruba da zapeče. Smeh ti je darežljiv, a vera u život zarazna, pa se ljudi pored tebe osećaju lakše i hrabrije. Ispod tog sjaja je filozof, koji postavlja velika pitanja o tome zašto smo tu i kako se dobro živi. Izazov je to što je trava uvek zelenija na sledećem horizontu, a sitne svakodnevne obaveze koje životu daju dubinu umeju da izgledaju kao ograde.",
+      "Put ti vodi ka mudrosti: iskustvo pretvaraš u razumevanje i deliš ga sa drugima. Kad otkriješ da sloboda može da uključi i obavezu, da dom može da bude lansirna rampa, a ne zatvor, strela ti leti dalje nego ikad.",
+    ],
+    love: "Ljubav za tebe traži saputnika u avanturi: nekoga ko se lako smeje, daje ti prostor i voli da istražuje (svet, ideje ili vas dvoje). Voliš žarom, iskrenošću i zajedničkim doživljajima. Više te plaši zamka nego samoća. Lekcija ti je da ne odlutaš onda kad ljubav od uzbudljive postane obična, jer dubina živi baš u običnim danima, između dva putovanja.",
+    friends: "Ti predlažeš da se bez ikakvog plana sedne u kola i krene, pričaš najsmešnije priče i daješ surovo iskrene savete. Imaš prijatelje po celom svetu, a prema strancima se ponašaš kao prema starim drugovima.",
+    work: "Uzlet imaš u poslovima sa slobodom, putovanjima, učenjem ili smislom: nastava, izdavaštvo, turizam, pravo, filozofija, sport, rad na otvorenom, preduzetništvo. Treba ti velika vizija. Sitničav posao ti je dosadan, pa se udruži sa kolegom nalik Devici i nema ko da vas zaustavi.",
+    family: "Među svojima važiš za slobodnu dušu: niko nije otišao dalje od tebe, ti donosiš priče kući i guraš ostale da misle šire. Možda tek iz daljine možeš da ceniš svoje korene.",
+    daily: [
+      "Posle loše nedelje iz čistog poriva rezervišeš put ili se upišeš na kurs.",
+      "Kažeš iskreno šta misliš i, bez ikakve namere, nekoga rasplačeš.",
+      "Hvata te klaustrofobija pred kalendarom punim obaveza.",
+      "Smeješ se najglasnije u celoj kafani i zaraziš sve ostale oko sebe.",
+    ],
+    strengths: ["Vedrina koja podiže druge", "Iskrenost i otvorenost", "Ljubav prema učenju i mudrosti", "Avanturistički duh i otvorenost", "Širina duha"],
+    shadows: ["Grubost koja ranjava", "Nemir i strah od obaveze", "Obećavanje preko mere", "Propovedanje umesto slušanja"],
+    growth: "Tvoje mesto za rast nalazi se u malom i svakodnevnom: da se obavežeš i otkriješ da je dubina avantura za sebe.",
+    practices: ["Drži se jednog malog dnevnog rituala 30 dana: ista šetnja, ista strana dnevnika.", "Pre nego što nekome iskreno kažeš šta misliš, pitaj se: „Je li tačno, je li dobronamerno, je li potrebno?“", "Planiraj avanture sa nekim: pusti da zajednička sloboda postane bliskost."],
+    journal: ["Šta zapravo tražim na sledećem horizontu?", "Gde mi obaveza liči na kavez, a gde bi mogla da mi liči na dom u koji se rado vraćam?", "Koju su mi mudrost dala moja putovanja, unutrašnja ili spoljašnja?"],
+  },
+  moon: {
+    story: "Uz Mesec u Strelcu raspoloženje ti popravljaju kretanje, vedrina i širi pogled na stvari. Sigurnost ti daju sloboda i osećaj smisla, a teška emocionalna atmosfera te uznemiri i tera napolje. Obično tražiš pouku ili dobru stranu svega, što leči, ali ponekad znači da preskočiš osećanja koja treba da se osete.",
+    needs: "Treba da imaš slobodu, iskrenost, humor, prostor za lutanje i osećaj da život negde ide.",
+    heals: "Putovanje, priroda, filozofija, smeh, otvoreno nebo, duga šetnja i prijatelj kome možeš da se izduvaš, a da ne pokušava da te veže.",
+    daily: "Kad ti je teško, možda planiraš put, izvališ šalu ili nađeš „širu sliku“ pre nego što dozvoliš tuzi da dođe.",
+  },
+  rising: "Strelac na podznaku znači da ljudi u tebi vide otvorenu, duhovitu, avanturističku osobu: onu koja kaže „zašto da ne?“ Često izgledaš kao da ti je torba već spakovana i lako razgovaraš sa svakim. Prijatelje stičeš brzo, a istinu kažeš sa osvežavajućom otvorenošću. Tvoja energija se širi i vedra je.",
+  venus: "Venera u Strelcu voli slobodu i avanturu. Dopadaju ti se humor, inteligencija i ljudi iz drugih svetova. Tvoja ljubav se meri zajedničkim avanturama i iskrenošću. Treba ti prostor i partner koji raste uz tebe.",
+  mars: "Marsa u Strelcu pokreću žar i vizija. Strastveno juriš velike ciljeve, putovanja i ideje za koje vredi da se boriš. Ljutnja ti je brza i otvorena. Najviše snage imaš kad postoji cilj sa smislom.",
+  mercury: "Merkur u Strelcu misli na veliko i govori otvoreno. Voliš filozofiju, putovanja i rasprave o idejama. Detalji ti lako promaknu, naročito u sitnim slovima ugovora. Znaš da druge upališ vizijom i humorom.",
+  node: "Severni čvor u Strelcu pokazuje put ka smislu i veri. Sazrevaš kad veruješ intuiciji, tražiš veliku sliku i naglas kažeš svoju istinu, umesto da bez kraja skupljaš činjenice i tuđa mišljenja.",
+};
+
+export const capricorn: SignDeep = {
+  title: "Planinar",
+  quote: "Gradiš nešto što će stajati još dugo pošto se sva ova buka stiša.",
+  myth: "Jarac je morska koza: stvorenje sa telom jarca i ribljim repom, vezano za drevnog boga mudrosti i voda. Ovo je znak zimske kratkodnevnice, kad je godina najmračnija i kad su ljudima oduvek bili potrebni strpljenje, dobro planiranje i vera da će se svetlo vratiti. Vlada mu Saturn, stari bog vremena i žetve, pa je to znak starešine, graditelja i čuvara zakona.",
+  sun: {
+    story: [
+      "Na svet dolaziš sa starom dušom i pogledom na dugu stazu. Dok drugi jure ono što se sjaji, ti se tiho penješ: gradiš veštinu, ugled, sigurnost i nešto što vredi ostaviti iza sebe. Sunce u Jarcu ima nešto od planinske koze: strpljenje, siguran korak, odgovornost i, kad se opustiš, iznenađujuću duhovitost. Znaš da velike stvari traže vreme i ne bežiš od posla.",
+      "Ljudi ti često veruju rano, ponekad i prerano, i možda još od detinjstva nosiš etiketu „odgovorno dete“. Ispod sabrane površine je osoba koja oseća mnogo, ali veruje da osećanja treba zaslužiti, držati pod kontrolom ili zadržati za sebe. Prema sebi umeš da budeš bez milosti, pa vrednost meriš postignućima, a radost odlažeš do sledeće stepenice.",
+      "Pred tobom su majstorstvo i autoritet i, što je presudno, omekšavanje. Za Jarce se zna da sa godinama postaju sve mlađi: što više veruješ sopstvenim temeljima, to više prostora daješ igri, odmoru i nežnosti. Vrh je slađi kad sebi dozvoliš da uživaš u usponu.",
+    ],
+    love: "U ljubavi biraš vernost, ozbiljnost i zaštitu. Brigu pokazuješ pouzdanošću, time što obezbeđuješ i što držiš reč. Možda se otvaraš polako i ne voliš nežnosti na javnom mestu, ali tvoja privrženost je stvarna i trajna. Uz sebe želiš nekoga ko poštuje tvoju ambiciju i pomaže ti da se odmoriš. Nekoga ko te voli i kad ništa ne postižeš.",
+    friends: "Na dan selidbe ti dolaziš sa kombijem, daješ trezvene savete i pamtiš šta drugari žele u karijeri. Humor ti je suv i briljantan. Prijateljstva ti često traju decenijama.",
+    work: "Tvoje je dugoročno postignuće: menadžment, finansije, pravo, arhitektura, inženjerstvo, državna služba, preduzetništvo, svako polje sa lestvicama za penjanje. Radiš disciplinovano i strateški. Pazi na radoholizam i na to da ne pomešaš zvanje sa onim ko si.",
+    family: "Odgovornost te je u porodici možda zapala rano: briga o braći i sestrama, raspolaganje novcem, uloga „odrasle osobe“ u kući. Tradicija i dužnost ti znače. Izlečenje je da dozvoliš drugima da se staraju o tebi.",
+    daily: [
+      "Nedeljom, iz čiste zabave, praviš plan za narednih pet godina.",
+      "Kažeš „dobro sam“, a tiho nosiš probleme svih oko sebe.",
+      "Na odmoru bez plana prvo ti je neprijatno, a onda ti polako počne da prija.",
+      "Izgovoriš šalu tako suvo i bez izraza da je pola prostorije propusti.",
+    ],
+    strengths: ["Disciplina i izdržljivost", "Pouzdanost i poštenje", "Strateški, dugoročni pogled", "Suva duhovitost i prizemna mudrost", "Vođenje ličnim primerom"],
+    shadows: ["Radoholizam i gušenje osećanja", "Crnogledost i strah od neuspeha", "Krutost i kontrola", "Merenje ljubavi korisnošću"],
+    growth: "Mesto za rast u tvom slučaju je primanje: da se odmaraš i prihvataš ljubav, a da je prethodno ne zaradiš.",
+    practices: ["Neproduktivno vreme zakaži kao sastanak i brani ga.", "Jednom nedeljno reci nekome kako se zapravo osećaš, a ne samo šta misliš.", "Slavi stepenice: stani i obeleži ono što je već postignuto, pa se tek onda penji dalje."],
+    journal: ["Ko sam kad odgovornost ne pada na mene?", "Čemu me je detinjstvo naučilo o vrednosti?", "Koja radost kod mene još čeka „za kasnije“?"],
+  },
+  moon: {
+    story: "Mesec u Jarcu drži osećanja uredna i za sebe. Najsigurnije se osećaš kad je život pod kontrolom, a ljudi te poštuju i veruju ti. Možda te je život rano naučio snazi i tome da osećanjima upravljaš, umesto da ih pokazuješ. Tvoja emocionalna dubina je stvarna, ali suzdržana: voliš vernošću, zaštitom i praktičnom podrškom.",
+    needs: "Oslonac nalaziš u poštovanju, sigurnosti, strukturi i osobi na koju možeš potpuno da se osloniš.",
+    heals: "Postignuće, red, mirno vreme, planine, iskreno priznanje truda i mogućnost da pokažeš ranjivost, a da zbog toga ne izgubiš poštovanje.",
+    daily: "Ako je dan bio težak, možda radiš još više, sređuješ finansije ili praviš plan, a tugu osetiš tek kasnije.",
+  },
+  rising: "Jarac kao podznak ostavlja utisak sabranosti, sposobnosti i malo uzdržanosti: poverenje budiš na prvi pogled. Ljudi te često procene kao stariju ili ozbiljniju osobu nego što jesi. U nove situacije ulaziš pažljivo, a autoritet stičeš prirodno. Toplina i humor izađu kad se osetiš bezbedno.",
+  venus: "Venera u Jarcu voli verno i sa punom obavezom. Imponuju ti umešnost, zrelost i ljudi koji znaju kuda idu. Pouzdanost i zajedničko građenje budućnosti govore umesto tebe. Treba ti poštovanje, i dozvola da omekšaš bar kad ste sami.",
+  mars: "Mars u Jarcu radi vrlo delotvorno: disciplinovano, strateški i strpljivo. Ka ciljevima se penješ ravnomerno i retko trošiš snagu uzalud. Bes je kontrolisan i hladan. Snaga ti je izdržljivost, a ne zaboravi ni na odmor.",
+  mercury: "Merkur u Jarcu misli praktično i strateški. Planiraš, slažeš i govoriš sa autoritetom. Činjenice su ti draže od maštanja. Jaka strana ti je da ideje pretvaraš u ostvarljive planove.",
+  node: "Put Severnog čvora u Jarcu vodi ka zrelosti i tome da budeš sopstveni autoritet. Rast ovde traži da preuzmeš odgovornost za svoje ciljeve i izađeš u javni život, umesto da ostaneš u sigurnosti porodice ili emocionalne zavisnosti.",
+};
+
+export const aquarius: SignDeep = {
+  title: "Vodonoša",
+  quote: "Budućnost vidiš pre nego što stigne, i dovoljno ti je stalo do ljudi da je izliješ svima.",
+  myth: "Vodolija je vodonoša: u grčkom mitu Ganimed, mladić odnesen na nebo da bogovima sipa piće. Voda koju on sipa nije obična voda: to je znanje, nadahnuće, tok novih ideja za celo čovečanstvo. Tradicionalno joj vlada Saturn, a u modernoj astrologiji Uran, planeta revolucije, pa Vodolija u sebi drži napetost između strukture i slobode.",
+  sun: {
+    story: [
+      "Oduvek si malo ispred svog vremena, ili možda samo van njega, pa gledaš unutra. Sunce u Vodoliji pripada onome ko misli svojom glavom: nezavisno, ljudski, sa zanimanjem za sisteme i strašću prema slobodi, pravičnosti i budućnosti. Stalo ti je do ljudi u množini, a često među prvima vidiš kako bi stvari mogle da se urade drugačije.",
+      "Prijateljstvo ti znači sve, i možda imaš dar da voliš ljude preko svih granica. Ipak, umeš i da se osetiš čudno samo u gužvi, kao da tvoj unutrašnji svet radi na drugoj frekvenciji. Osećanja umeš da preneseš u glavu, pa moraš da ih razumeš pre nego što ih pustiš unutra, a opireš se svemu i svakome ko pokušava da te definiše. Buntovna crta te štiti: čuva tvoje pravo da budeš ono što jesi, bez ostatka.",
+      "Ideš ka posebnosti koja služi zajednici. Rasteš kad tvoja originalnost bude topla, a ne tek pametna, i kad dozvoliš nekome da ti priđe sasvim blizu, bez straha da će ta bliskost izbrisati tvoju slobodu.",
+    ],
+    love: "Ljubav ti počiva na prijateljstvu, slobodi i povezanosti umova. Verno stojiš uz ljude i prihvataš ih, a često te vuku neobične veze ili partneri. Voliš tako što nekoga prihvatiš u potpunosti i podržavaš ga da raste. Trebaju ti prostor i autentičnost, a lekcija je da unutra pustiš i emocionalnu bliskost, pored one intelektualne.",
+    friends: "Najjače sijaš u prijateljstvu. Imaš prijatelje svih vrsta i prema svakome se ponašaš kao prema sebi jednakom. Podržavaš najčudniji tuđi san i okupljaš društvo oko stvari do koje ti je stalo.",
+    work: "Pronalaziš se u inovativnom, humanitarnom ili tehnološkom poslu: nauka, tehnologija, društvene teme, dizajn, astrologija, istraživanje, građenje zajednica, sve što gura budućnost napred. Treba ti sloboda i ne podnosiš krutu hijerarhiju. Tvoje ideje mogu da promene sisteme.",
+    family: "Za porodicu si možda ona neobična osoba, koja je izabrala drugačiji put ili dovela u pitanje običaje. Često unosiš nove ideje u stare strukture. Rast može da znači da pronađeš pripadanje bez povinovanja.",
+    daily: [
+      "Na svakom sastanku baš ti pitaš: „A zašto mi ovo uopšte radimo ovako?“",
+      "U internet zajednicama i uskim grupama osećaš se više kod kuće nego u većini.",
+      "Strastveno ti je stalo do svetskih problema, a zaboravljaš da odgovoriš drugarici na poruku.",
+      "Moraš da se odmakneš i analiziraš jako osećanje pre nego što možeš da pričaš o njemu.",
+    ],
+    strengths: ["Originalno, vizionarsko mišljenje", "Humana pravičnost", "Vernost u prijateljstvu", "Prihvatanje svih vrsta ljudi", "Hrabrost za drugačije"],
+    shadows: ["Emocionalna odvojenost", "Tvrdoglavo protivljenje svemu", "Hladan odmak kad te bliskost uplaši", "Bunt radi bunta"],
+    growth: "Mesto za rast kod Vodolije je toplina: da ostaneš i sa osećanjima, a ne samo sa idejama, i pustiš ljude blizu.",
+    practices: ["Kad primetiš da analiziraš neko osećanje, stani i reci naglas gde ti sedi u telu.", "Svake nedelje provedi vreme u četiri oka sa prijateljem, bez telefona i bez velikih tema.", "Volontiraj ili doprinesi nekom projektu u zajednici. Ideali rastu kad se susretnu sa stvarnim ljudima."],
+    journal: ["Gde se osećam drugačije i kako mi je to bilo dar?", "Koje osećanje trenutno držim na odstojanju?", "Kakvu budućnost pomažem da nastane?"],
+  },
+  moon: {
+    story: "Mesec u Vodoliji obrađuje osećanja sa malog odstojanja: tek kad ih razumeš, puštaš ih unutra. Mirno ti je tamo gde ima slobode, prijateljstva i prihvatanja. Teški emocionalni zahtevi te teraju da se povučeš. Tvoja briga je stvarna, ali se češće vidi u vernosti, idejama i praktičnoj podršci nego u raznežavanju.",
+    needs: "Nezavisnost ti je neophodna, kao i prijateljstvo, prihvatanje tvoje posebnosti i prostor za razmišljanje.",
+    heals: "Vreme nasamo, dobar razgovor o idejama, zajednica, nauka ili umetnost koja širi um i ljudi koji ne pokušavaju da te promene.",
+    daily: "Uznemirenost kod tebe ide u misli: povučeš se, logički analiziraš situaciju i vratiš se među ljude tek kad to „rešiš u glavi“.",
+  },
+  rising: "Vodolija na podznaku te predstavlja kao prijatnu, neobičnu osobu koju je teško predvideti, u dobrom smislu. Možda imaš prepoznatljiv stil ili način govora. Svakome prilaziš kao sebi ravnom, a u prvi mah deluješ pomalo odsutno. Ljudi te pamte po originalnosti.",
+  venus: "Venera u Vodoliji voli kroz prijateljstvo i slobodu. Pamet, originalnost i nezavisnost te pale. Voleti za tebe znači prihvatiti i podržati partnerovu posebnost, pa i onu koju drugi ne razumeju. Treba ti prostor i veza koja liči na pravo prijateljstvo.",
+  mars: "Mars u Vodoliji vozi ka idealima i promeni. Boriš se za dobre stvari, slobodu i pravičnost. Energija ti ume da bude nepredvidiva i stiže u sjajnim naletima. Najbolje ti ide kad sa istomišljenicima radiš za zajednički cilj.",
+  mercury: "Merkur u Vodoliji misli originalno i apstraktno. Voliš nove ideje, tehnologiju i velike sisteme. Možeš da imaš čvrsta mišljenja, a da pritom tvrdiš da si otvorenih shvatanja. Tvoje polje je inovacija.",
+  node: "U Vodoliji te Severni čvor okreće ka zajednici i budućnosti. Razvijaš se kad deliš reflektor, radiš za zajedničke ciljeve i prijateljstvo i ideje staviš iznad ličnog priznanja.",
+};
+
+export const pisces: SignDeep = {
+  title: "Okean snova",
+  quote: "Osećaš ceo svet. Kad naučiš gde se završavaš, naučiš i da plivaš u njemu.",
+  myth: "Znak Riba čine dve ribe vezane uzicom, koje plivaju u suprotnim smerovima: u grčkom mitu boginja ljubavi i njen sin, koji su se pretvorili u ribe da pobegnu od čudovišta i vezali se da se ne izgube. Ovo je poslednji znak zodijaka i u sebi drži pomalo od svih ostalih. Vlada mu Jupiter, a u modernoj astrologiji i Neptun, bog mora, pa su Ribe znak snova, saosećanja i rastakanja granica.",
+  sun: {
+    story: [
+      "Zidova imaš manje nego većina ljudi, i to od rođenja. Tuđa raspoloženja osećaš u sopstvenom telu, plačeš na filmovima, upiješ atmosferu prostorije pre nego što iko progovori. Sunce u Ribama ima prirodu okeana: saosećanje, mašta, intuicija i nikakve obale. Naslućuješ veze među stvarima koje logika ne ume da objasni, a unutrašnji život ti je bogat kao san.",
+      "Ova osetljivost je i dar i izazov. Zbog nje umeš prirodno da lečiš, stvaraš i tešiš: razumeš i bez reči. Ali može i da te preplavi, da te ostavi da plutaš ili da te povuče ka bekstvu: san, mašta, ekrani, supstance, ili prosto „da“ svima, samo da ne moraš da osetiš njihovo razočaranje. Praktičan život zna da bude težak dok ti je duša zauzeta plivanjem u dubljim vodama.",
+      "Učiš saosećanje sa granicama. Kad naučiš da zaštitiš svoju osetljivost (da kažeš ne, da se odmoriš, da snove usidriš u svakodnevnim navikama), tvoji darovi postaju stalno svetlo za mnoge ljude.",
+    ],
+    love: "Ljubav je kod tebe romantična, predana i nesebična. Vidiš najbolje u ljudima, ponekad i više nego što oni sami vide. Ljubav dokazuješ saosećanjem, maštom i spremnošću da se odrekneš svog. Partner ti treba blag, emocionalno prisutan i dovoljno prizemljen da ti pomogne da ostaneš sa nogama na zemlji. Lekcija ti je da voliš, a da ne izgubiš sebe.",
+    friends: "Satima slušaš bez osuđivanja, šalješ baš pravu pesmu u pravom trenutku i opraštaš skoro sve. Ljudi ti se poveravaju instinktivno, često već uz prvu kafu. Možda moraš da čuvaš snagu od prijatelja koji samo uzimaju.",
+    work: "Tvoje polje je kreativan, isceliteljski ili duhovni rad: umetnost, muzika, film, terapija, nega bolesnih, socijalni rad, duhovnost, fotografija, poslovi vezani za vodu. Trebaju ti smisao i blagost. Struktura pomaže talentu da teče, pa oko stvaranja izgradi jednostavne rutine.",
+    family: "Možda si u porodici osetljiva duša, mirotvorac ili dete koje je upijalo osećanja svih oko sebe. Izlečenje ti traži da odvojiš svoja osećanja od onih koja pripadaju porodici.",
+    daily: [
+      "Posle gužve u tržnom centru osećaš se iscrpljeno, a ne znaš zašto.",
+      "Toliko se zaneseš u tramvaju da prođeš svoju stanicu.",
+      "Pristaneš na uslugu za koju nemaš vremena, jer ti je tuđa potreba prešla pod kožu.",
+      "Znaš da nešto nije u redu sa drugaricom pre nego što ti išta kaže.",
+    ],
+    strengths: ["Saosećanje i empatija", "Mašta i umetnički dar", "Intuicija i duhovna osetljivost", "Prilagodljivost", "Opraštanje i blagost"],
+    shadows: ["Slabe granice", "Bežanje od stvarnosti", "Mučeništvo i samožrtvovanje", "Mešanje svojih i tuđih osećanja"],
+    growth: "Zdrave granice su tvoje mesto za rast: da znaš gde se završavaš ti, a gde počinju drugi.",
+    practices: ["Posle druženja se istuširaj ili okupaj i zamisli da spiraš ono što nije tvoje.", "Svake nedelje vežbaj jedno malo, ljubazno „ne“.", "Daj snovima posudu u koju mogu da stanu: blok za crtanje, pesmu, zakazan sat stvaranja."],
+    journal: ["Šta osećam, a možda nije moje?", "Kuda bežim i od čega bežim?", "Kako da brinem o drugima, a da ne napustim sebe?"],
+  },
+  moon: {
+    story: "Tvoj Mesec u Ribama upija tuđa raspoloženja kao sunđer. Unutrašnji svet ti je prostran, pun mašte i saosećanja. Bezbedno ti je u blagom, kreativnom, mirnom okruženju, a možda ti je redovno potrebna samoća da iscediš ono što se nakupilo. Intuicija ti je jaka: veruj joj i prizemlji je.",
+    needs: "Trebaju ti blagost, tišina, kreativno izražavanje, duhovni smisao i sigurna osoba koja ne zloupotrebljava tvoju dobrotu.",
+    heals: "Muzika, voda, umetnost, san, molitva ili meditacija, priroda i vreme nasamo da osećanja otplove.",
+    daily: "Posle teškog dana možda se skloniš u muziku, san ili film, a reči za ono što osećaš nađeš kasnije.",
+  },
+  rising: "Ko te prvi put vidi, oseti blagost, zanesenost i dobrotu, jer ti je podznak u Ribama. Ljudi ti pričaju svoje tajne. Možda imaš meke, izražajne oči i prilagodljivo držanje. Brzo upijaš raspoloženje mesta. Prvi utisak je otvoren i pun saosećanja, a snagu ćeš možda morati da čuvaš više nego što misliš.",
+  venus: "Venera u Ribama voli sa saosećanjem i romantikom bez obala. Srce ti ide ka osetljivim, kreativnim ili duhovnim ljudima. Ljubav ti se izliva kroz predanost i empatiju. Partnere umeš da idealizuješ, a snaga ti raste kad stvarnu osobu voliš otvorenih očiju.",
+  mars: "Mars u Ribama deluje iz intuicije i saosećanja. Ka ciljevima možeš da ideš zaobilazno, obilazeći prepreke kao voda. Bes može da se pretvori u tugu. Snaga ti je najveća kad služi nečemu što ima smisla ili je kreativno.",
+  mercury: "Merkur u Ribama misli slikama, osećanjima i slutnjama. Dobro čitaš ljude i izražavaš se kao pesnik. Činjenice i detalji umeju da se zamagle. Snaga tvog govora je u mašti i empatiji.",
+  node: "U Ribama Severni čvor traži prepuštanje i saosećanje. Rast ide kroz to da pustiš potrebu da sve kontrolišeš i doteruješ i da poveruješ intuiciji, duhovnosti i toku života.",
+};

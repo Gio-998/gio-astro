@@ -1,4 +1,48 @@
-import type { Content, DeepPartial } from "../..";
-
-/** Stub until the Serbian copy lands. The real file with this name replaces it, nothing else has to change. */
-export const how: DeepPartial<Content["systems"]["how"]> = {};
+import type * as En from "../../en/systems/how";
+/** "How Horoscop works": methodology, evidence, cultural order and privacy, in plain words. */
+export const how: typeof En.how = {
+  link: "Kako radi Horoscop",
+  metaTitle: "Kako radi Horoscop: metode, dokazi i privatnost",
+  metaDescription: "Svako tumačenje objašnjeno: koje podatke koristi, kako računamo, koliko su jaki dokazi i gde se čuvaju tvoji podaci.",
+  eyebrow: "Otvorena knjiga",
+  title: "Kako radi Horoscop",
+  lead: "Nema tajnog recepta. Evo tačno šta računamo, iz kojih podataka, koliko su jaki dokazi i šta se dešava sa tvojim informacijama.",
+  principlesTitle: "Pet pravila po kojima gradimo",
+  principles: [
+    { icon: "⚙", title: "Isti podaci, isti odgovor", text: "Svako tumačenje računa se po fiksnim pravilima iz tvojih podataka. Nikakva veštačka inteligencija ne piše tvoje tumačenje u hodu, a ne menjamo ga ni da bismo te zadržali pred ekranom." },
+    { icon: "✎", title: "Napisali ljudi, izabrali tvoji podaci", text: "Sav tekst pišemo unapred. Tvoji podaci biraju koje ćeš rečenice videti i povezuju ih." },
+    { icon: "🏷", title: "Iskrene oznake", text: "Svako tumačenje kaže da li je psihologija potkrepljena istraživanjima, popularna psihologija, stvarna astronomija sa simboličnim značenjem, stara tradicija ili moderna izmišljotina." },
+    { icon: "☮", title: "Bez crnih slutnji", text: "Nikad ne kažemo da dvoje ljudi ne idu zajedno, niti da dolazi opasnost. Pokazujemo jake strane, mesta za rast i male stvari koje možete da probate." },
+    { icon: "🔒", title: "Tvoji podaci ostaju tvoji", text: "Računanje se odvija na tvom uređaju. Bez naloga se ništa ne šalje. Sa nalogom se podaci sinhronizuju tek pošto se složiš, a možeš da ih obrišeš kad god hoćeš." },
+  ],
+  voiceTitle: "Zašto tumačenje zvuči kao ti",
+  voiceText: "Lične rečenice grade se iz tvojih podataka: tvojih položaja, odgovora na testove i tvojih provera. Svaka ima malo dugme „Zašto ovo kažemo“ koje tačno navodi koji su je podaci proizveli. Ako iza rečenice nema podataka, ne prikazujemo je.",
+  voiceRules: ["Tvoje ime pojavljuje se jednom, a ne u svakom redu.", "Prvo potvrdimo ono što je tačno, pa imenujemo jedno mesto za rast i jedan mali korak.", "Psihološke reči (potrebe, vezivanje, nervni sistem, saosećanje prema sebi) idu običnim jezikom, nikad kao dijagnoza.", "Veze između tumačenja pravimo samo kad dva tumačenja stvarno pokazuju isti pravac."],
+  cultureTitle: "Zašto neki sistemi dolaze prvi",
+  cultureText: "Izdvajamo tradicije iz kulture tvog mesta rođenja, zatim one vezane za jezik koji koristiš. Neko rođen u Beogradu prvo vidi slovenski narodni mesec i svoj pravoslavni imendan, neko rođen u Tokiju Devet zvezda Ki, a neko rođen u Kalkuti vedsku astrologiju. Ništa nije skriveno, samo je drugačije poređano.",
+  cultureRule: ["Kultura mesta rođenja: +3 (malo više za prvi dom nekog sistema, kao Devet zvezda Ki u Japanu)", "Jezik aplikacije: +2", "Jezik pregledača: +1", "Kod jednakog rezultata važi naš osnovni redosled"],
+  cultureData: "Region čitamo iz vremenske zone tvog mesta rođenja (Europe/Belgrade → Srbija). Ne prikupljamo dodatne podatke o lokaciji.",
+  evidenceTitle: "Šta znače oznake",
+  lensesTitle: "Svako tumačenje, jedno po jedno",
+  inputs: "Koristi", calc: "Kako", sources: "Izvori", evidence: "Dokazi",
+  privacyTitle: "Gde se čuvaju tvoji podaci",
+  privacy: [
+    "Podrazumevano na tvom uređaju: podaci o rođenju, odgovori na testove, ljudi koje dodaješ i beleške u dnevniku stoje u memoriji tvog pregledača.",
+    "Nalog nije obavezan. Sa nalogom se tvoji podaci bezbedno čuvaju u EU radi sinhronizacije, i to tek pošto označiš polja za saglasnost.",
+    "Bez reklama, bez reklamnih pratilaca, bez prodaje podataka. Nikad.",
+    "Obriši sve kad god hoćeš na stranici Privatnost, ili obriši nalog jednim klikom.",
+  ],
+  privacyLink: "Pročitaj celo obaveštenje o privatnosti",
+  learnLink: "Detaljnije beleške o metodologiji",
+  updated: "Poslednja provera: oktobar 2026.",
+  core: {
+    western: { name: "Zapadna astrologija (Sunce, Mesec, podznak, planete)", short: "Planete", evidence: "astronomy", what: "Gde su u zodijaku bili Sunce, Mesec i planete u trenutku tvog rođenja.", inputs: "Datum, vreme i mesto rođenja.", method: "Položaji planeta računaju se iz preciznih astronomskih podataka za tačan trenutak i mesto tvog rođenja, u tropskom zodijaku sa kućama po celim znacima. Lokalno vreme rođenja pretvara se u univerzalno vreme po istorijskim pravilima vremenske zone tvog mesta rođenja.", sources: [] },
+    chinese: { name: "Kineski zodijak i BaZi", short: "Kineski", evidence: "traditional", what: "Tvoja životinja, element i četiri stuba trenutka tvog rođenja.", inputs: "Datum, vreme i mesto rođenja.", method: "Precizan lunarni kalendar sa tačnim solarnim terminima. Stubovi se menjaju u tačnom trenutku svakog solarnog termina, a stub sata koristi pravo sunčevo vreme na mestu rođenja.", sources: [] },
+    vedic: { name: "Vedski Mesec i slaganje", short: "Vedsko", evidence: "traditional", what: "Tvoj siderički mesečev znak i nakšatra (lunarna kuća), kao i klasično slaganje od 36 poena.", inputs: "Datum, vreme i mesto rođenja.", method: "Siderički Mesec sa Lahiri ajanamšom; tabele Aštakuta kao u klasičnim tekstovima.", sources: [] },
+    numerology: { name: "Numerologija i tarot karte rođenja", short: "Brojevi", evidence: "traditional", what: "Brojevi životnog puta, rođendana i imena; karte Velike arkane za tvoj datum rođenja.", inputs: "Datum rođenja i puno ime iz rođenja.", method: "Pitagorejsko svođenje uz čuvanje 11, 22 i 33; tarot karte rođenja po metodi Meri K. Grir (Mary K. Greer).", sources: [] },
+    bigfive: { name: "Ličnost po modelu Velikih pet", short: "Velikih pet", evidence: "research", what: "Otvorenost, savesnost, ekstraverzija, prijatnost i emocionalna osetljivost.", inputs: "Tvoji odgovori na IPIP stavke (20 ili 50).", method: "Standardno IPIP bodovanje, obrnute stavke se okreću, prikazano od 0 do 100.", sources: [] },
+    attachment: { name: "Stil vezivanja", short: "Vezivanje", evidence: "research", what: "Kako obično izlaziš na kraj sa bliskošću i distancom u vezama.", inputs: "Tvoji odgovori na devet stavki.", method: "Dva rezultata (briga oko bliskosti, ugodnost sa distancom) smeštena na klasičnu mapu sa dve ose.", sources: [] },
+    popular: { name: "Stil od četiri slova, devet motivacija, stilovi brige, temperament", short: "Popularno", evidence: "popular", what: "Popularni okviri koje mnogi ljudi smatraju korisnim za razmišljanje o sebi.", inputs: "Tvoji odgovori na testove (i Velikih pet za izvedene rezultate).", method: "Naše sopstvene stavke i bodovanje; stil od četiri slova i temperament mogu da se izvedu i iz Velikih pet. Rezultat uvek možeš da potvrdiš ili ispraviš.", sources: [] },
+    dosha: { name: "Tip tela i energije (doša)", short: "Doša", evidence: "traditional", what: "Ajurvedska ideja o tri tipa tela i uma.", inputs: "Tvoji odgovori na test.", method: "Rezultati za tri doše (Vata, Pitta i Kapha); prva ili prve dve čine tvoj tip.", sources: [] },
+  },
+};

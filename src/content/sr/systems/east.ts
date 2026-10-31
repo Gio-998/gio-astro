@@ -1,2 +1,108 @@
-/** Stub until the Serbian copy lands. The real file with this name replaces it, nothing else has to change. */
-export {};
+import type { SystemsContent } from "@/content/en/systems";
+type S = SystemsContent;
+
+export const trigrams: S["trigrams"] = {
+  qian: { name: "Nebo", image: "snažno, stvaralačko" }, dui: { name: "Jezero", image: "radosno, otvoreno" }, li: { name: "Vatra", image: "jasno, svetlo" }, zhen: { name: "Grom", image: "budno, iznenadno" },
+  xun: { name: "Vetar", image: "blago, uporno" }, kan: { name: "Voda", image: "duboko, rizično" }, gen: { name: "Planina", image: "mirno, postojano" }, kun: { name: "Zemlja", image: "prijemčivo, popustljivo" },
+};
+
+/** The site's own short names and readings, translated plainly. They are not taken from a published Serbian edition of the I Ching. */
+export const hexagrams: S["hexagrams"] = {
+  1: { name: "Stvaralačka sila", text: "Snažna, postojana inicijativa. Vodi delima i nastavi iz dana u dan." },
+  2: { name: "Prijemčiva zemlja", text: "Snaga kroz otvorenost. Podrži, umej da pratiš i pusti da stvari rastu." },
+  3: { name: "Teški počeci", text: "Neuredan početak koji krije pravo obećanje. Potraži pomoć i idi korak po korak." },
+  4: { name: "Početnički um", text: "U redu je što još ne znaš. Postavljaj dobra pitanja i nađi dobrog učitelja." },
+  5: { name: "Čekanje", text: "Kiša će doći. Pripremi se, jedi dobro, sačuvaj mir i veruj trenutku." },
+  6: { name: "Sukob", text: "Napetost je u vazduhu. Nađi sredinu pre nego što navališ da pobediš." },
+  7: { name: "Organizovana grupa", text: "Disciplina i jasno vođstvo čine grupu snažnom." },
+  8: { name: "Držanje zajedno", text: "Pripadanje i odanost. Izaberi svoje ljude i ostani blizu." },
+  9: { name: "Malo obuzdavanje", text: "Sitnice te zasad koče. Najbolje deluje blag, strpljiv uticaj." },
+  10: { name: "Oprezni koraci", text: "Hodaj pažljivo pored opasnosti, sa lepim manirima i bistrom glavom." },
+  11: { name: "Mir", text: "Nebo i zemlja se susreću. Dobro vreme, kad trud teče lako." },
+  12: { name: "Zastoj", text: "Stvari staju. Sačuvaj integritet i sačekaj da se godišnje doba promeni." },
+  13: { name: "Zajedništvo", text: "Zajednički jezik sa drugima. Otvorena, poštena prijateljstva." },
+  14: { name: "Veliki posed", text: "Obilje i uspeh. Podeli ih i čuvaj skromnost." },
+  15: { name: "Skromnost", text: "Prava snaga kojoj nije potrebno hvalisanje. Ravnoteža i pravednost." },
+  16: { name: "Oduševljenje", text: "Radost koja pokreće ljude. Muzika, ritam i dobar tajming." },
+  17: { name: "Praćenje", text: "Prilagodi se i prati ono što je sada ispravno. Kad padne veče, odmori se." },
+  18: { name: "Popravljanje", text: "Popravi ono što je pokvareno, često stare porodične obrasce. Briga i trud se isplate." },
+  19: { name: "Približavanje", text: "Dobre stvari se približavaju. Uči druge, brini i iskoristi dobro doba." },
+  20: { name: "Posmatranje", text: "Odmakni se i pogledaj. Drugi uče iz načina na koji gledaš." },
+  21: { name: "Pregrizanje", text: "Prepreka traži jasnu, čvrstu odluku. Postupi pravedno i bez kolebanja." },
+  22: { name: "Milina", text: "Lepota i forma su važne. Neka stil služi suštini." },
+  23: { name: "Raspadanje", text: "Nešto staro otpada. Ne bori se protiv toga. Čuvaj jezgro." },
+  24: { name: "Povratak", text: "Svetlo se vraća posle najtamnije tačke. Mali novi počeci." },
+  25: { name: "Nevinost", text: "Postupaj prirodno i iskreno, bez spletkarenja." },
+  26: { name: "Veliko ukroćivanje", text: "Skupi snagu i znanje i drži ih u rezervi." },
+  27: { name: "Hranjenje", text: "Pazi čime hraniš telo i um, i kako hraniš druge." },
+  28: { name: "Veliki višak", text: "Previše tereta na gredi. Deluj, ali oprezno." },
+  29: { name: "Dubina", text: "Ponovljena opasnost. Čuvaj iskrenost i teci dalje kao voda." },
+  30: { name: "Vatra koja se drži", text: "Jasnoća i toplina zavise od onog što ih hrani. Čuvaj svoje izvore." },
+  31: { name: "Privlačnost", text: "Uzajamni uticaj i udvaranje. Čuvaj otvorenost i spremnost da primaš." },
+  32: { name: "Istrajnost", text: "Trajne stvari rastu iz postojanih navika i posvećenosti." },
+  33: { name: "Povlačenje", text: "Povuci se mudro, bez gorčine. Sve je u tajmingu." },
+  34: { name: "Velika moć", text: "Snage imaš mnogo. Koristi je ispravno, a ne samo glasno." },
+  35: { name: "Napredovanje", text: "Izlaziš kao sunce. Priznanje stiže kroz postojan, jasan rad." },
+  36: { name: "Skriveno svetlo", text: "Teška vremena. Čuvaj svetlo unutra i ne izdaj sebe." },
+  37: { name: "Domaćinstvo", text: "Porodica i uloge u domu. Dobrota, red i jasne reči." },
+  38: { name: "Suprotstavljanje", text: "Razlike. Male stvari ipak mogu da prođu dobro zajedno." },
+  39: { name: "Prepreka", text: "Put je zatvoren. Okreni se ka sebi, traži pomoć, idi zaobilaznim putem." },
+  40: { name: "Oslobađanje", text: "Napetost popušta. Oprosti, raščisti i idi dalje." },
+  41: { name: "Smanjenje", text: "Manje može da bude više. Pojednostavi, daj i veruj da će se vratiti." },
+  42: { name: "Uvećanje", text: "Vreme dobitka. Pomaži drugima i rastite zajedno." },
+  43: { name: "Proboj", text: "Reci istinu čvrsto, ali bez nasilja." },
+  44: { name: "Susret", text: "Neočekivan susret. Imaj na umu njegovu privlačnu silu." },
+  45: { name: "Okupljanje", text: "Ljudi se okupljaju. Zajednički cilj i dobro vođstvo." },
+  46: { name: "Uspinjanje", text: "Postojan rast, kao kod drveta. Trud plus strpljenje." },
+  47: { name: "Iscrpljenost", text: "Osećaš se prazno ili zaglavljeno. Reči pomažu manje od postojane unutrašnje snage." },
+  48: { name: "Bunar", text: "Dubok izvor koji je svima potreban. Drži ga čistim i deli ga sa drugima." },
+  49: { name: "Revolucija", text: "Menjaj kad dođe pravo vreme i objasni zašto." },
+  50: { name: "Kotao", text: "Hrana za kulturu i vrednosti. Doteraj ono što nudiš." },
+  51: { name: "Šok", text: "Grom: nagli trzaj koji te budi. Stoj čvrsto, a posle se nasmej." },
+  52: { name: "Mirovanje", text: "Miruj kao planina. Odmori um i nemirno telo." },
+  53: { name: "Postepeni napredak", text: "Stvari se razvijaju polako i kako treba, kao drvo na brdu." },
+  54: { name: "Nevesta", text: "Položaj sa malo moći. Postupaj pažljivo i dostojanstveno." },
+  55: { name: "Obilje", text: "Vrhunski trenutak. Uživaj punim plućima, bez straha od sledeće faze." },
+  56: { name: "Lutalica", text: "Putovanje, tuđina, nova mesta. Drži se učtivo, pažljivo i lagano." },
+  57: { name: "Blagi vetar", text: "Mek, postojan uticaj koji stiže svuda." },
+  58: { name: "Radost", text: "Otvorena, podeljena radost. Prijateljstvo i dobar razgovor." },
+  59: { name: "Raspršivanje", text: "Tvrdo se topi. Okupi ljude ponovo." },
+  60: { name: "Ograničenje", text: "Zdrave granice stvaraju slobodu. Ni prestrogo, ni previše labavo." },
+  61: { name: "Unutrašnja istina", text: "Iskrenost dopire i do najtvrđih srca." },
+  62: { name: "Malo prekoračenje", text: "Male stvari radi veoma dobro. Skromnost i pažnja." },
+  63: { name: "Posle završetka", text: "Sve je na mestu. Ostani na oprezu, jer red traži održavanje." },
+  64: { name: "Pre završetka", text: "Skoro je gotovo. Pažljivi poslednji koraci, kao lisica koja prelazi led." },
+};
+
+export const nineStars: S["nineStars"] = {
+  1: { name: "1 Voda", text: "Dubina, prilagodljivost i nezavisnost. Prepreke zaobilaziš kao voda, a osećanja čuvaš za sebe." },
+  2: { name: "2 Zemlja", text: "Podrška i briga. Ljudi se pored tebe osećaju zbrinuto, a ti postojano radiš iza scene." },
+  3: { name: "3 Drvo (grom)", text: "Brzina, sjaj i direktnost. Pokrećeš stvari sa energijom i kažeš šta misliš." },
+  4: { name: "4 Drvo (vetar)", text: "Blagost, društvenost i prilagodljivost. Na ljude utičeš nežno i voliš slobodu." },
+  5: { name: "5 Zemlja (središte)", text: "Snažna volja, uvek u sredini. Privlačiš ljude i nosiš se sa krizama, kroz velike uspone i padove." },
+  6: { name: "6 Metal (nebo)", text: "Načelnost i odgovornost. Držiš visoke standarde i voliš da vodiš kako treba." },
+  7: { name: "7 Metal (jezero)", text: "Šarm i ljubav prema zadovoljstvima. Lepo pričaš i uživaš u dobrim stvarima života." },
+  8: { name: "8 Zemlja (planina)", text: "Postojanost i odlučnost. Istraješ, a menjaš se u velikim, naglim koracima." },
+  9: { name: "9 Vatra", text: "Sjaj, izražajnost i strast. Želiš da te vide i nadahnjuješ druge." },
+};
+
+/** Names go into ui.path after the noun "sfere", so they stay in the nominative. */
+export const sephirot: S["sephirot"] = {
+  kether: { name: "Keter", meaning: "kruna", text: "Izvorna tačka: čista volja za postojanjem. Vodiš vizijom i originalnošću." },
+  chokmah: { name: "Hokma", meaning: "mudrost", text: "Bljesak uvida. Cele obrasce vidiš u trenu." },
+  binah: { name: "Bina", meaning: "razumevanje", text: "Oblik i dubina. Idejama daješ formu i uzimaš vreme da razumeš." },
+  chesed: { name: "Hesed", meaning: "milost, dobrota", text: "Velikodušna, široka ljubav. Gradiš i daješ." },
+  geburah: { name: "Gebura", meaning: "snaga, sud", text: "Hrabrost i jasne granice. Odsecaš ono što ne služi." },
+  tiphareth: { name: "Tiferet", meaning: "lepota, sklad", text: "Srce drveta, ravnoteža između milosti i snage." },
+  netzach: { name: "Necah", meaning: "pobeda, izdržljivost", text: "Osećanje, umetnost i želja koji ne popuštaju." },
+  hod: { name: "Hod", meaning: "sjaj, intelekt", text: "Jezik, logika i sistemi. Stvarima daješ smisao." },
+  yesod: { name: "Jesod", meaning: "temelj", text: "Snovi i podsvest, most ka svakodnevnom životu." },
+  malkuth: { name: "Malkut", meaning: "kraljevstvo", text: "Fizički svet: telo, zemlja i ono što je stvarno ovde i sada." },
+};
+
+/** Names are masculine adjectives: voice.day puts them, lowercased, in front of "talas". */
+export const biorhythm: S["biorhythm"] = {
+  physical: { name: "Fizički", high: "Energija je gore: dobar dan da pokreneš telo.", low: "Polako sa telom danas, i odmor se računa.", critical: "Prelazni dan za telo: idi polako." },
+  emotional: { name: "Emocionalni", high: "Osećanja su topla: javi se nekome.", low: "Osećanja mogu da budu tiha ili nežna. Postupaj blago prema sebi.", critical: "Prelazni dan za raspoloženje: stani pre nego što reaguješ." },
+  intellectual: { name: "Mentalni", high: "Bistra glava: dobro za planiranje i učenje.", low: "Um radi na štednji: neka zadaci budu jednostavni.", critical: "Prelazni dan za fokus: dvaput proveri detalje." },
+};
