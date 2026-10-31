@@ -85,7 +85,7 @@ function PageSr() {
       <h2>Uzrast</h2>
       <p>Za korišćenje aplikacije moraš da imaš 16 ili više godina.</p>
       <h2>Celi rezultati testova</h2>
-      <p>Test odmah prikazuje kratak deo svog rezultata. Ceo rezultat se otvara kad ostaviš ime i mejl, jednom po uređaju, i ne košta ništa. Koristi svoje ime i adresu koja je tvoja. Zatim ti šaljemo jedan mejl sa linkom nazad. <Link href="/sr/privacy/">Stranica o privatnosti</Link> objašnjava šta čuvamo i kako da to obrišeš. Novosti mejlom su poseban izbor i nijedan rezultat ne zavisi od njih.</p>
+      <p>Test odmah prikazuje kratak deo svog rezultata. Ceo rezultat se otvara kad ostaviš ime i mejl, jednom po uređaju, i ne košta ništa. Koristi svoje ime i adresu koja je tvoja. Zatim možemo da ti pošaljemo jedan mejl sa linkom nazad. <Link href="/sr/privacy/">Stranica o privatnosti</Link> objašnjava šta čuvamo i kako da to obrišeš. Novosti mejlom su poseban izbor i nijedan rezultat ne zavisi od njih.</p>
       <h2>Podaci drugih ljudi</h2>
       <p>Kad dodaš nekog drugog, unesi samo podatke koje bi ta osoba rado podelila sa tobom, najbolje uz njenu dozvolu. Nemoj da koristiš aplikaciju da uznemiravaš druge, pritiskaš ih ili donosiš odluke o njima.</p>
       <h2>Dobrobit</h2>

@@ -505,8 +505,8 @@ export const lead: typeof En.lead = {
   privacyLink: "Politika privatnosti",
   marketing: "Da, Horoscop može da mi povremeno pošalje mejl o novim testovima.",
   marketingHint: "Nije obavezno. Rezultat se otvara u svakom slučaju. Tražimo da potvrdiš mejlom, a možeš da prestaneš kad god želiš.",
-  sent: "Link nazad do ovog rezultata stiže ti na mejl.",
-  sentConfirm: "Link nazad do ovog rezultata stiže ti na mejl. Da dobijaš novosti, pritisni dugme za potvrdu u tom mejlu.",
+  sent: "Link nazad do ovog rezultata trebalo bi uskoro da ti stigne na mejl. Rezultat u svakom slučaju ostaje ovde.",
+  sentConfirm: "Link nazad do ovog rezultata trebalo bi uskoro da ti stigne na mejl. Da dobijaš novosti, pritisni dugme za potvrdu u tom mejlu.",
   haveAccount: "Već imaš nalog?", login: "Prijavi se",
   errors: { invalid_name: "Unesi ime i prezime.", invalid_email: "Unesi ispravnu mejl adresu." },
   page: {

@@ -171,6 +171,7 @@ describe("legal pages in Serbian", () => {
     for (const p of ["Supabase", "Vercel", "Resend", "Cloudflare", "Open-Meteo", "PRIVACY_VERSION", "pravnik"]) expect(privacy).toContain(p);
     for (const s of ["24 meseca", "24 sata", "14 meseci", "30 dana"]) expect(privacy).toContain(s);
     expect(privacy).toContain("samo taj klik se računa kao saglasnost");
+    for (const s of ["samo ako je provera protiv botova ispod prođena", "nikad na adresu koja se odjavila", "obično ne češće od jednom u 30 dana", "Kod IPv6 koristimo samo mrežni deo", "oko 24 sata", "čim počneš da ga popunjavaš"]) expect(privacy).toContain(s);
     expect(privacy).not.toMatch(/\b(d\.?o\.?o\.?|GmbH|Ltd|LLC)\b/);
   });
   it("privacy: every GDPR citation matches the English one, in order", () => {
@@ -180,7 +181,7 @@ describe("legal pages in Serbian", () => {
   it("terms: same structure, says how the full result opens", () => {
     const sr = legal("terms"); const en = english("terms");
     for (const tag of [/<h2>/g, /<p>/g]) expect(count(sr, tag), String(tag)).toBe(count(en, tag));
-    expect(sr).toContain("/sr/privacy/"); expect(sr).toContain("ime i mejl"); expect(sr).toContain("16 ili više godina"); expect(sr).toContain("v0.2");
+    expect(sr).toContain("/sr/privacy/"); expect(sr).toContain("ime i mejl"); expect(sr).toContain("možemo da ti pošaljemo jedan mejl"); expect(sr).toContain("16 ili više godina"); expect(sr).toContain("v0.2");
   });
   it("promise: same promises", () => { expect(count(legal("promise"), /<li>/g)).toBe(count(english("promise"), /<li>/g)); expect(legal("promise")).not.toMatch(/samo u tvom pregledaču/); });
 });
