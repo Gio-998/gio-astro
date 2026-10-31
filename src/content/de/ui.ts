@@ -3,6 +3,7 @@ export const pageMeta = {
   credits: { title: "Bild- und Datennachweise", description: "Nachweise für die Weltraumfotos und Ortsdaten auf Horoscop, mit den jeweils geltenden Lizenzen." },
   account: { title: "Dein Konto" },
   verify: { title: "Code eingeben" },
+  email: { title: "Deine E-Mail-Einstellungen" },
   bond: { title: "Beziehungscheck: 3 Minuten zu zweit", description: "Ihr beantwortet beide zehn Fragen zu eurer Beziehung und seht Stärken, unterschiedliche Sichtweisen und Übungen." },
   book: { title: "Das Buch über dich" },
   chart: { title: "Geburtshoroskop" },
@@ -148,6 +149,33 @@ export const auth = {
   newPassword: "Neues Passwort wählen", savePassword: "Passwort speichern", passwordSaved: "Passwort aktualisiert.", finishing: "Du wirst angemeldet…",
   disabled: "Konten sind in dieser Version nicht eingerichtet.",
 };
+export const lead = {
+  eyebrow: "Dein ganzes Ergebnis", title: "Nur noch ein Schritt zu deinem ganzen Ergebnis",
+  text: "Trag deinen Namen und deine E-Mail ein, dann öffnet es sich direkt hier. Auf diesem Gerät machst du das nur einmal.",
+  nameLabel: "Vor- und Nachname", emailLabel: "E-Mail", emailPh: "du@beispiel.de", submit: "Mein ganzes Ergebnis zeigen",
+  notice: "Deine Antworten und Ergebnisse bleiben auf diesem Gerät. Deinen Namen und deine E-Mail speichern wir, um deine Ergebnisse zu öffnen und dir eine E-Mail mit einem Link hierher zurück zu schicken.",
+  privacyLink: "Datenschutzerklärung",
+  marketing: "Ja, Horoscop darf mir gelegentlich Neuigkeiten zu neuen Tests per E-Mail schicken.",
+  marketingHint: "Freiwillig. Dein Ergebnis öffnet sich so oder so. Wir bitten dich, das per E-Mail zu bestätigen, und du kannst jederzeit aufhören.",
+  sent: "Ein Link zurück zu diesem Ergebnis ist auf dem Weg in dein Postfach.",
+  sentConfirm: "Ein Link zurück zu diesem Ergebnis ist auf dem Weg in dein Postfach. Wenn du Neuigkeiten möchtest, bestätige das bitte in dieser E-Mail.",
+  haveAccount: "Du hast schon ein Konto?", login: "Anmelden",
+  errors: { invalid_name: "Bitte gib deinen Vor- und Nachnamen ein.", invalid_email: "Bitte gib eine gültige E-Mail-Adresse ein." },
+  page: {
+    home: "Zurück zu Horoscop",
+    confirm: { title: "Bestätige deine E-Mail", text: "Ein Klick, und Horoscop darf dir gelegentlich Neuigkeiten zu neuen Tests schicken. Du kannst jederzeit aufhören.", button: "Ja, schickt mir Neuigkeiten" },
+    unsubscribe: { title: "Unsere E-Mails beenden", text: "Ein Klick, und wir schreiben nicht mehr an diese Adresse.", button: "Abmelden" },
+    status: {
+      confirmed: { title: "Danke, das ist bestätigt", text: "Du bekommst ab und zu Neuigkeiten von uns. In jeder E-Mail steht ein Link zum Abmelden." },
+      unsubscribed: { title: "Du bist abgemeldet", text: "Wir schreiben nicht mehr an diese Adresse. Deine Ergebnisse auf deinem Gerät bleiben, wie sie sind." },
+      used: { title: "Schon erledigt", text: "Dieser Link wurde bereits benutzt, du musst nichts mehr tun." },
+      expired: { title: "Dieser Link ist abgelaufen", text: "Bestätigungslinks gelten 30 Tage. Es hat sich nichts geändert, und wir schicken dir keine Neuigkeiten." },
+      invalid: { title: "Dieser Link funktioniert nicht", text: "Es hat sich nichts geändert. Öffne den Link aus der E-Mail noch einmal oder schreib an contact@horoscop.si." },
+      error: { title: "Das hat nicht geklappt", text: "Es hat sich nichts geändert. Versuch es gleich noch einmal mit dem Link." },
+    },
+  },
+};
+
 export const beta = {
   openEyebrow: "Gratis-Konto", openTitle: "Erstell dein Gratis-Konto, um das zu öffnen", openText: "Dein Profil, deine Deutungen und Passungen liegen in deinem eigenen Konto und begleiten dich auf jedes Handy. Dauert eine Minute: E-Mail, Passwort, ein Bestätigungsklick.", openCta: "Registrieren oder anmelden",
   lockedEyebrow: "Dein Profil", lockedTitle: "Melde dich an, um diese Seite zu öffnen", lockedText: "Diese Seite nutzt dein gespeichertes Profil. Melde dich an, wenn du ein Konto hast. Wenn nicht, funktionieren Tests und Tageshoroskope auch ohne.",

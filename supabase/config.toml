@@ -1,0 +1,8 @@
+# Both functions are reached without a login (the lead form, and links in an email), so the platform's JWT check stays off.
+project_id = "gxuqmuvpoiwugtmsfhnt"
+
+[functions.submit-lead]
+verify_jwt = false
+
+[functions.confirm-lead]
+verify_jwt = false

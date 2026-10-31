@@ -5,12 +5,15 @@ import { sb } from "@/lib/supabase";
 import { useAccount } from "@/lib/sync";
 import { useContent } from "@/lib/content-context";
 import { trackVisit } from "@/lib/track";
+import { hasLead, markLead, retryPendingLead } from "@/lib/lead";
 import { useAdminText } from "./text";
 
 /** Mounted once in the layout: counts one visit per tab session once we know whether someone is signed in. */
 export function UsageBoot() {
   const a = useAccount();
   useEffect(() => { if (a.ready) trackVisit(); }, [a.ready]);
+  // Leads: a queued lead gets another try on every new visit, and once someone has an account this device never sees the form.
+  useEffect(() => { if (a.ready) void retryPendingLead(); if (a.user && !hasLead()) markLead(); }, [a.ready, a.user]);
   return null;
 }
 

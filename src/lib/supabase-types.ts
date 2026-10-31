@@ -234,6 +234,61 @@ export type Database = {
         }
         Relationships: []
       }
+      leads: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          locale: string
+          marketing_confirmed_at: string | null
+          marketing_consent: boolean
+          marketing_consent_at: string | null
+          marketing_consent_text: string | null
+          marketing_ok: boolean | null
+          name: string
+          privacy_version: string
+          source: string
+          sources: string[]
+          unsubscribed_at: string | null
+          updated_at: string
+          welcome_sent_at: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          locale: string
+          marketing_confirmed_at?: string | null
+          marketing_consent?: boolean
+          marketing_consent_at?: string | null
+          marketing_consent_text?: string | null
+          name: string
+          privacy_version: string
+          source: string
+          sources?: string[]
+          unsubscribed_at?: string | null
+          updated_at?: string
+          welcome_sent_at?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          locale?: string
+          marketing_confirmed_at?: string | null
+          marketing_consent?: boolean
+          marketing_consent_at?: string | null
+          marketing_consent_text?: string | null
+          name?: string
+          privacy_version?: string
+          source?: string
+          sources?: string[]
+          unsubscribed_at?: string | null
+          updated_at?: string
+          welcome_sent_at?: string | null
+        }
+        Relationships: []
+      }
       people: {
         Row: {
           birth_date: string
