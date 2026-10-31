@@ -498,8 +498,8 @@ export const lead = {
   privacyLink: "Privacy policy",
   marketing: "Yes, Horoscop may email me occasional news about new tests.",
   marketingHint: "Optional. Your result opens either way. We ask you to confirm by email, and you can stop any time.",
-  sent: "A link back to this result is on its way to your inbox.",
-  sentConfirm: "A link back to this result is on its way to your inbox. To get the news, press the confirm button in that email.",
+  sent: "A link back to this result should reach your inbox soon. Your result stays here either way.",
+  sentConfirm: "A link back to this result should reach your inbox soon. To get the news, press the confirm button in that email.",
   haveAccount: "Already have an account?", login: "Log in",
   errors: { invalid_name: "Please enter your name and surname.", invalid_email: "Please enter a valid email address." },
   page: {

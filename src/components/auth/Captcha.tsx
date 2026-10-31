@@ -25,9 +25,12 @@ function load(): Promise<Api> {
   }));
 }
 
+/** The admin switch (feature_flags.captcha) must match the sign-in backend, which has nothing to do with lead email, so the lead form ignores it. */
+export const captchaActive = (wanted: boolean, flagOn: boolean, ignoreFlag: boolean) => wanted && (ignoreFlag || flagOn);
+
 /** Returns the current token (or "" until solved), the widget to render, and reset() to call after each auth request (tokens are single-use). */
-export function useCaptcha(locale: string, wanted = true) {
-  const flags = useFlags(); const active = wanted && flags.captcha; // admin switch (feature_flags.captcha)
+export function useCaptcha(locale: string, wanted = true, ignoreFlag = false) {
+  const flags = useFlags(); const active = captchaActive(wanted, flags.captcha, ignoreFlag);
   const [token, setToken] = useState("");
   const el = useRef<HTMLDivElement>(null); const id = useRef<string | null>(null);
   useEffect(() => {
