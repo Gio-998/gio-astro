@@ -145,10 +145,12 @@ export function skyDay(iso: string, sign: Sign): SkyDay {
 
 export const addDays = (iso: string, n: number) => DateTime.fromISO(iso, { zone: SKY_ZONE }).plus({ days: n }).toISODate()!;
 export const todayIso = (now = new Date()) => DateTime.fromJSDate(now, { zone: SKY_ZONE }).toISODate()!;
-/** Dates published by the current build: today in Skopje minus `back` (14) to plus `ahead` (3) days. Env overrides for the nightly job. */
-export function publishedDates(now = new Date(), back = Number(process.env.DAILY_DAYS_BACK ?? 14), ahead = Number(process.env.DAILY_DAYS_AHEAD ?? 3)): string[] {
-  const t = todayIso(now); const out: string[] = [];
-  for (let i = -back; i <= ahead; i++) out.push(addDays(t, i));
+/** First date the site ever published. Every day from here on stays online, so a date that earned clicks never disappears. */
+export const ARCHIVE_START = "2026-09-27";
+/** Dates published by the current build: every day since ARCHIVE_START, through today in Skopje plus `ahead` (3) days. */
+export function publishedDates(now = new Date(), ahead = Number(process.env.DAILY_DAYS_AHEAD ?? 3)): string[] {
+  const end = addDays(todayIso(now), ahead); const out: string[] = [];
+  for (let d = ARCHIVE_START; d <= end; d = addDays(d, 1)) out.push(d);
   return out;
 }
 

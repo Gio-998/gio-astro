@@ -9,6 +9,8 @@ import { SIGNS } from "@/engine/zodiac";
 import { BLOG_SLUGS, postFor } from "@/content/blog";
 import { publishedDates } from "@/engine/skyday";
 import { numPaths, numIndexable } from "@/lib/numerology";
+import { SECTIONS } from "@/lib/sections";
+import { CONTENT_DATES } from "@/lib/content-dates";
 
 // Every URL comes from one internal (locale-less) route path; localizedPath/languageAlternates turn it into each
 // locale's public URL and hreflang set, so localized slugs (/mk/ceni/, /mk/dneven-horoskop/…) need no special cases.
@@ -21,13 +23,14 @@ const BUILD = new Date().toISOString().slice(0, 10);
 type Entry = { path: string; lastModified: (l: string) => string; changeFrequency: "daily" | "monthly" | "yearly"; priority: number };
 function entries(): Entry[] {
   const dated = (p: string) => p.match(/\/(\d{4}-\d{2}-\d{2})\/$/)?.[1];
-  // Evergreen pages: build date (daily sections change every build); blog posts: their own updated/published date.
-  const blogDate = (l: string, p: string) => { const m = p.match(/^\/blog\/([^/]+)\/$/); const post = m ? postFor(l, m[1]) : undefined; return post ? (post.updated ?? post.date) : BUILD; };
+  // Daily pages change with every build; everything else carries its real content date, because Google drops lastmod it can't trust.
+  const blogDate = (l: string, p: string) => { const m = p.match(/^\/blog\/([^/]+)\/$/); const post = m ? postFor(l, m[1]) : undefined; return post ? (post.updated ?? post.date) : CONTENT_DATES.pages; };
   return [
-    ...HORO.map((p): Entry => { const d = dated(p); return { path: p, lastModified: () => d ?? BUILD, changeFrequency: d ? "yearly" : "daily", priority: d ? 0.5 : 0.7 }; }),
-    ...numPaths().filter(numIndexable).map((p): Entry => ({ path: p, lastModified: () => BUILD, changeFrequency: "monthly", priority: p === "/numerology/" ? 0.7 : 0.6 })),
-    { path: "/pricing/", lastModified: () => BUILD, changeFrequency: "monthly", priority: 0.7 },
-    ...PUBLIC.map((p): Entry => ({ path: p, lastModified: (l) => blogDate(l, p), changeFrequency: p.startsWith("/daily/") ? "daily" : "monthly", priority: p === "/" ? 1 : 0.6 })),
+    ...HORO.map((p): Entry => { const d = dated(p); return { path: p, lastModified: () => (d && d < BUILD ? d : BUILD), changeFrequency: d ? "yearly" : "daily", priority: d ? 0.5 : 0.7 }; }),
+    ...numPaths().filter(numIndexable).map((p): Entry => ({ path: p, lastModified: () => CONTENT_DATES.numerology, changeFrequency: "monthly", priority: p === "/numerology/" ? 0.7 : 0.6 })),
+    { path: "/pricing/", lastModified: () => CONTENT_DATES.pages, changeFrequency: "monthly", priority: 0.7 },
+    ...PUBLIC.map((p): Entry => ({ path: p, lastModified: (l) => blogDate(l, p), changeFrequency: "monthly", priority: p === "/" ? 1 : 0.6 })),
+    ...Object.values(SECTIONS).flatMap((s) => s.paths().map((p): Entry => ({ path: p, lastModified: () => s.modified(p), changeFrequency: "monthly", priority: 0.6 }))),
   ];
 }
 export default function sitemap(): MetadataRoute.Sitemap {

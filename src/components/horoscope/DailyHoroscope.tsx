@@ -152,7 +152,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
               <h2 className={`${label} mb-1 mt-2`}>{U.recentDays}</h2>
               <p className="mb-2 text-[12.5px] leading-snug text-mist/65">{U.signHubIntro(r.signName)}</p>
               <ul className="flex flex-wrap gap-1.5">
-                {[...pub].filter((d) => d < iso).reverse().map((d) => <li key={d}><Link className="inline-block rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[12px] hover:border-gold/40" href={horoPath(lang, sign, d)}>{formatDate(d, c.site.months)}</Link></li>)}
+                {[...pub].filter((d) => d < iso).reverse().slice(0, 31).map((d) => <li key={d}><Link className="inline-block rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[12px] hover:border-gold/40" href={horoPath(lang, sign, d)}>{formatDate(d, c.site.months)}</Link></li>)}
               </ul>
             </nav>
           )}

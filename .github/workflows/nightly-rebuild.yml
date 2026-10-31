@@ -1,0 +1,14 @@
+# Publishes the new day's horoscopes. The site is a static export, so nothing changes until it is rebuilt.
+name: Nightly rebuild
+on:
+  schedule:
+    - cron: "10 23 * * *" # 00:10 in Skopje in winter, 01:10 in summer
+  workflow_dispatch:
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the Vercel deploy hook
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl --fail --silent --show-error --retry 3 --retry-delay 30 -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null

@@ -50,6 +50,8 @@ export interface NumModel {
   eyebrow: string; h1: string; title: string; description: string; lead: string; big?: string;
   blocks: Block[]; faq: [string, string][]; crumbs: [string, string][];
   items?: LinkItem[]; related?: LinkItem[]; prev?: LinkItem; next?: LinkItem; calc?: CalcMode;
+  /** New sections (src/lib/sections) reuse this model: their schema section name, real content dates and optional client tool. */
+  sectionName?: string; published?: string; modified?: string; widget?: "rising-sign" | "moon-sign" | "birth-chart";
 }
 
 const digitSum = (s: string) => s.split("").map(Number);

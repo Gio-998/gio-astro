@@ -10,6 +10,8 @@ import { SITE_URL } from "@/lib/site-url";
 import { breadcrumb, faqPage, LdJson, abs } from "@/lib/schema";
 import { Calculator, type CalcLabels } from "./Calculator";
 import { DuoCalc, NameReport } from "./Personal";
+import { SectionWidget } from "@/components/sections/Widget";
+import { CONTENT_DATES, SITE_LAUNCH } from "@/lib/content-dates";
 
 /** Static params for one locale's slug folder (other locales get the "_" placeholder that renders a 404). */
 export function numParams(lang: string, owner: string) {
@@ -19,7 +21,10 @@ export function numParams(lang: string, owner: string) {
 const internal = (lang: string, slug: string[] = []) => parsePath(`/${lang}/${sectionSlug(lang, "numerology")}/${slug.map(decodeURIComponent).join("/")}${slug.length ? "/" : ""}`)?.[1] ?? "";
 
 export async function numMeta(lang: string, slug?: string[]): Promise<Metadata> {
-  const m = numModel(lang, internal(lang, slug)); if (!m) return {};
+  const m = numModel(lang, internal(lang, slug));
+  return m ? modelMeta(lang, m) : {};
+}
+export function modelMeta(lang: string, m: NumModel): Metadata {
   const brand = getContent(lang).site.brand; const canonical = localizedPath(lang, m.path); const og = LOCALE_META[lang as "en"]?.og ?? "en_US";
   const img = `${SITE_URL}/og/default/${lang}.jpg`;
   return { title: { absolute: `${m.title} · ${brand}` }, description: m.description, robots: { index: true, follow: true },
@@ -67,7 +72,7 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
   const words = [m.lead, ...m.blocks.flatMap((b) => [...(b.paras ?? []), ...(b.list ?? []), b.quote ?? ""]), ...m.faq.flat()].join(" ").split(/\s+/).filter(Boolean).length;
   const ld: object[] = [breadcrumb(m.crumbs)];
   if (m.faq.length) ld.push(faqPage(m.faq));
-  if (m.kind === "article") ld.push({ "@context": "https://schema.org", "@type": "Article", headline: m.title, description: m.description, url, mainEntityOfPage: url, inLanguage: lang, wordCount: words, articleSection: U.section, author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` }, image: [`${SITE_URL}/og/default/${lang}.jpg`] });
+  if (m.kind === "article") ld.push({ "@context": "https://schema.org", "@type": "Article", headline: m.title, description: m.description, url, mainEntityOfPage: url, inLanguage: lang, wordCount: words, articleSection: m.sectionName ?? U.section, datePublished: m.published ?? SITE_LAUNCH, dateModified: m.modified ?? CONTENT_DATES.numerology, author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` }, image: [`${SITE_URL}/og/default/${lang}.jpg`] });
   if (m.kind === "hub" && m.items) ld.push({ "@context": "https://schema.org", "@type": "ItemList", name: m.title, itemListElement: m.items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.label, url: abs(it.href) })) });
   if (m.kind === "calc") ld.push({ "@context": "https://schema.org", "@type": "WebApplication", name: m.title, url, applicationCategory: "LifestyleApplication", operatingSystem: "Any", inLanguage: lang, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } });
 
@@ -99,7 +104,8 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
         </div>
       </header>
 
-      {m.kind === "calc" && <div className="lg:mt-10">{calcBox}</div>}
+      {m.widget && <div className="lg:mt-10"><SectionWidget kind={m.widget} lang={lang} /></div>}
+      {m.kind === "calc" && calcBox && <div className="lg:mt-10">{calcBox}</div>}
       {report && <div className="lg:mt-4">{report}</div>}
 
       <div className="space-y-3 lg:mt-14 lg:grid lg:grid-cols-[minmax(0,680px)_300px] lg:justify-between lg:gap-16 lg:space-y-0">

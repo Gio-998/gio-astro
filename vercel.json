@@ -474,6 +474,216 @@
       }
     },
     {
+      "src": "/en/(horoskopski-znaci|sternzeichen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/zodiac-signs/"
+      }
+    },
+    {
+      "src": "/mk/(zodiac-signs|sternzeichen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/horoskopski-znaci/"
+      }
+    },
+    {
+      "src": "/de/(zodiac-signs|horoskopski-znaci)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/sternzeichen/"
+      }
+    },
+    {
+      "src": "/en/(nedelen-horoskop|wochenhoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/weekly-horoscope/"
+      }
+    },
+    {
+      "src": "/mk/(weekly-horoscope|wochenhoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/nedelen-horoskop/"
+      }
+    },
+    {
+      "src": "/de/(weekly-horoscope|nedelen-horoskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/wochenhoroskop/"
+      }
+    },
+    {
+      "src": "/en/(mesecen-horoskop|monatshoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/monthly-horoscope/"
+      }
+    },
+    {
+      "src": "/mk/(monthly-horoscope|monatshoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/mesecen-horoskop/"
+      }
+    },
+    {
+      "src": "/de/(monthly-horoscope|mesecen-horoskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/monatshoroskop/"
+      }
+    },
+    {
+      "src": "/en/(horoskop-2027|jahreshoroskop-2027)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/horoscope-2027/"
+      }
+    },
+    {
+      "src": "/mk/(horoscope-2027|jahreshoroskop-2027)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/horoskop-2027/"
+      }
+    },
+    {
+      "src": "/de/(horoscope-2027|horoskop-2027)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/jahreshoroskop-2027/"
+      }
+    },
+    {
+      "src": "/en/(kompatibilnost-na-znaci|partnerhoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/zodiac-compatibility/"
+      }
+    },
+    {
+      "src": "/mk/(zodiac-compatibility|partnerhoroskop)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/kompatibilnost-na-znaci/"
+      }
+    },
+    {
+      "src": "/de/(zodiac-compatibility|kompatibilnost-na-znaci)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/partnerhoroskop/"
+      }
+    },
+    {
+      "src": "/en/(ascendent-kalkulator|aszendent-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/rising-sign-calculator/"
+      }
+    },
+    {
+      "src": "/mk/(rising-sign-calculator|aszendent-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/ascendent-kalkulator/"
+      }
+    },
+    {
+      "src": "/de/(rising-sign-calculator|ascendent-kalkulator)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/aszendent-berechnen/"
+      }
+    },
+    {
+      "src": "/en/(mesecev-znak-kalkulator|mondzeichen-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/moon-sign-calculator/"
+      }
+    },
+    {
+      "src": "/mk/(moon-sign-calculator|mondzeichen-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/mesecev-znak-kalkulator/"
+      }
+    },
+    {
+      "src": "/de/(moon-sign-calculator|mesecev-znak-kalkulator)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/mondzeichen-berechnen/"
+      }
+    },
+    {
+      "src": "/en/(natalna-karta-kalkulator|geburtshoroskop-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/birth-chart-calculator/"
+      }
+    },
+    {
+      "src": "/mk/(birth-chart-calculator|geburtshoroskop-berechnen)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/natalna-karta-kalkulator/"
+      }
+    },
+    {
+      "src": "/de/(birth-chart-calculator|natalna-karta-kalkulator)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/geburtshoroskop-berechnen/"
+      }
+    },
+    {
+      "src": "/en/(mesecev-kalendar|mondkalender)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/moon-calendar/"
+      }
+    },
+    {
+      "src": "/mk/(moon-calendar|mondkalender)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/mesecev-kalendar/"
+      }
+    },
+    {
+      "src": "/de/(moon-calendar|mesecev-kalendar)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/mondkalender/"
+      }
+    },
+    {
+      "src": "/en/(retrograden-merkur|merkur-ruecklaeufig)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/mercury-retrograde/"
+      }
+    },
+    {
+      "src": "/mk/(mercury-retrograde|merkur-ruecklaeufig)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/mk/retrograden-merkur/"
+      }
+    },
+    {
+      "src": "/de/(mercury-retrograde|retrograden-merkur)(?:/.*)?",
+      "status": 308,
+      "headers": {
+        "Location": "/de/merkur-ruecklaeufig/"
+      }
+    },
+    {
       "handle": "filesystem"
     },
     {

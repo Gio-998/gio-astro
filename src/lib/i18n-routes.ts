@@ -21,6 +21,16 @@ export const SECTION_SLUGS: Record<string, Partial<Record<RouteLocale, string>>>
   pricing: { en: "pricing", mk: "ceni", de: "preise" },
   horoscope: { en: "horoscope", mk: "dneven-horoskop", de: "tageshoroskop" },
   numerology: { en: "numerology", mk: "numerologija", de: "numerologie" },
+  zodiac: { en: "zodiac-signs", mk: "horoskopski-znaci", de: "sternzeichen" },
+  "weekly-horoscope": { en: "weekly-horoscope", mk: "nedelen-horoskop", de: "wochenhoroskop" },
+  "monthly-horoscope": { en: "monthly-horoscope", mk: "mesecen-horoskop", de: "monatshoroskop" },
+  "horoscope-2027": { en: "horoscope-2027", mk: "horoskop-2027", de: "jahreshoroskop-2027" },
+  "sign-compatibility": { en: "zodiac-compatibility", mk: "kompatibilnost-na-znaci", de: "partnerhoroskop" },
+  "rising-sign": { en: "rising-sign-calculator", mk: "ascendent-kalkulator", de: "aszendent-berechnen" },
+  "moon-sign": { en: "moon-sign-calculator", mk: "mesecev-znak-kalkulator", de: "mondzeichen-berechnen" },
+  "birth-chart": { en: "birth-chart-calculator", mk: "natalna-karta-kalkulator", de: "geburtshoroskop-berechnen" },
+  "moon-calendar": { en: "moon-calendar", mk: "mesecev-kalendar", de: "mondkalender" },
+  "mercury-retrograde": { en: "mercury-retrograde", mk: "retrograden-merkur", de: "merkur-ruecklaeufig" },
 };
 /** Second (and calculator third) segment inside /numerology/. Numbers stay digits; pairs use a localized joiner. */
 export const NUM_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
@@ -50,7 +60,8 @@ export const SIGN_SLUGS: Record<RouteLocale, Record<Sign, string>> = {
   mk: { aries: "oven", taurus: "bik", gemini: "blizanci", cancer: "rak", leo: "lav", virgo: "devica", libra: "vaga", scorpio: "skorpija", sagittarius: "strelec", capricorn: "jarec", aquarius: "vodolija", pisces: "ribi" },
   de: { aries: "widder", taurus: "stier", gemini: "zwillinge", cancer: "krebs", leo: "loewe", virgo: "jungfrau", libra: "waage", scorpio: "skorpion", sagittarius: "schuetze", capricorn: "steinbock", aquarius: "wassermann", pisces: "fische" },
 };
-const SIGN_SECTIONS = new Set(["horoscope"]);
+const SIGN_SECTIONS = new Set(["horoscope", "zodiac", "weekly-horoscope", "monthly-horoscope", "horoscope-2027"]);
+const isSign = (s: string): s is Sign => s in SIGN_SLUGS.en;
 const isRouteLocale = (l: string): l is RouteLocale => (ROUTE_LOCALES as readonly string[]).includes(l);
 
 export const sectionSlug = (locale: string, section: string) => (isRouteLocale(locale) ? SECTION_SLUGS[section]?.[locale] : undefined) ?? section;
@@ -63,6 +74,7 @@ export function localizedPath(locale: string, path: string): string {
   if (section && SECTION_SLUGS[section]) {
     parts[1] = sectionSlug(l, section);
     if (SIGN_SECTIONS.has(section) && parts[2] && parts[2] in SIGN_SLUGS.en) parts[2] = SIGN_SLUGS[l][parts[2] as Sign];
+    if (section === "sign-compatibility" && parts[2]) { const [a, b] = parts[2].split("-and-"); if (a && b && isSign(a) && isSign(b)) parts[2] = `${SIGN_SLUGS[l][a]}-${PAIR_JOIN[l]}-${SIGN_SLUGS[l][b]}`; }
     if (section === "numerology") for (let i = 2; i < parts.length; i++) {
       if (NUM_SLUGS[parts[i]]) parts[i] = numSlug(l, parts[i]);
       else if (/^\d+-and-\d+$/.test(parts[i])) parts[i] = parts[i].replace("-and-", `-${PAIR_JOIN[l]}-`);
@@ -79,7 +91,9 @@ export function parsePath(url: string): [RouteLocale, string] | null {
   const section = Object.keys(SECTION_SLUGS).find((k) => sectionSlug(l, k) === parts[1]);
   if (section) {
     parts[1] = section;
-    if (SIGN_SECTIONS.has(section)) { const s = (Object.keys(SIGN_SLUGS[l]) as Sign[]).find((x) => SIGN_SLUGS[l][x] === parts[2]); if (s) parts[2] = s; }
+    const signOf = (slug: string) => (Object.keys(SIGN_SLUGS[l]) as Sign[]).find((x) => SIGN_SLUGS[l][x] === slug);
+    if (SIGN_SECTIONS.has(section)) { const s = signOf(parts[2]); if (s) parts[2] = s; }
+    if (section === "sign-compatibility" && parts[2]) { const [a, b] = parts[2].split(`-${PAIR_JOIN[l]}-`).map(signOf); if (a && b) parts[2] = `${a}-and-${b}`; }
     if (section === "numerology") for (let i = 2; i < parts.length; i++) {
       const k = numKey(l, parts[i]); if (k) parts[i] = k;
       else if (new RegExp(`^\\d+-${PAIR_JOIN[l]}-\\d+$`).test(parts[i])) parts[i] = parts[i].replace(`-${PAIR_JOIN[l]}-`, "-and-");
