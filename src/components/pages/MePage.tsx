@@ -8,21 +8,33 @@ import { useContent, useHref } from "@/lib/content-context";
 import { useState } from "react";
 import { BirthForm } from "../BirthForm";
 import { MeJourney, ViewToggle, useMeView } from "../sky/Journey";
+import { TestsPanel } from "../tests/TestsPanel";
 
 export function MePage() {
   const s = useStore(); const { c } = useContent(); const h = useHref();
   const [view, setView] = useMeView();
   if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
-  if (!s.me) return (
-    <div className="card text-center">
-      <h1 className="h-display mb-2 text-4xl"><span className="text-aurora">{c.ui.me.meet}</span></h1>
-      <p className="mb-4 text-dim">{c.ui.me.built}</p>
-      <Link className="btn-primary" href={h("/start/")}>{c.site.common.start}</Link>
-    </div>
-  );
+  if (!s.me) {
+    const T = c.ui.tests.me;
+    return (
+      <div data-testid="me-guest">
+        <div className="mb-5 text-center">
+          <h1 className="h-display mb-1 text-4xl"><span className="text-aurora">{T.title}</span></h1>
+          <p className="text-dim">{T.sub}</p>
+        </div>
+        <TestsPanel full />
+        <div className="card text-center" data-testid="me-birth-prompt">
+          <h2 className="h-display mb-1 text-2xl">{T.birthTitle}</h2>
+          <p className="mb-4 text-sm text-dim">{T.birthText}</p>
+          <Link className="btn-ghost" href={h("/start/")}>{T.birthCta}</Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <div className="mb-3 flex justify-end"><ViewToggle value={view} onChange={setView} /></div>
+      <TestsPanel />
       {view === "path"
         ? <MeJourney person={s.me} profile={profileOf(s.me)} onClassic={() => { setView("classic"); window.scrollTo({ top: 0 }); }} />
         : <ProfileView person={s.me} profile={profileOf(s.me)} isMe />}

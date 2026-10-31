@@ -8,12 +8,11 @@ import { useSyncExternalStore } from "react";
 import type { Session, User } from "@supabase/supabase-js";
 import { sb } from "./supabase";
 import { localRepo, onLocalChange, type Change, type State, type StoredPerson } from "./store";
-import { meToProfile, personToRow, journalToRow, merge, type ServerSnapshot, type MeConflict } from "./sync-map";
+import { meToProfile, personToRow, journalToRow, merge, quizRows, type ServerSnapshot, type MeConflict } from "./sync-map";
 
 const OUTBOX = "mirrorstar:outbox";
 const CONSENTS = "mirrorstar:pending-consents";
 export const CONSENT_VERSION = "2026-10";
-const QUIZ_DEF_ID: Record<string, string> = { bigFive: "big-five", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer", bigFiveLong: "big-five-long", fourLetter: "four-letter" };
 
 export type SyncStatus = "off" | "idle" | "syncing" | "offline" | "error";
 export interface AccountState { ready: boolean; user: User | null; status: SyncStatus; lastSync: string | null; error: string | null; conflict: MeConflict | null; pending: number }
@@ -66,11 +65,7 @@ async function push(ch: Change, uid: string) {
       return;
     }
     case "quiz": {
-      if (!s.me) return;
-      const rows = ch.keys.filter((k) => (s.me!.quiz as Record<string, unknown>)[k] != null).map((k) => ({
-        quiz_id: k, scores: (s.me!.quiz as Record<string, unknown>)[k] as never, answers: (s.me!.answers?.[QUIZ_DEF_ID[k] ?? k] ?? {}) as never,
-        completed_at: s.me!.quizAt?.[k] ?? new Date().toISOString(),
-      }));
+      const rows = quizRows(s, ch.keys);
       if (rows.length) ok(await c.from("quiz_results").insert(rows));
       return;
     }

@@ -2,6 +2,7 @@
 /** Results of the precision quizzes (28-item four-letter quiz, 50-item Big Five) and the "Sharper results" links. */
 import Link from "next/link";
 import type { Profile } from "@/engine/profile";
+import type { QuizView } from "@/lib/profile";
 import type { StoredPerson } from "@/lib/store";
 import { useContent, useHref } from "@/lib/content-context";
 import { PRECISION_QUIZ_IDS, PrecisionQuizId, quizDefs } from "@/lib/quiz-defs";
@@ -12,7 +13,7 @@ import { emblemOf } from "./art/precisionArt";
 import { FitCheck, BigFiveSourceNote } from "./FitCheck";
 import { QuizResultView } from "./ProfileView";
 
-export function FourLetterCard({ profile, pid = "me" }: { profile: Profile; pid?: string }) {
+export function FourLetterCard({ profile, pid = "me" }: { profile: QuizView; pid?: string }) {
   const { c } = useContent(); const P = c.psych; const R = c.types.result; const U = c.ui.profile;
   const fl = profile.fourLetter; if (!fl) return null;
   const quiz = profile.quiz.fourLetter;
@@ -38,7 +39,7 @@ export function FourLetterCard({ profile, pid = "me" }: { profile: Profile; pid?
   );
 }
 
-export function PrecisionResultView({ id, person, profile }: { id: PrecisionQuizId; person: StoredPerson; profile: Profile }) {
+export function PrecisionResultView({ id, person, profile }: { id: PrecisionQuizId; person: StoredPerson; profile: QuizView }) {
   if (id === "four-letter") return <FourLetterCard profile={profile} pid={person.id} />;
   return <div><QuizResultView id="big-five" profile={profile} pid={person.id} /><BigFiveSourceNote profile={profile} pid={person.id} /></div>;
 }
@@ -68,7 +69,7 @@ export function PrecisionLinks({ forQ = "", done, h }: { forQ?: string; done: (i
             <div className="min-w-0">
               <p className="h-display text-xl leading-tight">{ok ? "✓ " : ""}{d.title}</p>
               <p className="text-xs text-dim">{d.tagline}</p>
-              <span className="mt-1 inline-block text-xs text-gold">{ok ? U.retake : U.begin} · {U.min(d.minutes)} →</span>
+              <span className="mt-1 inline-block text-xs text-gold">{ok ? c.ui.tests.status.open : U.begin} · {U.min(d.minutes)} →</span>
             </div>
           </Link>
         );

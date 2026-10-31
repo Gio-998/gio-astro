@@ -6,7 +6,7 @@ import { computeSystems, cultureOrder } from "@/engine/systems";
 import { useContent } from "@/lib/content-context";
 import { buildSystemCards } from "@/story/systems";
 
-export const firstNameOf = (p: StoredPerson) => (p.name || p.birthName || "").trim().split(/\s+/)[0] ?? "";
+export const firstNameOf = (p: StoredPerson) => ((p.noName ? "" : p.name) || p.birthName || "").trim().split(/\s+/)[0] ?? "";
 
 /** Systems, cards and cultural order for one person, memoised. Browser languages are read on the client only. */
 export function useSystems(person: StoredPerson, profile: Profile) {

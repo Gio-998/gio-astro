@@ -2,7 +2,7 @@
 /** "Does this sound like you?": confirm a type result or pick the one that fits better (stored as a self-identified override). */
 import Link from "next/link";
 import { useState } from "react";
-import type { Profile } from "@/engine/profile";
+import type { QuizView } from "@/lib/profile";
 import { useContent, useHref } from "@/lib/content-context";
 import { repo } from "@/lib/store";
 import { ATTACH_STYLES, FOUR_LETTER_CODES, TEMPERAMENTS, SelfIdKind, selfConfirmPatch, selfIdPatch } from "@/engine/selfid";
@@ -10,7 +10,7 @@ import { ATTACH_STYLES, FOUR_LETTER_CODES, TEMPERAMENTS, SelfIdKind, selfConfirm
 type Opt = { v: string | number; label: string; sub?: string };
 type Info = { current: string | number; measured: string | number | null; self: boolean; options: Opt[]; name: (v: string | number) => string };
 
-export function useFitInfo(kind: SelfIdKind, profile: Profile): Info | null {
+export function useFitInfo(kind: SelfIdKind, profile: QuizView): Info | null {
   const { c } = useContent(); const P = c.psych; const q = profile.quiz;
   if (kind === "fourLetter") {
     const f = profile.fourLetter; if (!f) return null;
@@ -32,7 +32,7 @@ export function useFitInfo(kind: SelfIdKind, profile: Profile): Info | null {
   return { current: a.style, measured: a.measured ?? a.style, self: a.source === "self", name, options: ATTACH_STYLES.map((k) => ({ v: k, label: name(k) })) };
 }
 
-export function FitCheck({ kind, profile, pid = "me" }: { kind: SelfIdKind; profile: Profile; pid?: string }) {
+export function FitCheck({ kind, profile, pid = "me" }: { kind: SelfIdKind; profile: QuizView; pid?: string }) {
   const { c } = useContent(); const F = c.types.fit; const R = c.types.result; const h = useHref();
   const info = useFitInfo(kind, profile);
   const [picking, setPicking] = useState(false);
@@ -89,7 +89,7 @@ export function FitCheck({ kind, profile, pid = "me" }: { kind: SelfIdKind; prof
 }
 
 /** Small note under the Big Five showing which version feeds the results, with a link to the longer one. */
-export function BigFiveSourceNote({ profile, pid = "me" }: { profile: Profile; pid?: string }) {
+export function BigFiveSourceNote({ profile, pid = "me" }: { profile: QuizView; pid?: string }) {
   const { c } = useContent(); const h = useHref(); const R = c.types.result; const F = c.types.fit;
   if (!profile.bigFiveSource) return null;
   return (

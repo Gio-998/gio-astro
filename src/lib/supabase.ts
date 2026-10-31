@@ -8,8 +8,8 @@ let client: SupabaseClient<Database> | null = null;
 
 /** True when this build has Supabase configured (accounts available). */
 export const accountsEnabled = !!(url && key);
-/** Private beta (default ON): app needs sign-in, signup is invite-only, gated tool pages are noindex (public pages stay indexable, see lib/seo.ts). Set NEXT_PUBLIC_BETA=0 to open up. */
-export const betaMode = process.env.NEXT_PUBLIC_BETA !== "0";
+/** The private beta is over: everything is open and registration is optional. A build only goes back to it with NEXT_PUBLIC_BETA=1. */
+export const betaMode = process.env.NEXT_PUBLIC_BETA === "1";
 /** "Continue with Google" stays hidden until a Google OAuth client is configured in Supabase. */
 export const googleEnabled = process.env.NEXT_PUBLIC_GOOGLE_AUTH === "1";
 

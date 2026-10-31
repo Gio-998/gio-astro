@@ -38,7 +38,17 @@ export interface PersonInput extends BirthInput {
   quiz?: QuizResults;
 }
 
-export interface Profile {
+/** The part of a profile that comes from tests alone. It needs no birth date. */
+export interface QuizLayer {
+  quiz: QuizResults;
+  psych: { bigFive: BigFive; fourLetter: EffectiveFourLetter; temperament: EffectiveTemperament } | null;
+  /** Effective four-letter style (self pick > dedicated quiz > Big Five estimate), also without a Big Five. */
+  fourLetter: EffectiveFourLetter | null;
+  /** Which Big Five version feeds the results. */
+  bigFiveSource: "long" | "short" | null;
+}
+
+export interface Profile extends QuizLayer {
   input: PersonInput;
   chart: Chart;
   sun: Sign;
@@ -46,18 +56,12 @@ export interface Profile {
   rising: Sign | null;
   chinese: ChineseProfile;
   vedic: VedicMoon;
-  quiz: QuizResults;
   numbers: { lifePath: number; lifePathSteps: string; birthday: number; personalYear: number; name: NameNumbers | null };
   tarot: { number: number; cards: number[] };
   yang: number; // 0–100 balance point (50 = centered)
   dominantElement: Element;
   archetypeAnimal: ArchetypeAnimal;
   palette: string[]; // 5 hex colours
-  psych: { bigFive: BigFive; fourLetter: EffectiveFourLetter; temperament: EffectiveTemperament } | null;
-  /** Effective four-letter style (self pick > dedicated quiz > Big Five estimate), also without a Big Five. */
-  fourLetter: EffectiveFourLetter | null;
-  /** Which Big Five version feeds the results. */
-  bigFiveSource: "long" | "short" | null;
 }
 
 export type ArchetypeAnimal =
@@ -81,13 +85,20 @@ const ELEMENT_PALETTES: Record<Element, string[]> = {
 };
 const WUXING_ACCENT: Record<string, string> = { wood: "#52B788", fire: "#E85D75", earth: "#C9A227", metal: "#C0C7D1", water: "#355C7D" };
 
-export function buildProfile(rawInput: PersonInput): Profile {
-  // Effective quiz results: the long Big Five replaces the short one; self-identified picks replace measured types.
-  const rq = rawInput.quiz ?? {};
-  const bigFiveSource: Profile["bigFiveSource"] = rq.bigFiveLong ? "long" : rq.bigFive ? "short" : null;
+/** Effective test results: the long Big Five replaces the short one; self-identified picks replace measured types. */
+export function quizLayer(rq: QuizResults = {}): QuizLayer {
+  const bigFiveSource: QuizLayer["bigFiveSource"] = rq.bigFiveLong ? "long" : rq.bigFive ? "short" : null;
   const quiz: QuizResults = { ...rq, bigFive: rq.bigFiveLong ?? rq.bigFive, nine: effectiveNine(rq.nine, rq.selfId), attachment: effectiveAttachment(rq.attachment, rq.selfId) };
   for (const k of ["bigFive", "nine", "attachment"] as const) if (quiz[k] === undefined) delete quiz[k];
-  const input: PersonInput = { ...rawInput, quiz };
+  const b5 = quiz.bigFive;
+  const fourLetter = effectiveFourLetter(b5, rq.fourLetter, rq.selfId);
+  const psych = b5 && fourLetter ? { bigFive: b5, fourLetter, temperament: effectiveTemperament(b5, rq.selfId) } : null;
+  return { quiz, psych, fourLetter, bigFiveSource };
+}
+
+export function buildProfile(rawInput: PersonInput): Profile {
+  const layer = quizLayer(rawInput.quiz);
+  const input: PersonInput = { ...rawInput, quiz: layer.quiz };
   const chart = computeChart(input);
   const sun = chart.placements.sun!.sign;
   const moon = chart.placements.moon!.sign;
@@ -118,13 +129,10 @@ export function buildProfile(rawInput: PersonInput): Profile {
   const base = ELEMENT_PALETTES[dominantElement];
   const palette = [base[0], base[1], WUXING_ACCENT[chinese.element], base[3], base[4]];
 
-  const fl = effectiveFourLetter(b5, rq.fourLetter, rq.selfId);
-  const psych = b5 && fl ? { bigFive: b5, fourLetter: fl, temperament: effectiveTemperament(b5, rq.selfId) } : null;
-
   return {
-    input, chart, sun, moon, rising, chinese, vedic: vedicMoon(chart), quiz,
+    ...layer, input, chart, sun, moon, rising, chinese, vedic: vedicMoon(chart),
     numbers: { lifePath: lp.value, lifePathSteps: lp.steps, birthday: birthdayNumber(input.date), personalYear: personalYear(input.date, thisYear), name },
     tarot: birthCards(input.date),
-    yang, dominantElement, archetypeAnimal, palette, psych, fourLetter: fl, bigFiveSource,
+    yang, dominantElement, archetypeAnimal, palette,
   };
 }

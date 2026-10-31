@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { PLAY_GAMES, playKey, playProfile, type PlayResults } from "@/engine/play";
 import { useContent, useHref } from "@/lib/content-context";
-import { findPerson, useStore } from "@/lib/store";
+import { subjectOf, useStore } from "@/lib/store";
 import { PageHero } from "../ui";
 import { Reveal } from "../art/Reveal";
 import { usePlay } from "./text";
@@ -17,7 +17,7 @@ import { UnifiedGlance } from "../adaptive/UnifiedGlance";
 
 export function PlayHub() {
   const P = usePlay(); const { c } = useContent(); const h = useHref(); const s = useStore();
-  const forId = useSearchParams().get("for") ?? "me"; const person = findPerson(s, forId);
+  const forId = useSearchParams().get("for") ?? "me"; const person = subjectOf(s, forId);
   const q = (person?.quiz ?? {}) as PlayResults; const prof = playProfile(q);
   const done = PLAY_GAMES.filter((g) => q[playKey(g)]); const next = PLAY_GAMES.find((g) => !q[playKey(g)]);
   const [sharing, setSharing] = useState(false);

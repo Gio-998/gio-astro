@@ -11,6 +11,7 @@ import { publishedDates } from "@/engine/skyday";
 import { parsePath, localizedPath, ROUTE_LOCALES } from "@/lib/i18n-routes";
 import { numModel, numPaths, type NumModel } from "@/lib/numerology";
 import { SECTIONS, sectionModel } from "@/lib/sections";
+import { ALL_QUIZ_IDS } from "@/lib/quiz-defs";
 import { siteLinks, navFor } from "@/lib/site-links";
 import sitemap from "@/app/sitemap";
 
@@ -26,6 +27,7 @@ function reachable(lang: string): Set<string> {
     const links = [...hrefsOf(p.startsWith("/numerology/") ? numModel(lang, p) : sectionModel(lang, p))].map(internal).filter((x): x is string => !!x);
     if (p === "/") links.push("/numerology/", "/horoscope/", "/numerology/calculator/life-path/", "/numerology/angel-numbers/", ...SIGNS.map((s) => `/horoscope/${s}/`));
     if (p === "/blog/") links.push(...postsFor(lang).map((x) => `/blog/${x.slug}/`));
+    if (p === "/quizzes/") links.push(...ALL_QUIZ_IDS.map((q) => `/quiz/${q}/`), "/deep/", "/bond/"); // the hub in components/pages/QuizHub.tsx
     if (p === "/horoscope/") links.push(...SIGNS.map((s) => `/horoscope/${s}/`));
     const h = p.match(/^\/horoscope\/([a-z]+)\/(?:(\d{4}-\d{2}-\d{2})\/)?$/);
     if (h) { // DailyHoroscope links yesterday and tomorrow when published; the sign page sits on today, whose yesterday is in the archive.
@@ -46,7 +48,7 @@ describe("crawlability", () => {
     expect(sitemapPaths(lang).filter((p) => !seen.has(p))).toEqual([]);
   });
   it("links from page models never point at a page that does not exist", () => {
-    const known = new Set([...sitemapPaths("en"), ...chrome]); // chrome adds the app routes that stay out of the sitemap during the beta
+    const known = new Set([...sitemapPaths("en"), ...chrome]); // chrome adds the app routes that stay out of the sitemap
     const empty = Object.values(SECTIONS).filter((s) => !s.paths().length).map((s) => `/${s.key}/`); // filled in by their own workstreams
     const allowed = (p: string) => known.has(p) || empty.some((e) => p.startsWith(e));
     const models = [...numPaths().map((p) => [p, numModel]), ...Object.values(SECTIONS).flatMap((s) => s.paths().map((p) => [p, sectionModel]))] as [string, typeof numModel][];

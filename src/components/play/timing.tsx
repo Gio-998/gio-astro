@@ -20,7 +20,10 @@ export function useAnswerTiming() {
   }, []);
   const summary = useCallback((): AnswerTiming => summarizeTiming({ ...items.current }), []);
   const reset = useCallback(() => { items.current = {}; }, []);
-  return useMemo(() => ({ shown, answered, summary, reset }), [shown, answered, summary, reset]);
+  /** Copy for the saved progress, and the way back in when a test resumes, so timing covers the whole test. */
+  const dump = useCallback(() => ({ ...items.current }), []);
+  const restore = useCallback((saved?: Record<string, ItemTiming>) => { items.current = { ...(saved ?? {}) }; }, []);
+  return useMemo(() => ({ shown, answered, summary, reset, dump, restore }), [shown, answered, summary, reset, dump, restore]);
 }
 
 /** "How sure you were": instant answers, long pauses, changes of mind, careless-run flag. */

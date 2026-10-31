@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { LOCALES } from "@/content";
 import { SITE_URL } from "@/lib/site-url";
 export const dynamic = "force-static";
-import { QUIZ_IDS } from "@/lib/quiz-defs";
+import { ALL_QUIZ_IDS } from "@/lib/quiz-defs";
 import { languageAlternates, isIndexable } from "@/lib/seo";
 import { localizedPath } from "@/lib/i18n-routes";
 import { SIGNS } from "@/engine/zodiac";
@@ -14,8 +14,8 @@ import { CONTENT_DATES } from "@/lib/content-dates";
 
 // Every URL comes from one internal (locale-less) route path; localizedPath/languageAlternates turn it into each
 // locale's public URL and hreflang set, so localized slugs (/mk/ceni/, /mk/dneven-horoskop/…) need no special cases.
-// Personal pages (profile, people, today, account) are left out on purpose.
-const PUBLIC = ["/", "/start/", "/match/", "/bond/", "/quizzes/", "/deep/", "/play/", "/you/", "/partners/", ...QUIZ_IDS.map((q) => `/quiz/${q}/`), "/learn/", "/how-it-works/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", ...SIGNS.map((s) => `/daily/${s}/`), "/blog/", ...BLOG_SLUGS.map((s) => `/blog/${s}/`)].filter(isIndexable);
+// Pages that show data from the device (profile, /you/, people, today, account) are left out on purpose.
+const PUBLIC = ["/", "/start/", "/match/", "/bond/", "/quizzes/", "/deep/", "/play/", "/partners/", ...ALL_QUIZ_IDS.map((q) => `/quiz/${q}/`), "/learn/", "/how-it-works/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", ...SIGNS.map((s) => `/daily/${s}/`), "/blog/", ...BLOG_SLUGS.map((s) => `/blog/${s}/`)].filter(isIndexable);
 const DATES = publishedDates();
 const HORO = ["/horoscope/", ...SIGNS.map((s) => `/horoscope/${s}/`), ...SIGNS.flatMap((s) => DATES.map((d) => `/horoscope/${s}/${d}/`))];
 const BUILD = new Date().toISOString().slice(0, 10);

@@ -9,9 +9,8 @@ export const dynamicParams = false;
 export function generateStaticParams() { return LOCALES.flatMap((lang) => ALL_QUIZ_IDS.map((quiz) => ({ lang, quiz }))); }
 export async function generateMetadata({ params }: PageProps<"/[lang]/quiz/[quiz]">) {
   const { lang, quiz } = await params;
-  const d = quizDefs(getContent(lang))[quiz as AnyQuizId];
-  const c = getContent(lang); const title = c.ui.quiz.metaTitle(d?.title ?? "");
-  return d ? { title, description: d.tagline, ...localizedMeta(lang, `/quiz/${quiz}/`, { title: `${title} · ${c.site.brand}`, description: d.tagline, siteName: c.site.brand }) } : {};
+  const c = getContent(lang); const m = c.ui.tests.meta[quiz as AnyQuizId];
+  return m ? { title: m.title, description: m.description, ...localizedMeta(lang, `/quiz/${quiz}/`, { title: `${m.title} · ${c.site.brand}`, description: m.description, siteName: c.site.brand }) } : {};
 }
 export default async function Page({ params }: PageProps<"/[lang]/quiz/[quiz]">) {
   const { lang, quiz } = await params;
