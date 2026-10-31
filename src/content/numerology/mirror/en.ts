@@ -1476,7 +1476,7 @@ export const mirrorEn: MirrorSet = {
  },
  "22-22": {
   "title": "Mirror hour 22:22: the master builder before sleep",
-  "lead": "22:22 is the last doubled time before midnight. It repeats the master number twenty two, often called the master builder, and invites you to think about the lasting things you want to create while the house grows quiet.",
+  "lead": "22:22 comes late in the evening. It repeats the master number twenty two, often called the master builder, and invites you to think about the lasting things you want to create while the house grows quiet.",
   "sections": [
    {
     "title": "What 22:22 can mean",

@@ -1,6 +1,6 @@
 import { formatDate } from "@/lib/dates";
 import Link from "next/link";
-import { publishedDates } from "@/engine/skyday";
+import { publishedDates, dayStart } from "@/engine/skyday";
 import { RetroMark } from "../RetroMark";
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { getContent } from "@/content";
@@ -36,7 +36,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   const Z = ZODIAC[lang] ?? ZODIAC.en; const evergreen = isToday ? Z.signs[sign]?.daily : undefined;
   const url =absolute(isToday ? horoPath(lang, sign) : horoPath(lang, sign, iso));
   const ld = {
-    "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: `${iso}T00:00:00+02:00`, dateModified: `${iso}T00:00:00+02:00`,
+    "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: dayStart(iso), dateModified: dayStart(iso),
     inLanguage: lang, mainEntityOfPage: url, image: [absolute(ogImage(lang, sign, iso))], about: { "@type": "Thing", name: r.signName },
     articleSection: B.ui.hubTitle, wordCount: wordCount(r) + (evergreen ? evergreen.paras.join(" ").split(/\s+/).length : 0),
     author: { "@type": "Organization", name: c.site.brand, url: SITE_URL }, publisher: { "@id": `${SITE_URL}/#organization` },

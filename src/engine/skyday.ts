@@ -145,6 +145,8 @@ export function skyDay(iso: string, sign: Sign): SkyDay {
 
 export const addDays = (iso: string, n: number) => DateTime.fromISO(iso, { zone: SKY_ZONE }).plus({ days: n }).toISODate()!;
 export const todayIso = (now = new Date()) => DateTime.fromJSDate(now, { zone: SKY_ZONE }).toISODate()!;
+/** Start of a day in Skopje with its real UTC offset, for schema dates (+01:00 in winter, +02:00 in summer). */
+export const dayStart = (iso: string) => DateTime.fromISO(iso, { zone: SKY_ZONE }).toISO({ suppressMilliseconds: true })!;
 /** First date the site ever published. Every day from here on stays online, so a date that earned clicks never disappears. */
 export const ARCHIVE_START = "2026-09-27";
 /** Dates published by the current build: every day since ARCHIVE_START, through today in Skopje plus `ahead` (3) days. */

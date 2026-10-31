@@ -1476,7 +1476,7 @@ export const mirrorDe: MirrorSet = {
  },
  "22-22": {
   "title": "Spiegelzahl 22:22: der Meisterbaumeister vor dem Schlaf",
-  "lead": "22:22 ist die letzte doppelte Uhrzeit vor Mitternacht. Sie wiederholt die Meisterzahl Zweiundzwanzig, oft Meisterbaumeister genannt, und lädt dich ein, über das Bleibende nachzudenken, das du schaffen willst, während das Haus still wird.",
+  "lead": "22:22 kommt spät am Abend. Sie wiederholt die Meisterzahl Zweiundzwanzig, oft Meisterbaumeister genannt, und lädt dich ein, über das Bleibende nachzudenken, das du schaffen willst, während das Haus still wird.",
   "sections": [
    {
     "title": "Was 22:22 bedeuten kann",
