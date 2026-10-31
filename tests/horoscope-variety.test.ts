@@ -12,9 +12,10 @@ export const leads = (r: Reading) => ({ headline: r.headline, overview: r.overvi
 export function overlap(a: Reading, b: Reading) { const A = new Set(prose(a).flatMap(split)); return [...new Set(prose(b).flatMap(split))].filter((s) => A.has(s)); }
 
 describe("daily horoscope variety", () => {
-  it("adjacent days share at most 1 sentence and no section lead repeats within 7 days", () => {
+  it("adjacent days share at most 1 sentence and no section lead repeats within 7 days", async () => {
     const r = rng(1410);
     for (const sign of SIGNS) for (const lang of HORO_LOCALES) {
+      await new Promise((go) => setImmediate(go)); // a long loop with no pause starves vitest's worker heartbeat, which fails the whole run after 60 seconds
       const t = Date.UTC(1990, 0, 1) + Math.floor(r() * 60 * 365 * 864e5);
       const start = new Date(t).toISOString().slice(0, 10);
       const days = Array.from({ length: 60 }, (_, i) => reading(lang, sign, addDays(start, i)));
