@@ -63,7 +63,7 @@ export const nineStyles: Record<number, { name: string; core: string; gift: stri
   8: { name: "Der Beschützer", core: "will Stärke und Kontrolle über das eigene Leben", gift: "Mut, Direktheit und Schutz für andere", growth: "Zeig Weichheit. Das ist Stärke, keine Schwäche." },
   9: { name: "Der Friedensstifter", core: "will inneren und äußeren Frieden", gift: "Annahme und die Gabe, Menschen zu verbinden", growth: "Deine Meinung zählt: Sag sie ruhig mal zuerst." },
 };
-export const nineNote: string = "Die neun Motive sind angelehnt an das weit verbreitete Modell der neun Persönlichkeitstypen. Das ist unser eigenes kurzes Quiz, kein offizieller Test.";
+export const nineNote: string = "Die neun Motive sind angelehnt an das weit verbreitete Modell der neun Persönlichkeitstypen. Das ist unser eigener kurzer Test, kein offizieller.";
 
 export const care: Record<Care, { name: string; text: string; tip: string }> = {
   words: { name: "Liebe Worte", text: "Wertschätzung, Ermutigung und ein Ich bin stolz auf dich füllen deinen Akku.", tip: "Mach heute ein konkretes Kompliment." },

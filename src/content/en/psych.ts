@@ -63,7 +63,7 @@ export const nineStyles: Record<number, { name: string; core: string; gift: stri
   8: { name: "The Protector", core: "wants strength and control over their own life", gift: "courage, directness and protectiveness", growth: "Show softness. It's strength, not weakness." },
   9: { name: "The Peacemaker", core: "wants inner and outer peace", gift: "acceptance and the ability to unite people", growth: "Your opinion matters: say it first sometimes." },
 };
-export const nineNote: string = "Nine-style motivations are inspired by the widely used nine-type model of personality. This is our own short quiz, not an official test.";
+export const nineNote: string = "Nine-style motivations are inspired by the widely used nine-type model of personality. This is our own short test, not an official one.";
 
 export const care: Record<Care, { name: string; text: string; tip: string }> = {
   words: { name: "Kind words", text: "Appreciation, encouragement and 'I'm proud of you' fill your cup.", tip: "Send one specific compliment today." },

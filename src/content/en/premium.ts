@@ -64,14 +64,14 @@ export const premium = {
     vat: "Prices in euro, VAT included.",
   },
   plans: {
-    free: { name: "Free", tag: "Forever", price: "€0", cta: "Start free", lead: "Everything you need to start.", items: ["Your full profile across every lens", "All 7 tests and their results", "Basic compatibility for anyone", "Today's short reading and journal", "The first chapters of your Book of You and each Bond Story"] },
+    free: { name: "Free", tag: "Forever", price: "€0", cta: "Start free", lead: "Everything you need to start.", items: ["Your full profile across every reading", "All 7 tests and their results", "Basic compatibility for anyone", "Today's short reading and journal", "The first chapters of your Book of You and each Bond Story"] },
     premium: { name: "Premium", tag: "Most complete", lead: "For people who come back every day.", items: ["The full Book of You, all 11 chapters", "Unlimited Bond Stories, every chapter", "Your Day, plus weekly and monthly forecasts", "A daily email written for your chart", "Saved history of every reading and journal entry", "New features first"] },
   },
   compare: {
     title: "Free and Premium, side by side",
     free: "Free", premium: "Premium",
     rows: [
-      ["Profile, all lenses and all tests", "yes", "yes"],
+      ["Profile, all readings and all tests", "yes", "yes"],
       ["Compatibility score for any pair", "yes", "yes"],
       ["Today's short reading", "yes", "yes"],
       ["Book of You", "3 chapters", "All 11"],
@@ -91,7 +91,7 @@ export const premium = {
       { icon: "☀", title: "Your Day, week and month", text: "A short story for each day from your own chart and today's sky, with a weekly overview and a monthly theme." },
       { icon: "✉", title: "A daily email", text: "One calm message in the morning. Your day in three lines, no spam, unsubscribe in one tap." },
       { icon: "🗂", title: "Saved history", text: "Every reading, journal entry and Bond Story kept and synced, so you can look back at how a month really went." },
-      { icon: "✦", title: "New things first", text: "Members get new tests, lenses and features before anyone else, and a say in what we build next." },
+      { icon: "✦", title: "New things first", text: "Members get new tests, readings and features before anyone else, and a say in what we build next." },
     ],
   },
   promises: {
@@ -199,19 +199,19 @@ export const premium = {
   products: {
     "soul-blueprint": {
       name: "Soul Blueprint", tagline: "Your whole self, in one book you can hold", badge: "Our favourite",
-      short: "A 40+ page personal deep report across every lens. PDF and print-ready.",
+      short: "A 40+ page personal deep report across every reading. PDF and print-ready.",
       pitch: [
-        "The Book of You is a long read. The Soul Blueprint goes further: every lens we have, read together and side by side, in a document you can print, keep and come back to on your birthday.",
+        "The Book of You is a long read. The Soul Blueprint goes further: every reading we have, put together and side by side, in a document you can print, keep and come back to on your birthday.",
         "Your birth chart in full, house by house. Your numbers from Life Path to Personal Year. Your Chinese and Vedic signs. Your Big Five and attachment results, read in plain words. Then the part people tell us they reread most: where all of these agree about you, and where they pull in different directions.",
         "It ends with a year of small practices matched to your chart, so it's something you use, not something you read once and forget.",
       ],
-      youGet: ["40+ pages written for your chart and your answers", "Your birth wheel, drawn and explained", "Every lens: Western, Vedic, Chinese, numerology, Big Five, attachment", "Where your lenses agree and where they disagree", "12 monthly practices for the year ahead", "A print-ready version with a cover page"],
+      youGet: ["40+ pages written for your chart and your answers", "Your birth wheel, drawn and explained", "Every reading: Western, Vedic, Chinese, numerology, Big Five, attachment", "Where your readings agree and where they disagree", "12 monthly practices for the year ahead", "A print-ready version with a cover page"],
       format: [["Format", "PDF (A4) + printable version"], ["Length", "40 to 55 pages"], ["Delivery", "In your account within minutes"], ["Languages", "English or Macedonian"]],
       forWho: "For birthdays, turning points, or anyone who wants the full picture in one place.",
       sampleTitle: "Look inside", sampleNote: "Sample pages for an example person (Mila, Leo sun, Pisces moon, Life Path 7).",
       sample: [
         { heading: "Chapter 1 · The shape of you", body: "Mila, your Sun in Leo wants to be seen, and your Pisces Moon would rather disappear into a book. Most people meet the first one. The people closest to you know the second, and they know that the bright, warm version of you needs a quiet room to recharge in." },
-        { heading: "Where your lenses agree", body: "Three lenses say the same thing in different words: you need meaning more than applause. Life Path 7, a Pisces Moon and high Openness all point to someone who asks why before how. When work feels pointless, you lose energy fast. When it matters, you can go for hours." },
+        { heading: "Where your readings agree", body: "Three readings say the same thing in different words: you need meaning more than applause. Life Path 7, a Pisces Moon and high Openness all point to someone who asks why before how. When work feels pointless, you lose energy fast. When it matters, you can go for hours." },
         { heading: "A practice for March", body: "Once a week, do one thing you're good at where nobody can see it. Cook for yourself, write a page, fix something. Your Leo side learns that the warmth is yours even without an audience." },
       ],
       faq: [

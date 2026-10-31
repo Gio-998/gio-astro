@@ -197,7 +197,7 @@ export const play = {
     play: "Play", replay: "Play again", secs: (s: number) => `about ${Math.round(s / 10) * 10} s`,
     resultTitle: "How you actually play", resultEmpty: "Play your first game and your card starts to fill in.",
     playNext: "Play the next game", allDone: "All seven played. This is your full card.",
-    compare: "Compare with someone", compareText: "When someone else plays on your phone (or their own, on a shared profile), the Play lens shows up in your compatibility.",
+    compare: "Compare with someone", compareText: "When someone else plays on your phone (or their own, on a shared profile), your Play result shows up in your compatibility.",
     forOther: (n: string) => `Playing for ${n}`, needProfile: "Create your profile first, so your results have somewhere to live.", start: "Start",
     behaviours: "What we noticed", sayPlay: "What you say vs how you play", sayPlayIntro: "Your questionnaire answers next to what you did in the games.",
     sayPlayNone: "Take the Big Five test and this section shows where your self-image and your play agree or differ.", takeBigFive: "Take the Big Five",

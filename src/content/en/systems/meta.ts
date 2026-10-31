@@ -159,7 +159,7 @@ export const ui = {
   meaning: (m: string) => `Means: ${m}`,
   harmony: "Harmony",
   spark: "Spark",
-  extraTitle: "Extra lenses",
+  extraTitle: "Extra readings",
   extraNote: "Small symbolic layers. They don't change your main score.",
   pair: {
     chironHeal: (a: string, b: string) => `${a}'s Chiron touches ${b}'s personal planets: one of you may press on an old sore spot, and can help heal it.`,

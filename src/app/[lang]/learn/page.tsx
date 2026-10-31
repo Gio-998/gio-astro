@@ -5,7 +5,7 @@ export const generateMetadata = pageMeta("learn");
 function PageEn() {
   return (
     <article className="prose-soft">
-      <PageHero emblem="chart" img="orion" title={<>How it works</>} />
+      <PageHero emblem="chart" img="orion" title={<>Methods and sources</>} />
       <p className="text-sm text-dim">Horoscop is for self-reflection and fun. It is not psychological, medical or financial advice.</p>
       <p><b>Our philosophy:</b> the stars set the scene, psychology explains the pattern, and how you treat each other writes the story. Everything here is a mirror for reflection, never a prophecy or a verdict.</p>
       <h2>What the evidence says</h2>
@@ -36,7 +36,7 @@ function PageEn() {
 function PageMk() {
   return (
     <article className="prose-soft">
-      <PageHero emblem="chart" img="orion" title={<>Како функционира</>} />
+      <PageHero emblem="chart" img="orion" title={<>Методи и извори</>} />
       <p className="text-sm text-dim">Horoscop е за самоспознавање и забава. Не е психолошки, медицински ни финансиски совет.</p>
       <p><b>Нашата филозофија:</b> ѕвездите ја поставуваат сцената, психологијата го објаснува образецот, а начинот на кој се однесувате еден кон друг ја пишува приказната. Сè овде е повод за размислување, никогаш пророштво или пресуда.</p>
       <h2>Што велат доказите</h2>
@@ -66,7 +66,7 @@ function PageMk() {
 function PageDe() {
   return (
     <article className="prose-soft" lang="de">
-      <PageHero emblem="chart" img="orion" title={<>So funktioniert&apos;s</>} />
+      <PageHero emblem="chart" img="orion" title={<>Methoden und Quellen</>} />
       <p className="text-sm text-dim">Horoscop dient der Selbstreflexion und dem Spaß. Es ist keine psychologische, medizinische oder finanzielle Beratung.</p>
       <p><b>Unsere Haltung:</b> Die Sterne bereiten die Bühne, die Psychologie erklärt das Muster, und wie ihr miteinander umgeht, schreibt die Geschichte. Alles hier ist ein Spiegel zum Nachdenken, nie eine Prophezeiung oder ein Urteil.</p>
       <h2>Was die Forschung sagt</h2>

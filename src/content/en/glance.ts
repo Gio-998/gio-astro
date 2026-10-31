@@ -40,6 +40,6 @@ export const glance = {
   explorerHead: { low: "You lean autopilot", mid: "You switch between both", high: "You lean explorer" } as Record<"low" | "mid" | "high", string>,
   // Compatibility
   pairHead: (sp: string, gr: string) => `Strongest together in ${sp.toLowerCase()}. Growing into ${gr.toLowerCase()}.`,
-  pairDetails: "Strengths and growth edges", pairLenses: "Lens by lens",
+  pairDetails: "Strengths and growth edges", pairLenses: "Reading by reading",
 };
 export type Glance = typeof glance;

@@ -140,7 +140,7 @@ export const bondUi: typeof EnBondUi = {
   superTitle: "Eure gemeinsamen Superkräfte",
   edgeTitle: "Eure Wachstumsfelder",
   scores: (h: number, s: number) => `Über alle Blickwinkel hinweg liegt eure Harmonie bei ${h} und euer Funke bei ${s}.`,
-  needQuiz: "Macht mehr Quizze (ihr beide), um dieses Kapitel zu vertiefen.",
+  needQuiz: "Macht mehr Tests (ihr beide), um dieses Kapitel zu vertiefen.",
   vedicLine: (n: number) => `Der traditionelle vedische Abgleich gibt euch ${n} von 36 Punkten.`,
   cardLine: (n: string, t: string) => `Eure gemeinsame Tarotkarte ist ${n}: ${t}`,
 };

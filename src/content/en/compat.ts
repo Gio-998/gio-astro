@@ -32,7 +32,7 @@ export const relTypes: Record<RelType, { name: string; them: string }> = {
 };
 
 export const bands: Record<Band, { name: string; text: string }> = {
-  "kindred-flow": { name: "Kindred Flow", text: "Rare ease across many lenses. Your task: don't take it for granted. Keep choosing each other." },
+  "kindred-flow": { name: "Kindred Flow", text: "Rare ease across many readings. Your task: don't take it for granted. Keep choosing each other." },
   "natural-allies": { name: "Natural Allies", text: "A strong base with clear, workable growth edges. You make each other's lives easier." },
   "complementary-path": { name: "Complementary Path", text: "Your differences complete each other. You'll often see what the other misses." },
   "catalyst-bond": { name: "Catalyst Bond", text: "A high-growth bond. It asks for conscious skills, and rewards you with fast growth." },
@@ -63,16 +63,16 @@ export const themes: Record<Theme, { name: string; plus: string; minus: string; 
 
 export const pairCopy = {
   disclaimer: "A mirror for reflection, not a verdict on your relationship. The stars set the scene, psychology explains the pattern, and how you treat each other writes the story.",
-  scaleNote: "Scores range from 45 to 100: every pairing has something to offer, so our scale starts at 45. 72 is a typical pair. Each lens score is compared with thousands of random pairs.",
+  scaleNote: "Scores range from 45 to 100: every pairing has something to offer, so our scale starts at 45. 72 is a typical pair. Each score is compared with thousands of random pairs.",
   harmony: "Harmony: how easy and natural this feels",
   spark: "Spark: how much energy, challenge and growth there is",
   resonance: "Resonance",
   evidenceOnly: "Research-backed only",
-  evidenceOnlyText: "Based only on the Big Five and attachment lenses, which have real relationship research behind them.",
-  evidenceOnlyMissing: "Both people need to take the Big Five and attachment quizzes to see this score.",
+  evidenceOnlyText: "Based only on the Big Five and attachment tests, which have real relationship research behind them.",
+  evidenceOnlyMissing: "Both people need to take the Big Five and attachment tests to see this score.",
   superpowers: "Your superpowers",
   growthEdges: "Your growth edges",
-  convergence: (n: number, names: string) => `${n} different lens${n === 1 ? "" : "es"} point here: ${names}.`,
-  missing: "Unlock more lenses",
-  missingText: "These lenses need quiz results from both people. Invite them to take the quizzes (or enter their result code).",
+  convergence: (n: number, names: string) => `${n} different reading${n === 1 ? "" : "s"} point here: ${names}.`,
+  missing: "Open more readings",
+  missingText: "These readings need test results from both people. Invite them to take the tests (or enter their result code).",
 };

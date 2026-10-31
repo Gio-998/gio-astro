@@ -6,7 +6,6 @@ import { SITE_URL } from "@/lib/site-url";
 import { pricingAlternates, pricingPath, type PricingLocale } from "@/lib/pricing";
 import { pricingText } from "./text";
 import { PricingPage } from "./PricingPage";
-import { PLAN_PRICES } from "@/lib/pricing";
 import { LdJson, breadcrumb, faqPage, ORG_REF } from "@/lib/schema";
 
 export function pricingMeta(lang: string): Metadata {
@@ -23,8 +22,7 @@ export function pricingMeta(lang: string): Metadata {
 export function PricingRoute({ lang, owner }: { lang: string; owner: PricingLocale }) {
   if (lang !== owner) notFound();
   const T = pricingText(lang); const brand = getContent(lang).site.brand; const url = `${SITE_URL}/${lang}${pricingPath(lang)}`;
-  const offer = (name: string, cents: number, unit: "MON" | "ANN") => ({ "@type": "Offer", name, price: (cents / 100).toFixed(2), priceCurrency: "EUR", url, availability: "https://schema.org/PreOrder", ...(cents ? { priceSpecification: { "@type": "UnitPriceSpecification", price: (cents / 100).toFixed(2), priceCurrency: "EUR", unitCode: unit, referenceQuantity: { "@type": "QuantitativeValue", value: 1, unitCode: unit } } } : {}) });
-  const product = { "@context": "https://schema.org", "@type": "Product", name: `${brand} Plus`, description: T.meta.description, brand: ORG_REF, url,
-    offers: (["free", "plus", "duo"] as const).flatMap((id) => PLAN_PRICES[id].month === 0 ? [offer(T.plans[id].name, 0, "MON")] : [offer(`${T.plans[id].name} (month)`, PLAN_PRICES[id].month, "MON"), offer(`${T.plans[id].name} (year)`, PLAN_PRICES[id].year, "ANN")]) };
-  return <><LdJson data={[product, faqPage(T.faq.items), breadcrumb([[brand, `/${lang}/`], [T.eyebrow, `/${lang}${pricingPath(lang)}`]])]} /><PricingPage /></>;
+  // Only the free offer exists. Planned prices stay out of the schema until something is really on sale.
+  const app = { "@context": "https://schema.org", "@type": "WebApplication", name: brand, url, inLanguage: lang, applicationCategory: "LifestyleApplication", operatingSystem: "Any", description: T.meta.description, publisher: ORG_REF, offers: { "@type": "Offer", name: T.free.name, price: "0", priceCurrency: "EUR", url, availability: "https://schema.org/InStock" } };
+  return <><LdJson data={[app, faqPage(T.faq.items), breadcrumb([[brand, `/${lang}/`], [T.eyebrow, `/${lang}${pricingPath(lang)}`]])]} /><PricingPage /></>;
 }
