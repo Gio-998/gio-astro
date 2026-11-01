@@ -309,6 +309,25 @@ export const quiz: typeof En.quiz = {
   whichMore: "Šta bi ti više značilo?",
 };
 
+export const myProfile: typeof En.myProfile = {
+  guestResults: "Tvoji dosadašnji rezultati. Ostaju na ovom uređaju.",
+  todayCta: "Otvori današnje tumačenje",
+  folds: {
+    personality: "Ličnost",
+    results: (n: number) => (n === 1 ? "1 rezultat testa" : `Rezultati testova: ${n}`),
+    noResults: "Još nema testova",
+    sky: "Tvoje nebo",
+    numbers: "Brojevi i tradicije",
+    energy: "Energija i boje",
+  },
+  testsFor: (name: string) => `Testovi za: ${name}`,
+  people: "Tvoji ljudi",
+  save: "Neobavezno i besplatno. Bez naloga tvoji rezultati ostaju na ovom uređaju.",
+  need: "Dodaj datum rođenja i ova stranica će se sama popuniti. Rezultati testova ostaju kakvi jesu.",
+  orTest: "Radije uradi test",
+  error: { title: "Ova stranica se nije učitala", text: "Tvoji sačuvani rezultati su bezbedni na ovom uređaju. Pokušaj ponovo ili proveri podatke o rođenju.", retry: "Pokušaj ponovo" },
+};
+
 export const tests: typeof En.tests = {
   all: {
     title: "Uradi sve testove",

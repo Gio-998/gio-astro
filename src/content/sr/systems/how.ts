@@ -13,7 +13,7 @@ export const how: typeof En.how = {
     { icon: "✎", title: "Napisali ljudi, izabrali tvoji podaci", text: "Sav tekst pišemo unapred. Tvoji podaci biraju koje ćeš rečenice videti i povezuju ih." },
     { icon: "🏷", title: "Iskrene oznake", text: "Svako tumačenje kaže da li je psihologija potkrepljena istraživanjima, popularna psihologija, stvarna astronomija sa simboličnim značenjem, stara tradicija ili moderna izmišljotina." },
     { icon: "☮", title: "Bez crnih slutnji", text: "Nikad ne kažemo da dvoje ljudi ne idu zajedno, niti da dolazi opasnost. Pokazujemo jake strane, mesta za rast i male stvari koje možete da probate." },
-    { icon: "🔒", title: "Tvoji podaci ostaju tvoji", text: "Računanje se odvija na tvom uređaju. Bez naloga se ništa ne šalje. Sa nalogom se podaci sinhronizuju tek pošto se složiš, a možeš da ih obrišeš kad god hoćeš." },
+    { icon: "🔒", title: "Tvoji podaci ostaju tvoji", text: "Računanje se odvija na tvom uređaju i odgovori ostaju tu. Ako ostaviš ime i email da otvoriš ceo rezultat, čuvamo samo to. Sa nalogom se podaci sinhronizuju tek pošto se složiš, a možeš da ih obrišeš kad god hoćeš." },
   ],
   voiceTitle: "Zašto tumačenje zvuči kao ti",
   voiceText: "Lične rečenice grade se iz tvojih podataka: tvojih položaja, odgovora na testove i tvojih provera. Svaka ima malo dugme „Zašto ovo kažemo“ koje tačno navodi koji su je podaci proizveli. Ako iza rečenice nema podataka, ne prikazujemo je.",
@@ -28,6 +28,7 @@ export const how: typeof En.how = {
   privacyTitle: "Gde se čuvaju tvoji podaci",
   privacy: [
     "Podrazumevano na tvom uređaju: podaci o rođenju, odgovori na testove, ljudi koje dodaješ i beleške u dnevniku stoje u memoriji tvog pregledača.",
+    "Tvoje ime i email otvaraju ceo rezultat testa. Čuvamo samo to dvoje, nikad tvoje odgovore ni rezultate.",
     "Nalog nije obavezan. Sa nalogom se tvoji podaci bezbedno čuvaju u EU radi sinhronizacije, i to tek pošto označiš polja za saglasnost.",
     "Bez reklama, bez reklamnih pratilaca, bez prodaje podataka. Nikad.",
     "Obriši sve kad god hoćeš na stranici Privatnost, ili obriši nalog jednim klikom.",

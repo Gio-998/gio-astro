@@ -40,7 +40,8 @@ describe("previews on the profile screens", () => {
     const c = getContent(l); const p = buildProfile({ ...birth, quiz: {} });
     it(`${l}: a birth date alone gives a headline and a real paragraph`, () => {
       const t = skyTeaser(p, c);
-      expect(t.title).toContain(c.astro.signs[p.sun].name); expect(t.text.length).toBeGreaterThan(25);
+      // Serbian declines the sign after "u" (Vaga, u Vagi), so it compares the stem.
+      expect(t.title).toContain(l === "sr" ? c.astro.signs[p.sun].name.slice(0, 3) : c.astro.signs[p.sun].name); expect(t.text.length).toBeGreaterThan(25);
     });
     it(`${l}: every reading a sheet can open has a preview`, () => {
       for (const k of LENS_KEYS) {
