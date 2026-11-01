@@ -14,7 +14,7 @@ function useTeaser() {
   return (id: TestId, person: StoredPerson) => teaserFor(id, quizViewOf(person), c, G, A);
 }
 
-function TeaserCard({ t }: { t: Teaser }) {
+export function TeaserCard({ t }: { t: Teaser }) {
   const R = useContent().c.ui.tests.result;
   return (
     <div className="card text-center" data-testid="result-teaser">

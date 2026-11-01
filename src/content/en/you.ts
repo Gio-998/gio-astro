@@ -6,7 +6,7 @@ export const you = {
   title: "You, all in one",
   lead: "Everything Horoscop knows about you, on one screen. Tap any piece to open the full reading.",
   empty: "Add your birth data first and this page fills itself in.",
-  start: "Start in 90 seconds",
+  start: "Add your birth date",
   sky: "Your sky",
   sun: "Sun", moon: "Moon", rising: "Rising", risingUnknown: "Needs birth time",
   numbers: "Your numbers",

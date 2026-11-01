@@ -14,7 +14,7 @@ export const site: typeof En = {
     privacy: "Datenschutz", terms: "AGB", promise: "Unser Versprechen", learn: "Methodik", credits: "Danksagungen",
   },
   common: {
-    start: "In 90 Sekunden starten", continue: "Weiter", back: "Zurück", next: "Weiter", save: "Speichern", cancel: "Abbrechen", delete: "Löschen",
+    start: "Geburtsdatum eingeben", continue: "Weiter", back: "Zurück", next: "Weiter", save: "Speichern", cancel: "Abbrechen", delete: "Löschen",
     edit: "Bearbeiten", loading: "Lädt…", share: "Karte teilen", download: "Bild speichern", copy: "Kopieren", copied: "Kopiert!",
     unknownTime: "Ich kenne meine Geburtszeit nicht", optional: "optional", free: "Gratis", locked: "Noch nicht freigeschaltet", unlock: "Freischalten",
     minutes: (n: number) => `${n} Min.`, retake: "Nochmal", you: "Du",

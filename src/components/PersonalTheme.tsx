@@ -16,7 +16,8 @@ export function PersonalTheme() {
     let live = true;
     void import("@/lib/profile").then(({ profileOf }) => {
       if (!live) return;
-      const p = profileOf(me); root.dataset.theme = p.dominantElement; root.style.setProperty("--personal-accent", p.palette[0]);
+      // This sits above every error screen: saved data it cannot read must not take the whole site down with it.
+      try { const p = profileOf(me); root.dataset.theme = p.dominantElement; root.style.setProperty("--personal-accent", p.palette[0]); } catch { delete root.dataset.theme; }
     });
     return () => { live = false; };
   }, [me, mode]);

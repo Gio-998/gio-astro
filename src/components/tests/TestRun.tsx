@@ -78,7 +78,7 @@ export function TestExtras() {
   );
 }
 
-function OneResult({ id, person }: { id: TestId; person: StoredPerson }) {
+export function OneResult({ id, person }: { id: TestId; person: StoredPerson }) {
   const view = quizViewOf(person);
   if (id === "adaptive") return person.quiz.adaptive ? <DeepResultBody r={person.quiz.adaptive} /> : null;
   return isPrecisionQuiz(id) ? <PrecisionResultView id={id} person={person} profile={view} /> : <QuizResultView id={id} profile={view} pid={person.id} />;

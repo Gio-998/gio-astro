@@ -1,10 +1,9 @@
 "use client";
 /** Results of the precision quizzes (28-item four-letter quiz, 50-item Big Five) and the "Sharper results" links. */
 import Link from "next/link";
-import type { Profile } from "@/engine/profile";
 import type { QuizView } from "@/lib/profile";
 import type { StoredPerson } from "@/lib/store";
-import { useContent, useHref } from "@/lib/content-context";
+import { useContent } from "@/lib/content-context";
 import { PRECISION_QUIZ_IDS, PrecisionQuizId, quizDefs } from "@/lib/quiz-defs";
 import { DICHOTOMIES } from "@/engine/fourletter-quiz";
 import { Bar, EvidenceBadge } from "./ui";
@@ -42,19 +41,6 @@ export function FourLetterCard({ profile, pid = "me" }: { profile: QuizView; pid
 export function PrecisionResultView({ id, person, profile }: { id: PrecisionQuizId; person: StoredPerson; profile: QuizView }) {
   if (id === "four-letter") return <FourLetterCard profile={profile} pid={person.id} />;
   return <div><QuizResultView id="big-five" profile={profile} pid={person.id} /><BigFiveSourceNote profile={profile} pid={person.id} /></div>;
-}
-
-/** Links to the two longer quizzes; shows the four-letter card when there is no Big Five card to carry it. */
-export function PrecisionSection({ person, profile }: { person: StoredPerson; profile: Profile }) {
-  const { c } = useContent(); const h = useHref(); const T = c.types; const defs = quizDefs(c);
-  const forQ = person.id === "me" ? "" : `?for=${person.id}`;
-  return (
-    <section className="mt-12" data-testid="precision-section">
-      <div className="mb-4 border-b border-white/10 pb-3"><h2 className="h-display text-3xl"><span className="mr-2 text-gold">✦</span>{T.hub.title}</h2><p className="text-sm text-dim">{T.hub.sub}</p></div>
-      {profile.quiz.fourLetter && !profile.psych && <div className="mb-4"><FourLetterCard profile={profile} pid={person.id} /></div>}
-      <PrecisionLinks forQ={forQ} done={(id) => !!profile.quiz[defs[id].resultKey]} h={h} />
-    </section>
-  );
 }
 
 export function PrecisionLinks({ forQ = "", done, h }: { forQ?: string; done: (id: PrecisionQuizId) => boolean; h: (p: string) => string }) {

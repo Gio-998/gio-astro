@@ -13,7 +13,7 @@ export const how = {
     { icon: "✎", title: "Written by people, picked by your data", text: "All the text is written in advance by us. Your data picks which sentences you see and connects them." },
     { icon: "🏷", title: "Honest labels", text: "Each reading says whether it's research-backed psychology, popular psychology, real astronomy with symbolic meaning, an old tradition, or a modern invention." },
     { icon: "☮", title: "No doom", text: "We never call two people a bad match or say danger is coming. We show strengths, growth edges and small things to try." },
-    { icon: "🔒", title: "Your data stays yours", text: "Calculations run on your device. Without an account nothing is uploaded. With one, it syncs only after you agree, and you can delete it any time." },
+    { icon: "🔒", title: "Your data stays yours", text: "Calculations run on your device, and your answers stay there. If you leave your name and email to open a full result, we keep only those. An account syncs your data only after you agree, and you can delete it any time." },
   ],
   voiceTitle: "Why your reading sounds like you",
   voiceText: "Personal sentences are built from your own data: your placements, your test answers, your check-ins. Each one has a small 'Why we say this' button that lists exactly which data produced it. If a sentence has no data behind it, we don't show it.",
@@ -28,6 +28,7 @@ export const how = {
   privacyTitle: "Where your data lives",
   privacy: [
     "On your device by default: birth data, test answers, people you add and journal entries live in your browser's storage.",
+    "Your name and email open the full result of a test. We keep those two, never your answers or results.",
     "Accounts are optional. With one, your data is stored securely in the EU so it syncs, only after you tick the consent boxes.",
     "No ads, no advertising trackers, no selling of data. Ever.",
     "Delete everything any time on the Privacy page, or delete your account in one click.",

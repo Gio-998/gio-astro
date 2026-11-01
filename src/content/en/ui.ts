@@ -181,7 +181,7 @@ export const match = {
 export const today = {
   personal: "Daily guidance is personal: add your birth date first.",
   titleA: "Today for ",
-  sub: "Your 90-second ritual: the real Moon, your transits, a card, your number and one honest question.",
+  sub: "Your daily ritual: the real Moon, your transits, a card, your number and one honest question.",
   streak: (n: number) => `✦ ${n} ${n === 1 ? "day" : "days"} in a row with the sky`,
   moonIn: (phase: string, sign: string) => `${phase} in ${sign}`,
   lit: (n: number) => `${n}% lit`,
@@ -239,7 +239,7 @@ export const quizHub = {
 export const quickStart = {
   steps: ["Finding the sky over your birthplace…", "Placing the Sun, Moon and planets…", "Reading your Chinese year and element…", "Counting your numbers…", "Drawing your cards…", "Mixing your colour palette…"],
   eyebrowEdit: "Your birth details",
-  eyebrowNew: "Free · 30 seconds · no account needed",
+  eyebrowNew: "Free · no account needed",
   editA: "Edit your ",
   editB: "birth details",
   newA: "Your birth profile ",
@@ -296,10 +296,28 @@ export const quiz = {
   answeringA: "Answering as ",
   answeringB: ". Hand them the phone, because the answers should be theirs.",
   unlocks: (u: string) => `You get: ${u}. You see a short preview right away, and the full result is free.`,
-  metaTitle: (t: string) => `${t} test, with your full result free`,
   begin: "Begin ✦",
   qOf: (i: number, n: number) => `Question ${i} of ${n}`,
   whichMore: "Which would mean more to you?",
+};
+
+export const myProfile = {
+  guestResults: "Your results so far. They stay on this device.",
+  todayCta: "Open today's reading",
+  folds: {
+    personality: "Personality",
+    results: (n: number) => (n === 1 ? "1 test result" : `${n} test results`),
+    noResults: "No tests yet",
+    sky: "Your sky",
+    numbers: "Numbers and traditions",
+    energy: "Energy and colours",
+  },
+  testsFor: (name: string) => `Tests for ${name}`,
+  people: "Your people",
+  save: "Optional and free. Without an account, your results stay on this device.",
+  need: "Add your birth date and this page fills itself in. Your test results stay as they are.",
+  orTest: "Take a test instead",
+  error: { title: "This page did not load", text: "Your saved results are safe on this device. Try again, or check your birth details.", retry: "Try again" },
 };
 
 export const tests = {

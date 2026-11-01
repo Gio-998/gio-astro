@@ -37,7 +37,7 @@ export const quizHub = {
 export const quickStart = {
   steps: ["Der Himmel über deinem Geburtsort wird gesucht…", "Sonne, Mond und Planeten werden platziert…", "Dein chinesisches Jahr und Element werden gelesen…", "Deine Zahlen werden gezählt…", "Deine Karten werden gezogen…", "Deine Farbpalette wird gemischt…"],
   eyebrowEdit: "Deine Geburtsdaten",
-  eyebrowNew: "Gratis · 30 Sekunden · kein Konto nötig",
+  eyebrowNew: "Gratis · ohne Konto",
   editA: "Bearbeite deine ",
   editB: "Geburtsdaten",
   newA: "Dein Geburtsprofil ",
@@ -94,7 +94,7 @@ export const extras = {
   titleB: "ehrlich bepreist",
   sub: "Gerade ist alles in der App gratis. Diese optionalen Extras sind geplant. Preise stehen immer vorher da, mit Kündigung per Klick und echten Erstattungen.",
   notYet: "Noch nicht verfügbar",
-  items: { "pair-pdf": { name: "Ausführlicher Beziehungsreport (PDF)", price: "9 bis 19 € einmalig (geplant)", description: "Eine lange, druckbare Auswertung einer Beziehung aus allen Perspektiven." }, "year-ahead": { name: "Dein Jahr im Voraus", price: "15 € einmalig (geplant)", description: "Themen Monat für Monat aus Transiten, persönlichem Jahr und chinesischem Jahr." }, premium: { name: "Premium-Mitgliedschaft", price: "ca. 5 €/Monat oder 39 €/Jahr (geplant)", description: "Unbegrenzte Paar-Reports, Sync auf allen Geräten, mehr tägliche Impulse. Kündigung per Klick." } } as Record<string, { name: string; price: string; description: string }>,
+  items: { "pair-pdf": { name: "Ausführlicher Beziehungsreport (PDF)", price: "9 bis 19 € einmalig (geplant)", description: "Eine lange, druckbare Auswertung einer Beziehung, Deutung für Deutung." }, "year-ahead": { name: "Dein Jahr im Voraus", price: "15 € einmalig (geplant)", description: "Themen Monat für Monat aus Transiten, persönlichem Jahr und chinesischem Jahr." }, premium: { name: "Premium-Mitgliedschaft", price: "ca. 5 €/Monat oder 39 €/Jahr (geplant)", description: "Unbegrenzte Paar-Reports, Sync auf allen Geräten, mehr tägliche Impulse. Kündigung per Klick." } } as Record<string, { name: string; price: string; description: string }>,
 };
 export const misc = {
   min: (m: number) => `${m} Min.`, unlock: "Freischalten", chartWheel: "Horoskop-Rad",
@@ -349,7 +349,7 @@ export const match = {
 export const today = {
   personal: "Die Tagesimpulse sind persönlich: Ergänze zuerst dein Geburtsdatum.",
   titleA: "Heute für ",
-  sub: "Dein 90-Sekunden-Ritual: der echte Mond, deine Transite, eine Karte, deine Zahl und eine ehrliche Frage.",
+  sub: "Dein tägliches Ritual: der echte Mond, deine Transite, eine Karte, deine Zahl und eine ehrliche Frage.",
   streak: (n: number) => `✦ ${n} ${n === 1 ? "Tag" : "Tage"} in Folge mit dem Himmel`,
   moonIn: (phase: string, sign: string) => `${phase} im Zeichen ${sign}`,
   lit: (n: number) => `${n} % beleuchtet`,
@@ -438,6 +438,25 @@ export const quiz = {
   begin: "Los geht's ✦",
   qOf: (i: number, n: number) => `Frage ${i} von ${n}`,
   whichMore: "Was würde dir mehr bedeuten?",
+};
+
+export const myProfile = {
+  guestResults: "Deine bisherigen Ergebnisse. Sie bleiben auf diesem Gerät.",
+  todayCta: "Heutige Deutung öffnen",
+  folds: {
+    personality: "Persönlichkeit",
+    results: (n: number) => (n === 1 ? "1 Testergebnis" : `${n} Testergebnisse`),
+    noResults: "Noch keine Tests",
+    sky: "Dein Himmel",
+    numbers: "Zahlen und Traditionen",
+    energy: "Energie und Farben",
+  },
+  testsFor: (name: string) => `Tests für ${name}`,
+  people: "Deine Menschen",
+  save: "Freiwillig und gratis. Ohne Konto bleiben deine Ergebnisse auf diesem Gerät.",
+  need: "Gib dein Geburtsdatum ein, dann füllt sich diese Seite von selbst. Deine Testergebnisse bleiben, wie sie sind.",
+  orTest: "Lieber einen Test machen",
+  error: { title: "Diese Seite wurde nicht geladen", text: "Deine gespeicherten Ergebnisse sind auf diesem Gerät sicher. Versuch es noch einmal oder prüf deine Geburtsdaten.", retry: "Noch einmal versuchen" },
 };
 
 export const tests = {

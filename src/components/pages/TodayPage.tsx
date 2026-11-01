@@ -36,6 +36,7 @@ import { MAJOR_ARCANA } from "@/engine/tarot";
 import { SIGN_GLYPH } from "@/engine/zodiac";
 import { YourDay } from "../day/YourDay";
 import { YourDayVoice } from "../systems/YourDayVoice";
+import { NeedBirthDate, ScreenLoading } from "../profile/parts";
 
 export function TodayPage() {
   const s = useStore(); const { c } = useContent(); const h = useHref(); const fmt = useDate();
@@ -47,8 +48,13 @@ export function TodayPage() {
   const entry = s?.journal[localDate];
   const [text, setText] = useState<string | null>(null);
   const streak = useStreak(localDate);
-  if (!s || !now) return <p className="text-dim">{c.site.common.loading}</p>;
-  if (!s.me || !g) return <div className="card mx-auto max-w-lg text-center"><MoonArt angle={120} className="mx-auto mb-4 h-28 w-28 animate-float" /><p className="mb-3">{U.personal}</p><Link className="btn-primary" href={h("/start/")}>{c.site.common.start}</Link></div>;
+  if (!s || !now) return <ScreenLoading />;
+  if (!s.me || !g) return (
+    <div className="space-y-3">
+      <NeedBirthDate title={c.ui.pageMeta.today.title} text={U.personal} art={<MoonArt angle={120} className="mx-auto mb-3 h-24 w-24" />} testId="today-empty" />
+      <p className="text-center"><Link className="inline-flex min-h-[44px] items-center text-sm text-gold underline decoration-dotted underline-offset-4" href={h("/horoscope/")}>{c.site.hero.daily} →</Link></p>
+    </div>
+  );
   const card = c.nums.tarot[MAJOR_ARCANA[g.cardOfDay]];
   const moon = D.moonPhases[g.moon.phase];
   const prompt = D.prompts[g.promptIndex];

@@ -88,7 +88,7 @@ function LeadForm({ source, onDone }: { source: string; onDone: (d: Done) => voi
         {err && <p role="alert" data-testid="lead-error" className="rounded-xl border border-rose/40 bg-rose/10 px-3 py-2 text-sm text-rose">{err}</p>}
         <button className="btn-primary w-full !min-h-[48px]" disabled={busy} data-testid="lead-submit">{busy ? "…" : L.submit}</button>
       </form>
-      <p className="mt-4 text-center text-sm text-dim">{L.haveAccount} <Link className="text-gold underline-offset-4 hover:underline" href={`${h("/account")}?next=${encodeURIComponent(path)}`} data-testid="lead-login">{L.login}</Link></p>
+      <p className="mt-4 text-center text-sm text-dim">{L.haveAccount} <Link className="text-gold underline-offset-4 hover:underline" href={`${h("/account")}?next=${encodeURIComponent(path)}&tab=login`} data-testid="lead-login">{L.login}</Link></p>
     </div>
   );
 }
