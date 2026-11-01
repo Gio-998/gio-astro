@@ -304,7 +304,6 @@ export const quiz: typeof En.quiz = {
   answeringA: "Odgovara: ",
   answeringB: ". Daj toj osobi telefon, jer odgovori treba da budu njeni.",
   unlocks: (u: string) => `Dobijaš: ${u}. Kratak pregled vidiš odmah, a ceo rezultat je besplatan.`,
-  metaTitle: (t: string) => `Test ${t}, ceo rezultat besplatno`,
   begin: "Počni ✦",
   qOf: (i: number, n: number) => `Pitanje ${i} od ${n}`,
   whichMore: "Šta bi ti više značilo?",

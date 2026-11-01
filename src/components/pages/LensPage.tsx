@@ -13,6 +13,9 @@ import { Emblem } from "../art/Emblem";
 import { QuizResultView } from "../ProfileView";
 import { Locked } from "../ui";
 import { cosmos } from "../art/ArtCard";
+import { blockTeaser } from "@/lib/profile-teaser";
+import { ReadingGate } from "../profile/ProfileGate";
+import { NeedBirthDate, ScreenLoading } from "../profile/parts";
 
 export function LensPageView() {
   const s = useStore(); const { c } = useContent(); const h = useHref(); const sp = useSearchParams();
@@ -21,8 +24,8 @@ export function LensPageView() {
   const profile = person ? profileOf(person) : null;
   const page = profile && (LENS_KEYS as readonly string[]).includes(k) ? buildLens(k, profile, c) : null;
   const [theme] = useReadTheme(); usePrintExpand();
-  if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
-  if (!person || !profile || !page) return <p className="text-dim"><Link className="underline" href={h("/start/")}>{c.site.common.start}</Link></p>;
+  if (!s) return <ScreenLoading />;
+  if (!person || !profile || !page) return <NeedBirthDate title={c.lensInfo[k]?.name ?? c.ui.pageMeta.lens.title} testId="lens-empty" />;
   const L = c.lensUi; const defs = quizDefs(c); const isMe = person.id === "me";
   const q = id !== "me" ? `&id=${id}` : "";
   return (
@@ -46,13 +49,14 @@ export function LensPageView() {
         <p className="text-[1.05rem] leading-relaxed text-mist/90">{page.what}</p>
       </div>
 
-      {page.quiz && page.blocks && <div className="mb-6"><QuizResultView id={page.quiz} profile={profile} pid={person.id} /></div>}
-
       {page.blocks ? (
-        <div className="reading-surface">
-          {c.book.langNote && <p className="mb-3 rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm">🌐 {c.book.langNote}</p>}
-          <div className="reading"><Blocks blocks={page.blocks} forId={id} /></div>
-        </div>
+        <ReadingGate teaser={blockTeaser(page.title, page.blocks)}>
+          {page.quiz && <div className="mb-6"><QuizResultView id={page.quiz} profile={profile} pid={person.id} /></div>}
+          <div className="reading-surface">
+            {c.book.langNote && <p className="mb-3 rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm">🌐 {c.book.langNote}</p>}
+            <div className="reading"><Blocks blocks={page.blocks} forId={id} /></div>
+          </div>
+        </ReadingGate>
       ) : page.quiz && (
         <Locked emblem={page.quiz} title={defs[page.quiz].title} text={`${L.notUnlocked} ${defs[page.quiz].tagline}`} href={h(`/quiz/${page.quiz}/${isMe ? "" : `?for=${id}`}`)} minutes={defs[page.quiz].minutes} />
       )}
@@ -62,7 +66,7 @@ export function LensPageView() {
         <Link className="btn-ghost" href={h(isMe ? "/me/" : `/person/?id=${id}`)}>← {L.back}</Link>
       </div>
       <div className="mt-8 flex flex-wrap gap-1.5">
-        {LENS_KEYS.filter((x) => x !== k).map((x) => <Link key={x} href={h(`/lens/?k=${x}${q}`)} className="chip hover:text-gold">{c.lensInfo[x].name}</Link>)}
+        {LENS_KEYS.filter((x) => x !== k).map((x) => <Link key={x} href={h(`/lens/?k=${x}${q}`)} className="chip min-h-[44px] !px-3.5 !text-sm hover:text-gold">{c.lensInfo[x].name}</Link>)}
       </div>
     </div>
   );

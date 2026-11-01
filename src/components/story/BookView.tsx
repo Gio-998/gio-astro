@@ -11,6 +11,8 @@ import { Emblem } from "../art/Emblem";
 import { Reveal } from "../art/Reveal";
 import { cosmos } from "../art/ArtCard";
 import { PremiumGate, useChapterLimit } from "../premium/Gate";
+import { blockTeaser } from "@/lib/profile-teaser";
+import { ReadingGate, useResultsOpen } from "../profile/ProfileGate";
 
 export type ReadTheme = "paper" | "night";
 const themeSubs = new Set<() => void>();
@@ -41,7 +43,10 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
   const { c } = useContent(); const h = useHref(); const B = c.book; const defs = quizDefs(c);
   const [theme, setTheme] = useReadTheme();
   // Premium paywall (only active for admins previewing as free, or once payments go live). A custom title = Bond Story.
-  const limit = useChapterLimit(gate ?? (title ? "bond" : "book"));
+  const kind = gate ?? (title ? "bond" : "book");
+  const limit = useChapterLimit(kind);
+  // Only the Book of You is a result of one person. Until the form is done its chapters are not on the page, so nothing may point at them.
+  const resultsOpen = useResultsOpen(); const locked = kind === "book" && !resultsOpen;
   const [active, setActive] = useState(book.chapters[0]?.id);
   const [tocOpen, setTocOpen] = useState(false);
   usePrintExpand();
@@ -49,7 +54,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
     const els = book.chapters.map((ch) => document.getElementById(`ch-${ch.id}`)).filter(Boolean) as HTMLElement[];
     const io = new IntersectionObserver((es) => { for (const e of es) if (e.isIntersecting) setActive(e.target.id.slice(3)); }, { rootMargin: "-30% 0px -60% 0px" });
     els.forEach((e) => io.observe(e)); return () => io.disconnect();
-  }, [book]);
+  }, [book, locked]);
   const missingAll = useMemo(() => [...new Set(book.chapters.flatMap((x) => x.missing))], [book]);
 
   const chapterEl = (ch: Book["chapters"][number], i: number) => (
@@ -74,6 +79,19 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
     </section>
   );
 
+  const surface = (
+    <div className="reading-surface">
+      {B.langNote && <p className="mx-auto mb-4 max-w-xl rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm print:hidden">🌐 {B.langNote}</p>}
+      {(intro ?? B.intro(name, book.lenses)) && <p className="reading-intro">{intro ?? B.intro(name, book.lenses)}</p>}
+      {book.chapters.map((ch, i) => i < limit ? chapterEl(ch, i) : i === limit ? (
+        <div key={ch.id} style={{ "--gate-fade": theme === "paper" ? "#f4ece2" : "#1b1546" } as React.CSSProperties}>
+          <PremiumGate kind={kind} rest={book.chapters.slice(limit + 1).map((x) => x.title)}>{chapterEl(ch, i)}</PremiumGate>
+        </div>
+      ) : null)}
+      <p className="reading-honest">{B.honest}</p>
+    </div>
+  );
+
   return (
     <div className={`book book-${theme}`}>
       <ReadingProgress />
@@ -92,7 +110,7 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
             <span className="chip text-mist">◷ {B.readingTime(book.minutes)}</span>
           </div>
           <div className="no-print mt-6 flex flex-wrap justify-center gap-2">
-            <button className="btn-primary" onClick={() => window.print()}>⎙ {B.print}</button>
+            {!locked && <button className="btn-primary" onClick={() => window.print()}>⎙ {B.print}</button>}
             <button className="btn-ghost" onClick={() => setTheme(theme === "paper" ? "night" : "paper")}>{theme === "paper" ? "☾" : "☀"} {theme === "paper" ? B.themeNight : B.themePaper}</button>
           </div>
         </div>
@@ -103,7 +121,9 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
         <p className="eyebrow mb-3">{B.toc}</p>
         <ol className="grid gap-1 sm:grid-cols-2">
           {book.chapters.map((ch, i) => (
-            <li key={ch.id}><a href={`#ch-${ch.id}`} className={`toc-link ${active === ch.id ? "toc-active" : ""}`}><span className="toc-num">{String(i + 1).padStart(2, "0")}</span><span>{ch.title}</span>{(ch.locked || i >= limit) && <span className="ml-auto text-xs opacity-70">🔒</span>}</a></li>
+            <li key={ch.id}>{locked
+              ? <span className="toc-link"><span className="toc-num">{String(i + 1).padStart(2, "0")}</span><span>{ch.title}</span></span>
+              : <a href={`#ch-${ch.id}`} className={`toc-link ${active === ch.id ? "toc-active" : ""}`}><span className="toc-num">{String(i + 1).padStart(2, "0")}</span><span>{ch.title}</span>{(ch.locked || i >= limit) && <span className="ml-auto text-xs opacity-70">🔒</span>}</a>}</li>
           ))}
         </ol>
         {missingAll.length > 0 && (
@@ -111,24 +131,15 @@ export function BookView({ book, name, forId, eyebrow, title, subtitle, intro, g
         )}
       </nav>
 
-      <div className="reading-surface">
-        {B.langNote && <p className="mx-auto mb-4 max-w-xl rounded-xl border border-gold/30 bg-gold/10 px-4 py-2 text-sm print:hidden">🌐 {B.langNote}</p>}
-        {(intro ?? B.intro(name, book.lenses)) && <p className="reading-intro">{intro ?? B.intro(name, book.lenses)}</p>}
-        {book.chapters.map((ch, i) => i < limit ? chapterEl(ch, i) : i === limit ? (
-          <div key={ch.id} style={{ "--gate-fade": theme === "paper" ? "#f4ece2" : "#1b1546" } as React.CSSProperties}>
-            <PremiumGate kind={gate ?? (title ? "bond" : "book")} rest={book.chapters.slice(limit + 1).map((x) => x.title)}>{chapterEl(ch, i)}</PremiumGate>
-          </div>
-        ) : null)}
-        <p className="reading-honest">{B.honest}</p>
-      </div>
+      {kind === "book" ? <ReadingGate teaser={book.chapters[0] ? blockTeaser(book.chapters[0].title, book.chapters[0].blocks) : null}>{surface}</ReadingGate> : surface}
 
       {/* Chapter dots on the right edge */}
-      <nav className="no-print fixed right-1.5 top-1/2 z-30 flex -translate-y-1/2 flex-col gap-1.5" aria-hidden>
+      {!locked && <nav className="no-print fixed right-1.5 top-1/2 z-30 flex -translate-y-1/2 flex-col gap-1.5" aria-hidden>
         {book.chapters.map((ch) => <a key={ch.id} href={`#ch-${ch.id}`} tabIndex={-1} className={`block h-1.5 w-1.5 rounded-full transition-all ${active === ch.id ? "h-4 bg-gold" : "bg-white/30"}`} />)}
-      </nav>
+      </nav>}
       <ShareLine />
       {/* Contents as a bottom sheet */}
-      <button className="no-print fixed bottom-24 right-4 z-40 min-h-[44px] rounded-full border border-white/20 bg-ink/90 px-4 text-sm text-mist shadow-xl backdrop-blur md:bottom-6" onClick={() => setTocOpen(true)} aria-expanded={tocOpen} data-testid="toc-open">☰ {B.toc}</button>
+      {!locked && <button className="no-print fixed bottom-24 right-4 z-40 min-h-[44px] rounded-full border border-white/20 bg-ink/90 px-4 text-sm text-mist shadow-xl backdrop-blur md:bottom-6" onClick={() => setTocOpen(true)} aria-expanded={tocOpen} data-testid="toc-open">☰ {B.toc}</button>}
       {tocOpen && (
         <div className="no-print fixed inset-0 z-[70]" role="dialog" aria-modal="true" aria-label={B.toc}>
           <button className="absolute inset-0 bg-black/50 backdrop-blur-sm" aria-label={c.sky.reader.close} onClick={() => setTocOpen(false)} />

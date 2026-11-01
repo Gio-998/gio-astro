@@ -14,7 +14,7 @@ import { Emblem, type EmblemId } from "../art/Emblem";
 
 export const useNav = () => ({ en, mk, de, sr })[useContent().locale] ?? en;
 /** Someone who has been here before: a saved profile on this device, or a signed-in account. */
-export function useReturning() { const s = useStore(); const a = useAccount(); return !!s?.me || !!a.user; }
+export function useReturning() { const s = useStore(); const a = useAccount(); return !!s?.me || !!s?.guest || !!a.user; }
 
 type Item = { href: string; icon: EmblemId; title: string; desc: string };
 type Group = { key: NavGroupKey; label: string; href: string; icon: EmblemId; items: Item[]; also?: string[] };

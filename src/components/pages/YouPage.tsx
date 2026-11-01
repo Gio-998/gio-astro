@@ -10,21 +10,17 @@ import { rarity, bigNumber } from "@/engine/rarity";
 import { MAJOR_ARCANA } from "@/engine/tarot";
 import { useSystems } from "../systems/useSystems";
 import { SystemSheet } from "../systems/SystemSheet";
+import { ProfileGate } from "../profile/ProfileGate";
+import { NeedBirthDate, ScreenLoading } from "../profile/parts";
 import type { SysCard, SysCardKey } from "@/story/systems";
 import type { StoredPerson } from "@/lib/store";
 import type { Profile } from "@/engine/profile";
 
 /** "You, all in one": every lens as one glanceable picture, plus the rarity score. Phone first, no tables. */
 export function YouPage() {
-  const s = useStore(); const { c } = useContent(); const h = useHref(); const Y = c.you;
-  if (!s) return <p className="text-dim">{c.site.common.loading}</p>;
-  if (!s.me) return (
-    <div className="card text-center" data-testid="you-empty">
-      <h1 className="h-display mb-2 text-4xl text-balance"><span className="text-aurora">{Y.title}</span></h1>
-      <p className="mb-4 text-dim">{Y.empty}</p>
-      <Link className="btn-primary" href={h("/start/")}>{Y.start}</Link>
-    </div>
-  );
+  const s = useStore(); const { c } = useContent(); const Y = c.you;
+  if (!s) return <ScreenLoading />;
+  if (!s.me) return <NeedBirthDate title={Y.title} text={Y.empty} emblem="eye" testId="you-empty" />;
   return <YouView person={s.me} profile={profileOf(s.me)} />;
 }
 
@@ -65,7 +61,8 @@ function YouView({ person, profile: p }: { person: StoredPerson; profile: Profil
         </p>
       </header>
 
-      <section className="mt-6 rounded-[28px] border border-gold/30 bg-gold/[0.06] p-5 sm:p-7" data-testid="rarity">
+      <div className="mt-6"><ProfileGate person={person} profile={p}>
+      <section className="rounded-[28px] border border-gold/30 bg-gold/[0.06] p-5 sm:p-7" data-testid="rarity">
         <p className="eyebrow">{Y.rarityTitle}</p>
         <p className="mt-1 text-sm text-dim">{Y.rarityLead}</p>
         <p className="h-display mt-3 text-4xl leading-none text-gold sm:text-5xl"><span className="text-2xl text-mist">{Y.oneIn} </span>{bigNumber(r.oneIn, locale)}</p>
@@ -105,8 +102,9 @@ function YouView({ person, profile: p }: { person: StoredPerson; profile: Profil
         )}
       </section>
 
-      <p className="mt-8 text-center"><Link className="btn-primary" href={h("/me/")}>{Y.allDetails}</Link></p>
       <SystemSheet card={open} onClose={close} />
+      </ProfileGate></div>
+      <p className="mt-8 text-center"><Link className="btn-primary !min-h-[48px]" href={h("/me/")}>{Y.allDetails}</Link></p>
     </article>
   );
 }

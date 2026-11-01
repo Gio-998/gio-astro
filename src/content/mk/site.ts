@@ -14,7 +14,7 @@ export const site: typeof En = {
     privacy: "Приватност", terms: "Услови", promise: "Нашето ветување", learn: "Методологија", credits: "Заслуги",
   },
   common: {
-    start: "Започни, трае минута и пол", continue: "Продолжи", back: "Назад", next: "Следно", save: "Зачувај", cancel: "Откажи", delete: "Избриши",
+    start: "Додај датум на раѓање", continue: "Продолжи", back: "Назад", next: "Следно", save: "Зачувај", cancel: "Откажи", delete: "Избриши",
     edit: "Уреди", loading: "Се вчитува…", share: "Сподели картичка", download: "Преземи слика", copy: "Копирај", copied: "Копирано!",
     unknownTime: "Не го знам часот на раѓање", optional: "незадолжително", free: "Бесплатно", locked: "Сè уште не е отклучено", unlock: "Отклучи",
     minutes: (n: number) => `${n} мин`, retake: "Повтори", you: "Ти",

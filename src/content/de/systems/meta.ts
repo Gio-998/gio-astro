@@ -159,8 +159,8 @@ export const ui: typeof En.ui = {
   meaning: (m: string) => `Bedeutet: ${m}`,
   harmony: "Harmonie",
   spark: "Funke",
-  extraTitle: "Zusätzliche Blickwinkel",
-  extraNote: "Kleine symbolische Ebenen. Sie verändern deinen Hauptwert nicht.",
+  extraTitle: "Zusätzliche Deutungen",
+  extraNote: "Kleine symbolische Extras. Sie verändern deinen Hauptwert nicht.",
   pair: {
     chironHeal: (a: string, b: string) => `Chiron von ${a} berührt persönliche Planeten von ${b}: Einer von euch drückt vielleicht auf einen alten wunden Punkt und kann helfen, ihn zu heilen.`,
     nodeMeet: (a: string, b: string) => `Der nördliche Mondknoten von ${a} trifft das Horoskop von ${b}: Ihr zieht euch vielleicht gegenseitig zum Wachstum.`,
