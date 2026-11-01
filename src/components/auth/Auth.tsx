@@ -11,7 +11,7 @@ import { useStore } from "@/lib/store";
 import { useContent, useHref, useDate } from "@/lib/content-context";
 import { PageHero } from "../ui";
 import { CodeInput } from "./CodeInput";
-import { Check } from "../controls";
+import { Check } from "../check";
 import { useCaptcha } from "./Captcha";
 import { errKey } from "./errors";
 

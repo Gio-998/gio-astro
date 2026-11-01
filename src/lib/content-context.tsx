@@ -1,12 +1,17 @@
 "use client";
 import { localizedPath } from "./i18n-routes";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useMemo } from "react";
+import { usePathname } from "next/navigation";
 import { contents, Content, Locale } from "@/content";
+import { prepareContent } from "./content-lazy";
 import { formatDate, localIso } from "./dates";
 
 const Ctx = createContext<{ locale: Locale; c: Content }>({ locale: "en", c: contents.en });
 export function ContentProvider({ locale, children }: { locale: Locale; children: React.ReactNode }) {
-  return <Ctx.Provider value={{ locale, c: contents[locale] }}>{children}</Ctx.Provider>;
+  const path = usePathname() ?? "";
+  if (typeof window !== "undefined") prepareContent(locale, path);
+  const value = useMemo(() => ({ locale, c: contents[locale] }), [locale]);
+  return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
 export const useContent = () => useContext(Ctx);
 /** Human date formatter bound to the current locale: fmt("1995-10-12") → "12 October 1995". */

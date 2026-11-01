@@ -379,3 +379,11 @@ p, li, figcaption, blockquote { text-wrap: pretty; overflow-wrap: break-word; }
 html, body { overflow-x: clip; }
 
 :lang(de) h1, :lang(de) h2, :lang(de) h3, :lang(de) p, :lang(de) li { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
+
+/* Page-change fade (app/[lang]/template.tsx). Never on the first page of a visit, so text is visible before hydration. */
+@keyframes page-enter { from { opacity: 0; transform: translateY(14px) } to { opacity: 1; transform: none } }
+.page-enter { animation: page-enter .55s cubic-bezier(.2, .7, .2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .page-enter { animation: none; } }
+
+/* The landing page's "sky now" placeholder is one element that turns into the real grid after hydration. As its own compositing layer, Chrome scored that as the whole screen moving (CLS .9). */
+.card.animate-pulse { animation: none; backdrop-filter: none; }

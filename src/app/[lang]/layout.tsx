@@ -4,10 +4,10 @@ import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { Cormorant_Garamond, Inter, Unbounded } from "next/font/google";
 import { LivingSky } from "@/components/sky/LivingSky";
-import { SvgDefs } from "@/components/art/SvgDefs";
+import { PageSprite } from "@/components/art/SvgDefs";
 import "../globals.css";
 import { LOCALES, isLocale, getContent } from "@/content";
-import { ContentProvider } from "@/lib/content-context";
+import { LocaleContent } from "@/lib/shell";
 import { Header, Footer } from "@/components/Chrome";
 import { RouteScrollTop } from "@/components/RouteScrollTop";
 import { SITE_URL } from "@/lib/site-url";
@@ -18,10 +18,12 @@ import { AccountBoot } from "@/components/auth/Auth";
 import { BetaGate } from "@/components/auth/Beta";
 import { FeedbackButton, UsageBoot } from "@/components/admin/Feedback";
 
-const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant" });
+// `subsets` only picks what gets preloaded; every subset stays in the CSS and unicode-range fetches what a page shows, with display: swap meanwhile. Preloading all of them was 12 files and 560 KB on every page,
+// so only the body face's Latin file is preloaded: it is the text of the largest paint on a reading page, in every language.
+const display = Cormorant_Garamond({ subsets: ["latin", "latin-ext", "cyrillic"], weight: ["400", "500", "600", "700"], style: ["normal", "italic"], variable: "--font-cormorant", preload: false });
 // Unbounded: variable, Cyrillic-capable display face for caps, numerals and kinetic headlines (Cinzel had no Cyrillic).
-const caps = Unbounded({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-unbounded", display: "swap" });
-const sans = Inter({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-inter" });
+const caps = Unbounded({ subsets: ["latin", "latin-ext", "cyrillic"], variable: "--font-unbounded", display: "swap", preload: false });
+const sans = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const dynamicParams = false;
 export function generateStaticParams() { return LOCALES.map((lang) => ({ lang })); }
@@ -58,8 +60,8 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
       <body className="font-sans antialiased">
         <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}"}</style></noscript>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteLd) }} />
-        <SvgDefs />
-        <ContentProvider locale={lang}>
+        <PageSprite />
+        <LocaleContent locale={lang}>
           <LivingSky />
           <PersonalTheme />
           <AccountBoot />
@@ -70,7 +72,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate><ExportPdf /></main>
           <Footer />
           <FeedbackButton />
-        </ContentProvider>
+        </LocaleContent>
       </body>
     </html>
   );
