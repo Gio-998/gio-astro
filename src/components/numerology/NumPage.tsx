@@ -9,7 +9,8 @@ import { LOCALE_META } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
 import { breadcrumb, faqPage, LdJson, abs, ORG_REF } from "@/lib/schema";
 import { Calculator, type CalcLabels } from "./Calculator";
-import { DuoCalc, NameReport } from "./Personal";
+import { DuoCalc, NameReport } from "./PersonalLazy";
+import { DayLink } from "../DayLink";
 import { SectionWidget } from "@/components/sections/Widget";
 import { CONTENT_DATES, SITE_LAUNCH } from "@/lib/content-dates";
 import { moonPath } from "@/components/horoscope/art";
@@ -62,7 +63,7 @@ function Items({ items, cols = "sm:grid-cols-2 lg:grid-cols-3" }: { items: LinkI
 function Cell({ c }: { c: TableCell }) {
   if (typeof c === "string") return c;
   const disc = c.moon !== undefined && <svg viewBox="0 0 32 32" className="mr-1.5 inline-block h-[18px] w-[18px] align-[-4px]" aria-hidden><circle cx="16" cy="16" r="14" fill="#1b1640" stroke="#e9c78a" strokeOpacity=".5" /><path d={moonPath(c.moon, 16, 16, 12)} fill="#f6ecd2" /></svg>;
-  return c.href ? <Link href={c.href} className="text-gold underline decoration-gold/30 underline-offset-2 hover:decoration-gold">{disc}{c.text}</Link> : <>{disc}{c.text}</>;
+  return c.href ? <DayLink href={c.href} className="text-gold underline decoration-gold/30 underline-offset-2 hover:decoration-gold">{disc}{c.text}</DayLink> : <>{disc}{c.text}</>;
 }
 function DataTable({ t }: { t: BlockTable }) {
   const td = "py-2 pr-3 align-top last:pr-0";

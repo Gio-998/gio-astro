@@ -2,6 +2,8 @@
 import { SITE_URL } from "./site-url";
 
 export const ORG_REF = { "@id": `${SITE_URL}/#organization` };
+/** The same Organization as the layout's node, for fields where Google wants a name on the spot (author). */
+export const orgAuthor = (name: string) => ({ "@type": "Organization", ...ORG_REF, name, url: `${SITE_URL}/` });
 export const CONTACT_EMAIL = "contact@horoscop.si";
 export const abs = (p: string) => (p.startsWith("http") ? p : `${SITE_URL}${p}`);
 /** BreadcrumbList from [name, path] pairs (first = home). */
