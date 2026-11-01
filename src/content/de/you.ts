@@ -6,7 +6,7 @@ export const you: typeof EnYou = {
   title: "Du, alles auf einen Blick",
   lead: "Alles, was Horoscop über dich weiß, auf einem Bildschirm. Tippe auf ein Teil, um die ganze Deutung zu öffnen.",
   empty: "Ergänze zuerst deine Geburtsdaten, dann füllt sich diese Seite von selbst.",
-  start: "In 90 Sekunden starten",
+  start: "Geburtsdatum eingeben",
   sky: "Dein Himmel",
   sun: "Sonne", moon: "Mond", rising: "Aszendent", risingUnknown: "Braucht Geburtszeit",
   numbers: "Deine Zahlen",

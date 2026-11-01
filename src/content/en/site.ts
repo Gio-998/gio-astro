@@ -13,7 +13,7 @@ export const site = {
     privacy: "Privacy", terms: "Terms", promise: "Our promise", learn: "Methodology", credits: "Credits",
   },
   common: {
-    start: "Start in 90 seconds", continue: "Continue", back: "Back", next: "Next", save: "Save", cancel: "Cancel", delete: "Delete",
+    start: "Add your birth date", continue: "Continue", back: "Back", next: "Next", save: "Save", cancel: "Cancel", delete: "Delete",
     edit: "Edit", loading: "Loading…", share: "Share card", download: "Download image", copy: "Copy", copied: "Copied!",
     unknownTime: "I don't know my birth time", optional: "optional", free: "Free", locked: "Not unlocked yet", unlock: "Unlock",
     minutes: (n: number) => `${n} min`, retake: "Retake", you: "You",

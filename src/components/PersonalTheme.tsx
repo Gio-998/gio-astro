@@ -8,8 +8,9 @@ import { useContent } from "@/lib/content-context";
 export function PersonalTheme() {
   const s = useStore();
   const me = s?.me ?? null; const mode = s?.settings.theme ?? "personal";
-  const el = me && mode === "personal" ? profileOf(me).dominantElement : null;
-  const accent = me && mode === "personal" ? profileOf(me).palette[0] : null;
+  // The theme sits in the layout, above every error screen: saved data it cannot read must not take the whole site down with it.
+  let theme = null; try { theme = me && mode === "personal" ? profileOf(me) : null; } catch { /* the page's own error screen explains it */ }
+  const el = theme?.dominantElement ?? null; const accent = theme?.palette[0] ?? null;
   useEffect(() => {
     const root = document.documentElement;
     if (el) { root.dataset.theme = el; root.style.setProperty("--personal-accent", accent!); }

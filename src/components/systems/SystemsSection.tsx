@@ -13,7 +13,7 @@ import { useSystems } from "./useSystems";
 import { ANIMAL_GLYPH } from "@/engine/chinese";
 
 /** "Every sky, every calendar": the extra systems, ordered by the cultural lens rule, phone-first cards + sheets. */
-export function SystemsSection({ person, profile }: { person: StoredPerson; profile: Profile; isMe?: boolean }) {
+export function SystemsSection({ person, profile, embedded }: { person: StoredPerson; profile: Profile; isMe?: boolean; embedded?: boolean }) {
   const { c, locale } = useContent(); const h = useHref(); const U = c.systems.ui; const openLens = useLensSheet();
   const { culture, cards } = useSystems(person, profile);
   const [open, setOpen] = useState<SysCard | null>(null);
@@ -37,9 +37,9 @@ export function SystemsSection({ person, profile }: { person: StoredPerson; prof
     );
   };
   return (
-    <section className="mt-12" data-testid="systems-section" id="systems">
-      <div className="mb-3 border-b border-white/10 pb-3">
-        <h2 className="h-display text-3xl"><span className="mr-2 text-gold">✦</span>{U.sectionTitle}</h2>
+    <section className={embedded ? "mt-6" : "mt-12"} data-testid="systems-section" id="systems">
+      <div className={embedded ? "mb-3" : "mb-3 border-b border-white/10 pb-3"}>
+        {embedded ? <h3 className="font-display text-xl text-gold">{U.sectionTitle}</h3> : <h2 className="h-display text-3xl"><span className="mr-2 text-gold">✦</span>{U.sectionTitle}</h2>}
         <p className="mt-1 text-sm text-dim">{U.sectionLead}</p>
       </div>
       {suggestMk({ birthTz: person.place?.tz, locale, browserLangs: typeof navigator !== "undefined" ? navigator.languages : [] }) && (

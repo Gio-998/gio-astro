@@ -12,6 +12,9 @@ import { Blocks } from "./story/Blocks";
 import { SignArt } from "./art/SignArt";
 import { Emblem } from "./art/Emblem";
 import { HoloCard } from "./reveal/HoloCard";
+import { blockTeaser } from "@/lib/profile-teaser";
+import { PROFILE_SOURCE } from "./profile/ProfileGate";
+import { LeadGate } from "./lead/LeadGate";
 
 /** Opens the inline explainer for a lens badge. Provided by ProfileView; falls back to a no-op. */
 export const LensSheetCtx = createContext<(k: string) => void>(() => {});
@@ -22,6 +25,7 @@ const PREVIEW = 2; // blocks shown before "Read more"
 /**
  * Inline explainer for one badge: a bottom sheet on phones, a centred card on wider screens.
  * Plain-words meaning + what it says about this person; "Read more" expands the full reading in place.
+ * What it says about this person sits behind the lead form. The page hides its own form while a sheet is open, so only one shows at a time.
  * The standalone /lens page stays reachable as a secondary link.
  */
 export function LensSheet({ k, profile, personId, personName, onClose }: { k: string | null; profile: Profile; personId?: string; personName?: string; onClose: () => void }) {
@@ -68,10 +72,12 @@ export function LensSheet({ k, profile, personId, personName, onClose }: { k: st
               {page.blocks ? (
                 <>
                   <p className="eyebrow mb-1.5">✦ {personId && personName ? L.forYou(personName) : L.forYouMe}</p>
-                  <div className="night-surface rounded-2xl px-4 py-3"><div className="reading"><Blocks blocks={more ? page.blocks : page.blocks.slice(0, PREVIEW)} forId={personId} /></div></div>
-                  {page.blocks.length > PREVIEW && (
-                    <button className="btn-primary mt-4 w-full sm:w-auto" aria-expanded={more} onClick={() => setMore((m) => !m)}>{more ? `▴ ${L.showLess}` : `▾ ${L.readMore}`}</button>
-                  )}
+                  <LeadGate source={PROFILE_SOURCE} preview={<div className="night-surface rounded-2xl px-4 py-3" data-testid="lens-teaser"><div className="reading"><p className="lead">{blockTeaser(page.title, page.blocks)?.text}</p></div></div>}>
+                    <div className="night-surface rounded-2xl px-4 py-3"><div className="reading"><Blocks blocks={more ? page.blocks : page.blocks.slice(0, PREVIEW)} forId={personId} /></div></div>
+                    {page.blocks.length > PREVIEW && (
+                      <button className="btn-primary mt-4 w-full sm:w-auto" aria-expanded={more} onClick={() => setMore((m) => !m)}>{more ? `▴ ${L.showLess}` : `▾ ${L.readMore}`}</button>
+                    )}
+                  </LeadGate>
                 </>
               ) : page.quiz ? (
                 <Link className="card card-hover block border-dashed !border-gold/30" href={h(`/quiz/${page.quiz}/${personId ? `?for=${personId}` : ""}`)}>

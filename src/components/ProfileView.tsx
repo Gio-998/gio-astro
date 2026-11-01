@@ -2,41 +2,58 @@
 import Link from "next/link";
 import type { Profile } from "@/engine/profile";
 import type { QuizView } from "@/lib/profile";
+import { quizViewOf } from "@/lib/profile";
 import { useContent, useHref, useDate } from "@/lib/content-context";
-import { Bar, Dial, EvidenceBadge, Locked, Palette, Section } from "./ui";
+import { Bar, Dial, EvidenceBadge, Palette } from "./ui";
 import { SIGN_GLYPH, formatDegree, SIGN_ELEMENT } from "@/engine/zodiac";
 import { ANIMAL_GLYPH, ANIMAL_HANZI, WUXING } from "@/engine/chinese";
 import { MAJOR_ARCANA } from "@/engine/tarot";
 import { TRAITS } from "@/engine/bigfive";
-import { UnifiedGlance } from "./adaptive/UnifiedGlance";
+import { UnifiedGlance, UnifiedSignal } from "./adaptive/UnifiedGlance";
+import { useAdaptive } from "./adaptive/text";
 import { CARE } from "@/engine/quizzes";
 import { AXES } from "@/engine/shadow";
-import { quizDefs, QUIZ_IDS, QuizId } from "@/lib/quiz-defs";
+import type { QuizId } from "@/lib/quiz-defs";
 import type { StoredPerson } from "@/lib/store";
 import { encodeProfileCode } from "@/lib/store";
+import { RESULT_KEY, TEST_RUN, testPath, type TestId } from "@/lib/test-run";
+import { teaserFor } from "@/lib/test-teaser";
+import { profileSummary } from "@/story/voice";
 import { Aura } from "./aura/Aura";
 import { auraOf } from "@/lib/aura";
 import { ShareButton } from "./ShareButton";
 import { ThemeToggle } from "./PersonalTheme";
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { SignArt } from "./art/SignArt";
-import { Celebration } from "./art/Celebration";
-import { cosmos } from "./art/ArtCard";
+import { Emblem, type EmblemId } from "./art/Emblem";
+import { emblemOf } from "./art/precisionArt";
 import { LensSheet, LensSheetCtx, useLensSheet } from "./LensSheet";
 import { BigFiveShape } from "./glance/BigFiveShape";
 import { MethodLink } from "./nav/Trust";
 import { Expand, GlanceHead } from "./glance/Expand";
 import { useGlance } from "./glance/text";
 import { FitCheck, BigFiveSourceNote } from "./FitCheck";
-import { PrecisionSection } from "./PrecisionResult";
-import { VoiceSummary } from "./systems/VoiceSummary";
+import { VoiceLines } from "./systems/VoiceLines";
 import { SystemsSection } from "./systems/SystemsSection";
-import { ResultsGate } from "./tests/ResultGate";
+import { useSystems } from "./systems/useSystems";
+import { OneResult, useRunInfo } from "./tests/TestRun";
+import { TestsPanel } from "./tests/TestsPanel";
+import { TeaserCard } from "./tests/ResultGate";
+import { ProfileGate, useProfileTeaser, useResultsOpen } from "./profile/ProfileGate";
+import { Fold, Part, SaveAcrossDevices, TodayCard } from "./profile/parts";
 
-const QUIZ_LENS: Record<QuizId, string> = { "big-five": "bigfive", attachment: "attachment", nine: "nine", care: "care", shadow: "shadow", dosha: "dosha", explorer: "explorer" };
-function MoreLink({ k }: { k: string; pid?: string }) {
-  const { c } = useContent(); const open = useLensSheet();
-  return <button type="button" onClick={() => open(k)} className="mt-2 inline-block text-left text-sm text-gold underline decoration-dotted underline-offset-4">{c.lensUi.fullMeaning}: {c.lensInfo[k].name} ↓</button>;
+/** The readings behind each finished test, opened as sheets from its result. */
+const TEST_LENSES: Partial<Record<TestId, string[]>> = { "big-five": ["bigfive", "fourletter", "temperament"], "big-five-long": ["bigfive"], "four-letter": ["fourletter"], attachment: ["attachment"], nine: ["nine"], care: ["care"], shadow: ["shadow"], dosha: ["dosha"], explorer: ["explorer"] };
+const TAP = "inline-flex min-h-[44px] items-center gap-1 text-left";
+/** The full meanings behind a card, as one quiet row of chips that open in a sheet. */
+function MoreLinks({ keys }: { keys: string[] }) {
+  const { c } = useContent(); const open = useLensSheet(); const L = c.lensUi.fullMeaning;
+  return (
+    <div className="mt-3">
+      <p className="mb-1.5 text-xs text-dim">{L}</p>
+      <div className="flex flex-wrap gap-2">{keys.map((k) => <button key={k} type="button" aria-haspopup="dialog" aria-label={`${L}: ${c.lensInfo[k].name}`} onClick={() => open(k)} className="chip min-h-[44px] !px-4 !text-sm text-mist transition hover:border-gold/60 hover:text-gold">{c.lensInfo[k].name}</button>)}</div>
+    </div>
+  );
 }
 
 const CARE_ICON: Record<string, string> = { words: "💬", time: "⏳", gifts: "🎁", help: "🤝", touch: "🫂" };
@@ -232,19 +249,267 @@ export function QuizResultView({ id, profile, pid = "me" }: { id: QuizId; profil
   return null;
 }
 
-export function ProfileView({ person, profile, isMe }: { person: StoredPerson; profile: Profile; isMe: boolean }) {
-  const { c } = useContent(); const h = useHref(); const fmt = useDate();
-  const A = c.astro; const defs = quizDefs(c); const U = c.ui.profile;
-  const ch = profile.chinese; const n = profile.numbers;
-  const quizFor = (id: QuizId) => h(`/quiz/${id}/${isMe ? "" : `?for=${person.id}`}`);
-  const unlocked = QUIZ_IDS.filter((id) => profile.quiz[defs[id].resultKey]);
-  const lensCount = 9 + unlocked.length + (unlocked.includes("big-five") ? 2 : 0);
-  const fl = profile.psych?.fourLetter;
-  const cards = profile.tarot.cards.map((k) => c.nums.tarot[MAJOR_ARCANA[k === 22 ? 0 : k]]);
-  const [codeShown, setCodeShown] = useState(false);
-  const [sheet, setSheet] = useState<string | null>(null);
-  const closeSheet = useCallback(() => setSheet(null), [setSheet]);
+type ViewProps = { person: StoredPerson; profile: Profile; isMe: boolean };
 
+/** Every finished test as one row: the headline shows, the full result opens in place. Lens links need a birth date. */
+export function TestResults({ person, isMe, lenses }: { person: StoredPerson; isMe: boolean; lenses: boolean }) {
+  const { c } = useContent(); const h = useHref(); const G = useGlance(); const A = useAdaptive(); const info = useRunInfo();
+  const view = quizViewOf(person); const qs = isMe ? "" : `?for=${person.id}`;
+  return (
+    <div className="space-y-2" data-testid="me-results">
+      {TEST_RUN.filter((id) => person.quiz[RESULT_KEY[id]]).map((id) => (
+        <Fold key={id} small title={info.of(id).title} hint={teaserFor(id, view, c, G, A)?.title} emblem={id === "adaptive" ? "big-five" : emblemOf(id)} testId={`me-result-${id}`}>
+          <OneResult id={id} person={person} />
+          {lenses && TEST_LENSES[id] && <div className="px-1"><MoreLinks keys={TEST_LENSES[id]} /></div>}
+          <div className="mt-1 flex flex-wrap items-center gap-x-4 px-1">
+            <MethodLink className="!mt-0 min-h-[44px]" />
+            <Link className={`${TAP} text-xs text-dim underline`} href={h(`${testPath(id)}${qs}`)}>{c.site.common.retake}</Link>
+          </div>
+        </Fold>
+      ))}
+    </div>
+  );
+}
+
+/** Tests still open for someone else: they answer on this device, so each is a plain link. */
+function OpenTests({ person }: { person: StoredPerson }) {
+  const { c } = useContent(); const h = useHref(); const info = useRunInfo();
+  const open = TEST_RUN.filter((id) => !person.quiz[RESULT_KEY[id]]);
+  if (!open.length) return null;
+  return (
+    <Part title={c.ui.myProfile.testsFor(person.name)}>
+      <ul className="grid gap-2 sm:grid-cols-2">
+        {open.map((id) => (
+          <li key={id}><Link href={h(`${testPath(id)}?for=${person.id}`)} className="flex min-h-[56px] items-center gap-3 rounded-2xl border border-white/12 bg-white/[0.04] px-3 py-2 transition hover:border-gold/40">
+            <Emblem id={id === "adaptive" ? "big-five" : emblemOf(id)} className="h-9 w-9 shrink-0" />
+            <span className="min-w-0 flex-1"><span className="block truncate font-semibold">{info.of(id).title}</span><span className="block text-xs text-dim">{c.ui.quizHub.min(info.of(id).minutes)}</span></span>
+            <span aria-hidden className="text-gold">→</span>
+          </Link></li>
+        ))}
+      </ul>
+    </Part>
+  );
+}
+
+function PersonalityBody({ person, isMe }: { person: StoredPerson; isMe: boolean }) {
+  return (
+    <div className="space-y-3">
+      <UnifiedGlance person={person} isMe={isMe} compact hideNext />
+      <TestResults person={person} isMe={isMe} lenses={!!person.date} />
+      {!isMe && <OpenTests person={person} />}
+    </div>
+  );
+}
+
+function SkyBody({ profile }: { profile: Profile }) {
+  const { c } = useContent(); const A = c.astro; const U = c.ui.profile;
+  return (
+    <>
+      <Part title={U.coreSelf} aside={<EvidenceBadge e="traditional" />}>
+        <div className="grid gap-3">
+          {[
+            { k: "Sun", s: profile.sun, t: A.signs[profile.sun].sun, deg: profile.chart.placements.sun!.lon },
+            { k: "Moon", s: profile.moon, t: A.signs[profile.moon].moon, deg: profile.chart.placements.moon!.lon },
+            ...(profile.rising ? [{ k: "Rising", s: profile.rising, t: A.signs[profile.rising].rising, deg: profile.chart.placements.asc!.lon }] : []),
+          ].map((x) => (
+            <div key={x.k} className="card flex gap-4 !p-4">
+              <SignArt sign={x.s} className="hidden h-24 w-24 shrink-0 sm:block" animate={false} />
+              <div className="min-w-0 flex-1">
+                <h4 className="font-display text-xl leading-tight">{SIGN_GLYPH[x.s]} {U.placementTitle[x.k]} <span className="text-gold">{A.signs[x.s].name}</span></h4>
+                <p className="mb-1 text-xs text-dim">{formatDegree(x.deg)} · {c.astro.elements[SIGN_ELEMENT[x.s]].name}</p>
+                <p className="text-sm">{x.t}</p>
+                {x.k === "Sun" && <p className="mt-1 text-xs text-dim">{U.giftsGrowth(A.signs[x.s].gifts, A.signs[x.s].edge)}</p>}
+              </div>
+            </div>
+          ))}
+          {profile.chart.moonAmbiguous && <p className="text-xs text-dim">{U.moonMaybe(profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(U.or))}</p>}
+          {!profile.rising && <p className="text-xs text-dim">{U.addTime}</p>}
+          <MoreLinks keys={["sun", "moon", ...(profile.rising ? ["rising"] : []), "venus", "mars", "mercury"]} />
+        </div>
+      </Part>
+      <Part title={U.vedicTitle} aside={<EvidenceBadge e="traditional" />}>
+        <div className="card !p-4">
+          <p className="font-display text-xl leading-tight text-gold">{U.vedicMoon(c.vedic.nakshatras[profile.vedic.nakshatra].name, profile.vedic.pada, A.signs[profile.vedic.rashi].name)}</p>
+          <p className="mt-1 text-sm">{U.birthStar(c.vedic.nakshatras[profile.vedic.nakshatra].symbol, c.vedic.nakshatras[profile.vedic.nakshatra].text)}</p>
+          {profile.vedic.lagna && <p className="text-sm">{U.lagna(A.signs[profile.vedic.lagna].name)}</p>}
+          {profile.vedic.ambiguous && <p className="text-xs text-dim">{U.starMayDiffer}</p>}
+          <p className="mt-1 text-xs text-dim">{c.vedic.vedicNote}</p>
+          <MoreLinks keys={["vedic"]} />
+        </div>
+      </Part>
+    </>
+  );
+}
+
+function NumbersBody({ person, profile, isMe }: ViewProps) {
+  const { c } = useContent(); const fmt = useDate(); const U = c.ui.profile;
+  const ch = profile.chinese; const n = profile.numbers;
+  const cards = profile.tarot.cards.map((k) => c.nums.tarot[MAJOR_ARCANA[k === 22 ? 0 : k]]);
+  return (
+    <>
+      <Part title={U.numbersTitle} aside={<EvidenceBadge e="traditional" />}>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div className="card !p-4">
+            <p className="font-display text-xl leading-tight text-gold">{U.lifePathHead(n.lifePath, c.nums.numbers[n.lifePath].name)}</p>
+            <p className="mt-1 text-sm">{c.nums.numbers[n.lifePath].lifePath}</p>
+            <p className="mt-1 text-xs text-dim">{U.howWeGot(n.lifePathSteps, n.birthday, n.personalYear, new Date().getFullYear())}</p>
+          </div>
+          <div className="card !p-4">
+            {n.name ? (
+              <>
+                <p className="text-sm"><b>{U.expression(n.name.expression)}</b>: {c.nums.numbers[n.name.expression]?.expression}</p>
+                <p className="text-sm"><b>{U.soulUrge(n.name.soulUrge)}</b>: {c.nums.numbers[n.name.soulUrge]?.soul}</p>
+                <p className="text-sm"><b>{U.personality(n.name.personality)}</b>: {c.nums.numbers[n.name.personality]?.essence}</p>
+                <p className="mt-1 text-xs text-dim">{U.fromName(person.birthName || person.name)}</p>
+              </>
+            ) : <p className="text-sm text-dim">{U.addName}</p>}
+          </div>
+          <div className="card !p-4 sm:col-span-2">
+            <p className="font-display text-xl leading-tight text-gold">{U.tarotCards(cards.length > 1, cards.map((x) => x.name).join(" · "))}</p>
+            {cards.map((x) => <p key={x.name} className="mt-1 text-sm"><b>{x.name}</b> ({x.keyword}): {x.birth}</p>)}
+            <MoreLinks keys={["tarot", "lifepath", "personalyear"]} />
+          </div>
+        </div>
+      </Part>
+      <Part title={U.chineseTitle} aside={<EvidenceBadge e="traditional" />}>
+        <div className="card !p-4">
+          <p className="font-display text-xl leading-tight text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name} <span className="text-dim">{ANIMAL_HANZI[ch.animal]}</span> · {ch.yinYang === "yin" ? U.yin : U.yang}</p>
+          <p className="mt-1 text-sm">{c.chinese.animals[ch.animal].essence}</p>
+          <p className="mt-1 text-xs text-dim">{U.giftsGrowth(c.chinese.animals[ch.animal].gifts, c.chinese.animals[ch.animal].edge)}{U.zodiacYear(fmt(ch.lunarNewYear))}</p>
+          {ch.conventionsDiffer && <p className="mt-2 rounded-lg bg-white/5 p-2 text-xs">{U.liChun(c.chinese.animals[ch.animalLiChun].name)}</p>}
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            <div>
+              <p className="text-sm font-semibold">{U.dayMaster(c.chinese.wuxing[ch.dayMaster.element].name, ch.dayMaster.yinYang === "yin" ? U.yin : U.yang)}</p>
+              <p className="text-xs text-dim">{c.chinese.wuxing[ch.dayMaster.element].text}</p>
+              <p className="mt-1 text-xs text-dim">{U.pillars(ch.pillars)}{!profile.chart.time.timeKnown && U.hourPillar}{ch.solarTime && ` ${c.accuracy.solarTime(ch.solarTime)}`}{ch.monthAmbiguous && ` ${c.accuracy.monthAmbiguous}`}</p>
+            </div>
+            <div>{WUXING.map((w) => <Bar key={w} value={(ch.balance[w] / 4) * 100} label={c.chinese.wuxing[w].name} right={String(ch.balance[w])} color="bg-sage" />)}</div>
+          </div>
+          <MoreLinks keys={["chinese", "wuxing"]} />
+        </div>
+      </Part>
+      <SystemsSection person={person} profile={profile} isMe={isMe} embedded />
+    </>
+  );
+}
+
+function EnergyBody({ person, profile, isMe }: ViewProps) {
+  const { c } = useContent(); const h = useHref(); const A = c.astro; const U = c.ui.profile; const R = c.ui.ritual;
+  return (
+    <div className="grid gap-3">
+      {/* Aura: symbolic visual from palette + attunement answers */}
+      <div className="card grid items-center gap-4 overflow-hidden !p-4 sm:grid-cols-[minmax(0,240px)_1fr]">
+        <div className="relative mx-auto h-60 w-full max-w-[240px]"><Aura data-aura className="h-full w-full" {...auraOf(person)} label={R.auraLabel(person.name)} /></div>
+        <div>
+          <p className="eyebrow mb-1">✦ {R.auraTitle}</p>
+          <p className="mb-3 text-sm text-dim">{R.auraNote}</p>
+          {person.aura && <div className="mb-3 flex flex-wrap gap-2 text-xs">
+            {person.aura.weather && <span className="chip">{R.weather[person.aura.weather]}</span>}
+            {person.aura.body && <span className="chip">{R.body[person.aura.body]}</span>}
+            {person.aura.intention && <span className="chip">{R.intent[person.aura.intention]}</span>}
+          </div>}
+          {isMe && <Link className="btn-ghost !min-h-[44px]" href={h("/start/?attune=1")}>{R.reattune}</Link>}
+        </div>
+      </div>
+      <div className="grid gap-3 sm:grid-cols-2">
+        <div className="card !p-4">
+          <p className="mb-2 font-semibold">{U.yinYangPoint(profile.yang)}</p>
+          <Dial value={profile.yang} left={U.yinLabel} right={U.yangLabel} />
+          <p className="mt-2 text-xs text-dim">{U.blended(!!profile.quiz.bigFive, !!profile.quiz.dosha)}</p>
+        </div>
+        <div className="card !p-4">
+          <p className="font-display text-xl leading-tight text-gold">{c.psych.archetypeAnimals[profile.archetypeAnimal].name}</p>
+          <p className="mt-1 text-sm">{c.psych.archetypeAnimals[profile.archetypeAnimal].text}</p>
+          <div className="mt-2"><Palette colors={profile.palette} size="h-8" /></div>
+          <p className="mt-2 text-xs text-dim">{c.psych.archetypeNote}{U.strongestEl(A.elements[profile.dominantElement].name)}</p>
+          <MoreLinks keys={["animal", "palette", "yinyang"]} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/** Who this is, in a few lines. The rest of the personal voice opens under it. */
+function Summary({ person, profile, isMe }: ViewProps) {
+  const { c } = useContent(); const h = useHref(); const A = c.astro; const U = c.ui.profile; const V = c.systems.voiceUi; const open = useLensSheet();
+  const { sys } = useSystems(person, profile); const resultsOpen = useResultsOpen();
+  const lines = useMemo(() => profileSummary({ c, p: profile, sys, name: person.name, answers: person.answers, aura: person.aura, placeName: person.place?.name ?? null }), [c, profile, sys, person]);
+  const moon = profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(U.or) : A.signs[profile.moon].name;
+  const chips: [string, string][] = [
+    ["sun", `${SIGN_GLYPH[profile.sun]} ${U.sunIn(A.signs[profile.sun].name)}`],
+    ["moon", `☽ ${U.moonIn(moon)}`],
+    ...(profile.rising ? [["rising", `↑ ${U.risingIn(A.signs[profile.rising].name)}`] as [string, string]] : []),
+  ];
+  return (
+    <section className="relative overflow-hidden rounded-[32px] border border-white/15 px-5 py-6 sm:px-8 sm:py-8" data-testid="me-summary"
+      style={{ background: `radial-gradient(110% 90% at 85% 0%, ${profile.palette[0]}44, transparent 60%), linear-gradient(160deg, #1a1442, #0e0b26)` }}>
+      <SignArt sign={profile.sun} className="pointer-events-none absolute -right-10 -top-8 h-44 w-44 opacity-40 sm:right-0 sm:h-56 sm:w-56" animate={false} />
+      <div className="relative">
+        <p className="eyebrow mb-1">{isMe ? c.ui.pageMeta.me.title : U.profileEyebrow}</p>
+        <h1 className="h-display text-5xl leading-none sm:text-6xl"><span className="text-aurora">{person.name}</span></h1>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {chips.map(([k, label]) => <button key={k} type="button" aria-haspopup="dialog" onClick={() => open(k)} className="chip min-h-[44px] !px-4 !text-sm text-mist transition hover:border-gold/60 hover:text-gold">{label}</button>)}
+        </div>
+        <p className="mt-4 max-w-2xl text-[15.5px] leading-relaxed text-mist/90">{lines[0].text}</p>
+        {resultsOpen && lines.length > 1 && (
+          <Expand more={V.title}>
+            <VoiceLines lines={lines.slice(1)} className="text-[15.5px]" />
+            <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-1 border-t border-white/10 pt-3 text-xs text-dim">
+              <span>🔒 {V.private}</span>
+              <Link className="underline decoration-dotted underline-offset-4 hover:text-mist" href={h("/how-it-works/#voice")}>{V.how} →</Link>
+            </p>
+          </Expand>
+        )}
+      </div>
+    </section>
+  );
+}
+
+/** Everything personal, behind one form. While a reading sheet is open that sheet holds the form, so a page never shows two. */
+function ProfileResults({ person, profile, isMe, sheetOpen }: ViewProps & { sheetOpen: boolean }) {
+  const { c } = useContent(); const M = c.ui.myProfile; const A = c.astro; const U = c.ui.profile;
+  const resultsOpen = useResultsOpen(); const teaser = useProfileTeaser(person, profile);
+  const done = TEST_RUN.filter((id) => person.quiz[RESULT_KEY[id]]).length;
+  const ch = profile.chinese; const S = (s: keyof typeof A.signs) => A.signs[s].name;
+  if (sheetOpen && !resultsOpen) return teaser ? <TeaserCard t={teaser} /> : null;
+  return (
+    <ProfileGate person={person} profile={profile}>
+      <div className="space-y-3" data-testid="me-folds">
+        {(done > 0 || !isMe) && <Fold emblem="big-five" title={M.folds.personality} hint={done ? M.folds.results(done) : M.folds.noResults} testId="fold-personality"><PersonalityBody person={person} isMe={isMe} /></Fold>}
+        <Fold emblem="sun" title={M.folds.sky} hint={[profile.sun, profile.moon, profile.rising].filter((s) => s !== null).map(S).join(" · ")} testId="fold-sky"><SkyBody profile={profile} /></Fold>
+        <Fold emblem="number" title={M.folds.numbers} hint={`#${profile.numbers.lifePath} · ${c.chinese.wuxing[ch.element].name} ${c.chinese.animals[ch.animal].name}`} testId="fold-numbers"><NumbersBody person={person} profile={profile} isMe={isMe} /></Fold>
+        <Fold emblem="palette" title={M.folds.energy} hint={c.psych.archetypeAnimals[profile.archetypeAnimal].name} testId="fold-energy"><EnergyBody person={person} profile={profile} isMe={isMe} /></Fold>
+      </div>
+    </ProfileGate>
+  );
+}
+
+/** The long pages, one tap away. */
+function DeepLinks({ person, isMe }: { person: StoredPerson; isMe: boolean }) {
+  const { c } = useContent(); const h = useHref(); const U = c.ui.profile; const q = isMe ? "" : `?id=${person.id}`;
+  const links: [string, EmblemId, string][] = [
+    [`/book/${q}`, "tarot", c.book.title],
+    [`/chart/${q}`, "chart", U.fullChart],
+    ...(isMe ? [["/you/", "eye", c.you.title], ["/people/", "bond", c.ui.myProfile.people]] as [string, EmblemId, string][] : [[`/match/?b=${person.id}`, "bond", U.compatWithMe]] as [string, EmblemId, string][]),
+  ];
+  return (
+    <nav className="grid grid-cols-2 gap-2 sm:grid-cols-4" aria-label={c.lensUi.related} data-testid="me-deep">
+      {links.map(([href, emblem, label]) => (
+        <Link key={href} href={h(href)} className="flex min-h-[64px] items-center gap-2.5 rounded-2xl border border-white/12 bg-white/[0.04] px-3 py-2 text-sm font-semibold leading-tight transition active:scale-[.98] hover:border-gold/40">
+          <Emblem id={emblem} className="h-8 w-8 shrink-0" /><span className="min-w-0 hyphens-auto [overflow-wrap:anywhere]">{label}</span>
+        </Link>
+      ))}
+    </nav>
+  );
+}
+
+/** Quiet actions at the end. Sharing and the profile code carry results, so they wait for the form like the results do. */
+function ProfileActions({ person, profile, isMe }: ViewProps) {
+  const { c } = useContent(); const h = useHref(); const A = c.astro; const U = c.ui.profile; const resultsOpen = useResultsOpen();
+  const [codeShown, setCodeShown] = useState(false);
+  const ch = profile.chinese; const n = profile.numbers; const fl = profile.psych?.fourLetter;
+  const cards = profile.tarot.cards.map((k) => c.nums.tarot[MAJOR_ARCANA[k === 22 ? 0 : k]]);
+  const quiet = `${TAP} text-sm text-dim underline decoration-dotted underline-offset-4 hover:text-mist`;
   const shareSpec = {
     eyebrow: U.codexOf(person.name),
     title: `${U.sunIn(A.signs[profile.sun].name)} · ${U.moonIn(A.signs[profile.moon].name)}`,
@@ -259,184 +524,45 @@ export function ProfileView({ person, profile, isMe }: { person: StoredPerson; p
     palette: profile.palette, footer: c.site.brand,
     image: () => document.querySelector<HTMLCanvasElement>("canvas[data-aura]"),
   };
+  if (!isMe && !resultsOpen) return null;
+  return (
+    <div data-testid="me-actions">
+      <div className="flex flex-wrap items-center justify-center gap-x-5">
+        {isMe && <Link className={quiet} href={h("/start/")}>{c.ui.me.editBirth}</Link>}
+        {resultsOpen && <ShareButton spec={shareSpec} filename={`${person.name}-profile.png`} className={quiet} />}
+        {isMe && <ThemeToggle className={quiet} />}
+        {isMe && resultsOpen && <button type="button" className={quiet} aria-expanded={codeShown} onClick={() => setCodeShown(!codeShown)}>{U.myCode}</button>}
+      </div>
+      {codeShown && (
+        <div className="mt-2 rounded-xl bg-night/60 p-3 text-xs">
+          <p className="mb-1 text-dim">{U.codeHelp}</p>
+          <textarea readOnly className="input h-24 font-mono text-[11px]" value={encodeProfileCode(person)} onFocus={(e) => e.currentTarget.select()} />
+        </div>
+      )}
+    </div>
+  );
+}
 
+export function ProfileView({ person, profile, isMe }: ViewProps) {
+  const [sheet, setSheet] = useState<string | null>(null);
+  const closeSheet = useCallback(() => setSheet(null), [setSheet]);
+  const below = (
+    <div className="space-y-4">
+      <ProfileResults person={person} profile={profile} isMe={isMe} sheetOpen={!!sheet} />
+      <DeepLinks person={person} isMe={isMe} />
+      {isMe && <SaveAcrossDevices />}
+      <ProfileActions person={person} profile={profile} isMe={isMe} />
+    </div>
+  );
   return (
     <LensSheetCtx.Provider value={setSheet}>
-    <div>
-      {/* Cover */}
-      <div className="relative overflow-hidden rounded-[36px] border border-white/15 p-6 shadow-[0_40px_90px_-40px_rgba(139,108,240,.9)] sm:p-10">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={cosmos("orion", 1280)} alt="" className="absolute inset-0 h-full w-full animate-kenburns object-cover opacity-40" />
-        <div className="absolute inset-0" style={{ background: `linear-gradient(120deg, #120f2e 15%, ${profile.palette[0]}55 60%, ${profile.palette[4]}66)` }} />
-        {isMe && <Celebration count={18} />}
-        <SignArt sign={profile.sun} className="pointer-events-none absolute -right-10 -top-6 h-72 w-72 opacity-70 sm:right-2 sm:h-80 sm:w-80" />
-        <div className="relative">
-        <p className="eyebrow mb-2">{isMe ? U.yourCodex : U.profileEyebrow}</p>
-        <h1 className="h-display mb-1 text-5xl sm:text-6xl"><span className="text-aurora">{person.name}</span></h1>
-        <p className="h-display mb-5 text-2xl italic text-mist/90">{U.sunIn(A.signs[profile.sun].name)} · {U.moonIn(A.signs[profile.moon].name)}{profile.rising ? ` · ${U.risingIn(A.signs[profile.rising].name)}` : ""}</p>
-        <button type="button" aria-haspopup="dialog" onClick={() => setSheet("sunmoon")} className="mb-4 inline-block text-sm text-gold underline decoration-dotted underline-offset-4 text-left">ⓘ {c.lensUi.explainer}</button>
-        <div className="flex flex-wrap gap-2 text-sm">
-          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("sun")} className="chip text-mist hover:border-gold/60 hover:text-gold">{SIGN_GLYPH[profile.sun]} {U.sunIn(A.signs[profile.sun].name)}</button>
-          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("moon")} className="chip text-mist hover:border-gold/60 hover:text-gold">☽ {U.moonIn(profile.chart.moonAmbiguous ? profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(U.or) : A.signs[profile.moon].name)}</button>
-          {profile.rising && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("rising")} className="chip text-mist hover:border-gold/60 hover:text-gold">AC {U.risingIn(A.signs[profile.rising].name)}</button>}
-          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("chinese")} className="chip text-mist hover:border-gold/60 hover:text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name}</button>
-          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("lifepath")} className="chip text-mist hover:border-gold/60 hover:text-gold">#{n.lifePath} {c.lensInfo.lifepath.name}</button>
-          <button type="button" aria-haspopup="dialog" onClick={() => setSheet("animal")} className="chip text-mist hover:border-gold/60 hover:text-gold">🜁 {c.psych.archetypeAnimals[profile.archetypeAnimal].name}</button>
-          {fl && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("fourletter")} className="chip text-mist hover:border-gold/60 hover:text-gold">{fl.code} · {c.lensInfo.fourletter.name}</button>}
-          {profile.quiz.nine && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("nine")} className="chip text-mist hover:border-gold/60 hover:text-gold">◎ {profile.quiz.nine.type}w{profile.quiz.nine.wing} · {c.psych.nineStyles[profile.quiz.nine.type].name}</button>}
-          {profile.quiz.attachment && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("attachment")} className="chip text-mist hover:border-gold/60 hover:text-gold">♡ {c.psych.attachment[profile.quiz.attachment.style].name}</button>}
-          {profile.quiz.dosha && <button type="button" aria-haspopup="dialog" onClick={() => setSheet("dosha")} className="chip text-mist hover:border-gold/60 hover:text-gold">❋ {c.psych.constitutions[profile.quiz.dosha.constitution].split(/: | — /)[0]}</button>}
-        </div>
-        <p className="mt-2 text-xs text-dim">{c.lensUi.tapHint}</p>
-        <button type="button" aria-haspopup="dialog" onClick={() => setSheet("palette")} className="mt-5 block max-w-sm transition hover:opacity-90 text-left"><span className="mb-1.5 block text-xs uppercase tracking-widest text-dim">{U.yourPalette}</span><Palette colors={profile.palette} size="h-9" /></button>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <Link className="btn-primary" href={h(`/book/${isMe ? "" : `?id=${person.id}`}`)}>📖 {c.book.title}</Link>
-          {isMe && <ThemeToggle />}
-          <ShareButton spec={shareSpec} filename={`${person.name}-codex.png`} />
-          <Link className="btn-ghost" href={h(`/chart/?id=${person.id}`)}>{U.fullChart}</Link>
-          {!isMe && <Link className="btn-ghost" href={h(`/match/?b=${person.id}`)}>{U.compatWithMe}</Link>}
-          {isMe && <button className="btn-ghost" onClick={() => setCodeShown(!codeShown)}>{U.myCode}</button>}
-        </div>
-        {codeShown && (
-          <div className="mt-3 rounded-xl bg-night/60 p-3 text-xs">
-            <p className="mb-1 text-dim">{U.codeHelp}</p>
-            <textarea readOnly className="input h-24 font-mono text-[11px]" value={encodeProfileCode(person)} onFocus={(e) => e.currentTarget.select()} />
-          </div>
-        )}
-        </div>
+      {isMe && <UnifiedSignal person={person} />}
+      <div className="space-y-4" data-testid="profile-view">
+        <Summary person={person} profile={profile} isMe={isMe} />
+        {isMe && <TodayCard profile={profile} />}
+        {isMe ? <TestsPanel>{below}</TestsPanel> : below}
       </div>
-
-      <VoiceSummary person={person} profile={profile} />
-
-      <div className="mt-4"><UnifiedGlance person={person} isMe={isMe} /></div>
-
-      {/* Aura: symbolic visual from palette + attunement answers */}
-      <div className="card mt-4 grid items-center gap-4 overflow-hidden sm:grid-cols-[minmax(0,280px)_1fr]">
-        <div className="relative mx-auto h-72 w-full max-w-[280px]"><Aura data-aura className="h-full w-full" {...auraOf(person)} label={c.ui.ritual.auraLabel(person.name)} /></div>
-        <div>
-          <p className="eyebrow mb-1">✦ {c.ui.ritual.auraTitle}</p>
-          <p className="mb-3 text-sm text-dim">{c.ui.ritual.auraNote}</p>
-          {person.aura && <div className="mb-3 flex flex-wrap gap-2 text-xs">
-            {person.aura.weather && <span className="chip">{c.ui.ritual.weather[person.aura.weather]}</span>}
-            {person.aura.body && <span className="chip">{c.ui.ritual.body[person.aura.body]}</span>}
-            {person.aura.intention && <span className="chip">{c.ui.ritual.intent[person.aura.intention]}</span>}
-          </div>}
-          {isMe && <Link className="btn-ghost" href={h("/start/?attune=1")}>{c.ui.ritual.reattune}</Link>}
-        </div>
-      </div>
-
-      <div className="card mt-4">
-        <div className="mb-2 flex justify-between text-sm"><span className="h-display text-xl">{U.lensesUnlocked(lensCount, 18)}</span><span className="text-dim">{U.quizzesDone(unlocked.length)}</span></div>
-        <Bar value={(lensCount / 18) * 100} />
-        {unlocked.length < 7 && (() => { const next = QUIZ_IDS.find((id) => !unlocked.includes(id))!; return <p className="text-sm text-dim">{U.nextLayer}<Link className="text-gold underline" href={quizFor(next)}>{defs[next].title}</Link> {U.minutes(defs[next].minutes)}</p>; })()}
-      </div>
-
-      <Section title={U.coreSelf} aside={<EvidenceBadge e="traditional" />}>
-        <div className="grid gap-3">
-          {[
-            { k: "Sun", s: profile.sun, t: A.signs[profile.sun].sun, deg: profile.chart.placements.sun!.lon },
-            { k: "Moon", s: profile.moon, t: A.signs[profile.moon].moon, deg: profile.chart.placements.moon!.lon },
-            ...(profile.rising ? [{ k: "Rising", s: profile.rising, t: A.signs[profile.rising].rising, deg: profile.chart.placements.asc!.lon }] : []),
-          ].map((x) => (
-            <div key={x.k} className="card card-hover flex gap-4">
-              <SignArt sign={x.s} className="hidden h-24 w-24 shrink-0 sm:block" animate={false} />
-              <div className="flex-1">
-              <div className="mb-1 flex items-baseline justify-between"><h3 className="h-display text-2xl">{SIGN_GLYPH[x.s]} {U.placementTitle[x.k]} <span className="text-gold">{A.signs[x.s].name}</span></h3><span className="text-xs text-dim">{formatDegree(x.deg)} · {c.astro.elements[SIGN_ELEMENT[x.s]].name}</span></div>
-              <p className="text-sm">{x.t}</p>
-              {x.k === "Sun" && <p className="mt-1 text-xs text-dim">{U.giftsGrowth(A.signs[x.s].gifts, A.signs[x.s].edge)}</p>}
-              </div>
-            </div>
-          ))}
-          {profile.chart.moonAmbiguous && <p className="text-xs text-dim">{U.moonMaybe(profile.chart.moonAlternatives.map((s) => A.signs[s].name).join(U.or))}</p>}
-          {!profile.rising && <p className="text-xs text-dim">{U.addTime}</p>}
-          <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="sun" /><MoreLink pid={isMe ? undefined : person.id} k="moon" />{profile.rising && <MoreLink pid={isMe ? undefined : person.id} k="rising" />}<MoreLink pid={isMe ? undefined : person.id} k="venus" /><MoreLink pid={isMe ? undefined : person.id} k="mars" /><MoreLink pid={isMe ? undefined : person.id} k="mercury" /></div>
-        </div>
-      </Section>
-
-      <Section title={U.chineseTitle} aside={<EvidenceBadge e="traditional" />}>
-        <div className="card">
-          <p className="h-display text-2xl text-gold">{ANIMAL_GLYPH[ch.animal]} {c.chinese.wuxing[ch.element].name} {c.chinese.animals[ch.animal].name} <span className="text-dim">{ANIMAL_HANZI[ch.animal]}</span> · {ch.yinYang === "yin" ? U.yin : U.yang}</p>
-          <p className="text-sm">{c.chinese.animals[ch.animal].essence}</p>
-          <p className="mt-1 text-xs text-dim">{U.giftsGrowth(c.chinese.animals[ch.animal].gifts, c.chinese.animals[ch.animal].edge)}{U.zodiacYear(fmt(ch.lunarNewYear))}</p>
-          {ch.conventionsDiffer && <p className="mt-2 rounded-lg bg-white/5 p-2 text-xs">{U.liChun(c.chinese.animals[ch.animalLiChun].name)}</p>}
-          <div className="mt-3 grid gap-3 sm:grid-cols-2">
-            <div>
-              <p className="text-sm font-semibold">{U.dayMaster(c.chinese.wuxing[ch.dayMaster.element].name, ch.dayMaster.yinYang === "yin" ? U.yin : U.yang)}</p>
-              <p className="text-xs text-dim">{c.chinese.wuxing[ch.dayMaster.element].text}</p>
-              <p className="mt-1 text-xs text-dim">{U.pillars(ch.pillars)}{!profile.chart.time.timeKnown && U.hourPillar}{ch.solarTime && ` ${c.accuracy.solarTime(ch.solarTime)}`}{ch.monthAmbiguous && ` ${c.accuracy.monthAmbiguous}`}</p>
-            </div>
-            <div>{WUXING.map((w) => <Bar key={w} value={(ch.balance[w] / 4) * 100} label={c.chinese.wuxing[w].name} right={String(ch.balance[w])} color="bg-sage" />)}</div>
-          </div>
-          <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="chinese" /><MoreLink pid={isMe ? undefined : person.id} k="wuxing" /></div>
-        </div>
-      </Section>
-
-      <Section title={U.vedicTitle} aside={<EvidenceBadge e="traditional" />}>
-        <div className="card">
-          <p className="h-display text-xl text-gold">{U.vedicMoon(c.vedic.nakshatras[profile.vedic.nakshatra].name, profile.vedic.pada, A.signs[profile.vedic.rashi].name)}</p>
-          <p className="text-sm">{U.birthStar(c.vedic.nakshatras[profile.vedic.nakshatra].symbol, c.vedic.nakshatras[profile.vedic.nakshatra].text)}</p>
-          {profile.vedic.lagna && <p className="text-sm">{U.lagna(A.signs[profile.vedic.lagna].name)}</p>}
-          {profile.vedic.ambiguous && <p className="text-xs text-dim">{U.starMayDiffer}</p>}
-          <p className="mt-1 text-xs text-dim">{c.vedic.vedicNote}</p>
-          <MoreLink pid={isMe ? undefined : person.id} k="vedic" />
-        </div>
-      </Section>
-
-      <Section title={U.numbersTitle} aside={<EvidenceBadge e="traditional" />}>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="card">
-            <p className="h-display text-2xl text-gold">{U.lifePathHead(n.lifePath, c.nums.numbers[n.lifePath].name)}</p>
-            <p className="text-sm">{c.nums.numbers[n.lifePath].lifePath}</p>
-            <p className="mt-1 text-xs text-dim">{U.howWeGot(n.lifePathSteps, n.birthday, n.personalYear, new Date().getFullYear())}</p>
-          </div>
-          <div className="card">
-            {n.name ? (
-              <>
-                <p className="text-sm"><b>{U.expression(n.name.expression)}</b>: {c.nums.numbers[n.name.expression]?.expression}</p>
-                <p className="text-sm"><b>{U.soulUrge(n.name.soulUrge)}</b>: {c.nums.numbers[n.name.soulUrge]?.soul}</p>
-                <p className="text-sm"><b>{U.personality(n.name.personality)}</b>: {c.nums.numbers[n.name.personality]?.essence}</p>
-                <p className="mt-1 text-xs text-dim">{U.fromName(person.birthName || person.name)}</p>
-              </>
-            ) : <p className="text-sm text-dim">{U.addName}</p>}
-          </div>
-          <div className="card sm:col-span-2">
-            <p className="h-display text-xl text-gold">{U.tarotCards(cards.length > 1, cards.map((x) => x.name).join(" · "))}</p>
-            {cards.map((x) => <p key={x.name} className="text-sm"><b>{x.name}</b> ({x.keyword}): {x.birth}</p>)}
-            <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="tarot" /><MoreLink pid={isMe ? undefined : person.id} k="lifepath" /><MoreLink pid={isMe ? undefined : person.id} k="personalyear" /></div>
-          </div>
-        </div>
-      </Section>
-
-      <Section title={U.energyTitle} aside={<EvidenceBadge e="traditional" />}>
-        <div className="grid gap-3 sm:grid-cols-2">
-          <div className="card">
-            <p className="mb-2 font-semibold">{U.yinYangPoint(profile.yang)}</p>
-            <Dial value={profile.yang} left={U.yinLabel} right={U.yangLabel} />
-            <p className="mt-2 text-xs text-dim">{U.blended(!!profile.quiz.bigFive, !!profile.quiz.dosha)}</p>
-          </div>
-          <div className="card">
-            <p className="h-display text-xl text-gold">{c.psych.archetypeAnimals[profile.archetypeAnimal].name}</p>
-            <p className="text-sm">{c.psych.archetypeAnimals[profile.archetypeAnimal].text}</p>
-            <div className="mt-2"><Palette colors={profile.palette} size="h-8" /></div>
-            <p className="mt-2 text-xs text-dim">{c.psych.archetypeNote}{U.strongestEl(A.elements[profile.dominantElement].name)}</p>
-            <div className="flex flex-wrap gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k="animal" /><MoreLink pid={isMe ? undefined : person.id} k="palette" /><MoreLink pid={isMe ? undefined : person.id} k="yinyang" /></div>
-          </div>
-        </div>
-      </Section>
-
-      <ResultsGate source="profile" person={person}>
-      {QUIZ_IDS.map((id) => (
-        <Section key={id} title={defs[id].title} aside={<EvidenceBadge e={defs[id].evidence} />}>
-          {profile.quiz[defs[id].resultKey]
-            ? <><QuizResultView id={id} profile={profile} pid={person.id} /><div className="flex flex-wrap items-baseline gap-x-4"><MoreLink pid={isMe ? undefined : person.id} k={QUIZ_LENS[id]} />{id === "big-five" && <><MoreLink pid={isMe ? undefined : person.id} k="fourletter" /><MoreLink pid={isMe ? undefined : person.id} k="temperament" /></>}<MethodLink /><Link className="mt-2 inline-block text-xs text-dim underline" href={quizFor(id)}>{c.site.common.retake}</Link></div></>
-            : <Locked emblem={id} title={defs[id].title} text={U.unlocksText(defs[id].tagline, defs[id].unlocks)} href={quizFor(id)} minutes={defs[id].minutes} />}
-        </Section>
-      ))}
-      <PrecisionSection person={person} profile={profile} />
-      </ResultsGate>
-      <SystemsSection person={person} profile={profile} isMe={isMe} />
       <LensSheet k={sheet} profile={profile} personId={isMe ? undefined : person.id} personName={person.name} onClose={closeSheet} />
-    </div>
     </LensSheetCtx.Provider>
   );
 }

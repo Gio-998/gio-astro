@@ -24,12 +24,6 @@ export const isPublicRoute = (path: string) => { const r = routeOf(path); return
 /** Is this route closed to a signed-out visitor? Never, unless the private beta is on. */
 export const routeGated = (path: string, privateBeta: boolean) => privateBeta && !isPublicRoute(path);
 
-/** True while the beta is on and nobody is signed in (also while the session is still loading, to avoid flashing app links). */
-export function useBetaLocked(): boolean {
-  const a = useAccount(); const f = useFlags();
-  return f.private_beta && !f.signups_open && accountsEnabled && !a.user;
-}
-
 /** In private beta, app pages show a compact invite gate to logged-out visitors, inside the normal layout. */
 export function BetaGate({ children }: { children: React.ReactNode }) {
   const path = usePathname() || "/"; const a = useAccount(); const { c } = useContent(); const f = useFlags();
@@ -55,28 +49,6 @@ export function BetaLockedCard() {
       </div>
       {wl && <div className="mt-4 text-left"><Waitlist source="gate" /></div>}
     </div>
-  );
-}
-
-/** Landing-page section (id="waitlist") shown to logged-out visitors while the beta is on. */
-export function BetaInvite() {
-  const locked = useBetaLocked(); const { c } = useContent(); const B = c.ui.beta; const h = useHref();
-  if (!locked) return null;
-  return (
-    <section id="waitlist" className="scroll-mt-24 py-16" data-testid="beta-invite">
-      <div className="relative overflow-hidden rounded-[32px] border border-gold/25 bg-gradient-to-br from-violet/25 via-white/[0.04] to-rose/15 p-6 sm:p-10">
-        <div className="relative grid items-center gap-6 md:grid-cols-[1fr_200px]">
-          <div>
-            <p className="eyebrow mb-2">✦ {B.sectionEyebrow}</p>
-            <h2 className="h-display mb-3 text-[clamp(2rem,6vw,3rem)] leading-tight">{B.sectionTitleA}<span className="italic text-aurora">{B.sectionTitleB}</span></h2>
-            <p className="mb-5 text-mist/90">{B.sectionText}</p>
-            <Waitlist source="landing" />
-            <Link className="mt-4 inline-block text-sm text-gold underline-offset-4 hover:underline" href={h("/account")}>{B.haveInvite}</Link>
-          </div>
-          <div className="relative mx-auto hidden h-60 w-48 md:block"><Aura className="h-full w-full" colors={["#c9b8ff", "#ffd38a", "#8fd3ff", "#ff9ed2", "#7fe0b0"]} energy={0.6} heart="#ffd27a" label="" /></div>
-        </div>
-      </div>
-    </section>
   );
 }
 
@@ -155,10 +127,4 @@ export function BetaAdmin() {
       </div>
     </div>
   );
-}
-
-/** "Start" for signed-in users; "Join the beta" (scrolls to the waitlist) for logged-out visitors during the beta. */
-export function StartOrJoin({ className, label }: { className: string; label: string }) {
-  const locked = useBetaLocked(); const h = useHref(); const B = useContent().c.ui.beta;
-  return locked ? <a className={className} href="#waitlist">{B.joinBeta} ✦</a> : <Link className={className} href={h("/start/")}>{label}</Link>;
 }

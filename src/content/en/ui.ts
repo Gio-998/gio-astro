@@ -181,7 +181,7 @@ export const match = {
 export const today = {
   personal: "Daily guidance is personal: add your birth date first.",
   titleA: "Today for ",
-  sub: "Your 90-second ritual: the real Moon, your transits, a card, your number and one honest question.",
+  sub: "Your daily ritual: the real Moon, your transits, a card, your number and one honest question.",
   streak: (n: number) => `✦ ${n} ${n === 1 ? "day" : "days"} in a row with the sky`,
   moonIn: (phase: string, sign: string) => `${phase} in ${sign}`,
   lit: (n: number) => `${n}% lit`,
@@ -239,7 +239,7 @@ export const quizHub = {
 export const quickStart = {
   steps: ["Finding the sky over your birthplace…", "Placing the Sun, Moon and planets…", "Reading your Chinese year and element…", "Counting your numbers…", "Drawing your cards…", "Mixing your colour palette…"],
   eyebrowEdit: "Your birth details",
-  eyebrowNew: "Free · 30 seconds · no sign-up",
+  eyebrowNew: "Free · no account needed",
   editA: "Edit your ",
   editB: "birth details",
   newA: "Your birth profile ",
@@ -287,7 +287,6 @@ export const chart = {
 };
 
 export const quiz = {
-  birthFirst: "First, tell us your birth date. It takes 30 seconds. Then come back to this test.",
   unlocked: "Result ready",
   seeProfile: "See full profile",
   nextQuiz: "Next test",
@@ -297,10 +296,28 @@ export const quiz = {
   answeringA: "Answering as ",
   answeringB: ". Hand them the phone, because the answers should be theirs.",
   unlocks: (u: string) => `You get: ${u}. You see a short preview right away, and the full result is free.`,
-  metaTitle: (t: string) => `${t} test, with your full result free`,
   begin: "Begin ✦",
   qOf: (i: number, n: number) => `Question ${i} of ${n}`,
   whichMore: "Which would mean more to you?",
+};
+
+export const myProfile = {
+  guestResults: "Your results so far. They stay on this device.",
+  todayCta: "Open today's reading",
+  folds: {
+    personality: "Personality",
+    results: (n: number) => (n === 1 ? "1 test result" : `${n} test results`),
+    noResults: "No tests yet",
+    sky: "Your sky",
+    numbers: "Numbers and traditions",
+    energy: "Energy and colours",
+  },
+  testsFor: (name: string) => `Tests for ${name}`,
+  people: "Your people",
+  save: "Optional and free. Without an account, your results stay on this device.",
+  need: "Add your birth date and this page fills itself in. Your test results stay as they are.",
+  orTest: "Take a test instead",
+  error: { title: "This page did not load", text: "Your saved results are safe on this device. Try again, or check your birth details.", retry: "Try again" },
 };
 
 export const tests = {
@@ -382,7 +399,7 @@ export const pageMeta = {
   account: { title: "Your account" },
   verify: { title: "Enter your code" },
   email: { title: "Your email settings" },
-  bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer ten questions about your relationship and see strengths, perception gaps and practices." },
+  bond: { title: "Bond Check: a 3-minute check-in for two", description: "Both of you answer ten questions about your relationship, then see your strengths, where you read things differently and what to try." },
   book: { title: "The Book of You" },
   chart: { title: "Birth chart" },
   learn: { title: "Methods and sources: how we calculate, and honesty", description: "How we calculate birth charts, Vedic matching, Chinese zodiac, numerology and personality scores, and what the science does and doesn't say." },

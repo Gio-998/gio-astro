@@ -67,12 +67,22 @@ function AxisRow({ a, sig, i }: { a: Axis; sig: Unified["axes"][Axis]; i: number
   );
 }
 
-export function UnifiedGlance({ person, isMe = true, compact = false }: { person: StoredPerson; isMe?: boolean; compact?: boolean }) {
-  const A = useAdaptive().unified; const h = useHref();
-  const u = useMemo(() => {
+function useUnified(person: StoredPerson): Unified {
+  return useMemo(() => {
     let el = null; try { el = profileOf(person).chart.elementBalance; } catch { /* no chart */ }
     return unifiedProfile(person.quiz, el);
   }, [person]);
+}
+
+/** Keeps the saved blend current while the card that shows it is folded away. */
+export function UnifiedSignal({ person }: { person: StoredPerson }) {
+  useSaveSignal(useUnified(person), true);
+  return null;
+}
+
+export function UnifiedGlance({ person, isMe = true, compact = false, hideNext = false }: { person: StoredPerson; isMe?: boolean; compact?: boolean; hideNext?: boolean }) {
+  const A = useAdaptive().unified; const h = useHref();
+  const u = useUnified(person);
   useSaveSignal(u, isMe);
   const [open, setOpen] = useState(!compact);
   const qs = isMe ? "" : `?for=${person.id}`;
@@ -97,7 +107,7 @@ export function UnifiedGlance({ person, isMe = true, compact = false }: { person
       <div className="relative mt-5 flex flex-wrap gap-1.5" aria-label={A.from}>
         {u.sources.map((s) => <span key={s} className="chip !text-[11px]">✓ {A.sources[s]}</span>)}
       </div>
-      {u.next && (
+      {u.next && !hideNext && (
         <div className="relative mt-4 flex flex-wrap items-center gap-3 border-t border-white/10 pt-4">
           <span className="text-sm text-dim">{A.nextLead}</span>
           <Link className="btn-primary !py-2 text-sm" href={h(`${A.next[u.next][1]}${qs}`)} data-testid="unified-next">{A.next[u.next][0]} ✦</Link>

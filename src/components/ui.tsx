@@ -59,15 +59,6 @@ export function Dial({ value, left, right }: { value: number; left: string; righ
   );
 }
 
-export function Section({ title, children, aside }: { title: string; children: React.ReactNode; aside?: React.ReactNode }) {
-  return (
-    <section className="mt-12">
-      <div className="mb-4 flex items-end justify-between gap-3 border-b border-white/10 pb-3"><h2 className="h-display text-3xl"><span className="mr-2 text-gold">✦</span>{title}</h2>{aside}</div>
-      {children}
-    </section>
-  );
-}
-
 export function Palette({ colors, size = "h-6" }: { colors: string[]; size?: string }) {
   return <div className="flex gap-1.5">{colors.map((c, i) => <div key={i} className={`${size} flex-1 rounded-full shadow-[0_6px_18px_-6px_rgba(0,0,0,.6)] ring-1 ring-white/20 transition hover:-translate-y-0.5`} style={{ background: `radial-gradient(circle at 30% 30%, #ffffff55, ${c} 60%)` }} title={c} />)}</div>;
 }
