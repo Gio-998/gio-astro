@@ -36,5 +36,7 @@ function entries(): Entry[] {
 export default function sitemap(): MetadataRoute.Sitemap {
   // One <url> per locale, each listing every language version (xhtml:link hreflang) + x-default.
   const abs = (o: Record<string, string>) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, `${SITE_URL}${v}`]));
-  return entries().flatMap((e) => LOCALES.map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: e.lastModified(l), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
+  // Section dates are Skopje dates, up to two hours ahead of UTC: the nightly build runs in that gap, and a lastmod must never be in the future.
+  const notAhead = (d: string) => (d > BUILD ? BUILD : d);
+  return entries().flatMap((e) => LOCALES.map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: notAhead(e.lastModified(l)), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
 }
