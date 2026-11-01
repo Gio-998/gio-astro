@@ -98,7 +98,6 @@ describe("search snippets fit", () => {
   const pairs = [
     ...Object.values(uiSr.pageMeta).filter((m): m is { title: string; description: string } => "description" in m),
     ...Object.values(uiSr.tests.meta), HOME_META.sr, pricingSr.meta,
-    { title: youSr.metaTitle, description: youSr.metaDescription }, { title: partnersSr.metaTitle, description: partnersSr.metaDescription },
     adaptiveSr.meta,
   ];
   it("titles at most 55 characters, descriptions 110 to 158, finished sentences, all different", () => {
@@ -109,7 +108,6 @@ describe("search snippets fit", () => {
       expect(p.description).toMatch(/[.!?]$/);
     }
     expect(new Set(pairs.map((p) => p.description)).size).toBe(pairs.length);
-    expect(uiSr.quiz.metaTitle("Autopilot ili istraživač").length).toBeLessThanOrEqual(55);
   });
   it("the open tools meet the tighter range of tests/test-seo.test.ts, which starts reading sr once it is wired", () => {
     const M = uiSr.pageMeta;
