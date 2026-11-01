@@ -100,7 +100,7 @@ const dims: Record<PlayDim, DimText> = {
     name: "Uticaj grupe", poles: ["Nezavisno", "Uz grupu"], word: { low: "nezavisnost", high: "sluh za grupu" },
     text: {
       low: "Kad cela grupa izabere pogrešnu liniju, veruješ svojim očima. Držiš se svog stava pod pritiskom društva. To je dragoceno, naročito kad je cela grupa na korak od greške.",
-      mid: "Nekad veruješ svojim očima, nekad grupi. To je iskreno: u klasičnim istraživanjima sa linijama većina ljudi bar jednom popusti. Osećaš to povlačenje, ali mu ne popuštaš uvek.",
+      mid: "Nekad veruješ svojim očima, nekad grupi. To je iskreno: u klasičnim istraživanjima Solomona Aša (Solomon Asch) sa linijama većina ljudi bar jednom popusti. Osećaš to povlačenje, ali mu ne popuštaš uvek.",
       high: "Kad svi ostali izaberu liniju, često je izabereš i ti, čak i kad ti oči govore drugo. Ceniš harmoniju i dobro čitaš atmosferu. Probaj ovo: sledeći put kad se ne slažeš, reci to jednom, ljubazno, i vidi šta će se desiti.",
     },
     up: "Po odgovorima zvučiš nezavisnije nego što igraš: ideš za pogrešnim odgovorom grupe.",

@@ -108,7 +108,7 @@ export const pair = {
   tarotTogether: (birth: string) => birth.replace(/^You /, "Together you ").replace(/^Your /, "Your shared "),
   yinyang: (a: number, b: number, c: number, far: boolean) => `Balance points ${a} and ${b}; together you center at ${c} (50 = perfectly balanced). ${far ? "One leads with action, the other with receptivity: a classic complement." : "You share a similar energy level: easy rhythm, so make room for both doing and being."}`,
   brings5: (na: string, ta: string, nb: string, tb: string) => `What each of you brings. ${na}: ${ta}. ${nb}: ${tb}.`,
-  foundation: (f: number, s: number) => `Foundation (warmth, reliability and calm in both of you): ${f}/100. Similarity: ${s}/100. Research says each person's own kindness and emotional steadiness matter far more than matching.`,
+  foundation: (f: number, s: number) => `Foundation (warmth, reliability and calm in both of you): ${f}/100. Similarity: ${s}/100. Research says each person's own kindness and emotional steadiness matter far more than matching (Dyrenforth et al., 2010).`,
   needs: " needs ",
   careLine: (n: string, give: string, ok: boolean, other: string, want: string, tip: string) => `${n} gives ${give}${ok ? `, which lands perfectly for ${other}.` : `. ${other} feels most cared for through ${want}. Try: ${tip}`}`,
   with: " with ",
@@ -525,6 +525,6 @@ export const beta = {
   banner: "Accounts are optional. Tests and horoscopes work without one.",
   emailLabel: "Your email", emailPh: "you@example.com", join: "Keep me posted ✦", joined: "Thanks, we have your email. 💫",
   invalid: "Please enter a valid email address.", haveInvite: "Have an account? Log in →", privacy: "We only use your email for news about Horoscop. No spam, unsubscribe any time.",
-  emailsTitle: "Email previews", emailsNote: "Demo templates only. Nothing is sent from here. The sign-in code template can be pasted into Supabase as is.", emailsSubject: "Subject", emailsLink: "Email previews", adminHint: "Waitlist sign-ups, invites and email previews", adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove",
-  used: "joined", pending: "not joined yet", waitlist: "Waitlist", invite: "Invite", added: (n: number) => `${n} added.`, empty: "Nothing here yet.",
+  emailsTitle: "Email previews", emailsNote: "Demo templates only. Nothing is sent from here. The sign-in code template can be pasted into Supabase as is.", emailsSubject: "Subject", emailsLink: "Email previews", adminHint: "Waitlist sign-ups, invites and email previews", adminTitle: "Beta admin", notAdmin: "This page is for administrators only.", invites: "Invited emails", addInvites: "Add invites (one email per line)", add: "Add", remove: "Remove", // copy-ok: admin page only
+  used: "joined", pending: "not joined yet", waitlist: "Waitlist", invite: "Invite", added: (n: number) => `${n} added.`, empty: "Nothing here yet.", // copy-ok: admin page only
 };

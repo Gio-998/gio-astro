@@ -10,7 +10,7 @@ export const posts: BlogPost[] = [
     blocks: [
       { t: "h", text: "Most people sit near the middle" },
       { t: "p", text: "Four-letter types split people into two boxes on four scales: Extraversion or Introversion, Sensing or Intuition, Thinking or Feeling, Judging or Perceiving. The trouble is that real people don't fall into two neat piles. On almost any personality scale, most of us cluster around the middle, with fewer people at the far ends." },
-      { t: "p", text: "If you're right on the line between Thinking and Feeling, one tired morning or one oddly worded question can tip you to the other side. Your letter flips, but you didn't change at all. Research on the classic type tests found that a large share of people get at least one different letter when they retake the test a few weeks later, and the letters that flip are almost always the ones where the person scored close to the middle." },
+      { t: "p", text: "If you're right on the line between Thinking and Feeling, one tired morning or one oddly worded question can tip you to the other side. Your letter flips, but you didn't change at all. David Pittenger's 1993 review of the classic type test reported that a large share of people get a different result when they retake it a few weeks later. The letters that flip tend to be the ones where the person scored close to the middle." },
       { t: "h", text: "Clarity matters more than the letter" },
       { t: "p", text: "That's why we show a clarity score next to each letter. A clarity of 80% means you leaned the same way on nearly every question, so that letter is stable and worth taking seriously. A clarity of 10% means you split your answers almost evenly. Treat that letter as a coin toss and read both types." },
       { t: "ul", items: [
@@ -25,7 +25,7 @@ export const posts: BlogPost[] = [
       { t: "cta", text: "Take the 28-question type quiz", href: "/quiz/four-letter/" },
       { t: "h", text: "You get the final say" },
       { t: "p", text: "No questionnaire knows you better than you do. Read the description of your result and ask a simple question: does this sound like me? If it doesn't, pick the type that fits better. We keep the quiz result too and show both, so it's always clear what you chose and what the quiz suggested." },
-      { t: "p", text: "Researchers call this self-verification, and it's a good habit for any personality result. A label is useful when it gives you words for something you already sense about yourself. It isn't useful when it tells you who you're supposed to be." },
+      { t: "p", text: "Checking the fit like this is a good habit with any personality result. A label is useful when it gives you words for something you already sense about yourself. It isn't useful when it tells you who you're supposed to be." },
       { t: "h", text: "A better question than \"which type am I?\"" },
       { t: "p", text: "Try asking how you behave in specific situations instead. Do you recharge alone after a party? Do you decide with a list or with your gut? Do you finish early or close to the deadline? The answers are more useful than the four letters, and they don't flip from month to month." },
       { t: "quote", text: "A type is a starting point for a conversation with yourself, not a verdict." },
@@ -77,13 +77,13 @@ export const posts: BlogPost[] = [
     lead: "Compatibility is one of the most searched words in astrology. It's a fair question: will this work? Science has been asking it too, with surveys of thousands of couples, and the answer is more hopeful than any star chart.",
     blocks: [
       { t: "h", text: "What doesn't predict much" },
-      { t: "p", text: "Large studies have looked for links between Sun signs and who marries or divorces whom. One analysis of around ten million marriages in England and Wales found no meaningful pattern. That doesn't make astrology useless as a language for talking about differences, but it does mean your signs aren't a verdict on your relationship." },
+      { t: "p", text: "Large studies have looked for links between Sun signs and who marries or divorces whom. David Voas's analysis of around ten million marriages in England and Wales found no meaningful pattern. That doesn't make astrology useless as a language for talking about differences, but it does mean your signs aren't a verdict on your relationship." },
       { t: "p", text: "More surprising: being similar in personality also matters less than people expect. Couples who score alike on the Big Five traits aren't much happier than couples who score differently. Opposites don't especially attract, but they don't doom each other either." },
       { t: "h", text: "What predicts more: who each of you is" },
-      { t: "p", text: "Personality does matter, just not as a match. What predicts satisfaction is each partner's own traits. People who are emotionally steady, warm and reliable tend to have happier relationships, whoever they're with. The effect isn't huge, but it shows up across many studies and countries." },
+      { t: "p", text: "Personality does matter, just not as a match. What predicts satisfaction is each partner's own traits. People who are emotionally steady, warm and reliable tend to have happier relationships, whoever they're with. The effect isn't huge, but it shows up across many studies and countries (Malouff et al., 2010; Dyrenforth et al., 2010)." },
       { t: "p", text: "That's good news, because these are things you can work on. Nobody can change their Sun sign. Anybody can practise answering kindly when they're stressed." },
       { t: "h", text: "What predicts most: how you treat each other" },
-      { t: "p", text: "In 2020, a team of researchers pooled data from 43 long-term studies of more than 11,000 couples and asked a machine-learning model to find the best predictors of relationship quality. The top ones weren't about either person on their own. They were about the relationship itself:" },
+      { t: "p", text: "In 2020, a team led by Samantha Joel pooled data from 43 long-term studies of more than 11,000 couples and asked a machine-learning model to find the best predictors of relationship quality. The top ones weren't about either person on their own. They were about the relationship itself:" },
       { t: "ul", items: [
         "Feeling that your partner is committed to you.",
         "Appreciation and gratitude.",
@@ -93,7 +93,7 @@ export const posts: BlogPost[] = [
       ] },
       { t: "p", text: "In other words, the best predictor of a good relationship is what you do together, day after day. Small, repeated things: saying thank you, turning toward each other when one of you wants attention, and making up after a fight." },
       { t: "h", text: "Repair beats perfection" },
-      { t: "p", text: "Every couple argues. What separates lasting couples is often how quickly they repair: a joke that breaks the tension, an apology, a hand on the shoulder. Research on couples in conflict suggests that happy partners aren't the ones who never fight, but the ones who soften the start of hard talks and accept attempts to make up." },
+      { t: "p", text: "Every couple argues. What separates lasting couples is often how quickly they repair: a joke that breaks the tension, an apology, a hand on the shoulder. John Gottman's research on couples in conflict suggests that happy partners aren't the ones who never fight, but the ones who soften the start of hard talks and accept attempts to make up." },
       { t: "quote", text: "The stars set the scene, psychology explains the pattern, and how you treat each other writes the story." },
       { t: "h", text: "So how do we score compatibility?" },
       { t: "p", text: "Our compatibility reports show many lenses side by side, from astrology and the Chinese zodiac to the Big Five and attachment styles. Each one is labelled by how much evidence stands behind it. The research-based lenses carry the most weight in the advice, and the traditional ones are there for reflection and fun." },

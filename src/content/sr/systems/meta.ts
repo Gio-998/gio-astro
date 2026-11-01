@@ -38,7 +38,7 @@ export const meta: typeof En.meta = {
     method: "Tražimo trenutak kad prividna dužina Sunca postane jednaka onoj iz tvoje natalne karte, računato iz preciznih astronomskih podataka. Tema dolazi od podznaka povratka kad je vreme rođenja poznato, a inače od mesečevog znaka povratka. Koristimo tvoje mesto rođenja; mnogi astrolozi uzimaju mesto gde provodiš rođendan.",
     sources: [] },
   biorhythm: { name: "Bioritmovi", short: "Bioritmovi", evidence: "modern",
-    what: "Tri talasa koja počinju na dan tvog rođenja: fizički (23 dana), emocionalni (28) i mentalni (33). Omiljena stvar 1970-ih. Istraživanja nisu našla pravu moć predviđanja, pa ih koristimo samo kao razigran dnevni podsticaj.",
+    what: "Tri talasa koja počinju na dan tvog rođenja: fizički (23 dana), emocionalni (28) i mentalni (33). Omiljena stvar 1970-ih. Istraživanja nisu našla pravu moć predviđanja (Hines, 1998), pa ih koristimo samo kao razigran dnevni podsticaj.",
     inputs: "Datum rođenja i današnji datum.",
     method: "sin(2π × dani od rođenja ÷ dužina ciklusa), prikazano od -100 do 100. „Prelazni dan“ je dan kad talas prelazi nulu.",
     sources: [] },

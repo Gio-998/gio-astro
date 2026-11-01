@@ -72,7 +72,7 @@ export const care: Record<Care, { name: string; text: string; tip: string }> = {
   help: { name: "Hilfreiche Taten", text: "Hilfe bei einer Aufgabe, ein gelöstes Problem oder ein ungefragt gekochter Tee fühlt sich fürsorglich an.", tip: "Nimm eine Aufgabe von ihrer Liste." },
   touch: { name: "Körperliche Nähe", text: "Umarmungen, eine Hand auf der Schulter, nah beieinander sitzen: Berührung sagt es am besten (immer mit Einverständnis).", tip: "Eine lange Umarmung: mindestens 20 Sekunden." },
 };
-export const careNote: string = "Forschung deutet darauf hin, dass die meisten Menschen alle fünf Arten von Zuwendung schätzen, und dass es weniger auf Übereinstimmung ankommt als darauf, die Lieblingsarten des anderen zu lernen. Nutze das als Übersetzungshilfe.";
+export const careNote: string = "Forschung deutet darauf hin, dass die meisten Menschen alle fünf Arten von Zuwendung schätzen, und dass es weniger auf Übereinstimmung ankommt als darauf, die Lieblingsarten des anderen zu lernen (Impett, Park & Muise, 2024). Nutze das als Übersetzungshilfe.";
 
 export const shadowAxes: Record<Axis, { classical: string; virtue: string; shadow: string; gift: string; practice: string }> = {
   pride: { classical: "Stolz", virtue: "Demut", shadow: "Fehler schwer zugeben; recht haben müssen.", gift: "Selbstachtung und der Mut, aufrecht zu stehen.", practice: "Sag diese Woche einmal: Da hattest du recht." },

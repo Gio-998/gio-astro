@@ -59,7 +59,7 @@ const Chevron = ({ open }: { open: boolean }) => <svg viewBox="0 0 10 6" classNa
 function ItemLink({ it, onPick }: { it: Item; onPick?: () => void }) {
   const h = useHref(); const { on } = useActive(); const act = on(it.href);
   return (
-    <Link href={h(it.href)} onClick={onPick} className={`flex min-h-[52px] items-center gap-3 rounded-xl px-2.5 py-2 outline-none transition hover:bg-white/[0.06] focus-visible:ring-1 focus-visible:ring-gold/60 ${act ? "bg-white/[0.05]" : ""}`}>
+    <Link prefetch={false} href={h(it.href)} onClick={onPick} className={`flex min-h-[52px] items-center gap-3 rounded-xl px-2.5 py-2 outline-none transition hover:bg-white/[0.06] focus-visible:ring-1 focus-visible:ring-gold/60 ${act ? "bg-white/[0.05]" : ""}`}>
       <Emblem id={it.icon} className="h-7 w-7 shrink-0" />
       <span className="min-w-0">
         <span className={`block text-sm font-medium ${act ? "text-gold" : "text-mist"}`}>{it.title}</span>
@@ -93,7 +93,7 @@ export function DesktopNav() {
         return (
           <div key={g.key} onMouseEnter={() => later(g.key, open ? 0 : 90)} onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget as Node)) later(null, 80); }}>
             <div className={`flex items-center rounded-full transition ${on || act ? "bg-white/10 text-gold" : "text-mist/80 hover:bg-white/5 hover:text-mist"}`}>
-              <Link href={h(g.href)} data-testid={`nav-${g.key}`} className="flex min-h-[44px] items-center whitespace-nowrap pl-3.5 pr-1">{g.label}</Link>
+              <Link prefetch={false} href={h(g.href)} data-testid={`nav-${g.key}`} className="flex min-h-[44px] items-center whitespace-nowrap pl-3.5 pr-1">{g.label}</Link>
               <button ref={(el) => { refs.current[g.key] = el; }} type="button" aria-expanded={on} aria-controls={`${uid}-${g.key}`} aria-label={`${g.label}: ${N.menu}`}
                 onClick={() => setOpen(on ? null : g.key)} className="grid h-11 w-10 place-items-center rounded-full pr-2">
                 <Chevron open={on} />
@@ -152,7 +152,7 @@ export function MoreSheet({ open, onClose }: { open: boolean; onClose: () => voi
                   </button>
                   {on && (
                     <ul className="grid gap-x-3 pb-3 min-[480px]:grid-cols-2">
-                      {g.items.map((it) => <li key={it.href}><Link href={h(it.href)} onClick={close} className="flex min-h-[48px] items-center rounded-xl px-3 text-[15px] text-mist/90 transition hover:bg-white/[0.06]">{it.title}</Link></li>)}
+                      {g.items.map((it) => <li key={it.href}><Link prefetch={false} href={h(it.href)} onClick={close} className="flex min-h-[48px] items-center rounded-xl px-3 text-[15px] text-mist/90 transition hover:bg-white/[0.06]">{it.title}</Link></li>)}
                     </ul>
                   )}
                 </section>
@@ -160,7 +160,7 @@ export function MoreSheet({ open, onClose }: { open: boolean; onClose: () => voi
             })}
           </div>
           <ul className="mt-3 grid grid-cols-2 gap-x-3">
-            {rest.map(([href, label]) => <li key={href}><Link href={h(href)} onClick={close} className="flex min-h-[48px] items-center text-[14.5px] text-dim transition hover:text-gold">{label}</Link></li>)}
+            {rest.map(([href, label]) => <li key={href}><Link prefetch={false} href={h(href)} onClick={close} className="flex min-h-[48px] items-center text-[14.5px] text-dim transition hover:text-gold">{label}</Link></li>)}
           </ul>
         </>}
       </div>
@@ -178,7 +178,7 @@ export function TabBar() {
     <>
       <nav aria-label={N.aria.tabs} className="fixed inset-x-0 bottom-0 z-[56] grid grid-cols-5 border-t border-white/10 bg-ink/90 pb-[env(safe-area-inset-bottom)] backdrop-blur-xl lg:hidden" data-testid="tab-bar">
         {groups.map((g) => { const on = !more && inGroup(g); return (
-          <Link key={g.key} href={h(g.href)} aria-current={on ? "page" : undefined} data-testid={`tab-${g.key}`} className={`flex min-h-[60px] flex-col items-center justify-center gap-1 text-[11px] leading-none transition ${on ? "text-gold" : "text-mist/70"}`}>
+          <Link prefetch={false} key={g.key} href={h(g.href)} aria-current={on ? "page" : undefined} data-testid={`tab-${g.key}`} className={`flex min-h-[60px] flex-col items-center justify-center gap-1 text-[11px] leading-none transition ${on ? "text-gold" : "text-mist/70"}`}>
             <Emblem id={g.icon} className={`h-6 w-6 ${on ? "" : "opacity-75"}`} />{labels[g.key]}
           </Link>); })}
         <button type="button" onClick={() => setMore(!more)} aria-expanded={more} aria-haspopup="dialog" data-testid="tab-more" className={`flex min-h-[60px] flex-col items-center justify-center gap-1 text-[11px] leading-none ${more ? "text-gold" : "text-mist/70"}`}>

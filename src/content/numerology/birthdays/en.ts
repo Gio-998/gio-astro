@@ -47,7 +47,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Mara, born on 1 March, left a safe office job at twenty six to open a bicycle repair shop. Her family thought it was madness. Three years later she runs two shops and trains young mechanics, and she still says the hardest part was not the risk but learning to delegate."
     ]
@@ -107,7 +107,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Ilir, born on 2 November, works as a hospital interpreter. Doctors say patients relax the moment he enters the room. He rarely speaks first in meetings, but when he does, people listen, because he has already understood what everyone in the room is afraid of."
     ]
@@ -173,7 +173,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Lena, born on 3 July, was the class clown who became a primary school teacher. Her pupils learn fractions through songs and history through puppet shows. She admits she still struggles with paperwork, and now pairs with a colleague who loves forms as much as she loves glitter."
     ]
@@ -239,7 +239,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Petar, born on 4 April, restores old stone houses in mountain villages. Every wall he builds is level to the millimetre. He took up dancing at forty because his daughter dared him, and found that the same patience that sets stones also learns tango."
     ]
@@ -305,7 +305,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Ana, born on 5 September, has lived in four countries and speaks five languages. She works as a tour leader in summer and a ski instructor in winter. At thirty eight she bought a small flat in her home town, and calls it the best adventure yet: learning to stay."
     ]
@@ -371,7 +371,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Goran, born on 6 December, runs a small family restaurant where regulars have their own mugs. He knows which guest is grieving and which one just got engaged. When his own health faltered, the regulars cooked for him for a month, and he learned that care can flow both ways."
     ]
@@ -431,7 +431,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Teodora, born on 7 October, spent ten years studying soil microbes before anyone outside her lab cared. When drought hit, farmers began calling her daily. She still prefers her microscope to a microphone, but she has learned to explain her work in plain words."
     ]
@@ -503,7 +503,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Viktor, born on 8 January, took over his father's failing printing house at twenty nine. He cut costs, retrained staff and moved into packaging. Ten years later the company employs ninety people, and he says the best decision was giving every worker a share in the profit."
     ]
@@ -575,7 +575,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Sara, born on 9 June, worked as a nurse in three countries before founding a small charity for children with hearing loss. Her home is full of postcards from former patients. She says the hardest lesson was learning to take holidays."
     ]
@@ -647,7 +647,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Marko, born on 10 May, failed with his first two cafés. The third, opened in an old bakery, became the busiest in his town. He keeps the menus of the first two framed on the wall and tells young owners that each closure taught him exactly what the next place needed."
     ]
@@ -719,7 +719,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Jovana, born on 11 February, works as a music therapist with children who do not speak. Parents say she seems to hear what their children want to say. She protects her evenings fiercely: no screens, a walk, and early sleep, because she knows her gift needs rest to stay clear."
     ]
@@ -791,7 +791,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Elena, born on 12 August, started a monthly neighbourhood book swap in a library courtyard. Within two years it had grown into a small street festival with readings, music and food stalls. She still writes poems, now finally finding time for them on Sunday mornings."
     ]
@@ -863,7 +863,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Bojan, born on 13 November, inherited a vineyard that had been neglected for a decade. He spent five years replanting row by row while working a second job. His wines now win regional prizes, and he still prunes every vine himself."
     ]
@@ -935,7 +935,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Nina, born on 14 June, worked on cruise ships for six years and visited fifty countries. When she started overspending and sleeping badly, she set a simple rule: one adventure a month, planned in advance. Today she runs a small travel agency and says the rule saved her joy."
     ]
@@ -1007,7 +1007,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Dragan, born on 15 April, runs a guesthouse in a lake town where returning guests are greeted like cousins. He paints in winter and sells the pictures in summer. When he learned to let his adult children make their own choices, he says, the house became even warmer."
     ]
@@ -1079,7 +1079,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Milena, born on 16 March, built a glamorous career in advertising until a burnout ended it overnight. In the year that followed she trained as a psychotherapist. She says the collapse was the most painful and most useful thing that ever happened to her."
     ]
@@ -1157,7 +1157,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Aleksandar, born on 17 September, grew up in a small village and now leads a research institute. Every summer he returns to teach a free science camp for village children, because, he says, someone once lit a star for him."
     ]
@@ -1235,7 +1235,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Vesna, born on 18 May, was a corporate manager who began volunteering at a shelter. Within five years she was running a network of shelters across the region, using every budgeting skill her old job taught her."
     ]
@@ -1313,7 +1313,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Damjan, born on 19 January, built a software company alone for seven years and nearly burned out. When he finally hired a co founder he trusted, the company tripled. He says learning to say I need you was harder than writing any code."
     ]
@@ -1391,7 +1391,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Katerina, born on 20 October, works as a midwife in a small town. Mothers say her calm voice is the first thing they remember about giving birth. At forty she started singing in a choir and found that her sensitivity, once a burden, had become her art."
     ]
@@ -1469,7 +1469,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Luka, born on 21 August, organises cultural festivals that bring together musicians from across the Balkans. He speaks four languages and can calm a nervous artist in any of them. He says the best moment is the last night, when everything has come together."
     ]
@@ -1547,7 +1547,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Marija, born on the 22nd of March, spent ten years turning an abandoned tobacco warehouse in her home town into a library and craft centre. She wrote every grant herself and learned welding to save money. On opening day she admitted the hardest part was letting volunteers do things differently from her drawings."
     ]
@@ -1625,7 +1625,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Petar, born on the 23rd of June, has worked as a tour guide, a radio host and a wine importer. Now he runs walking tours that end in small family cellars. He says each job taught him the same thing: people want a good story and someone who listens to theirs."
     ]
@@ -1703,7 +1703,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Elena, born on the 24th of September, runs a small guesthouse by the lake. Guests return year after year because she remembers how they take their coffee. When she broke her leg one summer, her regular guests cooked for her, and she cried, surprised to be on the receiving side."
     ]
@@ -1781,7 +1781,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Stefan, born on the 25th of November, worked as a mechanic before retraining as an insurance fraud investigator. Colleagues say he notices the scratch on a bumper that does not match the story. At home he grows rare tomatoes and keeps a notebook of every seed that failed and why."
     ]
@@ -1859,7 +1859,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Ana, born on the 26th of April, took over her father's small bakery when he fell ill and turned it into four shops. She still knows every employee's children by name. When asked about her secret, she says the books must balance, and so must the hearts."
     ]
@@ -1937,7 +1937,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Goran, born on the 27th of July, taught literature in a village school for thirty years. Former students, now doctors and farmers, still visit him. After retiring he started reading clubs for refugees, saying a good story is the first shared home."
     ]
@@ -2015,7 +2015,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Ivana, born on the 28th of February, started a cooperative of fruit growers in her valley after buyers kept lowering prices. She was the first to sign and the last to speak at every meeting. Ten years later the cooperative exports apricot jam abroad, and she still insists every member gets an equal vote."
     ]
@@ -2093,7 +2093,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Nikola, born on the 29th of October, worked in a bank for years while writing songs at night. After a long illness he left to teach music in a hospital ward for children. Parents say he can tell which song a child needs before the child knows it."
     ]
@@ -2171,7 +2171,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Sara, born on the 30th of May, began telling stories to her younger cousins and now hosts a popular radio show about local legends. She records interviews with grandmothers in villages and turns them into short episodes. She says her best stories are the ones she nearly forgot to ask about."
     ]
@@ -2249,7 +2249,7 @@ export const bdayEn: BdaySet = {
     ]
    },
    {
-    "title": "A short portrait",
+    "title": "An imagined portrait",
     "paras": [
      "Bojan, born on the 31st of December, is a furniture maker who restores old village chests. He keeps every hand plane his grandfather used and has added his own tools beside them. Clients say his pieces feel both new and familiar, as if they had always belonged in the room."
     ]

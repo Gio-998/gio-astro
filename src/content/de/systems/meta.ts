@@ -35,7 +35,7 @@ export const meta: Record<string, SysMeta> = {
     method: "Wir suchen den Moment, in dem die scheinbare Länge der Sonne deinem Geburtswert entspricht, berechnet aus genauen astronomischen Daten. Das Thema kommt vom Aszendenten der Rückkehr, wenn deine Geburtszeit bekannt ist, sonst vom Mondzeichen der Rückkehr. Wir nutzen deinen Geburtsort; viele Astrologen nehmen den Ort, an dem du deinen Geburtstag verbringst.",
     sources: [] },
   biorhythm: { name: "Biorhythmus", short: "Biorhythmus", evidence: "modern",
-    what: "Drei Wellen, die an deinem Geburtstag beginnen: körperlich (23 Tage), emotional (28) und geistig (33). Ein Liebling der 1970er. Studien fanden keine echte Vorhersagekraft, also nutzen wir ihn nur als spielerischen Impuls für den Tag.",
+    what: "Drei Wellen, die an deinem Geburtstag beginnen: körperlich (23 Tage), emotional (28) und geistig (33). Ein Liebling der 1970er. Studien fanden keine echte Vorhersagekraft (Hines, 1998), also nutzen wir ihn nur als spielerischen Impuls für den Tag.",
     inputs: "Geburtsdatum und heutiges Datum.",
     method: "sin(2π × Tage seit der Geburt ÷ Zykluslänge), angezeigt von -100 bis 100. Ein Wechseltag ist, wenn eine Welle die Null kreuzt.",
     sources: [] },

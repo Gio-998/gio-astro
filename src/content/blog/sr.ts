@@ -10,7 +10,7 @@ export const posts: BlogPost[] = [
     blocks: [
       { t: "h", text: "Većina ljudi stoji blizu sredine" },
       { t: "p", text: "Tipovi od četiri slova dele ljude u dve kutije na četiri skale: ekstraverzija ili introverzija, opažanje ili intuicija, razmišljanje ili osećanje, procenjivanje ili percepcija. Problem je što stvarni ljudi ne padaju u dve uredne gomile. Na skoro svakoj skali ličnosti većina nas se skuplja oko sredine, a manje ljudi stoji na krajevima." },
-      { t: "p", text: "Ako si tačno na liniji između razmišljanja i osećanja, jedno umorno jutro ili jedno čudno formulisano pitanje mogu da te prebace na drugu stranu. Slovo se promeni, a ti se nisi promenio nimalo. Istraživanja klasičnih testova tipa pokazala su da velik deo ljudi dobije bar jedno drugačije slovo kad test ponovi nekoliko nedelja kasnije, a menjaju se skoro uvek slova na kojima je osoba bila blizu sredine." },
+      { t: "p", text: "Ako si tačno na liniji između razmišljanja i osećanja, jedno umorno jutro ili jedno čudno formulisano pitanje mogu da te prebace na drugu stranu. Slovo se promeni, a ti se nisi promenio nimalo. Pregled Dejvida Pitendžera (David Pittenger) iz 1993. o klasičnom testu tipa pokazao je da velik deo ljudi dobije drugačiji rezultat kad test ponovi nekoliko nedelja kasnije. Menjaju se uglavnom slova na kojima je osoba bila blizu sredine." },
       { t: "h", text: "Jasnoća je važnija od slova" },
       { t: "p", text: "Zato pored svakog slova prikazujemo ocenu jasnoće. Jasnoća od 80% znači da si skoro na svakom pitanju naginjao na istu stranu, pa je to slovo stabilno i vredi ga shvatiti ozbiljno. Jasnoća od 10% znači da su ti odgovori podeljeni skoro ravnomerno. Takvo slovo gledaj kao bacanje novčića i pročitaj oba tipa." },
       { t: "ul", items: [
@@ -25,7 +25,7 @@ export const posts: BlogPost[] = [
       { t: "cta", text: "Uradi test tipa od 28 pitanja", href: "/quiz/four-letter/" },
       { t: "h", text: "Poslednja reč je tvoja" },
       { t: "p", text: "Nijedan upitnik te ne poznaje bolje nego ti sam. Pročitaj opis svog rezultata i postavi jednostavno pitanje: da li ovo liči na mene? Ako ne liči, izaberi tip koji bolje odgovara. Čuvamo i rezultat testa i prikazujemo oba, pa je uvek jasno šta si izabrao, a šta je test predložio." },
-      { t: "p", text: "Istraživači ovo zovu samoproverom, a to je dobra navika za svaki rezultat o ličnosti. Etiketa je korisna kad ti daje reči za nešto što već osećaš o sebi. Nije korisna kad ti govori ko bi trebalo da budeš." },
+      { t: "p", text: "Takva provera je dobra navika za svaki rezultat o ličnosti. Etiketa je korisna kad ti daje reči za nešto što već osećaš o sebi. Nije korisna kad ti govori ko bi trebalo da budeš." },
       { t: "h", text: "Bolje pitanje od \"koji sam tip?\"" },
       { t: "p", text: "Probaj da se pitaš kako se ponašaš u konkretnim situacijama. Da li se posle žurke puniš sam? Odlučuješ li uz spisak ili po osećaju? Završavaš li ranije ili blizu roka? Odgovori su korisniji od četiri slova i ne menjaju se iz meseca u mesec." },
       { t: "quote", text: "Tip je početak razgovora sa samim sobom, a ne presuda." },
@@ -77,13 +77,13 @@ export const posts: BlogPost[] = [
     lead: "Kompatibilnost je jedna od najtraženijih reči u astrologiji. Pitanje je pošteno: da li će ovo uspeti? I nauka ga postavlja, u anketama hiljada parova, a odgovor je ohrabrujući više od bilo koje zvezdane karte.",
     blocks: [
       { t: "h", text: "Šta ne predviđa mnogo" },
-      { t: "p", text: "Velike studije su tražile vezu između Sunčevih znakova i toga ko se s kim venčava ili razvodi. Jedna analiza oko deset miliona brakova u Engleskoj i Velsu nije našla nikakav smislen obrazac. To ne čini astrologiju beskorisnom kao jezik za razgovor o razlikama, ali znači da tvoji znakovi nisu presuda tvojoj vezi." },
+      { t: "p", text: "Velike studije su tražile vezu između Sunčevih znakova i toga ko se s kim venčava ili razvodi. Analiza Dejvida Voasa (David Voas) na oko deset miliona brakova u Engleskoj i Velsu nije našla nikakav smislen obrazac. To ne čini astrologiju beskorisnom kao jezik za razgovor o razlikama, ali znači da tvoji znakovi nisu presuda tvojoj vezi." },
       { t: "p", text: "Još više iznenađuje što je sličnost u ličnosti takođe manje važna nego što ljudi očekuju. Parovi sa sličnim rezultatima na Velikih pet nisu mnogo srećniji od parova sa različitim. Suprotnosti se ne privlače naročito, ali ni ne osuđuju jedna drugu na propast." },
       { t: "h", text: "Šta predviđa više: ko je svako od vas" },
-      { t: "p", text: "Ličnost je važna, ali ne kao poklapanje. Zadovoljstvo predviđaju osobine svakog partnera ponaosob. Ljudi koji su emotivno stabilni, topli i pouzdani obično imaju srećnije veze, s kim god da su. Efekat nije ogroman, ali se pojavljuje u mnogim studijama i zemljama." },
+      { t: "p", text: "Ličnost je važna, ali ne kao poklapanje. Zadovoljstvo predviđaju osobine svakog partnera ponaosob. Ljudi koji su emotivno stabilni, topli i pouzdani obično imaju srećnije veze, s kim god da su. Efekat nije ogroman, ali se pojavljuje u mnogim studijama i zemljama (Malouff i sar., 2010; Dyrenforth i sar., 2010)." },
       { t: "p", text: "To je dobra vest, jer su to stvari na kojima možeš da radiš. Niko ne može da promeni svoj Sunčev znak. Svako može da vežba da odgovori ljubazno kad je pod stresom." },
       { t: "h", text: "Šta predviđa najviše: kako se ponašate jedno prema drugom" },
-      { t: "p", text: "Godine 2020. tim istraživača objedinio je podatke iz 43 dugoročne studije sa više od 11.000 parova i zatražio od modela mašinskog učenja da nađe najbolje prediktore kvaliteta veze. Oni na vrhu nisu bili vezani ni za jednu osobu samu za sebe. Ticali su se same veze:" },
+      { t: "p", text: "Godine 2020. tim koji je predvodila Samanta Džoel (Samantha Joel) objedinio je podatke iz 43 dugoročne studije sa više od 11.000 parova i zatražio od modela mašinskog učenja da nađe najbolje prediktore kvaliteta veze. Oni na vrhu nisu bili vezani ni za jednu osobu samu za sebe. Ticali su se same veze:" },
       { t: "ul", items: [
         "Osećaj da je partner posvećen tebi.",
         "Uvažavanje i zahvalnost.",
@@ -93,7 +93,7 @@ export const posts: BlogPost[] = [
       ] },
       { t: "p", text: "Drugim rečima, najbolji prediktor dobre veze je ono što radite zajedno, dan za danom. Male, ponovljene stvari: da kažete hvala, da se okrenete jedno drugom kad nekome od vas treba pažnja i da se pomirite posle svađe." },
       { t: "h", text: "Popravka pobeđuje savršenstvo" },
-      { t: "p", text: "Svaki par se svađa. Parove koji traju često odvaja to koliko se brzo poprave: šala koja razbije napetost, izvinjenje, ruka na ramenu. Istraživanja parova u sukobu pokazuju da srećni partneri nisu oni koji se nikad ne svađaju, već oni koji blago počinju teške razgovore i prihvataju pokušaje pomirenja." },
+      { t: "p", text: "Svaki par se svađa. Parove koji traju često odvaja to koliko se brzo poprave: šala koja razbije napetost, izvinjenje, ruka na ramenu. Istraživanja Džona Gotmana (John Gottman) o parovima u sukobu pokazuju da srećni partneri nisu oni koji se nikad ne svađaju, već oni koji blago počinju teške razgovore i prihvataju pokušaje pomirenja." },
       { t: "quote", text: "Zvezde postavljaju scenu, psihologija objašnjava obrazac, a to kako se ponašate jedno prema drugom piše priču." },
       { t: "h", text: "Kako onda ocenjujemo kompatibilnost?" },
       { t: "p", text: "Naši izveštaji o kompatibilnosti prikazuju mnogo sočiva jedno pored drugog, od astrologije i kineskog horoskopa do Velikih pet i stilova vezivanja. Svako je označeno prema tome koliko dokaza stoji iza njega. Sočiva zasnovana na istraživanjima nose najveću težinu u savetima, a tradicionalna su tu za razmišljanje i zabavu." },

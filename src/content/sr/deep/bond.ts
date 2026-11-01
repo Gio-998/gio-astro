@@ -55,7 +55,7 @@ export const desirePair: Record<PairKey, string> = {
 };
 
 export const attachPair: Record<string, { text: string; flag?: string }> = {
-  "secure-secure": { text: "Oboje se prilično sigurno osećate i u bliskosti i u prostoru. Sukobi su neprijatni, ali nisu katastrofa; umete da popravite stvari. Ovo je najjača osnova koju istraživanja poznaju za dugoročnu sreću." },
+  "secure-secure": { text: "Oboje se prilično sigurno osećate i u bliskosti i u prostoru. Sukobi su neprijatni, ali nisu katastrofa; umete da popravite stvari. To je čvrsta osnova za dugoročnu sreću." },
   "anxious-secure": { text: "Postojanost sigurnog partnera vremenom može da umiri strahove anksioznog. Ta kombinacija može da leči kad sigurni nudi uveravanje, a anksiozni uči da mu veruje." },
   "avoidant-secure": { text: "Sigurni partner daje izbegavajućem prostor bez kazne i nežno poziva na bliskost. Vremenom to može da omekša izbegavajući obrazac." },
   "fearful-secure": { text: "Doslednost sigurnog partnera može mnogo da leči onoga sa stilom privuci-odgurni, ako su oboje strpljivi sa tim klatnom." },

@@ -112,7 +112,7 @@ export const premium: PremiumText = {
   soon: {
     eyebrow: "Uskoro",
     title: "Premium još nije otvoren",
-    text: "Tokom bete sve je besplatno za tebe. Prijavi se za rani pristup i javićemo ti pre svih kad se otvore Premium i dubinska čitanja.",
+    text: "Za sada je sve besplatno za tebe. Prijavi se za rani pristup i javićemo ti pre svih kad se otvore Premium i dubinska čitanja.",
     join: "Prijavi se za rani pristup",
     joined: "Na listi si za rani pristup. Javljamo ti pre svih.",
     signIn: "Prijavi se da se upišeš",
@@ -132,7 +132,7 @@ export const premium: PremiumText = {
     sheetLead: "Premium otvara svako poglavlje i svaku prognozu, za tebe i za svakog koga dodaš.",
     demoCheckout: "Demo plaćanje (bez naplate)",
     later: "Ne sada",
-    openBeta: "besplatno tokom bete",
+    openBeta: "za sada besplatno",
   },
   forecast: {
     eyebrow: "Premium prognoza",
@@ -167,7 +167,7 @@ export const premium: PremiumText = {
     open: "Otvori sad",
     back: "Nazad", next: "Nastavi",
     closed: "Plaćanje još nije otvoreno",
-    closedText: "Plaćanja nisu uključena tokom bete. Upiši se za rani pristup i prvo ćemo tebi javiti.",
+    closedText: "Plaćanja još nisu uključena. Upiši se za rani pristup i prvo ćemo tebi javiti.",
     order: "Demo porudžbina",
   },
   admin: {

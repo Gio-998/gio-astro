@@ -185,8 +185,8 @@ export const beta = {
   banner: "Ein Konto ist freiwillig. Tests und Horoskope funktionieren auch ohne.",
   emailLabel: "Deine E-Mail", emailPh: "du@beispiel.de", join: "Halte mich auf dem Laufenden ✦", joined: "Danke, wir haben deine E-Mail. 💫",
   invalid: "Bitte gib eine gültige E-Mail-Adresse ein.", haveInvite: "Du hast ein Konto? Anmelden →", privacy: "Wir nutzen deine E-Mail nur für Neuigkeiten von Horoscop. Kein Spam, Abmeldung jederzeit.",
-  emailsTitle: "E-Mail-Vorschau", emailsNote: "Nur Demo-Vorlagen. Von hier wird nichts verschickt. Die Vorlage für den Anmeldecode kann direkt übernommen werden.", emailsSubject: "Betreff", emailsLink: "E-Mail-Vorschau", adminHint: "Wartelisten-Einträge, Einladungen und E-Mail-Vorschau", adminTitle: "Beta-Verwaltung", notAdmin: "Diese Seite ist nur für Admins.", invites: "Eingeladene E-Mails", addInvites: "Einladungen hinzufügen (eine E-Mail pro Zeile)", add: "Hinzufügen", remove: "Entfernen",
-  used: "beigetreten", pending: "noch nicht beigetreten", waitlist: "Warteliste", invite: "Einladen", added: (n: number) => `${n} hinzugefügt.`, empty: "Hier ist noch nichts.",
+  emailsTitle: "E-Mail-Vorschau", emailsNote: "Nur Demo-Vorlagen. Von hier wird nichts verschickt. Die Vorlage für den Anmeldecode kann direkt übernommen werden.", emailsSubject: "Betreff", emailsLink: "E-Mail-Vorschau", adminHint: "Wartelisten-Einträge, Einladungen und E-Mail-Vorschau", adminTitle: "Beta-Verwaltung", notAdmin: "Diese Seite ist nur für Admins.", invites: "Eingeladene E-Mails", addInvites: "Einladungen hinzufügen (eine E-Mail pro Zeile)", add: "Hinzufügen", remove: "Entfernen", // copy-ok: admin page only
+  used: "beigetreten", pending: "noch nicht beigetreten", waitlist: "Warteliste", invite: "Einladen", added: (n: number) => `${n} hinzugefügt.`, empty: "Hier ist noch nichts.", // copy-ok: admin page only
 };
 
 export const profile = {
@@ -298,7 +298,7 @@ export const pair = {
   tarotTogether: (birth: string) => birth.replace(/^Du /, "Zusammen ").replace(/^Deine /, "Eure gemeinsame ").replace(/^Dein /, "Euer gemeinsamer "),
   yinyang: (a: number, b: number, c: number, far: boolean) => `Balancepunkte ${a} und ${b}; zusammen liegt ihr bei ${c} (50 = perfekt ausgeglichen). ${far ? "Einer führt mit Handeln, der andere mit Empfangen: eine klassische Ergänzung." : "Ihr habt ein ähnliches Energieniveau: leichter Rhythmus, also macht Platz für Tun und Sein."}`,
   brings5: (na: string, ta: string, nb: string, tb: string) => `Was jeder von euch mitbringt. ${na}: ${ta}. ${nb}: ${tb}.`,
-  foundation: (f: number, s: number) => `Fundament (Wärme, Verlässlichkeit und Ruhe bei euch beiden): ${f}/100. Ähnlichkeit: ${s}/100. Laut Forschung zählen die eigene Freundlichkeit und emotionale Stabilität viel mehr als Übereinstimmung.`,
+  foundation: (f: number, s: number) => `Fundament (Wärme, Verlässlichkeit und Ruhe bei euch beiden): ${f}/100. Ähnlichkeit: ${s}/100. Laut Forschung zählen die eigene Freundlichkeit und emotionale Stabilität viel mehr als Übereinstimmung (Dyrenforth et al., 2010).`,
   needs: " braucht ",
   careLine: (n: string, give: string, ok: boolean, other: string, want: string, tip: string) => `${n} gibt ${give}${ok ? `, und das kommt bei ${other} perfekt an.` : `. ${other} fühlt sich am meisten umsorgt durch ${want}. Probier: ${tip}`}`,
   with: " mit ",

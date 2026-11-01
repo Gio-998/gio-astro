@@ -1681,7 +1681,7 @@ export const pairEn: PairSet = {
    {
     "title": "An old saying",
     "paras": [
-     "The world is a book, and those who do not travel read only one page, Saint Augustine wrote. This pair wants to read the whole book, and the 9 likes to underline the kind passages."
+     "Live and learn, the old saying goes. This pair takes it literally and reads the world like one big book, and the 9 likes to underline the kind passages."
     ]
    },
    {
@@ -3961,7 +3961,7 @@ export const pairEn: PairSet = {
    {
     "title": "A short portrait",
     "paras": [
-     "Maja, life path 11, imagined a garden on the roof of a hospital where patients could sit among plants. Stojan, life path 22, a structural engineer, calculated how much soil the roof could hold and found the money to reinforce it. The garden opened two years later. Nurses say patients there ask for fewer painkillers."
+     "Maja, life path 11, imagined a garden on the roof of a hospital where patients could sit among plants. Stojan, life path 22, a structural engineer, calculated how much soil the roof could hold and found the money to reinforce it. The garden opened two years later. Nurses say it is now the favourite spot in the whole hospital."
     ]
    },
    {
@@ -4039,7 +4039,7 @@ export const pairEn: PairSet = {
    {
     "title": "A short portrait",
     "paras": [
-     "Ema, life path 33, ran a choir for people with dementia. Bojko, life path 11, a composer, wrote songs for them based on the old melodies they still remembered. At the first concert, a woman who had not spoken for months sang every word. They have written forty songs together since then."
+     "Ema, life path 33, ran a choir for people with dementia. Bojko, life path 11, a composer, wrote songs for them based on the old melodies they still remembered. At the first concert, a woman who rarely spoke sang every word. They have written forty songs together since then."
     ]
    },
    {

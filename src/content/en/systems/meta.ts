@@ -35,7 +35,7 @@ export const meta: Record<string, SysMeta> = {
     method: "We search for the moment the Sun's apparent longitude equals your natal value, calculated from precise astronomical data. The theme comes from the return Ascendant when your birth time is known, otherwise from the return Moon sign. We use your birthplace; many astrologers use where you spend the birthday.",
     sources: [] },
   biorhythm: { name: "Biorhythms", short: "Biorhythms", evidence: "modern",
-    what: "Three waves that start on the day you're born: physical (23 days), emotional (28) and mental (33). A 1970s favourite. Studies found no real predictive power, so we use it only as a playful daily nudge.",
+    what: "Three waves that start on the day you're born: physical (23 days), emotional (28) and mental (33). A 1970s favourite. Studies found no real predictive power (Hines, 1998), so we use it only as a playful daily nudge.",
     inputs: "Birth date and today's date.",
     method: "sin(2π × days since birth ÷ cycle length), shown from -100 to 100. A 'switch day' is when a wave crosses zero.",
     sources: [] },

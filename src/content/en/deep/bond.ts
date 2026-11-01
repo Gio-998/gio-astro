@@ -52,7 +52,7 @@ export const desirePair: Record<PairKey, string> = {
 };
 
 export const attachPair: Record<string, { text: string; flag?: string }> = {
-  "secure-secure": { text: "You both feel fairly safe with closeness and with space. Conflicts are uncomfortable but not catastrophic; you can repair. This is the strongest foundation research knows for long-term happiness." },
+  "secure-secure": { text: "You both feel fairly safe with closeness and with space. Conflicts are uncomfortable but not catastrophic; you can repair. That is a sturdy foundation for long-term happiness." },
   "anxious-secure": { text: "The secure partner's steadiness can calm the anxious partner's fears over time. That can be a healing combination when the secure one offers reassurance and the anxious one learns to trust it." },
   "avoidant-secure": { text: "The secure partner gives the avoidant one room without punishment, and gently invites closeness. Over time this can soften the avoidant pattern." },
   "fearful-secure": { text: "The secure partner's consistency can be very healing for the fearful one, if both are patient with the push-pull." },

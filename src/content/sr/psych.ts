@@ -72,7 +72,7 @@ export const care: Record<Care, { name: string; text: string; tip: string }> = {
   help: { name: "Korisna dela", text: "Pomoć oko obaveze, rešen problem ili čaj skuvan bez pitanja deluju kao briga.", tip: "Skini jednu obavezu sa nečijeg spiska." },
   touch: { name: "Fizička nežnost", text: "Zagrljaji, ruka na ramenu, sedenje blizu: dodir to najbolje kaže (uvek uz pristanak).", tip: "Dug zagrljaj: bar 20 sekundi." },
 };
-export const careNote: string = "Istraživanja ukazuju na to da većina ljudi ceni svih pet načina brige i da „poklapanje“ znači manje od toga da naučite šta ono drugo najviše voli. Koristi ovo kao vodič za prevođenje.";
+export const careNote: string = "Istraživanja ukazuju na to da većina ljudi ceni svih pet načina brige i da „poklapanje“ znači manje od toga da naučite šta ono drugo najviše voli (Impett, Park i Muise, 2024). Koristi ovo kao vodič za prevođenje.";
 
 export const shadowAxes: Record<Axis, { classical: string; virtue: string; shadow: string; gift: string; practice: string }> = {
   pride: { classical: "Gordost", virtue: "Poniznost", shadow: "Teško priznaješ greške; treba ti da budeš u pravu.", gift: "Samopoštovanje i hrabrost da stojiš uspravno.", practice: "Ove nedelje jednom reci „tu imaš pravo“." },

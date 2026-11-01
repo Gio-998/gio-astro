@@ -79,7 +79,7 @@ function ProfileChip({ className = "" }: { className?: string }) {
   const a = useAccount(); const h = useHref(); const N = useNav();
   const initials = (a.user?.email ?? "").slice(0, 2).toUpperCase();
   return (
-    <Link href={h("/me/")} aria-label={N.profile} data-testid="nav-profile" className={`grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold/40 bg-white/[0.06] text-xs font-bold text-gold ${className}`}>
+    <Link prefetch={false} href={h("/me/")} aria-label={N.profile} data-testid="nav-profile" className={`grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold/40 bg-white/[0.06] text-xs font-bold text-gold ${className}`}>
       {initials || <Emblem id="sun" className="h-6 w-6" />}
     </Link>
   );
@@ -94,7 +94,7 @@ export function Header() {
     <>
       <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/75 backdrop-blur-xl" : "bg-transparent"}`}>
         <div className="relative mx-auto flex max-w-6xl min-w-0 items-center justify-between gap-3 px-4 py-2.5">
-          <Link href={h("/")} onClick={toTop} aria-label={c.site.brand} className="group flex min-h-[44px] shrink-0 items-center gap-2">
+          <Link prefetch={false} href={h("/")} onClick={toTop} aria-label={c.site.brand} className="group flex min-h-[44px] shrink-0 items-center gap-2">
             <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
             <span className="h-display text-[1.35rem] font-semibold tracking-wide text-aurora sm:text-2xl">{c.site.brand}</span>
           </Link>
@@ -103,7 +103,7 @@ export function Header() {
             <LangSwitch />
             {returning
               ? <ProfileChip className="lg:hidden" />
-              : <Link href={h("/quizzes/")} onClick={toTop} className="btn-primary hidden min-h-[44px]! shrink-0 whitespace-nowrap text-sm lg:inline-flex" data-testid="nav-start">{N.start}</Link>}
+              : <Link prefetch={false} href={h("/quizzes/")} onClick={toTop} className="btn-primary hidden min-h-[44px]! shrink-0 whitespace-nowrap text-sm lg:inline-flex" data-testid="nav-start">{N.start}</Link>}
           </div>
         </div>
       </header>
@@ -125,15 +125,15 @@ export function Footer() {
       <ZodiacWheel className="pointer-events-none absolute -right-40 -top-24 h-[520px] w-[520px] animate-spin-slow opacity-[0.08]" />
       <div className="relative mx-auto grid max-w-6xl grid-cols-2 gap-x-6 gap-y-9 px-4 pb-28 pt-12 md:grid-cols-[1.4fr_1fr_1fr_1fr] lg:pb-12">
         <div className="col-span-2 md:col-span-1">
-          <Link href={h("/")} onClick={toTop} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
+          <Link prefetch={false} href={h("/")} onClick={toTop} className="mb-3 flex items-center gap-2"><Logo className="h-9 w-9" /><span className="h-display text-3xl text-aurora">{c.site.brand}</span></Link>
           <p className="mb-4 max-w-xs text-sm text-dim">{c.site.tagline}. {F.blurb}</p>
-          <Link href={h(returning ? "/me/" : "/quizzes/")} onClick={toTop} className="btn-primary" data-testid="footer-start">{returning ? N.profile : N.start} ✦</Link>
+          <Link prefetch={false} href={h(returning ? "/me/" : "/quizzes/")} onClick={toTop} className="btn-primary" data-testid="footer-start">{returning ? N.profile : N.start} ✦</Link>
           <p className="mt-5 text-sm text-dim"><a className="inline-flex min-h-[44px] items-center transition hover:text-gold" href="mailto:contact@horoscop.si" data-testid="footer-email">✉ contact@horoscop.si</a></p>
         </div>
         {cols.map((col, i) => (
           <div key={col.t} className={i === 0 ? "col-span-2 md:col-span-1" : ""}>
             <p className="eyebrow mb-2">{col.t}</p>
-            <ul className={`text-sm ${i === 0 ? "grid grid-cols-2 gap-x-6 md:grid-cols-1" : ""}`}>{col.l.map(([href, label]) => <li key={href}><Link className="inline-flex min-h-[40px] items-center py-1 leading-snug text-dim transition hover:text-gold" href={h(href)} onClick={toTop}>{label}</Link></li>)}</ul>
+            <ul className={`text-sm ${i === 0 ? "grid grid-cols-2 gap-x-6 md:grid-cols-1" : ""}`}>{col.l.map(([href, label]) => <li key={href}><Link prefetch={false} className="inline-flex min-h-[40px] items-center py-1 leading-snug text-dim transition hover:text-gold" href={h(href)} onClick={toTop}>{label}</Link></li>)}</ul>
           </div>
         ))}
       </div>

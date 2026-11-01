@@ -101,7 +101,7 @@ const dims: Record<PlayDim, DimText> = {
     name: "Group pull", poles: ["Independent", "Goes with the group"], word: { low: "independent", high: "in tune with the group" },
     text: {
       low: "When the whole group picked the wrong line, you trusted your own eyes. You hold your view under social pressure. That's valuable, especially when the room is about to make a mistake.",
-      mid: "Sometimes you went with your own eyes, sometimes with the group. That's honest: in the classic line studies, most people go along at least once. You can feel the pull, and you don't always give in to it.",
+      mid: "Sometimes you went with your own eyes, sometimes with the group. That's honest: in Solomon Asch's classic line studies, most people go along at least once. You can feel the pull, and you don't always give in to it.",
       high: "When everyone else picked a line, you often picked it too, even when your eyes said otherwise. You value harmony and you read the room. Try this: next time you disagree, say so once, kindly, and see what happens.",
     },
     up: "Your answers sound more independent than you played: you went along with the group's wrong answer.",

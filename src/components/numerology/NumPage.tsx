@@ -46,13 +46,13 @@ const noOrphan = (t: string) => t.replace(/ (\S+)$/, "\u00A0$1");
 
 function Items({ items, cols = "sm:grid-cols-2 lg:grid-cols-3" }: { items: LinkItem[]; cols?: string }) {
   return (
-    <ul className={`grid grid-cols-1 gap-x-8 ${cols}`}>
+    <ul className={`hub-rows grid grid-cols-1 gap-x-8 ${cols}`}>
       {items.map((it) => (
-        <li key={it.href} className="border-t border-white/10">
-          <Link href={it.href} className="group flex items-center gap-3 py-3.5 pr-1">
-            {it.big && <span aria-hidden className="h-display w-[3.6rem] shrink-0 text-center text-[1.45rem] leading-none text-gold">{it.big}</span>}
-            <span className="min-w-0 flex-1"><span className="block break-words text-[15px] font-medium transition group-hover:text-gold">{it.big ? `${it.label}` : it.label}</span>{it.sub && <span className="mt-0.5 block text-pretty break-words text-[12.5px] leading-snug text-mist/65">{it.sub}</span>}</span>
-            <span aria-hidden className="text-mist/40 transition group-hover:translate-x-0.5 group-hover:text-gold">→</span>
+        <li key={it.href}>
+          <Link href={it.href}>
+            {it.big && <span aria-hidden className="h-display rb">{it.big}</span>}
+            <span className="rm"><span className="rt">{it.label}</span>{it.sub && <span className="rs">{it.sub}</span>}</span>
+            <span aria-hidden className="rg">→</span>
           </Link>
         </li>
       ))}

@@ -13,10 +13,12 @@
 //   title       two sitemap pages share a <title>
 //   description two sitemap pages share a meta description
 //   heavy       a page's HTML is over MAX_HTML
+//   leadcopy    a page's title, description or visible text breaks a rule in lead-copy-rules.mjs
 // Reads /sitemap.xml as a sitemap index (scripts/split-sitemap.mjs) or as a single file.
 // Exits 1 if any check fails.
 import fs from "node:fs";
 import path from "node:path";
+import { leadCopyProblem } from "./lead-copy-rules.mjs";
 
 const OUT = process.argv[2] ?? "out";
 if (!fs.existsSync(path.join(OUT, "sitemap.xml"))) { console.error(`No ${OUT}/sitemap.xml: run npm run build first.`); process.exit(1); }
@@ -50,7 +52,7 @@ const listed = new Set(sitemap);
 const pages = LOCALES.flatMap((l) => (fs.existsSync(path.join(OUT, l)) ? walk(path.join(OUT, l)) : []));
 
 const links = new Map(); const inbound = new Map(); const dead = new Map(); const stubs = new Set(); const assets = new Map(); const titles = new Map(); const descriptions = new Map();
-const bad = { missing: [], noindex: [], canonical: [], hreflang: [], lang: [], heavy: [] };
+const bad = { missing: [], noindex: [], canonical: [], hreflang: [], lang: [], heavy: [], leadcopy: [] };
 sitemapFiles.filter((f) => !fs.existsSync(path.join(OUT, f))).forEach((f) => bad.missing.push(f));
 const decode = (t) => t.replace(/&amp;/g, "&").replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"');
 const note = (map, key, url) => { if (!map.has(key)) map.set(key, []); map.get(key).push(url); };
@@ -61,6 +63,11 @@ for (const file of pages) {
   // Rendered markup only: the RSC payload at the end repeats hrefs that are not links.
   const body = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
   if (isBlank(body)) stubs.add(url);
+  // What a visitor reads, and what a search result shows. Admin pages are gated, and their labels are meant to say waitlist.
+  if (!/^\/[a-z]{2}\/admin\//.test(url)) {
+    const shown = decode(`${html.match(/<title>([^<]*)<\/title>/)?.[1] ?? ""} ${html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? ""} ${body.replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ")}`);
+    const hit = leadCopyProblem(shown); if (hit) bad.leadcopy.push(`${url} ${hit[1]}: "${hit[0]}"`);
+  }
   const out = new Set([...body.matchAll(/<a\b[^>]*>/g)].map((m) => attr(m[0], "href")).filter((h) => h?.startsWith("/")).map(clean).filter(isPage));
   links.set(url, out);
   // Files a page loads. The file behind /foo?x=1 is /foo; query strings on fonts and icons are cache keys.

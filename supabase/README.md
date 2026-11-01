@@ -1,6 +1,6 @@
 # Supabase: leads, welcome email and double opt-in
 
-Project `gxuqmuvpoiwugtmsfhnt`. This folder holds only the lead work. Older tables and `delete-account` were created in the dashboard and are not here.
+Project `gxuqmuvpoiwugtmsfhnt`. This folder holds the lead work and `delete-account`. Older tables were created in the dashboard and are not here.
 
 The site is a static export, so the browser cannot hold a secret. Two public Edge Functions do the work. They run on Deno with no build step.
 
@@ -10,6 +10,14 @@ The site is a static export, so the browser cannot hold a secret. Two public Edg
 | `confirm-lead` | Double opt-in and unsubscribe. Only a POST changes anything. |
 
 `_shared/lead-rules.ts` is also bundled into the website, so the form and the server apply the same rules.
+
+`delete-account` is separate from the lead work. It runs when a signed-in user deletes their account from the account page, and checks their token itself. It reads `SUPABASE_SECRET_KEYS["default"]` and falls back to `SUPABASE_SERVICE_ROLE_KEY` only if that is missing. It first ran from the dashboard, so before deploying this copy look up whether "Verify JWT" is on for it there, and keep the same setting:
+
+```
+supabase functions deploy delete-account --project-ref gxuqmuvpoiwugtmsfhnt
+```
+
+Add `--no-verify-jwt` if the dashboard has it off. Then delete a throwaway account from the site to confirm the new key works for the admin call.
 
 ## Deploy
 

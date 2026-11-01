@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { sb } from "@/lib/supabase";
+import { accountsEnabled, sb } from "@/lib/supabase";
 import { useContent } from "@/lib/content-context";
 
 const PLATFORMS = ["tiktok", "instagram", "youtube", "blog", "telegram", "podcast", "other"] as const;
@@ -12,12 +12,12 @@ export function PartnersForm() {
   const [f, setF] = useState({ name: "", email: "", platform: "instagram", handle: "", link: "", audience: "1k-10k", languages: "", message: "", agreed: false });
   const [state, setState] = useState<"idle" | "busy" | "done" | "dupe" | "error">("idle");
   const set = (k: keyof typeof f) => (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => setF({ ...f, [k]: e.target.type === "checkbox" ? (e.target as HTMLInputElement).checked : e.target.value });
-  const client = sb();
-  if (!client) return <p className="card text-sm text-dim">{P.offline}</p>;
+  // Not sb() here: it is null on the server and a client in the browser, so the first render would differ and hydration would fail (#418).
+  if (!accountsEnabled) return <p className="card text-sm text-dim">{P.offline}</p>;
   if (state === "done" || state === "dupe") return <p role="status" className="card border-gold/40 bg-gold/10 text-center" data-testid="partners-done">{state === "done" ? P.done : P.dupe}</p>;
   const submit = async (e: React.FormEvent) => {
     e.preventDefault(); setState("busy");
-    const link = f.link.trim(); const { error } = await client.from("affiliate_applications" as never).insert({
+    const link = f.link.trim(); const { error } = await sb()!.from("affiliate_applications" as never).insert({
       name: f.name.trim().slice(0, 80), email: f.email.trim().toLowerCase(), platform: f.platform, handle: f.handle.trim().slice(0, 120),
       link: link ? (/^https?:\/\//i.test(link) ? link : `https://${link}`).slice(0, 300) : null, audience: f.audience,
       languages: f.languages.trim().slice(0, 80) || null, message: f.message.trim().slice(0, 2000) || null, agreed_terms: f.agreed, locale,

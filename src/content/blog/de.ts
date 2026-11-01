@@ -10,7 +10,7 @@ export const posts: BlogPost[] = [
     blocks: [
       { t: "h", text: "Die meisten liegen nah an der Mitte" },
       { t: "p", text: "Vier-Buchstaben-Typen teilen Menschen auf vier Skalen in je zwei Schubladen: Extraversion oder Introversion, Sensing oder Intuition, Thinking oder Feeling, Judging oder Perceiving. Das Problem: Echte Menschen fallen nicht in zwei ordentliche Stapel. Auf fast jeder Persönlichkeitsskala sammeln sich die meisten von uns in der Mitte, an den Rändern sind es deutlich weniger." },
-      { t: "p", text: "Wenn du genau auf der Linie zwischen Thinking und Feeling liegst, kann ein müder Morgen oder eine seltsam formulierte Frage dich auf die andere Seite kippen. Dein Buchstabe wechselt, aber du hast dich kein bisschen verändert. Studien zu den klassischen Typentests zeigen, dass ein großer Teil der Leute bei einer Wiederholung nach ein paar Wochen mindestens einen anderen Buchstaben bekommt, und es kippen fast immer die Buchstaben, bei denen jemand nah an der Mitte lag." },
+      { t: "p", text: "Wenn du genau auf der Linie zwischen Thinking und Feeling liegst, kann ein müder Morgen oder eine seltsam formulierte Frage dich auf die andere Seite kippen. Dein Buchstabe wechselt, aber du hast dich kein bisschen verändert. David Pittengers Übersichtsarbeit von 1993 zum klassischen Typentest berichtet, dass ein großer Teil der Leute bei einer Wiederholung nach ein paar Wochen ein anderes Ergebnis bekommt. Es kippen meist die Buchstaben, bei denen jemand nah an der Mitte lag." },
       { t: "h", text: "Klarheit zählt mehr als der Buchstabe" },
       { t: "p", text: "Deshalb zeigen wir neben jedem Buchstaben einen Klarheitswert. 80 % Klarheit heißt: Du hast bei fast jeder Frage in dieselbe Richtung tendiert, der Buchstabe ist stabil und verdient Beachtung. 10 % Klarheit heißt: Deine Antworten waren fast ausgeglichen. Behandle diesen Buchstaben wie einen Münzwurf und lies beide Typen." },
       { t: "ul", items: [
@@ -25,7 +25,7 @@ export const posts: BlogPost[] = [
       { t: "cta", text: "Zum Typ-Quiz", href: "/quiz/four-letter/" },
       { t: "h", text: "Das letzte Wort hast du" },
       { t: "p", text: "Kein Fragebogen kennt dich besser als du selbst. Lies die Beschreibung deines Ergebnisses und stell dir eine einfache Frage: Klingt das nach mir? Wenn nicht, wähl den Typ, der besser passt. Wir behalten das Quizergebnis trotzdem und zeigen beides, damit immer klar ist, was du gewählt hast und was das Quiz vorgeschlagen hat." },
-      { t: "p", text: "Fachleute nennen das Selbstverifikation, und es ist eine gute Gewohnheit bei jedem Persönlichkeitsergebnis. Ein Etikett hilft, wenn es dir Worte für etwas gibt, das du schon über dich ahnst. Es hilft nicht, wenn es dir vorschreibt, wer du sein sollst." },
+      { t: "p", text: "So die Passform zu prüfen ist eine gute Gewohnheit bei jedem Persönlichkeitsergebnis. Ein Etikett hilft, wenn es dir Worte für etwas gibt, das du schon über dich ahnst. Es hilft nicht, wenn es dir vorschreibt, wer du sein sollst." },
       { t: "h", text: "Eine bessere Frage als „Welcher Typ bin ich?“" },
       { t: "p", text: "Frag lieber, wie du dich in konkreten Situationen verhältst. Tankst du nach einer Party allein auf? Entscheidest du mit einer Liste oder aus dem Bauch? Bist du früh fertig oder kurz vor der Deadline? Die Antworten sind nützlicher als vier Buchstaben, und sie kippen nicht von Monat zu Monat." },
       { t: "quote", text: "Ein Typ ist der Anfang eines Gesprächs mit dir selbst, kein Urteil." },
@@ -77,13 +77,13 @@ export const posts: BlogPost[] = [
     lead: "Kompatibilität ist eines der meistgesuchten Wörter in der Astrologie. Eine berechtigte Frage: Wird das halten? Auch die Wissenschaft fragt das, mit Umfragen unter Tausenden Paaren, und die Antwort macht mehr Hoffnung als jedes Sternbild.",
     blocks: [
       { t: "h", text: "Was wenig vorhersagt" },
-      { t: "p", text: "Große Studien haben nach Zusammenhängen zwischen Sonnenzeichen und dem gesucht, wer wen heiratet oder sich scheiden lässt. Eine Auswertung von rund zehn Millionen Ehen in England und Wales fand kein sinnvolles Muster. Das macht Astrologie als Sprache für Unterschiede nicht wertlos, aber deine Zeichen sind kein Urteil über deine Beziehung." },
+      { t: "p", text: "Große Studien haben nach Zusammenhängen zwischen Sonnenzeichen und dem gesucht, wer wen heiratet oder sich scheiden lässt. David Voas' Auswertung von rund zehn Millionen Ehen in England und Wales fand kein sinnvolles Muster. Das macht Astrologie als Sprache für Unterschiede nicht wertlos, aber deine Zeichen sind kein Urteil über deine Beziehung." },
       { t: "p", text: "Noch überraschender: Auch ähnliche Persönlichkeiten zählen weniger, als viele denken. Paare mit ähnlichen Big-Five-Werten sind kaum glücklicher als Paare mit unterschiedlichen. Gegensätze ziehen sich nicht besonders an, aber sie sind auch nicht zum Scheitern verurteilt." },
       { t: "h", text: "Was mehr vorhersagt: wer jeder von euch ist" },
-      { t: "p", text: "Persönlichkeit zählt sehr wohl, nur nicht als Übereinstimmung. Die Zufriedenheit hängt von den Eigenschaften jedes einzelnen Partners ab. Menschen, die emotional stabil, warmherzig und verlässlich sind, haben meist glücklichere Beziehungen, egal mit wem. Der Effekt ist nicht riesig, zeigt sich aber in vielen Studien und Ländern." },
+      { t: "p", text: "Persönlichkeit zählt sehr wohl, nur nicht als Übereinstimmung. Die Zufriedenheit hängt von den Eigenschaften jedes einzelnen Partners ab. Menschen, die emotional stabil, warmherzig und verlässlich sind, haben meist glücklichere Beziehungen, egal mit wem. Der Effekt ist nicht riesig, zeigt sich aber in vielen Studien und Ländern (Malouff et al., 2010; Dyrenforth et al., 2010)." },
       { t: "p", text: "Das ist eine gute Nachricht, denn daran kann man arbeiten. Niemand kann sein Sonnenzeichen ändern. Jeder kann üben, unter Stress freundlich zu antworten." },
       { t: "h", text: "Was am meisten vorhersagt: wie ihr miteinander umgeht" },
-      { t: "p", text: "2020 hat ein Forschungsteam Daten aus 43 Langzeitstudien mit mehr als 11.000 Paaren zusammengeführt und ein lernendes Modell nach den besten Vorhersagefaktoren für Beziehungsqualität suchen lassen. Die wichtigsten betrafen nicht einen Menschen allein, sondern die Beziehung selbst:" },
+      { t: "p", text: "2020 hat ein Team um Samantha Joel Daten aus 43 Langzeitstudien mit mehr als 11.000 Paaren zusammengeführt und ein lernendes Modell nach den besten Vorhersagefaktoren für Beziehungsqualität suchen lassen. Die wichtigsten betrafen nicht einen Menschen allein, sondern die Beziehung selbst:" },
       { t: "ul", items: [
         "Das Gefühl, dass dein Partner sich auf dich festgelegt hat.",
         "Wertschätzung und Dankbarkeit.",
@@ -93,7 +93,7 @@ export const posts: BlogPost[] = [
       ] },
       { t: "p", text: "Anders gesagt: Am besten sagt das, was ihr Tag für Tag gemeinsam tut, eine gute Beziehung voraus. Kleine, wiederholte Dinge: Danke sagen, sich einander zuwenden, wenn einer Aufmerksamkeit möchte, und sich nach einem Streit wieder vertragen." },
       { t: "h", text: "Versöhnen schlägt Perfektion" },
-      { t: "p", text: "Jedes Paar streitet. Was Paare, die zusammenbleiben, oft unterscheidet, ist, wie schnell sie sich versöhnen: ein Witz, der die Spannung bricht, eine Entschuldigung, eine Hand auf der Schulter. Forschung zu Paaren im Konflikt legt nahe, dass glückliche Paare nicht die sind, die nie streiten, sondern die, die schwierige Gespräche sanft beginnen und Versöhnungsversuche annehmen." },
+      { t: "p", text: "Jedes Paar streitet. Was Paare, die zusammenbleiben, oft unterscheidet, ist, wie schnell sie sich versöhnen: ein Witz, der die Spannung bricht, eine Entschuldigung, eine Hand auf der Schulter. John Gottmans Forschung zu Paaren im Konflikt legt nahe, dass glückliche Paare nicht die sind, die nie streiten, sondern die, die schwierige Gespräche sanft beginnen und Versöhnungsversuche annehmen." },
       { t: "quote", text: "Die Sterne bereiten die Bühne, die Psychologie erklärt das Muster, und wie ihr miteinander umgeht, schreibt die Geschichte." },
       { t: "h", text: "Und wie bewerten wir Kompatibilität?" },
       { t: "p", text: "Unsere Kompatibilitätsreports zeigen viele Perspektiven nebeneinander, von Astrologie und chinesischem Tierkreis bis zu Big Five und Bindungsstilen. Jede ist danach gekennzeichnet, wie viel Evidenz dahintersteht. Die wissenschaftlich gestützten Perspektiven zählen bei den Ratschlägen am meisten, die traditionellen sind zum Nachdenken und für den Spaß da." },

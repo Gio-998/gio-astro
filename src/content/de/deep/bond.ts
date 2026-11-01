@@ -51,7 +51,7 @@ export const desirePair: Record<PairKey, string> = {
 };
 
 export const attachPair: Record<string, { text: string; flag?: string }> = {
-  "secure-secure": { text: "Ihr fühlt euch beide ziemlich sicher mit Nähe und mit Abstand. Konflikte sind unangenehm, aber keine Katastrophe; ihr könnt reparieren. Das ist die stärkste Grundlage für langfristiges Glück, die die Forschung kennt." },
+  "secure-secure": { text: "Ihr fühlt euch beide ziemlich sicher mit Nähe und mit Abstand. Konflikte sind unangenehm, aber keine Katastrophe; ihr könnt reparieren. Das ist eine tragfähige Grundlage für langfristiges Glück." },
   "anxious-secure": { text: "Die Beständigkeit des sicher gebundenen Menschen kann die Ängste des ängstlichen mit der Zeit beruhigen. Das kann heilsam sein, wenn der eine Bestätigung gibt und der andere lernt, ihr zu vertrauen." },
   "avoidant-secure": { text: "Der sicher gebundene Mensch gibt dem vermeidenden Raum ohne Strafe und lädt sanft zu Nähe ein. Mit der Zeit kann das vermeidende Muster weicher werden." },
   "fearful-secure": { text: "Die Beständigkeit des sicher gebundenen Menschen kann für den ängstlich vermeidenden sehr heilsam sein, wenn beide mit dem Hin und Her geduldig sind." },

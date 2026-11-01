@@ -124,7 +124,7 @@ export const premium = {
   soon: {
     eyebrow: "Coming soon",
     title: "Premium isn't open yet",
-    text: "During the beta everything is free for you. Join early access and you'll be the first to know when Premium and the deep readings open.",
+    text: "Right now everything is free for you. Join early access and you'll be the first to know when Premium and the deep readings open.",
     join: "Join early access",
     joined: "You're on the early access list. We'll tell you first.",
     signIn: "Log in to join",
@@ -144,7 +144,7 @@ export const premium = {
     sheetLead: "Premium opens every chapter and every forecast, for you and everyone you add.",
     demoCheckout: "Demo checkout (no charge)",
     later: "Not now",
-    openBeta: "free during the beta",
+    openBeta: "free for now",
   },
   forecast: {
     eyebrow: "Premium forecast",
@@ -179,7 +179,7 @@ export const premium = {
     open: "Open it now",
     back: "Back", next: "Continue",
     closed: "Checkout isn't open yet",
-    closedText: "Payments aren't switched on during the beta. Join early access and we'll tell you first.",
+    closedText: "Payments aren't switched on yet. Join early access and we'll tell you first.",
     order: "Demo order",
   },
   admin: {

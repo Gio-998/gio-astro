@@ -209,7 +209,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const H = PAIR_HUB[lang] ?? PAIR_HUB.en;
     return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: [],
       blocks: [{ id: "intro", title: H.crumb, paras: H.intro }], calc: "compatibility",
-      items: PAIR_KEYS.map((k) => { const [a, b] = k.split("-and-").map(Number); return { href: lp(lang, `${N}compatibility/${k}/`), label: (PAIRS[lang]?.[k] ?? PAIRS.en[k]).title, sub: `${C.chars[a].name} · ${C.chars[b].name}`, big: `${a}+${b}` }; }),
+      items: PAIR_KEYS.map((k) => { const [a, b] = k.split("-and-").map(Number); return { href: lp(lang, `${N}compatibility/${k}/`), label: (PAIRS[lang]?.[k] ?? PAIRS.en[k]).title, big: `${a}+${b}` }; }),
       related: [{ href: lp(lang, `${N}life-path/`), label: U.lifePathHub, sub: C.explain["life-path"].sub }] };
   }
   if (sec === "compatibility" && item && PAIR_KEYS.includes(item)) {

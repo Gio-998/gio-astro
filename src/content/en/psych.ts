@@ -72,7 +72,7 @@ export const care: Record<Care, { name: string; text: string; tip: string }> = {
   help: { name: "Helpful actions", text: "Help with a task, a solved problem or a cup of tea made without asking feels caring.", tip: "Take one chore off their list." },
   touch: { name: "Physical affection", text: "Hugs, a hand on the shoulder, sitting close: touch says it best (always with consent).", tip: "A long hug: at least 20 seconds." },
 };
-export const careNote: string = "Research suggests most people value all five ways of caring, and 'matching' matters less than learning each other's favourites. Use this as a translation guide.";
+export const careNote: string = "Research suggests most people value all five ways of caring, and 'matching' matters less than learning each other's favourites (Impett, Park & Muise, 2024). Use this as a translation guide.";
 
 export const shadowAxes: Record<Axis, { classical: string; virtue: string; shadow: string; gift: string; practice: string }> = {
   pride: { classical: "Pride", virtue: "Humility", shadow: "Hard to admit mistakes; needing to be right.", gift: "Self-respect and the courage to stand tall.", practice: "Say 'you were right about that' once this week." },

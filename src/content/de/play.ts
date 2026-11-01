@@ -99,7 +99,7 @@ const dims: Record<PlayDim, DimText> = {
     name: "Gruppensog", poles: ["Unabhängig", "Geht mit der Gruppe"], word: { low: "unabhängig", high: "im Einklang mit der Gruppe" },
     text: {
       low: "Als die ganze Gruppe die falsche Linie gewählt hat, hast du deinen eigenen Augen vertraut. Du hältst deine Sicht auch unter sozialem Druck. Das ist wertvoll, besonders wenn der Raum gerade einen Fehler machen will.",
-      mid: "Mal bist du deinen Augen gefolgt, mal der Gruppe. Das ist ehrlich: In den klassischen Linienstudien geht fast jeder mindestens einmal mit. Du spürst den Sog und gibst ihm nicht immer nach.",
+      mid: "Mal bist du deinen Augen gefolgt, mal der Gruppe. Das ist ehrlich: In Solomon Aschs klassischen Linienstudien gehen die meisten mindestens einmal mit. Du spürst den Sog und gibst ihm nicht immer nach.",
       high: "Wenn alle anderen eine Linie gewählt haben, hast du sie oft auch gewählt, selbst wenn deine Augen etwas anderes sagten. Du schätzt Harmonie und liest den Raum. Probier das: Wenn du das nächste Mal anderer Meinung bist, sag es einmal, freundlich, und schau, was passiert.",
     },
     up: "Deine Antworten klingen unabhängiger, als du gespielt hast: Du bist der falschen Antwort der Gruppe gefolgt.",

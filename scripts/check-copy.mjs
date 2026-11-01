@@ -3,13 +3,17 @@
 // string containing Cyrillic), code comments, imports, object keys and className/href-style attributes.
 // Escape hatch for a deliberate exception: put `copy-ok` in a comment on the same line.
 // See STYLE-GUIDE.md for the full rules.
+// Also runs the lead copy rules over the text of every language (lead-copy-rules.mjs).
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { textRanges } from "./copy-strings.mjs";
+import { leadCopyProblem } from "./lead-copy-rules.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SKIP_DIRS = [path.join("src", "content", "mk")];
+/** Files only an admin ever sees, or that only render on a build with NEXT_PUBLIC_BETA=1. */
+const NOT_PUBLIC = /[\\/](?:admin\.ts|Beta\.tsx|AdminPanel\.tsx)$|[\\/]admin[\\/]/;
 
 /** [regex, message]. All case-insensitive, matched against one text chunk at a time. */
 export const RULES = [
@@ -38,13 +42,31 @@ export const RULES = [
   [/\bcosmic journey|soul's journey|magic happens\b/i, "cliché"],
 ];
 
-function walk(dir, out = []) {
+function walk(dir, out = [], skip = SKIP_DIRS) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);
-    if (e.isDirectory()) { if (!SKIP_DIRS.some((s) => p.endsWith(s))) walk(p, out); }
+    if (e.isDirectory()) { if (!skip.some((s) => p.endsWith(s))) walk(p, out, skip); }
     else if (/\.(ts|tsx)$/.test(e.name) && !e.name.endsWith(".d.ts")) out.push(p);
   }
   return out;
+}
+
+/** Every language, Cyrillic included, because the promises being retired were made in all of them. */
+export function checkLeadCopy(root = ROOT) {
+  const problems = [];
+  for (const file of walk(path.join(root, "src"), [], [])) {
+    if (NOT_PUBLIC.test(file)) continue;
+    const { src, ranges } = textRanges(file);
+    const lines = src.split("\n");
+    for (const r of ranges) {
+      const hit = leadCopyProblem(src.slice(r.start, r.end));
+      if (!hit) continue;
+      const line = src.slice(0, r.start).split("\n").length;
+      if (/copy-ok/.test(lines[line - 1] ?? "")) continue;
+      problems.push({ file: path.relative(root, file), line, msg: hit[1], excerpt: hit[0] });
+    }
+  }
+  return problems;
 }
 
 export function checkCopy(root = ROOT) {
@@ -70,7 +92,7 @@ export function checkCopy(root = ROOT) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const problems = checkCopy();
+  const problems = [...checkCopy(), ...checkLeadCopy()];
   for (const p of problems) console.log(`${p.file}:${p.line}  ${p.msg}  …${p.excerpt}…`);
   if (problems.length) { console.error(`\ncheck:copy found ${problems.length} problem(s). See STYLE-GUIDE.md.`); process.exit(1); }
   console.log("check:copy: all English copy is clean.");

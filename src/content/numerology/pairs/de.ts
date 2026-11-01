@@ -1705,7 +1705,7 @@ export const pairDe: PairSet = {
    {
     "title": "Ein Sprichwort dazu",
     "paras": [
-     "Die Welt ist ein Buch, und wer nicht reist, liest nur eine Seite, schrieb Augustinus. Dieses Paar will das ganze Buch lesen, und die 9 unterstreicht gern die freundlichen Stellen."
+     "Man lernt nie aus, sagt das Sprichwort. Dieses Paar nimmt das wörtlich und liest die Welt wie ein großes Buch, und die 9 unterstreicht gern die freundlichen Stellen."
     ]
    },
    {
@@ -3985,7 +3985,7 @@ export const pairDe: PairSet = {
    {
     "title": "Ein kurzes Porträt",
     "paras": [
-     "Maja, Lebenszahl 11, stellte sich einen Garten auf dem Dach eines Krankenhauses vor, in dem Kranke zwischen Pflanzen sitzen könnten. Stojan, Lebenszahl 22, Statiker, berechnete, wie viel Erde das Dach tragen kann, und fand das Geld, um es zu verstärken. Der Garten öffnete zwei Jahre später. Das Pflegepersonal sagt, die Kranken dort fragten seltener nach Schmerzmitteln."
+     "Maja, Lebenszahl 11, stellte sich einen Garten auf dem Dach eines Krankenhauses vor, in dem Kranke zwischen Pflanzen sitzen könnten. Stojan, Lebenszahl 22, Statiker, berechnete, wie viel Erde das Dach tragen kann, und fand das Geld, um es zu verstärken. Der Garten öffnete zwei Jahre später. Das Pflegepersonal sagt, es sei heute der beliebteste Ort im ganzen Haus."
     ]
    },
    {
@@ -4063,7 +4063,7 @@ export const pairDe: PairSet = {
    {
     "title": "Ein kurzes Porträt",
     "paras": [
-     "Ema, Lebenszahl 33, leitete einen Chor für Menschen mit Demenz. Bojko, Lebenszahl 11, Komponist, schrieb Lieder für sie auf Grundlage der alten Melodien, an die sie sich noch erinnerten. Beim ersten Konzert sang eine Frau, die seit Monaten nicht gesprochen hatte, jedes Wort mit. Seitdem haben sie vierzig Lieder zusammen geschrieben."
+     "Ema, Lebenszahl 33, leitete einen Chor für Menschen mit Demenz. Bojko, Lebenszahl 11, Komponist, schrieb Lieder für sie auf Grundlage der alten Melodien, an die sie sich noch erinnerten. Beim ersten Konzert sang eine Frau, die sonst kaum sprach, jedes Wort mit. Seitdem haben sie vierzig Lieder zusammen geschrieben."
     ]
    },
    {

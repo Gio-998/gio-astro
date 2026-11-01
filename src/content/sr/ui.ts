@@ -116,7 +116,7 @@ export const pair: typeof En.pair = {
   tarotTogether: (birth: string) => `Svakom od vas karta kaže: ${lower(birth)}`,
   yinyang: (a: number, b: number, c: number, far: boolean) => `Tačke ravnoteže ${a} i ${b}, a zajedno se centrirate na ${c} (50 = savršena ravnoteža). ${far ? "Jedno predvodi delovanjem, drugo prijemčivošću: klasična dopuna." : "Imate sličan nivo energije: lak ritam, pa ostavite mesta i za delanje i za mirovanje."}`,
   brings5: (na: string, ta: string, nb: string, tb: string) => `Šta svako od vas donosi. ${na}: ${ta}. ${nb}: ${tb}.`,
-  foundation: (f: number, s: number) => `Temelj (toplina, pouzdanost i mirnoća kod oboje): ${f}/100. Sličnost: ${s}/100. Istraživanja kažu da su lična ljubaznost i emocionalna stabilnost svake osobe mnogo važnije od poklapanja.`,
+  foundation: (f: number, s: number) => `Temelj (toplina, pouzdanost i mirnoća kod oboje): ${f}/100. Sličnost: ${s}/100. Istraživanja kažu da su lična ljubaznost i emocionalna stabilnost svake osobe mnogo važnije od poklapanja (Dyrenforth i sar., 2010).`,
   needs: " traži: ",
   careLine: (n: string, give: string, ok: boolean, other: string, want: string, tip: string) => `${n} pruža: ${give}${ok ? `. To je baš ono što ${other} želi.` : `. ${other} najviše voli da dobije: ${want}. Probaj: ${tip}`}`,
   with: " i ",
@@ -533,6 +533,6 @@ export const beta: typeof En.beta = {
   banner: "Nalog nije obavezan. Testovi i horoskopi rade i bez njega.",
   emailLabel: "Tvoj mejl", emailPh: "ti@example.com", join: "Javljajte mi novosti ✦", joined: "Hvala, imamo tvoj mejl. 💫",
   invalid: "Unesi ispravnu mejl adresu.", haveInvite: "Imaš nalog? Prijavi se →", privacy: "Tvoj mejl koristimo samo za novosti o sajtu Horoscop. Bez spama, odjava kad god želiš.",
-  emailsTitle: "Pregled mejlova", emailsNote: "Samo demo šabloni. Odavde se ništa ne šalje. Šablon za kod za prijavu može da se nalepi u Supabase takav kakav je.", emailsSubject: "Naslov", emailsLink: "Pregled mejlova", adminHint: "Prijave na listu čekanja, pozivnice i pregled mejlova", adminTitle: "Beta administracija", notAdmin: "Ova stranica je samo za administratore.", invites: "Pozvani mejlovi", addInvites: "Dodaj pozivnice (jedan mejl po redu)", add: "Dodaj", remove: "Ukloni",
-  used: "pridružen", pending: "još nije pridružen", waitlist: "Lista čekanja", invite: "Pozivnica", added: (n: number) => `Dodato: ${n}.`, empty: "Ovde još nema ničega.",
+  emailsTitle: "Pregled mejlova", emailsNote: "Samo demo šabloni. Odavde se ništa ne šalje. Šablon za kod za prijavu može da se nalepi u Supabase takav kakav je.", emailsSubject: "Naslov", emailsLink: "Pregled mejlova", adminHint: "Prijave na listu čekanja, pozivnice i pregled mejlova", adminTitle: "Beta administracija", notAdmin: "Ova stranica je samo za administratore.", invites: "Pozvani mejlovi", addInvites: "Dodaj pozivnice (jedan mejl po redu)", add: "Dodaj", remove: "Ukloni", // copy-ok: admin page only
+  used: "pridružen", pending: "još nije pridružen", waitlist: "Lista čekanja", invite: "Pozivnica", added: (n: number) => `Dodato: ${n}.`, empty: "Ovde još nema ničega.", // copy-ok: admin page only
 };

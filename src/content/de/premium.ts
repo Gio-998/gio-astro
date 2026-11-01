@@ -111,7 +111,7 @@ export const premium: PremiumText = {
   soon: {
     eyebrow: "Bald verfügbar",
     title: "Premium ist noch nicht offen",
-    text: "Während der Beta ist alles für dich kostenlos. Melde dich für frühen Zugang an, dann erfährst du als Erstes, wenn Premium und die Tiefenanalysen öffnen.",
+    text: "Im Moment ist alles für dich kostenlos. Melde dich für frühen Zugang an, dann erfährst du als Erstes, wenn Premium und die Tiefenanalysen öffnen.",
     join: "Für frühen Zugang anmelden",
     joined: "Du stehst auf der Liste für frühen Zugang. Wir sagen dir zuerst Bescheid.",
     signIn: "Anmelden, um mitzumachen",
@@ -131,7 +131,7 @@ export const premium: PremiumText = {
     sheetLead: "Premium öffnet jedes Kapitel und jede Vorschau, für dich und alle, die du hinzufügst.",
     demoCheckout: "Demo-Kasse (kostenlos)",
     later: "Nicht jetzt",
-    openBeta: "kostenlos während der Beta",
+    openBeta: "im Moment kostenlos",
   },
   forecast: {
     eyebrow: "Premium-Vorschau",
@@ -166,7 +166,7 @@ export const premium: PremiumText = {
     open: "Jetzt öffnen",
     back: "Zurück", next: "Weiter",
     closed: "Die Kasse ist noch nicht offen",
-    closedText: "Zahlungen sind während der Beta nicht aktiv. Melde dich für frühen Zugang an, dann sagen wir dir zuerst Bescheid.",
+    closedText: "Zahlungen sind noch nicht aktiv. Melde dich für frühen Zugang an, dann sagen wir dir zuerst Bescheid.",
     order: "Demo-Bestellung",
   },
   admin: {

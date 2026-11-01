@@ -99,6 +99,19 @@ body {
 .prose-soft ul { @apply mb-3 list-disc pl-5 text-mist/90; }
 .prose-soft li { @apply mb-1; }
 
+/* Rows of a hub list (Items in NumPage). A hub repeats a row up to 78 times, in the HTML and again in the page data, so the styling sits here once. rb: big glyph, rm: middle, rt: label, rs: sub line, rg: arrow. */
+.hub-rows > li { @apply border-t border-white/10; }
+.hub-rows a { @apply flex items-center gap-3 py-3.5 pr-1; }
+.hub-rows .rb { @apply w-[3.6rem] shrink-0 text-center text-[1.45rem] leading-none text-gold; }
+.hub-rows .rm { @apply min-w-0 flex-1; }
+.hub-rows .rt { @apply block text-[15px] font-medium break-words transition; }
+.hub-rows .rs { @apply mt-0.5 block text-[12.5px] leading-snug text-pretty break-words text-mist/65; }
+.hub-rows .rg { @apply text-mist/40 transition; }
+@media (hover: hover) {
+  .hub-rows a:hover .rt { @apply text-gold; }
+  .hub-rows a:hover .rg { @apply translate-x-0.5 text-gold; }
+}
+
 select.input option { background: #1c1645; color: #f5f1ff; }
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
