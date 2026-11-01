@@ -1,4 +1,5 @@
 "use client";
+import { inline } from "@/content/sr/inline";
 import { isLocalPath } from "@/lib/i18n-routes";
 import Link from "next/link";
 import { useState } from "react";
@@ -93,7 +94,7 @@ export function CheckoutPage() {
         </>}
         {product === "session" && <>
           <label className="block"><span className="label">{C.session.topic}</span><textarea className="input h-24" value={form.topic ?? ""} onChange={set("topic")} /></label>
-          <label className="block"><span className="label">{C.session.times}</span><input className="input" value={form.times ?? ""} onChange={set("times")} placeholder={locale === "mk" ? "пр. вт или чет навечер" : locale === "de" ? "z. B. Di oder Do abends" : locale === "sr" ? "npr. uto ili čet uveče" : "e.g. Tue or Thu evening"} /></label>
+          <label className="block"><span className="label">{C.session.times}</span><input className="input" value={form.times ?? ""} onChange={set("times")} placeholder={locale === "mk" ? "пр. вт или чет навечер" : locale === "de" ? "z. B. Di oder Do abends" : locale === "sr" ? inline.timesPlaceholder : "e.g. Tue or Thu evening"} /></label>
           <div><span className="label">{C.session.lang}</span><SheetSelect title={C.session.lang} value={(form.lang as "en" | "mk") ?? locale} onChange={(v) => setForm({ ...form, lang: v })} options={[{ value: "en", label: "English" }, { value: "mk", label: "Македонски" }]} /></div>
         </>}
         {product === "hardcover" && <label className="block"><span className="label">{C.shipping}</span><textarea className="input h-24" value={form.address ?? ""} onChange={set("address")} autoComplete="street-address" /></label>}

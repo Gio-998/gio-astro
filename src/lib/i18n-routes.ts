@@ -108,17 +108,10 @@ export function parsePath(url: string): [RouteLocale, string] | null {
 /** A path inside a locale that is safe to send a visitor to after sign-in or checkout. */
 export const isLocalPath = (p: string) => new RegExp(`^/(${ROUTE_LOCALES.join("|")})/[\\w\\-/]*$`).test(p);
 
-/**
- * Pages a locale does not have yet, though the route still renders because the footer links it. These keep their text inside the page file, in en, mk and de,
- * so /sr/privacy/ shows English. That is not a Serbian page: no sr hreflang, no sitemap row, noindex. Delete a path here once its Serbian text lands.
- */
-const NOT_WRITTEN: Partial<Record<RouteLocale, readonly string[]>> = { sr: ["/privacy/", "/terms/", "/promise/", "/learn/"] };
-export const hasPage = (locale: string, path: string) => !NOT_WRITTEN[locale as RouteLocale]?.includes(path);
-
-/** hreflang map (locale → public URL, plus x-default) for an internal route path. Lists only the locales that have the page. */
+/** hreflang map (locale → public URL, plus x-default) for an internal route path. */
 export function routeAlternates(path: string): Record<string, string> {
   const out: Record<string, string> = {};
-  for (const l of ROUTE_LOCALES) if (hasPage(l, path)) out[l] = localizedPath(l, path);
+  for (const l of ROUTE_LOCALES) out[l] = localizedPath(l, path);
   out["x-default"] = localizedPath(X_DEFAULT, path);
   return out;
 }

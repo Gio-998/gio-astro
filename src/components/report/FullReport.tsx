@@ -8,6 +8,7 @@ import { buildFullReport, type Block } from "@/report/pair";
 import { reportEn } from "@/content/report/en";
 import { reportMk } from "@/content/report/mk";
 import { reportDe } from "@/content/report/de";
+import { reportSr } from "@/content/report/sr";
 import { Bar } from "../ui";
 import "./report.css";
 
@@ -50,7 +51,7 @@ function BlockView({ b }: { b: Block }) {
 
 export function FullReportView({ report, A, B, na, nb }: { report: PairReport; A: Profile; B: Profile; na: string; nb: string }) {
   const { c, locale } = useContent(); const fmt = useDate(); const printing = usePrinting();
-  const R = locale === "mk" ? reportMk : locale === "de" ? reportDe : reportEn;
+  const R = locale === "mk" ? reportMk : locale === "de" ? reportDe : locale === "sr" ? reportSr : reportEn;
   const [open, setOpen] = useState(false);
   const doc = useMemo(() => buildFullReport(R, c, report, A, B, na, nb), [R, c, report, A, B, na, nb]);
   const arch = c.compat.archetypes[report.archetype];

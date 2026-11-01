@@ -1,3 +1,4 @@
+import { bAcc } from "@/content/horoscope/sr-cases";
 import type * as En from "../en/ui";
 import { dGenMid, plural, sLoc } from "@/content/horoscope/sr-cases";
 
@@ -97,7 +98,7 @@ export const bondCheck: typeof En.bondCheck = {
 };
 
 export const pair: typeof En.pair = {
-  aspectLine: (na: string, pa: string, tone: string, nb: string, pb: string, sym: string, orb: string) => `${na}: ${pa} · ${tone} · ${nb}: ${pb} (${sym} ${orb}°)`,
+  aspectLine: (na: string, pa: string, tone: string, nb: string, pb: string, sym: string, orb: string) => `${pa} osobe ${na} ${tone} ${bAcc(pb)} osobe ${nb} (${sym} ${orb}°)`,
   supportive: "Podržavajuće veze",
   touches: (a: string, b: string) => `Dotiče: ${a} i ${b}.`,
   growthLinks: "Veze za rast (iskra)",
@@ -197,7 +198,7 @@ export const today: typeof En.today = {
   cardToday: (birth: string) => `Danas ${lower(birth)}`,
   skyToday: " Tvoje nebo danas",
   quiet: "Danas je za tvoju kartu nebo mirno: dobar dan da ga samo proživiš.",
-  transit: (a: string, tone: string, b: string) => `${a} ${tone}: ${b} u tvojoj karti`,
+  transit: (a: string, tone: string, b: string) => `${a} ${tone} ${bAcc(b)} u tvojoj karti`,
   meets: (mood: string, gov: string) => `U susretu: ${mood} i ${gov}.`,
   computed: "Računa se uživo iz današnjih stvarnih položaja planeta u odnosu na tvoju natalnu kartu.",
   personalDay: (n: number) => `Lični dan ${n}`,

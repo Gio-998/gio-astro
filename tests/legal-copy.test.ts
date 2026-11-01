@@ -2,29 +2,28 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 
 const read = (page: string) => readFileSync(`src/app/[lang]/${page}/page.tsx`, "utf8");
-/** The three page functions of a legal page, by language. */
+/** The page functions of a legal page, by language. */
 function byLang(page: string) {
   const src = read(page);
   const part = (from: string, to: string) => src.slice(src.indexOf(`function ${from}`), src.indexOf(to));
-  return { en: part("PageEn", "function PageMk"), mk: part("PageMk", "function PageDe"), de: part("PageDe", "export default") };
+  return { en: part("PageEn", "function PageMk"), mk: part("PageMk", "function PageDe"), de: part("PageDe", "function PageSr"), sr: part("PageSr", "export default") };
 }
 const privacy = byLang("privacy");
-/** Serbian is left out on purpose: these pages have no Serbian text yet, see NOT_WRITTEN in src/lib/i18n-routes.ts. */
-const LANGS = ["en", "mk", "de"] as const;
+const LANGS = ["en", "mk", "de", "sr"] as const;
 
 describe("privacy page", () => {
   for (const l of LANGS) {
     it(`${l}: names every processor`, () => { for (const p of ["Supabase", "Vercel", "Resend", "Cloudflare", "Open-Meteo"]) expect(privacy[l], p).toContain(p); });
     it(`${l}: drops the old claims that nothing leaves the device`, () => {
-      expect(privacy[l]).not.toMatch(/Nothing else|nothing is uploaded|Ништо друго|ништо не се испраќа|Sonst nichts|nichts hochgeladen/i);
+      expect(privacy[l]).not.toMatch(/Nothing else|nothing is uploaded|Ништо друго|ништо не се испраќа|Sonst nichts|nichts hochgeladen|Ništa drugo|ništa se ne šalje/i);
     });
     it(`${l}: gives the contact, legal bases, a version and the review note`, () => {
       expect(privacy[l]).toContain("<Mail />");
       expect(privacy[l]).toContain("PRIVACY_VERSION");
       expect(privacy[l]).toMatch(/GDPR|DSGVO/);
-      expect(privacy[l]).toMatch(/lawyer|правник|anwaltlich/);
+      expect(privacy[l]).toMatch(/lawyer|правник|anwaltlich|pravnik/);
     });
-    it(`${l}: uses the reader word test`, () => { expect(privacy[l]).not.toMatch(/quiz|квиз/i); });
+    it(`${l}: uses the reader word test`, () => { expect(privacy[l]).not.toMatch(/quiz|квиз|kviz/i); });
     it(`${l}: invents no company`, () => { expect(privacy[l]).not.toMatch(/\b(d\.?o\.?o\.?|GmbH|Ltd|LLC|ДООЕЛ|ДОО)\b/); });
   }
   it("states the same periods the database enforces", () => {
@@ -34,7 +33,7 @@ describe("privacy page", () => {
     expect(sql).toContain("public.waitlist where created_at < now() - interval '24 months'");
     expect(sql).toContain("public.events where created_at < now() - interval '14 months'");
     expect(sql).toContain("now() + interval '30 days'");
-    const said = { en: ["24 months", "24 hours", "14 months", "30 days"], mk: ["24 месеци", "24 часа", "14 месеци", "30 дена"], de: ["24 Monate", "24 Stunden", "14 Monate", "30 Tage"] };
+    const said = { en: ["24 months", "24 hours", "14 months", "30 days"], mk: ["24 месеци", "24 часа", "14 месеци", "30 дена"], de: ["24 Monate", "24 Stunden", "14 Monate", "30 Tage"], sr: ["24 meseca", "24 sata", "14 meseci", "30 dana"] };
     for (const l of LANGS) for (const s of said[l]) expect(privacy[l], `${l} ${s}`).toContain(s);
   });
   it("says the email depends on the bot check and never goes to an unsubscribed address", () => {
@@ -44,11 +43,14 @@ describe("privacy page", () => {
     expect(privacy.mk).toContain("никогаш на адреса што се одјавила");
     expect(privacy.de).toContain("nur raus, wenn die Bot-Prüfung");
     expect(privacy.de).toContain("nie an eine Adresse, die sich abgemeldet hat");
+    expect(privacy.sr).toContain("samo ako je provera protiv botova");
+    expect(privacy.sr).toContain("nikad na adresu koja se odjavila");
   });
   it("explains double opt-in, which only counts once the link is clicked", () => {
     expect(privacy.en).toContain("only that click counts as consent");
     expect(privacy.mk).toContain("само тој клик се смета за согласност");
     expect(privacy.de).toContain("Double-Opt-in");
+    expect(privacy.sr).toContain("samo taj klik se računa kao saglasnost");
   });
 });
 
@@ -56,14 +58,14 @@ describe("promise page", () => {
   const promise = byLang("promise");
   for (const l of LANGS) it(`${l}: no longer promises results without an email`, () => {
     expect(promise[l]).not.toMatch(/No email wall|Без барање е-пошта|Keine E-Mail-Pflicht|only in your browser|само во твојот прелистувач/);
-    expect(promise[l]).not.toMatch(/quiz|квиз/i);
+    expect(promise[l]).not.toMatch(/quiz|квиз|kviz/i);
   });
 });
 
 describe("terms page", () => {
   const terms = byLang("terms");
   for (const l of LANGS) it(`${l}: says how the full result opens, with no stray country`, () => {
-    expect(terms[l]).toMatch(/name and email|име и е-пошта|Name und E-Mail/);
+    expect(terms[l]).toMatch(/name and email|име и е-пошта|Name und E-Mail|ime i mejl/);
     expect(terms[l]).not.toMatch(/Poland|Polen/);
     expect(terms[l]).toContain(`/${l}/privacy/`);
   });

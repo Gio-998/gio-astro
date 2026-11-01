@@ -10,7 +10,7 @@ import { Segmented } from "../controls";
 export function EmailPreview() {
   const a = useAccount(); const { c, locale } = useContent(); const B = c.ui.beta; const h = useHref();
   const isAdmin = (a.user?.app_metadata as { role?: string } | undefined)?.role === "admin";
-  const [id, setId] = useState<EmailId>("code"); const [lang, setLang] = useState<EmailLang>(locale === "mk" || locale === "de" ? locale : "en");
+  const [id, setId] = useState<EmailId>("code"); const [lang, setLang] = useState<EmailLang>(locale === "mk" || locale === "de" || locale === "sr" ? locale : "en");
   const [w, setW] = useState<"390" | "640">("390");
   if (!a.ready) return <p className="text-dim">{c.site.common.loading}</p>;
   if (!isAdmin) return <div className="card text-dim" data-testid="not-admin">{B.notAdmin} {!a.user && <Link className="text-gold" href={h("/account")}>{B.haveInvite}</Link>}</div>;

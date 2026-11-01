@@ -23,7 +23,7 @@ export function buildBondStory(A: Profile, B: Profile, na: string, nb: string, r
   const missingOf = (ids: QuizId[]) => ids.filter((id) => { const k = id === "big-five" ? "bigFive" : (id as "attachment"); return !qa[k] || !qb[k]; });
   const wl = r.lenses.find((l) => l.id === "western");
   const aspects = (wl?.detail as { supportive: SynAspect[]; growth: SynAspect[] } | undefined);
-  const aspLine = (x: SynAspect) => `${na}'s ${c.astro.points[x.a].name} ${c.astro.aspects[x.type].tone} ${nb}'s ${c.astro.points[x.b].name}: ${c.astro.aspects[x.type].pair}.`;
+  const aspLine = (x: SynAspect) => `${c.book.aspectPair(na, c.astro.points[x.a].name, c.astro.aspects[x.type].tone, nb, c.astro.points[x.b].name)}: ${c.astro.aspects[x.type].pair}.`;
 
   const fk = r.rel === "romantic" ? "love" : r.rel === "friend" ? "friends" : r.rel === "family" ? "family" : "work";
   const facet = (p: Profile) => D.signDeep[p.sun].sun[fk];
@@ -45,7 +45,7 @@ export function buildBondStory(A: Profile, B: Profile, na: string, nb: string, r
       b.push({ t: "h", text: U.traitsTitle });
       for (const t of TRAITS) b.push({ t: "p", text: `${c.psych.traits[t].name} (${qa.bigFive[t]} / ${qb.bigFive[t]}): ${Math.abs(qa.bigFive[t] - qb.bigFive[t]) < 25 ? D.traitPair[t].same : D.traitPair[t].diff}` });
     }
-    if (A.psych && B.psych) b.push({ t: "p", text: `${A.psych.fourLetter.code} × ${B.psych.fourLetter.code}: ${c.psych.fourLetterStyles[A.psych.fourLetter.code].name} & ${c.psych.fourLetterStyles[B.psych.fourLetter.code].name}.` });
+    if (A.psych && B.psych) b.push({ t: "p", text: `${A.psych.fourLetter.code} × ${B.psych.fourLetter.code}: ${c.psych.fourLetterStyles[A.psych.fourLetter.code].name}${c.book.and}${c.psych.fourLetterStyles[B.psych.fourLetter.code].name}.` });
     ch("talk", { kind: "emblem", id: "fourletter" }, b, missingOf(["big-five"]));
   }
 
@@ -103,7 +103,7 @@ export function buildBondStory(A: Profile, B: Profile, na: string, nb: string, r
     b.push({ t: "h", text: U.edgeTitle });
     for (const g of r.growthEdges) b.push({ t: "p", text: `${c.compat.themes[g.theme].name}: ${c.compat.themes[g.theme].minus} ${c.compat.themes[g.theme].practices[0]}` });
     b.push({ t: "p", text: `${c.book.lifePathTitle(A.numbers.lifePath, D.lifePathDeep[A.numbers.lifePath].title)} × ${c.book.lifePathTitle(B.numbers.lifePath, D.lifePathDeep[B.numbers.lifePath].title)}. ${D.lifePathPair[numberHarmony(A.numbers.lifePath, B.numbers.lifePath).kind]}` });
-    if (qa.nine && qb.nine) b.push({ t: "facets", items: [{ label: `${na} · ${qa.nine.type}w${qa.nine.wing}`, text: `${D.nineDeep[qa.nine.type].growth} ${D.nineDeep[qa.nine.type].love}` }, { label: `${nb} · ${qb.nine.type}w${qb.nine.wing}`, text: `${D.nineDeep[qb.nine.type].growth} ${D.nineDeep[qb.nine.type].love}` }] });
+    if (qa.nine && qb.nine) b.push({ t: "facets", items: [{ label: `${na} · ${c.book.nineCode(qa.nine.type, qa.nine.wing)}`, text: `${D.nineDeep[qa.nine.type].growth} ${D.nineDeep[qa.nine.type].love}` }, { label: `${nb} · ${c.book.nineCode(qb.nine.type, qb.nine.wing)}`, text: `${D.nineDeep[qb.nine.type].growth} ${D.nineDeep[qb.nine.type].love}` }] });
     b.push({ t: "list", kind: "journal", title: c.book.journal, items: [D.signDeep[A.sun].sun.journal[0], D.signDeep[B.sun].sun.journal[0]] });
     ch("growth", { kind: "emblem", id: "bond" }, b, missingOf(["nine"]));
   }
@@ -111,7 +111,7 @@ export function buildBondStory(A: Profile, B: Profile, na: string, nb: string, r
   // 7. Long road
   {
     const rel = animalRelation(A.chinese.animal, B.chinese.animal);
-    const b: Block[] = [{ t: "lead", text: D.archetypeLong[r.archetype] }, { t: "p", text: `${c.chinese.animals[A.chinese.animal].name} & ${c.chinese.animals[B.chinese.animal].name}: ${D.chinesePair[rel]}` }];
+    const b: Block[] = [{ t: "lead", text: D.archetypeLong[r.archetype] }, { t: "p", text: `${c.chinese.animals[A.chinese.animal].name}${c.book.and}${c.chinese.animals[B.chinese.animal].name}: ${D.chinesePair[rel]}` }];
     const lk = r.rel === "colleague" ? "work" : "love";
     b.push({ t: "facets", items: [{ label: `${na} · ${A.numbers.lifePath}`, text: D.lifePathDeep[A.numbers.lifePath][lk]! }, { label: `${nb} · ${B.numbers.lifePath}`, text: D.lifePathDeep[B.numbers.lifePath][lk]! }] });
     const v = r.lenses.find((l) => l.id === "vedic"); if (v && r.rel === "romantic") b.push({ t: "p", text: U.vedicLine((v.detail as { guna: { total: number } }).guna.total) });

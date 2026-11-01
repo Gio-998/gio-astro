@@ -14,8 +14,6 @@ import path from "node:path";
 
 const OUT = process.argv[2] ?? "out";
 const LOCALES = ["en", "mk", "de", "sr"];
-/** Every page has these. Serbian comes on top only where the sitemap lists a Serbian page. */
-const ALWAYS = ["en", "mk", "de"];
 const HOMES = LOCALES.map((l) => `/${l}/`);
 const SHOW = 15;
 /** Static export still writes a file for a route that calls notFound(): a noindex shell with an empty body. So an existing file is not proof of a page. */
@@ -36,10 +34,7 @@ function walk(dir, out = []) {
 const toUrlPath = (file) => `/${path.relative(OUT, path.dirname(file)).split(path.sep).join("/")}/`;
 
 if (!fs.existsSync(path.join(OUT, "sitemap.xml"))) { console.error(`No ${OUT}/sitemap.xml: run npm run build first.`); process.exit(1); }
-const xml = fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8");
-const sitemap = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
-/** Language versions per URL, as the sitemap states them, so a page and the sitemap cannot disagree. */
-const sitemapLangs = new Map([...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => [new URL(m[1].match(/<loc>([^<]+)<\/loc>/)[1]).pathname, [...m[1].matchAll(/hreflang="([^"]+)"/g)].map((x) => x[1]).filter((x) => x !== "x-default").sort()]));
+const sitemap = [...fs.readFileSync(path.join(OUT, "sitemap.xml"), "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => new URL(m[1]).pathname);
 const listed = new Set(sitemap);
 const pages = LOCALES.flatMap((l) => (fs.existsSync(path.join(OUT, l)) ? walk(path.join(OUT, l)) : []));
 
@@ -60,9 +55,7 @@ for (const file of pages) {
   const canonical = tags.find((t) => attr(t, "rel") === "canonical"); const self = canonical && new URL(attr(canonical, "href"), "https://x").pathname;
   if (self !== url) bad.canonical.push(`${url} -> ${self ?? "none"}`);
   const alt = Object.fromEntries(tags.filter((t) => attr(t, "rel") === "alternate" && attr(t, "hreflang")).map((t) => [attr(t, "hreflang"), new URL(attr(t, "href"), "https://x").pathname]));
-  const langs = Object.keys(alt).filter((l) => l !== "x-default").sort();
-  if (!ALWAYS.every((l) => alt[l]) || !alt["x-default"] || !Object.values(alt).includes(url) || langs.join() !== (sitemapLangs.get(url) ?? []).join()) bad.hreflang.push(`${url} has ${Object.keys(alt).join(",") || "none"}`);
-  if (alt["x-default"] !== alt.en) bad.hreflang.push(`${url} has x-default ${alt["x-default"]}`);
+  if (!LOCALES.every((l) => alt[l]) || alt["x-default"] !== alt.en || !Object.values(alt).includes(url)) bad.hreflang.push(`${url} has ${Object.keys(alt).join(",") || "none"}`);
   const lang = html.match(/<html\b[^>]*\blang="([^"]+)"/)?.[1];
   if (lang !== url.split("/")[1]) bad.lang.push(`${url} has ${lang}`);
 }

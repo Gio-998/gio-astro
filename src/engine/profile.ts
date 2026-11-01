@@ -132,7 +132,7 @@ export function buildProfile(rawInput: PersonInput): Profile {
 
   return {
     ...layer, input, chart, sun, moon, rising, chinese, vedic: vedicMoon(chart),
-    numbers: { lifePath: lp.value, lifePathSteps: lp.steps, birthday: birthdayNumber(input.date), personalYear: personalYear(input.date, thisYear), name },
+    numbers: { lifePath: lp.value, lifePathSteps: lp.sum, birthday: birthdayNumber(input.date), personalYear: personalYear(input.date, thisYear), name },
     tarot: birthCards(input.date),
     yang, dominantElement, archetypeAnimal, palette,
   };

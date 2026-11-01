@@ -3,8 +3,9 @@
  * render in Gmail, Outlook and Apple Mail. Supabase variables like {{ .Token }} are kept literally in the
  * sign-in template so the same HTML can be pasted into Supabase > Auth > Email Templates.
  */
+import { inline } from "@/content/sr/inline";
 import { localizedPath } from "@/lib/i18n-routes";
-export type EmailLang = "en" | "mk" | "de";
+export type EmailLang = "en" | "mk" | "de" | "sr";
 export type EmailId = "code" | "welcome" | "daily" | "weekly" | "report" | "bond";
 export const EMAIL_IDS: EmailId[] = ["code", "welcome", "daily", "weekly", "report", "bond"];
 const SITE = "https://horoscop.si";
@@ -85,7 +86,7 @@ export function renderEmail(id: EmailId, lang: EmailLang): { subject: string; ht
     case "code": {
       const X = L.code;
       const code = `<div style="margin:22px 0;text-align:center"><span style="display:inline-block;padding:16px 22px;border-radius:18px;background:${C.paper};font:700 34px/1 'Courier New',monospace;letter-spacing:.32em;color:${C.ink}">{{ .Token }}</span></div>`;
-      return { subject: lang === "mk" ? "Твојот код за Хороскоп: {{ .Token }}" : lang === "de" ? "Dein Code für Horoscop: {{ .Token }}" : "Your Horoscop code: {{ .Token }}", html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${code}${p(X.or, `font-size:13px;color:${C.dim}`)}${btn("{{ .ConfirmationURL }}", X.btn)}${p(X.ignore, `margin-top:18px;font-size:13px;color:${C.dim}`)}`) };
+      return { subject: lang === "mk" ? "Твојот код за Хороскоп: {{ .Token }}" : lang === "de" ? "Dein Code für Horoscop: {{ .Token }}" : lang === "sr" ? inline.codeSubject : "Your Horoscop code: {{ .Token }}", html: layout(lang, X.pre, `${h1(X.title)}${p(X.lead)}${code}${p(X.or, `font-size:13px;color:${C.dim}`)}${btn("{{ .ConfirmationURL }}", X.btn)}${p(X.ignore, `margin-top:18px;font-size:13px;color:${C.dim}`)}`) };
     }
     case "welcome": {
       const X = L.welcome;

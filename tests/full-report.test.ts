@@ -4,6 +4,7 @@ import { comparePair, REL_TYPES } from "../src/engine/compat";
 import { buildFullReport } from "../src/report/pair";
 import { reportEn } from "../src/content/report/en";
 import { reportMk } from "../src/content/report/mk";
+import { reportSr } from "../src/content/report/sr";
 import { contents } from "../src/content";
 
 const S = { name: "Strumica", lat: 41.44, lon: 22.64, tz: "Europe/Skopje" };
@@ -14,7 +15,7 @@ const a = buildProfile({ date: "1997-05-10", time: "11:00", place: S, quiz: {
 const b = buildProfile({ date: "2000-12-10", time: null, place: S });
 
 describe("full relationship report", () => {
-  for (const [loc, R] of [["en", reportEn], ["mk", reportMk]] as const) {
+  for (const [loc, R] of [["en", reportEn], ["mk", reportMk], ["sr", reportSr]] as const) {
     it.each(REL_TYPES)(`${loc} %s: nine chapters, no gaps, no dashes`, (rel) => {
       const doc = buildFullReport(R, contents[loc], comparePair(a, b, rel), a, b, "Mile", "Gordana");
       expect(doc.chapters).toHaveLength(9);

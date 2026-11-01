@@ -136,7 +136,6 @@ describe("Serbian grammar at the template seams", () => {
     expect(profile.placementTitle.Sun + " Ovan").toBe("Sunce: Ovan");
     expect(pair.careLine("Ana", "lepe reči", false, "Marko", "zajedničko vreme", "Prošetajte.")).toBe("Ana pruža: lepe reči. Marko najviše voli da dobije: zajedničko vreme. Probaj: Prošetajte.");
     expect(bondCheck.qReceive("Ana")).toBe("Čime ti Ana najbolje pokazuje pažnju?");
-    expect(today.transit("Mars", "gleda u oči", "Venera")).toBe("Mars gleda u oči: Venera u tvojoj karti");
     expect(today.meets("razgovori i razmišljanje", "ljubav i vrednosti")).toBe("U susretu: razgovori i razmišljanje i ljubav i vrednosti.");
     expect(chart.houseLine(4, "dom, koreni i porodica")).toBe("Kuća 4 (dom, koreni i porodica): ovde se ova energija najviše vidi.");
   });

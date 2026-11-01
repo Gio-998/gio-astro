@@ -4,10 +4,10 @@ import { SITE_URL } from "@/lib/site-url";
 export const dynamic = "force-static";
 import { ALL_QUIZ_IDS } from "@/lib/quiz-defs";
 import { languageAlternates, isIndexable } from "@/lib/seo";
-import { hasPage, localizedPath } from "@/lib/i18n-routes";
+import { localizedPath } from "@/lib/i18n-routes";
 import { SIGNS } from "@/engine/zodiac";
 import { BLOG_SLUGS, postFor } from "@/content/blog";
-import { publishedDates } from "@/engine/skyday";
+import { publishedDates, todayIso } from "@/engine/skyday";
 import { numPaths, numIndexable } from "@/lib/numerology";
 import { SECTIONS } from "@/lib/sections";
 import { CONTENT_DATES } from "@/lib/content-dates";
@@ -18,7 +18,7 @@ import { CONTENT_DATES } from "@/lib/content-dates";
 const PUBLIC = ["/", "/start/", "/match/", "/bond/", "/quizzes/", "/deep/", "/play/", "/partners/", ...ALL_QUIZ_IDS.map((q) => `/quiz/${q}/`), "/learn/", "/how-it-works/", "/promise/", "/privacy/", "/terms/", "/credits/", "/daily/", ...SIGNS.map((s) => `/daily/${s}/`), "/blog/", ...BLOG_SLUGS.map((s) => `/blog/${s}/`)].filter(isIndexable);
 const DATES = publishedDates();
 const HORO = ["/horoscope/", ...SIGNS.map((s) => `/horoscope/${s}/`), ...SIGNS.flatMap((s) => DATES.map((d) => `/horoscope/${s}/${d}/`))];
-const BUILD = new Date().toISOString().slice(0, 10);
+const BUILD = todayIso(); // Skopje's date, like the pages: UTC is still yesterday just after local midnight
 
 type Entry = { path: string; lastModified: (l: string) => string; changeFrequency: "daily" | "monthly" | "yearly"; priority: number };
 function entries(): Entry[] {
@@ -34,7 +34,7 @@ function entries(): Entry[] {
   ];
 }
 export default function sitemap(): MetadataRoute.Sitemap {
-  // One <url> per locale that has the page, each listing every language version (xhtml:link hreflang) + x-default.
+  // One <url> per locale, each listing every language version (xhtml:link hreflang) + x-default.
   const abs = (o: Record<string, string>) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, `${SITE_URL}${v}`]));
-  return entries().flatMap((e) => LOCALES.filter((l) => hasPage(l, e.path)).map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: e.lastModified(l), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
+  return entries().flatMap((e) => LOCALES.map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: e.lastModified(l), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
 }

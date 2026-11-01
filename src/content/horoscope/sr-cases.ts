@@ -41,6 +41,10 @@ export const bDat = (b: string) => BODIES[b]?.[1] ?? b;
 /** "sa Merkurom". */
 export const bIns = (b: string) => BODIES[b]?.[2] ?? b;
 
+/** Accusative, only where it differs from the nominative: planets count as things, so just the feminine names change. "podržava Veneru". */
+const ACC: Record<string, string> = { Venera: "Veneru", "Sredina neba": "Sredinu neba" };
+export const bAcc = (b: string) => ACC[b] ?? b;
+
 export type TopicCase = "gen" | "dat" | "acc" | "ins" | "loc";
 /** One entry per house. Every topic names two or more things, so a nominative topic always takes a plural verb. */
 const TOPICS: ({ nom: string } & Record<TopicCase, string>)[] = [

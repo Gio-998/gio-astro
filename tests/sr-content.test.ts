@@ -4,6 +4,7 @@ import { computeChart } from "../src/engine/astro";
 import { dayChange, risingOfBirth } from "../src/engine/calculators";
 import { resolveBirthTime } from "../src/engine/time";
 import { formatDegree } from "../src/engine/zodiac";
+import { contents } from "../src/content";
 import { posts as blogEn } from "../src/content/blog/en";
 import { posts as blogSr } from "../src/content/blog/sr";
 import { calcEn } from "../src/content/calculators/en";
@@ -16,11 +17,14 @@ import { en as dayEn } from "../src/content/horoscope/en";
 import { enVariety } from "../src/content/horoscope/en-variety";
 import { sr as daySr } from "../src/content/horoscope/sr";
 import { srVariety } from "../src/content/horoscope/sr-variety";
-import { dGen, dGenMid, dNom, houseAcc, mLoc, ordAcc, ordLoc, plural, sAcc, sGen, sLoc, tc } from "../src/content/horoscope/sr-cases";
+import { bAcc, dGen, dGenMid, dNom, houseAcc, mLoc, ordAcc, ordLoc, plural, sAcc, sGen, sLoc, tc } from "../src/content/horoscope/sr-cases";
+import { book as srBook } from "../src/content/sr/book";
+import * as srDaily from "../src/content/sr/daily";
 import { en as periodEn } from "../src/content/horoscope-period/en";
 import { sr as periodSr } from "../src/content/horoscope-period/sr";
 
 /** Reads the Serbian files directly. The family tests cover their shape through the locale lists; this file covers what only Serbian has, such as case forms. */
+const uiLines = { aspectLine: contents.sr.ui.pair.aspectLine, transit: contents.sr.ui.today.transit };
 const SIGN_NAMES = ["Ovan", "Bik", "Blizanci", "Rak", "Lav", "Devica", "Vaga", "Škorpija", "Strelac", "Jarac", "Vodolija", "Ribe"];
 
 function sameShape(a: unknown, b: unknown, path: string, out: string[]) {
@@ -89,6 +93,19 @@ describe("copy rules", () => {
 });
 
 describe("Serbian grammar at the template seams", () => {
+  const { aspectLine, transit } = uiLines;
+  it("planets and aspects take the accusative", () => {
+    expect(bAcc("Venera")).toBe("Veneru"); expect(bAcc("Sredina neba")).toBe("Sredinu neba"); expect(bAcc("Mars")).toBe("Mars");
+    expect(aspectLine("Ana", "Mars", "podržava", "Marko", "Venera", "⚹", "2.1")).toBe("Mars osobe Ana podržava Veneru osobe Marko (⚹ 2.1°)");
+    expect(transit("Saturn", srDaily.transitTone.square, "Venera")).toBe("Saturn izaziva Veneru u tvojoj karti");
+    expect(srBook.transitPair("Mars", srDaily.transitTone.opposition, "Venera")).toBe("Mars gleda pravo u Veneru");
+    expect(srBook.aspectPair("Ana", "Sunce", "prati", "Marko", "Mesec")).toBe("Sunce osobe Ana prati Mesec osobe Marko");
+    expect(srBook.meaning).toBe("odnosno");
+  });
+  it("nine motivations read as clauses, and the wing is spelled out", () => {
+    for (const n of Object.values(contents.sr.deep.nineDeep)) { expect(n.desire, n.title).toMatch(/^da /); expect(n.fear, n.title).toMatch(/^da /); }
+    expect(srBook.nineCode(4, 5)).toBe("4 sa krilom 5"); expect(srBook.and).toBe(" i ");
+  });
   it("sign names take the case the preposition asks for", () => {
     expect(SIGN_NAMES.map((s) => `za ${sAcc(s)}`)).toEqual(["za Ovna", "za Bika", "za Blizance", "za Raka", "za Lava", "za Devicu", "za Vagu", "za Škorpiju", "za Strelca", "za Jarca", "za Vodoliju", "za Ribe"]);
     expect(SIGN_NAMES.map((s) => `u ${sLoc(s)}`)).toEqual(["u Ovnu", "u Biku", "u Blizancima", "u Raku", "u Lavu", "u Devici", "u Vagi", "u Škorpiji", "u Strelcu", "u Jarcu", "u Vodoliji", "u Ribama"]);

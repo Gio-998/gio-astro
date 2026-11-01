@@ -1,4 +1,4 @@
-import { plural, sLoc } from "@/content/horoscope/sr-cases";
+import { bAcc, plural, sLoc } from "@/content/horoscope/sr-cases";
 import type { book as En } from "../en/book";
 
 /** Dative of elementName, for "naginje ka Vatri". */
@@ -75,6 +75,11 @@ export const book: typeof En = {
   nineTitle: (n: number, name: string, w: number) => `Tip motivacije ${n} · ${name} (sa krilom ${w})`,
   nineCore: (fear: string, desire: string) => `U suštini te pokreće ova želja: ${desire}. Čuvaš se ovog straha: ${fear}.`,
   nineWing: (w: number, note: string) => `Tvoje krilo ${w} ${note}.`,
+  nineCode: (t: number, w: number) => `${t} sa krilom ${w}`,
+  and: " i ",
+  yangScore: (v: number) => `${v} od 100`,
+  aspectPair: (na: string, pa: string, tone: string, nb: string, pb: string) => `${pa} osobe ${na} ${tone} ${bAcc(pb)} osobe ${nb}`,
+  transitPair: (a: string, tone: string, b: string) => `${a} ${tone} ${bAcc(b)}`,
   nineArrows: (g: number, gn: string, s: number, sn: string) => `U dobrim danima rasteš ka darovima tipa ${g} (${gn}); pod stresom možeš da pozajmiš navike tipa ${s} (${sn}).`,
   doshaTitle: (n: string) => `Tip tela i energije: ${n}`,
   temperamentTitle: (n: string) => `Temperament: ${n}`,

@@ -297,7 +297,7 @@ export function buildBook(p: Profile, c: Content, name: string, now = new Date()
     b.push({ t: "h", text: B.jupiterTitle }); b.push({ t: "p", text: D.jupiterHouse[house("jupiter")] });
     b.push({ t: "h", text: B.saturnTitle }); b.push({ t: "p", text: D.saturnHouse[house("saturn")] });
     const tr = transitsFor(p, now).filter((t) => t.transiting !== "moon").slice(0, 3);
-    if (tr.length) b.push({ t: "list", kind: "focus", title: B.transitsTitle, items: tr.map((t) => `${A.points[t.transiting].name} ${c.daily.transitTone[t.type]} ${A.points[t.natal].name.toLowerCase()}: ${c.daily.transitMood[t.transiting]}. ${c.daily.transitAdvice[t.type]}`) });
+    if (tr.length) b.push({ t: "list", kind: "focus", title: B.transitsTitle, items: tr.map((t) => `${B.transitPair(A.points[t.transiting].name, c.daily.transitTone[t.type], A.points[t.natal].name)}: ${c.daily.transitMood[t.transiting]}. ${c.daily.transitAdvice[t.type]}`) });
     ch("year", { kind: "emblem", id: "sun" }, b);
   }
 

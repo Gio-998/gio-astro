@@ -92,13 +92,13 @@ export function bookOpeners(x: VoiceCtx, srTheme?: string): Record<string, Voice
   const o: Record<string, VoiceLine> = {};
   const venus = pl.venus!.sign, merc = pl.mercury!.sign;
   const care = p.quiz.care ? c.psych.care[p.quiz.care.topReceive[0]].name : undefined;
-  o.love = { kind: "connect", text: V.book.love(S(venus), care?.toLowerCase()), why: [`Venus ${formatDegree(pl.venus!.lon)} ${S(venus)}`, ...(care ? [W.care(x.name, care)] : [])] };
+  o.love = { kind: "connect", text: V.book.love(S(venus), care?.toLowerCase()), why: [`${c.astro.points.venus.name} ${formatDegree(pl.venus!.lon)} ${S(venus)}`, ...(care ? [W.care(x.name, care)] : [])] };
   const ex = p.quiz.explorer ? c.psych.explorer.name : undefined;
-  o.mind = { kind: "connect", text: V.book.mind(S(merc), ex && p.quiz.explorer ? `${ex}: ${p.quiz.explorer.explorer}/100` : undefined), why: [`Mercury ${formatDegree(pl.mercury!.lon)} ${S(merc)}`] };
+  o.mind = { kind: "connect", text: V.book.mind(S(merc), ex && p.quiz.explorer ? `${ex}: ${p.quiz.explorer.explorer}/100` : undefined), why: [`${c.astro.points.mercury.name} ${formatDegree(pl.mercury!.lon)} ${S(merc)}`] };
   const sh = p.quiz.shadow ? c.psych.shadowAxes[p.quiz.shadow.mainShadow].classical : undefined;
-  o.shadow = { kind: "connect", text: V.book.shadow(S(sys.lilith.sign), sh?.toLowerCase()), why: [`Lilith ${formatDegree(sys.lilith.lon)} ${S(sys.lilith.sign)}`, ...(sh ? [`Shadow & Light: ${sh}`] : [])] };
+  o.shadow = { kind: "connect", text: V.book.shadow(S(sys.lilith.sign), sh?.toLowerCase()), why: [`${c.systems.meta.lilith.short} ${formatDegree(sys.lilith.lon)} ${S(sys.lilith.sign)}`, ...(sh ? [`${c.lensInfo.shadow.name}: ${sh}`] : [])] };
   if (sys.chiron) o.heals = { kind: "care", text: V.book.heals(S(sys.chiron.sign), c.systems.chironTheme[sys.chiron.sign]), why: [W.chiron(S(sys.chiron.sign), formatDegree(sys.chiron.lon))] };
-  o.path = { kind: "connect", text: V.book.path(S(sys.northNode.sign), p.numbers.lifePath), why: [W.node(S(sys.northNode.sign)), `Life path ${p.numbers.lifePathSteps}`] };
+  o.path = { kind: "connect", text: V.book.path(S(sys.northNode.sign), p.numbers.lifePath), why: [W.node(S(sys.northNode.sign)), `${c.lensInfo.lifepath.name}: ${p.numbers.lifePathSteps}`] };
   if (srTheme) o.year = { kind: "connect", text: V.book.year(srTheme), why: [c.systems.meta.solarreturn.name] };
   return o;
 }

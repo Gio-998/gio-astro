@@ -13,7 +13,7 @@ export const moonPhases: Record<MoonPhase, { name: string; icon: string; text: s
 
 /** Bare verbs that take the accusative, so a planet name after them stays as it is (Venera is the one exception). */
 export const transitTone: Record<string, string> = {
-  conjunction: "susreće", sextile: "blago podržava", square: "izaziva", trine: "prati", opposition: "gleda u oči",
+  conjunction: "susreće", sextile: "blago podržava", square: "izaziva", trine: "prati", opposition: "gleda pravo u",
 };
 export const transitMood: Record<string, string> = {
   sun: "pažnja i vitalnost", moon: "tvoje raspoloženje za danas", mercury: "razgovori i razmišljanje", venus: "ljubav, zadovoljstvo i lepota",

@@ -301,6 +301,7 @@ describe("copy for the gate", () => {
     for (const l of ["en", "mk", "de", "sr"] as const) expect(new Set(Object.values(contents[l].ui.lead.errors)).size).toBe(2);
     expect(contents.de.ui.lead.submit).not.toBe(contents.en.ui.lead.submit);
     expect(contents.mk.ui.lead.submit).not.toBe(contents.en.ui.lead.submit);
+    expect(contents.sr.ui.lead.submit).not.toBe(contents.en.ui.lead.submit);
   });
   it("uses the reader word test, and promises no results by email", () => {
     for (const l of ["en", "mk", "de", "sr"] as const) {

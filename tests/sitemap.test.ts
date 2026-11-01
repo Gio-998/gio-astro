@@ -2,8 +2,8 @@ import { describe, it, expect } from "vitest";
 import { DateTime } from "luxon";
 import { LOCALES } from "@/content";
 import { SIGNS } from "@/engine/zodiac";
-import { ARCHIVE_START, SKY_ZONE, publishedDates } from "@/engine/skyday";
-import { hasPage, localizedPath, parsePath } from "@/lib/i18n-routes";
+import { ARCHIVE_START, SKY_ZONE, publishedDates, todayIso } from "@/engine/skyday";
+import { localizedPath } from "@/lib/i18n-routes";
 import { SITE_URL } from "@/lib/site-url";
 import sitemap from "@/app/sitemap";
 
@@ -43,22 +43,19 @@ describe("sitemap entries", () => {
     const entries = sitemap(); const urls = new Set(entries.map((e) => e.url));
     for (const e of entries) {
       const a = e.alternates!.languages as Record<string, string>;
-      const path = parsePath(new URL(e.url).pathname)![1];
-      expect(Object.keys(a).sort(), e.url).toEqual(hasPage("sr", path) ? ["de", "en", "mk", "sr", "x-default"] : ["de", "en", "mk", "x-default"]);
+      expect(Object.keys(a).sort(), e.url).toEqual(["de", "en", "mk", "sr", "x-default"]);
       expect(Object.values(a), e.url).toContain(e.url);
       expect(a["x-default"]).toBe(a.en);
       for (const u of Object.values(a)) expect(urls.has(u), u).toBe(true);
     }
   });
-  it("lists a Serbian URL only where a Serbian page exists, and x-default stays English", () => {
-    const entries = sitemap(); const sr = entries.filter((e) => new URL(e.url).pathname.startsWith("/sr/"));
-    expect(sr.length).toBe(entries.filter((e) => new URL(e.url).pathname.startsWith("/en/")).length - 4); // everything but the four pages below
-    for (const e of sr) expect(hasPage("sr", parsePath(new URL(e.url).pathname)![1]), e.url).toBe(true);
-    for (const p of ["/privacy/", "/terms/", "/promise/", "/learn/"]) expect(entries.some((e) => e.url === `${SITE_URL}/sr${p}`), p).toBe(false);
+  it("lists as many Serbian URLs as English ones, and x-default stays English", () => {
+    const entries = sitemap(); const count = (l: string) => entries.filter((e) => new URL(e.url).pathname.startsWith(`/${l}/`)).length;
+    expect(count("sr")).toBe(count("en"));
     for (const e of entries) expect((e.alternates!.languages as Record<string, string>)["x-default"], e.url).toContain("/en/");
   });
   it("never dates a page later than today", () => {
-    const today = new Date().toISOString().slice(0, 10);
+    const today = todayIso(); // page dates are Skopje's, so a UTC date here fails just after local midnight
     expect(sitemap().filter((e) => String(e.lastModified) > today).map((e) => e.url)).toEqual([]);
   });
 });

@@ -4,8 +4,8 @@ import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:f
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { LOCALES } from "@/content";
-import { NUM_SLUGS, ROUTE_LOCALES, SECTION_SLUGS, SIGN_SLUGS, hasPage, isLocalPath, localizedPath, parsePath, routeAlternates, servesFolder, switchLocale, wrongLocaleRedirects } from "@/lib/i18n-routes";
-import { languageAlternates, localizedMeta } from "@/lib/seo";
+import { NUM_SLUGS, ROUTE_LOCALES, SECTION_SLUGS, SIGN_SLUGS, isLocalPath, localizedPath, parsePath, routeAlternates, servesFolder, switchLocale, wrongLocaleRedirects } from "@/lib/i18n-routes";
+import { languageAlternates } from "@/lib/seo";
 import sitemap from "@/app/sitemap";
 import { SECTIONS } from "@/lib/sections";
 import { ALL_SIGN_PAIRS } from "@/lib/sections/sign-compatibility";
@@ -118,13 +118,9 @@ describe("Serbian", () => {
     expect([has("de/numerologija"), has("en/numerologija"), has("sr/ceni"), has("mk/cene")]).toEqual([false, false, false, false]);
     rmSync(dir, { recursive: true, force: true });
   });
-  it("lists sr only where the page is written, and such a page stays out of the index", () => {
-    expect(routeAlternates("/privacy/")).toEqual({ en: "/en/privacy/", mk: "/mk/privacy/", de: "/de/privacy/", "x-default": "/en/privacy/" });
-    expect(Object.keys(languageAlternates("/terms/")).sort()).toEqual(["de", "en", "mk", "x-default"]);
-    expect(hasPage("sr", "/privacy/")).toBe(false); expect(hasPage("sr", "/quiz/big-five/")).toBe(true); expect(hasPage("mk", "/privacy/")).toBe(true);
-    expect(localizedMeta("sr", "/privacy/", { siteName: "x" }).robots).toEqual({ index: false, follow: true });
-    expect(localizedMeta("mk", "/privacy/", { siteName: "x" }).robots).toEqual({ index: true, follow: true });
-    expect(languageAlternates("/deep/").sr).toBe("/sr/deep/");
+  it("has every page in Serbian, legal pages and open tools included", () => {
+    for (const p of ["/privacy/", "/terms/", "/promise/", "/learn/", "/deep/", "/quiz/big-five/", "/start/", "/match/", "/bond/", "/email/"]) expect(languageAlternates(p).sr, p).toBe(`/sr${p}`);
+    for (const f of ["privacy", "terms", "promise", "learn"]) expect(readFileSync(`src/app/[lang]/${f}/page.tsx`, "utf8"), f).toContain("function PageSr");
   });
   it("accepts a return path in every locale, and nothing off the site", () => {
     for (const l of ROUTE_LOCALES) expect(isLocalPath(`/${l}/me/`), l).toBe(true);

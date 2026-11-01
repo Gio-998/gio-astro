@@ -1,4 +1,5 @@
 "use client";
+import { inline } from "@/content/sr/inline";
 import Link from "next/link";
 import { RetroMark } from "../RetroMark";
 import { useSearchParams } from "next/navigation";
@@ -34,7 +35,7 @@ export function ChartPage() {
           <thead><tr className="text-left text-dim"><th className="py-1">{U.point}</th><th>{U.sign}</th><th>{U.degree}</th><th>{U.house}</th></tr></thead>
           <tbody>
             {ORDER.filter((p) => ch.placements[p]).map((p) => { const pl = ch.placements[p]!; return (
-              <tr key={p} className="border-t border-white/5"><td className="py-1.5">{A.points[p].glyph} {A.points[p].name}{pl.retrograde && <RetroMark label={locale === "mk" ? "ретроградно" : locale === "de" ? "rückläufig" : locale === "sr" ? "retrogradno" : "retrograde"} />}</td><td>{SIGN_GLYPH[pl.sign]} {A.signs[pl.sign].name}</td><td>{formatDegree(pl.lon)}</td><td>{pl.house ?? "·"}</td></tr>
+              <tr key={p} className="border-t border-white/5"><td className="py-1.5">{A.points[p].glyph} {A.points[p].name}{pl.retrograde && <RetroMark label={locale === "mk" ? "ретроградно" : locale === "de" ? "rückläufig" : locale === "sr" ? inline.retrograde : "retrograde"} />}</td><td>{SIGN_GLYPH[pl.sign]} {A.signs[pl.sign].name}</td><td>{formatDegree(pl.lon)}</td><td>{pl.house ?? "·"}</td></tr>
             ); })}
           </tbody>
         </table>

@@ -1,4 +1,5 @@
 /** Assembles the public daily horoscope text for a sign + date + locale from live sky data and the hand-written banks. */
+import { inline } from "@/content/sr/inline";
 import { getContent } from "@/content";
 import { en } from "@/content/horoscope/en";
 import { mk } from "@/content/horoscope/mk";
@@ -133,10 +134,10 @@ export function reading(lang: string, sign: Sign, iso: string): Reading {
     lang: L, sign, iso, sky, signName, dateLabel, weekday,
     title: B.ui.title(signName, dateLabel), description: B.ui.description(signName, dateLabel, headline),
     headline, love, work, well, sky_: lines.slice(0, 5), moonLine,
-    lucky: { color: B.colors[el][sky.lucky.color], hex: COLOR_HEX[el][sky.lucky.color], number: sky.lucky.number, window: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis", sr: "do" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}` },
+    lucky: { color: B.colors[el][sky.lucky.color], hex: COLOR_HEX[el][sky.lucky.color], number: sky.lucky.number, window: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis", sr: inline.rangeTo } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}` },
     prev: addDays(iso, -1), next: addDays(iso, 1),
     overview, single, couple, money, body: [moonChanged ? M.body[sky.moon.sign] : "", pick(V.bodyTip, "body"), well[1] === pick(V.tip, "tip") ? "" : pick(V.tip, "tip")].filter(Boolean).join(" "), friends: [lead("friends"), M.friends[mh - 1][alt], V.dayPeople[dow], showPhase ? M.family[sky.moon.phase] : ""].filter(Boolean).join(" "), why,
-    best: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis", sr: "do" } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}: ${pick(V.best[sky.lucky.window[0] < 12 ? 0 : sky.lucky.window[0] < 17 ? 1 : 2], "best")} ${V.dayTip[dow]}`,
+    best: `${pad(sky.lucky.window[0])} ${({ mk: "до", de: "bis", sr: inline.rangeTo } as Record<string, string>)[L] ?? "to"} ${pad(sky.lucky.window[1])}: ${pick(V.best[sky.lucky.window[0] < 12 ? 0 : sky.lucky.window[0] < 17 ? 1 : 2], "best")} ${V.dayTip[dow]}`,
     avoid, prompt: M.prompt[mh - 1][alt], week, planets,
   };
 }
