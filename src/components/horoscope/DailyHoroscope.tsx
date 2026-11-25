@@ -27,8 +27,17 @@ function Sec({ icon, title, children, className = "" }: { icon: string; title: s
 }
 const Ps = ({ lines }: { lines: string[] }) => <>{lines.map((l, i) => <p key={i} className={i ? p2 : p1}>{l}</p>)}</>;
 const MoonDisc = ({ angle, className }: { angle: number; className: string }) => <svg viewBox="0 0 32 32" className={className} aria-hidden><circle cx="16" cy="16" r="14" fill="#1b1640" stroke="#e9c78a" strokeOpacity=".5" /><path d={moonPath(angle, 16, 16, 12)} fill="#f6ecd2" /></svg>;
-/** Keep "13 October 2026" glued so the date never leaves a lone number at a line end. */
-const nbsp = (d: string) => d.replace(/^(\d+) (\S+) (\d+)$/, "$1\u00A0$2\u00A0$3");
+/**
+ * Title with the date kept on one line: the date sits in a no-wrap span, so "25 November 2026" never splits into
+ * "202" / "6" (the global break-word rule used to cut it when the line was too narrow). Serbian writes the date in
+ * its own case form, so the date is found from its first digit to the end when the plain label is not in the title.
+ */
+function TitleWithDate({ title, date }: { title: string; date: string }) {
+  let i = title.lastIndexOf(date);
+  if (i < 0) { const m = title.match(/\d{1,2}\.?\s\S+\s\d{4}\.?$/); i = m?.index ?? -1; }
+  if (i < 0) return <>{title}</>;
+  return <>{title.slice(0, i)}<span className="whitespace-nowrap">{title.slice(i)}</span></>;
+}
 
 /** Public daily horoscope for one sign + date. `isToday` = rendered on the per-sign today index. */
 export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: string; sign: Sign; iso: string; isToday?: boolean }) {
@@ -63,7 +72,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
         </div>
         <div className="relative lg:max-w-[600px]">
           <p className="eyebrow mb-2 whitespace-nowrap text-[11px] tracking-[.14em] sm:tracking-[.2em] lg:mb-4 lg:text-[13px]" data-testid="horo-eyebrow">{SIGN_GLYPH[sign]} {r.signName} · {r.weekday}</p>
-          <h1 className="h-display max-w-[15ch] pr-2 text-[2rem] font-medium leading-[1.05] lg:max-w-none lg:text-[3.3rem]!">{r.title.replace(r.dateLabel, nbsp(r.dateLabel))}</h1>
+          <h1 className="h-display pr-2 text-[2rem] font-medium leading-[1.05] lg:text-[3.3rem]!" data-testid="horo-title"><TitleWithDate title={r.title} date={r.dateLabel} /></h1>
           <p className="h-display mt-4 text-[1.35rem] italic leading-snug text-gold/95 lg:mt-7 lg:text-[2.25rem] lg:leading-[1.2]">{r.headline}</p>
           <p className="mt-3 flex items-start gap-2 text-[13px] text-mist/75 lg:mt-7 lg:text-[15px]"><MoonDisc angle={angle} className="mt-px h-4 w-4 shrink-0 lg:h-5 lg:w-5" /><span>{r.moonLine}</span></p>
         </div>
