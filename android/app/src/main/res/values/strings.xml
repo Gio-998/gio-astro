@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Horoscop</string>
+    <string name="title_activity_main">Horoscop</string>
+    <string name="package_name">si.horoscop.app</string>
+    <string name="custom_url_scheme">si.horoscop.app</string>
+    <string name="widget_empty">Open Horoscop to choose your sign</string>
+    <string name="widget_description">Your daily horoscope</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="widget_empty">Otvori Horoscop i izaberi znak</string>
+    <string name="widget_description">Tvoj dnevni horoskop</string>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- Universal Links (needs /.well-known/apple-app-site-association on horoscop.si with the real Team ID). -->
+	<key>com.apple.developer.associated-domains</key>
+	<array>
+		<string>applinks:horoscop.si</string>
+		<string>applinks:www.horoscop.si</string>
+	</array>
+	<!-- Sign in with Apple. Enable the capability on the identifier si.horoscop.app in the Apple Developer account. -->
+	<key>com.apple.developer.applesignin</key>
+	<array>
+		<string>Default</string>
+	</array>
+	<!-- The App Group (group.si.horoscop.app) for the widget is added by ios/scripts/add_widget_target.rb when IOS_WIDGET=1. -->
+</dict>
+</plist>
