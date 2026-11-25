@@ -222,7 +222,7 @@ export function VerifyPage() {
 
 function SignedIn() {
   const a = useAccount(); const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const fmt = useDate(); const router = useRouter();
-  const [cons, setCons] = useState({ terms: false, data: false, mkt: false }); const [msg, setMsg] = useState("");
+  const [cons, setCons] = useState({ terms: false, data: false, mkt: false }); const [msg, setMsg] = useState(""); const [askDelete, setAskDelete] = useState(false);
   const time = (iso: string) => new Date(iso).toLocaleTimeString(intlLocale(locale), { hour: "2-digit", minute: "2-digit" });
   return (
     <div className="space-y-4">
@@ -255,12 +255,47 @@ function SignedIn() {
       <div className="card space-y-2">
         <button className="btn-ghost w-full" data-testid="signout" onClick={async () => { await signOut(false); router.push(h("/")); }}>{A.signOutKeep}</button>
         <button className="btn-ghost w-full" onClick={async () => { await signOut(true); await clearNativeData(); router.push(h("/")); }}>{A.signOutClear}</button>
-        <button className="w-full rounded-full px-4 py-2 text-sm text-rose hover:bg-rose/10" data-testid="delete-account" onClick={async () => {
-          if (!confirm(A.deleteConfirm)) return; const r = await deleteAccount(); setMsg(r.ok ? A.deleted : r.error ?? A.errors.generic); if (r.ok) { await clearNativeData(); router.push(h("/")); }
-        }}>{A.deleteAccount}</button>
+        <button className="w-full rounded-full px-4 py-2 text-sm text-rose hover:bg-rose/10" data-testid="delete-account" onClick={() => setAskDelete(true)}>{A.deleteAccount}</button>
         {msg && <p className="text-sm">{msg}</p>}
+        {askDelete && <DeleteAccountDialog onClose={() => setAskDelete(false)} onDeleted={() => router.push(h("/"))} setMsg={setMsg} />}
       </div>
       <p className="text-xs text-dim" onClick={() => void flush()}>&nbsp;</p>
+    </div>
+  );
+}
+
+
+const STORE_SUB_APPLE = "https://apps.apple.com/account/subscriptions";
+const STORE_SUB_GOOGLE = "https://play.google.com/store/account/subscriptions";
+
+/** Confirmation before delete-account: explains that a store subscription is not cancelled with the account. */
+function DeleteAccountDialog({ onClose, onDeleted, setMsg }: { onClose: () => void; onDeleted: () => void; setMsg: (s: string) => void }) {
+  const { c } = useContent(); const A = c.ui.auth;
+  const [busy, setBusy] = useState(false);
+  const go = async () => {
+    if (busy) return; setBusy(true);
+    const r = await deleteAccount();
+    setMsg(r.ok ? A.deleted : r.error ?? A.errors.generic);
+    if (r.ok) { await clearNativeData(); onDeleted(); } else { setBusy(false); onClose(); }
+  };
+  return (
+    <div className="fixed inset-0 z-[80] flex items-end justify-center bg-black/60 p-4 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] sm:items-center" role="dialog" aria-modal="true" aria-labelledby="delete-account-title" aria-describedby="delete-account-text" data-testid="delete-account-dialog">
+      <button type="button" className="absolute inset-0 cursor-default" aria-label={A.deleteKeep} onClick={onClose} />
+      <div className="relative w-full max-w-md space-y-4 overflow-y-auto rounded-3xl border border-white/15 bg-night p-5 shadow-2xl">
+        <h2 id="delete-account-title" className="h-display text-pretty text-2xl leading-tight">{A.deleteAccount}</h2>
+        <div id="delete-account-text" className="space-y-3 text-pretty text-[15px] leading-relaxed text-mist/90">
+          <p>{A.deleteConfirm}</p>
+          <p>{A.deleteConfirmSub}</p>
+        </div>
+        <div className="flex flex-col gap-2 text-sm">
+          <a href={STORE_SUB_APPLE} target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline" data-testid="manage-sub-apple">{A.deleteManageApple}</a>
+          <a href={STORE_SUB_GOOGLE} target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline" data-testid="manage-sub-google">{A.deleteManageGoogle}</a>
+        </div>
+        <div className="grid grid-cols-1 gap-2">
+          <button type="button" className="btn-ghost w-full" onClick={onClose} disabled={busy}>{A.deleteKeep}</button>
+          <button type="button" className="w-full rounded-full px-4 py-2.5 text-sm text-rose ring-1 ring-rose/40 hover:bg-rose/10 disabled:opacity-60" data-testid="delete-account-confirm" onClick={() => void go()} disabled={busy}>{A.deleteAccount}</button>
+        </div>
+      </div>
     </div>
   );
 }
