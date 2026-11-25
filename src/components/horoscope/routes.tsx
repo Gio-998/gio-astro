@@ -9,11 +9,15 @@ import { LOCALE_META } from "@/lib/seo";
 import { breadcrumb, LdJson } from "@/lib/schema";
 import { SectionLinks } from "@/components/nav/SectionLinks";
 import { DailyHoroscope } from "./DailyHoroscope";
+import { LiveDailyHoroscope, LiveHub } from "@/app-mode";
+
+/** Store app build (npm run build:app): no dated archive, and the reading is computed on the device for its own today. */
+const APP_BUILD = process.env.NEXT_PUBLIC_APP_BUILD === "1";
 
 /** Each locale owns its own slug folder (/en/horoscope, /mk/dneven-horoskop); other locales 404 there. */
 // Static export refuses an empty list, so the other locale gets one "_" placeholder that renders the 404 page.
 export const signParams = (lang: string, owner: HoroLocale) => lang === owner ? SIGNS.map((s) => ({ sign: bankFor(owner).signSlug[s] })) : [{ sign: "_" }];
-export const dateParams = (lang: string, owner: HoroLocale) => lang === owner ? SIGNS.flatMap((s) => publishedDates().map((date) => ({ sign: bankFor(owner).signSlug[s], date }))) : [{ sign: "_", date: "_" }];
+export const dateParams = (lang: string, owner: HoroLocale) => lang === owner && !APP_BUILD ? SIGNS.flatMap((s) => publishedDates().map((date) => ({ sign: bankFor(owner).signSlug[s], date }))) : [{ sign: "_", date: "_" }];
 
 function meta(lang: string, title: string, description: string, canonical: string, languages: Record<string, string>, images: string[]): Metadata {
   const brand = getContent(lang).site.brand; const og = LOCALE_META[lang as HoroLocale]?.og ?? "en_US";
@@ -34,6 +38,7 @@ export async function dayMeta(lang: string, slug: string, date?: string): Promis
 export function DayPage({ lang, slug, date }: { lang: string; slug: string; date?: string }) {
   const sign = signFromSlug(lang, slug); const iso = date ?? todayIso();
   if (!sign || !isValidIso(iso)) notFound();
+  if (APP_BUILD) return <LiveDailyHoroscope lang={lang} sign={sign} buildIso={iso} />;
   return <DailyHoroscope lang={lang} sign={sign} iso={iso} isToday={!date} />;
 }
 
@@ -48,7 +53,7 @@ export function HubPage({ lang }: { lang: string }) {
       <LdJson data={breadcrumb([[c.site.brand, `/${lang}/`], [U.hubTitle, horoPath(lang)]])} />
       <h1 className="h-display text-[2.2rem] leading-tight sm:text-[2.8rem]">{U.hubTitle}</h1>
       <p className="mb-6 max-w-2xl text-[14px] text-mist/70 sm:text-[15px]">{U.hubSub}</p>
-      <ul className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
+      {APP_BUILD ? <LiveHub lang={lang} buildIso={iso} /> : <ul className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
         {SIGNS.map((s) => { const r = reading(lang, s, iso); return (
           <li key={s} className="border-t border-white/10">
             <Link href={horoPath(lang, s)} className="group relative isolate flex items-center gap-3 overflow-hidden py-3.5 pr-2">
@@ -60,8 +65,8 @@ export function HubPage({ lang }: { lang: string }) {
               <span aria-hidden className="text-mist/40 transition group-hover:translate-x-0.5 group-hover:text-gold">→</span>
             </Link>
           </li>); })}
-      </ul>
-      <SectionLinks lang={lang} skip="/horoscope/" className="mt-10" />
+      </ul>}
+      {!APP_BUILD && <SectionLinks lang={lang} skip="/horoscope/" className="mt-10" />}
     </div>
   );
 }

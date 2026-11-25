@@ -55,7 +55,7 @@ describe("delete-account: responses", () => {
   });
   it("accepts the same origins as the dashboard copy and answers others with the main site", async () => {
     const allow = async (Origin?: string) => (await boot().call("OPTIONS", Origin ? { Origin } : {})).headers.get("Access-Control-Allow-Origin");
-    for (const o of ["https://horoscop.si", "https://www.horoscop.si", "https://gio-astro-preview.vercel.app", "http://localhost:3000", "https://gio-astro-abc-123.vercel.app"]) expect(await allow(o), o).toBe(o);
+    for (const o of ["https://horoscop.si", "https://www.horoscop.si", "https://gio-astro-preview.vercel.app", "http://localhost:3000", "https://gio-astro-abc-123.vercel.app", "capacitor://localhost", "https://localhost", "http://localhost"]) expect(await allow(o), o).toBe(o);
     for (const o of ["https://evil.example", "https://gio-astro.vercel.app.evil.example", "http://gio-astro-x.vercel.app"]) expect(await allow(o), o).toBe("https://horoscop.si");
     expect(await allow()).toBe("https://horoscop.si");
   });

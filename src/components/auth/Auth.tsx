@@ -4,7 +4,8 @@ import { intlLocale } from "@/engine/intl";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { sb, accountsEnabled, googleEnabled } from "@/lib/supabase";
+import { sb, accountsEnabled, googleEnabled, appleEnabled } from "@/lib/supabase";
+import { authOrigin, clearNativeData, signInWithProvider } from "@/app-mode";
 import { getFlags } from "@/lib/flags";
 import { useAccount, rememberConsents, signOut, deleteAccount, flush, pullAndMerge, resolveConflict, startAccountSync } from "@/lib/sync";
 import { useStore } from "@/lib/store";
@@ -75,7 +76,8 @@ function SignInForm() {
   const needConsent = tab === "otp" || creating;
   const cap = useCaptcha(locale); const captchaToken = cap.token || undefined;
   const meta = { display_name: s?.me?.name ?? null, locale };
-  const redirect = () => `${location.origin}/${locale}/auth/callback`;
+  // In the store app links in sign-in emails point at the website, which opens the app again (App Links / Universal Links).
+  const redirect = () => `${authOrigin()}/${locale}/auth/callback`;
   const go = async (fn: () => Promise<void>) => {
     setErr(""); setInfo("");
     if (cap.needed) { setErr(A.captchaNeeded); return; }
@@ -113,9 +115,10 @@ function SignInForm() {
   }); };
   const forgot = () => go(async () => {
     if (!email.trim()) throw { code: "email_address_invalid" };
-    const { error } = await sb()!.auth.resetPasswordForEmail(email.trim(), { redirectTo: `${location.origin}/${locale}/reset`, captchaToken }); if (error) throw error; setInfo(A.resetSent);
+    const { error } = await sb()!.auth.resetPasswordForEmail(email.trim(), { redirectTo: `${authOrigin()}/${locale}/reset`, captchaToken }); if (error) throw error; setInfo(A.resetSent);
   });
-  const google = () => go(async () => { if (!checkConsent()) return; rememberConsents(consentTypes(cons), locale); const { error } = await sb()!.auth.signInWithOAuth({ provider: "google", options: { redirectTo: redirect() } }); if (error) throw error; });
+  const google = () => go(async () => { if (!checkConsent()) return; rememberConsents(consentTypes(cons), locale); await signInWithProvider(sb()!.auth, "google", locale); });
+  const apple = () => go(async () => { if (!checkConsent()) return; rememberConsents(consentTypes(cons), locale); await signInWithProvider(sb()!.auth, "apple", locale); router.refresh(); });
 
   if (sent) return (
     <div className="card space-y-4 text-center" data-testid="check-email">
@@ -141,9 +144,11 @@ function SignInForm() {
             className={`whitespace-nowrap rounded-full px-2 py-2 text-sm transition sm:px-4 ${tab === t ? "bg-gradient-to-r from-gold/90 to-rose/80 font-semibold text-ink shadow" : "text-dim hover:text-mist"}`}>{t === "signup" ? A.tabSignup : A.tabLogin}</button>
         ))}
       </div>
-      {googleEnabled && <><button className="btn-ghost w-full" onClick={google} disabled={busy} data-testid="google">
-        <svg viewBox="0 0 24 24" className="mr-2 inline h-4 w-4"><path fill="#EA4335" d="M12 10.2v3.9h5.5c-.2 1.3-1.6 3.9-5.5 3.9-3.3 0-6-2.7-6-6.1s2.7-6.1 6-6.1c1.9 0 3.1.8 3.8 1.5l2.6-2.5C16.8 3.3 14.6 2.3 12 2.3 6.7 2.3 2.4 6.6 2.4 12s4.3 9.7 9.6 9.7c5.5 0 9.2-3.9 9.2-9.4 0-.6-.1-1.1-.2-1.6H12z"/></svg>{A.google}</button>
-        <div className="flex items-center gap-3 text-xs text-dim"><span className="h-px flex-1 bg-white/10" />{A.or}<span className="h-px flex-1 bg-white/10" /></div></>}
+      {appleEnabled && <button type="button" onClick={apple} disabled={busy} data-testid="apple" className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-white px-4 text-[16px] font-medium text-black transition hover:bg-white/90 disabled:opacity-60">
+        <svg viewBox="0 0 17 20" className="h-[18px] w-[15px]" aria-hidden><path fill="currentColor" d="M14.06 10.6c-.02-2.33 1.9-3.45 1.99-3.5-1.08-1.59-2.77-1.8-3.37-1.83-1.43-.15-2.8.84-3.53.84-.73 0-1.85-.82-3.04-.8-1.56.02-3 .91-3.81 2.31-1.62 2.82-.41 7 1.17 9.29.77 1.12 1.69 2.38 2.9 2.33 1.16-.05 1.6-.75 3.01-.75 1.4 0 1.8.75 3.03.73 1.25-.02 2.04-1.14 2.81-2.27.88-1.3 1.25-2.56 1.27-2.62-.03-.01-2.42-.93-2.43-3.73zM11.76 3.75c.64-.78 1.08-1.86.96-2.94-.93.04-2.05.62-2.71 1.4-.6.69-1.12 1.79-.98 2.85 1.03.08 2.09-.53 2.73-1.31z"/></svg>{A.apple}</button>}
+      {googleEnabled && <button className="btn-ghost w-full" onClick={google} disabled={busy} data-testid="google">
+        <svg viewBox="0 0 24 24" className="mr-2 inline h-4 w-4"><path fill="#EA4335" d="M12 10.2v3.9h5.5c-.2 1.3-1.6 3.9-5.5 3.9-3.3 0-6-2.7-6-6.1s2.7-6.1 6-6.1c1.9 0 3.1.8 3.8 1.5l2.6-2.5C16.8 3.3 14.6 2.3 12 2.3 6.7 2.3 2.4 6.6 2.4 12s4.3 9.7 9.6 9.7c5.5 0 9.2-3.9 9.2-9.4 0-.6-.1-1.1-.2-1.6H12z"/></svg>{A.google}</button>}
+      {(googleEnabled || appleEnabled) && <div className="flex items-center gap-3 text-xs text-dim"><span className="h-px flex-1 bg-white/10" />{A.or}<span className="h-px flex-1 bg-white/10" /></div>}
       <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); if (tab === "otp") sendCode(); else password(); }}>
         <label className="block text-sm"><span className="mb-1 block text-dim">{A.email}</span>
           <input className="input" type="email" required autoComplete="email" data-testid="email" placeholder={A.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} /></label>
@@ -189,7 +194,7 @@ export function VerifyPage() {
     setErr(""); setInfo("");
     if (cap.needed) { setErr(A.captchaNeeded); return; }
     const captchaToken = cap.token || undefined;
-    const auth = sb()!.auth; const redirectTo = `${location.origin}/${locale}/auth/callback`;
+    const auth = sb()!.auth; const redirectTo = `${authOrigin()}/${locale}/auth/callback`;
     const { error } = mode === "signup" ? await auth.resend({ type: "signup", email, options: { emailRedirectTo: redirectTo, captchaToken } }) : await auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: redirectTo, data: { locale }, captchaToken } });
     cap.reset();
     if (error) setErr(A.errors[errKey(error)] ?? A.errors.generic); else { setInfo(A.resent); setLeft(60); }
@@ -217,7 +222,7 @@ export function VerifyPage() {
 
 function SignedIn() {
   const a = useAccount(); const { c, locale } = useContent(); const A = c.ui.auth; const h = useHref(); const fmt = useDate(); const router = useRouter();
-  const [cons, setCons] = useState({ terms: false, data: false, mkt: false }); const [msg, setMsg] = useState("");
+  const [cons, setCons] = useState({ terms: false, data: false, mkt: false }); const [msg, setMsg] = useState(""); const [askDelete, setAskDelete] = useState(false);
   const time = (iso: string) => new Date(iso).toLocaleTimeString(intlLocale(locale), { hour: "2-digit", minute: "2-digit" });
   return (
     <div className="space-y-4">
@@ -249,13 +254,48 @@ function SignedIn() {
       <SetPassword />
       <div className="card space-y-2">
         <button className="btn-ghost w-full" data-testid="signout" onClick={async () => { await signOut(false); router.push(h("/")); }}>{A.signOutKeep}</button>
-        <button className="btn-ghost w-full" onClick={async () => { await signOut(true); router.push(h("/")); }}>{A.signOutClear}</button>
-        <button className="w-full rounded-full px-4 py-2 text-sm text-rose hover:bg-rose/10" data-testid="delete-account" onClick={async () => {
-          if (!confirm(A.deleteConfirm)) return; const r = await deleteAccount(); setMsg(r.ok ? A.deleted : r.error ?? A.errors.generic); if (r.ok) router.push(h("/"));
-        }}>{A.deleteAccount}</button>
+        <button className="btn-ghost w-full" onClick={async () => { await signOut(true); await clearNativeData(); router.push(h("/")); }}>{A.signOutClear}</button>
+        <button className="w-full rounded-full px-4 py-2 text-sm text-rose hover:bg-rose/10" data-testid="delete-account" onClick={() => setAskDelete(true)}>{A.deleteAccount}</button>
         {msg && <p className="text-sm">{msg}</p>}
+        {askDelete && <DeleteAccountDialog onClose={() => setAskDelete(false)} onDeleted={() => router.push(h("/"))} setMsg={setMsg} />}
       </div>
       <p className="text-xs text-dim" onClick={() => void flush()}>&nbsp;</p>
+    </div>
+  );
+}
+
+
+const STORE_SUB_APPLE = "https://apps.apple.com/account/subscriptions";
+const STORE_SUB_GOOGLE = "https://play.google.com/store/account/subscriptions";
+
+/** Confirmation before delete-account: explains that a store subscription is not cancelled with the account. */
+function DeleteAccountDialog({ onClose, onDeleted, setMsg }: { onClose: () => void; onDeleted: () => void; setMsg: (s: string) => void }) {
+  const { c } = useContent(); const A = c.ui.auth;
+  const [busy, setBusy] = useState(false);
+  const go = async () => {
+    if (busy) return; setBusy(true);
+    const r = await deleteAccount();
+    setMsg(r.ok ? A.deleted : r.error ?? A.errors.generic);
+    if (r.ok) { await clearNativeData(); onDeleted(); } else { setBusy(false); onClose(); }
+  };
+  return (
+    <div className="fixed inset-0 z-[80] flex items-end justify-center bg-black/60 p-4 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] sm:items-center" role="dialog" aria-modal="true" aria-labelledby="delete-account-title" aria-describedby="delete-account-text" data-testid="delete-account-dialog">
+      <button type="button" className="absolute inset-0 cursor-default" aria-label={A.deleteKeep} onClick={onClose} />
+      <div className="relative w-full max-w-md space-y-4 overflow-y-auto rounded-3xl border border-white/15 bg-night p-5 shadow-2xl">
+        <h2 id="delete-account-title" className="h-display text-pretty text-2xl leading-tight">{A.deleteAccount}</h2>
+        <div id="delete-account-text" className="space-y-3 text-pretty text-[15px] leading-relaxed text-mist/90">
+          <p>{A.deleteConfirm}</p>
+          <p>{A.deleteConfirmSub}</p>
+        </div>
+        <div className="flex flex-col gap-2 text-sm">
+          <a href={STORE_SUB_APPLE} target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline" data-testid="manage-sub-apple">{A.deleteManageApple}</a>
+          <a href={STORE_SUB_GOOGLE} target="_blank" rel="noopener noreferrer" className="text-gold underline-offset-2 hover:underline" data-testid="manage-sub-google">{A.deleteManageGoogle}</a>
+        </div>
+        <div className="grid grid-cols-1 gap-2">
+          <button type="button" className="btn-ghost w-full" onClick={onClose} disabled={busy}>{A.deleteKeep}</button>
+          <button type="button" className="w-full rounded-full px-4 py-2.5 text-sm text-rose ring-1 ring-rose/40 hover:bg-rose/10 disabled:opacity-60" data-testid="delete-account-confirm" onClick={() => void go()} disabled={busy}>{A.deleteAccount}</button>
+        </div>
+      </div>
     </div>
   );
 }

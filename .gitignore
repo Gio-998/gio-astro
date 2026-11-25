@@ -45,3 +45,15 @@ next-env.d.ts
 
 # supabase cli
 supabase/.temp/
+
+# store app (npm run build:app / Capacitor)
+/out-app/
+*.keystore
+*.jks
+!android/app/debug.keystore
+android/keystore.properties
+*.p8
+*.mobileprovision
+*.p12
+DerivedData/
+/.out-site-parked/

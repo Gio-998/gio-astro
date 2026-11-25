@@ -11,6 +11,10 @@ import { Emblem } from "./art/Emblem";
 import { ZodiacWheel } from "./art/ZodiacWheel";
 import { LOCALES } from "@/content";
 import { siteLinks } from "@/lib/site-links";
+import { AppTabBar } from "@/app-mode";
+
+/** Store app build: app tabs on every screen size, no desktop menu (its sections are not all in the app). */
+const APP_BUILD = process.env.NEXT_PUBLIC_APP_BUILD === "1";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
@@ -94,11 +98,11 @@ export function Header() {
     <>
       <header className={`sticky top-0 z-40 transition-all duration-500 ${scrolled ? "border-b border-white/10 bg-night/75 backdrop-blur-xl" : "bg-transparent"}`}>
         <div className="relative mx-auto flex max-w-6xl min-w-0 items-center justify-between gap-3 px-4 py-2.5">
-          <Link prefetch={false} href={h("/")} onClick={toTop} aria-label={c.site.brand} className="group flex min-h-[44px] shrink-0 items-center gap-2">
+          <Link prefetch={false} href={h(APP_BUILD ? "/today/" : "/")} onClick={toTop} aria-label={c.site.brand} className="group flex min-h-[44px] shrink-0 items-center gap-2">
             <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
             <span className="h-display text-[1.35rem] font-semibold tracking-wide text-aurora sm:text-2xl">{c.site.brand}</span>
           </Link>
-          <div className="hidden lg:block"><DesktopNav /></div>
+          {!APP_BUILD && <div className="hidden lg:block"><DesktopNav /></div>}
           <div className="flex min-w-0 items-center gap-1.5 sm:gap-2">
             <LangSwitch />
             {returning
@@ -107,7 +111,7 @@ export function Header() {
           </div>
         </div>
       </header>
-      <TabBar />
+      {APP_BUILD ? <AppTabBar /> : <TabBar />}
     </>
   );
 }

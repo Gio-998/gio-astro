@@ -1,0 +1,123 @@
+# Store app builds in the cloud (no Mac needed). Owner setup, step by step: docs/MOBILE.md → "Codemagic".
+# This file holds NO secrets. It only refers by NAME to things the owner creates in the Codemagic UI:
+#   - App Store Connect API key integration:   "Horoscop ASC"            (Team/Personal settings → Integrations → Developer Portal)
+#   - Android upload keystore:                 "horoscop_upload"         (Code signing identities → Android keystores)
+#   - Environment variable groups:             "horoscop_public"         NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY (public anon key only,
+#                                                                        never a service-role/secret key), optional NEXT_PUBLIC_APPLE_AUTH=1, NEXT_PUBLIC_GOOGLE_AUTH=1
+#                                              "google_play"             GCLOUD_SERVICE_ACCOUNT_CREDENTIALS (Play service account JSON, marked secure)
+# Publishing goes to TestFlight / Play internal testing only. Submitting for store review is a manual step, on the final day, after owner approval.
+# Both workflows use macOS M2 machines: a personal Codemagic account includes free M2 minutes, Linux minutes are billed.
+
+definitions:
+  scripts:
+    - &web_bundle
+      name: Build the app bundle (out-app/)
+      script: |
+        npm ci
+        npm test
+        npm run build:app
+
+workflows:
+  ios-testflight:
+    name: iOS → TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: Horoscop ASC
+    environment:
+      groups:
+        - horoscop_public
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: si.horoscop.app
+      vars:
+        XCODE_PROJECT: ios/App/App.xcodeproj
+        XCODE_SCHEME: App
+        BUNDLE_ID: si.horoscop.app
+        # App Store Connect → the app → App Information → Apple ID (a number). Placeholder until the app record exists.
+        APP_STORE_APPLE_ID: "0000000000"
+        # Set to "1" once the App Group group.si.horoscop.app exists and is enabled on si.horoscop.app and si.horoscop.app.HoroscopWidget.
+        IOS_WIDGET: "0"
+      node: 24
+      xcode: latest
+    triggering:
+      events: []   # manual starts only
+    scripts:
+      - *web_bundle
+      - name: Sync the iOS project
+        script: npx cap sync ios
+      - name: Home-screen widget (only with IOS_WIDGET=1)
+        script: |
+          if [ "$IOS_WIDGET" = "1" ]; then
+            gem install xcodeproj --no-document
+            ruby ios/scripts/add_widget_target.rb
+          fi
+          # The widget's App Store profile (si.horoscop.app.HoroscopWidget) must exist in Code signing identities too (docs/MOBILE.md).
+      - name: Apply signing profiles
+        script: xcode-project use-profiles
+      - name: Build number
+        script: |
+          LATEST=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID" 2>/dev/null || echo 0)
+          cd ios/App && agvtool new-version -all $((LATEST + 1))
+      - name: Build the .ipa
+        script: xcode-project build-ipa --project "$XCODE_PROJECT" --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
+        submit_to_app_store: false
+
+  android-play-internal:
+    name: Android → Play internal testing
+    instance_type: mac_mini_m2
+    max_build_duration: 45
+    environment:
+      groups:
+        - horoscop_public
+        - google_play
+      android_signing:
+        - horoscop_upload
+      vars:
+        PACKAGE_NAME: si.horoscop.app
+      node: 24
+      java: 21
+    triggering:
+      events: []
+    scripts:
+      - *web_bundle
+      - name: Sync the Android project
+        script: npx cap sync android
+      - name: Build the signed .aab
+        script: |
+          cd android
+          ./gradlew bundleRelease
+    artifacts:
+      - android/app/build/outputs/**/*.aab
+    publishing:
+      google_play:
+        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
+        track: internal
+        submit_as_draft: true
+
+  android-debug:
+    name: Android debug APK (no signing, no upload)
+    instance_type: mac_mini_m2
+    max_build_duration: 30
+    environment:
+      groups:
+        - horoscop_public
+      node: 24
+      java: 21
+    triggering:
+      events: []
+    scripts:
+      - *web_bundle
+      - name: Sync and build
+        script: |
+          npx cap sync android
+          cd android && ./gradlew assembleDebug
+    artifacts:
+      - android/app/build/outputs/apk/debug/*.apk

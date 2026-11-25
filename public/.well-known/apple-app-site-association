@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["APPLE_TEAM_ID.si.horoscop.app"],
+        "components": [
+          { "/": "/_next/*", "exclude": true },
+          { "/": "/og/*", "exclude": true },
+          { "/": "/sitemap*", "exclude": true },
+          { "/": "/*/today/*" },
+          { "/": "/*/auth/callback/*" },
+          { "/": "/*/reset/*" },
+          { "/": "/*/account/*" },
+          { "/": "/*/invite/*" },
+          { "/": "/*/challenge/*" },
+          { "/": "/*/horoscope/*" },
+          { "/": "/*/dneven-horoskop/*" },
+          { "/": "/*/tageshoroskop/*" },
+          { "/": "/*/dnevni-horoskop/*" }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["APPLE_TEAM_ID.si.horoscop.app"]
+  }
+}
