@@ -17,6 +17,10 @@ import { PersonalTheme } from "@/components/PersonalTheme";
 import { AccountBoot } from "@/components/auth/Auth";
 import { BetaGate } from "@/components/auth/Beta";
 import { FeedbackButton, UsageBoot } from "@/components/admin/Feedback";
+import { NativeBoot } from "@/app-mode";
+
+/** Store app build (npm run build:app): edge-to-edge under the notch, app tabs instead of the web footer. */
+const APP_BUILD = process.env.NEXT_PUBLIC_APP_BUILD === "1";
 
 // `subsets` only picks what gets preloaded; every subset stays in the CSS and unicode-range fetches what a page shows, with display: swap meanwhile. Preloading all of them was 12 files and 560 KB on every page,
 // so only the body face's Latin file is preloaded: it is the text of the largest paint on a reading page, in every language.
@@ -40,7 +44,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     ...localizedMeta(lang, "/", { title: `${c.site.brand} · ${c.site.tagline}`, description: c.site.description, siteName: c.site.brand }),
   };
 }
-export const viewport: Viewport = { themeColor: "#0e0b26", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#0e0b26", width: "device-width", initialScale: 1, ...(APP_BUILD ? { viewportFit: "cover" as const } : {}) };
 
 export default async function LangLayout({ children, params }: LayoutProps<"/[lang]">) {
   const { lang } = await params;
@@ -67,10 +71,11 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
           <AccountBoot />
           <UsageBoot />
           <PrintKit />
+          <NativeBoot />
           <RouteScrollTop />
           <Header />
           <main className="mx-auto w-full max-w-4xl px-4 pb-24 pt-4"><BetaGate>{children}</BetaGate><ExportPdf /></main>
-          <Footer />
+          {!APP_BUILD && <Footer />}
           <FeedbackButton />
         </LocaleContent>
       </body>

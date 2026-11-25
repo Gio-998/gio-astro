@@ -21,6 +21,11 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     ".next-export/**",
     ".next-*/**",
+    // Store app: generated export and native projects (their public/ folders hold copies of the built web bundle).
+    "out-app/**",
+    ".out-site-parked/**",
+    "android/**",
+    "ios/**",
   ]),
 ]);
 

@@ -1,0 +1,6 @@
+/* Store app only (imported by native.tsx, so the website CSS never contains it). */
+html.native { -webkit-tap-highlight-color: transparent; }
+html.native body { overscroll-behavior-y: none; }
+/* Sticky header clears the status bar / notch; content clears the home indicator and the tab bar. */
+html.native header.sticky { padding-top: env(safe-area-inset-top); }
+html.native main { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom)); padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
