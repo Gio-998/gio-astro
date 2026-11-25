@@ -60,7 +60,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
     ],
   };
   return (
-    <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${caps.variable} ${sans.variable}`}>
+    <html lang={lang} data-scroll-behavior="smooth" className={`${display.variable} ${caps.variable} ${sans.variable}${APP_BUILD ? " native" : ""}`}>
       <body className="font-sans antialiased">
         <noscript><style>{"[data-reveal]{opacity:1!important;transform:none!important;filter:none!important}"}</style></noscript>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteLd) }} />

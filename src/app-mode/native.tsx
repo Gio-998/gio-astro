@@ -5,7 +5,7 @@
  */
 import "./native.css";
 import Link from "next/link";
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { Capacitor } from "@capacitor/core";
 import { App } from "@capacitor/app";
@@ -24,8 +24,8 @@ import type * as Web from "./index";
 import { isBundled } from "./routes";
 import { appCopy } from "./copy";
 import { KEEP_DAYS, cachedReading, clearCache } from "./horo-cache";
-import { clearPrefs, preferredSign, rememberSign, reminderPrefs, saveReminderPrefs } from "./prefs";
-import { cancelReminders, ensurePermission, scheduleReminders } from "./reminders";
+import { clearPrefs, dismissReminderPrompt, preferredSign, rememberSign, reminderPrefs, reminderPromptDismissed, recordTodayVisit, saveReminderPrefs, shouldOfferReminder } from "./prefs";
+import { cancelReminders, notificationStatus, requestPermission, scheduleReminders } from "./reminders";
 import { clearWidget, updateWidget } from "./widget";
 
 const SITE = "https://horoscop.si";
@@ -106,11 +106,19 @@ export const AppTabBar: typeof Web.AppTabBar = () => {
     { key: "bonds", href: h("/match/"), icon: "bond", label: T.bonds, also: [h("/bond/"), h("/people/"), h("/person/"), h("/challenge/")] },
     { key: "profile", href: h("/me/"), icon: "chart", label: T.profile, also: [h("/account/"), h("/you/"), h("/start/"), h("/chart/")] },
   ];
+  const bar = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const el = bar.current; if (!el) return;
+    const set = () => document.documentElement.style.setProperty("--app-tab-h", `${el.offsetHeight}px`);
+    set();
+    const ro = new ResizeObserver(set); ro.observe(el);
+    return () => { ro.disconnect(); };
+  }, []);
   return (
-    <nav aria-label={T.aria} className="fixed inset-x-0 bottom-0 z-[56] grid grid-cols-5 border-t border-white/10 bg-ink/95 pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] backdrop-blur-xl" data-testid="app-tab-bar">
+    <nav ref={bar} aria-label={T.aria} className="fixed inset-x-0 bottom-0 z-[56] grid grid-cols-5 border-t border-white/10 bg-ink/95 pb-[env(safe-area-inset-bottom)] pl-[env(safe-area-inset-left)] pr-[env(safe-area-inset-right)] backdrop-blur-xl" data-testid="app-tab-bar">
       {tabs.map((t) => { const on = [t.href, ...t.also].some((x) => path.startsWith(x.split("?")[0])); return (
-        <Link prefetch={false} key={t.key} href={t.href} aria-current={on ? "page" : undefined} data-testid={`app-tab-${t.key}`} className={`flex min-h-[60px] min-w-0 flex-col items-center justify-center gap-1 px-0.5 text-[11px] leading-none transition ${on ? "text-gold" : "text-mist/70"}`}>
-          <Emblem id={t.icon} className={`h-6 w-6 ${on ? "" : "opacity-75"}`} /><span className="max-w-full truncate">{t.label}</span>
+        <Link prefetch={false} key={t.key} href={t.href} aria-label={t.label} aria-current={on ? "page" : undefined} data-testid={`app-tab-${t.key}`} className={`flex min-h-[3.75rem] min-w-0 flex-col items-center justify-center gap-0.5 px-0.5 py-1 text-center text-[0.65rem] leading-tight transition ${on ? "text-gold" : "text-mist/70"}`}>
+          <Emblem id={t.icon} className={`h-6 w-6 shrink-0 ${on ? "" : "opacity-75"}`} /><span className="max-w-full overflow-hidden text-ellipsis whitespace-nowrap">{t.label}</span>
         </Link>); })}
     </nav>
   );
@@ -125,13 +133,24 @@ export const ReminderCard: typeof Web.ReminderCard = () => {
   useEffect(() => { const id = requestAnimationFrame(() => { const r = reminderPrefs(); setP(r); setSign(r.sign ?? preferredSign() ?? ""); setNative(Capacitor.isNativePlatform()); }); return () => cancelAnimationFrame(id); }, []);
   if (!native) return null;
   const time = `${String(p.hour).padStart(2, "0")}:${String(p.minute).padStart(2, "0")}`;
+  const applyOn = async (wantOn: boolean): Promise<ReminderOn> => {
+    if (!wantOn) return "off";
+    const status = await notificationStatus();
+    if (status === "granted") return "granted";
+    if (status !== "prompt" && status !== "prompt-with-rationale") return "denied";
+    const consented = await askReminderConsent();
+    if (!consented) return "cancelled";
+    return (await requestPermission()) ? "granted" : "denied";
+  };
   const save = async () => {
     setMsg("");
-    const next = { ...p, sign: sign || null }; let denied = false;
-    if (next.on && !(await ensurePermission())) { denied = true; next.on = false; }
+    const next = { ...p, sign: sign || null }; const result = await applyOn(next.on);
+    if (result === "cancelled") { setP({ ...p, on: false }); return; }
+    if (result === "denied") next.on = false;
+    if (result === "off") next.on = false;
     saveReminderPrefs(next); setP(next);
     await scheduleReminders(locale); await updateWidget(locale);
-    setMsg(denied ? T.denied : next.on ? T.saved : T.off);
+    setMsg(result === "denied" ? T.denied : next.on ? T.saved : T.off);
   };
   return (
     <section className="mt-6 rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-4" data-testid="reminder-card">
@@ -140,7 +159,7 @@ export const ReminderCard: typeof Web.ReminderCard = () => {
       <div className="mt-4 space-y-3">
         <label className="flex min-h-11 items-center justify-between gap-3 text-[15px]">
           <span>{T.toggle}</span>
-          <input type="checkbox" className="h-6 w-6 accent-[#e9c78a]" checked={p.on} onChange={(e) => setP({ ...p, on: e.target.checked })} data-testid="reminder-on" />
+          <input type="checkbox" className="h-6 w-6 shrink-0 accent-[#e9c78a]" checked={p.on} onChange={(e) => { const on = e.target.checked; setP({ ...p, on }); }} data-testid="reminder-on" />
         </label>
         <label className="block text-[14px]"><span className="mb-1 block text-mist/70">{T.time}</span>
           <input type="time" className="input w-full" value={time} onChange={(e) => { const [hh, mm] = e.target.value.split(":").map(Number); if (!Number.isNaN(hh)) setP({ ...p, hour: hh, minute: mm || 0 }); }} />
@@ -192,6 +211,68 @@ export const signInWithProvider: typeof Web.signInWithProvider = async (auth, pr
 export const clearNativeData: typeof Web.clearNativeData = async () => {
   clearCache(); clearPrefs(); await cancelReminders(); await clearWidget();
 };
+
+
+type ReminderOn = "granted" | "denied" | "cancelled" | "off";
+const CONSENT_EVT = "horoscop:reminder-consent";
+let consentWaiter: ((ok: boolean) => void) | null = null;
+function askReminderConsent(): Promise<boolean> {
+  return new Promise((resolve) => {
+    consentWaiter?.(false);
+    consentWaiter = resolve;
+    window.dispatchEvent(new Event(CONSENT_EVT));
+  });
+}
+function settleReminderConsent(ok: boolean) {
+  const w = consentWaiter; consentWaiter = null; w?.(ok);
+}
+
+/** In-app explanation shown before the OS notification dialog: never on first launch. */
+function ReminderPrePrompt() {
+  const { locale } = useContent(); const T = appCopy(locale).reminder; const path = usePathname() || "";
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    const onAsk = () => setOpen(true);
+    window.addEventListener(CONSENT_EVT, onAsk);
+    return () => window.removeEventListener(CONSENT_EVT, onAsk);
+  }, []);
+  useEffect(() => {
+    if (!Capacitor.isNativePlatform()) return;
+    if (sectionOf(path) !== "today") return;
+    const visits = recordTodayVisit();
+    let cancelled = false;
+    void notificationStatus().then((permission) => {
+      if (cancelled) return;
+      if (shouldOfferReminder({ visitCount: visits, hasSign: !!preferredSign(), reminderOn: reminderPrefs().on, dismissed: reminderPromptDismissed(), permission })) setOpen(true);
+    });
+    return () => { cancelled = true; };
+  }, [path]);
+  if (!open) return null;
+  const later = () => { setOpen(false); dismissReminderPrompt(); settleReminderConsent(false); };
+  const allow = async () => {
+    const fromToggle = !!consentWaiter;
+    setOpen(false);
+    if (fromToggle) { settleReminderConsent(true); return; }
+    dismissReminderPrompt();
+    if (!(await requestPermission())) return;
+    const cur = reminderPrefs();
+    saveReminderPrefs({ ...cur, on: true, sign: cur.sign ?? preferredSign() });
+    await scheduleReminders(locale); await updateWidget(locale);
+  };
+  return (
+    <div className="fixed inset-0 z-[70] flex items-end justify-center bg-black/60 p-4 pb-[max(1rem,calc(var(--app-tab-h, 5rem) + 0.5rem))] pt-[max(1rem,env(safe-area-inset-top))] sm:items-center" role="dialog" aria-modal="true" aria-labelledby="reminder-preprompt-title" data-testid="reminder-preprompt">
+      <button type="button" className="absolute inset-0 cursor-default" aria-label={T.promptLater} onClick={later} />
+      <div className="relative w-full max-w-md space-y-4 overflow-y-auto rounded-3xl border border-white/15 bg-night p-5 shadow-2xl">
+        <h2 id="reminder-preprompt-title" className="h-display text-pretty text-2xl leading-tight">{T.promptTitle}</h2>
+        <p className="text-pretty text-[1rem] leading-relaxed text-mist/90">{T.promptBody}</p>
+        <div className="grid grid-cols-1 gap-2">
+          <button type="button" className="btn-primary w-full" data-testid="reminder-preprompt-allow" onClick={() => void allow()}>{T.promptAllow}</button>
+          <button type="button" className="btn-ghost w-full" data-testid="reminder-preprompt-later" onClick={later}>{T.promptLater}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 /* ───────── boot ───────── */
 
@@ -259,5 +340,5 @@ export const NativeBoot: typeof Web.NativeBoot = () => {
     ];
     return () => { window.removeEventListener("click", onClick, true); subs.forEach((s) => s.then((h) => h.remove()).catch(() => {})); };
   }, [router, locale]);
-  return null;
+  return <ReminderPrePrompt />;
 };

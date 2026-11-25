@@ -1,6 +1,51 @@
 /* Store app only (imported by native.tsx, so the website CSS never contains it). */
 html.native { -webkit-tap-highlight-color: transparent; }
 html.native body { overscroll-behavior-y: none; }
-/* Sticky header clears the status bar / notch; content clears the home indicator and the tab bar. */
-html.native header.sticky { padding-top: env(safe-area-inset-top); }
-html.native main { padding-bottom: calc(6.5rem + env(safe-area-inset-bottom)); padding-left: max(1rem, env(safe-area-inset-left)); padding-right: max(1rem, env(safe-area-inset-right)); }
+
+/*
+ * Dynamic Type / system font size:
+ * iOS: `font: -apple-system-body` follows the system content-size category (and updates when it changes).
+ * Body keeps the site font family but inherits that size, so rem-based type scales. Android applies
+ * WebView textZoom from the system font scale in MainActivity (text-size-adjust is left alone there).
+ */
+html.native {
+  font: -apple-system-body;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+html.native body { font-family: var(--font-sans), system-ui, sans-serif; }
+
+/* Long words wrap inside content boxes instead of overflowing. Tab labels are excluded (they ellipsis). */
+html.native, html.native body { overflow-x: clip; }
+html.native main, html.native p, html.native h1, html.native h2, html.native h3, html.native li, html.native label, html.native button {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+html.native h1, html.native h2, html.native .h-display { text-wrap: pretty; }
+
+/* Sticky header clears the status bar / notch; content clears the home indicator and the (variable-height) tab bar. */
+html.native header.sticky { padding-top: env(safe-area-inset-top); overflow-x: clip; }
+html.native header.sticky > div { min-width: 0; }
+/* Brand word-mark may shrink so the language control stays on screen at large type. */
+html.native header.sticky a.shrink-0 { min-width: 0; flex-shrink: 1; max-width: calc(100% - 5.5rem); }
+html.native header.sticky .h-display {
+  font-size: 1.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+html.native main {
+  padding-bottom: calc(var(--app-tab-h, 6.5rem) + 1rem);
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
+
+/* Phones: cards and grids stack full-width so large type is not squeezed into columns. */
+@media (max-width: 640px) {
+  html.native main .grid { grid-template-columns: minmax(0, 1fr) !important; }
+  html.native main .flex-row { flex-wrap: wrap; }
+}
+
+/* Time windows and other nowrap chips may wrap rather than stick out of the card at large type. */
+html.native main .whitespace-nowrap { white-space: normal; }
