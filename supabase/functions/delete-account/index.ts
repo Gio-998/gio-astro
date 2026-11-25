@@ -3,7 +3,8 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
 import { createClient } from "npm:@supabase/supabase-js@2";
 
-const ALLOWED_ORIGINS = ["https://horoscop.si", "https://www.horoscop.si", "https://gio-astro-preview.vercel.app", "http://localhost:3000"];
+// The store app's web view sends Origin capacitor://localhost (iOS) or https://localhost (Android; http://localhost on older setups).
+const ALLOWED_ORIGINS = ["https://horoscop.si", "https://www.horoscop.si", "https://gio-astro-preview.vercel.app", "http://localhost:3000", "capacitor://localhost", "https://localhost", "http://localhost"];
 
 function cors(origin: string | null) {
   const allow = origin && (ALLOWED_ORIGINS.includes(origin) || /^https:\/\/gio-astro[a-z0-9-]*\.vercel\.app$/.test(origin)) ? origin : ALLOWED_ORIGINS[0];
