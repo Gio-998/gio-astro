@@ -7,6 +7,7 @@ import { SKUS, eur, yearlySavePct } from "@/lib/payments";
 import { Sheet } from "../controls";
 import { useAccess } from "./access";
 import { usePremiumText, BuyButton, EarlyAccess, DemoBadge } from "./bits";
+import { purchaseChannel } from "@/app-mode";
 
 export type GateKind = "book" | "bond" | "day" | "name" | "duo";
 /** How many chapters stay free when locks are on. */
@@ -55,8 +56,8 @@ export function UnlockSheet({ open, onClose }: { open: boolean; onClose: () => v
   return (
     <Sheet open={open} onClose={onClose} title={<>✦ {G.sheetTitle}</>} testId="unlock-sheet"
       footer={<div className="space-y-2">
-        {acc.isAdmin ? <BuyButton sku={sku} label={`${G.demoCheckout} · ${eur(SKUS[sku].cents, locale)}`} returnTo={path} /> : <EarlyAccess product="premium" />}
-        <div className="flex justify-between text-sm"><Link className="text-gold underline-offset-4 hover:underline" href={h("/premium/")}>{G.seePlans} →</Link><button type="button" className="text-dim" onClick={onClose}>{G.later}</button></div>
+        {acc.isAdmin && purchaseChannel() === "web" ? <BuyButton sku={sku} label={`${G.demoCheckout} · ${eur(SKUS[sku].cents, locale)}`} returnTo={path} /> : <EarlyAccess product="premium" />}
+        <div className="flex justify-between text-sm">{purchaseChannel() === "web" ? <Link className="text-gold underline-offset-4 hover:underline" href={h("/premium/")}>{G.seePlans} →</Link> : <span />}<button type="button" className="text-dim" onClick={onClose}>{G.later}</button></div>
       </div>}>
       {acc.isAdmin && <div className="mb-2"><DemoBadge /></div>}
       {!acc.isAdmin && <p className="mb-2 rounded-xl border border-gold/30 bg-gold/10 px-3 py-2 text-sm">{T.soon.text}</p>}

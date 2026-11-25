@@ -455,7 +455,7 @@ export const auth: typeof En.auth = {
   sendCode: "Pošalji mi šestocifreni kod", codeHint: "Lozinka nije potrebna. Šaljemo jednokratni kod, a ako još nemaš nalog, njime se i pravi.",
   signIn: "Prijavi se", createAccount: "Napravi nalog", haveAccount: "Već imaš nalog? Prijavi se", needAccount: "Prvi put ovde? Napravi nalog",
   forgot: "Zaboravljena lozinka?", resetSent: "Ako za taj mejl postoji nalog, link za novu lozinku je na putu.",
-  google: "Nastavi sa Google nalogom", or: "ili",
+  google: "Nastavi sa Google nalogom", apple: "Prijava sa Apple nalogom", or: "ili",
   consentTitle: "Pre nego što bilo šta sačuvamo",
   consentTerms: "Slažem se sa Uslovima korišćenja i Obaveštenjem o privatnosti.", consentData: "Čuvaj moje podatke o rođenju i odgovore na testove (uključujući osetljive o odnosima i telu) u mom nalogu radi sinhronizacije. Mogu da ih obrišem kad god želim.",
   consentMarketing: "Povremeni mejlovi o novim funkcijama (nije obavezno).", consentNeeded: "Označi dva obavezna polja.",

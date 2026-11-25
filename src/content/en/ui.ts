@@ -447,7 +447,7 @@ export const auth = {
   sendCode: "Email me a 6-digit code", codeHint: "No password needed. We send a one-time code; it also creates your account if you're new.",
   signIn: "Sign in", createAccount: "Create account", haveAccount: "Already have an account? Sign in", needAccount: "New here? Create an account",
   forgot: "Forgot password?", resetSent: "If that email has an account, a reset link is on its way.",
-  google: "Continue with Google", or: "or",
+  google: "Continue with Google", apple: "Sign in with Apple", or: "or",
   consentTitle: "Before we store anything",
   consentTerms: "I agree to the Terms of use and the Privacy notice.", consentData: "Store my birth data and test answers (including sensitive ones about relationships and body) in my account so they sync. I can delete them any time.",
   consentMarketing: "Occasional emails about new features (optional).", consentNeeded: "Please tick the two required boxes.",

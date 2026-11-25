@@ -9,6 +9,7 @@ import { Waitlist } from "../auth/Beta";
 import { Segmented } from "../controls";
 import { premiumText } from "./text";
 import { useAccess, setPreview, clearDemoGrants, type PreviewPlan } from "./access";
+import { purchaseChannel } from "@/app-mode";
 
 export function usePremiumText() { return premiumText(useContent().locale); }
 
@@ -20,7 +21,8 @@ export function DemoBadge({ className = "" }: { className?: string }) {
 /** Admin → demo checkout link. Everyone else → early access. */
 export function BuyButton({ sku, label, className = "btn-primary w-full py-3", returnTo }: { sku: Sku; label?: string; className?: string; returnTo?: string }) {
   const acc = useAccess(); const T = usePremiumText(); const h = useHref(); const { locale } = useContent();
-  if (acc.isAdmin) {
+  // The store app never links to web checkout (store purchases come later through the app-mode purchase channel).
+  if (acc.isAdmin && purchaseChannel() === "web") {
     const q = new URLSearchParams({ sku, ...(returnTo ? { return: returnTo } : {}) });
     return <Link className={className} href={`${h("/premium/checkout/")}?${q}`} data-testid={`buy-${sku}`}>{label ?? T.checkout.pay(eur(SKUS[sku].cents, locale))}</Link>;
   }

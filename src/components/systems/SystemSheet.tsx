@@ -8,6 +8,7 @@ import { useContent, useHref } from "@/lib/content-context";
 import { Blocks } from "../story/Blocks";
 import type { SysCard } from "@/story/systems";
 import { SysEvidenceChip } from "./SysEvidenceChip";
+import { purchaseChannel } from "@/app-mode";
 
 function HexLines({ lines, moving }: { lines: number[]; moving?: number }) {
   return (
@@ -83,7 +84,7 @@ export function SystemSheet({ card, onClose }: { card: SysCard | null; onClose: 
                   : <aside className="callout callout-note"><p>{U.degreeNone}</p></aside>)}
                 <Blocks blocks={card.blocks} />
               </div></div>
-              {card.premium && <Link href={h("/premium/year-ahead/")} className="mt-4 block rounded-2xl border border-dashed border-gold/40 bg-gold/[0.06] px-4 py-3 text-sm"><span className="text-gold">✧ {U.premiumMore}</span> <span className="underline">{U.premiumLink} →</span></Link>}
+              {card.premium && purchaseChannel() === "web" && <Link href={h("/premium/year-ahead/")} className="mt-4 block rounded-2xl border border-dashed border-gold/40 bg-gold/[0.06] px-4 py-3 text-sm"><span className="text-gold">✧ {U.premiumMore}</span> <span className="underline">{U.premiumLink} →</span></Link>}
               <div className="mt-5 border-t border-white/10 pt-4 text-sm">
                 <button type="button" aria-expanded={method} onClick={() => setMethod(!method)} className="inline-flex min-h-[44px] items-center gap-2 text-gold underline decoration-dotted underline-offset-4">🔬 {U.method} <span aria-hidden className={`transition ${method ? "rotate-180" : ""}`}>⌄</span></button>
                 {method && (

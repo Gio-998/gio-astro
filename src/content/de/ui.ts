@@ -116,7 +116,7 @@ export const auth = {
   sendCode: "6-stelligen Code per E-Mail", codeHint: "Kein Passwort nötig. Wir schicken einen Einmalcode, der auch dein Konto anlegt, falls du neu bist.",
   signIn: "Anmelden", createAccount: "Konto erstellen", haveAccount: "Schon ein Konto? Anmelden", needAccount: "Neu hier? Konto erstellen",
   forgot: "Passwort vergessen?", resetSent: "Wenn es zu dieser E-Mail ein Konto gibt, ist ein Link zum Zurücksetzen unterwegs.",
-  google: "Weiter mit Google", or: "oder",
+  google: "Weiter mit Google", apple: "Mit Apple anmelden", or: "oder",
   consentTitle: "Bevor wir etwas speichern",
   consentTerms: "Ich stimme den Nutzungsbedingungen und dem Datenschutzhinweis zu.", consentData: "Meine Geburtsdaten und Testantworten (auch sensible zu Beziehungen und Körper) in meinem Konto speichern, damit sie synchronisiert werden. Ich kann sie jederzeit löschen.",
   consentMarketing: "Gelegentliche E-Mails zu neuen Funktionen (optional).", consentNeeded: "Bitte hak die beiden Pflichtfelder an.",
