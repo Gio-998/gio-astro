@@ -71,7 +71,7 @@ export const en: HoroBank = {
   colors: { fire: ["Ember red", "Saffron", "Gold"], earth: ["Moss green", "Terracotta", "Sand"], air: ["Sky blue", "Lavender", "Silver"], water: ["Deep teal", "Indigo", "Pearl"] },
   weekdays: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
   sky: {
-    moonIn: (s, p, i) => `The Moon is in ${s}, a ${p} at ${i}% light.`,
+    moonIn: (s, p, i) => `The Moon is in ${s}, a ${p} with ${i}% light at noon.`,
     moonMoves: (s, t) => `At ${t} it moves into ${s}.`,
     forYou: (t) => `For you the focus is on ${t}.`,
     quarter: {
