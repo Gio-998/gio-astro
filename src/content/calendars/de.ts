@@ -296,6 +296,7 @@ export const de: CalendarCopy = {
       clear: (d) => `Nein. Merkur läuft direkt. Die nächste rückläufige Phase beginnt am ${d.retro} ${d.signIn}, der Vorschatten am ${d.shadowStart}.`,
     },
     asOf: (date) => `Geprüft anhand der berechneten Planetenposition, Stand ${date}. Die Seite wird jede Nacht aktualisiert.`,
+    live: { question: "Ist Merkur gerade rückläufig?", note: "Beim Öffnen der Seite für das heutige Datum berechnet. Die Daten gelten für die Uhr in Skopje, Berlin und Wien." },
     nowTitle: "Merkur im Moment", nextTitle: "Die nächsten Termine: Merkur rückläufig",
     head: { stage: "Abschnitt", date: "Datum", time: "Uhrzeit", position: "Position", period: "Rückläufig", signs: "Zeichen", shadow: "Mit Schatten", sign: "Zeichen", house: "Haus", focus: "Lohnt einen Blick" },
     stage: { preShadow: "Vorschatten beginnt", retro: "Wird rückläufig", direct: "Wird direktläufig", postShadow: "Nachschatten endet", moves: (signTo) => `Läuft zurück ${signTo}` },

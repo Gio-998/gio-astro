@@ -304,6 +304,7 @@ export const sr: CalendarCopy = {
       clear: (d) => `Ne. Merkur se kreće napred. Sledeća retrogradnost počinje ${dGen(d.retro)}, ${d.signIn}, a senka pre nje ${dGen(d.shadowStart)}.`,
     },
     asOf: (date) => `Provereno prema izračunatom položaju planete za ${dNom(date)}. Stranica se osvežava svake noći.`,
+    live: { question: "Da li je Merkur retrogradan upravo sada?", note: "Određuje se za današnji datum kad otvoriš stranicu. Datumi su po satu u Skoplju, Berlinu i Beču." },
     nowTitle: "Merkur trenutno", nextTitle: "Sledeći datumi retrogradnog Merkura",
     head: { stage: "Faza", date: "Datum", time: "Vreme", position: "Položaj", period: "Retrogradno", signs: "Znakovi", shadow: "Sa senkom", sign: "Znak", house: "Kuća", focus: "Vredi pogledati" },
     stage: { preShadow: "Početak senke pre retrogradnosti", retro: "Postaje retrogradan", direct: "Kreće napred", postShadow: "Kraj senke posle retrogradnosti", moves: (signTo) => `Vraća se ${signTo}` },
