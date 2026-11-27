@@ -46,9 +46,13 @@ import { srExtra } from "./sr/extra";
 import { systems as srSystems } from "./sr/systems";
 import { you as srYou, partners as srPartners } from "./sr/you";
 const sr: Content = deepMerge<Content>(en, { ...srPartial, ...srExtra, systems: srSystems, you: srYou, partners: srPartners } as DeepPartial<Content>);
+import { sl as slPartial } from "./sl";
+import { isPartialLocale } from "@/lib/partial-scope";
+/** The Slovenian test locale: not a full language, so it is not in LOCALES. Only pages that exist in it read it (see partial-scope.ts). */
+const sl: Content = deepMerge<Content>(en, slPartial as unknown as DeepPartial<Content>);
 export const LOCALES = ["en", "mk", "de", "sr"] as const;
 export type Locale = (typeof LOCALES)[number];
 export const DEFAULT_LOCALE: Locale = "en";
 export const contents: Record<Locale, Content> = { en, mk, de, sr };
 export const isLocale = (s: string): s is Locale => (LOCALES as readonly string[]).includes(s);
-export const getContent = (l: string): Content => contents[isLocale(l) ? l : DEFAULT_LOCALE];
+export const getContent = (l: string): Content => (isPartialLocale(l) ? sl : contents[isLocale(l) ? l : DEFAULT_LOCALE]);
