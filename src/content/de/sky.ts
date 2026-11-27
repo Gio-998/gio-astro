@@ -1,7 +1,7 @@
 import type { sky as En } from "../en/sky";
 export const sky: typeof En = {
   hero: {
-    tonight: (phase: string, sign: string, pct: number) => `Heute Nacht: ${phase} im Zeichen ${sign} · ${pct} %`,
+    tonight: (phase: string, sign: string, pct: number) => `Heute: ${phase} im Zeichen ${sign} · ${pct} % Licht am Mittag`,
     begin: "Deine Deutung starten ✦",
     orDate: "Mit Geburtsdatum",
     go: "Los",

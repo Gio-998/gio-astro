@@ -1,7 +1,7 @@
 /** Living Sky (Дизајн v2): херо, приказни за денот, картички за споделување, колекционерски откривања. */
 export const sky = {
   hero: {
-    tonight: (phase: string, sign: string, pct: number) => `Вечерва: ${phase} во ${sign} · ${pct}%`,
+    tonight: (phase: string, sign: string, pct: number) => `Денес: ${phase} во ${sign} · ${pct}% осветлена напладне`,
     begin: "Започни го читањето ✦",
     orDate: "Со датум на раѓање",
     go: "Оди",

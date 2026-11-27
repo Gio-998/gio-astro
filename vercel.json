@@ -245,6 +245,34 @@
       }
     },
     {
+      "src": "/login/?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/account/?tab=login"
+      }
+    },
+    {
+      "src": "/(en|mk|de|sr)/login/?",
+      "status": 308,
+      "headers": {
+        "Location": "/$1/account/?tab=login"
+      }
+    },
+    {
+      "src": "/contact/?",
+      "status": 307,
+      "headers": {
+        "Location": "/en/privacy/"
+      }
+    },
+    {
+      "src": "/(en|mk|de|sr)/contact/?",
+      "status": 307,
+      "headers": {
+        "Location": "/$1/privacy/"
+      }
+    },
+    {
       "src": "/en/(premium|upgrade)/?",
       "status": 308,
       "headers": {
@@ -985,28 +1013,28 @@
     },
     {
       "src": "/en/horoscope/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/en/horoscope/$1/"
       }
     },
     {
       "src": "/mk/dneven-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/mk/dneven-horoskop/$1/"
       }
     },
     {
       "src": "/de/tageshoroskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/de/tageshoroskop/$1/"
       }
     },
     {
       "src": "/sr/dnevni-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/sr/dnevni-horoskop/$1/"
       }

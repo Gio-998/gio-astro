@@ -1,7 +1,7 @@
 /** Living Sky (Design v2) strings: hero, Today stories, share cards, collectible reveals. */
 export const sky = {
   hero: {
-    tonight: (phase: string, sign: string, pct: number) => `Tonight: ${phase} in ${sign} · ${pct}%`,
+    tonight: (phase: string, sign: string, pct: number) => `Today: ${phase} in ${sign} · ${pct}% lit at noon`,
     begin: "Begin your reading ✦",
     orDate: "With birth date",
     go: "Go",

@@ -94,7 +94,7 @@ export const sr: HoroBank = {
   colors: { fire: ["Žarkocrvena", "Šafran", "Zlatna"], earth: ["Maslinasta", "Terakota", "Peščana"], air: ["Nebeskoplava", "Lavanda", "Srebrna"], water: ["Tirkizna", "Indigo", "Biserna"] },
   weekdays: ["nedelja", "ponedeljak", "utorak", "sreda", "četvrtak", "petak", "subota"],
   sky: {
-    moonIn: (s, p, i) => `Mesec je u ${sLoc(s)}, faza je ${p}, osvetljen ${i}%.`,
+    moonIn: (s, p, i) => `Mesec je u ${sLoc(s)}, faza je ${p}, u podne osvetljen ${i}%.`,
     moonMoves: (s, t) => `U ${t} prelazi u ${sAcc(s)}.`,
     forYou: (t) => `Za tebe je fokus na ${tc(t, "loc")}.`,
     quarter: {

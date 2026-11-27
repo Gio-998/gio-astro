@@ -63,6 +63,16 @@ export function rotate(n: number, iso: string, salt: string): number {
   const step = [3, 5, 7, 11, 13, 2].find((k) => k % n !== 0 && gcd(k, n) === 1) ?? 1;
   return (((dayNumber(iso) * step + hash(salt)) % n) + n) % n;
 }
+/**
+ * Same-day spread across the 12 signs: each sign gets a fixed offset times a multiplier coprime to n, so on any
+ * date the 12 signs land on 12 different entries (needs n >= 12), and the daily step is coprime to n, so a sign
+ * never gets the same entry two days running and pools of 7+ never repeat inside a week.
+ */
+export function spread(n: number, iso: string, sign: Sign): number {
+  const coprime = (ks: number[]) => ks.find((k) => k % n !== 0 && gcd(k, n) === 1) ?? 1;
+  const step = coprime([5, 7, 11, 13, 3, 2]); const mult = coprime([7, 11, 13, 5, 17, 19]);
+  return (((dayNumber(iso) * step + SIGNS.indexOf(sign) * mult) % n) + n) % n;
+}
 const lower = (s: string) => s.replace(/^(The|Die) /, (m) => m.toLowerCase());
 
 export function reading(lang: string, sign: Sign, iso: string): Reading {
@@ -85,7 +95,7 @@ export function reading(lang: string, sign: Sign, iso: string): Reading {
   const showEl = moonChanged || (alt === 1 && prevSky.moon.sign === prev2.moon.sign);
   const ma = sky.moonAspects[R(Math.max(1, sky.moonAspects.length), "ma")];
   const moonAspectLine = ma ? pick(V.moonAspect[ma.type], `ma-${ma.type}`)(lower(B.bodies[ma.body]), ma.time) : "";
-  const headline = pick(V.headline, "headline")(ctx);
+  const headline = V.headline[spread(V.headline.length, iso, sign)](ctx);
   const love = [[lead("love"), showHouse ? B.love[sky.moon.house - 1] : ""].filter(Boolean).join(" "), [planetLine("venus", B.venus[sky.houses.venus - 1]), sky.retro.includes("venus") ? pick(V.retro.venus, "rv") : ""].filter(Boolean).join(" ")];
   const work = [`${lead("work")} ${planetLine("mercury", B.work[sky.houses.mercury - 1])}`];
   if (sky.retro.includes("mercury")) work.push(pick(V.retro.mercury, "rm")); else if (sky.retro.includes("mars")) work.push(pick(V.retro.mars, "rma")); else work.push(planetLine("mars", B.mars[sky.houses.mars - 1]));
