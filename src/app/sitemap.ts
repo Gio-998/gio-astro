@@ -11,6 +11,7 @@ import { publishedDates, todayIso } from "@/engine/skyday";
 import { numPaths, numIndexable } from "@/lib/numerology";
 import { SECTIONS } from "@/lib/sections";
 import { CONTENT_DATES } from "@/lib/content-dates";
+import { partialSitemap } from "@/lib/partial-sitemap";
 
 // Every URL comes from one internal (locale-less) route path; localizedPath/languageAlternates turn it into each
 // locale's public URL and hreflang set, so localized slugs (/mk/ceni/, /mk/dneven-horoskop/…) need no special cases.
@@ -38,5 +39,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const abs = (o: Record<string, string>) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, `${SITE_URL}${v}`]));
   // Section dates are Skopje dates, up to two hours ahead of UTC: the nightly build runs in that gap, and a lastmod must never be in the future.
   const notAhead = (d: string) => (d > BUILD ? BUILD : d);
-  return entries().flatMap((e) => LOCALES.map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: notAhead(e.lastModified(l)), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } })));
+  return [...entries().flatMap((e) => LOCALES.map((l) => ({ url: `${SITE_URL}${localizedPath(l, e.path)}`, lastModified: notAhead(e.lastModified(l)), changeFrequency: e.changeFrequency, priority: e.priority, alternates: { languages: abs(languageAlternates(e.path)) } }))), ...partialSitemap(BUILD)];
 }
