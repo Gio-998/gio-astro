@@ -66,7 +66,15 @@ describe("i18n route map", () => {
     expect(to("/sr/numerology/")).toBe("/sr/numerologija/"); expect(to("/sr/ceni/")).toBe("/sr/cene/"); expect(to("/mk/cene/")).toBe("/mk/ceni/");
     expect(to("/sr/dneven-horoskop/oven/")).toBe("/sr/dnevni-horoskop/ovan/"); expect(to("/sr/horoscope/pisces/2026-10-13/")).toBe("/sr/dnevni-horoskop/ribe/");
     expect(to("/mk/dnevni-horoskop/ovan/")).toBe("/mk/dneven-horoskop/oven/"); expect(to("/sr/premium/")).toBe("/sr/cene/");
-    expect(to("/sr/dnevni-horoskop/ovan/2026-10-13/")).toBe("/sr/dnevni-horoskop/$1/"); // the dated rule, after the filesystem
+  });
+  it("sends a dated horoscope that this build does not have to its sign page with a temporary redirect", () => {
+    // A late or failed nightly build must never tell search engines that tomorrow's page moved for good.
+    const cfg = JSON.parse(readFileSync("vercel.json", "utf8")) as { routes: { src: string; status?: number; headers?: { Location: string } }[] };
+    const rule = (p: string) => cfg.routes.find((r) => r.status !== undefined && new RegExp(`^${r.src}$`).test(p));
+    for (const [p, to] of [["/sr/dnevni-horoskop/ovan/2026-10-13/", "/sr/dnevni-horoskop/$1/"], ["/de/tageshoroskop/widder/2030-01-01/", "/de/tageshoroskop/$1/"], ["/mk/dneven-horoskop/oven/2030-01-01/", "/mk/dneven-horoskop/$1/"], ["/en/horoscope/aries/2030-01-01/", "/en/horoscope/$1/"]]) {
+      expect(rule(p)?.status, p).toBe(307);
+      expect(rule(p)?.headers?.Location, p).toBe(to);
+    }
   });
   it("switches language on localized pages", () => expect(switchLocale("/mk/dneven-horoskop/oven/", "en")).toBe("/en/horoscope/aries/"));
   it("vercel.json 308s every wrong-locale slug", () => {

@@ -52,9 +52,15 @@ describe("period sky", () => {
     expect(currentMonth(new Date("2026-11-30T23:30:00Z")).start).toBe("2026-12-01");
   });
   it("publishes the current and next month and never drops a month", () => {
-    expect(publishedMonths(new Date("2026-10-31T12:00:00Z"))).toEqual(["2026-11"]);
+    expect(publishedMonths(new Date("2026-10-31T12:00:00Z"))).toEqual(["2026-11", "2026-12"]);
     expect(publishedMonths(new Date("2026-11-01T12:00:00Z"))).toEqual(["2026-11", "2026-12"]);
-    expect(publishedMonths(new Date("2027-01-15T12:00:00Z"))).toEqual(["2026-11", "2026-12", "2027-01", "2027-02"]);
+    expect(publishedMonths(new Date("2027-01-10T12:00:00Z"))).toEqual(["2026-11", "2026-12", "2027-01", "2027-02"]);
+  });
+  it("publishes the month after next from the 15th, so January 2027 is online in late November", () => {
+    expect(publishedMonths(new Date("2026-11-14T12:00:00Z")).at(-1)).toBe("2026-12");
+    expect(publishedMonths(new Date("2026-11-14T23:30:00Z")).at(-1)).toBe("2027-01"); // already the 15th in Skopje
+    expect(publishedMonths(new Date("2026-11-27T12:00:00Z"))).toEqual(["2026-11", "2026-12", "2027-01"]);
+    expect(publishedMonths(new Date("2026-12-20T12:00:00Z"))).toEqual(["2026-11", "2026-12", "2027-01", "2027-02"]);
   });
 });
 

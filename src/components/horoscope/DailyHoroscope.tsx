@@ -57,7 +57,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   const dayNav = (
     <nav className="flex items-center justify-between gap-2" aria-label={U.others}>
       {pub.has(r.prev) ? <DayLink className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</DayLink> : <span />}
-      {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLink}</Link>}
+      {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLinkSign ? U.todayLinkSign(r.signName) : U.todayLink}</Link>}
       {pub.has(r.next) ? <DayLink className={pill} href={horoPath(lang, sign, r.next)} rel="next">{U.tomorrow} →</DayLink> : <span />}
     </nav>
   );
@@ -72,7 +72,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
         </div>
         <div className="relative lg:max-w-[600px]">
           <p className="eyebrow mb-2 whitespace-nowrap text-[11px] tracking-[.14em] sm:tracking-[.2em] lg:mb-4 lg:text-[13px]" data-testid="horo-eyebrow">{SIGN_GLYPH[sign]} {r.signName} · {r.weekday}</p>
-          <h1 className="h-display pr-2 text-[2rem] font-medium leading-[1.05] lg:text-[3.3rem]!" data-testid="horo-title"><TitleWithDate title={r.title} date={r.dateLabel} /></h1>
+          <h1 className="h-display pr-2 text-[2rem] font-medium leading-[1.05] lg:text-[3.3rem]!" data-testid="horo-title"><TitleWithDate title={isToday && U.todayH1 ? U.todayH1(r.signName, r.dateLabel) : r.title} date={r.dateLabel} /></h1>
           <p className="h-display mt-4 text-[1.35rem] italic leading-snug text-gold/95 lg:mt-7 lg:text-[2.25rem] lg:leading-[1.2]">{r.headline}</p>
           <p className="mt-3 flex items-start gap-2 text-[13px] text-mist/75 lg:mt-7 lg:text-[15px]"><MoonDisc angle={angle} className="mt-px h-4 w-4 shrink-0 lg:h-5 lg:w-5" /><span>{r.moonLine}</span></p>
         </div>
