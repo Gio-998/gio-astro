@@ -134,6 +134,6 @@ export const mk: HoroBank = {
     skyTitle: "Небото денес", moodTitle: "Како се чувствуваш денес?", moodSub: "Еден допир, а страницата Денес го следи.",
     moods: ["Супер", "Мирно", "Средно", "Напнато", "Слабо"],
     ctaTitle: "Ова е за знакот. Твојата карта е само твоја.", ctaSub: "Добиј бесплатна натална карта за две минути.", ctaBtn: "Мојата бесплатна карта",
-    yesterday: "Вчера", tomorrow: "Утре", others: "Другите знаци", todayLink: "Денес", moonLabel: "Месечина", read: "Прочитај",
+    yesterday: "Вчера", tomorrow: "Утре", others: "Другите знаци", todayLink: "Денес", todayLinkSign: (s) => `${s} денес`, moonLabel: "Месечина", read: "Прочитај",
   },
 };

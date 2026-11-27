@@ -129,6 +129,6 @@ export const de: HoroBank = {
     skyTitle: "Der Himmel heute", moodTitle: "Wie fühlst du dich heute?", moodSub: "Ein Tipp, und deine Heute-Seite merkt es sich.",
     moods: ["Super", "Ruhig", "Okay", "Angespannt", "Schlapp"],
     ctaTitle: "Das gilt für dein Zeichen. Dein Horoskop gehört nur dir.", ctaSub: "Hol dir dein gratis Geburtshoroskop in zwei Minuten.", ctaBtn: "Mein gratis Horoskop",
-    yesterday: "Gestern", tomorrow: "Morgen", others: "Andere Zeichen", todayLink: "Heute", moonLabel: "Mond", read: "Lesen",
+    yesterday: "Gestern", tomorrow: "Morgen", others: "Andere Zeichen", todayLink: "Heute", todayLinkSign: (s) => `${s} heute`, moonLabel: "Mond", read: "Lesen",
   },
 };

@@ -40,3 +40,16 @@ describe("today heading on the sign page", () => {
     expect(h1("mk", false)).toBe("Хороскоп за Овен, 27 ноември 2026");
   });
 });
+
+describe("link from a dated page to the sign page", () => {
+  it("names the sign in German and Macedonian, so the sign page gets a descriptive internal link", async () => {
+    const { renderToStaticMarkup } = await import("react-dom/server");
+    const { createElement } = await import("react");
+    const { DailyHoroscope } = await import("@/components/horoscope/DailyHoroscope");
+    const { publishedDates } = await import("@/engine/skyday");
+    const iso = publishedDates().at(-2)!;
+    const html = (lang: string) => renderToStaticMarkup(createElement(DailyHoroscope, { lang, sign: "aquarius", iso }));
+    expect(html("de")).toMatch(/href="\/de\/tageshoroskop\/wassermann\/?">Wassermann heute<\/a>/);
+    expect(html("mk")).toMatch(/href="\/mk\/dneven-horoskop\/vodolija\/?">Водолија денес<\/a>/);
+  });
+});

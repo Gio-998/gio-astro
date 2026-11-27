@@ -48,7 +48,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   const dayNav = (
     <nav className="flex items-center justify-between gap-2" aria-label={U.others}>
       {pub.has(r.prev) ? <DayLink className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</DayLink> : <span />}
-      {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLink}</Link>}
+      {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLinkSign ? U.todayLinkSign(r.signName) : U.todayLink}</Link>}
       {pub.has(r.next) ? <DayLink className={pill} href={horoPath(lang, sign, r.next)} rel="next">{U.tomorrow} →</DayLink> : <span />}
     </nav>
   );
