@@ -72,7 +72,7 @@ export const snippetsEn: SnippetSet = {
   "mirror-hours/14-14": { title: "14:14 meaning: freedom with a steady hand", description: "14:14 pairs the drive of one with the solid structure of four, and its digits add up to ten. It often hints at a change that works best with a plan." },
   "mirror-hours/15-15": { title: "15:15 meaning: warmth, choice and the people you love", description: "15:15 joins the independence of one with the restless five, and its digits lead to three. It often points to choices of the heart and personal joy." },
   "mirror-hours/20-20": { title: "20:20 meaning: patience, listening and quiet support", description: "20:20 appears in the evening, when the pace slows. It doubles two and zero, and speaks of partnership, patience and the strength that needs no pushing." },
-  "mirror-hours/21-21": { title: "21:21 meaning: rewards, joy and finishing well", description: "21:21 mirrors twenty one, a number often tied to completion and success. It comes late in the evening and asks you to celebrate how far you have come." },
+  "mirror-hours/21-21": { title: "21:21 meaning: love, twin flame and what it says", description: "21:21 meaning: a chapter is ending well and you may enjoy it. What this mirror hour says for singles, couples and a twin flame, plus an evening ritual." },
   "mirror-hours/22-22": { title: "22:22 meaning: the master builder before sleep", description: "22:22 repeats the master number 22, often called the master builder. It comes as the house grows quiet and asks what lasting thing you want to create." },
 
   // Life path numbers
