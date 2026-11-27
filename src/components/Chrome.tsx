@@ -1,66 +1,22 @@
 "use client";
-import { localePath } from "@/lib/horo-slugs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useId, useRef, useState } from "react";
-import { Flag } from "./art/Flag";
+import { useCallback, useEffect, useState } from "react";
+import { LangMenu } from "./LangMenu";
 import { DesktopNav, TabBar, useNav, useReturning } from "./nav/Nav";
 import { useContent, useHref } from "@/lib/content-context";
 import { useAccount } from "@/lib/sync";
 import { Emblem } from "./art/Emblem";
 import { ZodiacWheel } from "./art/ZodiacWheel";
-import { LOCALES } from "@/content";
 import { siteLinks } from "@/lib/site-links";
+import { Logo } from "./art/Logo";
 
-export function Logo({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 40 40" className={className} aria-hidden>
-      <circle cx="20" cy="20" r="18" fill="none" stroke="url(#lg-g)" strokeWidth="1.2" />
-      <path d="M26 9 A12 12 0 1 0 26 31 A9.5 12 0 1 1 26 9 Z" fill="url(#lg-g)" opacity=".9" />
-      <path d="M27 17 l1 3 3 1 -3 1 -1 3 -1 -3 -3 -1 3 -1z" fill="#fffaf0" />
-    </svg>
-  );
-}
+export { Logo };
 
-/** Language menu: flag + short code; picking a language stores it (cookie for the edge redirect on "/", localStorage for the root page). */
+/** Language menu: flag + short code; picking a language stores it (cookie for the edge redirect on "/", localStorage for the root page). The menu itself lives in LangMenu, which the slim Slovenian header shares. */
 export function LangSwitch({ className = "" }: { className?: string }) {
-  const { c, locale } = useContent(); const path = usePathname() || "/";
-  const [open, setOpen] = useState(false); const ref = useRef<HTMLDivElement>(null); const id = useId();
-  useEffect(() => {
-    if (!open) return;
-    const off = (e: MouseEvent) => { if (!ref.current?.contains(e.target as Node)) setOpen(false); };
-    const esc = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false); };
-    document.addEventListener("mousedown", off); document.addEventListener("keydown", esc);
-    return () => { document.removeEventListener("mousedown", off); document.removeEventListener("keydown", esc); };
-  }, [open]);
-  const code = (l: string) => (l === "mk" ? "мк" : l);
-  const names = c.site.languages as Record<string, string>;
-  return (
-    <div ref={ref} className={`relative shrink-0 text-xs ${className}`}>
-      <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-controls={id} aria-haspopup="true"
-        aria-label={`${c.site.language}: ${names[locale] ?? locale}`}
-        className="flex min-h-[44px] items-center gap-1.5 rounded-full px-2.5 font-semibold uppercase tracking-wider text-mist/85 transition hover:bg-white/10">
-        <Flag code={locale} className="h-3 w-[18px]" /><span>{code(locale)}</span>
-        <svg viewBox="0 0 10 6" className={`h-1.5 w-2.5 transition ${open ? "rotate-180" : ""}`} aria-hidden><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.5" /></svg>
-      </button>
-      {open && (
-        <ul id={id} role="list" className="absolute right-0 top-full z-50 mt-1.5 min-w-[150px] rounded-2xl border border-white/15 bg-[#17123a]/95 p-1 shadow-xl backdrop-blur">
-          {LOCALES.map((l) => {
-            const href = localePath(path, l) || `/${l}/`;
-            return (
-              <li key={l}>
-                <a href={href} hrefLang={l} lang={l} aria-current={l === locale ? "true" : undefined}
-                  onClick={(e) => { e.preventDefault(); try { localStorage.setItem("mirrorstar:lang", l); document.cookie = `lang=${l}; path=/; max-age=31536000; SameSite=Lax`; } catch {} window.location.href = href + window.location.search + window.location.hash; }}
-                  className={`flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-xl px-2.5 text-sm transition ${l === locale ? "bg-gold/15 text-gold" : "text-mist hover:bg-white/10"}`}>
-                  <Flag code={l} className="h-3.5 w-[21px]" /><span>{names[l] ?? l}</span>{l === locale && <span className="ml-auto" aria-hidden>✓</span>}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </div>
-  );
+  const { c, locale } = useContent();
+  return <LangMenu locale={locale} names={c.site.languages as Record<string, string>} label={c.site.language} className={className} />;
 }
 
 /** Same-page taps scroll smoothly to the top; cross-page landing at the top is handled globally by RouteScrollTop. */
