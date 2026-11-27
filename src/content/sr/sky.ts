@@ -8,7 +8,7 @@ const low = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 
 export const sky: typeof En = {
   hero: {
-    tonight: (phase: string, sign: string, pct: number) => `Večeras: ${low(phase)} u ${sLoc(sign)} · ${pct}%`,
+    tonight: (phase: string, sign: string, pct: number) => `Danas: ${low(phase)} u ${sLoc(sign)} · ${pct}% osvetljen u podne`,
     begin: "Započni čitanje ✦",
     orDate: "Sa datumom rođenja",
     go: "Kreni",

@@ -17,6 +17,8 @@ export const srVariety: HoroVariety = {
     (c) => `Dok traje ${c.phase}, jedan iskren izbor menja raspoloženje.`,
     (c) => `Danas imaš prostora da iznova razmisliš o ${tc(c.topic, "loc")}.`,
     (c) => `${U(c)} dobija onaj ko dođe na vreme i kaže šta misli.`,
+    (c) => `${U(c)} izaberi jedan razgovor i posveti mu punu pažnju.`,
+    (c) => `Sa Mesecom u ${sLoc(c.moon)} jedan miran sat donosi više od celog užurbanog popodneva.`,
   ],
   lead: {
     overview: [

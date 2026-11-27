@@ -32,21 +32,30 @@ export const captchaActive = (wanted: boolean, flagOn: boolean, ignoreFlag: bool
 export function useCaptcha(locale: string, wanted = true, ignoreFlag = false) {
   const flags = useFlags(); const active = captchaActive(wanted, flags.captcha, ignoreFlag);
   const [token, setToken] = useState("");
-  const el = useRef<HTMLDivElement>(null); const id = useRef<string | null>(null);
+  // The widget box is tracked as state (callback ref), so when the form swaps views the widget is removed from the
+  // old box and rendered again in the new one instead of being left behind.
+  const [node, setNode] = useState<HTMLDivElement | null>(null); const id = useRef<string | null>(null);
   useEffect(() => {
-    if (!captchaEnabled || !active || !el.current) return;
-    let alive = true; const node = el.current;
+    if (!captchaEnabled || !active || !node) return;
+    let alive = true;
     load().then((api) => {
       if (!alive || id.current) return;
       id.current = api.render(node, { sitekey: CAPTCHA_KEY, theme: "dark", language: locale, hl: locale, callback: (t: string) => setToken(t), "expired-callback": () => setToken(""), "error-callback": () => setToken("") });
     }).catch(() => {});
-    return () => { alive = false; };
-  }, [locale, active]);
+    // Remove the widget with its id when the form unmounts or switches tabs; otherwise Turnstile keeps looking for
+    // the detached widget and logs "Cannot find Widget". The id is cleared so a later reset never targets a gone widget.
+    return () => {
+      alive = false;
+      const wid = id.current; id.current = null; setToken("");
+      const api = (window as unknown as Record<string, Api | undefined>)[CAPTCHA_PROVIDER];
+      if (wid && api?.remove) try { api.remove(wid); } catch { /* already gone */ }
+    };
+  }, [locale, active, node]);
   const reset = useCallback(() => {
     setToken("");
     const api = (window as unknown as Record<string, Api | undefined>)[CAPTCHA_PROVIDER];
     if (api && id.current) try { api.reset(id.current); } catch { /* widget gone */ }
   }, []);
-  const widget = captchaEnabled && active ? <div ref={el} className="flex min-h-[65px] justify-center" data-testid="captcha" /> : null;
+  const widget = captchaEnabled && active ? <div ref={setNode} className="flex min-h-[65px] justify-center" data-testid="captcha" /> : null;
   return { token, widget, reset, needed: captchaEnabled && active && !token };
 }

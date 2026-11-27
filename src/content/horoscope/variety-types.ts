@@ -11,7 +11,7 @@ export type LeadSection = "overview" | "love" | "single" | "couple" | "work" | "
  * repeat on consecutive days (pools of 7+ never repeat inside a week).
  */
 export interface HoroVariety {
-  headline: F[]; // 10+
+  headline: F[]; // 12+, so each of the 12 signs gets its own opening every day
   lead: Record<LeadSection, F[]>; // 8 each
   planet: Record<"mercury" | "venus" | "mars" | "jupiter" | "saturn", P[]>; // 8 each, topic of the planet's house
   retro: Record<"mercury" | "venus" | "mars", string[]>; // 4 each

@@ -5,14 +5,15 @@ import { ZodiacWheel } from "../art/ZodiacWheel";
 import { useHref, useContent } from "@/lib/content-context";
 import { useNav } from "../nav/Nav";
 import { moonPhase } from "@/engine/daily";
+import { dayBounds, todayIso } from "@/engine/skyday";
 import { SIGN_GLYPH } from "@/engine/zodiac";
 import { haptic } from "@/lib/haptics";
 
-/** Real moon line, computed in the browser (astronomy-engine). */
+/** Real moon line, computed in the browser for noon today in Skopje: the same moment the daily horoscope uses, so both show the same percentage. */
 function Tonight() {
   const { c } = useContent();
   const [m, setM] = useState<ReturnType<typeof moonPhase> | null>(null);
-  useEffect(() => { requestAnimationFrame(() => setM(moonPhase(new Date()))); }, []);
+  useEffect(() => { requestAnimationFrame(() => setM(moonPhase(dayBounds(todayIso()).noon))); }, []);
   return (
     <p className="inline-flex min-h-[32px] items-center gap-2 self-start rounded-2xl border border-white/12 bg-white/[0.05] px-3 py-1 text-[12px] leading-snug text-mist/85 backdrop-blur-md sm:text-[12.5px]" data-testid="hero-tonight">
       <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold" />

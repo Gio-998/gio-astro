@@ -12,6 +12,8 @@ export const enVariety: HoroVariety = {
     (c) => `Under a ${c.phase}, one honest choice changes the mood.`,
     (c) => `Today gives you room to rethink ${c.topic}.`,
     (c) => `${c.day} rewards the person who shows up early.`,
+    (c) => `Pick one conversation this ${c.day} and give it your full attention.`,
+    (c) => `With the Moon in ${c.moon}, a quiet hour does more than a busy afternoon.`,
   ],
   lead: {
     overview: [
