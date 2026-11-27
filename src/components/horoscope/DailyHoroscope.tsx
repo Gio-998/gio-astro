@@ -36,6 +36,10 @@ const MoonDisc = ({ angle, className }: { angle: number; className: string }) =>
 function TitleWithDate({ title, date }: { title: string; date: string }) {
   let i = title.lastIndexOf(date);
   if (i < 0) { const m = title.match(/\d{1,2}\.?\s\S+\s\d{4}\.?$/); i = m?.index ?? -1; }
+  if (i < 0) { // Macedonian opens with the numeric date ("Хороскоп за 27.11.2026: Бик"): keep that date and its colon together.
+    const n = title.match(/\d{2}\.\d{2}\.\d{4}:?/);
+    if (n) return <>{title.slice(0, n.index)}<span className="whitespace-nowrap">{n[0]}</span>{title.slice(n.index! + n[0].length)}</>;
+  }
   if (i < 0) return <>{title}</>;
   return <>{title.slice(0, i)}<span className="whitespace-nowrap">{title.slice(i)}</span></>;
 }
