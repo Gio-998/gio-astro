@@ -5,8 +5,8 @@ export function formatDate(iso: string | null | undefined, months: string[], opt
   if (!m) return iso;
   const [y, mo, d] = [Number(m[1]), Number(m[2]), Number(m[3])];
   const wd = opts.weekday ? `${opts.weekday[new Date(Date.UTC(y, mo - 1, d)).getUTCDay()]}, ` : "";
-  // German writes "13. Oktober" and Serbian "13. oktobar 2026.", with a closing dot after a year. Detected from the month list so every caller stays unchanged.
-  const sr = months[2] === "mart"; const ordinal = sr || months[2] === "März";
+  // German writes "13. Oktober" and Serbian "13. oktobar 2026.", with a closing dot after a year. Slovenian also writes "13. oktober 2026", without that closing dot. Detected from the month list so every caller stays unchanged.
+  const sr = months[2] === "mart"; const ordinal = sr || months[2] === "März" || months[2] === "marec";
   return `${wd}${d}${ordinal ? "." : ""} ${months[mo - 1]}${opts.year === false ? "" : ` ${y}${sr ? "." : ""}`}`;
 }
 export const daysInMonth = (y: number, m: number) => new Date(Date.UTC(y, m, 0)).getUTCDate();

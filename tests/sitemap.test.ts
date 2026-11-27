@@ -42,8 +42,10 @@ describe("sitemap entries", () => {
   it("gives each URL all its language versions, and lists each of those versions too", () => {
     const entries = sitemap(); const urls = new Set(entries.map((e) => e.url));
     for (const e of entries) {
+      if (new URL(e.url).pathname === "/sl/") { expect(e.alternates, e.url).toBeUndefined(); continue; } // the Slovenian home has no counterpart in the other languages
       const a = e.alternates!.languages as Record<string, string>;
-      expect(Object.keys(a).sort(), e.url).toEqual(["de", "en", "mk", "sr", "x-default"]);
+      const sl = "sl" in a; // only the pages the Slovenian test has (see tests/partial-locale.test.ts)
+      expect(Object.keys(a).sort(), e.url).toEqual(sl ? ["de", "en", "mk", "sl", "sr", "x-default"] : ["de", "en", "mk", "sr", "x-default"]);
       expect(Object.values(a), e.url).toContain(e.url);
       expect(a["x-default"]).toBe(a.en);
       for (const u of Object.values(a)) expect(urls.has(u), u).toBe(true);
@@ -52,7 +54,7 @@ describe("sitemap entries", () => {
   it("lists as many Serbian URLs as English ones, and x-default stays English", () => {
     const entries = sitemap(); const count = (l: string) => entries.filter((e) => new URL(e.url).pathname.startsWith(`/${l}/`)).length;
     expect(count("sr")).toBe(count("en"));
-    for (const e of entries) expect((e.alternates!.languages as Record<string, string>)["x-default"], e.url).toContain("/en/");
+    for (const e of entries.filter((x) => x.alternates)) expect((e.alternates!.languages as Record<string, string>)["x-default"], e.url).toContain("/en/");
   });
   it("never dates a page later than today", () => {
     const today = todayIso(); // page dates are Skopje's, so a UTC date here fails just after local midnight

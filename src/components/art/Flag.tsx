@@ -7,6 +7,9 @@ export function Flag({ code, className = "" }: { code: string; className?: strin
   if (code === "sr") return (
     <svg viewBox="0 0 5 3" {...common}><rect width="5" height="1" y="0" fill="#C6363C" /><rect width="5" height="1" y="1" fill="#0C4076" /><rect width="5" height="1" y="2" fill="#fff" /></svg>
   );
+  if (code === "sl") return (
+    <svg viewBox="0 0 5 3" {...common}><rect width="5" height="1" y="0" fill="#fff" /><rect width="5" height="1" y="1" fill="#0053A5" /><rect width="5" height="1" y="2" fill="#ED1C24" /></svg>
+  );
   if (code === "mk") return (
     <svg viewBox="0 0 28 14" {...common}>
       <rect width="28" height="14" fill="#D20000" />

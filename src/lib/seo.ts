@@ -7,12 +7,14 @@ import type { Metadata } from "next";
 import { LOCALES, DEFAULT_LOCALE } from "@/content";
 import { SITE_URL } from "./site-url";
 import { localizedPath, routeAlternates } from "./i18n-routes";
+import { PARTIAL_LOCALES, type PartialLocale } from "./partial-scope";
 
-export const LOCALE_META: Record<(typeof LOCALES)[number], { hreflang: string; og: string; name: string }> = {
+export const LOCALE_META: Record<(typeof LOCALES)[number] | PartialLocale, { hreflang: string; og: string; name: string }> = {
   en: { hreflang: "en", og: "en_US", name: "English" },
   mk: { hreflang: "mk", og: "mk_MK", name: "Македонски" },
   de: { hreflang: "de", og: "de_DE", name: "Deutsch" },
   sr: { hreflang: "sr", og: "sr_RS", name: "Srpski" },
+  sl: { hreflang: "sl", og: "sl_SI", name: "Slovenščina" },
 };
 /** True only on a build made with NEXT_PUBLIC_BETA=1. The private beta is over, so normal builds index the app's open tools. */
 export const betaOn = process.env.NEXT_PUBLIC_BETA === "1";
@@ -33,6 +35,8 @@ export function isIndexable(path: string): boolean {
 export function languageAlternates(path: string): Record<string, string> {
   const r = routeAlternates(path); const out: Record<string, string> = {};
   for (const l of LOCALES) out[LOCALE_META[l].hreflang] = r[l];
+  // Partial test locales appear only for the pages they have.
+  for (const l of PARTIAL_LOCALES) if (r[l]) out[LOCALE_META[l].hreflang] = r[l];
   out["x-default"] = localizedPath(DEFAULT_LOCALE, path);
   return out;
 }

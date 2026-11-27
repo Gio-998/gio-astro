@@ -84,8 +84,9 @@ export function NumPage({ lang, slug }: { lang: string; slug?: string[] }) {
   return <NumView lang={lang} m={m} />;
 }
 
-export function NumView({ lang, m }: { lang: string; m: NumModel }) {
-  const C = numContent(lang); const U = C.ui; const c = getContent(lang);
+/** `sec` replaces the section headings (faq, related, explore) for a partial locale that has no numerology content of its own. */
+export function NumView({ lang, m, sec }: { lang: string; m: NumModel; sec?: { faq: string; related: string; explore: string } }) {
+  const C = numContent(lang); const U = C.ui; const c = getContent(lang); const S = sec ?? U.sec;
   const url = abs(localizedPath(lang, m.path));
   const { personalYear: py, ...rest } = U.calc; const L: CalcLabels = { ...rest, personalYearTpl: py(0).replace("0", "{y}") };
   const names = Object.fromEntries(Object.entries(C.chars).map(([k, v]) => [k, v.name]));
@@ -144,15 +145,15 @@ export function NumView({ lang, m }: { lang: string; m: NumModel }) {
               </section>)}
           {m.faq.length > 0 && (
             <section className={block} aria-labelledby="faq-h">
-              <h2 id="faq-h" className={h2}>{U.sec.faq}</h2>
+              <h2 id="faq-h" className={h2}>{S.faq}</h2>
               <div className="divide-y divide-white/10">{m.faq.map(([q, a]) => <details key={q} className="group py-2.5 lg:py-4"><summary className="flex cursor-pointer list-none items-start justify-between gap-3 text-pretty text-[15px] font-medium lg:text-[18px]"><span className="min-w-0">{q}</span><span aria-hidden className="text-gold transition group-open:rotate-45">+</span></summary><p className="mt-2 text-pretty text-[14.5px] leading-snug text-mist/80 lg:text-[17px] lg:leading-[1.65]">{a}</p></details>)}</div>
             </section>
           )}
         </div>
         <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start lg:space-y-7">
           {m.kind !== "calc" && calcBox}
-          {(m.prev || m.next) && <nav className="flex items-center justify-between gap-2" aria-label={U.sec.related}>{m.prev && <Link className={pill} href={m.prev.href} rel="prev">← {m.prev.label}</Link>}{m.next && <Link className={pill} href={m.next.href} rel="next">{m.next.label} →</Link>}</nav>}
-          {m.related && m.related.length > 0 && <nav aria-labelledby="rel-h"><h2 id="rel-h" className={`${label} mb-1`}>{m.kind === "article" ? U.sec.related : U.sec.explore}</h2><Items items={m.related} cols="" /></nav>}
+          {(m.prev || m.next) && <nav className="flex items-center justify-between gap-2" aria-label={S.related}>{m.prev && <Link className={pill} href={m.prev.href} rel="prev">← {m.prev.label}</Link>}{m.next && <Link className={pill} href={m.next.href} rel="next">{m.next.label} →</Link>}</nav>}
+          {m.related && m.related.length > 0 && <nav aria-labelledby="rel-h"><h2 id="rel-h" className={`${label} mb-1`}>{m.kind === "article" ? S.related : S.explore}</h2><Items items={m.related} cols="" /></nav>}
         </aside>
       </div>
     </article>

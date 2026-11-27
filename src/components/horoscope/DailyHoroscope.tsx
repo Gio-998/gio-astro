@@ -11,6 +11,7 @@ import { orgAuthor, ORG_REF } from "@/lib/schema";
 import { numContent } from "@/content/numerology";
 import { DayNumber } from "../numerology/DayNumber";
 import { localizedPath } from "@/lib/i18n-routes";
+import { isPartialLocale } from "@/lib/partial-scope";
 import { ZODIAC } from "@/content/zodiac";
 
 const pill = "inline-flex h-9 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-white/12 bg-white/[0.05] px-3.5 text-[13px] text-mist/90 hover:border-gold/45";
@@ -35,6 +36,10 @@ const MoonDisc = ({ angle, className }: { angle: number; className: string }) =>
 function TitleWithDate({ title, date }: { title: string; date: string }) {
   let i = title.lastIndexOf(date);
   if (i < 0) { const m = title.match(/\d{1,2}\.?\s\S+\s\d{4}\.?$/); i = m?.index ?? -1; }
+  if (i < 0) { // Macedonian opens with the numeric date ("Хороскоп за 27.11.2026: Бик"): keep that date and its colon together.
+    const n = title.match(/\d{2}\.\d{2}\.\d{4}:?/);
+    if (n) return <>{title.slice(0, n.index)}<span className="whitespace-nowrap">{n[0]}</span>{title.slice(n.index! + n[0].length)}</>;
+  }
   if (i < 0) return <>{title}</>;
   return <>{title.slice(0, i)}<span className="whitespace-nowrap">{title.slice(i)}</span></>;
 }
@@ -43,7 +48,9 @@ function TitleWithDate({ title, date }: { title: string; date: string }) {
 export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: string; sign: Sign; iso: string; isToday?: boolean }) {
   const r = reading(lang, sign, iso); const B = bankFor(lang); const U = B.ui; const M = B.more.ui; const c = getContent(lang); const angle = r.sky.moon.angle;
   // The today page is the one that ranks, so it alone carries evergreen text about the sign. Dated pages stay about their day.
-  const Z = ZODIAC[lang] ?? ZODIAC.en; const evergreen = isToday ? Z.signs[sign]?.daily : undefined;
+  // A partial locale (the Slovenian test) has only the daily and monthly pages: no dated archive, and none of the sections the links below lead to.
+  const partial = isPartialLocale(lang);
+  const Z = ZODIAC[lang] ?? ZODIAC.en; const evergreen = isToday && !partial ? Z.signs[sign]?.daily : undefined;
   const url =absolute(isToday ? horoPath(lang, sign) : horoPath(lang, sign, iso));
   const ld = {
     "@context": "https://schema.org", "@type": "Article", headline: isToday ? U.shortTitle(r.signName) : r.title, description: isToday ? U.signHubMeta(r.signName) : r.description, url, datePublished: dayStart(iso), dateModified: dayStart(iso),
@@ -53,8 +60,8 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
   };
   const crumbs = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [[c.site.brand, `/${lang}/`], [U.hubTitle, horoPath(lang)], [r.signName, horoPath(lang, sign)], ...(isToday ? [] : [[r.dateLabel, horoPath(lang, sign, iso)]])].map(([name, p], i) => ({ "@type": "ListItem", position: i + 1, name, item: absolute(p) })) };
   // Only link to dates this build publishes, so the edges of the window never point at a 404.
-  const pub = new Set(publishedDates());
-  const dayNav = (
+  const pub = new Set(partial ? [] : publishedDates());
+  const dayNav = partial ? null : (
     <nav className="flex items-center justify-between gap-2" aria-label={U.others}>
       {pub.has(r.prev) ? <DayLink className={pill} href={horoPath(lang, sign, r.prev)} rel="prev">← {U.yesterday}</DayLink> : <span />}
       {!isToday && <Link className={pill} href={horoPath(lang, sign)}>{U.todayLinkSign ? U.todayLinkSign(r.signName) : U.todayLink}</Link>}
@@ -78,7 +85,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
         </div>
       </header>
 
-      <div className="lg:hidden">{dayNav}</div>
+      {dayNav && <div className="lg:hidden">{dayNav}</div>}
 
       <div className="space-y-3 lg:mt-14 lg:grid lg:grid-cols-[minmax(0,680px)_300px] lg:justify-between lg:gap-16 lg:space-y-0">
         <div className="space-y-3 lg:space-y-9">
@@ -125,18 +132,18 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
             </Sec>
           )}
 
-          <section className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3.5 lg:mt-12 lg:px-6 lg:py-5">
+          {!partial && <section className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3.5 lg:mt-12 lg:px-6 lg:py-5">
             <h2 className="h-display text-[1.3rem]! leading-tight!">{U.moodTitle}</h2>
             <p className="mb-2.5 text-[13px] text-mist/65">{U.moodSub}</p>
             <div className="flex gap-1.5 lg:max-w-md">{U.moods.map((m, i) => <Link key={m} href={`/${lang}/today/?mood=${i + 1}`} className="flex h-9 min-w-0 flex-1 items-center justify-center rounded-full border border-white/12 bg-white/[0.05] px-1 text-[12px] hover:border-gold/45"><span className="truncate">{m}</span></Link>)}</div>
-          </section>
+          </section>}
 
-          <section className="rounded-2xl border border-gold/30 bg-[linear-gradient(150deg,rgba(233,199,138,.14),rgba(139,108,240,.12))] px-4 py-4 lg:flex lg:items-center lg:justify-between lg:gap-6 lg:px-6 lg:py-5">
+          {!partial && <section className="rounded-2xl border border-gold/30 bg-[linear-gradient(150deg,rgba(233,199,138,.14),rgba(139,108,240,.12))] px-4 py-4 lg:flex lg:items-center lg:justify-between lg:gap-6 lg:px-6 lg:py-5">
             <div><h2 className="h-display text-[1.3rem]! leading-tight!">{U.ctaTitle}</h2><p className="mt-1 text-[13px] text-mist/70">{U.ctaSub}</p></div>
             <Link href={`/${lang}/start/`} className="btn-primary mt-3 inline-flex shrink-0 lg:mt-0">{U.ctaBtn} →</Link>
-          </section>
+          </section>}
 
-          <p className="px-1 text-[12px] leading-relaxed text-mist/55 lg:text-[13px]"><span className="font-semibold text-mist/70">{M.how}. </span>{M.howText} <Link className="text-gold underline-offset-4 hover:underline" href={`/${lang}/how-it-works/`}>{M.howLink} →</Link></p>
+          <p className="px-1 text-[12px] leading-relaxed text-mist/55 lg:text-[13px]"><span className="font-semibold text-mist/70">{M.how}. </span>{M.howText}{!partial && <> <Link className="text-gold underline-offset-4 hover:underline" href={`/${lang}/how-it-works/`}>{M.howLink} →</Link></>}</p>
         </div>
 
         <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start lg:space-y-6">
@@ -151,7 +158,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
             <span className="text-gold/50" aria-hidden>·</span><span className="whitespace-nowrap">{r.lucky.window}</span>
           </p>
 
-          {(() => { const NC = numContent(lang); return <DayNumber iso={iso} days={NC.days} names={Object.fromEntries(Object.entries(NC.chars).map(([k, v]) => [k, v.name]))} href={localizedPath(lang, "/numerology/personal-day/")} L={{ title: NC.p3.dayTitle, intro: NC.p3.dayIntro, need: NC.p3.dayNeed, link: NC.p3.dayLink, year: NC.p3.dayYear(0).replace("0", "{n}"), month: NC.p3.dayMonth(0).replace("0", "{n}"), birth: NC.ui.calc.birth }} />; })()}
+          {!partial && (() => { const NC = numContent(lang); return <DayNumber iso={iso} days={NC.days} names={Object.fromEntries(Object.entries(NC.chars).map(([k, v]) => [k, v.name]))} href={localizedPath(lang, "/numerology/personal-day/")} L={{ title: NC.p3.dayTitle, intro: NC.p3.dayIntro, need: NC.p3.dayNeed, link: NC.p3.dayLink, year: NC.p3.dayYear(0).replace("0", "{n}"), month: NC.p3.dayMonth(0).replace("0", "{n}"), birth: NC.ui.calc.birth }} />; })()}
 
           <section className="rounded-2xl border border-white/10 bg-white/[0.045] px-4 py-3.5 lg:rounded-3xl lg:px-5">
             <h2 className={`${label} mb-2`}>{M.planets}</h2>
@@ -165,7 +172,7 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
             <ul className="space-y-1.5">{r.sky_.map((l, i) => <li key={i} className="flex gap-2 text-[14px] leading-snug text-mist/85"><span aria-hidden className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-gold/80" />{l}</li>)}</ul>
           </section>
 
-          <div className="hidden lg:block">{dayNav}</div>
+          {dayNav && <div className="hidden lg:block">{dayNav}</div>}
 
           <nav aria-label={U.others}>
             <h2 className={`${label} mb-2 mt-2`}>{U.others}</h2>
@@ -173,8 +180,8 @@ export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: str
               {SIGNS.filter((x) => x !== sign).map((x) => <DayLink key={x} href={isToday ? horoPath(lang, x) : horoPath(lang, x, iso)} title={c.astro.signs[x].name} className="flex h-12 flex-col items-center justify-center gap-0.5 rounded-xl border border-white/10 bg-white/[0.04] px-0.5 text-[11px] leading-none hover:border-gold/40 sm:h-10 sm:flex-row sm:gap-1 sm:px-1 sm:text-[12px] lg:h-11 lg:rounded-full" data-testid="other-sign"><span aria-hidden className="text-[13px] leading-none text-gold sm:text-[12px] lg:text-lg">{SIGN_GLYPH[x]}</span><span className="whitespace-nowrap lg:sr-only">{c.astro.signs[x].name}</span></DayLink>)}
             </div>
           </nav>
-          <p className="mt-2 text-[13px]"><Link className="text-gold underline-offset-4 hover:underline" href={`/${lang}/daily/${sign}/`} data-testid="motivation-link">{U.motivationLink(r.signName)} →</Link></p>
-          {isToday && (
+          {!partial && <p className="mt-2 text-[13px]"><Link className="text-gold underline-offset-4 hover:underline" href={`/${lang}/daily/${sign}/`} data-testid="motivation-link">{U.motivationLink(r.signName)} →</Link></p>}
+          {isToday && !partial && (
             <nav aria-label={U.recentDays} data-testid="recent-days">
               <h2 className={`${label} mb-1 mt-2`}>{U.recentDays}</h2>
               <p className="mb-2 text-[12.5px] leading-snug text-mist/65">{U.signHubIntro(r.signName)}</p>

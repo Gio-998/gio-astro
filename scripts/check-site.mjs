@@ -23,6 +23,9 @@ import { leadCopyProblem } from "./lead-copy-rules.mjs";
 const OUT = process.argv[2] ?? "out";
 if (!fs.existsSync(path.join(OUT, "sitemap.xml"))) { console.error(`No ${OUT}/sitemap.xml: run npm run build first.`); process.exit(1); }
 const LOCALES = fs.readdirSync(OUT).filter((n) => /^[a-z]{2}$/.test(n) && fs.existsSync(path.join(OUT, n, "index.html")));
+// Test locales (src/lib/partial-scope.ts) have a few pages: hreflang must name the full languages and itself, and the home stands alone.
+const PARTIAL = (fs.readFileSync("src/lib/partial-scope.ts", "utf8").match(/PARTIAL_LOCALES = \[([^\]]*)\]/)?.[1].match(/"([a-z]{2})"/g) ?? []).map((x) => x.slice(1, -1));
+const FULL = LOCALES.filter((l) => !PARTIAL.includes(l));
 const HOMES = LOCALES.map((l) => `/${l}/`);
 const SHOW = 15;
 const MAX_HTML = 200 * 1024;
@@ -83,7 +86,7 @@ for (const file of pages) {
   const canonical = tags.find((t) => attr(t, "rel") === "canonical"); const self = canonical && new URL(attr(canonical, "href"), "https://x").pathname;
   if (self !== url) bad.canonical.push(`${url} -> ${self ?? "none"}`);
   const alt = Object.fromEntries(tags.filter((t) => attr(t, "rel") === "alternate" && attr(t, "hreflang")).map((t) => [attr(t, "hreflang"), new URL(attr(t, "href"), "https://x").pathname]));
-  if (!LOCALES.every((l) => alt[l]) || alt["x-default"] !== alt.en || !Object.values(alt).includes(url)) bad.hreflang.push(`${url} has ${Object.keys(alt).join(",") || "none"}`);
+  if (!(PARTIAL.some((l) => url === `/${l}/`)) && (!FULL.every((l) => alt[l]) || alt["x-default"] !== alt.en || !Object.values(alt).includes(url))) bad.hreflang.push(`${url} has ${Object.keys(alt).join(",") || "none"}`);
   const lang = html.match(/<html\b[^>]*\blang="([^"]+)"/)?.[1];
   if (lang !== url.split("/")[1]) bad.lang.push(`${url} has ${lang}`);
 }

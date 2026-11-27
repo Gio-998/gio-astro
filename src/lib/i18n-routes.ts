@@ -10,11 +10,14 @@
  * route folder for each locale (see I18N.md). Locales missing from a row fall back to the internal name.
  */
 import type { Sign } from "@/engine/zodiac";
+import { PARTIAL_LOCALES, inPartialScope, isPartialLocale, type PartialLocale } from "./partial-scope";
 
 /** Keep in sync with LOCALES in src/content (asserted in tests/i18n-routes.test.ts). */
 export const ROUTE_LOCALES = ["en", "mk", "de", "sr"] as const;
 export type RouteLocale = (typeof ROUTE_LOCALES)[number];
 export const X_DEFAULT: RouteLocale = "en";
+/** A locale that has pages: the four full ones and the partial test locales (see partial-scope.ts). */
+export type AnyLocale = RouteLocale | PartialLocale;
 
 /** First path segment: internal folder name → public slug per locale. */
 export const SECTION_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
@@ -51,6 +54,9 @@ export const NUM_SLUGS: Record<string, Partial<Record<RouteLocale, string>>> = {
   "personal-year-2027": { mk: "licna-godina-2027", de: "persoenliches-jahr-2027", sr: "licna-godina-2027" },
   name: { mk: "ime", de: "name", sr: "ime" },
 };
+/** Slovenian test locale: only the daily and monthly horoscope sections exist, so it has only these slugs. */
+const SL_SECTIONS: Record<string, string> = { horoscope: "dnevni-horoskop", "monthly-horoscope": "mesecni-horoskop" };
+export const SL_SIGN_SLUGS: Record<Sign, string> = { aries: "oven", taurus: "bik", gemini: "dvojcka", cancer: "rak", leo: "lev", virgo: "devica", libra: "tehtnica", scorpio: "skorpijon", sagittarius: "strelec", capricorn: "kozorog", aquarius: "vodnar", pisces: "ribi" };
 const PAIR_JOIN: Record<RouteLocale, string> = { en: "and", mk: "i", de: "und", sr: "i" };
 const numSlug = (l: RouteLocale, k: string) => NUM_SLUGS[k]?.[l] ?? k;
 const numKey = (l: RouteLocale, slug: string) => Object.keys(NUM_SLUGS).find((k) => numSlug(l, k) === slug);
@@ -65,20 +71,21 @@ const SIGN_SECTIONS = new Set(["horoscope", "zodiac", "weekly-horoscope", "month
 const isSign = (s: string): s is Sign => s in SIGN_SLUGS.en;
 const isRouteLocale = (l: string): l is RouteLocale => (ROUTE_LOCALES as readonly string[]).includes(l);
 
-export const sectionSlug = (locale: string, section: string) => (isRouteLocale(locale) ? SECTION_SLUGS[section]?.[locale] : undefined) ?? section;
+export const sectionSlug = (locale: string, section: string) => (isRouteLocale(locale) ? SECTION_SLUGS[section]?.[locale] : isPartialLocale(locale) ? SL_SECTIONS[section] : undefined) ?? section;
+const signSlugs = (l: string): Record<Sign, string> => (isPartialLocale(l) ? SL_SIGN_SLUGS : SIGN_SLUGS[l as RouteLocale]);
 /** Does `locale` serve the folder `owner` has for this section? Two locales can share a slug (mk and sr both use numerologija), so a route folder asks this rather than comparing with one owner. */
 export const servesFolder = (locale: string, section: string, owner: string) => locale === owner || (isRouteLocale(locale) && sectionSlug(locale, section) === sectionSlug(owner, section));
 
 /** Internal route path ("/pricing/") → public URL for a locale ("/mk/ceni/"). */
 export function localizedPath(locale: string, path: string): string {
-  const l = isRouteLocale(locale) ? locale : X_DEFAULT;
+  const l: AnyLocale = isRouteLocale(locale) || isPartialLocale(locale) ? locale : X_DEFAULT;
   const parts = path.split("/"); // ["", section, sub, ..., ""]
   const section = parts[1];
   if (section && SECTION_SLUGS[section]) {
     parts[1] = sectionSlug(l, section);
-    if (SIGN_SECTIONS.has(section) && parts[2] && parts[2] in SIGN_SLUGS.en) parts[2] = SIGN_SLUGS[l][parts[2] as Sign];
-    if (section === "sign-compatibility" && parts[2]) { const [a, b] = parts[2].split("-and-"); if (a && b && isSign(a) && isSign(b)) parts[2] = `${SIGN_SLUGS[l][a]}-${PAIR_JOIN[l]}-${SIGN_SLUGS[l][b]}`; }
-    if (section === "numerology") for (let i = 2; i < parts.length; i++) {
+    if (SIGN_SECTIONS.has(section) && parts[2] && parts[2] in SIGN_SLUGS.en) parts[2] = signSlugs(l)[parts[2] as Sign];
+    if (section === "sign-compatibility" && parts[2] && isRouteLocale(l)) { const [a, b] = parts[2].split("-and-"); if (a && b && isSign(a) && isSign(b)) parts[2] = `${SIGN_SLUGS[l][a]}-${PAIR_JOIN[l]}-${SIGN_SLUGS[l][b]}`; }
+    if (section === "numerology" && isRouteLocale(l)) for (let i = 2; i < parts.length; i++) {
       if (NUM_SLUGS[parts[i]]) parts[i] = numSlug(l, parts[i]);
       else if (/^\d+-and-\d+$/.test(parts[i])) parts[i] = parts[i].replace("-and-", `-${PAIR_JOIN[l]}-`);
     }
@@ -87,17 +94,18 @@ export function localizedPath(locale: string, path: string): string {
 }
 
 /** Public URL ("/mk/ceni/") → [locale, internal route path] or null if it is not under a locale. */
-export function parsePath(url: string): [RouteLocale, string] | null {
+export function parsePath(url: string): [AnyLocale, string] | null {
   const m = url.match(/^\/([a-z]{2})(\/.*)?$/);
-  if (!m || !isRouteLocale(m[1])) return null;
-  const l = m[1]; const parts = (m[2] ?? "/").split("/");
-  const section = Object.keys(SECTION_SLUGS).find((k) => sectionSlug(l, k) === parts[1]);
+  if (!m || !(isRouteLocale(m[1]) || isPartialLocale(m[1]))) return null;
+  const l = m[1] as AnyLocale; const parts = (m[2] ?? "/").split("/");
+  const section = Object.keys(SECTION_SLUGS).find((k) => (isRouteLocale(l) || k in SL_SECTIONS) && sectionSlug(l, k) === parts[1]);
   if (section) {
     parts[1] = section;
-    const signOf = (slug: string) => (Object.keys(SIGN_SLUGS[l]) as Sign[]).find((x) => SIGN_SLUGS[l][x] === slug);
+    const table = signSlugs(l);
+    const signOf = (slug: string) => (Object.keys(table) as Sign[]).find((x) => table[x] === slug);
     if (SIGN_SECTIONS.has(section)) { const s = signOf(parts[2]); if (s) parts[2] = s; }
-    if (section === "sign-compatibility" && parts[2]) { const [a, b] = parts[2].split(`-${PAIR_JOIN[l]}-`).map(signOf); if (a && b) parts[2] = `${a}-and-${b}`; }
-    if (section === "numerology") for (let i = 2; i < parts.length; i++) {
+    if (section === "sign-compatibility" && parts[2] && isRouteLocale(l)) { const [a, b] = parts[2].split(`-${PAIR_JOIN[l]}-`).map(signOf); if (a && b) parts[2] = `${a}-and-${b}`; }
+    if (section === "numerology" && isRouteLocale(l)) for (let i = 2; i < parts.length; i++) {
       const k = numKey(l, parts[i]); if (k) parts[i] = k;
       else if (new RegExp(`^\\d+-${PAIR_JOIN[l]}-\\d+$`).test(parts[i])) parts[i] = parts[i].replace(`-${PAIR_JOIN[l]}-`, "-and-");
     }
@@ -112,6 +120,7 @@ export const isLocalPath = (p: string) => new RegExp(`^/(${ROUTE_LOCALES.join("|
 export function routeAlternates(path: string): Record<string, string> {
   const out: Record<string, string> = {};
   for (const l of ROUTE_LOCALES) out[l] = localizedPath(l, path);
+  for (const l of PARTIAL_LOCALES) if (inPartialScope(l, path)) out[l] = localizedPath(l, path);
   out["x-default"] = localizedPath(X_DEFAULT, path);
   return out;
 }
@@ -119,7 +128,10 @@ export function routeAlternates(path: string): Record<string, string> {
 /** Same page in another locale (language switch). */
 export function switchLocale(url: string, target: string): string {
   const p = parsePath(url);
-  return p ? localizedPath(target, p[1]) : url;
+  if (!p) return url;
+  // A partial locale has few pages: from anywhere else the switch leads to its own home.
+  if (isPartialLocale(target) && !inPartialScope(target, p[1])) return `/${target}/`;
+  return localizedPath(target, p[1]);
 }
 
 /** Public URLs that use another locale's slug (e.g. /mk/pricing/, /en/ceni/) → the correct URL. Used to check vercel.json redirects. */
