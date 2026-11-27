@@ -985,28 +985,28 @@
     },
     {
       "src": "/en/horoscope/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/en/horoscope/$1/"
       }
     },
     {
       "src": "/mk/dneven-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/mk/dneven-horoskop/$1/"
       }
     },
     {
       "src": "/de/tageshoroskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/de/tageshoroskop/$1/"
       }
     },
     {
       "src": "/sr/dnevni-horoskop/([a-z]+)/\\d{4}-\\d{2}-\\d{2}/?",
-      "status": 308,
+      "status": 307,
       "headers": {
         "Location": "/sr/dnevni-horoskop/$1/"
       }
