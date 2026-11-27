@@ -1,3 +1,4 @@
+import { inPartialScope } from "@/lib/partial-scope";
 import { describe, it, expect } from "vitest";
 import { execFileSync } from "node:child_process";
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
@@ -163,7 +164,7 @@ describe("new URL families", () => {
   it("builds hreflang for all locales plus x-default on English", () => {
     for (const p of PAGES) {
       const a = languageAlternates(p);
-      expect(Object.keys(a).sort()).toEqual(["de", "en", "mk", "sr", "x-default"]);
+      expect(Object.keys(a).sort()).toEqual(inPartialScope("sl", p) ? ["de", "en", "mk", "sl", "sr", "x-default"] : ["de", "en", "mk", "sr", "x-default"]);
       expect(a["x-default"]).toBe(a.en);
       for (const l of ROUTE_LOCALES) expect(a[l]).toBe(localizedPath(l, p));
     }
