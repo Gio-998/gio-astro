@@ -50,7 +50,7 @@ const stageTable = (x: Ctx, p: MercuryPeriod) => ({ head: [x.Z.head.stage, x.Z.h
  */
 export function liveAnswer(lang: string, now: Date): LiveAnswer {
   const x = ctx(lang); const A = x.Z.answer;
-  const periods = [...new Map([2025, 2026, 2027, 2028, 2029].flatMap((y) => mercuryYear(y)).map((p) => [p.retro.at, p])).values()].sort((a, b) => a.retro.at.localeCompare(b.retro.at));
+  const periods = [...new Map([2026, 2027, 2028].flatMap((y) => mercuryYear(y)).map((p) => [p.retro.at, p])).values()].sort((a, b) => a.retro.at.localeCompare(b.retro.at));
   const timeline: LiveAnswer["timeline"] = [{ from: "1970-01-01T00:00:00.000Z", retro: false, text: A.clear(dates(x, periods[0], periods[0].shadowStart.iso)) }];
   periods.forEach((p, k) => {
     timeline.push({ from: p.shadowStart.at, retro: false, text: A["pre-shadow"](dates(x, p, p.shadowStart.iso)) });
