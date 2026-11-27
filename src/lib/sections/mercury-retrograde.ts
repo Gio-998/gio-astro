@@ -6,7 +6,8 @@ import { mercuryNext, mercuryNow, mercuryYear, type MercuryPeriod } from "@/engi
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { formatDate } from "@/lib/dates";
 import { localizedPath } from "@/lib/i18n-routes";
-import type { Block, TableCell } from "@/lib/numerology";
+import type { Block, LiveAnswer, TableCell } from "@/lib/numerology";
+import { liveIndex } from "@/lib/live-answer";
 import type { Section, SectionModel } from "./types";
 
 const H = "/mercury-retrograde/";
@@ -43,6 +44,23 @@ function stages(x: Ctx, p: MercuryPeriod): TableCell[][] {
 }
 const stageTable = (x: Ctx, p: MercuryPeriod) => ({ head: [x.Z.head.stage, x.Z.head.date, x.Z.head.time, x.Z.head.position], rows: stages(x, p), caption: x.Z.clock });
 
+/**
+ * "Is Mercury retrograde now?" as a list of moments. Each entry holds the finished answer from that exact instant on (the engine's own
+ * station and shadow times), so the browser only has to find where its clock falls. The build starts the page at the entry for its own time.
+ */
+export function liveAnswer(lang: string, now: Date): LiveAnswer {
+  const x = ctx(lang); const A = x.Z.answer;
+  const periods = [...new Map([2026, 2027, 2028].flatMap((y) => mercuryYear(y)).map((p) => [p.retro.at, p])).values()].sort((a, b) => a.retro.at.localeCompare(b.retro.at));
+  const timeline: LiveAnswer["timeline"] = [{ from: "1970-01-01T00:00:00.000Z", retro: false, text: A.clear(dates(x, periods[0], periods[0].shadowStart.iso)) }];
+  periods.forEach((p, k) => {
+    timeline.push({ from: p.shadowStart.at, retro: false, text: A["pre-shadow"](dates(x, p, p.shadowStart.iso)) });
+    timeline.push({ from: p.retro.at, retro: true, text: A.retrograde(dates(x, p, p.retro.iso)) });
+    timeline.push({ from: p.direct.at, retro: false, text: A["post-shadow"](dates(x, p, p.direct.iso)) });
+    const next = periods[k + 1]; if (next) timeline.push({ from: p.shadowEnd.at, retro: false, text: A.clear(dates(x, next, p.shadowEnd.iso)) });
+  });
+  return { question: x.Z.live.question, note: x.Z.live.note, initial: liveIndex(timeline, now.getTime()), timeline };
+}
+
 function yearModel(lang: string, path: string, y: number): SectionModel {
   const x = ctx(lang); const { C, Z, lp } = x; const Y = Z.year; const P = mercuryYear(y); const ranges = P.map((p) => x.range(p));
   const blocks: Block[] = [
@@ -61,7 +79,7 @@ function yearModel(lang: string, path: string, y: number): SectionModel {
     [Y.qSigns(y), Y.aSigns(x.list([...new Set(P.flatMap((p) => p.signs))].map(x.name)))],
   ];
   const other = MERCURY_YEARS.find((v) => v !== y)!;
-  return { ...x.base, path, kind: "article", eyebrow: Z.crumb, h1: Y.h1(y), title: Y.title(y), description: Y.description(y, C.times(P.length)), lead: Y.lead(y, C.times(P.length), x.list(ranges)), big: "☿",
+  return { ...x.base, live: liveAnswer(lang, new Date()), path, kind: "article", eyebrow: Z.crumb, h1: Y.h1(y), title: Y.title(y), description: Y.description(y, C.times(P.length)), lead: Y.lead(y, C.times(P.length), x.list(ranges)), big: "☿",
     crumbs: [x.home, x.hub, [String(y), lp(path)]], blocks, faq,
     related: [{ href: lp(`${H}${other}/`), label: C.links.mercuryYear(other), big: "☿" }, { href: lp(`/moon-calendar/${y}/`), label: C.links.moonYear(y), big: "☾" }, { href: lp("/horoscope/"), label: C.links.daily, sub: C.links.dailySub }, { href: lp("/monthly-horoscope/"), label: C.links.monthly }, { href: lp("/rising-sign/"), label: C.links.rising }] };
 }
@@ -74,7 +92,7 @@ function hubModel(lang: string, path: string): SectionModel {
     { id: "next", title: Z.nextTitle, table: { head: [Z.head.period, Z.head.signs, Z.head.shadow], rows: mercuryNext(now, 4).map((p) => [{ text: x.range(p), ...yearLink(p) }, x.chain(p), Z.range(x.day(p.shadowStart.iso), x.day(p.shadowEnd.iso))]) } },
     ...Z.hub.blocks,
   ];
-  return { ...x.base, modified: modified(H), path, kind: "hub", eyebrow: Z.crumb, h1: Z.hub.h1, title: Z.hub.title, description: Z.hub.description, lead: Z.answer[st.state](dates(x, st.period, st.since)), big: "☿",
+  return { ...x.base, live: liveAnswer(lang, now), modified: modified(H), path, kind: "hub", eyebrow: Z.crumb, h1: Z.hub.h1, title: Z.hub.title, description: Z.hub.description, lead: Z.answer[st.state](dates(x, st.period, st.since)), big: "☿",
     crumbs: [x.home, x.hub], blocks, faq: Z.hub.faq,
     related: [...MERCURY_YEARS.map((y) => ({ href: lp(`${H}${y}/`), label: C.links.mercuryYear(y), big: "☿" })), { href: lp("/moon-calendar/"), label: C.moon.crumb, big: "☾" }, { href: lp("/horoscope/"), label: C.links.daily, sub: C.links.dailySub }, { href: lp("/rising-sign/"), label: C.links.rising }] };
 }

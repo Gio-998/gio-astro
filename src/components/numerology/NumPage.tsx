@@ -7,12 +7,13 @@ import { numModel, numPaths, type NumModel, type LinkItem, type BlockTable, type
 import { localizedPath, parsePath, routeAlternates, sectionSlug, servesFolder } from "@/lib/i18n-routes";
 import { LOCALE_META } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site-url";
-import { breadcrumb, faqPage, LdJson, abs, ORG_REF } from "@/lib/schema";
+import { LdJson, abs } from "@/lib/schema";
+import { numLd } from "@/lib/num-ld";
 import { Calculator, type CalcLabels } from "./Calculator";
+import { MercuryLive } from "./MercuryLive";
 import { DuoCalc, NameReport } from "./PersonalLazy";
 import { DayLink } from "../DayLink";
 import { SectionWidget } from "@/components/sections/Widget";
-import { CONTENT_DATES, SITE_LAUNCH } from "@/lib/content-dates";
 import { moonPath } from "@/components/horoscope/art";
 
 /** Static params for one locale's slug folder (other locales get the "_" placeholder that renders a 404). */
@@ -90,12 +91,7 @@ export function NumView({ lang, m, sec }: { lang: string; m: NumModel; sec?: { f
   const { personalYear: py, ...rest } = U.calc; const L: CalcLabels = { ...rest, personalYearTpl: py(0).replace("0", "{y}") };
   const names = Object.fromEntries(Object.entries(C.chars).map(([k, v]) => [k, v.name]));
   const pages = numPaths();
-  const words = [m.lead, ...m.blocks.flatMap((b) => [...(b.paras ?? []), ...(b.list ?? []), b.quote ?? ""]), ...m.faq.flat()].join(" ").split(/\s+/).filter(Boolean).length;
-  const ld: object[] = [breadcrumb(m.crumbs)];
-  if (m.faq.length) ld.push(faqPage(m.faq));
-  if (m.kind === "article") ld.push({ "@context": "https://schema.org", "@type": "Article", headline: m.title, description: m.description, url, mainEntityOfPage: url, inLanguage: lang, wordCount: words, articleSection: m.sectionName ?? U.section, datePublished: m.published ?? SITE_LAUNCH, dateModified: m.modified ?? CONTENT_DATES.numerology, author: { "@type": "Organization", "@id": ORG_REF["@id"], name: c.site.brand, url: `${SITE_URL}/` }, publisher: ORG_REF, image: [`${SITE_URL}/og/default/${lang}.jpg`], isPartOf: { "@id": `${SITE_URL}/#website` } });
-  if (m.kind === "hub" && m.items) ld.push({ "@context": "https://schema.org", "@type": "ItemList", name: m.title, itemListElement: m.items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.label, url: abs(it.href) })) });
-  if (m.kind === "calc") ld.push({ "@context": "https://schema.org", "@type": "WebApplication", name: m.title, url, applicationCategory: "LifestyleApplication", operatingSystem: "Any", inLanguage: lang, offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" } });
+  const ld = numLd(lang, m);
 
   const plain = <T extends object>(o: T) => Object.fromEntries(Object.entries(o).filter(([, v]) => typeof v !== "function")) as T;
   const P = { ...C.p3, duo: plain(C.p3.duo), report: plain(C.p3.report) }; const nums = c.nums;
@@ -121,10 +117,17 @@ export function NumView({ lang, m, sec }: { lang: string; m: NumModel; sec?: { f
         <div className="relative lg:max-w-[640px]">
           <p className="eyebrow mb-2 text-[11px] tracking-[.14em] lg:mb-4 lg:text-[13px]">{m.eyebrow}</p>
           <h1 className={`h-display text-balance break-words pr-2 ${Math.max(...m.h1.split(" ").map((w) => w.length)) > 11 ? "text-[1.5rem]" : "text-[1.9rem]"} font-medium leading-[1.08] lg:text-[3.2rem]!`}>{noOrphan(m.h1)}</h1>
-          <p className="h-display mt-3 text-pretty text-[1.25rem] italic leading-snug text-gold/95 lg:mt-6 lg:text-[2rem] lg:leading-[1.25]">{m.lead}</p>
+          {m.live && m.kind === "hub" ? <MercuryLive live={m.live} lead /> : <p className="h-display mt-3 text-pretty text-[1.25rem] italic leading-snug text-gold/95 lg:mt-6 lg:text-[2rem] lg:leading-[1.25]">{m.lead}</p>}
         </div>
       </header>
 
+      {m.answer && (
+        <section aria-labelledby="answer-h" data-testid="direct-answer" className="rounded-2xl border border-gold/30 bg-gold/[0.07] px-4 py-3.5 lg:mt-10 lg:rounded-3xl lg:px-8 lg:py-6">
+          <h2 id="answer-h" className={`${label} mb-1.5 lg:mb-2`}>{m.answer.label}</h2>
+          <p className="text-pretty text-[16px] leading-snug text-mist lg:text-[20px] lg:leading-[1.55]">{m.answer.text}</p>
+        </section>
+      )}
+      {m.live && m.kind !== "hub" && <MercuryLive live={m.live} className="lg:mt-10" label={label} />}
       {m.widget && <div className="lg:mt-10"><SectionWidget kind={m.widget} lang={lang} /></div>}
       {m.kind === "calc" && calcBox && <div className="lg:mt-10">{calcBox}</div>}
       {report && <div className="lg:mt-4">{report}</div>}

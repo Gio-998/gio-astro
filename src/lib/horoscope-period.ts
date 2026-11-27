@@ -43,9 +43,12 @@ export function monthPeriod(ym: string): Period {
 export const currentWeek = (now = new Date()) => weekPeriod(todayIso(now));
 export const currentMonth = (now = new Date()) => monthPeriod(todayIso(now).slice(0, 7));
 const shiftMonth = (ym: string, n: number) => { const [y, m] = ym.split("-").map(Number); const t = y * 12 + m - 1 + n; return `${Math.floor(t / 12)}-${String((t % 12) + 1).padStart(2, "0")}`; };
-/** Months with a dated page in this build: every month since FIRST_MONTH, through next month. */
+/** From this day of the month, the month after next is published too, so it can be found and indexed before it starts. */
+export const MONTH_AHEAD_FROM_DAY = 15;
+/** Months with a dated page in this build: every month since FIRST_MONTH, through next month, and from the 15th the month after it. */
 export function publishedMonths(now = new Date()): string[] {
-  const out: string[] = []; const last = shiftMonth(todayIso(now).slice(0, 7), 1);
+  const today = todayIso(now);
+  const out: string[] = []; const last = shiftMonth(today.slice(0, 7), Number(today.slice(8, 10)) >= MONTH_AHEAD_FROM_DAY ? 2 : 1);
   for (let m = FIRST_MONTH; m <= last; m = shiftMonth(m, 1)) out.push(m);
   return out;
 }

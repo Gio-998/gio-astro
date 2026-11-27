@@ -125,6 +125,7 @@ export const mk: HoroBank = {
     title: (s, d) => `Хороскоп за ${numericDate(d)}: ${s}`,
     shortTitle: (s) => `Хороскоп за ${s} денес`,
     titleToday: (s, d) => `Хороскоп за ${numericDate(d)}: ${s} денес`,
+    todayH1: (s, d) => `Хороскоп за ${numericDate(d)}: ${s} денес`,
     signHubMeta: (s) => SIGN_META[s],
     signHubIntro: (s) => `Оваа страница секогаш го покажува денешниот хороскоп за ${s}, а на латиница ја наоѓаш како horoskop ${translit(s)}. Претходните денови остануваат подолу.`,
     recentDays: "Претходни денови",
@@ -136,6 +137,6 @@ export const mk: HoroBank = {
     skyTitle: "Небото денес", moodTitle: "Како се чувствуваш денес?", moodSub: "Еден допир, а страницата Денес го следи.",
     moods: ["Супер", "Мирно", "Средно", "Напнато", "Слабо"],
     ctaTitle: "Ова е за знакот. Твојата карта е само твоја.", ctaSub: "Добиј бесплатна натална карта за две минути.", ctaBtn: "Мојата бесплатна карта",
-    yesterday: "Вчера", tomorrow: "Утре", others: "Другите знаци", todayLink: "Денес", moonLabel: "Месечина", read: "Прочитај",
+    yesterday: "Вчера", tomorrow: "Утре", others: "Другите знаци", todayLink: "Денес", todayLinkSign: (s) => `${s} денес`, moonLabel: "Месечина", read: "Прочитај",
   },
 };

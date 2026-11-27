@@ -10,7 +10,10 @@ import { reduce, rootOf } from "@/engine/numerology";
 import { BIRTHDAYS } from "@/content/numerology/birthdays";
 import { PAIRS, PAIR_HUB } from "@/content/numerology/pairs";
 import { MIRRORS, MIRROR_HUB } from "@/content/numerology/mirror";
-import { YEAR2027, YEAR2027_HUB } from "@/content/numerology/year2027";
+import { YEAR2027, YEAR2027_FAQ, YEAR2027_HUB } from "@/content/numerology/year2027";
+import { CONTENT_DATES } from "@/lib/content-dates";
+import { LIFE_PATH_CALC } from "@/content/numerology/life-path-calc";
+import { quickAnswer } from "@/content/numerology/answers";
 
 export const ANGEL = ["111", "222", "333", "444", "555", "666", "777", "888", "999", "000", "1111", "2222", "3333", "4444", "5555", "6666", "0000", "1010", "1212", "1221", "1234", "1313", "1331", "1414", "1551", "1616", "1818", "1001", "123", "911", "2020", "2121", "1122", "1144", "717"] as const;
 export const LIFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 33] as const;
@@ -42,6 +45,19 @@ export function numPaths(): string[] {
     ...(MIRROR_KEYS.length ? [`${N}mirror-hours/`, ...MIRROR_KEYS.map((k) => `${N}mirror-hours/${k}/`)] : []),
     ...(Y27_KEYS.length ? [`${N}personal-year-2027/`, ...Y27_KEYS.map((k) => `${N}personal-year-2027/${k}/`)] : [])];
 }
+/** Pages whose copy or links changed after the family date, with the day they did (the sitemap's lastmod and the Article's dateModified). */
+const REFRESH_DATE = "2026-11-27";
+const twinOf = (a: string) => (a.length === 4 && a.slice(0, 2) === a.slice(2) ? `${a.slice(0, 2)}-${a.slice(2)}` : "");
+const refreshed = (path: string): boolean => {
+  const parts = path.split("/").filter(Boolean).slice(1); const [sec, item] = parts;
+  if (path === `${N}calculator/life-path/` || path === `${N}life-path/` || path === `${N}angel-numbers/`) return true;
+  if (sec === "life-path" && (item === "11" || item === "22")) return true;
+  if (sec === "angel-numbers" && item && MIRROR_KEYS.includes(twinOf(item))) return true;
+  return sec === "personal-year-2027";
+};
+/** Real last change of a numerology page: the family date unless the page was touched since. */
+export const numLastModified = (path: string): string => (refreshed(path) ? REFRESH_DATE : CONTENT_DATES.numerology);
+
 /** Pages that may be listed in the sitemap (generated families join only after their overlap test passes). */
 export const numIndexable = (p: string) => numPaths().includes(p);
 
@@ -57,7 +73,12 @@ export interface NumModel {
   items?: LinkItem[]; related?: LinkItem[]; prev?: LinkItem; next?: LinkItem; calc?: CalcMode;
   /** New sections (src/lib/sections) reuse this model: their schema section name, real content dates and optional client tool. */
   sectionName?: string; published?: string; modified?: string; widget?: "rising-sign" | "moon-sign" | "birth-chart";
+  /** A 40 to 60 word direct answer, shown in its own card right under the header. */
+  answer?: { label: string; text: string };
+  /** An answer that depends on the reader's clock: the build picks `initial`, the browser picks again from `timeline` (ISO instants; entry k applies from its `from` until the next one starts). */
+  live?: LiveAnswer;
 }
+export type LiveAnswer = { question: string; note: string; initial: number; timeline: { from: string; retro: boolean; text: string }[] };
 
 const digitSum = (s: string) => s.split("").map(Number);
 const lp = (lang: string, p: string) => localizedPath(lang, p);
@@ -65,10 +86,12 @@ const lp = (lang: string, p: string) => localizedPath(lang, p);
 /** Page model with any long guide sections for that page placed after its first block, and that page's own search snippet. */
 export function numModel(lang: string, path: string): NumModel | null {
   const m = numModelBase(lang, path); if (!m) return m;
+  m.modified ??= numLastModified(path);
   const key = path.split("/").filter(Boolean).slice(1).join("/") || "hub";
   const extra = pageLong(lang, key).map((x, k) => ({ id: `guide-${k}`, title: x.title, paras: x.paras }));
   if (extra.length) m.blocks = [m.blocks[0], ...extra, ...m.blocks.slice(1)];
   const s = pageSnippet(lang, key); if (s) { m.title = s.title; m.description = s.description; }
+  if (path === `${N}calculator/life-path/`) addLifePathCalc(lang, m);
   // The pair family has no other way in: its hub is only linked from its own pages.
   const H = PAIR_HUB[lang] ?? PAIR_HUB.en; const pairHub: LinkItem[] = PAIR_KEYS.length ? [{ href: lp(lang, `${N}compatibility/`), label: H.title.split(":")[0], sub: H.sub }] : [];
   if (path === N) {
@@ -79,11 +102,24 @@ export function numModel(lang: string, path: string): NumModel | null {
   if (/^\/numerology\/(life-path\/(\d+\/)?|calculator\/compatibility\/)$/.test(path)) m.related = [...(m.related ?? []), ...pairHub];
   return m;
 }
+/** The life path calculator leads with the answer and carries the table of every number, so the page answers "how do I calculate it" and "what do the numbers mean" on its own. */
+function addLifePathCalc(lang: string, m: NumModel) {
+  const K = LIFE_PATH_CALC[lang] ?? LIFE_PATH_CALC.en; const C = numContent(lang);
+  m.answer = { label: K.label, text: K.answer };
+  const rows: TableCell[][] = LIFE.map((n) => [{ text: String(n), href: lp(lang, `${N}life-path/${n}/`) }, C.chars[n].name, C.chars[n].essence]);
+  m.blocks = [m.blocks[0], { id: "overview", title: K.tableTitle, table: { head: K.head, rows, caption: K.caption } }, ...m.blocks.slice(1)];
+}
 function numModelBase(lang: string, path: string): NumModel | null {
   const C = numContent(lang); const U = C.ui; const brand = getContent(lang).site.brand;
   const home: [string, string] = [brand, `/${lang}/`]; const hub: [string, string] = [U.section, lp(lang, N)];
   const parts = path.split("/").filter(Boolean).slice(1); // after "numerology"
   const angelItems = (): LinkItem[] => ANGEL.map((a) => ({ href: lp(lang, `${N}angel-numbers/${a}/`), label: a, sub: C.angel[a].tag, big: a }));
+  /** The mirror hour that reads like an angel number ("1111" and 11:11), so each page of the pair links to the other with the form people search for. */
+  const mirrorLink = (key: string): LinkItem[] => {
+    if (!MIRROR_KEYS.includes(key)) return [];
+    const P = MIRRORS[lang]?.[key] ?? MIRRORS.en[key]; const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en; const t = key.replace("-", ":");
+    return [{ href: lp(lang, `${N}mirror-hours/${key}/`), label: `${H.crumb} ${t}`, sub: P.lead.split(". ")[0], big: t }];
+  };
   const calcItems = (): LinkItem[] => CALCS.map((c) => ({ href: lp(lang, `${N}calculator/${c}/`), label: C.explain[`calc-${c}`].title, sub: C.explain[`calc-${c}`].sub }));
 
   if (!parts.length) {
@@ -97,10 +133,11 @@ function numModelBase(lang: string, path: string): NumModel | null {
   if (sec === "angel-numbers" && !item) {
     const E = C.explain.angel;
     return { path, kind: "hub", eyebrow: U.section, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub, [U.angelHub, lp(lang, path)]], faq: E.faq,
-      blocks: [{ id: "intro", title: U.angelHub, paras: E.intro }, { id: "how", title: U.sec.meaning, paras: E.how }], items: angelItems() };
+      blocks: [{ id: "intro", title: U.angelHub, paras: E.intro }, { id: "how", title: U.sec.meaning, paras: E.how }], items: angelItems(),
+      related: MIRROR_KEYS.length ? [{ href: lp(lang, `${N}mirror-hours/`), label: (MIRROR_HUB[lang] ?? MIRROR_HUB.en).crumb, sub: (MIRROR_HUB[lang] ?? MIRROR_HUB.en).sub }] : undefined };
   }
   if (sec === "angel-numbers" && item && (ANGEL as readonly string[]).includes(item)) {
-    const a = C.angel[item]; const ds = digitSum(item); const tot = ds.reduce((x, y) => x + y, 0); const root = reduce(tot, true);
+    const a = C.angel[item]; const qa = quickAnswer(lang, `angel-numbers/${item}`); const ds = digitSum(item); const tot = ds.reduce((x, y) => x + y, 0); const root = reduce(tot, true);
     const uniq = [...new Set(ds)];
     const i = ANGEL.indexOf(item as (typeof ANGEL)[number]);
     const at = (k: number) => ANGEL[(k + ANGEL.length) % ANGEL.length];
@@ -109,9 +146,11 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const lifeLink = numPaths().includes(`${N}life-path/${root}/`) ? [{ href: lp(lang, `${N}life-path/${root}/`), label: U.lifePathShort(root), sub: rootChar.name }] : [];
     return { path, kind: "article", eyebrow: `${U.angelHub} · ${item}`, h1: U.angelTitle(item), title: U.angelTitle(item), description: U.angelMeta(item, a.tag), lead: a.tag, big: item,
       crumbs: [home, hub, [U.angelHub, lp(lang, `${N}angel-numbers/`)], [item, lp(lang, path)]],
+      // The answer to "what does N mean" comes first: a written one where the page has it, else the meaning itself, under the question.
       blocks: [
+        ...(qa ? [{ id: "answer", title: qa.question ?? U.faq.angelMean(item), paras: [qa.answer] }, { id: "meaning", title: U.sec.meaning, paras: a.meaning }] : [{ id: "meaning", title: U.faq.angelMean(item), paras: a.meaning }]),
+        ...(qa?.love ? [{ id: "love-life", title: qa.love.title, paras: qa.love.paras }] : []),
         { id: "scene", title: U.sec.scene, paras: [a.scene] },
-        { id: "meaning", title: U.sec.meaning, paras: a.meaning },
         ...angelLong(lang, item).map((x, k) => ({ id: `story-${k}`, title: x.title, paras: x.paras })),
         { id: "digits", title: U.digits, paras: digitParas },
         { id: "love", title: U.sec.love, paras: [a.love] },
@@ -119,8 +158,8 @@ function numModelBase(lang: string, path: string): NumModel | null {
         { id: "act", title: U.sec.act, quote: a.act },
         { id: "why", title: U.sec.why, paras: [a.why] },
       ],
-      faq: [[U.faq.angelMean(item), `${a.tag}. ${a.meaning[0]}`], [U.faq.angelLove(item), a.love], [U.faq.angelDo(item), a.act], [U.faq.angelWhy(item), a.why]],
-      related: [...lifeLink, ...[1, 2, 3].map((k) => at(i + k)).map((x) => ({ href: lp(lang, `${N}angel-numbers/${x}/`), label: x, sub: C.angel[x].tag, big: x }))],
+      faq: [[U.faq.angelMean(item), qa ? qa.answer : `${a.tag}. ${a.meaning[0]}`], [U.faq.angelLove(item), a.love], [U.faq.angelDo(item), a.act], [U.faq.angelWhy(item), a.why]],
+      related: [...(item.length === 4 && item.slice(0, 2) === item.slice(2) ? mirrorLink(`${item.slice(0, 2)}-${item.slice(2)}`) : []), ...lifeLink, ...[1, 2, 3].map((k) => at(i + k)).map((x) => ({ href: lp(lang, `${N}angel-numbers/${x}/`), label: x, sub: C.angel[x].tag, big: x }))],
       prev: { href: lp(lang, `${N}angel-numbers/${at(i - 1)}/`), label: at(i - 1) }, next: { href: lp(lang, `${N}angel-numbers/${at(i + 1)}/`), label: at(i + 1) }, calc: "life-path" };
   }
   if (sec === "calculator" && !item) {
@@ -132,7 +171,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const E = C.explain[`calc-${item}`];
     return { path, kind: "calc", eyebrow: U.calcHub, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub, [U.calcHub, lp(lang, `${N}calculator/`)], [E.title, lp(lang, path)]], faq: E.faq,
       blocks: [{ id: "intro", title: U.sec.meaning, paras: E.intro }, { id: "how", title: U.calc.steps, paras: E.how }], calc: item as CalcMode,
-      related: calcItems().filter((_, k) => CALCS[k] !== item).concat([{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }]) };
+      related: ((item === "life-path" ? [{ href: lp(lang, `${N}life-path/`), label: U.lifePathHub, sub: C.explain["life-path"].sub }] : []) as LinkItem[]).concat(calcItems().filter((_, k) => CALCS[k] !== item)).concat([{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }]) };
   }
   const D = getContent(lang).deep; const NUMS = getContent(lang).nums.numbers;
   const lifeItems = (): LinkItem[] => LIFE.map((n) => ({ href: lp(lang, `${N}life-path/${n}/`), label: C.chars[n].name, sub: C.chars[n].essence, big: String(n) }));
@@ -143,7 +182,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     return { path, kind: "hub", eyebrow: U.section, h1: E.title, title: E.title, description: E.sub, lead: E.sub, crumbs: [home, hub, [crumb, lp(lang, path)]], faq: E.faq,
       blocks: [{ id: "intro", title: crumb, paras: E.intro }, ...extra, { id: "how", title: U.calc.steps, paras: E.how }], items, calc, related };
   };
-  if (sec === "life-path" && !item) return hubOf("life-path", U.lifePathHub, lifeItems(), [], "life-path", [{ href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, { href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }]);
+  if (sec === "life-path" && !item) return hubOf("life-path", U.lifePathHub, lifeItems(), [], "life-path", [{ href: lp(lang, `${N}calculator/life-path/`), label: C.explain["calc-life-path"].title, sub: C.explain["calc-life-path"].sub }, { href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, { href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }]);
   if (sec === "life-path" && item && (LIFE as readonly number[]).includes(Number(item))) {
     const n = Number(item) as (typeof LIFE)[number]; const ch = C.chars[n]; const dp = D.lifePathDeep[n]; const k = LIFE.indexOf(n);
     const prevN = LIFE[(k + LIFE.length - 1) % LIFE.length], nextN = LIFE[(k + 1) % LIFE.length];
@@ -151,6 +190,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const rel: LinkItem[] = [
       ...(n > 9 ? [{ href: lp(lang, `${N}master-numbers/`), label: U.masterHub, sub: C.explain["master-numbers"].sub }, { href: lp(lang, `${N}life-path/${rootOf(n)}/`), label: U.lifePathShort(rootOf(n)), sub: C.chars[rootOf(n)].name, big: String(rootOf(n)) }] : [{ href: lp(lang, `${N}personal-year/${n}/`), label: U.yearShort(n), sub: D.personalYearDeep[n].title, big: String(n) }]),
       ...(angelRep ? [{ href: lp(lang, `${N}angel-numbers/${angelRep}/`), label: `${U.angelHub} ${angelRep}`, sub: C.angel[angelRep].tag, big: angelRep }] : []),
+      ...(n === 11 || n === 22 ? mirrorLink(`${n}-${n}`) : []),
     ];
     return { path, kind: "article", eyebrow: `${U.lifePathHub} · ${ch.name}`, h1: U.lifePathTitle(n), title: U.lifePathTitle(n), description: U.lifePathMeta(n, ch.name), lead: dp.quote, big: String(n),
       crumbs: [home, hub, [U.lifePathHub, lp(lang, `${N}life-path/`)], [String(n), lp(lang, path)]],
@@ -223,26 +263,27 @@ function numModelBase(lang: string, path: string): NumModel | null {
       prev: { href: lp(lang, `${N}compatibility/${prevK}/`), label: lab(prevK) }, next: { href: lp(lang, `${N}compatibility/${nextK}/`), label: lab(nextK) }, calc: "compatibility" };
   }
   if (sec === "mirror-hours" && !item && MIRROR_KEYS.length) {
-    const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en;
-    return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: [],
-      blocks: [{ id: "intro", title: H.crumb, paras: H.intro }],
+    const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en; const qa = quickAnswer(lang, "mirror-hours");
+    return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: qa?.question ? [[qa.question, qa.answer]] : [],
+      blocks: [...(qa ? [{ id: "answer", title: qa.question ?? H.crumb, paras: [qa.answer] }] : []), { id: "intro", title: H.crumb, paras: H.intro }, ...(qa?.love ? [{ id: "love-life", title: qa.love.title, paras: qa.love.paras }] : [])],
       items: MIRROR_KEYS.map((k) => ({ href: lp(lang, `${N}mirror-hours/${k}/`), label: (MIRRORS[lang]?.[k] ?? MIRRORS.en[k]).title, sub: (MIRRORS[lang]?.[k] ?? MIRRORS.en[k]).lead.split(". ")[0], big: k.replace("-", ":") })),
       related: [{ href: lp(lang, `${N}angel-numbers/`), label: U.angelHub, sub: C.explain.angel.sub }] };
   }
   if (sec === "mirror-hours" && item && MIRROR_KEYS.includes(item)) {
-    const P = MIRRORS[lang]?.[item] ?? MIRRORS.en[item]; const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en; const i = MIRROR_KEYS.indexOf(item);
+    const P = MIRRORS[lang]?.[item] ?? MIRRORS.en[item]; const H = MIRROR_HUB[lang] ?? MIRROR_HUB.en; const i = MIRROR_KEYS.indexOf(item); const qa = quickAnswer(lang, `mirror-hours/${item}`);
     const prevK = MIRROR_KEYS[(i + MIRROR_KEYS.length - 1) % MIRROR_KEYS.length], nextK = MIRROR_KEYS[(i + 1) % MIRROR_KEYS.length];
     const lab = (k: string) => k.replace("-", ":"); const digits = item.replace("-", ""); const root = reduce(digitSum(digits).reduce((x, y) => x + y, 0), true);
     const angel = (ANGEL as readonly string[]).includes(digits) ? [{ href: lp(lang, `${N}angel-numbers/${digits}/`), label: `${U.angelHub} ${digits}`, sub: C.angel[digits].tag, big: digits }] : [];
     const life = root > 0 && (LIFE as readonly number[]).includes(root) ? [{ href: lp(lang, `${N}life-path/${root}/`), label: U.lifePathShort(root), sub: C.chars[root].name, big: String(root) }] : [];
     return { path, kind: "article", eyebrow: `${H.crumb} · ${lab(item)}`, h1: P.title, title: P.title, description: P.lead.slice(0, 158), lead: P.lead, big: lab(item),
       crumbs: [home, hub, [H.crumb, lp(lang, `${N}mirror-hours/`)], [lab(item), lp(lang, path)]],
-      blocks: P.sections.map((s, k) => ({ id: `m${k}`, title: s.title, paras: s.paras })), faq: [], related: [...angel, ...life],
+      blocks: [...(qa ? [{ id: "answer", title: qa.question ?? P.sections[0].title, paras: [qa.answer] }] : []), ...P.sections.map((s, k) => ({ id: `m${k}`, title: s.title, paras: s.paras })), ...(qa?.love ? [{ id: "love-life", title: qa.love.title, paras: qa.love.paras }] : [])],
+      faq: qa?.question ? [[qa.question, qa.answer]] : [], related: [...angel, ...life],
       prev: { href: lp(lang, `${N}mirror-hours/${prevK}/`), label: lab(prevK) }, next: { href: lp(lang, `${N}mirror-hours/${nextK}/`), label: lab(nextK) }, calc: "life-path" };
   }
   if (sec === "personal-year-2027" && !item && Y27_KEYS.length) {
     const H = YEAR2027_HUB[lang] ?? YEAR2027_HUB.en;
-    return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: [],
+    return { path, kind: "hub", eyebrow: U.section, h1: H.title, title: H.title, description: H.sub, lead: H.sub, crumbs: [home, hub, [H.crumb, lp(lang, path)]], faq: (YEAR2027_FAQ[lang] ?? YEAR2027_FAQ.en).hub,
       blocks: [{ id: "intro", title: H.crumb, paras: H.intro }],
       items: Y27_KEYS.map((k) => ({ href: lp(lang, `${N}personal-year-2027/${k}/`), label: (YEAR2027[lang]?.[k] ?? YEAR2027.en[k]).title, sub: (YEAR2027[lang]?.[k] ?? YEAR2027.en[k]).lead.split(". ")[0], big: k })),
       calc: "personal-year", related: [{ href: lp(lang, `${N}personal-year/`), label: U.yearHub, sub: C.explain["personal-year"].sub }] };
@@ -252,7 +293,7 @@ function numModelBase(lang: string, path: string): NumModel | null {
     const prevK = Y27_KEYS[(i + Y27_KEYS.length - 1) % Y27_KEYS.length], nextK = Y27_KEYS[(i + 1) % Y27_KEYS.length];
     return { path, kind: "article", eyebrow: `${H.crumb} · ${item}`, h1: P.title, title: P.title, description: P.lead.slice(0, 158), lead: P.lead, big: item,
       crumbs: [home, hub, [H.crumb, lp(lang, `${N}personal-year-2027/`)], [item, lp(lang, path)]],
-      blocks: P.sections.map((s, k) => ({ id: `y${k}`, title: s.title, paras: s.paras })), faq: [],
+      blocks: P.sections.map((s, k) => ({ id: `y${k}`, title: s.title, paras: s.paras })), faq: ((F) => [[F.you(n), P.sections[1].paras[0]], [F.love(n), P.sections[2].paras[0]], [F.work(n), P.sections[3].paras[0]]] as [string, string][])(YEAR2027_FAQ[lang] ?? YEAR2027_FAQ.en),
       related: [{ href: lp(lang, `${N}personal-year/${n}/`), label: U.yearShort(n), sub: D.personalYearDeep[n].title, big: String(n) }, { href: lp(lang, `${N}life-path/${n}/`), label: U.lifePathShort(n), sub: C.chars[n].name, big: String(n) }],
       prev: { href: lp(lang, `${N}personal-year-2027/${prevK}/`), label: prevK }, next: { href: lp(lang, `${N}personal-year-2027/${nextK}/`), label: nextK }, calc: "personal-year" };
   }

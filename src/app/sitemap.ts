@@ -8,7 +8,7 @@ import { localizedPath } from "@/lib/i18n-routes";
 import { SIGNS } from "@/engine/zodiac";
 import { BLOG_SLUGS, postFor } from "@/content/blog";
 import { publishedDates, todayIso } from "@/engine/skyday";
-import { numPaths, numIndexable } from "@/lib/numerology";
+import { numPaths, numIndexable, numLastModified } from "@/lib/numerology";
 import { SECTIONS } from "@/lib/sections";
 import { CONTENT_DATES } from "@/lib/content-dates";
 import { partialSitemap } from "@/lib/partial-sitemap";
@@ -28,7 +28,7 @@ function entries(): Entry[] {
   const blogDate = (l: string, p: string) => { const m = p.match(/^\/blog\/([^/]+)\/$/); const post = m ? postFor(l, m[1]) : undefined; return post ? (post.updated ?? post.date) : CONTENT_DATES.pages; };
   return [
     ...HORO.map((p): Entry => { const d = dated(p); return { path: p, lastModified: () => (d && d < BUILD ? d : BUILD), changeFrequency: d ? "yearly" : "daily", priority: d ? 0.5 : 0.7 }; }),
-    ...numPaths().filter(numIndexable).map((p): Entry => ({ path: p, lastModified: () => CONTENT_DATES.numerology, changeFrequency: "monthly", priority: p === "/numerology/" ? 0.7 : 0.6 })),
+    ...numPaths().filter(numIndexable).map((p): Entry => ({ path: p, lastModified: () => numLastModified(p), changeFrequency: "monthly", priority: p === "/numerology/" ? 0.7 : 0.6 })),
     { path: "/pricing/", lastModified: () => CONTENT_DATES.pages, changeFrequency: "monthly", priority: 0.7 },
     ...PUBLIC.map((p): Entry => ({ path: p, lastModified: (l) => blogDate(l, p), changeFrequency: "monthly", priority: p === "/" ? 1 : 0.6 })),
     ...Object.values(SECTIONS).flatMap((s) => s.paths().map((p): Entry => ({ path: p, lastModified: () => s.modified(p), changeFrequency: "monthly", priority: 0.6 }))),

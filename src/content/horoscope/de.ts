@@ -2,6 +2,22 @@ import type { HoroBank } from "./types";
 import { HORO_SLUGS } from "@/lib/horo-slugs";
 import { deMore } from "./de-more";
 
+/** Sign page descriptions: the phrase people type, then a question only that sign asks. */
+const SIGN_META: Record<string, string> = {
+  Widder: "Tageshoroskop Widder heute: wohin mit deinem Tempo in Liebe und Job, wann du loslegst und wann Abwarten bis morgen klüger ist.",
+  Stier: "Tageshoroskop Stier heute: wo sich deine Geduld auszahlt, wie du Geld und Zeit schonst und was deinem Körper heute richtig guttut.",
+  Zwillinge: "Tageshoroskop Zwillinge heute: welches Gespräch den Tag dreht, welche Nachricht nicht warten sollte und wem du ruhig Nein sagst.",
+  Krebs: "Tageshoroskop Krebs heute: was dein Zuhause braucht, wer aus deinem engsten Kreis auf ein Wort wartet und wo Gefühle Raum bekommen.",
+  "Löwe": "Tageshoroskop Löwe heute: wo du glänzen darfst, wann du anderen die Bühne lässt und was dich in der Liebe wirklich wärmt.",
+  Jungfrau: "Tageshoroskop Jungfrau heute: welches Detail den ganzen Tag ordnet und welche Sorge du getrost bis morgen früh liegen lassen kannst.",
+  Waage: "Tageshoroskop Waage heute: wo du Ausgleich brauchst, in welcher Beziehung du nachgibst und wann du klar sagst, was du denkst.",
+  Skorpion: "Tageshoroskop Skorpion heute: was an die Oberfläche kommt, wem du wirklich vertrauen kannst und was du endlich loslassen darfst.",
+  "Schütze": "Tageshoroskop Schütze heute: wohin es dich zieht, was sich zu lernen lohnt und wo eine gute Idee allein noch nicht reicht.",
+  Steinbock: "Tageshoroskop Steinbock heute: welcher Schritt dich nach oben bringt, wo du bei der Arbeit lockerlässt und wer deine Zeit verdient.",
+  Wassermann: "Tageshoroskop Wassermann heute: welche Idee du teilen solltest und welche Menschen heute genau die richtige Gesellschaft für dich sind.",
+  Fische: "Tageshoroskop Fische heute: was dir dein Bauchgefühl sagt, was du nicht tragen musst und wo du heute ein wenig Stille brauchst.",
+};
+
 /** German bank. Sign names are always used as "im Zeichen X", so no article or case changes are needed. Topics are written in the accusative ("um …", "für …"). */
 export const de: HoroBank = {
   more: deMore,
@@ -100,8 +116,9 @@ export const de: HoroBank = {
   },
   ui: {
     title: (s, d) => `Tageshoroskop ${s}, ${d}`,
-    shortTitle: (s) => `Horoskop ${s} heute`,
-    signHubMeta: (s) => `Tageshoroskop ${s}, jeden Morgen neu aus dem echten Himmel berechnet: Liebe, Job, Wohlbefinden, Glückszahl und die nächsten Tage. Gratis, ohne Anmeldung.`,
+    shortTitle: (s) => `Tageshoroskop ${s} heute`,
+    todayH1: (s, d) => `Tageshoroskop ${s} heute, ${d}`,
+    signHubMeta: (s) => SIGN_META[s] ?? `Tageshoroskop ${s} heute, jeden Morgen neu aus dem echten Himmel berechnet: Liebe, Job, Wohlbefinden, Glückszahl und die nächsten Tage.`,
     signHubIntro: (s) => `Hier steht immer die heutige Deutung für ${s}. Die letzten zwei Wochen findest du weiter unten.`,
     recentDays: "Letzte Tage",
     motivationLink: (s) => `Tagesimpuls ${s}: eine kleine Übung für heute`,
@@ -112,6 +129,6 @@ export const de: HoroBank = {
     skyTitle: "Der Himmel heute", moodTitle: "Wie fühlst du dich heute?", moodSub: "Ein Tipp, und deine Heute-Seite merkt es sich.",
     moods: ["Super", "Ruhig", "Okay", "Angespannt", "Schlapp"],
     ctaTitle: "Das gilt für dein Zeichen. Dein Horoskop gehört nur dir.", ctaSub: "Hol dir dein gratis Geburtshoroskop in zwei Minuten.", ctaBtn: "Mein gratis Horoskop",
-    yesterday: "Gestern", tomorrow: "Morgen", others: "Andere Zeichen", todayLink: "Heute", moonLabel: "Mond", read: "Lesen",
+    yesterday: "Gestern", tomorrow: "Morgen", others: "Andere Zeichen", todayLink: "Heute", todayLinkSign: (s) => `${s} heute`, moonLabel: "Mond", read: "Lesen",
   },
 };

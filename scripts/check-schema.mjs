@@ -6,7 +6,9 @@
 //   date        not ISO 8601, no UTC offset, or an offset that is wrong for Skopje on that date
 //   url         not an absolute URL on the site
 //   lang        inLanguage differs from the page's language
-//   breadcrumb  positions not 1..n, or fewer than two items
+//   breadcrumb  positions not 1..n, fewer than two items, or an item without a name (Search Console shows it as "Unnamed item")
+//   coverage    a page of a family that must carry a node does not: FAQPage on angel numbers, Mercury retrograde and personal year pages;
+//               Article with datePublished and dateModified on dated daily and monthly pages
 //   faq         an FAQ question that does not appear on the page (Google's policy)
 //   organization two Organization nodes on one page that disagree
 // Exits 1 if any check fails.
@@ -83,15 +85,31 @@ const nodesOf = (v, out = [], listing = false) => {
 };
 const stripped = (html) => html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, " ").replace(/<style\b[^>]*>[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/&#x27;|&#39;/g, "'").replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/\s+/g, " ");
 
+/** Families that must carry a node, by their public slugs in the four languages. `rel` is the page's path below the language folder, e.g. "numerology/angel-numbers/1111/". */
+const SIGN_DAY = /^(horoscope|dneven-horoskop|tageshoroskop|dnevni-horoskop)\/[a-z]+\/\d{4}-\d{2}-\d{2}\/$/;
+const SIGN_MONTH = /^(monthly-horoscope|mesecen-horoskop|monatshoroskop|mesecni-horoskop)\/[a-z]+\/\d{4}-\d{2}\/$/;
+const NEEDS_FAQ = [/^(numerology|numerologija|numerologie)\/(angel-numbers|angelski-broevi|engelszahlen|andjeoski-brojevi)\/(\d+\/)?$/, /^(mercury-retrograde|retrograden-merkur|merkur-ruecklaeufig|retrogradni-merkur)\//, /^(numerology|numerologija|numerologie)\/(personal-year|licna-godina|persoenliches-jahr)(-2027)?\/(\d\/)?$/];
+function coverage(rel, nodes) {
+  const out = []; const has = (t) => nodes.some((n) => [n["@type"]].flat().includes(t));
+  if (NEEDS_FAQ.some((rx) => rx.test(rel)) && !has("FAQPage")) out.push("FAQPage missing");
+  if (SIGN_DAY.test(rel) || SIGN_MONTH.test(rel)) {
+    const a = nodes.find((n) => n["@type"] === "Article");
+    if (!a) out.push("Article missing"); else if (!a.datePublished || !a.dateModified) out.push("Article without datePublished and dateModified");
+    if (!has("BreadcrumbList")) out.push("BreadcrumbList missing");
+  }
+  return out;
+}
+
 /** All problems of one page as [check, message]. */
-export function checkPage(html, lang) {
+export function checkPage(html, lang, rel) {
   const bad = []; const say = (k, m) => bad.push([k, m]);
   const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  const orgs = [];
+  const orgs = []; const seen = [];
   for (const b of blocks) {
     let data; try { data = JSON.parse(b[1]); } catch { say("json", "block does not parse"); continue; }
     for (const root of [data].flat()) if (root["@context"] !== "https://schema.org") say("context", `@context is ${root["@context"]}`);
     for (const { n, listing } of nodesOf(data)) {
+      seen.push(n);
       for (const t of [n["@type"]].flat()) {
         const props = TYPES[t];
         if (!props) { say("type", t); continue; }
@@ -99,7 +117,7 @@ export function checkPage(html, lang) {
         if (!listing) for (const k of REQUIRED[t] ?? []) if (n[k] === undefined || n[k] === "") say("required", `${t}.${k}`);
         if (t === "Organization") { orgs.push(n); if (n["@id"] && n.url && !n.logo && orgs.length === 1) say("required", "Organization.logo"); }
         if ((t === "Article" || t === "BlogPosting") && typeof n.headline === "string" && n.headline.length > 110) say("required", `${t}.headline is ${n.headline.length} characters, Google shows 110`);
-        if (t === "BreadcrumbList") { const l = n.itemListElement ?? []; if (l.length < 2) say("breadcrumb", `${l.length} item`); if (l.some((x, i) => x.position !== i + 1)) say("breadcrumb", "positions are not 1..n"); if (l.slice(0, -1).some((x) => !x.item)) say("breadcrumb", "item without URL"); }
+        if (t === "BreadcrumbList") { const l = n.itemListElement ?? []; if (l.length < 2) say("breadcrumb", `${l.length} item`); if (l.some((x, i) => x.position !== i + 1)) say("breadcrumb", "positions are not 1..n"); if (l.some((x) => typeof x.name !== "string" || !x.name.trim())) say("breadcrumb", "an item has no name"); if (l.slice(0, -1).some((x) => !x.item)) say("breadcrumb", "item without URL"); }
         if (t === "FAQPage") { const text = stripped(html); for (const q of n.mainEntity ?? []) if (!text.includes(q.name)) say("faq", `not on the page: ${q.name?.slice(0, 60)}`); }
         if (t === "ListItem" && n.item === undefined && n.url === undefined && n.name === undefined) say("required", "ListItem needs item, url or name");
         if (t === "Offer" && n.availability && !/^https:\/\/schema\.org\//.test(n.availability)) say("required", "Offer.availability must be a schema.org URL");
@@ -110,6 +128,7 @@ export function checkPage(html, lang) {
       if (n.inLanguage && typeof n.inLanguage === "string" && n.inLanguage !== lang) say("lang", `inLanguage ${n.inLanguage} on a ${lang} page`);
     }
   }
+  if (rel !== undefined) for (const m of coverage(rel, seen)) say("coverage", m);
   const key = (o) => o["@id"] ?? o.name;
   for (const a of orgs) for (const b of orgs) if (a !== b && (key(a) === key(b) || a.name === b.name)) for (const f of ["name", "url", "email"]) if (a[f] !== undefined && b[f] !== undefined && a[f] !== b[f] && !bad.some(([k, m]) => k === "organization" && m.startsWith(`${f}:`))) say("organization", `${f}: ${a[f]} vs ${b[f]}`);
   return bad;
@@ -129,7 +148,7 @@ if (process.argv[1]?.endsWith("check-schema.mjs")) {
     for (const file of walk(path.join(OUT, l))) {
       const html = fs.readFileSync(file, "utf8"); pages++;
       for (const m of html.matchAll(/"@type":"([^"]+)"/g)) types.set(m[1], (types.get(m[1]) ?? 0) + 1);
-      for (const [k, msg] of checkPage(html, l)) {
+      for (const [k, msg] of checkPage(html, l, path.relative(path.join(OUT, l), path.dirname(file)).split(path.sep).join("/") + "/")) {
         const label = `${k}: ${k === "date" || k === "faq" || k === "url" ? msg.replace(/\d{4}-\d{2}-\d{2}\S*/g, "<date>") : msg}`;
         if (!found.has(label)) found.set(label, { n: 0, first: `/${path.relative(OUT, path.dirname(file)).split(path.sep).join("/")}/` });
         found.get(label).n++;
