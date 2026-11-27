@@ -11,4 +11,5 @@ export type { YearlyHub, YearlyPage, YearlyRole, YearlySection, YearlySet } from
 export const YEARLY: Record<string, YearlySet> = { en: yearlyEn, mk: yearlyMk, de: yearlyDe, sr: yearlySr };
 export const YEARLY_HUB: Record<string, YearlyHub> = { ...HUB, sr: hubSr };
 /** Bump when this family's copy changes. */
-export const YEARLY_DATE = "2026-10-31";
+export const YEARLY_DATE = "2026-11-27";
+export { YEARLY_ANSWER, YEARLY_FRAME } from "./answers";

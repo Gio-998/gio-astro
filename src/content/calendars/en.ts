@@ -296,6 +296,7 @@ export const en: CalendarCopy = {
       clear: (d) => `No. Mercury is moving forward. The next retrograde starts on ${d.retro}, ${d.signIn}, with the pre-shadow from ${d.shadowStart}.`,
     },
     asOf: (date) => `Checked against the planet's calculated position as of ${date}. The page updates every night.`,
+    live: { question: "Is Mercury retrograde right now?", note: "Worked out for today's date when you open the page. Dates use the Skopje clock, the same as Berlin and Vienna." },
     nowTitle: "Mercury right now", nextTitle: "The next Mercury retrograde dates",
     head: { stage: "Stage", date: "Date", time: "Time", position: "Position", period: "Retrograde", signs: "Signs", shadow: "With shadow", sign: "Sign", house: "House", focus: "Worth a look" },
     stage: { preShadow: "Pre-shadow begins", retro: "Stations retrograde", direct: "Stations direct", postShadow: "Post-shadow ends", moves: (signTo) => `Moves back ${signTo}` },

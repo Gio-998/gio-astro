@@ -54,6 +54,8 @@ export interface MercuryCopy {
   crumb: string;
   hub: { h1: string; title: string; description: string; blocks: CopyBlock[]; faq: Faq };
   answer: Record<"retrograde" | "pre-shadow" | "post-shadow" | "clear", (d: MercuryDates) => string>;
+  /** Heading and caption of the answer the browser re-checks on its own clock. */
+  live: { question: string; note: string };
   asOf: (date: string) => string; nowTitle: string; nextTitle: string;
   head: { stage: string; date: string; time: string; position: string; period: string; signs: string; shadow: string; sign: string; house: string; focus: string };
   stage: { preShadow: string; retro: string; direct: string; postShadow: string; moves: (signTo: string) => string };
