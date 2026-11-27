@@ -45,8 +45,9 @@ describe("Macedonian search snippets", () => {
   });
   it("dated titles fit on the longest sign and date, and read the way people search", () => {
     const labels = ["1 мај 2026", "30 септември 2026", "31 октомври 2026"];
-    expect(signNames.flatMap((s) => labels.flatMap((d) => [...titleErr(`${s} ${d}`, B.ui.title(s, d)), ...titleErr(`${s} ${d} today`, `${B.ui.shortTitle(s)}, ${d}`)]))).toEqual([]);
-    expect(B.ui.title("Овен", "31 октомври 2026")).toBe("Хороскоп за Овен, 31 октомври 2026");
+    expect(signNames.flatMap((s) => labels.flatMap((d) => [...titleErr(`${s} ${d}`, B.ui.title(s, d)), ...titleErr(`${s} ${d} today`, B.ui.titleToday!(s, d))]))).toEqual([]);
+    // The numeric date comes first: «хороскоп за 31.10.2026» is what people type.
+    expect(B.ui.title("Овен", "31 октомври 2026")).toBe("Хороскоп за 31.10.2026: Овен");
   });
   it("dated descriptions fit for every headline, at the extremes of sign, date and sky", () => {
     // Headline lengths grow with each field, so the shortest and longest values bound every real date.
