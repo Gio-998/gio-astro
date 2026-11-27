@@ -52,7 +52,7 @@ describe("structured data of every numerology and section page", () => {
     for (const { lang, m, path } of paths) {
       const a = (numLd(lang, m) as Node[]).find((n) => n["@type"] === (m.kind === "article" ? "Article" : "WebPage"));
       if (!a) { bad.push(`${lang}${path}: no ${m.kind === "article" ? "Article" : "WebPage"}`); continue; }
-      const { datePublished: p, dateModified: d } = a as { datePublished: string; dateModified: string };
+      const { datePublished: p, dateModified: d } = a as unknown as { datePublished: string; dateModified: string };
       if (!ISO.test(p) || !ISO.test(d)) bad.push(`${lang}${path}: ${p} ${d}`); else if (d < p) bad.push(`${lang}${path}: modified before published`);
     }
     expect(bad.slice(0, 20)).toEqual([]);
