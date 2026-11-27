@@ -161,3 +161,27 @@ export function lintPage(lang: Lang, sign: Sign, p: YearlyPage, signName: string
   }
   return [...new Set(bad)];
 }
+
+/** Style, framing, fact and house rules for one free-standing text (the short answers), the same checks a full page gets. */
+export function lintChunk(lang: Lang, sign: Sign, c: string): string[] {
+  const bad: string[] = []; const seen = visited();
+  const houseSign = (n: number) => SIGNS.find((s) => houseFrom(sign, s) === n);
+  for (const [rx, msg] of STYLE_RX) if (rx.test(c)) bad.push(`style (${msg}): ${c.slice(0, 70)}`);
+  if (lang === "sr") {
+    for (const [rx, msg] of SR_RX) { const m = c.match(rx); if (m) bad.push(`language (${msg}, "${m[0]}")`); }
+    const v = c.match(IRATI_RX); if (v && !IRATI_OK.test(v[0])) bad.push(`language (-irati verb, "${v[0]}")`);
+  }
+  for (const [rx, msg] of FRAMING_RX[lang]) { const m = c.match(rx); if (m) bad.push(`framing (${msg}, "${m[0]}")`); }
+  bad.push(...lintFacts(lang, c));
+  if (SPELLED_HOUSE_RX[lang].test(c)) bad.push(`write the house as a digit: ${c.match(SPELLED_HOUSE_RX[lang])![0]}`);
+  const sent = splitSentences(c);
+  sent.forEach((s, i) => {
+    for (const m of s.matchAll(HOUSE_RX[lang])) {
+      const h = Number(m[1]); const t = houseSign(h);
+      if (!t) { bad.push(`no house ${h}`); continue; }
+      const own = bodiesIn(lang, s); const named = own.length ? own : bodiesIn(lang, sent[i - 1] ?? "");
+      if (named.length && !named.some((b) => seen.get(b)?.has(t))) bad.push(`house ${h} of ${sign} is ${t}, but ${named.join("/")} is not there in 2027: "${s.slice(0, 90)}"`);
+    }
+  });
+  return [...new Set(bad)];
+}
