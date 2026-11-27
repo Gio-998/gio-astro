@@ -245,6 +245,34 @@
       }
     },
     {
+      "src": "/login/?",
+      "status": 308,
+      "headers": {
+        "Location": "/en/account/?tab=login"
+      }
+    },
+    {
+      "src": "/(en|mk|de|sr)/login/?",
+      "status": 308,
+      "headers": {
+        "Location": "/$1/account/?tab=login"
+      }
+    },
+    {
+      "src": "/contact/?",
+      "status": 307,
+      "headers": {
+        "Location": "/en/privacy/"
+      }
+    },
+    {
+      "src": "/(en|mk|de|sr)/contact/?",
+      "status": 307,
+      "headers": {
+        "Location": "/$1/privacy/"
+      }
+    },
+    {
       "src": "/en/(premium|upgrade)/?",
       "status": 308,
       "headers": {

@@ -45,7 +45,7 @@ function Row({ v, set, k, text, req }: { v: Cons; set: (v: Cons) => void; k: key
 function Consents({ v, set }: { v: { terms: boolean; data: boolean; mkt: boolean }; set: (v: { terms: boolean; data: boolean; mkt: boolean }) => void }) {
   const { c } = useContent(); const A = c.ui.auth; const h = useHref();
   return (
-    <fieldset className="space-y-2.5 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+    <fieldset className="space-y-2.5 rounded-2xl border border-white/10 bg-white/[0.04] p-4 [&_input]:scroll-mb-[calc(61px+env(safe-area-inset-bottom)+1rem)] lg:[&_input]:scroll-mb-0">
       <legend className="px-1 text-xs uppercase tracking-widest text-gold">{A.consentTitle}</legend>
       <Row v={v} set={set} k="terms" req text={<>{A.consentTerms} <Link className="underline" href={h("/terms")}>{A.termsLink}</Link> · <Link className="underline" href={h("/privacy")}>{A.privacyLink}</Link></>} />
       <Row v={v} set={set} k="data" req text={A.consentData} />
@@ -58,7 +58,8 @@ const consentTypes = (v: { terms: boolean; data: boolean; mkt: boolean }) => [..
 export function AccountPage() {
   const a = useAccount(); const { c, locale } = useContent(); const A = c.ui.auth;
   return (
-    <div className="mx-auto max-w-2xl">
+    // Phones: room under the form for the 61px tab bar (plus the home-indicator inset), so the consent boxes and the button are never hidden behind it.
+    <div className="mx-auto max-w-2xl pb-[calc(61px+env(safe-area-inset-bottom))] lg:pb-0">
       <PageHero eyebrow={A.eyebrow} img="milkyway" emblem="moon" title={<>{A.titleA}<span className="italic text-aurora">{A.titleB}</span></>} sub={A.sub} />
       {!accountsEnabled ? <div className="card text-dim">{A.disabled}</div> : !a.ready ? <p className="text-dim">{c.site.common.loading}</p> : a.user ? <SignedIn /> : <SignInForm key={locale} />}
     </div>

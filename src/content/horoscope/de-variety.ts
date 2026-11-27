@@ -13,6 +13,8 @@ export const deVariety: HoroVariety = {
     (c) => `Bei ${c.phase} verändert eine ehrliche Wahl die Stimmung.`,
     (c) => `Heute hast du Raum, neu über ${c.topic} nachzudenken.`,
     (c) => `Der ${c.day} belohnt alle, die früh dran sind.`,
+    (c) => `Wähl am ${c.day} ein Gespräch aus und schenk ihm deine ganze Aufmerksamkeit.`,
+    (c) => `Mit dem Mond im Zeichen ${c.moon} bringt eine ruhige Stunde mehr als ein voller Nachmittag.`,
   ],
   lead: {
     overview: [
