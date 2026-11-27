@@ -27,3 +27,16 @@ describe("German daily sign pages", () => {
     }
   });
 });
+
+describe("today heading on the sign page", () => {
+  it("German and Macedonian sign pages say heute or денес in the heading, dated pages keep their own", async () => {
+    const { renderToStaticMarkup } = await import("react-dom/server");
+    const { createElement } = await import("react");
+    const { DailyHoroscope } = await import("@/components/horoscope/DailyHoroscope");
+    const h1 = (lang: string, isToday: boolean) => renderToStaticMarkup(createElement(DailyHoroscope, { lang, sign: "aries", iso: "2026-11-27", isToday })).match(/<h1[^>]*>(.*?)<\/h1>/)![1].replace(/\u00A0/g, " ");
+    expect(h1("de", true)).toBe("Tageshoroskop Widder heute, 27. November 2026");
+    expect(h1("de", false)).toBe("Tageshoroskop Widder, 27. November 2026");
+    expect(h1("mk", true)).toBe("Хороскоп за Овен денес, 27 ноември 2026");
+    expect(h1("mk", false)).toBe("Хороскоп за Овен, 27 ноември 2026");
+  });
+});

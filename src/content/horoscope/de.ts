@@ -117,6 +117,7 @@ export const de: HoroBank = {
   ui: {
     title: (s, d) => `Tageshoroskop ${s}, ${d}`,
     shortTitle: (s) => `Tageshoroskop ${s} heute`,
+    todayH1: (s, d) => `Tageshoroskop ${s} heute, ${d}`,
     signHubMeta: (s) => SIGN_META[s] ?? `Tageshoroskop ${s} heute, jeden Morgen neu aus dem echten Himmel berechnet: Liebe, Job, Wohlbefinden, Glückszahl und die nächsten Tage.`,
     signHubIntro: (s) => `Hier steht immer die heutige Deutung für ${s}. Die letzten zwei Wochen findest du weiter unten.`,
     recentDays: "Letzte Tage",

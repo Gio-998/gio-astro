@@ -123,6 +123,7 @@ export const mk: HoroBank = {
   ui: {
     title: (s, d) => `Хороскоп за ${s}, ${d}`,
     shortTitle: (s) => `Хороскоп за ${s} денес`,
+    todayH1: (s, d) => `Хороскоп за ${s} денес, ${d}`,
     signHubMeta: (s) => SIGN_META[s],
     signHubIntro: (s) => `Оваа страница секогаш го покажува денешниот хороскоп за ${s}, а на латиница ја наоѓаш како horoskop ${translit(s)}. Претходните денови остануваат подолу.`,
     recentDays: "Претходни денови",
