@@ -12,16 +12,16 @@ export function PartialHeader({ locale }: { locale: PartialLocale }) {
   const link = "inline-flex min-h-[44px] items-center whitespace-nowrap rounded-full px-3 text-[13px] text-mist/85 transition hover:bg-white/10 hover:text-gold sm:text-sm";
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-night/75 backdrop-blur-xl">
-      <div className="relative mx-auto flex max-w-6xl min-w-0 items-center justify-between gap-2 px-4 py-2.5">
-        <Link href={`/${locale}/`} aria-label={site.brand} className="group flex min-h-[44px] shrink-0 items-center gap-2">
+      <div className="relative mx-auto flex max-w-6xl min-w-0 flex-wrap items-center justify-between gap-x-2 px-4 py-1.5 sm:flex-nowrap sm:py-2.5">
+        <Link href={`/${locale}/`} aria-label={site.brand} className="group order-1 flex min-h-[44px] shrink-0 items-center gap-2 sm:mr-auto">
           <Logo className="h-8 w-8 shrink-0 transition duration-700 group-hover:rotate-[20deg]" />
           <span className="h-display text-[1.35rem] font-semibold tracking-wide text-aurora sm:text-2xl">{site.brand}</span>
         </Link>
-        <nav aria-label={site.brand} className="flex min-w-0 items-center gap-0.5">
+        <nav aria-label={site.brand} className="order-3 -mx-3 flex min-w-0 basis-full items-center gap-0.5 border-t border-white/5 sm:order-2 sm:mx-0 sm:basis-auto sm:border-0">
           <Link className={link} href={localizedPath(locale, "/horoscope/")}>{U.nav.daily}</Link>
           <Link className={link} href={localizedPath(locale, "/monthly-horoscope/")}>{U.nav.monthly}</Link>
-          <LangMenu locale={locale} names={site.languages as Record<string, string>} label={site.language} />
         </nav>
+        <div className="order-2 sm:order-3"><LangMenu locale={locale} names={site.languages as Record<string, string>} label={site.language} /></div>
       </div>
     </header>
   );

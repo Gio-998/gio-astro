@@ -29,7 +29,7 @@ function Sec({ icon, title, children, className = "" }: { icon: string; title: s
 const Ps = ({ lines }: { lines: string[] }) => <>{lines.map((l, i) => <p key={i} className={i ? p2 : p1}>{l}</p>)}</>;
 const MoonDisc = ({ angle, className }: { angle: number; className: string }) => <svg viewBox="0 0 32 32" className={className} aria-hidden><circle cx="16" cy="16" r="14" fill="#1b1640" stroke="#e9c78a" strokeOpacity=".5" /><path d={moonPath(angle, 16, 16, 12)} fill="#f6ecd2" /></svg>;
 /** Keep "13 October 2026" glued so the date never leaves a lone number at a line end. */
-const nbsp = (d: string) => d.replace(/^(\d+) (\S+) (\d+)$/, "$1\u00A0$2\u00A0$3");
+const nbsp = (d: string) => d.replace(/^(\d+\.?) (\S+) (\d+)$/, "$1\u00A0$2\u00A0$3");
 
 /** Public daily horoscope for one sign + date. `isToday` = rendered on the per-sign today index. */
 export function DailyHoroscope({ lang, sign, iso, isToday = false }: { lang: string; sign: Sign; iso: string; isToday?: boolean }) {
