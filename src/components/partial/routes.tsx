@@ -9,7 +9,6 @@ import { horoPath, absolute, reading } from "@/lib/horoscope";
 import { MONTHLY_PATH, currentMonth, periodHub, periodPage } from "@/lib/horoscope-period";
 import { SL_SIGN_SLUGS, localizedPath } from "@/lib/i18n-routes";
 import { SITE_URL } from "@/lib/site-url";
-import { LdJson, breadcrumb } from "@/lib/schema";
 import type { NumModel } from "@/lib/numerology";
 import { NumView, modelMeta } from "@/components/numerology/NumPage";
 import type { PartialLocale } from "@/lib/partial-scope";
@@ -43,7 +42,6 @@ export function PartialHome({ lang }: { lang: PartialLocale }) {
   const U = PARTIAL_UI[lang]; const H = U.home; const c = getContent(lang); const iso = todayIso();
   return (
     <div className="mx-auto max-w-5xl">
-      <LdJson data={breadcrumb([[c.site.brand, `/${lang}/`]])} />
       <h1 className="h-display text-[2.2rem] leading-tight sm:text-[2.8rem]">{H.h1}</h1>
       <p className="h-display mt-2 max-w-2xl text-pretty text-[1.3rem] italic leading-snug text-gold/95 sm:text-[1.6rem]">{H.lead}</p>
       <div className="mt-4 max-w-2xl space-y-2 text-[15px] leading-snug text-mist/85 sm:text-[16px] sm:leading-relaxed">{H.intro.map((p) => <p key={p}>{p}</p>)}</div>
