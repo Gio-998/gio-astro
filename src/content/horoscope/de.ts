@@ -72,7 +72,7 @@ export const de: HoroBank = {
   colors: { fire: ["Glutrot", "Safran", "Gold"], earth: ["Moosgrün", "Terrakotta", "Sand"], air: ["Himmelblau", "Lavendel", "Silber"], water: ["Petrol", "Indigo", "Perlweiß"] },
   weekdays: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
   sky: {
-    moonIn: (s, p, i) => `Der Mond steht im Zeichen ${s}, ${p} mit ${i} % Licht.`,
+    moonIn: (s, p, i) => `Der Mond steht im Zeichen ${s}, ${p} mit ${i} % Licht am Mittag.`,
     moonMoves: (s, t) => `Um ${t} Uhr wechselt er ins Zeichen ${s}.`,
     forYou: (t) => `Für dich geht es um ${t}.`,
     quarter: {
