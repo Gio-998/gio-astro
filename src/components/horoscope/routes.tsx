@@ -9,6 +9,8 @@ import { LOCALE_META } from "@/lib/seo";
 import { breadcrumb, LdJson } from "@/lib/schema";
 import { SectionLinks } from "@/components/nav/SectionLinks";
 import { DailyHoroscope } from "./DailyHoroscope";
+import { PartialLinks } from "@/components/partial/routes";
+import { isPartialLocale } from "@/lib/partial-scope";
 
 /** Each locale owns its own slug folder (/en/horoscope, /mk/dneven-horoskop); other locales 404 there. */
 // Static export refuses an empty list, so the other locale gets one "_" placeholder that renders the 404 page.
@@ -39,7 +41,7 @@ export function DayPage({ lang, slug, date }: { lang: string; slug: string; date
 
 export async function hubMeta(lang: string): Promise<Metadata> {
   const U = bankFor(lang).ui; const iso = todayIso(); const d = reading(lang, "aries", iso).dateLabel;
-  return meta(lang, `${U.hubSeoTitle ?? U.hubTitle}, ${d}`, U.hubMeta ?? U.hubSub, horoPath(lang), horoAlternates(), [absolute(ogPath(lang, "aries", iso, "wide"))]);
+  return meta(lang, `${U.hubSeoTitle ?? U.hubTitle}, ${d}`, U.hubMeta ?? U.hubSub, horoPath(lang), horoAlternates(), [absolute(isPartialLocale(lang) ? ogImage(lang, "aries", iso) : ogPath(lang, "aries", iso, "wide"))]);
 }
 export function HubPage({ lang }: { lang: string }) {
   const U = bankFor(lang).ui; const c = getContent(lang); const iso = todayIso();
@@ -61,7 +63,7 @@ export function HubPage({ lang }: { lang: string }) {
             </Link>
           </li>); })}
       </ul>
-      <SectionLinks lang={lang} skip="/horoscope/" className="mt-10" />
+      {isPartialLocale(lang) ? <PartialLinks lang={lang} /> : <SectionLinks lang={lang} skip="/horoscope/" className="mt-10" />}
     </div>
   );
 }

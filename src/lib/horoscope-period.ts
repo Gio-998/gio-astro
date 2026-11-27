@@ -8,18 +8,20 @@ import { getContent } from "@/content";
 import { de } from "@/content/horoscope-period/de";
 import { en } from "@/content/horoscope-period/en";
 import { mk } from "@/content/horoscope-period/mk";
+import { sl } from "@/content/horoscope-period/sl";
 import { sr } from "@/content/horoscope-period/sr";
+import { isPartialLocale } from "@/lib/partial-scope";
 import type { PeriodBank, PeriodKind, Placed, Three } from "@/content/horoscope-period/types";
 import { hash } from "@/engine/daily";
 import { SKY_ZONE, addDays, houseFrom, todayIso, type Body } from "@/engine/skyday";
 import { QUARTERS, aspectWeight, periodSky, type MoonDay, type PeriodEvent, type PeriodSky, type Quarter } from "@/engine/skyperiod";
 import { SIGNS, SIGN_GLYPH, type Sign } from "@/engine/zodiac";
 import { daysInMonth, formatDate, isoOf } from "./dates";
-import { HORO_LOCALES, bankFor, dayNumber, type HoroLocale } from "./horoscope";
+import { bankFor, dayNumber, horoLocale, type HoroLocale } from "./horoscope";
 import { localizedPath } from "./i18n-routes";
 import type { Block, LinkItem, NumModel } from "./numerology";
 
-export const PERIOD_BANKS: Record<HoroLocale, PeriodBank> = { en, mk, de, sr };
+export const PERIOD_BANKS: Record<HoroLocale, PeriodBank> = { en, mk, de, sr, sl };
 export const periodBank = (lang: string): PeriodBank => PERIOD_BANKS[lang as HoroLocale] ?? en;
 
 /** The first dated monthly pages. Every month from here on stays online. */
@@ -91,7 +93,7 @@ function moonRuns(days: MoonDay[]): { sign: Sign; from: string; to: string }[] {
 
 const memo = new Map<string, PeriodReading>();
 export function periodReading(lang: string, sign: Sign, p: Period): PeriodReading {
-  const L = (HORO_LOCALES as readonly string[]).includes(lang) ? (lang as HoroLocale) : "en";
+  const L = horoLocale(lang);
   const id = `${L}|${sign}|${p.kind}|${p.start}`; const hit = memo.get(id); if (hit) return hit;
   const B = PERIOD_BANKS[L]; const D = bankFor(L); const c = getContent(L); const sky = periodSky(p.start, p.end);
   const months = c.site.months; const N = (s: Sign) => c.astro.signs[s].name; const signName = N(sign);
@@ -195,7 +197,7 @@ export function periodReading(lang: string, sign: Sign, p: Period): PeriodReadin
 
 /** Sign independent list of the period's sky, for hub pages. */
 export function skyLines(lang: string, p: Period): string[] {
-  const L = (HORO_LOCALES as readonly string[]).includes(lang) ? (lang as HoroLocale) : "en";
+  const L = horoLocale(lang);
   const B = PERIOD_BANKS[L]; const D = bankFor(L); const c = getContent(L); const sky = periodSky(p.start, p.end); const N = (s: Sign) => c.astro.signs[s].name;
   const dateW = (iso: string) => formatDate(iso, c.site.months, { year: false, weekday: D.weekdays }); const body = (b: Body) => lower(D.bodies[b]);
   const phrase = (e: PeriodEvent) => e.kind === "lunation" ? B.sky.lunation(e.eclipse ? B.eclipse[e.eclipse] : B.lunation[e.quarter], N(e.sign))
@@ -222,6 +224,8 @@ export function periodBlocks(lang: string, r: PeriodReading): Block[] {
 /** Links every period page carries. The other family's sign page comes first. */
 export function periodLinks(lang: string, sign: Sign, kind: PeriodKind): LinkItem[] {
   const U = periodBank(lang).ui.related; const name = getContent(lang).astro.signs[sign].name; const lp = (p: string) => localizedPath(lang, p); const big = SIGN_GLYPH[sign];
+  // A partial locale has only the daily and monthly pages: link nothing else.
+  if (isPartialLocale(lang)) return [{ href: lp(`/horoscope/${sign}/`), label: U.daily(name), big }];
   return [
     kind === "week" ? { href: lp(`${MONTHLY_PATH}${sign}/`), label: `${U.month}: ${name}`, big } : { href: lp(`${WEEKLY_PATH}${sign}/`), label: `${U.week}: ${name}`, big },
     { href: lp(`/horoscope/${sign}/`), label: U.daily(name), big },
@@ -239,7 +243,8 @@ export function periodHub(lang: string, p: Period, root: string): NumModel {
     sectionName: crumb, published: FIRST_PUBLISHED[k], modified: p.start,
     blocks: [{ id: "intro", title: crumb, paras: H.intro }, { id: "sky", title: H.skyHead, list: skyLines(lang, p) }, { id: "how", title: H.howHead, paras: H.how }],
     items: SIGNS.map((s) => ({ href: lp(`${root}${s}/`), label: c.astro.signs[s].name, sub: periodReading(lang, s, p).lead, big: SIGN_GLYPH[s] })),
-    related: [{ href: lp(k === "week" ? MONTHLY_PATH : WEEKLY_PATH), label: B.ui.related.hub[k === "week" ? "month" : "week"] }, { href: lp("/horoscope/"), label: B.ui.related.hubDaily }, { href: lp("/moon-calendar/"), label: B.ui.related.moon, big: "☾" }] };
+    related: isPartialLocale(lang) ? [{ href: lp("/horoscope/"), label: B.ui.related.hubDaily }]
+      : [{ href: lp(k === "week" ? MONTHLY_PATH : WEEKLY_PATH), label: B.ui.related.hub[k === "week" ? "month" : "week"] }, { href: lp("/horoscope/"), label: B.ui.related.hubDaily }, { href: lp("/moon-calendar/"), label: B.ui.related.moon, big: "☾" }] };
 }
 
 /** One sign page. `dated` is the month key of a dated page; without it this is the evergreen page. */
