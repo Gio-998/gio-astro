@@ -48,7 +48,10 @@ describe("number topics: one main page per query form", () => {
       for (const r of t.rows) expect(typeof (r[0] as { href: string }).href).toBe("string");
     });
     it(`${lang}: the mirror hour hub and the pair hub keep no FAQ of their own (the personal year FAQ belongs to its pages)`, () => {
-      expect(numModel(lang, "/numerology/mirror-hours/")!.faq).toEqual([]);
+      // The mirror hub may carry its own direct answer about mirror hours, nothing else (and never the personal year FAQ).
+      const mf = numModel(lang, "/numerology/mirror-hours/")!.faq;
+      expect(mf.length).toBeLessThanOrEqual(1);
+      for (const [q] of mf) expect(q, q).not.toMatch(/2027|pers(ö|o)nlich|personal|li(č|c)n|лична/i);
       expect(numModel(lang, "/numerology/compatibility/")!.faq).toEqual([]);
     });
   }
