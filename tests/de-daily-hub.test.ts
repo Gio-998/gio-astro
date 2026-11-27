@@ -33,11 +33,12 @@ describe("today heading on the sign page", () => {
     const { renderToStaticMarkup } = await import("react-dom/server");
     const { createElement } = await import("react");
     const { DailyHoroscope } = await import("@/components/horoscope/DailyHoroscope");
-    const h1 = (lang: string, isToday: boolean) => renderToStaticMarkup(createElement(DailyHoroscope, { lang, sign: "aries", iso: "2026-11-27", isToday })).match(/<h1[^>]*>(.*?)<\/h1>/)![1].replace(/\u00A0/g, " ");
+    const h1 = (lang: string, isToday: boolean) => renderToStaticMarkup(createElement(DailyHoroscope, { lang, sign: "aries", iso: "2026-11-27", isToday })).match(/<h1[^>]*>(.*?)<\/h1>/)![1].replace(/<[^>]+>/g, "").replace(/\u00A0/g, " ");
     expect(h1("de", true)).toBe("Tageshoroskop Widder heute, 27. November 2026");
     expect(h1("de", false)).toBe("Tageshoroskop Widder, 27. November 2026");
     expect(h1("mk", true)).toBe("Хороскоп за Овен денес, 27 ноември 2026");
     expect(h1("mk", false)).toBe("Хороскоп за Овен, 27 ноември 2026");
+    expect(renderToStaticMarkup(createElement(DailyHoroscope, { lang: "de", sign: "aries", iso: "2026-11-27", isToday: true }))).toContain(`<span class="whitespace-nowrap">27. November 2026</span>`);
   });
 });
 
